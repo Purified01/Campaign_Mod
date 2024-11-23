@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+
+<SFXEvent_Files>
+
+    <!-- Presets must go first -->
+
+    <File> SFXEventPresets.xml </File>
+
+    <!-- Non-Preset Events come after presets -->
+
+	<File> SFXEvents.xml </File>
+	<File> SFXEventsAmbient.xml </File>
+	<File>SFXEventsDeaths.xml</File>
+	<File>SFXEventsWeapons.xml</File>
+	<File>SFXEventsEngines.xml</File>
+	<File>SFXEventsFootsteps.xml</File>
+	<File>SFXEventsStructures.xml</File>
+	<File>SFX_Events_Units_Military.xml</File>
+	<File>SFX_Events_Units_Alien.xml</File>
+	<File>SFX_Events_Units_Novus.xml</File>
+	<File>SFX_Events_Units_Masari.xml</File>
+	<File>SFX_Events_HUD.xml</File>
+	<File>SFXEventsGUI.xml</File>
+
+</SFXEvent_Files>

@@ -1,0 +1,565 @@
+<?xml version="1.0"?>
+<Alien_Arrival_Site_XML>
+
+	<!-- **************************************************************************************** -->
+	<!-- *** STRUCTURE ************************************************************************** -->
+	<!-- **************************************************************************************** -->
+
+	<X10_Alien_Structures Name="Alien_Arrival_Site">
+
+		<!-- ART -->
+		<Land_Model_Name>AB_ArrivalSite.alo</Land_Model_Name>
+		<Scale_Factor>1.1</Scale_Factor>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+		<AssetBank> BANK_ALIEN </AssetBank>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_ALIEN_ARRIVAL_SITE</Text_ID>
+		<Icon_Name> i_icon_ab_arrival_site.tga </Icon_Name>
+		<Select_Box_Scale>200</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+  		<Selection_Blob_Material_Name>Selection_Alien_Land_Large</Selection_Blob_Material_Name>
+
+
+		<!-- ATTRIBUTES -->
+		<Attributes SubObjectList="Yes">
+			<!-- This MODIFIER determines what portion of the whole price we must reduce.  Hence, a modifier
+			of value 0 means that we refund 100%, a modifier of -0.2 means we refund 80%, etc. -->
+			<Tactical_Sell_Percent_Modifier> -0.5 </Tactical_Sell_Percent_Modifier>
+			<Tactical_Sell_Time_Seconds> 5.0 </Tactical_Sell_Time_Seconds>
+		<Importance> 0.2 </Importance>
+		<Shot_Type> Circle </Shot_Type>
+		</Attributes>
+
+		<!-- MARIA 10.25.2006 ==== DO NOT FORGET TO ADD THE "TacticalBuildableStructure" MASK SO THAT THE STRUCTURE
+		GETS DISPLAYED IN THE LIST OF BUILDABLE STRUCTURES FOR THE UI -->
+		<CategoryMask> Large, Stationary, TacticalBuildableStructure </CategoryMask>
+		<Affiliation> Alien, Alien_ZM06_KamalRex </Affiliation>
+		<Victory_Relevant>True</Victory_Relevant>
+
+		<!-- CONFLICT -->
+		<Is_Attackable> true </Is_Attackable>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<AI_Combat_Power> 1 </AI_Combat_Power>
+		<Ranged_Target_Z_Adjust> 15.0 </Ranged_Target_Z_Adjust>
+
+		<Tactical_Health> 3800 </Tactical_Health>
+
+		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_GENERIC_DETONATION, SFX_GENERIC_DETONATION,null</Land_Damage_SFX>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> LandDynamic | LandGiant </Space_Layer>
+		<MovementClass>Building</MovementClass>
+		<UnitCollisionClass> High Obstacle </UnitCollisionClass>
+		<Custom_Hard_XExtent> 53.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 60.0 </Custom_Hard_YExtent>
+		<Custom_Hard_XExtent_Offset> -13.0 </Custom_Hard_XExtent_Offset>
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+		<Tornado_Movement_Factor>0.00001</Tornado_Movement_Factor>
+          
+		<!-- BEHAVIORS -->
+		<Behavior>
+			GROUND_STRUCTURE,
+			SELECTABLE,
+			TACTICAL_ENABLER
+		</Behavior>
+
+		<LandBehavior>
+			TELEPORT_SPAWN,
+			EFFECT_GENERATOR,
+			EFFECT_REGISTRY,
+			ATTRIBUTE_DIRECTORY,
+			GUI,
+			RADAR_MAP_VISIBLE,
+			REVEAL,
+			HIDE_WHEN_FOGGED,
+			UNIT_AI,
+			IDLE,
+			TERRAFORM,
+			AI_RECRUITABLE,
+			AI_TARGET,
+			TACTICAL_SELL
+		</LandBehavior>
+
+		<!-- Maria 09.07.2006 - As for design, we don't want this structure to show up in the tactical queue manager 
+		One can access the building's options by selecting it -->
+		<!-- KDB It 09-13-2006 it needs to be able to build glyph carvers -->
+
+		<BehaviorType Name="GUIBehaviorType">
+			<GUI_Scene_Name> HealthBar_Scene_Large </GUI_Scene_Name>
+			<GUI_Receives_Input> no </GUI_Receives_Input>
+			<GUI_Min_Scale> 0.8 </GUI_Min_Scale>
+			<GUI_Max_Scale> 3.0 </GUI_Max_Scale>
+			<GUI_Default_Scale> 1.0 </GUI_Default_Scale>
+		</BehaviorType>
+
+		<BehaviorType name="AIBehaviorType">
+			<AI_Target_Level>Individual</AI_Target_Level>
+			<Allow_Multiple_Recruitment>True</Allow_Multiple_Recruitment>
+		</BehaviorType>
+
+		<BehaviorType Name="GameEventSourceBehaviorType">
+			<Game_Event_Source_Category> Structure </Game_Event_Source_Category>
+		</BehaviorType>
+	  
+		<BehaviorType Name="TerraformBehaviorType">
+			<Bib_X_Extent> 75 </Bib_X_Extent>
+			<Bib_Y_Extent> 80 </Bib_Y_Extent>
+			<Bib_X_Offset> -13 </Bib_X_Offset>
+		</BehaviorType>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Armor_Type> Armor_Alien_Structure_Heavy </Armor_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="ProductionBehaviorType">
+			<Is_Research_Tech_Tree_Lockable> Yes </Is_Research_Tech_Tree_Lockable>
+			<Build_Limit_Current_Per_Player>5</Build_Limit_Current_Per_Player>
+		</BehaviorType>
+
+		<BehaviorType Name="BuildableObjectBehaviorType">
+			<Tactical_Under_Construction_Object_Type> Alien_Arrival_Site_Construction </Tactical_Under_Construction_Object_Type>
+			<Tactical_Buildable_Beacon_Type> Alien_Arrival_Site_Beacon </Tactical_Buildable_Beacon_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="TacticalSellBehaviorType">
+			<Sell_Effect_Generator_Name>AlienSellGenerator</Sell_Effect_Generator_Name>
+		</BehaviorType>
+
+		<BehaviorType Name="GroundStructureBehaviorType">
+			<Is_Command_Center> Yes </Is_Command_Center>
+			<Is_Buildable_By_Constructor> Yes </Is_Buildable_By_Constructor>
+			<!-- Maria 01.31.2007 - This value is used to determine the facing of the ghost structure when in 
+			  building placement mode.  It must be a value between 0.0 - 359.0	-->
+			<Default_Building_Placement_Rotation>235</Default_Building_Placement_Rotation>
+		</BehaviorType>
+
+		<BehaviorType Name="TeleportSpawnBehaviorType">
+			<Teleport_Spawn_Duration_In_Secs> .10 </Teleport_Spawn_Duration_In_Secs>
+			<Teleport_Spawn_Particle_Effect> Alien_Walker_Barracks_Spawn_Unit_Effect </Teleport_Spawn_Particle_Effect>
+			<Teleport_Spawn_Muzzle_Particle_Effect />
+			<Teleport_Spawn_Lightning_Effect_Name> Teleport_Spawn_Beam </Teleport_Spawn_Lightning_Effect_Name>
+
+			<!-- 00 to 02 .i.e MuzzleA_00 -->
+			<Teleport_Spawn_Source_Bone_Name> MuzzleA </Teleport_Spawn_Source_Bone_Name>
+			<Teleport_Spawn_Source_Bone_Variations> 3 </Teleport_Spawn_Source_Bone_Variations>
+
+			<Teleport_Spawn_Laser_Speed> 64 </Teleport_Spawn_Laser_Speed>
+			<Teleport_Spawn_Dispersion> 20.0 </Teleport_Spawn_Dispersion>
+			<Teleport_Spawn_Max_Num_Units> 5 </Teleport_Spawn_Max_Num_Units>
+
+         <Pre_Teleport_Anim_Type>Anim_Teleport_In</Pre_Teleport_Anim_Type>
+
+         <SFXEvent_Teleport_Begin> SFX_Alien_Teleport_Out_Start </SFXEvent_Teleport_Begin>
+			<SFXEvent_Teleport_Loop> SFX_Alien_Teleport_Out_Loop </SFXEvent_Teleport_Loop>
+			<SFXEvent_Teleport_End> SFX_Alien_Teleport_Out_End </SFXEvent_Teleport_End>
+		</BehaviorType>
+
+		<BehaviorType Name="ResourceDepot">
+			<Resource_Depot_Active_Drones>2</Resource_Depot_Active_Drones>
+			<Resource_Depot_Seconds_To_Build_Drone>2</Resource_Depot_Seconds_To_Build_Drone>
+			<Resource_Depot_Seconds_Between_Drone_Launch>2</Resource_Depot_Seconds_Between_Drone_Launch>
+			<Resource_Depot_Collection_Radius>500</Resource_Depot_Collection_Radius>
+		</BehaviorType>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Death_Clone>Damage_Default,Alien_Arrival_Site_Default_Death_Clone</Death_Clone>
+			<Death_Explosions>Novus_Large_Explosion_Tower</Death_Explosions>
+			<Death_Clone_Keep_Behaviors> EFFECT_REGISTRY </Death_Clone_Keep_Behaviors>
+			<Death_Fade_Time> 0.25 </Death_Fade_Time>
+			<Death_Persistence_Duration> 5 </Death_Persistence_Duration>
+			<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+		</BehaviorType>
+
+      <BehaviorType Name="SFXBehaviorType">
+         <SFXEvent_Select>SFX_Structure_Select_Alien_Arrival_Site</SFXEvent_Select>
+			<Death_SFXEvent_Start_Die> SFX_Alien_Large_Structure_Death </Death_SFXEvent_Start_Die>
+         <SFXEvent_Unit_Lost />
+         <SFXEvent_Tactical_Build_Started>GUI_BUILD_Structure</SFXEvent_Tactical_Build_Started>
+         <SFXEvent_Tactical_Build_Complete>SFX_Structure_Select_Alien_Arrival_Site</SFXEvent_Tactical_Build_Complete>
+			<SFXEvent_Tactical_Build_Cancelled>GUI_BUILD_Structure_Canceled</SFXEvent_Tactical_Build_Cancelled>
+      </BehaviorType>
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.05  0.05</Radar_Icon_Size>
+		</BehaviorType>
+
+		<BehaviorType Name="EncyclopediaBehaviorType">
+			<Building_Queue_Type> Command </Building_Queue_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="TooltipBehaviorType">
+			<Tooltip_Description_Text_ID> TEXT_TOOLTIP_DESCRIPTION_ALIEN_ARRIVAL_SITE </Tooltip_Description_Text_ID>
+			<Tooltip_Category> TEXT_TOOLTIP_CATEGORY_STRUCTURE </Tooltip_Category>
+			<Production_Tooltip_Category> Command_Center </Production_Tooltip_Category>
+		</BehaviorType>
+		
+		<BehaviorType Name="TacticalEnablerBehaviorType">
+			<Tactical_Enabler_Flyout_Distances>100.0</Tactical_Enabler_Flyout_Distances>
+			<Main_Object_Can_Teleport_Spawn> true </Main_Object_Can_Teleport_Spawn>
+			<Enables_Reinforcements> true </Enables_Reinforcements>
+		</BehaviorType>
+
+		<BehaviorType Name="CrushBehaviorType">
+			<Crush_Defense>90</Crush_Defense>
+			<Crush_Power>55</Crush_Power>
+		</BehaviorType>
+
+      <BehaviorType Name="TacticalUnderConstructionBehaviorType">
+         <Activate_Generator_After_Construction>PostConstructionEffectGenerator</Activate_Generator_After_Construction>
+         <Set_Invisible_After_Construcion>Yes</Set_Invisible_After_Construcion>
+      </BehaviorType>
+      
+		<Effect_Generator_Data SubObjectList="Yes">
+
+			<!-- Standard Sell generator - Oksana 06/27/2007 -->
+			<!--INCLUDE ".\Data\XML\Includes\Sell_Effect_Generators\ALIEN_Sell_Generators.xml" -->
+
+         <Effect_Generator Name="PostConstructionEffectGenerator">
+            <Should_Deactivate_Manually> false </Should_Deactivate_Manually>
+            <Is_Independent_Generator> true </Is_Independent_Generator>
+
+            <Effect_Generator_Entry Name="Entry1">
+               <Effect_Name> StructureStage1PostConstructionEffect </Effect_Name>
+               <!-- effect will deactivate itself when needed. -->
+               <Duration> 1 </Duration>
+               <Target_Gathering_Mask> Self </Target_Gathering_Mask>
+               <Deactivate_Parent_If_Idle>Yes</Deactivate_Parent_If_Idle>
+            </Effect_Generator_Entry>
+
+            <Effect_Generator_Entry Name="Entry2">
+               <Effect_Name> StructureStage2PostConstructionEffect </Effect_Name>
+               <Base_Delay>0.01</Base_Delay>
+               <Duration> -1 </Duration>
+               <Target_Gathering_Mask> Self </Target_Gathering_Mask>
+            </Effect_Generator_Entry>
+         </Effect_Generator>
+			
+		</Effect_Generator_Data>
+     
+
+	</X10_Alien_Structures>
+
+
+	<!-- **************************************************************************************** -->
+	<!-- *** CONSTRUCTION VERSION *************************************************************** -->
+	<!-- **************************************************************************************** -->
+
+	<X10_Alien_Structures Name="Alien_Arrival_Site_Construction">
+
+		<!-- ART -->
+		<Land_Model_Name>WO_Glyph01.alo</Land_Model_Name>
+		<Scale_Factor>1.5</Scale_Factor>
+		<Loop_Idle_Anim_00> No </Loop_Idle_Anim_00>
+		<Exclude_From_Distance_Fade> true </Exclude_From_Distance_Fade>
+		<AssetBank> BANK_ALIEN </AssetBank>
+
+		<Constructed_Object_Placement_Delay_Sec> 1.8 </Constructed_Object_Placement_Delay_Sec>
+		<Constructed_Object_Placement_Anim> Anim_FlyLandDrop </Constructed_Object_Placement_Anim>
+		<Destroy_Building_Object_On_Frame> 40 </Destroy_Building_Object_On_Frame>
+		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+	  	  
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_ALIEN_ARRIVAL_SITE_GLYPH</Text_ID>
+		<Icon_Name>i_icon_ab_arrival_site.tga</Icon_Name>
+		<Select_Box_Scale>175</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+		<!-- ATTRIBUTES -->
+		<Attributes SubObjectList="Yes">
+			<!-- This MODIFIER determines what portion of the whole price we must reduce.  Hence, a modifier
+			of value 0 means that we refund 100%, a modifier of -0.2 means we refund 80%, etc. -->
+			<Tactical_Sell_Percent_Modifier> 0.0 </Tactical_Sell_Percent_Modifier>
+			<Tactical_Sell_Time_Seconds> 0.5 </Tactical_Sell_Time_Seconds>
+		</Attributes>
+
+		<CategoryMask> Large, Stationary, TacticalBuildableStructure </CategoryMask>
+		<Affiliation> Alien, Alien_ZM06_KamalRex </Affiliation>
+		<Victory_Relevant> No </Victory_Relevant>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> LandDynamic </Space_Layer>
+		<MovementClass>Building</MovementClass>
+		<UnitCollisionClass> HighObstacle </UnitCollisionClass>
+		<Custom_Hard_XExtent> 53.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 60.0 </Custom_Hard_YExtent>
+		<Custom_Hard_XExtent_Offset> -13.0 </Custom_Hard_XExtent_Offset>
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+		<Tornado_Movement_Factor>0.00001</Tornado_Movement_Factor>
+
+		<!-- CONFLICT -->
+		<Is_Attackable> true </Is_Attackable>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Ranged_Target_Z_Adjust> 3.0 </Ranged_Target_Z_Adjust>
+
+		<Tactical_Health> 300 </Tactical_Health>
+
+		<Land_FOW_Reveal_Range>30.0</Land_FOW_Reveal_Range>
+		<Dense_FOW_Reveal_Range_Multiplier> 0.0 </Dense_FOW_Reveal_Range_Multiplier>
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_GENERIC_DETONATION, SFX_GENERIC_DETONATION,null</Land_Damage_SFX>
+
+		<!-- BEHAVIORTYPES-->
+		<!-- NOTE: TACTICAL_UNDER_CONSTRUCTION does not work as a Land_Behavior, since the type - > Behaves_Like() fails for some reason when it should not - need to fix -->
+		<Behavior>
+			ATTRIBUTE_DIRECTORY,
+			EFFECT_REGISTRY,
+			EFFECT_GENERATOR,
+			TACTICAL_UNDER_CONSTRUCTION,
+			SELECTABLE,
+			REVEAL,
+			HIDE_WHEN_FOGGED,
+			RADAR_MAP_VISIBLE,
+			TERRAFORM,
+			TACTICAL_SELL,
+			GUI
+		</Behavior>
+
+		<BehaviorType Name="CrushBehaviorType">
+			<Crush_Defense>90</Crush_Defense>
+			<Crush_Power>55</Crush_Power>
+		</BehaviorType>
+		
+		<BehaviorType Name="GUIBehaviorType">
+			<GUI_Scene_Name> HealthBar_Scene_Large </GUI_Scene_Name>
+			<GUI_Receives_Input> no </GUI_Receives_Input>
+			<GUI_Min_Scale> 0.8 </GUI_Min_Scale>
+			<GUI_Max_Scale> 3.0 </GUI_Max_Scale>
+			<GUI_Default_Scale> 1.0 </GUI_Default_Scale>
+		</BehaviorType>
+
+		<BehaviorType Name="TacticalSellBehaviorType">
+			<Sell_Effect_Generator_Name>AlienSellGenerator</Sell_Effect_Generator_Name>
+		</BehaviorType>
+
+		<BehaviorType Name="GameEventSourceBehaviorType">
+			<Game_Event_Source_Category> StructureUnderConstruction </Game_Event_Source_Category>
+		</BehaviorType>
+
+		<BehaviorType Name="TerraformBehaviorType">
+			<Bib_X_Extent> 101 </Bib_X_Extent>
+			<Bib_Y_Extent> 93 </Bib_Y_Extent>
+		</BehaviorType>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Armor_Type> Armor_Alien_Structure_Light </Armor_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="ProductionBehaviorType">
+			<Is_Research_Tech_Tree_Lockable> Yes </Is_Research_Tech_Tree_Lockable>
+		</BehaviorType>
+
+		<BehaviorType Name="TooltipBehaviorType">
+			<Tooltip_Description_Text_ID> TEXT_TOOLTIP_DESCRIPTION_ALIEN_ARRIVAL_SITE </Tooltip_Description_Text_ID>
+			<Tooltip_Category> TEXT_TOOLTIP_CATEGORY_STRUCTURE </Tooltip_Category>
+		</BehaviorType>
+		
+		<BehaviorType Name="BuildableObjectBehaviorType">
+			<Tactical_Buildable_Constructed> Alien_Arrival_Site </Tactical_Buildable_Constructed>
+			<Tactical_Buildable_Beacon_Type> Alien_Arrival_Site_Beacon </Tactical_Buildable_Beacon_Type>
+			<Tactical_Build_Cost_Multiplayer> 2500 </Tactical_Build_Cost_Multiplayer>
+			<Tactical_Build_Cost_Campaign> 2500 </Tactical_Build_Cost_Campaign>
+			<Tactical_Build_Time_Seconds> 40 </Tactical_Build_Time_Seconds>
+			<Tactical_UI_Build_Queue_Order> 0 </Tactical_UI_Build_Queue_Order>
+			<Required_Pre_Build_Time_In_Secs> 35 </Required_Pre_Build_Time_In_Secs>
+		</BehaviorType>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Death_Clone_Is_Obstacle> true </Death_Clone_Is_Obstacle>
+		</BehaviorType>
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.05  0.05</Radar_Icon_Size>
+		</BehaviorType>
+
+		<BehaviorType Name="BlobShadowBehaviorType">
+			<No_Reflection_Below_Detail_Level> 1 </No_Reflection_Below_Detail_Level>
+			<No_Refraction_Below_Detail_Level> 1 </No_Refraction_Below_Detail_Level>
+		</BehaviorType>
+
+      <BehaviorType Name="SFXBehaviorType">
+         <SFXEvent_Select>SFX_Structure_Select_Alien_Arrival_Site</SFXEvent_Select>
+			<Death_SFXEvent_Start_Die> SFX_Alien_Large_Structure_Death </Death_SFXEvent_Start_Die>
+         <SFXEvent_Unit_Lost />
+         <SFXEvent_Tactical_Build_Started>GUI_BUILD_Structure</SFXEvent_Tactical_Build_Started>
+         <SFXEvent_Tactical_Build_Complete>SFX_Structure_Select_Alien_Arrival_Site</SFXEvent_Tactical_Build_Complete>
+			<SFXEvent_Tactical_Build_Cancelled>GUI_BUILD_Structure_Canceled</SFXEvent_Tactical_Build_Cancelled>
+      </BehaviorType>
+
+		<!-- oksana: must have this, otherwise the beacon will remain after construction is complete -->
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Remove_Upon_Death>true</Remove_Upon_Death>
+		</BehaviorType>
+
+	  <Effect_Generator_Data SubObjectList="Yes">
+
+		  <Effect_Generator Name="AlienFastOrderingGenerator">
+			  <Should_Deactivate_Manually> false </Should_Deactivate_Manually>
+			  <Starts_Active> true </Starts_Active>
+			  <Is_Independent_Generator> true </Is_Independent_Generator>
+
+			  <Effect_Generator_Entry Name="Entry1">
+				  <Effect_Name> AlienFastOrderingEffect </Effect_Name>
+				  <Duration> -1.0 </Duration>
+				  <Target_Gathering_Mask> Self </Target_Gathering_Mask>
+			  </Effect_Generator_Entry>
+
+		  </Effect_Generator>
+
+		  <!-- Standard Sell generator  - 06/28/2007 -->
+		  <!--INCLUDE ".\Data\XML\Includes\Sell_Effect_Generators\ALIEN_Sell_Generators.xml" -->
+
+	  </Effect_Generator_Data>
+
+  </X10_Alien_Structures>
+
+	
+	
+	<!-- **************************************************************************************** -->
+	<!-- ****DEATH CLONE(S)********************************************************************** -->
+	<!-- **************************************************************************************** -->
+
+	<X10_Alien_Structures Name="Alien_Arrival_Site_Default_Death_Clone">
+
+		<!-- ART -->
+		<Land_Model_Name>AB_ArrivalSite_DC.ALO</Land_Model_Name>
+		<Scale_Factor>1.1</Scale_Factor>
+		<AssetBank> BANK_ALIEN </AssetBank>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+		<!-- ATTRIBUTES -->
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+
+		<!-- CONFLICT -->
+		<Ranged_Target_Z_Adjust>0.1</Ranged_Target_Z_Adjust>
+
+		<LandBehavior>
+			EFFECT_REGISTRY,
+			EFFECT_GENERATOR,
+			ATTRIBUTE_DIRECTORY,
+			PARTICLE
+		</LandBehavior>
+
+		<BehaviorType Name="SFXBehaviorType">
+			<Death_SFXEvent_End_Die />
+			<Death_SFXEvent_Start_Die> SFX_Alien_Large_Structure_Death </Death_SFXEvent_Start_Die>
+		</BehaviorType>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Specific_Death_Anim_Type> Die </Specific_Death_Anim_Type>
+			<Death_Fade_Time> 0.25 </Death_Fade_Time>
+			<Death_Persistence_Duration> 0.0 </Death_Persistence_Duration>
+		</BehaviorType>
+
+
+	</X10_Alien_Structures>
+
+
+	<!-- **************************************************************************************** -->
+	<!-- *** BEACON ***************************************************************************** -->
+	<!-- **************************************************************************************** -->
+
+	<X10_Alien_Structures Name="Alien_Arrival_Site_Beacon">
+
+		<!-- ART -->
+		<!-- STUB FOR ELIE -->
+		<Land_Model_Name>AB_Habitat_Radiation_Artillery_Projectile.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<AssetBank> BANK_ALIEN </AssetBank>
+
+		<!-- INTERFACE -->
+		<Select_Box_Scale>50</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+		<Is_Placed_By_Editor> false </Is_Placed_By_Editor>
+		<Text_ID>TEXT_ALIEN_ARRIVAL_SITE_BEACON</Text_ID>
+
+		<!-- ATTRIBUTES -->
+		<Attributes SubObjectList="Yes">
+			<!-- Don't help build the main structure -->
+			<Stucture_Upgrade_Rate> 0.0 </Stucture_Upgrade_Rate>
+			<Tactical_Sell_Percent_Modifier> 0.0 </Tactical_Sell_Percent_Modifier>
+			<Tactical_Sell_Time_Seconds> 0.5 </Tactical_Sell_Time_Seconds>
+			<Is_Immune_To_Mind_Control> true </Is_Immune_To_Mind_Control>
+			<Is_Immune_To_Virus> true </Is_Immune_To_Virus>
+		</Attributes>
+	  
+		<CategoryMask> TacticalBuildableStructure </CategoryMask>
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+
+		<!-- CONFLICT -->
+		<Is_Attackable>Yes</Is_Attackable>
+		<Collidable_By_Projectile_Living> Yes </Collidable_By_Projectile_Living>
+		<Ranged_Target_Z_Adjust> 0.0 </Ranged_Target_Z_Adjust>
+		<Tactical_Health> 1 </Tactical_Health>
+
+		<!-- BEHAVIORS -->
+		<Behavior>
+			EFFECT_REGISTRY,
+			EFFECT_GENERATOR,
+			TACTICAL_BUILDABLE_BEACON,
+			ATTRIBUTE_DIRECTORY,
+			TACTICAL_SELL,
+			INVULNERABLE,
+			CLOAKED,
+			SELECTABLE
+		</Behavior>
+
+		<BehaviorType Name="GameEventSourceBehaviorType">
+			<Game_Event_Source_Category> TacticalBuildBeacon </Game_Event_Source_Category>
+		</BehaviorType>
+
+		<BehaviorType Name="TacticalBuildableBeaconBehaviorType">
+		</BehaviorType>
+
+		<BehaviorType Name="TacticalSellBehaviorType">
+			<Sell_Effect_Generator_Name>AlienSellGenerator</Sell_Effect_Generator_Name>
+		</BehaviorType>
+
+		<BehaviorType Name="ProductionBehaviorType">
+			<Is_Research_Tech_Tree_Lockable> Yes </Is_Research_Tech_Tree_Lockable>
+		</BehaviorType>
+
+		<BehaviorType Name="BuildableObjectBehaviorType">
+			<Tactical_Buildable_Constructed> Alien_Arrival_Site_Construction </Tactical_Buildable_Constructed>
+		</BehaviorType>
+
+		<BehaviorType Name="SFXBehaviorType">
+			<SFXEvent_Fire> SFX_Alien_Radiation_Detonation_1 </SFXEvent_Fire>
+		</BehaviorType>
+
+		<!-- oksana: must have this, otherwise the beacon will remain after construction is complete -->
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Remove_Upon_Death>true</Remove_Upon_Death>
+		</BehaviorType>
+
+		<BehaviorType Name="CrushBehaviorType">
+			<Crush_Defense>90</Crush_Defense>
+		</BehaviorType>
+
+		<Effect_Generator_Data SubObjectList="Yes">
+
+			<!-- Standard Sell generator  - 06/28/2007 -->
+			<!--INCLUDE ".\Data\XML\Includes\Sell_Effect_Generators\ALIEN_Sell_Generators.xml" -->
+
+		</Effect_Generator_Data>
+	  
+	</X10_Alien_Structures>
+
+
+
+
+
+</Alien_Arrival_Site_XML>
+

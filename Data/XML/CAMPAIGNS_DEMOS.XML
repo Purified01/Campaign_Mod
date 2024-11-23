@@ -1,0 +1,907 @@
+<?xml version="1.0"?>
+<Campaigns>
+
+
+<!-- ************************************************ -->
+<!-- ***** INVASION Campaigns                   ***** -->
+<!-- ************************************************ -->
+
+
+	<Campaign Name="Old_Demo_Campaign">
+
+        <Campaign_Set> Old_Demo_Campaign </Campaign_Set>
+        
+        <Text_ID> TEXT_OLD_CAMPAIGN_DEMO </Text_ID>
+        <Description_Text> TEXT_OLD_CAMPAIGN_DEMO </Description_Text>
+        <Script_Name>VerticalSliceCampaign</Script_Name>
+        
+		  <Starting_Credits>Military,1000000</Starting_Credits>
+		  <Starting_Credits>Alien,1000000</Starting_Credits>
+		  
+        <Camera_Shift_X> 0.0 </Camera_Shift_X>
+        <Camera_Shift_Y> 0.0 </Camera_Shift_Y>
+        <Camera_Distance> 500.0  </Camera_Distance>
+        
+        <Locations> Global_Core_Art_Model </Locations>
+        <Locations> Global_Core_Art_Model_Stars </Locations>
+
+		<Trade_Routes>
+			Region26_Region27,
+			Region26_Region24,
+			Region26_Region11,
+			Region27_Region24,
+			Region27_Region23,
+			Region27_Region34,
+			Region27_Region11,
+			Region24_Region23,
+			Region24_Region22,
+			Region23_Region22,
+			Region23_Region34,
+			Region22_Region01,
+			Region34_Region35,
+			Region35_Region33,
+			Region33_Region31,
+			Region33_Region30,
+			Region31_Region29,
+			Region31_Region30,
+			Region30_Region29,
+			Region29_Region18,
+			Region01_Region03,
+			Region01_Region18,
+			Region03_Region04,
+			Region04_Region07,
+			Region18_Region16,
+			Region18_Region20,
+			Region16_Region15,
+			Region16_Region17,
+			Region16_Region20,
+			Region15_Region07,
+			Region15_Region17,
+			Region17_Region20,
+			Region17_Region21,
+			Region20_Region21,
+			Region07_Region09,
+			Region07_Region08,
+			Region09_Region08,
+			Region09_Region13,
+			Region08_Region13,
+			Region08_Region11,
+			Region13_Region11
+		</Trade_Routes>
+
+		<Starting_Active_Player> Military </Starting_Active_Player>
+
+
+		<Starting_Forces> Military, Region26, Research_Command_Center </Starting_Forces>
+		<Starting_Forces> Military, Region26, Military_AbramsM2_Tank </Starting_Forces>
+		<Starting_Forces> Military, Region26, Military_AbramsM2_Tank </Starting_Forces>
+		<Starting_Forces> Military, Region26, Military_Team_Marines </Starting_Forces>
+		<Starting_Forces> Military, Region26, Military_Team_Rocketlauncher </Starting_Forces>
+		<Starting_Forces> Military, Region26, Military_Dragonfly_UAV </Starting_Forces>
+		<Starting_Forces> Military, Region26, Military_Team_Flamethrower </Starting_Forces>
+
+		<Starting_Forces> Military, Region24, Resource_Command_Center </Starting_Forces>
+		<Starting_Forces> Military, Region24, Military_AbramsM2_Tank </Starting_Forces>
+		<Starting_Forces> Military, Region24, Military_Team_Marines </Starting_Forces>
+		<Starting_Forces> Military, Region24, Military_Team_Marines </Starting_Forces>
+		<Starting_Forces> Military, Region24, Military_Dragonfly_UAV </Starting_Forces> 
+			<Starting_Forces> Military, Region24, Military_Team_Flamethrower </Starting_Forces> 
+
+			<Starting_Forces> Military, Region23, Research_Command_Center </Starting_Forces>
+			<Starting_Forces> Military, Region23, Military_AbramsM2_Tank </Starting_Forces>
+			<Starting_Forces> Military, Region23, Military_Team_Flamethrower </Starting_Forces> 
+
+			<Starting_Forces> Military, Region34, Production_Command_Center </Starting_Forces>
+
+			<Starting_Forces> Military, Region35, Resource_Command_Center </Starting_Forces>
+			<Starting_Forces> Military, Region35, Military_Team_Rocketlauncher </Starting_Forces>         
+			<Starting_Forces> Military, Region35, Military_Dragonfly_UAV </Starting_Forces> 
+			<Starting_Forces> Military, Region35, Military_Dragonfly_UAV </Starting_Forces> 
+			<Starting_Forces> Military, Region35, Military_Dragonfly_UAV </Starting_Forces> 
+			
+			<Starting_Forces> Alien, Region27, Alien_Hero </Starting_Forces>
+			<Starting_Forces> Alien, Region27, ALIEN_WALKER_Habitat </Starting_Forces>
+		
+    </Campaign>
+
+	<Campaign Name="The_Herb_Campaign">
+
+        <Campaign_Set> The_Herb_Campaign </Campaign_Set>
+        <Script_Name>HerbCampaign</Script_Name>
+        
+        <Text_ID> TEXT_HERB_CAMPAIGN_DEMO </Text_ID>
+        <Description_Text> TEXT_HERB_CAMPAIGN_DEMO </Description_Text>
+        <Script_Name></Script_Name>
+        
+		  <Starting_Credits>Military,10000</Starting_Credits>
+		  <Starting_Credits>Alien,1000000</Starting_Credits>
+		  
+        <Camera_Shift_X> 0.0 </Camera_Shift_X>
+        <Camera_Shift_Y> 0.0 </Camera_Shift_Y>
+        <Camera_Distance> 500.0  </Camera_Distance>
+        
+        <Locations> Global_Core_Art_Model </Locations>
+        <Locations> Global_Core_Art_Model_Stars </Locations>
+
+		<Trade_Routes>
+			Region26_Region27,
+			Region26_Region24,
+			Region26_Region11,
+			Region27_Region24,
+			Region27_Region23,
+			Region27_Region34,
+			Region27_Region11,
+			Region24_Region23,
+			Region24_Region22,
+			Region23_Region22,
+			Region23_Region34,
+			Region22_Region01,
+			Region34_Region35,
+			Region35_Region33,
+			Region33_Region31,
+			Region33_Region30,
+			Region31_Region29,
+			Region31_Region30,
+			Region30_Region29,
+			Region29_Region18,
+			Region01_Region03,
+			Region01_Region18,
+			Region03_Region04,
+			Region04_Region07,
+			Region18_Region16,
+			Region18_Region20,
+			Region16_Region15,
+			Region16_Region17,
+			Region16_Region20,
+			Region15_Region07,
+			Region15_Region17,
+			Region17_Region20,
+			Region17_Region21,
+			Region20_Region21,
+			Region07_Region09,
+			Region07_Region08,
+			Region09_Region08,
+			Region09_Region13,
+			Region08_Region13,
+			Region08_Region11,
+			Region13_Region11
+		</Trade_Routes>
+
+		<Starting_Active_Player> Military </Starting_Active_Player>
+
+		<Starting_Forces> Military, Region26, Research_Command_Center </Starting_Forces>
+
+		<!-- <Starting_Forces> Military, Region24, Resource_Command_Center </Starting_Forces> -->
+
+		<Starting_Forces> Military, Region23, Research_Command_Center </Starting_Forces>
+		<Starting_Forces> Military, Region23, Military_Team_Marines </Starting_Forces>
+		<Starting_Forces> Military, Region23, Military_AbramsM2_Tank </Starting_Forces>
+		<Starting_Forces> Military, Region23, Military_AbramsM2_Tank </Starting_Forces>
+
+		<Starting_Forces> Military, Region34, Production_Command_Center </Starting_Forces>
+
+		<!-- <Starting_Forces> Military, Region35, Resource_Command_Center </Starting_Forces> -->
+		<Starting_Forces> Military, Region35, Research_Command_Center </Starting_Forces>
+		<Starting_Forces> Military, Region35, Military_Team_Marines </Starting_Forces>
+			<Starting_Forces> Military, Region35, Military_Team_Marines </Starting_Forces>
+			<Starting_Forces> Military, Region35, Military_AbramsM2_Tank </Starting_Forces>
+			
+			<Starting_Forces> Alien, Region27, Alien_Hero </Starting_Forces>
+			<Starting_Forces> Alien, Region27, ALIEN_WALKER_Habitat </Starting_Forces>
+			<Starting_Forces> Alien, Region27, Alien_Recon_Tank </Starting_Forces>
+		
+    </Campaign>
+    
+    
+    
+    <Campaign Name="The_MARIA_Campaign">
+
+        <Campaign_Set> The_MARIA_Campaign </Campaign_Set>
+        <Script_Name>MariaALIENCampaign</Script_Name>
+        
+        <Text_ID> TEXT_Maria_CAMPAIGN_DEMO </Text_ID>
+        <Description_Text> TEXT_Maria_CAMPAIGN_DEMO </Description_Text>
+                
+		<Starting_Credits>Novus,10000</Starting_Credits>
+		<Starting_Credits>Alien,1000000</Starting_Credits>
+		  
+        <Camera_Shift_X> 0.0 </Camera_Shift_X>
+        <Camera_Shift_Y> 0.0 </Camera_Shift_Y>
+        <Camera_Distance> 500.0  </Camera_Distance>
+        
+        <Locations> Global_Core_Art_Model </Locations>
+        <Locations> Global_Core_Art_Model_Stars </Locations>
+
+		 <Trade_Routes>
+			 Region26_Region27,
+			 Region26_Region24,
+			 Region26_Region11,
+			 Region27_Region24,
+			 Region27_Region23,
+			 Region27_Region34,
+			 Region27_Region11,
+			 Region24_Region23,
+			 Region24_Region22,
+			 Region23_Region22,
+			 Region23_Region34,
+			 Region22_Region01,
+			 Region34_Region35,
+			 Region35_Region33,
+			 Region33_Region31,
+			 Region33_Region30,
+			 Region31_Region29,
+			 Region31_Region30,
+			 Region30_Region29,
+			 Region29_Region18,
+			 Region01_Region03,
+			 Region01_Region18,
+			 Region03_Region04,
+			 Region04_Region07,
+			 Region18_Region16,
+			 Region18_Region20,
+			 Region16_Region15,
+			 Region16_Region17,
+			 Region16_Region20,
+			 Region15_Region07,
+			 Region15_Region17,
+			 Region17_Region20,
+			 Region17_Region21,
+			 Region20_Region21,
+			 Region07_Region09,
+			 Region07_Region08,
+			 Region09_Region08,
+			 Region09_Region13,
+			 Region08_Region13,
+			 Region08_Region11,
+			 Region13_Region11
+		 </Trade_Routes>
+
+		 <Starting_Active_Player> Alien </Starting_Active_Player>
+		 <!-- Player Forces  / Structures -->
+		 <!-- Striker fleet -->
+
+		 <Starting_Forces> Alien, Region27, Alien_Hierarchy_Core </Starting_Forces>
+		 <Starting_Forces> Alien, Region27, Alien_Hero_Kamal_Rex </Starting_Forces>
+		 <Starting_Forces> Alien, Region27, Alien_Glyph_Carver </Starting_Forces>
+
+		 <Starting_Forces> Novus, Region22, Novus_Central_Processor </Starting_Forces>
+		 <Starting_Forces> Novus, Region22, Novus_Hero_Mech </Starting_Forces>
+		 <Starting_Forces> Novus, Region22, Novus_Constructor </Starting_Forces>
+
+	 </Campaign>
+
+
+
+	 <Campaign Name="The_MARIA_NOVUS_Campaign">
+
+        <Campaign_Set> The_MARIA_NOVUS_Campaign </Campaign_Set>
+        <Script_Name>MariaCampaign</Script_Name>
+        
+        <Text_ID> TEXT_Maria_NOVUS_CAMPAIGN_DEMO </Text_ID>
+        <Description_Text> TEXT_Maria_NOVUS_CAMPAIGN_DEMO </Description_Text>
+                
+		<Starting_Credits>Novus,10000</Starting_Credits>
+		<Starting_Credits>Alien,1000000</Starting_Credits>
+		  
+        <Camera_Shift_X> 0.0 </Camera_Shift_X>
+        <Camera_Shift_Y> 0.0 </Camera_Shift_Y>
+        <Camera_Distance> 500.0  </Camera_Distance>
+        
+        <Locations> Global_Core_Art_Model </Locations>
+        <Locations> Global_Core_Art_Model_Stars </Locations>
+
+		 <Trade_Routes>
+			 Region26_Region27,
+			 Region26_Region24,
+			 Region26_Region11,
+			 Region27_Region24,
+			 Region27_Region23,
+			 Region27_Region34,
+			 Region27_Region11,
+			 Region24_Region23,
+			 Region24_Region22,
+			 Region23_Region22,
+			 Region23_Region34,
+			 Region22_Region01,
+			 Region34_Region35,
+			 Region35_Region33,
+			 Region33_Region31,
+			 Region33_Region30,
+			 Region31_Region29,
+			 Region31_Region30,
+			 Region30_Region29,
+			 Region29_Region18,
+			 Region01_Region03,
+			 Region01_Region18,
+			 Region03_Region04,
+			 Region04_Region07,
+			 Region18_Region16,
+			 Region18_Region20,
+			 Region16_Region15,
+			 Region16_Region17,
+			 Region16_Region20,
+			 Region15_Region07,
+			 Region15_Region17,
+			 Region17_Region20,
+			 Region17_Region21,
+			 Region20_Region21,
+			 Region07_Region09,
+			 Region07_Region08,
+			 Region09_Region08,
+			 Region09_Region13,
+			 Region08_Region13,
+			 Region08_Region11,
+			 Region13_Region11
+		 </Trade_Routes>
+
+		 <Starting_Active_Player> Novus </Starting_Active_Player>
+		 <!-- Player Forces  / Structures -->
+		 <!-- Striker fleet -->
+		 <Starting_Forces> Novus, Region22, Novus_Hero_Mech </Starting_Forces>
+
+		 <Starting_Forces> Novus, Region24, Novus_Hero_Founder </Starting_Forces>
+
+		 <Starting_Forces> Alien, Region23, Alien_Hero_Kamal_Rex </Starting_Forces>
+		 <Starting_Forces> Alien, Region23, Alien_Recon_Tank </Starting_Forces>
+		 <Starting_Forces> Alien, Region23, Alien_Brute </Starting_Forces>
+		 <Starting_Forces> Alien, Region23, Alien_Grunt </Starting_Forces>
+
+		 <!-- Enemy Forces / Structures 
+			<Starting_Forces> Alien, Region27, Alien_Walker_Habitat </Starting_Forces>
+			-->
+		 <Starting_Forces> Masari, Region27, Masari_Hero_Charos </Starting_Forces>
+			
+   </Campaign>
+   
+   
+    <Campaign Name="The_Keith_Campaign">
+
+        <Campaign_Set> The_Keith_Campaign </Campaign_Set>
+        <Script_Name>MariaCampaign</Script_Name>
+        
+        <Text_ID> TEXT_Keith_CAMPAIGN_DEMO </Text_ID>
+        <Description_Text> TEXT_Keith_CAMPAIGN_DEMO </Description_Text>
+                
+		<Starting_Credits>Novus,100000</Starting_Credits>
+		<Starting_Credits>Alien,1000000</Starting_Credits>
+		<Starting_Credits>Masari,1000000</Starting_Credits>
+
+		 <Camera_Shift_X> 0.0 </Camera_Shift_X>
+        <Camera_Shift_Y> 0.0 </Camera_Shift_Y>
+        <Camera_Distance> 500.0  </Camera_Distance>
+        
+        <Locations> Global_Core_Art_Model </Locations>
+        <Locations> Global_Core_Art_Model_Stars </Locations>
+
+		 <Trade_Routes>
+			 Region26_Region27,
+			 Region26_Region24,
+			 Region26_Region11,
+			 Region27_Region24,
+			 Region27_Region23,
+			 Region27_Region34,
+			 Region27_Region11,
+			 Region24_Region23,
+			 Region24_Region22,
+			 Region23_Region22,
+			 Region23_Region34,
+			 Region22_Region01,
+			 Region34_Region35,
+			 Region35_Region33,
+			 Region33_Region31,
+			 Region33_Region30,
+			 Region31_Region29,
+			 Region31_Region30,
+			 Region30_Region29,
+			 Region29_Region18,
+			 Region01_Region03,
+			 Region01_Region18,
+			 Region03_Region04,
+			 Region04_Region07,
+			 Region18_Region16,
+			 Region18_Region20,
+			 Region16_Region15,
+			 Region16_Region17,
+			 Region16_Region20,
+			 Region15_Region07,
+			 Region15_Region17,
+			 Region17_Region20,
+			 Region17_Region21,
+			 Region20_Region21,
+			 Region07_Region09,
+			 Region07_Region08,
+			 Region09_Region08,
+			 Region09_Region13,
+			 Region08_Region13,
+			 Region08_Region11,
+			 Region13_Region11
+		 </Trade_Routes>
+
+		 <Starting_Active_Player> Novus </Starting_Active_Player>
+		 <!-- Player Forces  / Structures -->
+
+		 <Starting_Forces> Novus, Region24, Novus_Central_Processor </Starting_Forces>
+		 <Starting_Forces> Novus, Region24, Novus_Dervish_Jet </Starting_Forces>
+		 <Starting_Forces> Novus, Region24, Novus_Field_Inverter </Starting_Forces>
+
+		 <Starting_Forces> Novus, Region23, Novus_Material_Center </Starting_Forces>
+
+		 <Starting_Forces> Novus, Region22, Novus_Nanocenter </Starting_Forces>
+
+		 <Starting_Forces> Novus, Region30, Novus_Research_Center </Starting_Forces>
+		 <Starting_Forces> Novus, Region31, Novus_Megaweapon </Starting_Forces>
+
+		 <Starting_Forces> Novus, Region33, Novus_Hero_Mech </Starting_Forces>
+
+
+		 <!-- Enemy Forces / Structures -->
+			<Starting_Forces> Alien, Region26, Kamal_Rex </Starting_Forces>
+			
+			<Starting_Forces> Alien, Region27, Alien_Hierarchy_Core </Starting_Forces>
+			<Starting_Forces> Alien, Region27, Alien_Walker_Habitat </Starting_Forces>
+			<Starting_Forces> Alien, Region27, Alien_Recon_Tank </Starting_Forces>
+			<Starting_Forces> Alien, Region27, Alien_Brute </Starting_Forces>
+			<Starting_Forces> Alien, Region27, Alien_Grunt </Starting_Forces>
+			<Starting_Forces> Alien, Region27, Alien_Defiler </Starting_Forces>
+			
+			<Starting_Forces> Alien, Region29, Alien_Theory_Core </Starting_Forces>
+
+
+			<!-- Enemy Forces / Structures -->
+			<Starting_Forces> Masari, Region15, Masari_Atlatea </Starting_Forces>
+			<Starting_Forces> Masari, Region16, Masari_Will_Processor </Starting_Forces>
+			<Starting_Forces> Masari, Region17, Masari_Element_Magnet </Starting_Forces>
+			<Starting_Forces> Masari, Region18, Masari_Key_Inspiration </Starting_Forces>
+
+		</Campaign>
+   
+    
+   
+    <Campaign Name="OLD_VS2_Demo_Campaign">
+
+		<Campaign_Set> OLD_VS2_Demo_Campaign  </Campaign_Set>
+		<Script_Name>VS2DemoCampaign</Script_Name>
+		
+		<Text_ID> TEXT_OLD_CAMPAIGN_DEMO </Text_ID>
+		<Description_Text> TEXT_OLD_CAMPAIGN_DEMO </Description_Text>
+		
+		<!--<Starting_Credits>Novus,1000000</Starting_Credits>-->
+
+		<Starting_Credits>Military,10000</Starting_Credits>
+		<Starting_Credits>Alien,1000000</Starting_Credits>
+		
+		<Camera_Shift_X> 0.0 </Camera_Shift_X>
+		<Camera_Shift_Y> 0.0 </Camera_Shift_Y>
+		<Camera_Distance> 500.0  </Camera_Distance>
+		
+		<Locations> Global_Core_Art_Model </Locations>
+		<Locations> Global_Core_Art_Model_Stars </Locations>
+
+		 <Trade_Routes>
+			 Region26_Region27,
+			 Region26_Region24,
+			 Region26_Region11,
+			 Region27_Region24,
+			 Region27_Region23,
+			 Region27_Region34,
+			 Region27_Region11,
+			 Region24_Region23,
+			 Region24_Region22,
+			 Region23_Region22,
+			 Region23_Region34,
+			 Region22_Region01,
+			 Region34_Region35,
+			 Region35_Region33,
+			 Region33_Region31,
+			 Region33_Region30,
+			 Region31_Region29,
+			 Region31_Region30,
+			 Region30_Region29,
+			 Region29_Region18,
+			 Region01_Region03,
+			 Region01_Region18,
+			 Region03_Region04,
+			 Region04_Region07,
+			 Region18_Region16,
+			 Region18_Region20,
+			 Region16_Region15,
+			 Region16_Region17,
+			 Region16_Region20,
+			 Region15_Region07,
+			 Region15_Region17,
+			 Region17_Region20,
+			 Region17_Region21,
+			 Region20_Region21,
+			 Region07_Region09,
+			 Region07_Region08,
+			 Region09_Region08,
+			 Region09_Region13,
+			 Region08_Region13,
+			 Region08_Region11,
+			 Region13_Region11
+		 </Trade_Routes>
+
+		 <Starting_Active_Player> Alien </Starting_Active_Player>
+		 <Starting_Forces> Alien, Region27, Alien_Hero </Starting_Forces>
+		 <Starting_Forces> Alien, Region27, ALIEN_WALKER_Habitat </Starting_Forces>
+
+		 <Starting_Forces> Alien, Region27, Alien_Hierarchy_Core </Starting_Forces>
+
+	 </Campaign>
+
+	 <Campaign Name="Demo_Campaign">
+
+		 <Campaign_Set> Demo_Campaign </Campaign_Set>
+		 <Script_Name> UnitTestCampaign </Script_Name>
+
+		 <Text_ID> TEXT_CAMPAIGN_DEMO </Text_ID>
+		 <Description_Text> TEXT_CAMPAIGN_DEMO </Description_Text>
+
+		 <!--<Starting_Credits>Novus,1000000</Starting_Credits>-->
+
+		<Starting_Credits>Military,10000</Starting_Credits>
+		<Starting_Credits>Alien,1000000</Starting_Credits>
+
+		<Camera_Shift_X> 0.0 </Camera_Shift_X>
+		<Camera_Shift_Y> 0.0 </Camera_Shift_Y>
+		<Camera_Distance> 500.0  </Camera_Distance>
+
+		<Locations> Global_Core_Art_Model </Locations>
+		<Locations> Global_Core_Art_Model_Stars </Locations>
+
+		 <Trade_Routes>
+			 Region26_Region27,
+			 Region26_Region24,
+			 Region26_Region11,
+			 Region27_Region24,
+			 Region27_Region23,
+			 Region27_Region34,
+			 Region27_Region11,
+			 Region24_Region23,
+			 Region24_Region22,
+			 Region23_Region22,
+			 Region23_Region34,
+			 Region22_Region01,
+			 Region34_Region35,
+			 Region35_Region33,
+			 Region33_Region31,
+			 Region33_Region30,
+			 Region31_Region29,
+			 Region31_Region30,
+			 Region30_Region29,
+			 Region29_Region18,
+			 Region01_Region03,
+			 Region01_Region18,
+			 Region03_Region04,
+			 Region04_Region07,
+			 Region18_Region16,
+			 Region18_Region20,
+			 Region16_Region15,
+			 Region16_Region17,
+			 Region16_Region20,
+			 Region15_Region07,
+			 Region15_Region17,
+			 Region17_Region20,
+			 Region17_Region21,
+			 Region20_Region21,
+			 Region07_Region09,
+			 Region07_Region08,
+			 Region09_Region08,
+			 Region09_Region13,
+			 Region08_Region13,
+			 Region08_Region11,
+			 Region13_Region11
+		 </Trade_Routes>
+
+		 <Starting_Active_Player> Alien </Starting_Active_Player>
+
+		 <!-- Player Forces  / Structures -->
+		 <!-- Striker fleet -->
+		 <Starting_Forces> Alien, Region27, Kamal_Rex </Starting_Forces>
+		 <Starting_Forces> Alien, Region27, Alien_Walker_Habitat </Starting_Forces>
+		 <Starting_Forces> Alien, Region27, Alien_Recon_Tank </Starting_Forces>
+		 <Starting_Forces> Alien, Region27, Alien_Brute </Starting_Forces>
+		 <Starting_Forces> Alien, Region27, Alien_Grunt </Starting_Forces>
+
+		 <!-- Standing Army -->
+		 <Starting_Forces> Alien, Region24, Alien_Hierarchy_Core </Starting_Forces>
+		 <Starting_Forces> Alien, Region24, Alien_Walker_Assembly </Starting_Forces>
+		 <Starting_Forces> Alien, Region24, Alien_Recon_Tank </Starting_Forces>
+		 <Starting_Forces> Alien, Region24, Alien_Recon_Tank </Starting_Forces>
+		 <Starting_Forces> Alien, Region24, Alien_Recon_Tank </Starting_Forces>
+		<Starting_Forces> Alien, Region24, Alien_Grunt </Starting_Forces>
+		
+		<!-- Standing Army -->
+		<Starting_Forces> Alien, Region22, Alien_Hierarchy_Core </Starting_Forces>
+		<Starting_Forces> Alien, Region22, Alien_Walker_Science </Starting_Forces>
+		<Starting_Forces> Alien, Region22, Alien_Grunt </Starting_Forces>
+		
+		<!-- Standing Army -->
+		<Starting_Forces> Alien, Region26, Alien_Hierarchy_Core </Starting_Forces>
+		<Starting_Forces> Alien, Region26, Alien_Walker_Assembly </Starting_Forces>
+		<Starting_Forces> Alien, Region26, Alien_Grunt </Starting_Forces>
+
+	</Campaign>
+
+	 <Campaign Name="VS2_Demo_Campaign_Sandbox">
+
+		<Campaign_Set> VS2_Demo_Campaign_Sandbox </Campaign_Set>
+		<Script_Name>VS2DemoCampaignSandbox</Script_Name>
+
+		<Text_ID> TEXT_VS2_Demo_Campaign_Sandbox </Text_ID>
+		<Description_Text> TEXT_VS2_Demo_Campaign_Sandbox </Description_Text>
+
+		<!--<Starting_Credits>Novus,1000000</Starting_Credits>-->
+
+		<Starting_Credits>Military,10000</Starting_Credits>
+		<Starting_Credits>Alien,1000000</Starting_Credits>
+
+		<Camera_Shift_X> 0.0 </Camera_Shift_X>
+		<Camera_Shift_Y> 0.0 </Camera_Shift_Y>
+		<Camera_Distance> 500.0  </Camera_Distance>
+
+		<Locations> Global_Core_Art_Model </Locations>
+		<Locations> Global_Core_Art_Model_Stars </Locations>
+
+		 <Trade_Routes>
+			 Region26_Region27,
+			 Region26_Region24,
+			 Region26_Region11,
+			 Region27_Region24,
+			 Region27_Region23,
+			 Region27_Region34,
+			 Region27_Region11,
+			 Region24_Region23,
+			 Region24_Region22,
+			 Region23_Region22,
+			 Region23_Region34,
+			 Region22_Region01,
+			 Region34_Region35,
+			 Region35_Region33,
+			 Region33_Region31,
+			 Region33_Region30,
+			 Region31_Region29,
+			 Region31_Region30,
+			 Region30_Region29,
+			 Region29_Region18,
+			 Region01_Region03,
+			 Region01_Region18,
+			 Region03_Region04,
+			 Region04_Region07,
+			 Region18_Region16,
+			 Region18_Region20,
+			 Region16_Region15,
+			 Region16_Region17,
+			 Region16_Region20,
+			 Region15_Region07,
+			 Region15_Region17,
+			 Region17_Region20,
+			 Region17_Region21,
+			 Region20_Region21,
+			 Region07_Region09,
+			 Region07_Region08,
+			 Region09_Region08,
+			 Region09_Region13,
+			 Region08_Region13,
+			 Region08_Region11,
+			 Region13_Region11
+		 </Trade_Routes>
+
+		 <Starting_Active_Player> Alien </Starting_Active_Player>
+		 <Starting_Forces> Alien, Region27, Alien_Hero </Starting_Forces>
+		 <Starting_Forces> Alien, Region27, ALIEN_WALKER_Habitat </Starting_Forces>
+		 <Starting_Forces> Alien, Region27, Alien_Hierarchy_Core </Starting_Forces>
+
+	 </Campaign>
+
+	 <Campaign Name="Generic_Procedural_Campaign">
+
+		 <Campaign_Set> Generic_Procedural_Campaign </Campaign_Set>
+
+		 <Text_ID> Generic_Procedural_Campaign </Text_ID>
+		 <Description_Text> This is a test campaign running the default strategic script for victory conditions and AI </Description_Text>
+
+		 <Starting_Credits>Novus,1000000</Starting_Credits>
+		 <Starting_Credits>Alien,1000000</Starting_Credits>
+		<Starting_Credits>Masari,1000000</Starting_Credits>
+
+		<Camera_Shift_X> 0.0 </Camera_Shift_X>
+		<Camera_Shift_Y> 0.0 </Camera_Shift_Y>
+		<Camera_Distance> 500.0  </Camera_Distance>
+
+		<Locations> Global_Core_Art_Model </Locations>
+		<Locations> Global_Core_Art_Model_Stars </Locations>
+
+		 <Trade_Routes>
+			 Region26_Region27,
+			 Region26_Region24,
+			 Region26_Region11,
+			 Region27_Region24,
+			 Region27_Region23,
+			 Region27_Region34,
+			 Region27_Region11,
+			 Region24_Region23,
+			 Region24_Region22,
+			 Region23_Region22,
+			 Region23_Region34,
+			 Region22_Region01,
+			 Region34_Region35,
+			 Region35_Region33,
+			 Region33_Region31,
+			 Region33_Region30,
+			 Region31_Region29,
+			 Region31_Region30,
+			 Region30_Region29,
+			 Region29_Region18,
+			 Region01_Region03,
+			 Region01_Region18,
+			 Region03_Region04,
+			 Region04_Region07,
+			 Region18_Region16,
+			 Region18_Region20,
+			 Region16_Region15,
+			 Region16_Region17,
+			 Region16_Region20,
+			 Region15_Region07,
+			 Region15_Region17,
+			 Region17_Region20,
+			 Region17_Region21,
+			 Region20_Region21,
+			 Region07_Region09,
+			 Region07_Region08,
+			 Region09_Region08,
+			 Region09_Region13,
+			 Region08_Region13,
+			 Region08_Region11,
+			 Region13_Region11
+		 </Trade_Routes>
+
+		 <Starting_Active_Player> Novus </Starting_Active_Player>
+
+		 <Starting_Forces> Novus, Region33, Novus_Hero_Mech </Starting_Forces>
+		 <Starting_Forces> Novus, Region33, Novus_Hero_Founder </Starting_Forces>
+		 <Starting_Forces> Novus, Region33, Novus_Hero_Vertigo </Starting_Forces>
+		 <Starting_Forces> Novus, Region33, Novus_Central_Processor </Starting_Forces>
+		 <Starting_Forces> Alien, Region26, Alien_Hero_Orlok </Starting_Forces>
+		 <Starting_Forces> Alien, Region26, Alien_Hero_Kamal_Rex </Starting_Forces>
+		 <Starting_Forces> Alien, Region26, Alien_Hero_Nufai </Starting_Forces>
+		 <Starting_Forces> Alien, Region26, Alien_Hierarchy_Core </Starting_Forces>
+		 <Starting_Forces> Masari, Region15, Masari_Hero_Charos </Starting_Forces>
+		 <Starting_Forces> Masari, Region15, Masari_Hero_Zessus </Starting_Forces>
+		 <Starting_Forces> Masari, Region15, Masari_Hero_Alatea </Starting_Forces>
+		 <Starting_Forces> Masari, Region15, Masari_Atlatea </Starting_Forces>
+
+		 <AI_Player_Control> Alien, DefaultAIPlayer</AI_Player_Control>
+		<AI_Player_Control> Masari, DefaultAIPlayer</AI_Player_Control>
+
+	</Campaign>
+
+	<Campaign Name="GARY_GLOBAL_Campaign">
+
+		<Campaign_Set> GARY_GLOBAL_Campaign </Campaign_Set>
+		<Script_Name>MariaCampaign</Script_Name>
+
+		<Text_ID> GARY_GLOBAL_Campaign </Text_ID>
+		<Description_Text> TEXT_GARY_GLOBAL_Campaign </Description_Text>
+
+		<Starting_Credits>Novus,1000000</Starting_Credits>
+		<Starting_Credits>Alien,1000000</Starting_Credits>
+
+		<Camera_Shift_X> 0.0 </Camera_Shift_X>
+		<Camera_Shift_Y> 0.0 </Camera_Shift_Y>
+		<Camera_Distance> 500.0  </Camera_Distance>
+
+		<Locations> Global_Core_Art_Model </Locations>
+		<Locations> Global_Core_Art_Model_Stars </Locations>
+
+		<Trade_Routes>
+			Region26_Region27,
+			Region26_Region24,
+			Region26_Region11,
+			Region27_Region24,
+			Region27_Region23,
+			Region27_Region34,
+			Region27_Region11,
+			Region24_Region23,
+			Region24_Region22,
+			Region23_Region22,
+			Region23_Region34,
+			Region22_Region01,
+			Region34_Region35,
+			Region35_Region33,
+			Region33_Region31,
+			Region33_Region30,
+			Region31_Region29,
+			Region31_Region30,
+			Region30_Region29,
+			Region29_Region18,
+			Region01_Region03,
+			Region01_Region18,
+			Region03_Region04,
+			Region04_Region07,
+			Region18_Region16,
+			Region18_Region20,
+			Region16_Region15,
+			Region16_Region17,
+			Region16_Region20,
+			Region15_Region07,
+			Region15_Region17,
+			Region17_Region20,
+			Region17_Region21,
+			Region20_Region21,
+			Region07_Region09,
+			Region07_Region08,
+			Region09_Region08,
+			Region09_Region13,
+			Region08_Region13,
+			Region08_Region11,
+			Region13_Region11
+		</Trade_Routes>
+
+		<Starting_Active_Player> Alien </Starting_Active_Player>
+		<!-- Player Forces  / Structures -->
+
+		<!-- ***************** ALIEN FORCES *********************************************-->
+		<Starting_Forces> Alien, Region27, Alien_Hierarchy_Core </Starting_Forces>
+		<Starting_Forces> Alien, Region27, Alien_Hero_Kamal_Rex </Starting_Forces>
+		<Starting_Forces> Alien, Region27, Alien_Glyph_Carver </Starting_Forces>
+		<Starting_Forces> Alien, Region27, Alien_Grunt </Starting_Forces>
+
+		<Starting_Forces> Alien, Region26, Alien_Abduction_Core </Starting_Forces>
+		<Starting_Forces> Alien, Region26, Alien_Hero_Nufai </Starting_Forces>
+		<Starting_Forces> Alien, Region26, Alien_Team_Science_Greys </Starting_Forces>
+		<Starting_Forces> Alien, Region26, Alien_Brute </Starting_Forces>
+
+		<Starting_Forces> Alien, Region24, Alien_Theory_Core </Starting_Forces>
+		<Starting_Forces> Alien, Region24, Alien_Hero_Orlok </Starting_Forces>
+		<Starting_Forces> Alien, Region24, Alien_Team_Science_Greys </Starting_Forces>
+		<Starting_Forces> Alien, Region24, Alien_Team_Science_Greys </Starting_Forces>
+		<Starting_Forces> Alien, Region24, Alien_Brute </Starting_Forces>
+
+		<Starting_Forces> Alien, Region23, Alien_Creation_Core </Starting_Forces>
+
+		<Starting_Forces> Alien, Region22, Alien_Megaweapon_Purifier </Starting_Forces>
+
+		
+		<!-- ***************** NOVUS FORCES *********************************************-->
+		<Starting_Forces> Novus, Region34, Novus_Central_Processor </Starting_Forces>
+		<Starting_Forces> Novus, Region34, Novus_Hero_Mech </Starting_Forces>
+
+		<Starting_Forces> Novus, Region35, Novus_Megaweapon </Starting_Forces>
+		<Starting_Forces> Novus, Region35, Novus_Hero_Founder </Starting_Forces>
+
+		<Starting_Forces> Novus, Region33, Novus_Nanocenter </Starting_Forces>
+		<Starting_Forces> Novus, Region33, Novus_Hero_Vertigo </Starting_Forces>
+
+		<Starting_Forces> Novus, Region31, Novus_Research_Center </Starting_Forces>
+
+		<Starting_Forces> Novus, Region29, Novus_Material_Center </Starting_Forces>
+		
+
+		<!-- ***************** MASARI FORCES *********************************************-->
+		<Starting_Forces> Masari, Region1, Masari_Atlatea </Starting_Forces>
+		<Starting_Forces> Masari, Region1, Masari_Hero_Charos </Starting_Forces>
+
+		<Starting_Forces> Masari, Region3, Masari_Element_Magnet </Starting_Forces>
+		<Starting_Forces> Masari, Region3, Masari_Hero_Alatea </Starting_Forces>
+		
+		<Starting_Forces> Masari, Region4, Masari_Key_Inspiration </Starting_Forces>
+		<Starting_Forces> Masari, Region4, Masari_Hero_Zessus </Starting_Forces>
+
+		<Starting_Forces> Masari, Region18, Masari_Megaweapon </Starting_Forces>
+
+		<Starting_Forces> Masari, Region16, Masari_Will_Processor </Starting_Forces>
+
+		
+		<!-- ***************** MILITARY FORCES *********************************************-->
+		<Starting_Forces> Military, Region20, Military_Hero_Tank </Starting_Forces>
+
+		<Starting_Forces> Military, Region17, Military_Hero_Randal_Moore </Starting_Forces>
+
+
+
+
+	</Campaign>
+
+ </Campaigns>
+

@@ -1,0 +1,793 @@
+<?xml version="1.0"?>
+<Novus_INF_Variant_XML>
+
+	<!-- **************************************************************************************** -->
+	<!-- *** UNIT(S) **************************************************************************** -->
+	<!-- **************************************************************************************** -->
+
+	<X12_Novus_Units Name="Novus_Variant">
+
+		<!-- ART -->
+		<Land_Model_Name> NV_Variant.ALO </Land_Model_Name>		
+		<Scale_Factor>0.9</Scale_Factor>
+		<Occlusion_Silhouette_Enabled>1</Occlusion_Silhouette_Enabled>
+		<Death_Fade_Time> 0.25 </Death_Fade_Time>
+		<Death_Persistence_Duration> 10 </Death_Persistence_Duration>
+		<AssetBank> BANK_NOVUS </AssetBank>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_UNIT_NOVUS_VARIANT</Text_ID>
+		<GUI_Scene_Name> HealthBar_Scene_Medium </GUI_Scene_Name>
+		<GUI_Receives_Input> false </GUI_Receives_Input>
+		<GUI_Min_Scale> 0.3 </GUI_Min_Scale>
+		<GUI_Max_Scale> 2.5 </GUI_Max_Scale>
+		<GUI_Default_Scale> 0.5 </GUI_Default_Scale>
+		<GUI_World_Offset> 0.0, 0.0, -10 </GUI_World_Offset>
+		<Select_Box_Scale>55</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+
+
+		<!-- ATTRIBUTES -->
+        <LOD_Bias>8.5</LOD_Bias>
+		<Affiliation>Novus</Affiliation>
+		<CategoryMask> Medium, Piloted, CanAttack, RadiationHurts </CategoryMask>
+		<Victory_Relevant> No </Victory_Relevant>
+		<Weather_Category>Hover</Weather_Category>
+		<Can_Fall_From_Bridge> true </Can_Fall_From_Bridge>
+		<Importance> 0.3 </Importance>
+		<Shot_Type> Vehicle </Shot_Type>
+
+		<Attributes SubObjectList="Yes">
+			<Affected_By_Novus_Signal> true </Affected_By_Novus_Signal>
+			<Tactical_Sell_Percent_Modifier> -0.5 </Tactical_Sell_Percent_Modifier>
+			<Tactical_Sell_Time_Seconds> 2.0 </Tactical_Sell_Time_Seconds>
+		</Attributes>
+
+
+		<!-- MOVEMENT -->
+		<MovementClass>Hover</MovementClass>
+		<Should_Move_At_Water_Level> true </Should_Move_At_Water_Level>
+		<OccupationStyle>1x1</OccupationStyle>
+		<Max_Speed>3.0</Max_Speed>
+		<OverrideAcceleration> .25 </OverrideAcceleration>
+		<OverrideDeceleration> .25 </OverrideDeceleration>
+		<Max_Rate_Of_Turn>30.0</Max_Rate_Of_Turn>
+		<Space_Layer> LandDynamic </Space_Layer>
+		<UnitCollisionClass> Vehicle </UnitCollisionClass>
+		<FormationSpacing> 1 </FormationSpacing>
+		<FormationOrder> 8 </FormationOrder>
+		<FormationGrouping> Standard </FormationGrouping>
+		<!--Standard-->
+		<FormationRaggedness> .6 </FormationRaggedness>
+		<MaxJiggleDistance> 1 </MaxJiggleDistance>
+		<Custom_Hard_XExtent> 10.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		<Movement_Animation_Speed> 3.2 </Movement_Animation_Speed>
+		<Should_Keep_Tangent_To_Terrain> true </Should_Keep_Tangent_To_Terrain>
+
+		<!-- CONFLICT -->
+		<Is_Attackable> true </Is_Attackable>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+		<Land_FOW_Reveal_Range>185</Land_FOW_Reveal_Range>
+
+		<Tactical_Health> 300 </Tactical_Health>
+
+		<Attack_Category_Restrictions> Resource | Resource_INST | Flying </Attack_Category_Restrictions>
+
+		<Land_Damage_Thresholds>1, 0.66, 0.46,  0.25</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>SFX_Generic_Detonation_1,SFX_Generic_Detonation_1,SFX_Generic_Detonation_1,SFX_Generic_Detonation_1</Land_Damage_SFX>
+
+
+		<!-- BEHAVIORS-->
+		<Behavior>
+			PERSISTENT_UNIT,
+			SELECTABLE,
+			RADAR_MAP_VISIBLE,
+			EFFECT_REGISTRY
+		</Behavior>
+
+		<LandBehavior>
+		<!--LIGHTNING_BALL_EFFECT,-->
+			SWITCH_TYPE,
+			GUI,
+			RADAR_MAP_VISIBLE,
+			SURFACE_FX,
+			WALK_LOCOMOTOR,
+			FORMATION,
+			IDLE,
+			SQUASH,
+			TARGETING,
+			TURRET,
+			WEAPON,
+			REVEAL,
+			HIDE_WHEN_FOGGED,
+			BALLISTIC,
+			ATTRIBUTE_DIRECTORY,
+			EFFECT_GENERATOR,
+			ABILITY_COUNTDOWN,
+			DAMAGE_TRACKING,
+			AI_RECRUITABLE,
+			TACTICAL_SELL,
+			AI_TARGET
+		</LandBehavior>
+
+	 <BehaviorType Name="ArmorAndDamageBehaviorType">
+		 <Armor_Type> Armor_Novus_Vehicle_Light </Armor_Type>
+	 </BehaviorType>
+
+	 <BehaviorType Name="TacticalSellBehaviorType">
+		 <Sell_Effect_Generator_Name>NovusSellGenerator</Sell_Effect_Generator_Name>
+    </BehaviorType>
+
+    <BehaviorType Name="ProductionBehaviorType">
+      <Size_Value> 10 </Size_Value>
+      <Build_Cost_Credits> 175 </Build_Cost_Credits>
+      <Build_Time_Seconds> 7 </Build_Time_Seconds>
+      <Is_Research_Tech_Tree_Lockable> Yes </Is_Research_Tech_Tree_Lockable>
+      <Extra_Enablers_Increase_Build_Rate> 1.0 </Extra_Enablers_Increase_Build_Rate>
+      <!-- 
+				Maria 11.07.2006 
+				This flag determines which types are used to populate the
+				build menu in global mode.
+			-->
+      <Is_Strategic_Buildable_Type> Yes </Is_Strategic_Buildable_Type>
+      <Strategic_UI_Build_Menu_Order>7</Strategic_UI_Build_Menu_Order>
+    </BehaviorType>
+
+		<BehaviorType Name="BuildableObjectBehaviorType">
+			<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+			<Tactical_Build_Cost_Campaign> 350 </Tactical_Build_Cost_Campaign>
+			<Tactical_Build_Cost_Multiplayer> 350 </Tactical_Build_Cost_Multiplayer>
+			<Tactical_Build_Time_Seconds> 16 </Tactical_Build_Time_Seconds>
+			<Tactical_UI_Build_Queue_Order> 0 </Tactical_UI_Build_Queue_Order>
+		</BehaviorType>
+
+		<BehaviorType name="AIBehaviorType">
+			<AI_Combat_Power> 1 </AI_Combat_Power>
+			<Idle_Chase_Range> 20.0 </Idle_Chase_Range>  <!-- Double click guard area Keep very small-->
+			<Guard_Chase_Range> 150.0 </Guard_Chase_Range> <!-- Guard radius for unit-->
+			<Autonomous_Move_Extension_Vs_Attacker> 25.0 </Autonomous_Move_Extension_Vs_Attacker> <!--Range outside of guard area unit will move-->
+			<Attack_Move_Response_Range> 50.0 </Attack_Move_Response_Range> <!-- When given a attack move command unit will travel this distance from path to attack-->
+			<AI_Target_Level>Group_Member</AI_Target_Level>
+			<Attack_Score_Rating> 0.6 </Attack_Score_Rating>
+			<Scout_Score_Rating> 0.8 </Scout_Score_Rating>
+			<Guerilla_Score_Rating> 0.3 </Guerilla_Score_Rating>
+		</BehaviorType>
+
+		<BehaviorType Name="WeaponBehaviorType">
+			<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
+			<Can_Attack_Without_Weapon_Behavior>Yes</Can_Attack_Without_Weapon_Behavior>
+			<Ranged_Target_Z_Adjust>13.0</Ranged_Target_Z_Adjust>
+			<Targeting_Priority_Set> Novus_Variant_Target_Priority </Targeting_Priority_Set>
+			<Targeting_Fire_Inaccuracy> 1.0 </Targeting_Fire_Inaccuracy>
+			<Targeting_Min_Attack_Distance> 0.0 </Targeting_Min_Attack_Distance>
+			<Targeting_Max_Attack_Distance> 165.0 </Targeting_Max_Attack_Distance>
+			<Projectile_Types>Proj_Novus_Flechette_Cannon</Projectile_Types>
+			<Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>
+			<Projectile_Fire_Pulse_Count>6</Projectile_Fire_Pulse_Count>
+			<Projectile_Fire_Pulse_Delay_Seconds>0.15</Projectile_Fire_Pulse_Delay_Seconds>
+		</BehaviorType>
+
+		<BehaviorType Name="EncyclopediaBehaviorType">
+			<Icon_Name> i_icon_ni_variant.tga </Icon_Name>
+		</BehaviorType>
+
+		<BehaviorType Name="TooltipBehaviorType">
+			<Tooltip_Description_Text_ID> TEXT_TOOLTIP_DESCRIPTION_NOVUS_VARIANT </Tooltip_Description_Text_ID>
+			<Tooltip_Category> TEXT_TOOLTIP_CATEGORY_VEHICLE </Tooltip_Category>
+			<Tooltip_Good_Against> TEXT_TYPE_VERSUS_INFANTRY TEXT_TYPE_VERSUS_STRUCTURES </Tooltip_Good_Against>
+			<Tooltip_Vulnerable_To> TEXT_TYPE_VERSUS_VEHICLES TEXT_TYPE_VERSUS_WALKERS </Tooltip_Vulnerable_To>
+         <Researched_Upgrades>
+            TEXT_NOVUS_RESEARCH_TITLE_RAPID_FLOW
+            TEXT_NOVUS_RESEARCH_TITLE_ADVANCED_FLOW_EFFECT
+            TEXT_NOVUS_RESEARCH_TITLE_NANITE_REFINEMENT_ABILITY
+            TEXT_NOVUS_RESEARCH_TITLE_NANITE_PURIFICATION
+         </Researched_Upgrades>
+		</BehaviorType>
+	  
+	
+         
+    <BehaviorType Name="TurretBehaviorType">
+      <Is_Turret_Entire_Body> True </Is_Turret_Entire_Body>
+      <Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+      <Turret_Elevate_Extent_Degrees>80</Turret_Elevate_Extent_Degrees>
+      <Turret_Bone_Name>Turret_00</Turret_Bone_Name>
+      <Barrel_Bone_Name>MuzzleA_00</Barrel_Bone_Name>
+      <Turret_Rotate_Speed>5.5</Turret_Rotate_Speed>
+      <Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+      <Apply_Y_Turret_Rotate_To_Axis>1</Apply_Y_Turret_Rotate_To_Axis>
+      <Turret_Targets_Ground_Vehicles> 1 </Turret_Targets_Ground_Vehicles>
+      <Turret_Targets_Ground_Infantry> 2 </Turret_Targets_Ground_Infantry>
+      <Turret_Targets_Air_Vehicles> 9999 </Turret_Targets_Air_Vehicles>
+      <Turret_Targets_Anything_Else> 3 </Turret_Targets_Anything_Else>
+      <Turret_Rotate_To_Rest_Delay_Sec> 0 </Turret_Rotate_To_Rest_Delay_Sec>
+      <Ground_Vehicle_Turret_Target> Yes </Ground_Vehicle_Turret_Target>
+    </BehaviorType>
+
+    <BehaviorType Name="DeathFXBehaviorType">
+      <Death_Clone> Damage_Default, Novus_Variant_Death_Clone </Death_Clone>
+      <Death_Explosions>Novus_Large_Explosion_Land</Death_Explosions>
+		<Death_Speed_Min> 2 </Death_Speed_Min>
+		<Death_Speed_Max> 4 </Death_Speed_Max>
+    </BehaviorType>
+
+    <BehaviorType Name="BallisticBehaviorType">
+      <Ballistic_Weight>1.5</Ballistic_Weight>
+      <!--         <Ballistic_Bounce>0.5</Ballistic_Bounce> -->
+    </BehaviorType>
+
+    <BehaviorType Name="SFXBehaviorType">
+      <SFXEvent_Fire>SFX_Novus_Variant_Fire</SFXEvent_Fire>
+      <SFXEvent_Select>Unit_Select_Novus_Variant</SFXEvent_Select>
+      <SFXEvent_Move>Unit_Move_A_Novus_Variant</SFXEvent_Move>
+      <SFXEvent_Move_At_Top_Speed>Unit_Move_B_Novus_Variant</SFXEvent_Move_At_Top_Speed>
+      <SFXEvent_Attack>Unit_Attack_A_Novus_Variant</SFXEvent_Attack>
+      <SFXEvent_Attack_At_Top_Speed>Unit_Attack_B_Novus_Variant</SFXEvent_Attack_At_Top_Speed>
+      <SFXEvent_Guard />
+      <SFXEvent_Turret_Rotating_Loop>  </SFXEvent_Turret_Rotating_Loop>
+      <Death_SFXEvent_Start_Die>SFX_Novus_Medium_Vehicle_Death</Death_SFXEvent_Start_Die>
+      <SFXEvent_Engine_Idle_Loop> SFX_Novus_Variant_Idle_Engine_Loop</SFXEvent_Engine_Idle_Loop>
+      <SFXEvent_Engine_Moving_Loop> SFX_Novus_Variant_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
+      <SFXEvent_Tactical_Build_Started>GUI_BUILD_Vehicle</SFXEvent_Tactical_Build_Started>
+      <SFXEvent_Tactical_Build_Complete>Unit_Select_Novus_Variant</SFXEvent_Tactical_Build_Complete>
+      <SFXEvent_Tactical_Build_Cancelled>GUI_BUILD_Vehicle_Canceled</SFXEvent_Tactical_Build_Cancelled>
+
+      <!-- Maria 05.01.2006 - Adding build sounds for Global production -->
+      <SFXEvent_Build_Started>GUI_BUILD_Vehicle</SFXEvent_Build_Started>
+      <SFXEvent_Build_Complete>Unit_Select_Novus_Variant</SFXEvent_Build_Complete>
+      <SFXEvent_Build_Cancelled>GUI_BUILD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
+    </BehaviorType>
+
+    <BehaviorType Name="BlobShadowBehaviorType">
+      <No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+      <No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+    </BehaviorType>
+
+    <BehaviorType Name="GUIBehaviorType">
+      <GUI_Bracket_Size>1</GUI_Bracket_Size>
+      <!-- Maria 05.18.2006 - Data needed for the models attached to the mouse in Global -->
+      <GUI_Is_Top_View> Yes </GUI_Is_Top_View>
+      <GUI_Rotate_Angle_Degrees />
+      <GUI_Is_Model_Shifted_Down> Yes </GUI_Is_Model_Shifted_Down>
+      <GUI_Shift_Factor> 4.7 </GUI_Shift_Factor>
+      <GUI_Strategic_Mode_Scale> 0.05 </GUI_Strategic_Mode_Scale>
+    </BehaviorType>
+
+    <BehaviorType Name="CrushBehaviorType">
+      <Crush_Defense>30</Crush_Defense>
+		<Crush_Power> 6 </Crush_Power>
+    </BehaviorType>
+
+    <BehaviorType Name="RadarMapBehaviorType">
+      <Radar_Icon_Size>0.03  0.03</Radar_Icon_Size>
+    </BehaviorType>
+
+    <BehaviorType Name="FleetBehaviorType">
+      <!-- Maria 05.24.2006 - How much space does the unit take up -->
+      <Unit_Pop_Cap> 2 </Unit_Pop_Cap>
+    </BehaviorType>
+
+	  <BehaviorType NAme="LuaScriptBehaviorType">
+		  <Lua_Only_Service_If_AI>True</Lua_Only_Service_If_AI>
+		  <Lua_Land_Behaviors>Novus_Variant_Unit_Behavior,Defensive_AI_Unit_Behavior</Lua_Land_Behaviors>
+		  <Lua_Script_Data>
+			  DefensiveAI = {}
+			  DefensiveAI.KillTurret = true
+			  DefensiveAI.KillTurretRange = 45.0
+		  </Lua_Script_Data>
+	  </BehaviorType>
+
+	  <!-- ABILITIES -->
+    <Unit_Abilities_Data SubObjectList="Yes">
+
+      <!--=================================================================================================
+			== [10/2/2006] When in holgram mode, user should be able to toggle weapons off  - Oksana Kubushyna
+			================================================================================================== -->
+      <Unit_Ability Name="Novus_Variant_Toggle_Weapon_Ability">
+         <Type>EFFECT_GENERATOR</Type>
+         <Is_Modal>Yes</Is_Modal>
+         <Active_By_Default> true </Active_By_Default>
+         <GUI_Activated_Ability_Name> NovusVariantToggleWeaponAbility </GUI_Activated_Ability_Name>
+         <Effect_Generator_Name> NovusVariantToggleWeaponGenerator </Effect_Generator_Name>
+
+         <SFXEvent_GUI_Unit_Ability_Activated>GUI_NOVUS_ABILITY_SWITCH_WEAPONS</SFXEvent_GUI_Unit_Ability_Activated>
+         <SFXEvent_GUI_Unit_Ability_Deactivated>GUI_NOVUS_ABILITY_SWITCH_WEAPONS</SFXEvent_GUI_Unit_Ability_Deactivated>
+      </Unit_Ability>
+
+    </Unit_Abilities_Data>
+
+      <!-- ABILITIES -->
+   <Abilities SubObjectList="Yes">
+      <Effect_Generator_Ability Name="NovusVariantToggleWeaponAbility">
+         <Effect_Generator_Name> NovusVariantToggleWeaponGenerator </Effect_Generator_Name>
+         <Activation_Style> User_Input </Activation_Style>
+         <Is_Self_Targeted>true</Is_Self_Targeted>
+
+         <Can_Target_Allies>true</Can_Target_Allies>
+         <Point_Turret_At_Target>No </Point_Turret_At_Target>
+
+         <Deactivate_On_User_Attack_Order>Yes</Deactivate_On_User_Attack_Order>
+         <Deactivate_On_User_Move_Order>No</Deactivate_On_User_Move_Order>
+      </Effect_Generator_Ability>
+    </Abilities>
+
+
+
+   <!-- EFFECTS -->
+    <Effect_Generator_Data SubObjectList="Yes">
+
+      <!--=================================================================================================
+			== [10/2/2006] Constant hologram generator - always on, taking over when unit is idle  - Oksana Kubushyna
+			================================================================================================== -->
+		<Effect_Generator Name="NovusMirageFieldGenerator">
+			<Should_Deactivate_Manually> true </Should_Deactivate_Manually>
+			<Modal_Refresh_Frequency> 3.0 </Modal_Refresh_Frequency>
+			<Starts_Active> true </Starts_Active>
+
+			<Effect_Generator_Entry Name="Entry1">
+				<Effect_Name> NovusMirageEffect </Effect_Name>
+				<Duration> 3.2 </Duration>
+				<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+            
+            <!-- Frank TODO activate mimic-->
+            <!--<Source_SFX_Event>SFX_Novus_Mimic</Source_SFX_Event>-->
+			</Effect_Generator_Entry>
+
+		</Effect_Generator>
+
+		 
+      <Effect_Generator Name="NovusStopMirageFieldGenerator">
+        <Is_Independent_Generator> true </Is_Independent_Generator>
+        <Should_Deactivate_Manually> false </Should_Deactivate_Manually>
+        <Starts_Active> true </Starts_Active>
+        <Application_Signals> OBJECT_FIRED_WEAPON, OBJECT_MOVEMENT_BEGIN </Application_Signals>
+
+        <Effect_Generator_Entry Name="Entry1">
+          <Effect_Name> NovusBlockMirageEffect </Effect_Name>
+          <Duration> 3.1 </Duration>
+          <Target_Gathering_Mask> Self </Target_Gathering_Mask>
+           
+           <!-- Frank TODO out of mimic -->
+           <!--<Source_SFX_Event>SFX_Novus_Mimic</Source_SFX_Event>-->
+        </Effect_Generator_Entry>
+      </Effect_Generator>
+
+
+
+      <!--=================================================================================================
+			== [10/2/2006] MIRAGE Upgrade - mirage friendly units withing radius.  - Oksana Kubushyna
+			================================================================================================== -->
+      <Effect_Generator Name="NovusMirageFieldUpgradeGenerator">
+        <Should_Deactivate_Manually> true </Should_Deactivate_Manually>
+        <Modal_Refresh_Frequency> 3.0 </Modal_Refresh_Frequency>
+        <Starts_Active> false </Starts_Active>
+
+        <Effect_Generator_Entry Name="Entry1">
+          <Effect_Name> NovusMirageEffect </Effect_Name>
+          <Duration> 3.2 </Duration>
+          <Target_Gathering_Mask> SelfAE </Target_Gathering_Mask>
+          <Area_Effect_Radius> 150 </Area_Effect_Radius>
+          <Target_Filter_C> Is_Ally </Target_Filter_C>
+        </Effect_Generator_Entry>
+      </Effect_Generator>
+
+      <!--=================================================================================================
+			== [10/2/2006] Toggle WEAPONS generator  - Oksana Kubushyna
+			================================================================================================== -->
+      <Effect_Generator Name="NovusVariantToggleWeaponGenerator">
+         <Should_Deactivate_Manually> Yes </Should_Deactivate_Manually>
+         <Is_Independent_Generator> Yes </Is_Independent_Generator>
+         <Disable_Activation>DamageTaken</Disable_Activation>
+
+			<Effect_Generator_Entry Name="Entry1">
+          <Effect_Name> NovusToggleWeaponsEffect </Effect_Name>
+          <Duration> 0.0 </Duration>
+          <Target_Gathering_Mask> Self </Target_Gathering_Mask>
+        </Effect_Generator_Entry>
+      </Effect_Generator>
+
+      <!-- This generator will cleanse any harmful effects from this unit whenever it enters flow. Unlocked via research. -->
+      <Effect_Generator Name="NovusResearchNanitePurificationEffectGenerator">
+        <Application_Signals> OBJECT_ENTERED_FLOW </Application_Signals>
+
+        <Effect_Generator_Entry Name="Entry1">
+          <Effect_Name> NovusResearchNanitePurificationEffect </Effect_Name>
+          <Duration> 1.0 </Duration>
+          <Target_Gathering_Mask> Self </Target_Gathering_Mask>
+        </Effect_Generator_Entry>
+      </Effect_Generator>
+
+      <!-- Researched ability for this unit to Flow. It just dynamically adds the FLOW behavior to this unit. -->
+      <Effect_Generator Name="NovusResearchAdvancedFlowEffectGenerator">
+        <Starts_Active> true </Starts_Active>
+        <Effect_Generator_Entry Name="Entry1">
+          <Effect_Name> NovusResearchAdvancedFlowEffect </Effect_Name>
+          <Duration> -1.0 </Duration>
+          <Target_Gathering_Mask> Self </Target_Gathering_Mask>
+        </Effect_Generator_Entry>
+      </Effect_Generator>
+
+		 <!-- Standard Sell generator  - 06/28/2007 -->
+		 <!--INCLUDE ".\Data\XML\Includes\Sell_Effect_Generators\NOVUS_Sell_Generators.xml" -->
+		 
+    </Effect_Generator_Data>
+
+  </X12_Novus_Units>
+
+	<!-- **************************************************************************************** -->
+	<!-- *** DEATH CLONE(S)********************************************************************** -->
+	<!-- **************************************************************************************** -->
+
+	<X12_Novus_Units Name="Novus_Variant_Death_Clone">
+
+		<!-- ART -->
+		<Land_Model_Name>NV_Variant_DC.ALO</Land_Model_Name>
+		<Scale_Factor>.25</Scale_Factor>
+		<AssetBank> BANK_NOVUS </AssetBank>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+		<!-- ATTRIBUTES -->
+		<CategoryMask> Resource </CategoryMask>
+
+		<!-- CONFLICT -->
+		<Ranged_Target_Z_Adjust>0.1</Ranged_Target_Z_Adjust>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+		<Is_Attackable>Yes</Is_Attackable>
+	  
+		<!-- BEHAVIORS -->
+		<LandBehavior>
+         SELECTABLE,
+         GUI,
+         RESOURCE,
+         EFFECT_REGISTRY,
+         AI_TARGET,
+         SPAWN_DEBRIS,
+         ATTRIBUTE_DIRECTORY,
+         BALLISTIC,
+         HIDE_WHEN_FOGGED
+      </LandBehavior>
+
+      <BehaviorType Name="DebrisBehaviorType">
+         <Debris_Min_Lifetime_Seconds> 120.0 </Debris_Min_Lifetime_Seconds>
+         <Debris_Max_Lifetime_Seconds> 120.0 </Debris_Max_Lifetime_Seconds>
+      </BehaviorType>
+
+      <BehaviorType Name="BallisticBehaviorType">
+         <Ballistic_Weight>6.0</Ballistic_Weight>
+         <Ballistic_Bounce>0.3</Ballistic_Bounce>
+      </BehaviorType>
+
+      <BehaviorType Name="SpawnDebrisBehaviorType">
+         <Creation_Debris_Types>
+            Novus_Variant_Debris_05,
+            Novus_Variant_Debris_05,
+            Novus_Variant_Debris_01,
+            Novus_Variant_Debris_04,
+            Novus_Variant_Debris_03,
+            Novus_Variant_Debris_01
+            Novus_Variant_Debris_02,
+            Novus_Variant_Debris_03,
+            Novus_Variant_Debris_01,
+            Novus_Variant_Debris_03,
+            Novus_Variant_Debris_04,
+            Novus_Variant_Debris_02,
+            Novus_Variant_Debris_03,
+            Novus_Variant_Debris_05,
+            Novus_Variant_Debris_01,
+            Novus_Variant_Debris_02,
+            Novus_Variant_Debris_05,
+            Novus_Variant_Debris_02,
+            Novus_Variant_Debris_01
+
+         </Creation_Debris_Types>
+         <Debris_Speed_Min> 100.0 </Debris_Speed_Min>
+         <Debris_Speed_Max> 100.0 </Debris_Speed_Max>
+         <Debris_Outward_Speed_Min> 50.0 </Debris_Outward_Speed_Min>
+         <Debris_Outward_Speed_Max> 100.0 </Debris_Outward_Speed_Max>
+         <Debris_Ang_Min> 20.0 </Debris_Ang_Min>
+         <Debris_Ang_Max> 30.0 </Debris_Ang_Max>
+      </BehaviorType>
+
+      <BehaviorType Name="BallisticBehaviorType">
+         <Ballistic_Weight>9.0</Ballistic_Weight>
+         <Ballistic_Bounce>0.3</Ballistic_Bounce>
+      </BehaviorType>
+
+      <BehaviorType Name="DeathFXBehaviorType">
+         <Death_Explosions>Novus_Large_Explosion_Land</Death_Explosions>
+         <Death_Speed_Min> 100.0 </Death_Speed_Min>
+         <Death_Speed_Max> 120.0 </Death_Speed_Max>
+         <Death_Ang_Min> 1.0 </Death_Ang_Min>
+         <Death_Ang_Max> 2.0 </Death_Ang_Max>
+         <Death_Horizontal_Speed>10.0</Death_Horizontal_Speed>
+         <Death_SFXEvent_Start_Die>SFX_Novus_Medium_Vehicle_Death</Death_SFXEvent_Start_Die>
+      </BehaviorType>
+
+      <BehaviorType Name="ArmorAndDamageBehaviorType">
+         <Damage_Type> Damage_Default </Damage_Type>
+      </BehaviorType>
+
+      <BehaviorType Name="ResourceBehaviorType">
+         <Resource_Units> 150 </Resource_Units>
+         <Resource_For_Faction> Military, Novus, Alien, Masari </Resource_For_Faction>
+         <Is_Single_Resource> false </Is_Single_Resource>
+         <Use_Death_Behavior> true </Use_Death_Behavior>
+      </BehaviorType>
+
+   </X12_Novus_Units>
+
+   <X12_Novus_Units Name="Novus_Variant_Debris_01">
+
+      <!-- ART -->
+      <Land_Model_Name>NV_Chunk_Big.ALO</Land_Model_Name>
+      <Scale_Factor>2.0</Scale_Factor>
+      <AssetBank> BANK_NOVUS </AssetBank>
+
+      <!-- INTERFACE -->
+      <Text_ID>TEXT_NONE</Text_ID>
+      <Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+      <!-- ATTRIBUTES -->
+      <Remove_Upon_Death>true</Remove_Upon_Death>
+
+      <!-- Non-decoration debris will have to have HIDE_WHEN_FOGGED behavior to properly hide.-->
+      <!-- Decoration debris will not be created if spawned under FOW. -Oksana -->
+      <Is_Decoration>Yes</Is_Decoration>
+
+
+      <!-- CONFLICT -->
+    <Tactical_Health>9999</Tactical_Health>
+
+    <!-- BEHAVIORS -->
+    <LandBehavior>
+      BALLISTIC,
+      DEBRIS
+    </LandBehavior>
+
+    <BehaviorType Name="BallisticBehaviorType">
+      <Ballistic_Weight>6.0</Ballistic_Weight>
+      <Ballistic_Bounce>0.2</Ballistic_Bounce>
+    </BehaviorType>
+
+    <BehaviorType Name="DebrisBehaviorType">
+      <Debris_Min_Lifetime_Seconds> 3.0 </Debris_Min_Lifetime_Seconds>
+      <Debris_Max_Lifetime_Seconds> 7.0 </Debris_Max_Lifetime_Seconds>
+    </BehaviorType>
+
+    <BehaviorType Name="ArmorAndDamageBehaviorType">
+      <Damage_Type> Damage_Default </Damage_Type>
+    </BehaviorType>
+
+  </X12_Novus_Units>
+
+  <X12_Novus_Units Name="Novus_Variant_Debris_02">
+
+    <!-- ART -->
+    <Land_Model_Name>NV_Chunk_Medium.ALO</Land_Model_Name>
+    <Scale_Factor>1.5</Scale_Factor>
+    <AssetBank> BANK_NOVUS </AssetBank>
+
+    <!-- INTERFACE -->
+    <Text_ID>TEXT_NONE</Text_ID>
+    <Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+    <!-- ATTRIBUTES -->
+    <Remove_Upon_Death>true</Remove_Upon_Death>
+
+     <!-- Non-decoration debris will have to have HIDE_WHEN_FOGGED behavior to properly hide.-->
+     <!-- Decoration debris will not be created if spawned under FOW. -Oksana -->
+     <Is_Decoration>Yes</Is_Decoration>
+
+     <!-- CONFLICT -->
+    <Tactical_Health>9999</Tactical_Health>
+
+    <!-- BEHAVIORS -->
+    <LandBehavior>
+      BALLISTIC,
+      DEBRIS
+    </LandBehavior>
+
+    <BehaviorType Name="BallisticBehaviorType">
+      <Ballistic_Weight>4.0</Ballistic_Weight>
+      <Ballistic_Bounce>0.2</Ballistic_Bounce>
+    </BehaviorType>
+
+    <BehaviorType Name="DebrisBehaviorType">
+      <Debris_Min_Lifetime_Seconds> 3.0 </Debris_Min_Lifetime_Seconds>
+      <Debris_Max_Lifetime_Seconds> 7.0 </Debris_Max_Lifetime_Seconds>
+    </BehaviorType>
+
+    <BehaviorType Name="ArmorAndDamageBehaviorType">
+      <Damage_Type> Damage_Default </Damage_Type>
+    </BehaviorType>
+
+  </X12_Novus_Units>
+
+  <X12_Novus_Units Name="Novus_Variant_Debris_03">
+
+    <!-- ART -->
+    <Land_Model_Name>NV_Chunk_Small.ALO</Land_Model_Name>
+    <Scale_Factor>1.0</Scale_Factor>
+    <AssetBank> BANK_NOVUS </AssetBank>
+
+    <!-- INTERFACE -->
+    <Text_ID>TEXT_NONE</Text_ID>
+    <Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+    <!-- ATTRIBUTES -->
+    <Remove_Upon_Death>true</Remove_Upon_Death>
+
+     <!-- Non-decoration debris will have to have HIDE_WHEN_FOGGED behavior to properly hide.-->
+     <!-- Decoration debris will not be created if spawned under FOW. -Oksana -->
+     <Is_Decoration>Yes</Is_Decoration>
+
+
+     <!-- CONFLICT -->
+    <Tactical_Health>9999</Tactical_Health>
+
+    <!-- BEHAVIORS -->
+    <LandBehavior>
+      BALLISTIC,
+      DEBRIS
+    </LandBehavior>
+
+    <BehaviorType Name="BallisticBehaviorType">
+      <Ballistic_Weight>3.0</Ballistic_Weight>
+      <Ballistic_Bounce>0.25</Ballistic_Bounce>
+    </BehaviorType>
+
+    <BehaviorType Name="DebrisBehaviorType">
+      <Debris_Min_Lifetime_Seconds> 3.0 </Debris_Min_Lifetime_Seconds>
+      <Debris_Max_Lifetime_Seconds> 7.0 </Debris_Max_Lifetime_Seconds>
+    </BehaviorType>
+
+    <BehaviorType Name="ArmorAndDamageBehaviorType">
+      <Damage_Type> Damage_Default </Damage_Type>
+    </BehaviorType>
+
+  </X12_Novus_Units>
+
+  <X12_Novus_Units Name="Novus_Variant_Debris_04">
+
+    <!-- ART -->
+    <Land_Model_Name>NV_Variant_PodArm.ALO</Land_Model_Name>
+    <Scale_Factor>1.0</Scale_Factor>
+    <AssetBank> BANK_NOVUS </AssetBank>
+
+    <!-- INTERFACE -->
+    <Text_ID>TEXT_NONE</Text_ID>
+    <Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+    <!-- ATTRIBUTES -->
+    <Remove_Upon_Death>true</Remove_Upon_Death>
+
+     <!-- Non-decoration debris will have to have HIDE_WHEN_FOGGED behavior to properly hide.-->
+     <!-- Decoration debris will not be created if spawned under FOW. -Oksana -->
+     <Is_Decoration>Yes</Is_Decoration>
+
+
+     <!-- CONFLICT -->
+    <Tactical_Health>9999</Tactical_Health>
+
+    <!-- BEHAVIORS -->
+    <LandBehavior>
+      BALLISTIC,
+      DEBRIS
+    </LandBehavior>
+
+    <BehaviorType Name="BallisticBehaviorType">
+      <Ballistic_Weight>3.0</Ballistic_Weight>
+      <Ballistic_Bounce>0.25</Ballistic_Bounce>
+    </BehaviorType>
+
+    <BehaviorType Name="DebrisBehaviorType">
+      <Debris_Min_Lifetime_Seconds> 3.0 </Debris_Min_Lifetime_Seconds>
+      <Debris_Max_Lifetime_Seconds> 7.0 </Debris_Max_Lifetime_Seconds>
+    </BehaviorType>
+
+    <BehaviorType Name="ArmorAndDamageBehaviorType">
+      <Damage_Type> Damage_Default </Damage_Type>
+    </BehaviorType>
+
+  </X12_Novus_Units>
+
+  <X12_Novus_Units Name="Novus_Variant_Debris_05">
+
+    <!-- ART -->
+    <Land_Model_Name>NV_Variant_RingChunk.ALO</Land_Model_Name>
+    <Scale_Factor>1.0</Scale_Factor>
+    <AssetBank> BANK_NOVUS </AssetBank>
+
+    <!-- INTERFACE -->
+    <Text_ID>TEXT_NONE</Text_ID>
+    <Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+    <!-- ATTRIBUTES -->
+    <Remove_Upon_Death>true</Remove_Upon_Death>
+
+     <!-- Non-decoration debris will have to have HIDE_WHEN_FOGGED behavior to properly hide.-->
+     <!-- Decoration debris will not be created if spawned under FOW. -Oksana -->
+     <Is_Decoration>Yes</Is_Decoration>
+
+
+     <!-- CONFLICT -->
+    <Tactical_Health>9999</Tactical_Health>
+
+    <!-- BEHAVIORS -->
+    <LandBehavior>
+      BALLISTIC,
+      DEBRIS
+    </LandBehavior>
+
+    <BehaviorType Name="BallisticBehaviorType">
+      <Ballistic_Weight>3.0</Ballistic_Weight>
+      <Ballistic_Bounce>0.25</Ballistic_Bounce>
+    </BehaviorType>
+
+    <BehaviorType Name="DebrisBehaviorType">
+      <Debris_Min_Lifetime_Seconds> 3.0 </Debris_Min_Lifetime_Seconds>
+      <Debris_Max_Lifetime_Seconds> 7.0 </Debris_Max_Lifetime_Seconds>
+    </BehaviorType>
+
+    <BehaviorType Name="ArmorAndDamageBehaviorType">
+      <Damage_Type> Damage_Default </Damage_Type>
+    </BehaviorType>
+
+  </X12_Novus_Units>
+
+
+	<!-- **************************************************************************************** -->
+	<!-- *** PROJECTILES ************************************************************************ -->
+	<!-- **************************************************************************************** -->
+
+	<Projectile Name="Proj_Novus_Flechette_Cannon">
+
+		<!-- ART -->
+		<Land_Model_Name>Laser_Novus_Flechette_Cannon_variant</Land_Model_Name> <!-- Defined in LASERBEAMS.XML -->
+		<AssetBank> BANK_NOVUS </AssetBank>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+		<!-- ATTRIBUTES -->
+		<Max_Speed>14.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
+
+		<!-- CONFLICT -->
+		<AI_Combat_Power> 1 </AI_Combat_Power>
+
+		<!-- BEHAVIORS-->
+		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Damage_Type> Damage_Novus_Hero_Variant_Flechette </Damage_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="ProjectileBehaviorType">
+			<Projectile_Damages_Random_Hard_Points>No</Projectile_Damages_Random_Hard_Points>
+			<Projectile_Category>DEFAULT</Projectile_Category>
+
+			<Projectile_Max_Flight_Distance>1000.0</Projectile_Max_Flight_Distance>
+			<Projectile_Damage>5.0</Projectile_Damage>
+			<Projectile_Does_Shield_Damage>No</Projectile_Does_Shield_Damage>
+			<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+			<Projectile_Object_Detonation_Particle>Novus_Small_projectile</Projectile_Object_Detonation_Particle>
+			<Projectile_Object_Armor_Reduced_Detonation_Particle>Novus_Small_projectile</Projectile_Object_Armor_Reduced_Detonation_Particle>
+			<Projectile_Ground_Detonation_Particle>Military_Rifle_Dirt_Collide</Projectile_Ground_Detonation_Particle>
+			<Projectile_Lifetime_Detonation_Particle>Tiny_Dud</Projectile_Lifetime_Detonation_Particle>
+			<Projectile_Absorbed_By_Shields_Particle />
+			<Projectile_SFXEvent_Detonate>SFX_Novus_Detonation_1</Projectile_SFXEvent_Detonate>
+			<Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Novus_Small_Damage_Detonation </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
+		</BehaviorType>
+
+	</Projectile>
+
+
+</Novus_INF_Variant_XML>

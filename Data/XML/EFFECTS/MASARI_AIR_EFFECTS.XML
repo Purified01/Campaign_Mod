@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Effects>
+
+	<!--*************************************************************************************************
+	************************************************************************************************** 
+	************************************************************************************************** 
+	**	
+	**												Figment
+	**	
+	************************************************************************************************** 
+	************************************************************************************************** 
+	************************************************************************************************** -->
+
+
+
+   <Effect Name="MasariFigmentFireVisualEffect">
+      <Duration> -1.0 </Duration>
+      <Effect_Class> ElementalModeVisual </Effect_Class>
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> Masari_Figment_Light </Particle_System_Type>
+         <Attachment_Bone_Name>b_mode_attach</Attachment_Bone_Name>
+      </Effect_Component>
+
+
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name> Dark_engine </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> Light_engine </Mesh_Name>
+      </Effect_Component>
+   </Effect>
+
+
+   <Effect Name="MasariFigmentIceVisualEffect">
+      <Duration> -1.0 </Duration>
+      <Effect_Class> ElementalModeVisual </Effect_Class>
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> Masari_Figment_Dark </Particle_System_Type>
+         <Attachment_Bone_Name>b_mode_attach</Attachment_Bone_Name>
+      </Effect_Component>
+
+
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name> Light_engine </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> Dark_engine </Mesh_Name>
+      </Effect_Component>
+   </Effect>
+
+	
+	<Effect Name="Masary_Figment_Deploy_Ice_Mine_Effect">
+		<Duration> -1.0 </Duration>
+		<Effect_Class> DeployMine </Effect_Class>
+
+		<Effect_Component Type="CreateObject">
+			<Create_Object_Type> Masari_Figment_Ice_Mine </Create_Object_Type>
+			<Destroy_On_Remove> false </Destroy_On_Remove>
+			<Position_Type> AtSource </Position_Type>
+			<Use_Source_Player_ID> true </Use_Source_Player_ID>
+		</Effect_Component>
+
+		<!-- Frank, use this to hook in: Figment: Deploy Mine (In Ice mode)
+			  All you need is change Apply_Effect value. -->
+		<Effect_Component Type="Sound">
+			<Apply_Effect>SFX_Masari_Deploy_Ice_Mine</Apply_Effect>
+			<SFX_Loop_Type>ResonanceBeamWeaponEffectSFX</SFX_Loop_Type>
+			<Stop_On_Remove>No</Stop_On_Remove>
+		</Effect_Component>
+	</Effect>
+
+	
+	
+	<Effect Name="Masary_Figment_Deploy_Fire_Mine_Effect">
+		<Duration> -1.0 </Duration>
+		<Effect_Class> DeployMine </Effect_Class>
+
+		<Effect_Component Type="CreateObject">
+			<Create_Object_Type> Masari_Figment_Fire_Mine </Create_Object_Type>
+			<Destroy_On_Remove> false </Destroy_On_Remove>
+			<Position_Type> AtSource </Position_Type>
+			<Use_Source_Player_ID> true </Use_Source_Player_ID>
+		</Effect_Component>
+
+		<!-- Frank, use this to hook in: Figment: Deploy Mine (In Fire mode)
+			  All you need is change Apply_Effect value. -->
+		<Effect_Component Type="Sound">
+			<Apply_Effect>SFX_Masari_Deploy_Fire_Mine</Apply_Effect>
+			<SFX_Loop_Type>ResonanceBeamWeaponEffectSFX</SFX_Loop_Type>
+			<Stop_On_Remove>No</Stop_On_Remove>
+		</Effect_Component>
+	</Effect>
+
+
+	<Effect Name="MasariFigmentShadowshift">
+		<Effect_Class> Cloaking </Effect_Class>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+
+		<Effect_Component Type="Cloak">
+			<Break_Mask> Attack | Damage </Break_Mask>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Dont_Show_On_Enemy_Radar </Attribute>
+			<Modifier_Value> 1.0 </Modifier_Value>
+		</Effect_Component>
+	</Effect>
+
+
+
+   <!--=================================================================================================
+	== [10/19/2006] Mine has detected enemy in proximity and is about to explode  - Oksana Kubushyna
+	================================================================================================== -->
+   <Effect Name="MasariElementalMineAnnounceDetonationEffect">
+      <Duration> -1.0 </Duration>
+      <Effect_Class> MineDetonation </Effect_Class>
+      
+      <Effect_Component Type="RemoveEffect">
+         <Remove_Effect_Class> Cloaking </Remove_Effect_Class>
+      </Effect_Component>
+
+      <Effect_Component Type="BlockEffect">
+         <Block_Effect_Class> Cloaking </Block_Effect_Class>
+      </Effect_Component>
+
+      <!-- start beeping and playing flashing animation -->
+      
+      
+      <Effect_Component Type="ApplyEffectOnRemove">
+         <Apply_On_Expiration_Only> false </Apply_On_Expiration_Only>
+         <Effect_Name> MasariElementalMineDetonationEffect </Effect_Name>
+      </Effect_Component>
+      
+   </Effect>
+
+   
+
+   <!--=================================================================================================
+	== [10/19/2006] Mine has detected enemy in proximity and is about to explode  - Oksana Kubushyna
+	================================================================================================== -->
+	<Effect Name="MasariElementalMineDetonationEffect">
+		<Duration> -1.0 </Duration>
+		<Effect_Class> InstantDeath </Effect_Class>
+		<Priority>1000000000000</Priority>
+
+      <!-- order of components is important - the object will be marked for death	after 
+		 Damage component is applied and the LUA component won't be able to activate - Oksana -->
+		<Effect_Component Type="Lua">
+			<Apply_Function_Name> Figment_Masary_Elemental_Mine_Spawn_Death_Clone_Apply_Function </Apply_Function_Name>
+			<Unapply_Function_Name> Figment_Masary_Elemental_Mine_Spawn_Death_Clone_Unapply_Function </Unapply_Function_Name>
+		</Effect_Component>
+
+		<!-- Oksana: we use Damage instead of Destroy here to get the proper death effects etc -->
+		<!-- KDB no health so destroy -->
+		<Effect_Component Type="Destroy">
+		</Effect_Component>
+
+
+	</Effect>
+
+
+	<!--=================================================================================================
+	== [10/18/2006] Mines take a few seconds to deploy&cloak, so can be targeted& destroyed before going off. 
+	==																					 - Oksana Kubushyna
+	================================================================================================== -->
+	<Effect Name="MasariElementalMineCloakEffect">
+		<Duration> -1.0 </Duration>
+		<Effect_Class> Cloaking </Effect_Class>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+
+		<Effect_Component Type="Cloak">
+			<Break_Mask> Damage | Attack </Break_Mask>
+		</Effect_Component>
+	</Effect>
+
+	
+	<!--=================================================================================================
+	== [10/19/2006] Ice Mines = freeze units, can't move/attack. - Oksana Kubushyna
+	================================================================================================== -->
+	<Effect Name="IceMineDetonationEffect">
+		<Duration> 5 </Duration>
+		<Effect_Class> IceMineDetonation </Effect_Class>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+
+		<Effect_Component Type="DisableBehavior">
+			<Behaviors> WALK_LOCOMOTOR, TEAM_TARGETING, TARGETING, WEAPON, TURRET </Behaviors>
+		</Effect_Component>
+
+		<Effect_Component Type="DisableAbility">
+			<Abilities/>
+		</Effect_Component>
+
+		<Effect_Component Type="Animate">
+			<Animation_Type>Anim_Idle </Animation_Type>
+			<Unapply_When_Finished>No</Unapply_When_Finished>
+			<Is_Looping>Yes</Is_Looping>
+			<Blend_Time>0.03</Blend_Time>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Render_Tint_Red </Attribute>
+			<Modifier_Value> -0.6 </Modifier_Value>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Render_Tint_Green </Attribute>
+			<Modifier_Value> -0.6 </Modifier_Value>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Render_Tint_Blue </Attribute>
+			<Modifier_Value> -0.6 </Modifier_Value>
+		</Effect_Component>
+		
+
+	</Effect>
+
+	<Effect Name="IceMineDetonationVisualEffect">
+		<Duration> 0.1 </Duration>
+		<Effect_Class> Transparent </Effect_Class>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+
+		<Effect_Component Type="ParticleSystem">
+			<Application_Probability> 1 </Application_Probability>
+			<Particle_System_Type> Masari_Figment_Dis_Mine_Detonation </Particle_System_Type>
+		</Effect_Component>
+		
+	</Effect>
+
+
+	
+	<Effect Name="IceMineUpgradedDetonationEffect">
+		<Duration> 10 </Duration>
+		<Effect_Class> IceMineDetonation </Effect_Class>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+
+		<Effect_Component Type="DisableBehavior">
+			<Behaviors> WALK_LOCOMOTOR, TEAM_TARGETING, TARGETING, WEAPON, TURRET </Behaviors>
+		</Effect_Component>
+
+		<Effect_Component Type="DisableAbility">
+			<Abilities/>
+		</Effect_Component>
+		
+		<Effect_Component Type="Animate">
+			<Animation_Type>Anim_Idle </Animation_Type>
+			<Unapply_When_Finished>No</Unapply_When_Finished>
+			<Is_Looping>Yes</Is_Looping>
+			<Blend_Time>0.03</Blend_Time>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Render_Tint_Red </Attribute>
+			<Modifier_Value> -0.6 </Modifier_Value>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Render_Tint_Green </Attribute>
+			<Modifier_Value> -0.6 </Modifier_Value>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Render_Tint_Blue </Attribute>
+			<Modifier_Value> -0.6 </Modifier_Value>
+		</Effect_Component>
+
+
+	</Effect>
+
+	
+	<Effect Name="IceMineUpgradedDetonationVisualEffect">
+		<Duration> 0.1 </Duration>
+		<Effect_Class> Transparent </Effect_Class>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+
+		<Effect_Component Type="ParticleSystem">
+			<Application_Probability> 1 </Application_Probability>
+			<Particle_System_Type> Masari_Figment_Upgrade_Dis_Mine_Detonation </Particle_System_Type>
+		</Effect_Component>
+
+	</Effect>
+	
+	
+	
+	
+	<!--=================================================================================================
+	== [10/19/2006] Magma (Fire) Mines = pool of high damage DoT magma. - Oksana Kubushyna
+	================================================================================================== -->
+	<Effect Name="FireMineDetonationEffect">
+		<Duration> 5 </Duration>
+		<Effect_Class> FireMineDetonation </Effect_Class>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+
+		<!-- one time damage on explosion -->
+		<Effect_Component Type="Damage">
+			<Damage_Type>Damage_Masari_Figment_Mine</Damage_Type>
+			<Damage_Amount>50.0</Damage_Amount>
+			<Damage_Percentage>0.0</Damage_Percentage>
+		</Effect_Component>
+
+		<!-- damage over time from flowing magma -->
+		<Effect_Component Type="DamageOverTime">
+			<Damage_Type> Damage_Fire </Damage_Type>
+			<Amount_Per_Second> 20 </Amount_Per_Second>
+			<Percentage_Per_Second>0</Percentage_Per_Second>
+		</Effect_Component>
+      
+		<Effect_Component Type="ParticleSystem">
+			<Application_Probability> 1 </Application_Probability>
+			<Particle_System_Type> Masari_Figment_Col_Mine_Detonation </Particle_System_Type>
+		</Effect_Component>
+		
+	</Effect>
+
+
+	
+	<Effect Name="FireMineUpgradedDetonationEffect">
+		<Duration> 5 </Duration>
+		<Effect_Class> FireMineDetonation </Effect_Class>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+
+		<!-- one time damage on explosion -->
+		<Effect_Component Type="Damage">
+			<Damage_Type>Damage_Masari_Figment_Mine</Damage_Type>
+			<Damage_Amount>80.0</Damage_Amount>
+			<Damage_Percentage>0.0</Damage_Percentage>
+		</Effect_Component>
+
+		<!-- damage over time from flowing magma -->
+		<Effect_Component Type="DamageOverTime">
+			<Damage_Type> Damage_Fire </Damage_Type>
+			<Amount_Per_Second> 40 </Amount_Per_Second>
+			<Percentage_Per_Second>0</Percentage_Per_Second>
+		</Effect_Component>
+
+		<Effect_Component Type="ParticleSystem">
+			<Application_Probability> 1 </Application_Probability>
+			<Particle_System_Type> Masari_Figment_Upgrade_Col_Mine_Detonation </Particle_System_Type>
+		</Effect_Component>
+		
+	</Effect>
+	
+	
+	
+	
+	
+	
+   <Effect Name="DebugFireMineDetonationShowRadiusEffect">
+      <Duration> 5 </Duration>
+      <Effect_Class> DebugCategory1 </Effect_Class>
+      <Extends_Existing_Duration> true </Extends_Existing_Duration>
+
+      <Effect_Component Type="TerrainBlob">
+         <Radius> 100 </Radius>
+         <Radius_Attribute/>
+      </Effect_Component>
+
+   </Effect>
+
+
+   <Effect Name="DebugFireMineShowRadiusEffect">
+      <Duration> 5 </Duration>
+      <Effect_Class> DebugCategory1 </Effect_Class>
+      <Extends_Existing_Duration> true </Extends_Existing_Duration>
+
+      <Effect_Component Type="TerrainBlob">
+         <Radius/>
+         <Radius_Attribute>Generator_Area_Effect_Radius_1</Radius_Attribute>
+      </Effect_Component>
+
+   </Effect>
+   
+
+   <Effect Name="FireMineSelfDestroyEffect">
+      <Duration> 5 </Duration>
+      <Effect_Class> MineEffectDuration </Effect_Class>
+
+      <Effect_Component Type="ApplyEffectOnRemove">
+         <Apply_On_Expiration_Only> false </Apply_On_Expiration_Only>
+         <Effect_Name> DestroyNonGameObject </Effect_Name>
+      </Effect_Component>
+
+   </Effect>
+
+
+
+
+   <!--*************************************************************************************************
+	************************************************************************************************** 
+	************************************************************************************************** 
+	**	
+	**												Seeker
+	**	
+	************************************************************************************************** 
+	************************************************************************************************** 
+	************************************************************************************************** -->
+
+	
+
+	<!--=================================================================================================
+    == MasariSeekerDMARegenEffect [05/10/2007] Increase DMA regen in a radius around Seeker PMP
+    ================================================================================================== -->
+	<Effect Name="MasariSeekerDMARegenEffect">
+		<Duration> 5.0 </Duration>
+		<Effect_Class> DMARegen </Effect_Class>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> DMA_Regen_Rate_Add_Coeff </Attribute>
+			<Modifier_Value> 3 </Modifier_Value>
+		</Effect_Component>
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> Masari_Seeker_Facilitated_Growth_Target </Particle_System_Type>
+      </Effect_Component>
+
+   </Effect>
+
+   <Effect Name="MasariSeekerDMARegenVisualEffect">
+      <Duration> 5.0 </Duration>
+      <Effect_Class> Transparent </Effect_Class>
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> Masari_Seeker_Facilitated_Growth_Self </Particle_System_Type>
+      </Effect_Component>
+
+   </Effect>
+	
+
+
+
+	<!-- Masari Seeker Effects -->
+	<Effect Name="MasariSeekerFireVisualEffect">
+
+		<Duration> -1.0 </Duration>
+		<Effect_Class> ElementalModeVisual </Effect_Class>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Render_Tint_Red </Attribute>
+			<Modifier_Value> 0 </Modifier_Value>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Render_Tint_Green </Attribute>
+			<Modifier_Value> 0 </Modifier_Value>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Render_Tint_Blue </Attribute>
+			<Modifier_Value> 0 </Modifier_Value>
+		</Effect_Component>
+
+	</Effect>
+
+	
+	<Effect Name="MasariSeekerIceVisualEffect">
+
+		<Duration> -1.0 </Duration>
+		<Effect_Class> ElementalModeVisual </Effect_Class>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Render_Tint_Red </Attribute>
+			<Modifier_Value> 0 </Modifier_Value>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Render_Tint_Green </Attribute>
+			<Modifier_Value> 0 </Modifier_Value>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Render_Tint_Blue </Attribute>
+			<Modifier_Value> 0 </Modifier_Value>
+		</Effect_Component>
+
+	</Effect>
+
+	
+
+	<Effect Name="MasariSeekerPhoenixEffect">
+		<Duration> -1.0 </Duration>
+		<Effect_Class> MasariSeekerPhoenix </Effect_Class>
+
+		<Effect_Component Type="CreateObject">
+			<Create_Object_Type> Masari_Seeker </Create_Object_Type>
+			<Destroy_On_Remove> false </Destroy_On_Remove>
+			<Position_Type> AtSource </Position_Type>
+			<Use_Source_Player_ID> true </Use_Source_Player_ID>
+		</Effect_Component>
+
+		<!-- Frank, use this to hook in: Seeker: Phoenix Unit Response
+		All you need is change Apply_Effect value. -->
+		<Effect_Component Type="Sound">
+			<Apply_Effect>SFX_Masari_Phoenix</Apply_Effect>
+			<Stop_On_Remove>No</Stop_On_Remove>
+		</Effect_Component>
+
+		<Effect_Component Type="Destroy">
+		</Effect_Component>
+	</Effect>
+
+   
+	
+	<!--== Seeker Destabilize Effect == -->
+	
+	<Effect Name="MasariInqusitorDestablizeEffect">
+		<Effect_Class> Destabilize </Effect_Class>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Damage_Taken_Mult_Coeff </Attribute>
+			<Modifier_Value> -10000.0 </Modifier_Value>
+		</Effect_Component>
+
+      <!-- add special category that will prevent Seeker from targeting this target with regular weapons -->
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Category_Mask </Attribute>
+         <Modifier_Integer_Value Converter="GameObjectCategoryType"> UnderDestabilizeEffect </Modifier_Integer_Value>
+         <Modifier_Type> Bitwise_Or </Modifier_Type>
+      </Effect_Component>
+      
+		<!-- Target can't attack -->
+		<Effect_Component Type="DisableBehavior">
+			<Behaviors> TEAM_TARGETING, TARGETING, WEAPON, TURRET </Behaviors>
+		</Effect_Component>
+
+		<!-- Target can't move -->
+		<Effect_Component Type="DisableBehavior">
+			<Behaviors> SLAVE_TO_PARENT_LOCOMOTOR, CIVILIAN_LOCOMOTOR, ALIEN_TANK_AIR_LOCOMOTOR, VTOL_LOCOMOTOR, LAND_TEAM_CONTAINER_LOCOMOTOR, LAND_TEAM_INFANTRY_LOCOMOTOR, WALK_LOCOMOTOR, GIANT_WALK_LOCOMOTOR, POWERED </Behaviors>
+		</Effect_Component>
+
+      <!-- Target is not powered -->
+      <Effect_Component Type="AttributeModifier">
+			<Attribute> Is_Powered </Attribute>
+			<Modifier_Integer_Value> 0 </Modifier_Integer_Value>
+			<Modifier_Type> Bitwise_And </Modifier_Type>
+		 </Effect_Component>
+
+      <!-- Target can't use any abilities -->
+		<Effect_Component Type="DisableAbility">
+			<Abilities/>
+		</Effect_Component>
+
+		<Effect_Component Type="RemoveEffect">
+			<Remove_Effect_Class> Cloaking </Remove_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="BlockEffect">
+			<Block_Effect_Class> Cloaking </Block_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="RemoveEffect">
+			<Remove_Effect_Class> Phased </Remove_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="RemoveEffect">
+			<Remove_Effect_Class> AlienConsumption </Remove_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="BlockEffect">
+			<Block_Effect_Class> Phased </Block_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="BlockEffect">
+			<Block_Effect_Class> AlienConsumption </Block_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="BlockEffect">
+			<Block_Effect_Class> MindControl </Block_Effect_Class>
+		</Effect_Component>
+
+      <Effect_Component Type="BlockEffect">
+			<Block_Effect_Class> MindControlVisual </Block_Effect_Class>
+		</Effect_Component>
+      
+		<Effect_Component Type="BlockEffect">
+			<Block_Effect_Class> NovusVirus </Block_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="RemoveEffect">
+			<Remove_Effect_Class> NovusVirusAuraGenerators </Remove_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="BlockEffect">
+			<Block_Effect_Class> Burden </Block_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="RemoveEffect">
+			<Remove_Effect_Category> CanBeRemovedByAbility </Remove_Effect_Category>
+		</Effect_Component>
+
+		<Effect_Component Type="RemoveEffect">
+			<Remove_Effect_Class> ViralControl </Remove_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="BlockEffect">
+			<Block_Effect_Class> ViralControl </Block_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Masari_Seeker_Destabilize_Target </Particle_System_Type>
+      </Effect_Component>
+
+   </Effect>
+
+
+
+   <!--== Seeker Destabilize Effect Visual == -->
+
+   <Effect Name="MasariInqusitorDestablizeVisualEffect">
+      <Effect_Class> Transparent </Effect_Class>
+
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> Masari_Seeker_Destabilize_Self </Particle_System_Type>
+         <Attachment_Bone_Name>MuzzleA_00</Attachment_Bone_Name>
+      </Effect_Component>
+
+
+   </Effect>
+	
+	
+	
+	
+
+	<!--*************************************************************************************************
+	************************************************************************************************** 
+	************************************************************************************************** 
+	**	
+	**												SkyLord
+	**	
+	************************************************************************************************** 
+	************************************************************************************************** 
+	************************************************************************************************** -->
+
+	
+
+	<Effect Name="MasariSkylordPhoenixEffect">
+		<Duration> -1.0 </Duration>
+		<Effect_Class> MasariSeekerPhoenix </Effect_Class>
+
+		<Effect_Component Type="CreateObject">
+			<Create_Object_Type> Masari_Skylord </Create_Object_Type>
+			<Destroy_On_Remove> false </Destroy_On_Remove>
+			<Position_Type> AtSource </Position_Type>
+			<Facing_Type>Inherit_Z</Facing_Type>
+			<Validate_Creation_Position>Yes</Validate_Creation_Position>
+			<Use_Source_Player_ID> true </Use_Source_Player_ID>
+		</Effect_Component>
+
+		<Effect_Component Type="Destroy">
+		</Effect_Component>
+	</Effect>
+
+	
+   
+   <Effect Name="SkylordScreechEffect">
+      <Duration> 2.0 </Duration>
+      <Effect_Class> KnockBack </Effect_Class>
+
+      <Effect_Component Type="KnockBack">
+         <Knock_Back_Strength> 300.0 </Knock_Back_Strength>
+         <Dampening_Fraction>.8 </Dampening_Fraction>
+         <Gravity_Fraction>0</Gravity_Fraction>
+         <XY_Knock_Back_Only> true </XY_Knock_Back_Only>
+      </Effect_Component>
+
+	</Effect>
+
+	
+	<Effect Name="SkylordScreechStunEffect">
+		<Duration> 5.0 </Duration>
+		<Effect_Class> Screech </Effect_Class>
+
+		<Effect_Component Type="DisableAbility">
+			<Abilities/>
+		</Effect_Component>
+
+		<Effect_Component Type="DisableBehavior">
+			<Behaviors> UNIT_ABILITY, WALK_LOCOMOTOR, VTOL_LOCOMOTOR, TARGETING, TURRET, WEAPON </Behaviors>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Render_Tint_Red </Attribute>
+			<Modifier_Value> -0.6 </Modifier_Value>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Render_Tint_Green </Attribute>
+			<Modifier_Value> -0.6 </Modifier_Value>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Render_Tint_Blue </Attribute>
+			<Modifier_Value> -0.6 </Modifier_Value>
+		</Effect_Component>
+		
+	</Effect>
+
+	
+   <Effect Name="SkylordScreechOwnerEffect">
+      <Duration> 2.0 </Duration>
+      <Effect_Class> Transparent </Effect_Class>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Masari_skylord_screech </Particle_System_Type>
+			<Attachment_Bone_Name>MuzzleA</Attachment_Bone_Name>
+		</Effect_Component>
+
+   </Effect>
+   
+	
+	
+	
+	
+</Effects>

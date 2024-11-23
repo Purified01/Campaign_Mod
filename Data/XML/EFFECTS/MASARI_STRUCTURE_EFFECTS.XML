@@ -1,0 +1,2310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Effects>
+
+
+   <!--*************************************************************************************************
+	************************************************************************************************** 
+	************************************************************************************************** 
+	**	
+	**												Air Inspiration
+	**	
+	************************************************************************************************** 
+	************************************************************************************************** 
+	************************************************************************************************** -->
+   <!--=================================================================================================
+	== AirInspirationFireVisualEffect: Visual on building
+	================================================================================================== -->
+
+   <Effect Name="AirInspirationFireVisualEffect">
+      <Duration> -1.0 </Duration>
+      <Effect_Class> ElementalModeVisual </Effect_Class>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Red </Attribute>
+         <Modifier_Value> 0.0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Green </Attribute>
+         <Modifier_Value> 0.0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Blue </Attribute>
+         <Modifier_Value> 0.0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> skin_meshalphabloom01 </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> doorborders </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> fortext </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name> fortextdark </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name> doorbordersdark </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name> skin_meshalphabloomdark </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> Air_Inspiration_Light </Particle_System_Type>
+         <Attachment_Bone_Name>b_mode_attach</Attachment_Bone_Name>
+      </Effect_Component>
+
+	</Effect>
+
+
+
+
+   <!--=================================================================================================
+	== AirInspirationIceVisualEffect: ice Visual on building
+	================================================================================================== -->
+   <Effect Name="AirInspirationIceVisualEffect">
+
+      <Duration> -1.0 </Duration>
+      <Effect_Class> ElementalModeVisual </Effect_Class>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> doorbordersdark </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> fortextdark </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> skin_meshalphabloomdark </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name> fortext </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name> skin_meshalphabloom01 </Mesh_Name>
+      </Effect_Component>
+      
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name> doorborders </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Air_Inspiration_Dark </Particle_System_Type>
+			<Attachment_Bone_Name>b_mode_attach</Attachment_Bone_Name>
+		</Effect_Component>
+
+   </Effect>
+
+
+   <!--=================================================================================================
+	== [10/30/2006] CHRISB - Masari Sentry - Load a unit (based on "Download")
+	================================================================================================== -->
+   <Effect Name="AirInspirationIceSpawnUnitVisualEffect">
+      <Effect_Class> Transparent </Effect_Class>
+      <Duration> .1 </Duration>
+
+     <Effect_Component Type="CreateObject">
+         <Create_Object_Type> Masari_Ground_Unit_Spawn </Create_Object_Type>
+         <Position_Type> AtTarget </Position_Type>
+         <Use_Source_Player_ID> true </Use_Source_Player_ID>
+      </Effect_Component>
+
+   </Effect>
+
+   <!--*************************************************************************************************
+	************************************************************************************************** 
+	************************************************************************************************** 
+	**	
+	**												Matter Engine
+	**	
+	************************************************************************************************** 
+	************************************************************************************************** 
+	************************************************************************************************** -->
+
+	
+	<!--=================================================================================================
+	== MasariIncomeEffect: Extra income
+	================================================================================================== -->
+
+	<Effect Name="MasariIncomeEffect">
+		<Duration> 3.0 </Duration>
+		<Effect_Class> MatterEngineHarvestResearched </Effect_Class>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+		<Extends_Same_Source_Duration_Only> true </Extends_Same_Source_Duration_Only>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Harvest_Material_Add </Attribute>
+			<!-- 50% more -->
+			<Modifier_Value> 0.5 </Modifier_Value>
+		</Effect_Component>
+
+	</Effect>
+
+	
+	<!--=================================================================================================
+	== MatterEngineSelfDestructEffect: destroy self
+	================================================================================================== -->
+
+   <Effect Name="MatterEngineSelfDestructEffect">
+      <Duration> 5.0 </Duration>
+      <Effect_Class> MatterEngineExplosion </Effect_Class>
+      <Extends_Existing_Duration> false </Extends_Existing_Duration>
+
+		<Effect_Component Type="DamageOverTime">
+			<Damage_Type> Damage_Masari_Matter_Engine </Damage_Type>
+			<Amount_Per_Second>0</Amount_Per_Second>
+			<Percentage_Per_Second>0.35</Percentage_Per_Second>
+		</Effect_Component>
+		
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Render_Tint_Red </Attribute>
+			<Modifier_Value> 4.0 </Modifier_Value>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Render_Tint_Green </Attribute>
+			<Modifier_Value> 0.0 </Modifier_Value>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Render_Tint_Blue </Attribute>
+			<Modifier_Value> 0.0 </Modifier_Value>
+		</Effect_Component>
+
+   </Effect>
+
+	
+   <!-- KDB 03-08-2007 on death radiation death AE -->
+   <Effect Name="MatterEngineOnDeathExplosionEffect">
+
+      <Duration> 3.0 </Duration>
+      <Effect_Class> MatterEngineExplosion </Effect_Class>
+      <Extends_Existing_Duration> true </Extends_Existing_Duration>
+      <Extends_Same_Source_Duration_Only>yes</Extends_Same_Source_Duration_Only>
+
+      <Effect_Component Type="DamageOverTime">
+         <Damage_Type> Damage_Fire </Damage_Type>
+         <Amount_Per_Second> 5.0 </Amount_Per_Second>
+         <Percentage_Per_Second>0.0</Percentage_Per_Second>
+      </Effect_Component>
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> Masari_Structure_Burning_Aura_Fire </Particle_System_Type>
+      </Effect_Component>
+
+   </Effect>
+
+	<Effect Name="MatterEngineOnDeathExplosionDamageEffect">
+
+		<Effect_Class> MatterEngineExplosionVisual </Effect_Class>
+		<Extends_Existing_Duration> false </Extends_Existing_Duration>
+		<Extends_Same_Source_Duration_Only>false</Extends_Same_Source_Duration_Only>
+
+		<Effect_Component Type="Damage">
+			<Damage_Type> Damage_Masari_Matter_Engine </Damage_Type>
+			<Damage_Amount> 805.0 </Damage_Amount>
+		</Effect_Component>
+
+	</Effect>
+
+
+	
+   <!-- KDB 03-08-2007 on death radiation death self visual -->
+   <Effect Name="MatterEngineOnDeathExplosionSelfEffect">
+
+      <Duration> 3.0 </Duration>
+      <Effect_Class> MatterEngineExplosionVisual </Effect_Class>
+      <Extends_Existing_Duration> false </Extends_Existing_Duration>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Matter_Engine_Detonation_Explosion </Particle_System_Type>
+		</Effect_Component>
+
+   </Effect>
+
+
+
+   <Effect Name="MatterEngineResearchedLeechEffect">
+		<Duration> 3.1 </Duration>
+		<Effect_Class> MatterEngineLeech </Effect_Class>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+		<Extends_Same_Source_Duration_Only> true </Extends_Same_Source_Duration_Only>
+
+		<Effect_Component Type="Transfer">
+			<Flow_Direction> TargetToSource </Flow_Direction>
+			<Target_Effect>  HealthDamage	</Target_Effect>
+			<Target_Damage> Damage_Unconditional </Target_Damage>
+			<Source_Effect> ResourceUnits </Source_Effect>
+			<Amount_Per_Second> 20.0 </Amount_Per_Second>
+			<Transfer_Fail_On_Source_Out> true </Transfer_Fail_On_Source_Out>
+			<Transfer_Multiplicative> 0.1 </Transfer_Multiplicative>
+		</Effect_Component>
+
+      <Effect_Component Type="ParticleSystem">
+         <Application_Probability> 1 </Application_Probability>
+         <Particle_System_Type> Burden_Effect </Particle_System_Type>
+         <Attachment_Bone_Name> b_Target </Attachment_Bone_Name>
+      </Effect_Component>
+
+   </Effect>
+
+
+   <Effect Name="MatterEngineResearchedLeechVisualEffect">
+      <Duration> -1.0 </Duration>
+      <Effect_Class> MatterEngineLeech </Effect_Class>
+      <Should_Remove_If_Inactive> Yes </Should_Remove_If_Inactive>
+      <Remove_On_Death> Yes </Remove_On_Death>
+
+      <Effect_Component Type="ParticleSystem">
+         <Application_Probability> 1 </Application_Probability>
+         <Particle_System_Type> Masari_Altea_Peace_Target_Medium </Particle_System_Type>
+         <Attachment_Bone_Name> b_Target </Attachment_Bone_Name>
+      </Effect_Component>
+
+   </Effect>
+
+
+
+
+
+
+
+
+
+   <!--=================================================================================================
+	== MatterEngineFireVisualEffect: Visual on building
+	================================================================================================== -->
+
+   <Effect Name="MasariMatterEngineFasterHarvestEffect">
+      <Duration> 3.0 </Duration>
+      <Effect_Class> MatterEngineHarvest </Effect_Class>
+      <Extends_Existing_Duration> true </Extends_Existing_Duration>
+      <Extends_Same_Source_Duration_Only> true </Extends_Same_Source_Duration_Only>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Harvest_Material_Add </Attribute>
+         <!-- 75% faster -->
+         <Modifier_Value> 0.75 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Harvest_Material_Storage_Add </Attribute>
+         <!-- 50% more -->
+         <Modifier_Value> 0.5 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name>Glows1</Mesh_Name>
+      </Effect_Component>
+
+   </Effect>
+
+
+
+   <!--=================================================================================================
+	== MatterEngineFireVisualEffect: Visual on building
+	================================================================================================== -->
+
+   <Effect Name="MasariMatterEngineLightHarvestBoost">
+      <Duration> 3.0 </Duration>
+      <Effect_Class> MatterEngineHarvest </Effect_Class>
+      <Extends_Existing_Duration> true </Extends_Existing_Duration>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Harvest_Material_Add </Attribute>
+         <!-- 50% more -->
+         <Modifier_Value> 0.5 </Modifier_Value>
+      </Effect_Component>
+
+   </Effect>
+
+
+
+   <!--=================================================================================================
+	== MatterEngineFireVisualEffect: Visual on building
+	================================================================================================== -->
+
+   <Effect Name="MatterEngineFireVisualEffect">
+      <Duration> -1.0 </Duration>
+      <Effect_Class> ElementalModeVisual </Effect_Class>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Red </Attribute>
+         <Modifier_Value> 0.0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Green </Attribute>
+         <Modifier_Value> 0.0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Blue </Attribute>
+         <Modifier_Value> 0.0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name>Glows</Mesh_Name>
+      </Effect_Component>
+
+      <!-- Effect_Component Type="ShowMesh">
+         <Mesh_Name>addtives</Mesh_Name>
+      </Effect_Component -->
+
+
+      <Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> EL_Collector_Light </Particle_System_Type>
+			<Attachment_Bone_Name>b_mode_attach</Attachment_Bone_Name>
+		</Effect_Component>
+
+			<!--Effect_Component Type="ModelTexture">
+				<Texture_Name> ZB_Collector_light.tga </Texture_Name>
+			</Effect_Component>-->
+
+
+   </Effect>
+
+
+
+
+   <!--=================================================================================================
+	== MatterEngineIceVisualEffect: ice Visual on building
+	================================================================================================== -->
+   <Effect Name="MatterEngineIceVisualEffect">
+
+      <Duration> -1.0 </Duration>
+      <Effect_Class> ElementalModeVisual </Effect_Class>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Red </Attribute>
+         <Modifier_Value> 0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Green </Attribute>
+         <Modifier_Value> 0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Blue </Attribute>
+         <Modifier_Value> 0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name>Glows</Mesh_Name>
+      </Effect_Component>
+
+      <!-- Effect_Component Type="HideMesh">
+         <Mesh_Name>addtives</Mesh_Name>
+      </Effect_Component -->
+
+
+      <Effect_Component Type="ParticleSystem">
+				<Particle_System_Type> EL_Collector_Dark </Particle_System_Type>
+				<Attachment_Bone_Name>b_mode_attach</Attachment_Bone_Name>
+		</Effect_Component>
+
+      <!--<Effect_Component Type="ModelTexture">
+         <Texture_Name> ZB_Collector.tga </Texture_Name>
+      </Effect_Component>-->
+
+   </Effect>
+
+
+
+   <!--*************************************************************************************************
+	************************************************************************************************** 
+	************************************************************************************************** 
+	**	
+	**												Alatea
+	**	
+	************************************************************************************************** 
+	************************************************************************************************** 
+	************************************************************************************************** -->
+   <Effect Name="MasariCommandControlEffect">
+
+      <Effect_Class> FleetSpeedBoost </Effect_Class>
+      <Duration> -1.0 </Duration>
+      <CategoryMask> CanBeRemovedByAbility</CategoryMask>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Fleet_Speed_Rate_Multiplier </Attribute>
+         <!-- 2x fleet speed -->
+         <Modifier_Value> 1.0 </Modifier_Value>
+      </Effect_Component>
+
+   </Effect>
+
+   <!--=================================================================================================
+	== AtlateaFireVisualEffect: Visual on building
+	================================================================================================== -->
+
+   <Effect Name="AtlateaFireVisualEffect">
+      <Duration> -1.0 </Duration>
+      <Effect_Class> ElementalModeVisual </Effect_Class>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Red </Attribute>
+         <Modifier_Value> 0.0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Green </Attribute>
+         <Modifier_Value> 0.0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Blue </Attribute>
+         <Modifier_Value> 0.0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> ZB_HQ_Atlatea_Light </Particle_System_Type>
+         <Attachment_Bone_Name>b_mode_attach</Attachment_Bone_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> glows </Mesh_Name>
+      </Effect_Component>
+
+
+      <!--Effect_Component Type="ModelTexture">
+				<Texture_Name> zb_hq_atlatea_light.tga </Texture_Name>
+			</Effect_Component>-->
+
+
+
+   </Effect>
+
+
+   <!--=================================================================================================
+	== AtlateaIceVisualEffect: ice Visual on building
+	================================================================================================== -->
+   <Effect Name="AtlateaIceVisualEffect">
+
+      <Duration> -1.0 </Duration>
+      <Effect_Class> ElementalModeVisual </Effect_Class>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Red </Attribute>
+         <Modifier_Value> 0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Green </Attribute>
+         <Modifier_Value> 0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Blue </Attribute>
+         <Modifier_Value> 0 </Modifier_Value>
+      </Effect_Component>
+
+      <!--<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> ZB_HQ_Atlatea_Dark </Particle_System_Type>
+			<Attachment_Bone_Name>b_mode_attach</Attachment_Bone_Name>
+		</Effect_Component>-->
+
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name> glows </Mesh_Name>
+      </Effect_Component>
+
+      <!--Effect_Component Type="ModelTexture">
+				<Texture_Name> zb_hq_atlatea.tga </Texture_Name>
+			</Effect_Component>-->
+
+   </Effect>
+
+
+
+
+
+   <!--*************************************************************************************************
+	************************************************************************************************** 
+	************************************************************************************************** 
+	**	
+	**												Element_Magnet
+	**
+	************************************************************************************************** 
+	************************************************************************************************** 
+	************************************************************************************************** -->
+   <!--=================================================================================================
+	== ElementMagnetFireVisualEffect: Visual on building
+	================================================================================================== -->
+
+   <Effect Name="ElementMagnetFireVisualEffect">
+      <Duration> -1.0 </Duration>
+      <Effect_Class> ElementalModeVisual </Effect_Class>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Red </Attribute>
+         <Modifier_Value> 0.0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Green </Attribute>
+         <Modifier_Value> 0.0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Blue </Attribute>
+         <Modifier_Value> 0.0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> ZB_HQ_Collector_Light </Particle_System_Type>
+         <Attachment_Bone_Name>b_mode_attach</Attachment_Bone_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> glows </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> handglow </Mesh_Name>
+      </Effect_Component>
+
+   </Effect>
+
+
+
+
+   <!--=================================================================================================
+	== ElementMagnetIceVisualEffect: ice Visual on building
+	================================================================================================== -->
+   <Effect Name="ElementMagnetIceVisualEffect">
+
+      <Duration> -1.0 </Duration>
+      <Effect_Class> ElementalModeVisual </Effect_Class>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Red </Attribute>
+         <Modifier_Value> 0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Green </Attribute>
+         <Modifier_Value> 0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Blue </Attribute>
+         <Modifier_Value> 0 </Modifier_Value>
+      </Effect_Component>
+
+      <!--
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> ZB_HQ_Collector_Dark </Particle_System_Type>
+			<Attachment_Bone_Name>b_mode_attach</Attachment_Bone_Name>
+		</Effect_Component>-->
+
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name>glows</Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name>handglow </Mesh_Name>
+      </Effect_Component>
+
+      <!--Effect_Component Type="ModelTexture">
+				<Texture_Name> ZB_Collector.tga </Texture_Name>
+			</Effect_Component>-->
+
+   </Effect>
+
+
+
+   <!--=================================================================================================
+	== ElementMagnetProductionEffect: ice Visual on building
+	================================================================================================== -->
+   <Effect Name="ElementMagnetProductionEffect">
+      <Duration> 2.1 </Duration>
+      <Effect_Class> ProductionIncrease </Effect_Class>
+      <Extends_Existing_Duration> true </Extends_Existing_Duration>
+      <Extends_Same_Source_Duration_Only> true </Extends_Same_Source_Duration_Only>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Unit_Build_Rate_Multiplier </Attribute>
+         <!-- 2x as fast unit build rate -->
+         <Modifier_Value> 1.0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> Singularity_Lightning_Bolt_Strike </Particle_System_Type>
+      </Effect_Component>
+
+   </Effect>
+
+   <!--=================================================================================================
+	== ElementMagnetGlobalProductionEffect: global build speed increase
+	================================================================================================== -->
+   <Effect Name="ElementMagnetGlobalProductionEffect">
+      <Duration> -1.0 </Duration>
+      <Effect_Class> ProductionIncrease </Effect_Class>
+      <Extends_Existing_Duration> true </Extends_Existing_Duration>
+      <Extends_Same_Source_Duration_Only> true </Extends_Same_Source_Duration_Only>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Unit_Build_Rate_Multiplier </Attribute>
+         <!-- +25% build speed -->
+         <Modifier_Value> 0.25 </Modifier_Value>
+      </Effect_Component>
+
+   </Effect>
+
+
+   <!--*************************************************************************************************
+	************************************************************************************************** 
+	************************************************************************************************** 
+	**	
+	**												Elemental Controller
+	**
+	************************************************************************************************** 
+	************************************************************************************************** 
+	************************************************************************************************** -->
+
+   <!--=================================================================================================
+	== ElementalControllerFireVisualEffect: Visual on building
+	================================================================================================== -->
+   <Effect Name="ElementalControllerFireVisualEffect">
+      <Duration> -1.0 </Duration>
+      <Effect_Class> ElementalModeVisual </Effect_Class>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Red </Attribute>
+         <Modifier_Value> 0.0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Green </Attribute>
+         <Modifier_Value> 0.0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Blue </Attribute>
+         <Modifier_Value> 0.0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name>glows</Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> glow_head </Mesh_Name>
+      </Effect_Component>
+
+
+
+      <!-- Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> ZB_Super_Light </Particle_System_Type>
+         <Attachment_Bone_Name>b_mode_attach</Attachment_Bone_Name>
+      </Effect_Component -->
+
+      <!-- Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> ZB_Super_Light_Head </Particle_System_Type>
+         <Attachment_Bone_Name>b_Head</Attachment_Bone_Name>
+      </Effect_Component -->
+
+      <!--Effect_Component Type="ModelTexture">
+				<Texture_Name> ZB_Super_light.tga </Texture_Name>
+			</Effect_Component -->
+
+
+   </Effect>
+
+
+
+   <!--=================================================================================================
+	== ElementalControllerIceVisualEffect: ice Visual on building
+	================================================================================================== -->
+   <Effect Name="ElementalControllerIceVisualEffect">
+
+      <Duration> -1.0 </Duration>
+      <Effect_Class> ElementalModeVisual </Effect_Class>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Red </Attribute>
+         <Modifier_Value> 0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Green </Attribute>
+         <Modifier_Value> 0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Blue </Attribute>
+         <Modifier_Value> 0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name>glows</Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name> glow_head </Mesh_Name>
+      </Effect_Component>
+
+      <!--<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> ZB_Super_Dark </Particle_System_Type>
+			<Attachment_Bone_Name>b_mode_attach</Attachment_Bone_Name>
+		</Effect_Component>
+
+			Effect_Component Type="ModelTexture">
+				<Texture_Name> ZB_Super.tga </Texture_Name>
+			</Effect_Component>-->
+
+   </Effect>
+
+
+
+
+   <!--*************************************************************************************************
+	************************************************************************************************** 
+	************************************************************************************************** 
+	**	
+	**												Foundation
+	**
+	************************************************************************************************** 
+	************************************************************************************************** 
+	************************************************************************************************** -->
+
+   <!--=================================================================================================
+	== FoundationFireVisualEffect: Visual on building
+	================================================================================================== -->
+
+   <Effect Name="FoundationFireVisualEffect">
+      <Duration> -1.0 </Duration>
+      <Effect_Class> ElementalModeVisual </Effect_Class>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Red </Attribute>
+         <Modifier_Value> 0.0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Green </Attribute>
+         <Modifier_Value> 0.0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Blue </Attribute>
+         <Modifier_Value> 0.0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> ZB_Foundation_Light </Particle_System_Type>
+         <Attachment_Bone_Name>b_mode_attach</Attachment_Bone_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> Glows </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> dorborder </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name> dorborderdark </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name> Glowsdark </Mesh_Name>
+      </Effect_Component>
+
+   </Effect>
+
+
+   <!--=================================================================================================
+	== FoundationIceVisualEffect: ice Visual on building
+	================================================================================================== -->
+   <Effect Name="FoundationIceVisualEffect">
+
+      <Duration> -1.0 </Duration>
+      <Effect_Class> ElementalModeVisual </Effect_Class>
+
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name> Glows </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> Glowsdark </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name> dorborder </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> dorborderdark </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> ZB_Foundation_Dark </Particle_System_Type>
+			<Attachment_Bone_Name>b_mode_attach</Attachment_Bone_Name>
+		</Effect_Component>
+   </Effect>
+
+
+
+   <!--=================================================================================================
+	== FoundationElectricityEffect: damage on attacking unit
+	================================================================================================== -->
+   <Effect Name="FoundationElectricityEffect">
+      <Duration> 1.5 </Duration>
+      <Effect_Class> ElectricityDamage </Effect_Class>
+
+      <Effect_Component Type="Damage">
+         <Damage_Type> Damage_Electricity </Damage_Type>
+         <Damage_Amount> 25.0 </Damage_Amount>
+      </Effect_Component>
+
+      <Effect_Component Type="Lightning">
+         <Lightning_Effect_Name> Effect_Test_Lightning </Lightning_Effect_Name>
+         <Source_Target_Type> SourceToTarget </Source_Target_Type>
+      </Effect_Component>
+
+   </Effect>
+
+   <!--=================================================================================================
+	== FoundationElectricityVisualEffect: self elecricity visual
+	================================================================================================== -->
+   <Effect Name="FoundationElectricityVisualEffect">
+
+      <Duration> -1.0 </Duration>
+      <Effect_Class> ElementalModeVisual </Effect_Class>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Red </Attribute>
+         <Modifier_Value> .3 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Green </Attribute>
+         <Modifier_Value> .3 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Blue </Attribute>
+         <Modifier_Value> .3 </Modifier_Value>
+      </Effect_Component>
+
+   </Effect>
+
+
+
+   <!--*************************************************************************************************
+	************************************************************************************************** 
+	************************************************************************************************** 
+	**	
+	**												Ground Inspiration
+	**	
+	************************************************************************************************** 
+	************************************************************************************************** 
+	************************************************************************************************** -->
+   <!--=================================================================================================
+	== GroundInspirationFireVisualEffect: Visual on building
+	================================================================================================== -->
+   <Effect Name="GroundInspirationFireVisualEffect">
+      <Duration> -1.0 </Duration>
+      <Effect_Class> ElementalModeVisual </Effect_Class>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Red </Attribute>
+         <Modifier_Value> 0.0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Green </Attribute>
+         <Modifier_Value> 0.0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Blue </Attribute>
+         <Modifier_Value> 0.0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> ZB_Ground_Inspiration_Light </Particle_System_Type>
+         <Attachment_Bone_Name>b_mode_attach</Attachment_Bone_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> glows </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> door_scroll </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name> glowsdark </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name> door_scroll_dark </Mesh_Name>
+      </Effect_Component>
+
+   </Effect>
+
+
+
+
+   <!--=================================================================================================
+	== GroundInspirationIceVisualEffect: ice Visual on building
+	================================================================================================== -->
+   <Effect Name="GroundInspirationIceVisualEffect">
+
+      <Duration> -1.0 </Duration>
+      <Effect_Class> ElementalModeVisual </Effect_Class>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> door_scroll_dark </Mesh_Name>
+      </Effect_Component>
+      
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> glowsdark </Mesh_Name>
+      </Effect_Component>
+      
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name> glows </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name> door_scroll </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> ZB_Ground_Inspiration_Dark </Particle_System_Type>
+			<Attachment_Bone_Name>b_mode_attach</Attachment_Bone_Name>
+		</Effect_Component>
+
+   </Effect>
+
+
+
+
+   <!--*************************************************************************************************
+	************************************************************************************************** 
+	************************************************************************************************** 
+	**	
+	**												Guardian
+	**	
+	************************************************************************************************** 
+	************************************************************************************************** 
+	************************************************************************************************** -->
+   <!--=================================================================================================
+	== GuardianFireVisualEffect: Visual on building
+	================================================================================================== -->
+
+   <Effect Name="GuardianFireVisualEffect">
+      <Duration> -1.0 </Duration>
+      <Effect_Class> ElementalModeVisual </Effect_Class>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Red </Attribute>
+         <Modifier_Value> 0.0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Green </Attribute>
+         <Modifier_Value> 0.0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Blue </Attribute>
+         <Modifier_Value> 0.0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> ZB_Ground_Turret_Light </Particle_System_Type>
+         <Attachment_Bone_Name>b_mode_attach</Attachment_Bone_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> glow </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name> glowdark </Mesh_Name>
+      </Effect_Component>
+
+   </Effect>
+
+
+
+
+   <!--=================================================================================================
+	== GuardianIceVisualEffect: ice Visual on building
+	================================================================================================== -->
+   <Effect Name="GuardianIceVisualEffect">
+
+      <Duration> -1.0 </Duration>
+      <Effect_Class> ElementalModeVisual </Effect_Class>
+
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name> glowdark </Mesh_Name>
+      </Effect_Component>
+      
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name> glow </Mesh_Name>
+      </Effect_Component>
+
+      
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> ZB_Ground_Turret_Dark </Particle_System_Type>
+			<Attachment_Bone_Name>b_mode_attach</Attachment_Bone_Name>
+		</Effect_Component>
+
+   </Effect>
+
+
+
+
+   <!--*************************************************************************************************
+	************************************************************************************************** 
+	************************************************************************************************** 
+	**	
+	**												Infantry Inspiration
+	**	
+	************************************************************************************************** 
+	************************************************************************************************** 
+	************************************************************************************************** -->
+
+
+   <!--=================================================================================================
+	== MasariIronWillEffect: boost for infantry
+	================================================================================================== -->
+
+   <Effect Name="MasariIronWillEffect">
+      <Duration> -1.0 </Duration>
+      <!-- if you don't want stacking change following line -->
+      <Effect_Class> Transparent </Effect_Class>
+      <CategoryMask> CanBeRemovedByAbility</CategoryMask>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Max_Speed_Mult_Coeff </Attribute>
+         <!-- 50% faster move rate -->
+         <Modifier_Value> 0.5 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Weapon_Rate_Multiplier </Attribute>
+         <!-- 25% fire rate increase -->
+         <Modifier_Value> 0.25 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> Singularity_Lightning_Bolt_Strike </Particle_System_Type>
+      </Effect_Component>
+
+   </Effect>
+
+   <!--=================================================================================================
+	== InfantryInspirationFireVisualEffect: Visual on building
+	================================================================================================== -->
+   <Effect Name="InfantryInspirationFireVisualEffect">
+      <Duration> -1.0 </Duration>
+      <Effect_Class> ElementalModeVisual </Effect_Class>
+
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> ZB_Infantry_Inspiration_Light </Particle_System_Type>
+         <Attachment_Bone_Name>b_mode_attach</Attachment_Bone_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="HideMesh">
+			<Mesh_Name> darktrim </Mesh_Name>
+		</Effect_Component>
+
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name> darktext </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name> door_border_dark </Mesh_Name>
+      </Effect_Component>      
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> glowtrim </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> text </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> door_border </Mesh_Name>
+      </Effect_Component>
+
+
+
+
+      <!-- 
+			<Effect_Component Type="ModelTexture">
+         <Texture_Name> zb_infantry_barracks_light.tga </Texture_Name>
+      </Effect_Component>-->
+
+
+   </Effect>
+
+
+
+   <!--=================================================================================================
+	== InfantryInspirationIceVisualEffect: ice Visual on building
+	================================================================================================== -->
+   <Effect Name="InfantryInspirationIceVisualEffect">
+
+      <Duration> -1.0 </Duration>
+      <Effect_Class> ElementalModeVisual </Effect_Class>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> darktrim </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> darktext </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> door_border_dark </Mesh_Name>
+      </Effect_Component>
+      
+
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name> glowtrim </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name> text </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name> door_border </Mesh_Name>
+      </Effect_Component>
+      
+      <Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> ZB_Infantry_Inspiration_Dark </Particle_System_Type>
+			<Attachment_Bone_Name>b_mode_attach</Attachment_Bone_Name>
+		</Effect_Component>
+
+			<!-- Effect_Component Type="ModelTexture">
+				<Texture_Name> zb_infantry_barracks.tga </Texture_Name>
+			</Effect_Component> -->
+
+   </Effect>
+
+
+
+   <!--*************************************************************************************************
+	************************************************************************************************** 
+	************************************************************************************************** 
+	**	
+	**												Inventors Lab
+	**	
+	************************************************************************************************** 
+	************************************************************************************************** 
+	************************************************************************************************** -->
+   <!--=================================================================================================
+	== InventorsLabFireVisualEffect: Visual on building
+	================================================================================================== -->
+
+   <Effect Name="InventorsLabFireVisualEffect">
+      <Duration> -1.0 </Duration>
+      <Effect_Class> ElementalModeVisual </Effect_Class>
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> ZB_Inventor_Light </Particle_System_Type>
+         <Attachment_Bone_Name>b_mode_attach</Attachment_Bone_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> glows </Mesh_Name>
+      </Effect_Component>
+      
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> Scrolling_text </Mesh_Name>
+      </Effect_Component>
+      
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name>  Scrolling_text_dark </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name>  darkglows </Mesh_Name>
+      </Effect_Component>
+      
+
+
+
+      <!--Effect_Component Type="ModelTexture">
+         <Texture_Name> ZB_Lab_light.tga </Texture_Name>
+      </Effect_Component>-->
+
+
+   </Effect>
+
+
+
+
+   <!--=================================================================================================
+	== InventorsLabIceVisualEffect: ice Visual on building
+	================================================================================================== -->
+   <Effect Name="InventorsLabIceVisualEffect">
+
+      <Duration> -1.0 </Duration>
+      <Effect_Class> ElementalModeVisual </Effect_Class>
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> ZB_Inventor_Dark </Particle_System_Type>
+         <Attachment_Bone_Name>b_mode_attach</Attachment_Bone_Name>
+      </Effect_Component>
+
+
+
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name> glows </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name> Scrolling_text </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> Scrolling_text_dark </Mesh_Name>
+      </Effect_Component>
+
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> darkglows </Mesh_Name>
+      </Effect_Component>   
+
+   </Effect>
+
+
+   <!--=================================================================================================
+	== InventorsLabHPFireVisualEffect: Fire Visual on building
+	================================================================================================== -->
+   <Effect Name="InventorsLabHPFireVisualEffect">
+      <Duration> -1.0 </Duration>
+      <Effect_Class> ElementalModeVisual </Effect_Class>
+      <Extends_Existing_Duration>Yes</Extends_Existing_Duration>
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> ZB_Inventor_Light </Particle_System_Type>
+         <Attachment_Bone_Name>b_mode_attach</Attachment_Bone_Name>
+      </Effect_Component>
+
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> glows </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> Scrolling_text </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name>  Scrolling_text_dark </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name>  darkglows </Mesh_Name>
+      </Effect_Component>
+
+
+
+
+   </Effect>
+
+   <!--=================================================================================================
+	== InventorsLabHPIceVisualEffect: Fire Visual on building
+	================================================================================================== -->
+   <Effect Name="InventorsLabHPIceVisualEffect">
+      <Duration> -1.0 </Duration>
+      <Effect_Class> ElementalModeVisual </Effect_Class>
+      <Extends_Existing_Duration>Yes</Extends_Existing_Duration>
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> ZB_Inventor_Dark </Particle_System_Type>
+         <Attachment_Bone_Name>b_mode_attach</Attachment_Bone_Name>
+      </Effect_Component>
+
+
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name> glows </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name> Scrolling_text </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> Scrolling_text_dark </Mesh_Name>
+      </Effect_Component>
+
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> darkglows </Mesh_Name>
+      </Effect_Component>
+
+   </Effect>
+
+   <!--*************************************************************************************************
+	************************************************************************************************** 
+	************************************************************************************************** 
+	**	
+	**												Key Inspiration
+	**	
+	************************************************************************************************** 
+	************************************************************************************************** 
+	************************************************************************************************** -->
+   <!--=================================================================================================
+	== KeyInspirationFireVisualEffect: Visual on building
+	================================================================================================== -->
+
+   <Effect Name="KeyInspirationFireVisualEffect">
+      <Duration> -1.0 </Duration>
+      <Effect_Class> ElementalModeVisual </Effect_Class>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Red </Attribute>
+         <Modifier_Value> 0.0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Green </Attribute>
+         <Modifier_Value> 0.0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Blue </Attribute>
+         <Modifier_Value> 0.0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> glows </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> ZB_Key_Inspiration_Light </Particle_System_Type>
+         <Attachment_Bone_Name>b_mode_attach</Attachment_Bone_Name>
+      </Effect_Component>
+
+
+
+      <!--Effect_Component Type="ModelTexture">
+         <Texture_Name> ZB_key_inspiration_light.tga </Texture_Name>
+      </Effect_Component>-->
+
+
+
+   </Effect>
+
+
+
+
+   <!--=================================================================================================
+	== KeyInspirationIceVisualEffect: ice Visual on building
+	================================================================================================== -->
+   <Effect Name="KeyInspirationIceVisualEffect">
+
+      <Duration> -1.0 </Duration>
+      <Effect_Class> ElementalModeVisual </Effect_Class>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Red </Attribute>
+         <Modifier_Value> 0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Green </Attribute>
+         <Modifier_Value> 0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Blue </Attribute>
+         <Modifier_Value> 0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name> glows </Mesh_Name>
+      </Effect_Component>
+
+      <!--<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> ZB_Key_Inspiration_Dark </Particle_System_Type>
+			<Attachment_Bone_Name>b_mode_attach</Attachment_Bone_Name>
+		</Effect_Component>
+
+      Effect_Component Type="ModelTexture">
+         <Texture_Name> ZB_key_inspiration.tga </Texture_Name>
+      </Effect_Component>-->
+
+   </Effect>
+
+
+   <!--*************************************************************************************************
+	************************************************************************************************** 
+	************************************************************************************************** 
+	**	
+	**												dark superweapon
+	**	
+	************************************************************************************************** 
+	************************************************************************************************** 
+	************************************************************************************************** -->
+
+   <Effect Name="DarkWeaponAEEffect">
+      <Duration> 10.1 </Duration>
+      <Effect_Class> DarkWeapon </Effect_Class>
+      <Extends_Existing_Duration> yes </Extends_Existing_Duration>
+      <Extends_Same_Source_Duration_Only>yes</Extends_Same_Source_Duration_Only>
+
+      <Effect_Component Type="DamageOverTime">
+         <Damage_Type> Damage_Masari_Frost_Conduit </Damage_Type>
+         <Amount_Per_Second> 25.0 </Amount_Per_Second>
+         <Percentage_Per_Second> 0.03 </Percentage_Per_Second>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Category_Mask </Attribute>
+         <Modifier_Integer_Value Converter="GameObjectCategoryType"> Flying </Modifier_Integer_Value>
+         <Modifier_Type> Bitwise_And_Not </Modifier_Type>
+      </Effect_Component>
+      
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Is_Grounded </Attribute>
+         <Modifier_Value> 1.0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="DisableBehavior">
+         <Behaviors> WALK_LOCOMOTOR </Behaviors>
+      </Effect_Component>
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> Masari_Superweapon_Dark_Enemy_Unit </Particle_System_Type>
+      </Effect_Component>
+
+   </Effect>
+
+   <Effect Name="DarkUpgradeSelfVisualEffect">
+      <Duration> 10.1 </Duration>
+      <Effect_Class> DarkWeapon </Effect_Class>
+      <Extends_Existing_Duration> false </Extends_Existing_Duration>
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> Masari_Superweapon_Dark_Upgrade </Particle_System_Type>
+      </Effect_Component>
+
+   </Effect>
+
+   <Effect Name="DarkWeaponFriendlyAEEffect">
+      <Duration> 10.1 </Duration>
+      <Effect_Class> DarkWeapon </Effect_Class>
+      <Extends_Existing_Duration> false </Extends_Existing_Duration>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Current_DMA_Level </Attribute>
+         <Modifier_Value> 80.0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> Masari_Superweapon_Dark_Friendly_Unit </Particle_System_Type>
+      </Effect_Component>
+
+   </Effect>
+   
+   
+
+	<Effect Name="DarkWeaponFriendlyHealEffect">
+		<Duration> 10.1 </Duration>
+		<Effect_Class> Healing </Effect_Class>
+		<Extends_Existing_Duration> false </Extends_Existing_Duration>
+
+		<Effect_Component Type="HealOverTime">
+			<Amount_Per_Second> 5.0 </Amount_Per_Second>
+      <Percentage_Per_Second> 0.02 </Percentage_Per_Second>
+		</Effect_Component>
+
+	</Effect>
+
+
+	<!--*************************************************************************************************
+	************************************************************************************************** 
+	************************************************************************************************** 
+	**	
+	**												Magma Channel
+	**	
+	************************************************************************************************** 
+	************************************************************************************************** 
+	************************************************************************************************** -->
+   <!--=================================================================================================
+	== MagmaChannelSelfDestructEffect: self destruct
+	================================================================================================== -->
+   <Effect Name="MagmaChannelSelfDestructEffect">
+      <Duration> 10.1 </Duration>
+      <Effect_Class> MagmaChannel </Effect_Class>
+
+      <Effect_Component Type="Damage">
+         <Damage_Type>Damage_Debug_Cheat</Damage_Type>
+         <Damage_Amount>100000000000</Damage_Amount>
+         <Damage_Percentage>1.0</Damage_Percentage>
+         <!-- instant kill -->
+      </Effect_Component>
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> Masari_Superweapon_light_upgrade </Particle_System_Type>
+      </Effect_Component>
+
+   </Effect>
+
+   <!--=================================================================================================
+	== MagmaChannelSelfDestructEffect: self destruct  
+   == We need two: bug fix - when weapon is upgraded and lock-unlock happens, the SelfDestruct is not applied
+   == in upgraded effect because the regular effect is still not deleted, causing the weapon stay around forever. - Oksana
+	================================================================================================== -->
+   <Effect Name="MagmaChannelSelfDestructUpgradedEffect">
+      <Duration> 10.1 </Duration>
+      <Effect_Class> MagmaChannelUpgraded </Effect_Class>
+
+      <Effect_Component Type="Damage">
+         <Damage_Type>Damage_Debug_Cheat</Damage_Type>
+         <Damage_Amount>100000000000</Damage_Amount>
+         <Damage_Percentage>1.0</Damage_Percentage>
+         <!-- instant kill -->
+      </Effect_Component>
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> Masari_Superweapon_light_upgrade </Particle_System_Type>
+      </Effect_Component>
+
+   </Effect>
+   
+   <!--=================================================================================================
+	== MagmaChannelSelfVisualEffect: visual on magma effect
+	================================================================================================== -->
+   <Effect Name="MagmaChannelSelfVisualEffect">
+      <Duration> -1.0 </Duration>
+      <Effect_Class> Transparent </Effect_Class>
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> Masari_Superweapon_Light_Unit_Fire </Particle_System_Type>
+      </Effect_Component>
+
+   </Effect>
+
+   <!--=================================================================================================
+	== MagmaChannelCreateFireEffect: Create fire spawn
+	================================================================================================== -->
+   <Effect Name="MagmaChannelCreateFireEffect">
+      <Duration> 10.0 </Duration>
+      <Effect_Class> MagmaChannelSpawn </Effect_Class>
+      <Allow_Same_Source_Stacking> true </Allow_Same_Source_Stacking>
+
+      <!-- spawn a fire object -->
+      <Effect_Component Type="CreateObject">
+         <Create_Object_Type> Magma_Channel_Fire_Spawn </Create_Object_Type>
+         <Destroy_On_Remove> true </Destroy_On_Remove>
+         <Position_Type> AtSource </Position_Type>
+         <Use_Source_Player_ID> true </Use_Source_Player_ID>
+      </Effect_Component>
+
+      <Effect_Component Type="HealTerrain">
+         <Radius> 50.0 </Radius>
+         <Heal_Terrain> false </Heal_Terrain>
+      </Effect_Component>
+
+   </Effect>
+
+   <!--=================================================================================================
+	== MagmaChannelCreateFireVisualEffect: Create fire spawn
+	================================================================================================== -->
+   <Effect Name="MagmaChannelCreateFireVisualEffect">
+      <Duration> 10.0 </Duration>
+      <Effect_Class> MagmaChannelSpawn </Effect_Class>
+      <Allow_Same_Source_Stacking> true </Allow_Same_Source_Stacking>
+
+      <!-- spawn a fire object -->
+      <Effect_Component Type="CreateObject">
+         <Create_Object_Type> Magma_Channel_Fire_Visual_Spawn </Create_Object_Type>
+         <Destroy_On_Remove> true </Destroy_On_Remove>
+         <Position_Type> AtSource </Position_Type>
+         <Use_Source_Player_ID> true </Use_Source_Player_ID>
+      </Effect_Component>
+
+   </Effect>
+
+   <!--=================================================================================================
+	== MagmaChannelBurnAEEffect: burn damage
+	================================================================================================== -->
+   <Effect Name="MagmaChannelBurnAEEffect">
+      <Duration> 1.6 </Duration>
+      <Effect_Class> FireDamage </Effect_Class>
+
+      <Effect_Component Type="DamageOverTime">
+         <Damage_Type> Damage_Masari_Magma_Channel </Damage_Type>
+         <Amount_Per_Second> 100.0 </Amount_Per_Second>
+         <Percentage_Per_Second>0.0</Percentage_Per_Second>
+      </Effect_Component>
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> Masari_Superweapon_Light_Unit_Fire </Particle_System_Type>
+      </Effect_Component>
+
+   </Effect>
+
+
+
+
+   <!--*************************************************************************************************
+	************************************************************************************************** 
+	************************************************************************************************** 
+	**	
+	**												Megaweapon
+	**	
+	************************************************************************************************** 
+	************************************************************************************************** 
+	************************************************************************************************** -->
+   <!--=================================================================================================
+	== MegaweaponFireVisualEffect: Visual on building
+	================================================================================================== -->
+
+   <Effect Name="MegaweaponFireVisualEffect">
+      <Duration> -1.0 </Duration>
+      <Effect_Class> ElementalModeVisual </Effect_Class>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Red </Attribute>
+         <Modifier_Value> 0.0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Green </Attribute>
+         <Modifier_Value> 0.0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Blue </Attribute>
+         <Modifier_Value> 0.0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> glows </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> ZB_Mega_Light </Particle_System_Type>
+         <Attachment_Bone_Name>b_mode_attach</Attachment_Bone_Name>
+      </Effect_Component>
+
+
+
+
+   </Effect>
+
+
+
+   <!--=================================================================================================
+	== MegaweaponIceVisualEffect: ice Visual on building
+	================================================================================================== -->
+   <Effect Name="MegaweaponIceVisualEffect">
+
+      <Duration> -1.0 </Duration>
+      <Effect_Class> ElementalModeVisual </Effect_Class>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Red </Attribute>
+         <Modifier_Value> 0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Green </Attribute>
+         <Modifier_Value> 0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Blue </Attribute>
+         <Modifier_Value> 0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name> glows </Mesh_Name>
+      </Effect_Component>
+
+      <!--<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> ZB_Mega_Dark </Particle_System_Type>
+			<Attachment_Bone_Name>b_mode_attach</Attachment_Bone_Name>
+		</Effect_Component>-->
+
+   </Effect>
+
+
+
+   <!--*************************************************************************************************
+	************************************************************************************************** 
+	************************************************************************************************** 
+	**	
+	**												Natural Interpreter
+	**	
+	************************************************************************************************** 
+	************************************************************************************************** 
+	************************************************************************************************** -->
+ 
+	
+	<!--=================================================================================================
+	== Tier 1 upgrade on Masari structure: can see enemies under FOW in a radius
+	================================================================================================== -->
+ 
+	<Effect Name="NaturalInterpreterRadarUpgradeTier1">
+      <Duration> -1.0 </Duration>
+      <Effect_Class> RevealToEnemyRadar </Effect_Class>
+      <Extends_Existing_Duration>Yes</Extends_Existing_Duration>
+     
+      <!-- Will make it only visible to the player that's the source of this effect -->
+      <Effect_Component Type="ShowOnRadarWhenFogged"/>        
+
+      <Effect_Component Type="CreateObject">
+         <Create_Object_Type> Hidden_Under_FOW_Visual </Create_Object_Type>
+         <Position_Type> AtTarget </Position_Type>
+         <Maintain_Position>Yes</Maintain_Position>
+         <Destroy_On_Remove>Yes</Destroy_On_Remove>
+         <Hide_Model_If_Target_Is_Visible>Yes</Hide_Model_If_Target_Is_Visible>
+         <Only_Visible_To_Source_Allied_Players>Yes</Only_Visible_To_Source_Allied_Players>
+         <Use_Source_Player_ID> true </Use_Source_Player_ID>
+      </Effect_Component>
+      
+   </Effect>
+
+
+
+
+
+
+
+   <!--=================================================================================================
+	== NaturalInterpreterFireVisualEffect: Visual on building
+	================================================================================================== -->
+
+   <Effect Name="NaturalInterpreterFireVisualEffect">
+      <Duration> -1.0 </Duration>
+      <Effect_Class> ElementalModeVisual </Effect_Class>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> glows </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> ZB_Natural_interpreter_Light </Particle_System_Type>
+         <Attachment_Bone_Name>b_mode_attach</Attachment_Bone_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> ZB_Natural_interpreter_Light_eye </Particle_System_Type>
+         <Attachment_Bone_Name>b_Eye</Attachment_Bone_Name>
+      </Effect_Component>
+
+   </Effect>
+
+
+
+   <!--=================================================================================================
+	== NaturalInterpreterIceVisualEffect: ice Visual on building
+	================================================================================================== -->
+   <Effect Name="NaturalInterpreterIceVisualEffect">
+
+      <Duration> -1.0 </Duration>
+      <Effect_Class> ElementalModeVisual </Effect_Class>
+
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name> glows </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> ZB_Natural_interpreter_Dark </Particle_System_Type>
+         <Attachment_Bone_Name>b_mode_attach</Attachment_Bone_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> ZB_Natural_interpreter_Dark_Eye </Particle_System_Type>
+         <Attachment_Bone_Name>b_Eye</Attachment_Bone_Name>
+      </Effect_Component>
+
+   </Effect>
+
+   <!--=================================================================================================
+	== NaturalInterpreterHPFireVisualEffect: Visual on building
+	================================================================================================== -->
+
+   <Effect Name="NaturalInterpreterHPFireVisualEffect">
+      <Duration> -1.0 </Duration>
+      <Effect_Class> ElementalModeVisual </Effect_Class>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> glows </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> ZB_Natural_interpreter_Light_HP </Particle_System_Type>
+         <Attachment_Bone_Name>b_mode_attach</Attachment_Bone_Name>
+      </Effect_Component>
+
+   </Effect>
+
+   <!--=================================================================================================
+	== NaturalInterpreterHPIceVisualEffect: ice Visual on building
+	================================================================================================== -->
+   <Effect Name="NaturalInterpreterHPIceVisualEffect">
+
+      <Duration> -1.0 </Duration>
+      <Effect_Class> ElementalModeVisual </Effect_Class>
+
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name> glows </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> ZB_Natural_interpreter_Dark_HP </Particle_System_Type>
+         <Attachment_Bone_Name>b_mode_attach</Attachment_Bone_Name>
+      </Effect_Component>
+      
+
+   </Effect>
+
+
+
+
+
+	<!-- ************************************************************** -->
+	<!-- *****  Oracle Piercing Gaze Researched Upgrade			  *****-->
+	<!-- ************************************************************** -->
+
+
+	<Effect Name="OraclePiercingGazeBeamLightEffect">
+		<Duration> 5.0 </Duration>
+		<Effect_Class> Transparent </Effect_Class>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+		<Extends_Same_Source_Duration_Only>yes</Extends_Same_Source_Duration_Only>
+
+		<Effect_Component Type="DamageOverTime">
+			<Damage_Type> Damage_Masari_Oracle_Gaze </Damage_Type>
+			<Amount_Per_Second> 200.0 </Amount_Per_Second>
+		</Effect_Component>
+
+		<Effect_Component Type="Lightning">
+			<Lightning_Effect_Name> Masari_Piercing_Gaze_Light_Beam </Lightning_Effect_Name>
+			<Source_Target_Type> SourceToTarget </Source_Target_Type>
+			<Source_Bone_Name>MuzzleA_00</Source_Bone_Name>
+		</Effect_Component>
+
+	</Effect>
+
+
+	<Effect Name="OraclePiercingGazeBeamDarkEffect">
+		<Duration> 5.0 </Duration>
+		<Effect_Class> Transparent </Effect_Class>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+		<Extends_Same_Source_Duration_Only>yes</Extends_Same_Source_Duration_Only>
+
+		<Effect_Component Type="DamageOverTime">
+			<Damage_Type> Damage_Masari_Oracle_Gaze </Damage_Type>
+			<Amount_Per_Second> 200.0 </Amount_Per_Second>
+		</Effect_Component>
+
+		<Effect_Component Type="Lightning">
+			<Lightning_Effect_Name> Masari_Piercing_Gaze_Dark_Beam </Lightning_Effect_Name>
+			<Source_Target_Type> SourceToTarget </Source_Target_Type>
+			<Source_Bone_Name>B_Eye</Source_Bone_Name>
+		</Effect_Component>
+
+	</Effect>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+   <!--*************************************************************************************************
+	************************************************************************************************** 
+	************************************************************************************************** 
+	**	
+	**												Natural Portal
+	**	
+	************************************************************************************************** 
+	************************************************************************************************** 
+	************************************************************************************************** -->
+   <!--=================================================================================================
+	== PortalFireVisualEffect: Visual on building
+	================================================================================================== -->
+
+   <Effect Name="PortalFireVisualEffect">
+      <Duration> -1.0 </Duration>
+      <Effect_Class> ElementalModeVisual </Effect_Class>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Red </Attribute>
+         <Modifier_Value> 0.0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Green </Attribute>
+         <Modifier_Value> 0.0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Blue </Attribute>
+         <Modifier_Value> 0.0 </Modifier_Value>
+      </Effect_Component>
+
+
+
+   </Effect>
+
+
+
+
+   <!--=================================================================================================
+	== PortalIceVisualEffect: ice Visual on building
+	================================================================================================== -->
+   <Effect Name="PortalIceVisualEffect">
+
+      <Duration> -1.0 </Duration>
+      <Effect_Class> ElementalModeVisual </Effect_Class>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Red </Attribute>
+         <Modifier_Value> 0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Green </Attribute>
+         <Modifier_Value> 0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Blue </Attribute>
+         <Modifier_Value> 0 </Modifier_Value>
+      </Effect_Component>
+
+   </Effect>
+
+
+
+   <!--*************************************************************************************************
+	************************************************************************************************** 
+	************************************************************************************************** 
+	**	
+	**												Sky Guardian
+	**	
+	************************************************************************************************** 
+	************************************************************************************************** 
+	************************************************************************************************** -->
+   <!--=================================================================================================
+	== SkyGuardianFireVisualEffect: Visual on building
+	================================================================================================== -->
+
+   <Effect Name="SkyGuardianFireVisualEffect">
+      <Duration> -1.0 </Duration>
+      <Effect_Class> ElementalModeVisual </Effect_Class>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> glows </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> writing </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name> writingdark </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name> glowsdark </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> ZB_Sky_Turret_Light </Particle_System_Type>
+         <Attachment_Bone_Name>b_mode_attach</Attachment_Bone_Name>
+      </Effect_Component>
+
+   </Effect>
+
+
+
+
+   <!--=================================================================================================
+	== SkyGuardianIceVisualEffect: ice Visual on building
+	================================================================================================== -->
+   <Effect Name="SkyGuardianIceVisualEffect">
+
+      <Duration> -1.0 </Duration>
+      <Effect_Class> ElementalModeVisual </Effect_Class>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> glowsdark </Mesh_Name>
+      </Effect_Component>
+      
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name> glows </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name> writing </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> writingdark </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> ZB_Sky_Turret_Dark </Particle_System_Type>
+			<Attachment_Bone_Name>b_mode_attach</Attachment_Bone_Name>
+		</Effect_Component>
+
+   </Effect>
+
+
+   <!--=================================================================================================
+	== SkyGuardianIceSpikeEffect: ice spike 
+	================================================================================================== -->
+   <Effect Name="SkyGuardianIceSpikeEffect">
+      <Duration> 5.0 </Duration>
+      <Effect_Class> IceDamage </Effect_Class>
+
+      <Effect_Component Type="Damage">
+         <Damage_Type> Damage_Ice </Damage_Type>
+         <Damage_Amount> 10.0 </Damage_Amount>
+         <Damage_Percentage>0.1</Damage_Percentage>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Max_Speed_Mult_Coeff </Attribute>
+         <Modifier_Value> -0.4 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> Singularity_Lightning_Bolt_Strike </Particle_System_Type>
+      </Effect_Component>
+   </Effect>
+
+   <!--=================================================================================================
+	== SkyGuardianGustEffect: gust knockback
+	================================================================================================== -->
+
+   <Effect Name="SkyGuardianGustEffect">
+      <Duration> 0.5 </Duration>
+      <Effect_Class> KnockBack </Effect_Class>
+      <Extends_Existing_Duration> false </Extends_Existing_Duration>
+      <Extends_Same_Source_Duration_Only> false </Extends_Same_Source_Duration_Only>
+
+      <Effect_Component Type="KnockBack">
+         <Knock_Back_Strength> 350.0 </Knock_Back_Strength>
+         <Dampening_Fraction>.8 </Dampening_Fraction>
+         <Gravity_Fraction>0</Gravity_Fraction>
+         <XY_Knock_Back_Only> true </XY_Knock_Back_Only>
+      </Effect_Component>
+
+      <Effect_Component Type="CreateObject">
+         <Create_Object_Type> Knockback_Hand</Create_Object_Type>
+         <Position_Type> AttachToTarget </Position_Type>
+         <Destroy_On_Remove> yes </Destroy_On_Remove>
+         <Use_Source_Player_ID> yes </Use_Source_Player_ID>
+         <Attachment_Bone_Name>root</Attachment_Bone_Name>
+         <Attach_To_Empty_Bone_Only>No</Attach_To_Empty_Bone_Only>
+      </Effect_Component>
+      
+      
+
+   </Effect>
+
+
+
+   <!--=================================================================================================
+	== SkyGuardianGustEffect: gust knockback visual
+	================================================================================================== -->
+   <Effect Name="SkyGuardianGustVisualEffect">
+      <Duration> 1.1 </Duration>
+      <Effect_Class> Transparent </Effect_Class>
+      <Extends_Existing_Duration> true </Extends_Existing_Duration>
+      <Extends_Same_Source_Duration_Only> true </Extends_Same_Source_Duration_Only>
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> Masari_Sky_Guardian_Gust_Ability </Particle_System_Type>
+         <Attachment_Bone_Name>muzzleA_00</Attachment_Bone_Name>
+      </Effect_Component>
+   </Effect>
+
+
+   <!-- ************************************************************** -->
+   <!-- *****  SkyGuardianLightBeamEffect effect						  *****-->
+   <!-- ************************************************************** -->
+
+
+   <Effect Name="SkyGuardianLightBeamEffect">
+      <Duration> 10.0 </Duration>
+      <Effect_Class> Transparent </Effect_Class>
+      <Extends_Existing_Duration> true </Extends_Existing_Duration>
+      <Extends_Same_Source_Duration_Only>yes</Extends_Same_Source_Duration_Only>
+
+      <Effect_Component Type="DamageOverTime">
+         <Damage_Type> Damage_Masari_Sky_Guardian_Light </Damage_Type>
+         <Amount_Per_Second_Attribute> Effect_Damage_Amount </Amount_Per_Second_Attribute>
+      </Effect_Component>
+
+      <Effect_Component Type="Lightning">
+         <Lightning_Effect_Name> ZB_Sky_turret_core </Lightning_Effect_Name>
+         <Source_Target_Type> SourceToTarget </Source_Target_Type>
+         <Source_Bone_Name>MuzzleA_00</Source_Bone_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="Lightning">
+         <Lightning_Effect_Name> ZB_Sky_turret_Glow </Lightning_Effect_Name>
+         <Source_Target_Type> SourceToTarget </Source_Target_Type>
+         <Source_Bone_Name>MuzzleA_00</Source_Bone_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type>Masari_Sky_Guardian_Beam_source</Particle_System_Type>
+
+         <Position_Type>AtSource</Position_Type>
+         <Attachment_Bone_Name>MuzzleA_00</Attachment_Bone_Name>
+
+         <Attractor_Type>AtTarget</Attractor_Type>
+         <Attractor_Bone_Name/>
+
+      </Effect_Component>
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> Masari_Sky_Guardian_Beam_Target </Particle_System_Type>
+      </Effect_Component>
+
+   </Effect>
+
+
+
+
+
+
+   <!--*************************************************************************************************
+	************************************************************************************************** 
+	************************************************************************************************** 
+	**	
+	**												Will Processor
+	**	
+	************************************************************************************************** 
+	************************************************************************************************** -->
+
+
+   <!-- =================================================================================================
+	== WillProcessorFireVisualEffect: Visual on building
+	================================================================================================== -->
+
+   <Effect Name="WillProcessorFireVisualEffect">
+      <Duration> -1.0 </Duration>
+      <Effect_Class> ElementalModeVisual </Effect_Class>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Red </Attribute>
+         <Modifier_Value> 0.0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Green </Attribute>
+         <Modifier_Value> 0.0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Blue </Attribute>
+         <Modifier_Value> 0.0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> ZB_HQ_Science_Light </Particle_System_Type>
+         <Attachment_Bone_Name>b_mode_attach</Attachment_Bone_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name>hard glow01 </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name>scroll glow </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> glows </Mesh_Name>
+      </Effect_Component>
+
+      <!--Effect_Component Type="ModelTexture">
+				<Texture_Name> zb_hq_science_light.tga </Texture_Name>
+			</Effect_Component>-->
+
+   </Effect>
+
+
+
+
+   <!--=================================================================================================
+	== WillProcessorIceVisualEffect: ice Visual on building
+	================================================================================================== -->
+   <Effect Name="WillProcessorIceVisualEffect">
+
+      <Duration> -1.0 </Duration>
+      <Effect_Class> ElementalModeVisual </Effect_Class>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Red </Attribute>
+         <Modifier_Value> 0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Green </Attribute>
+         <Modifier_Value> 0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Blue </Attribute>
+         <Modifier_Value> 0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name>hard glow01 </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name>scroll glow </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="HideMesh">
+         <Mesh_Name> glows </Mesh_Name>
+      </Effect_Component>
+
+      <!--<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> ZB_HQ_Science_Dark </Particle_System_Type>
+			<Attachment_Bone_Name>b_mode_attach</Attachment_Bone_Name>
+		</Effect_Component>
+
+      Effect_Component Type="ModelTexture">
+         <Texture_Name> zb_hq_science.tga </Texture_Name>
+      </Effect_Component>-->
+
+   </Effect>
+
+
+</Effects>

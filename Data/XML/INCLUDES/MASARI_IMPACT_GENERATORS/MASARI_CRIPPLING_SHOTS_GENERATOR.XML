@@ -1,0 +1,59 @@
+<!-- Include file: Dark Matter Armor (DMA) setup for Dark Mode. - Oksana -->
+
+<Effect_Generator Name="CripplingShotsImpactGenerator">
+
+
+
+	<Effect_Generator_Entry Name="Entry1">
+		<Effect_Name> MasariCripplingShotsEffect </Effect_Name>
+		<Duration> 5.0 </Duration>
+		<Target_Gathering_Mask> Target </Target_Gathering_Mask>
+    <Target_Filter_Categories>~Stationary</Target_Filter_Categories>
+		<Target_Filter_C> Is_Enemy </Target_Filter_C>
+		<Should_Add_All_Team_Members_As_Targets> false </Should_Add_All_Team_Members_As_Targets>
+		<Should_Add_Team_Container_As_Target> false </Should_Add_Team_Container_As_Target>
+		<Should_Deactivate_Manually> false </Should_Deactivate_Manually>
+		<Remove_On_Death> false </Remove_On_Death>
+		<Disable_Entry_Attribute> Is_Mind_Controlled </Disable_Entry_Attribute>
+		<Disable_Parent_If_Idle> yes </Disable_Parent_If_Idle>
+
+	</Effect_Generator_Entry>
+
+	<Effect_Generator_Entry Name="Entry2">
+		<Effect_Name> MasariCripplingShotsVisualEffectSmall </Effect_Name>
+		<Duration> 5.0 </Duration>
+		<Target_Gathering_Mask> Target </Target_Gathering_Mask>
+    <Target_Filter_Categories>Small</Target_Filter_Categories>
+		<Target_Filter_C>Is_Enemy</Target_Filter_C>
+		<Should_Add_All_Team_Members_As_Targets> false </Should_Add_All_Team_Members_As_Targets>
+		<Should_Add_Team_Container_As_Target> false </Should_Add_Team_Container_As_Target>
+		<Disable_Entry_Attribute> Is_Mind_Controlled </Disable_Entry_Attribute>
+		<Remove_On_Death> false </Remove_On_Death>
+	</Effect_Generator_Entry>
+
+	<Effect_Generator_Entry Name="Entry3">
+		<Effect_Name> MasariCripplingShotsVisualEffectMedium </Effect_Name>
+		<Duration> 5.0 </Duration>
+		<Target_Gathering_Mask> Target </Target_Gathering_Mask>
+    <Target_Filter_Categories>Medium</Target_Filter_Categories>
+		<Target_Filter_C> Is_Enemy </Target_Filter_C>
+		<Should_Add_All_Team_Members_As_Targets> false </Should_Add_All_Team_Members_As_Targets>
+		<Should_Add_Team_Container_As_Target> false </Should_Add_Team_Container_As_Target>
+		<Disable_Entry_Attribute> Is_Mind_Controlled </Disable_Entry_Attribute>
+		<Remove_On_Death> false </Remove_On_Death>
+	</Effect_Generator_Entry>
+
+	<Effect_Generator_Entry Name="Entry4">
+		<Effect_Name> MasariCripplingShotsVisualEffectLarge </Effect_Name>
+		<Duration> 5.0 </Duration>
+		<Target_Gathering_Mask> Target </Target_Gathering_Mask>
+    <Target_Filter_Categories>Large | Huge + ~Stationary</Target_Filter_Categories>
+		<Target_Filter_C>Is_Enemy</Target_Filter_C>
+		<Should_Add_All_Team_Members_As_Targets> false </Should_Add_All_Team_Members_As_Targets>
+		<Should_Add_Team_Container_As_Target> false </Should_Add_Team_Container_As_Target>
+		<Disable_Entry_Attribute> Is_Mind_Controlled </Disable_Entry_Attribute>
+		<Remove_On_Death> false </Remove_On_Death>
+	</Effect_Generator_Entry>
+
+</Effect_Generator>
+

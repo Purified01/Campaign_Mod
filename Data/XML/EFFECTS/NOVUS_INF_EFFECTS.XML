@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Effects>
+
+	
+	<!--*************************************************************************************************
+	************************************************************************************************** 
+	************************************************************************************************** 
+	**	
+	**												Hacker
+	**	
+	************************************************************************************************** 
+	************************************************************************************************** 
+	************************************************************************************************** -->
+	<Effect Name="Novus_Hacker_Control_Turret_Effect">
+		<Duration> -1.0 </Duration>
+		<Should_Remove_If_Inactive> true </Should_Remove_If_Inactive>
+		<Effect_Class> MindControl </Effect_Class>
+
+		<Effect_Component Type="SwitchFaction">
+			<Use_Source_Faction> true </Use_Source_Faction>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Is_Mind_Controlled </Attribute>
+			<Modifier_Value> 1.0 </Modifier_Value>
+		</Effect_Component>
+
+		<Effect_Component Type="Lightning">
+			<Lightning_Effect_Name> Novus_Hacker_Connect_core </Lightning_Effect_Name>
+			<Source_Target_Type> SourceToTarget </Source_Target_Type>
+			<Source_Bone_Name>MuzzleA_00</Source_Bone_Name>
+		</Effect_Component>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Novus_Hacker_Turret_Hack_Particle </Particle_System_Type>
+		</Effect_Component>
+		
+	</Effect>
+
+	<Effect Name="Novus_Hacker_Control_Turret_Area_Effect">
+		<Duration> -1.0 </Duration>
+		<Should_Remove_If_Inactive> true </Should_Remove_If_Inactive>
+		<Effect_Class> MindControl </Effect_Class>
+
+		<Effect_Component Type="SwitchFaction">
+			<Use_Source_Faction> true </Use_Source_Faction>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Is_Mind_Controlled </Attribute>
+			<Modifier_Value> 1.0 </Modifier_Value>
+		</Effect_Component>
+
+		<Effect_Component Type="Lightning">
+			<Lightning_Effect_Name> Novus_Hacker_Connect_spark </Lightning_Effect_Name>
+			<Source_Target_Type> SourceToTarget </Source_Target_Type>
+			<Source_Bone_Name>MuzzleA_00</Source_Bone_Name>
+		</Effect_Component>
+
+		<Effect_Component Type="Lightning">
+			<Lightning_Effect_Name> Novus_Hacker_Connect_core </Lightning_Effect_Name>
+			<Source_Target_Type> OriginalTargetToTarget </Source_Target_Type>
+		</Effect_Component>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Novus_Hacker_Turret_Hack_Particle </Particle_System_Type>
+		</Effect_Component>
+		
+	</Effect>
+
+
+
+	<Effect Name="Novus_Hacker_Pinpoint_Weakness_Effect">
+		<Duration> -1.0 </Duration>
+		<Should_Remove_If_Inactive> true </Should_Remove_If_Inactive>
+		<Effect_Class> MindControl </Effect_Class>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Damage_Taken_Mult_Coeff </Attribute>
+			<Modifier_Value> 2.0 </Modifier_Value>
+		</Effect_Component>
+
+		<Effect_Component Type="Lightning">
+			<Lightning_Effect_Name> Effect_Test_Lightning </Lightning_Effect_Name>
+			<Source_Target_Type> SourceToTarget </Source_Target_Type>
+		</Effect_Component>
+	</Effect>
+
+	<Effect Name="Novus_Hacker_Pinpoint_Weakness_Area_Effect">
+		<Duration> -1.0 </Duration>
+		<Should_Remove_If_Inactive> true </Should_Remove_If_Inactive>
+		<Effect_Class> MindControl </Effect_Class>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Damage_Taken_Mult_Coeff </Attribute>
+			<Modifier_Value> 2.0 </Modifier_Value>
+		</Effect_Component>
+
+		<Effect_Component Type="Lightning">
+			<Lightning_Effect_Name> Effect_Test_Lightning </Lightning_Effect_Name>
+			<Source_Target_Type> SourceToOriginalTarget </Source_Target_Type>
+		</Effect_Component>
+
+		<Effect_Component Type="Lightning">
+			<Lightning_Effect_Name> Effect_Test_Lightning </Lightning_Effect_Name>
+			<Source_Target_Type> OriginalTargetToTarget </Source_Target_Type>
+		</Effect_Component>
+	</Effect>
+
+
+	<Effect Name="Novus_Hacker_Lockdown_Effect">
+		<Duration> -1.0 </Duration>
+		<Should_Remove_If_Inactive> true </Should_Remove_If_Inactive>
+		<Effect_Class> Burden </Effect_Class>
+		<CategoryMask> CanBeRemovedByAbility</CategoryMask>
+
+		<!-- Stop unit completely -->
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Max_Speed_Mult_Coeff </Attribute>
+			<Modifier_Value> -1.0 </Modifier_Value>
+		</Effect_Component>
+
+		<Effect_Component Type="DisableBehavior">
+			<Behaviors> WALK_LOCOMOTOR, GIANT_WALK_LOCOMOTOR, TURRET </Behaviors>
+		</Effect_Component>
+
+		<Effect_Component Type="Lightning">
+			<Lightning_Effect_Name> Novus_Hacker_Connect_core </Lightning_Effect_Name>
+			<Source_Target_Type> SourceToTarget </Source_Target_Type>
+			<Source_Bone_Name>MuzzleA_00</Source_Bone_Name>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Render_Tint_Red </Attribute>
+			<Modifier_Value> -.4 </Modifier_Value>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Render_Tint_Green </Attribute>
+			<Modifier_Value> -.4 </Modifier_Value>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Render_Tint_Blue </Attribute>
+			<Modifier_Value> -.4 </Modifier_Value>
+		</Effect_Component>
+
+		<Effect_Component Type="Lightning">
+			<Lightning_Effect_Name> Novus_Hacker_Connect_spark </Lightning_Effect_Name>
+			<Source_Target_Type> SourceToTarget </Source_Target_Type>
+			<Source_Bone_Name>MuzzleA_00</Source_Bone_Name>
+		</Effect_Component>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Novus_Hacker_Lockdown_Particle </Particle_System_Type>
+		</Effect_Component>
+		
+	</Effect>
+
+	<Effect Name="Novus_Hacker_Lockdown_Self_Effect">
+		<Duration> -1.0 </Duration>
+		<Should_Remove_If_Inactive> true </Should_Remove_If_Inactive>
+		<Effect_Class> Burden </Effect_Class>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Novus_Hacker_Lightning_source </Particle_System_Type>
+			<Attachment_Bone_Name> MuzzleA_00 </Attachment_Bone_Name>
+		</Effect_Component>
+
+		<Effect_Component Type="ShowMesh">
+			<Mesh_Name> Outer_lightning </Mesh_Name>
+		</Effect_Component>
+	</Effect>
+
+	<Effect Name="Novus_Hacker_Lockdown_Area_Self_Effect">
+		<Duration> -1.0 </Duration>
+		<Should_Remove_If_Inactive> true </Should_Remove_If_Inactive>
+		<Effect_Class> Burden </Effect_Class>
+
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Novus_Hacker_Lightning_source_area </Particle_System_Type>
+			<Attachment_Bone_Name> MuzzleA_00 </Attachment_Bone_Name>
+		</Effect_Component>
+
+		<Effect_Component Type="ShowMesh">
+			<Mesh_Name> Outer_lightning </Mesh_Name>
+		</Effect_Component>
+	</Effect>
+	
+
+	<Effect Name="Novus_Hacker_Lockdown_Area_Effect">
+		<Duration> -1.0 </Duration>
+		<Should_Remove_If_Inactive> true </Should_Remove_If_Inactive>
+		<Effect_Class> Burden </Effect_Class>
+		<CategoryMask> CanBeRemovedByAbility</CategoryMask>
+
+		<!-- Stop unit completely -->
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Max_Speed_Mult_Coeff </Attribute>
+			<Modifier_Value> -1.0 </Modifier_Value>
+		</Effect_Component>
+
+		<Effect_Component Type="DisableBehavior">
+			<Behaviors> WALK_LOCOMOTOR, GIANT_WALK_LOCOMOTOR, TURRET </Behaviors>
+		</Effect_Component>
+
+		<Effect_Component Type="Lightning">
+			<Lightning_Effect_Name> Novus_Hacker_Connect_core </Lightning_Effect_Name>
+			<Source_Target_Type> SourceToTarget </Source_Target_Type>
+			<Source_Bone_Name>MuzzleA_00</Source_Bone_Name>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Render_Tint_Red </Attribute>
+			<Modifier_Value> -.4 </Modifier_Value>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Render_Tint_Green </Attribute>
+			<Modifier_Value> -.4 </Modifier_Value>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Render_Tint_Blue </Attribute>
+			<Modifier_Value> -.4 </Modifier_Value>
+		</Effect_Component>
+
+		<Effect_Component Type="Lightning">
+			<Lightning_Effect_Name> Novus_Hacker_Connect_spark </Lightning_Effect_Name>
+			<Source_Target_Type> SourceToTarget </Source_Target_Type>
+			<Source_Bone_Name>MuzzleA_00</Source_Bone_Name>
+		</Effect_Component>
+			
+		<Effect_Component Type="Lightning">
+			<Lightning_Effect_Name> Novus_Hacker_Connect_core </Lightning_Effect_Name>
+			<Source_Target_Type> OriginalTargetToTarget </Source_Target_Type>
+		</Effect_Component>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Novus_Hacker_Lockdown_Particle </Particle_System_Type>
+		</Effect_Component>
+		
+	</Effect>
+
+	<Effect Name="Novus_Hacker_Viral_Bomb_Level_1_Effect">
+		<Duration> 0.5 </Duration>
+		<Effect_Class> NovusVirusBomb </Effect_Class>
+
+		<Effect_Component Type="Lightning">
+			<Lightning_Effect_Name> Hacker_Viral_Bomb_Activate_Lightning </Lightning_Effect_Name>
+			<Source_Target_Type> SourceToOriginalTarget </Source_Target_Type>
+			<Source_Bone_Name>MuzzleA_00</Source_Bone_Name>
+		</Effect_Component>
+
+		<Effect_Component Type="RemoveEffect">
+			<Remove_Effect_Class> NovusVirus </Remove_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="RemoveEffect">
+			<Remove_Effect_Class> NovusVirusAuraGenerators </Remove_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="Damage">
+			<Damage_Type>Damage_Hacker_Viral_Bomb</Damage_Type>
+			<Damage_Amount>220.0</Damage_Amount>
+			<Damage_Percentage>0.0</Damage_Percentage>
+		</Effect_Component>
+
+		<Effect_Component Type="Sound">
+			<Apply_Effect> SFX_Novus_Hacker_Activate </Apply_Effect> 
+		</Effect_Component>
+
+		<Effect_Component Type="ApplyGenerator">
+			<Effect_Generator_Name> Novus_Hacker_Viral_Bomb_Splash_Effect_Generator </Effect_Generator_Name>
+		</Effect_Component>
+
+		<Effect_Component Type="ApplyEffectOnRemove">
+			<Effect_Name> Novus_Hacker_Viral_Bomb_Splash_Effect </Effect_Name>
+			<Apply_On_Expiration_Only> false </Apply_On_Expiration_Only>
+		</Effect_Component>
+
+	</Effect>
+
+	<Effect Name="Novus_Hacker_Viral_Bomb_Splash_Effect">
+		<Duration> 0.5 </Duration>
+		<Effect_Class> NovusVirusBombSplash </Effect_Class>
+
+		<Effect_Component Type="Damage">
+			<Damage_Type>Damage_Hacker_Viral_Bomb</Damage_Type>
+			<Damage_Amount>200.0</Damage_Amount>
+			<Damage_Percentage>0.0f</Damage_Percentage>
+		</Effect_Component>
+
+        <Effect_Component Type="ParticleSystem">
+            <Particle_System_Type> Novus_Large_Explosion_Land_No_Scorch </Particle_System_Type>
+        </Effect_Component>
+        
+	</Effect>
+
+
+
+
+	<Effect Name="NovusHackerFirewallCleanseEnemy">
+		<Duration> 8.0 </Duration>
+		<Effect_Class> Transparent </Effect_Class>
+
+		<Effect_Component Type="RemoveEffect">
+			<Remove_Effect_Class> Cloaking </Remove_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="BlockEffect">
+			<Block_Effect_Class> Cloaking </Block_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="RemoveEffect">
+			<Remove_Effect_Class> Phased </Remove_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="BlockEffect">
+			<Block_Effect_Class> Phased </Block_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="RemoveEffect">
+			<Remove_Effect_Class> AlienConsumption </Remove_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="BlockEffect">
+			<Block_Effect_Class> AlienConsumption </Block_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="RemoveEffect">
+			<Remove_Effect_Class> Mirage </Remove_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="BlockEffect">
+			<Block_Effect_Class> Mirage </Block_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Novus_Hacker_Purge_Enemy_Particle </Particle_System_Type>
+		</Effect_Component>
+
+	</Effect>
+
+	<Effect Name="NovusHackerFirewallCleanseVirus">
+		<Duration> 8.0 </Duration>
+		<Effect_Class> EffectCleanse </Effect_Class>
+		<Extends_Existing_Duration> false </Extends_Existing_Duration>
+		<Allow_Same_Source_Stacking> true </Allow_Same_Source_Stacking>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Novus_Hacker_Purge_Target_Particle </Particle_System_Type>
+		</Effect_Component>
+		
+		<Effect_Component Type="RemoveEffect">
+			<Remove_Effect_Class> NovusVirus </Remove_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="RemoveEffect">
+			<Remove_Effect_Class> NovusVirusAuraGenerators </Remove_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="BlockEffect">
+			<Remove_Effect_Class> NovusVirus </Remove_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="BlockEffect">
+			<Remove_Effect_Class> NovusVirusAuraGenerators </Remove_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="RemoveEffect">
+			<Remove_Effect_Class> ViralControl </Remove_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="BlockEffect">
+			<Block_Effect_Class> ViralControl </Block_Effect_Class>
+		</Effect_Component>
+
+	</Effect>
+
+
+	<Effect Name="NovusHackerFirewallCleanseMindControl">
+		<Duration> 8.0 </Duration>
+		<Effect_Class> ClearMindControl </Effect_Class>
+		<Extends_Existing_Duration> false </Extends_Existing_Duration>
+		<Allow_Same_Source_Stacking> true </Allow_Same_Source_Stacking>
+
+		<Effect_Component Type="RemoveEffect">
+			<Remove_Effect_Class> MindControl </Remove_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="BlockEffect">
+			<Block_Effect_Class> MindControl </Block_Effect_Class>
+		</Effect_Component>
+		
+		<Effect_Component Type="RemoveEffect">
+			<Remove_Effect_Class> MindControlVisual </Remove_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="BlockEffect">
+			<Block_Effect_Class> MindControlVisual </Block_Effect_Class>
+		</Effect_Component>
+
+	</Effect>
+	
+	
+	
+	<Effect Name="NovusHackerFirewallSelfVisualEffect">
+		<Duration> -1.0 </Duration>
+		<Effect_Class> Transparent </Effect_Class>
+		<Extends_Existing_Duration> false </Extends_Existing_Duration>
+		<Allow_Same_Source_Stacking> true </Allow_Same_Source_Stacking>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Novus_Hacker_Purge_Self_Pulse_Particle </Particle_System_Type>
+			<Remove_On_Unapply>Yes</Remove_On_Unapply>
+			<Attachment_Bone_Name> MuzzleA_00 </Attachment_Bone_Name>
+		</Effect_Component>
+
+	</Effect>
+
+
+
+	<!--*************************************************************************************************
+	************************************************************************************************** 
+	************************************************************************************************** 
+	**	
+	**												Blade Trooper
+	**	
+	************************************************************************************************** 
+	************************************************************************************************** 
+	************************************************************************************************** -->
+
+   <Effect Name="NovusReflexTrooperSpawnClonesUpgrade">
+      <Duration> -1 </Duration>
+      <Effect_Class> Transparent </Effect_Class>
+      <Extends_Existing_Duration> true </Extends_Existing_Duration>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Effect_Duration_Add_Coeff_1 </Attribute>
+         <!-- Increase their expiration seconds by 60%.-->
+         <Modifier_Value> 0.6 </Modifier_Value>
+      </Effect_Component>
+   </Effect>
+
+   <!--=================================================================================================
+	== NovusReflexTrooperCloakingEffect: cloak for the novus reflex trooper
+	================================================================================================== -->
+
+	<Effect Name="NovusReflexTrooperCloakingEffect">
+		<Duration> -1 </Duration>
+		<Effect_Class> Cloaking </Effect_Class>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+
+		<Effect_Component Type="Cloak">
+			<Break_Mask> Damage | Attack | Ability </Break_Mask>
+		</Effect_Component>
+
+	</Effect>
+
+	<!--=================================================================================================
+	== ReflexTrooperEnergyBladeEffect: Energy blade for the reflex trooper
+	================================================================================================== -->
+	<Effect Name="ReflexTrooperEnergyBladeEffect">
+		<Duration> 1 </Duration>
+		<Effect_Class> Transparent </Effect_Class>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Blade_Trooper_Slash_Hit_Particle </Particle_System_Type>
+		</Effect_Component>
+
+	</Effect>
+
+	<Effect Name="ReflexTrooperEnergyBladeDamage">
+		<Duration> .10 </Duration>
+		<Effect_Class> ElectricityDamage </Effect_Class>
+
+		<Effect_Component Type="Damage">
+			<Damage_Type> Damage_Novus_Reflex_Melee </Damage_Type>
+			<Damage_Amount> 12.0 </Damage_Amount>
+		</Effect_Component>
+
+	</Effect>
+
+   <Effect Name="NovusReflexTrooperSpawnClonesVisualEffect">
+      <Duration> .10 </Duration>
+      <Effect_Class> Transparent </Effect_Class>
+      
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> Novus_Reflex_Clone_Particle </Particle_System_Type>
+      </Effect_Component>
+
+      <!--<Effect_Component Type="CreateObject">
+         <Create_Object_Type> Novus_Reflex_Clone_Particle </Create_Object_Type>
+         <Destroy_On_Remove> true </Destroy_On_Remove>
+         <Position_Type> AttachToSource </Position_Type>
+         <Attachment_Bone_Name> ROOT </Attachment_Bone_Name>
+         <Use_Source_Player_ID> true </Use_Source_Player_ID>
+      </Effect_Component>-->
+
+
+   </Effect>
+
+   
+   <Effect Name="ReflexBoostEffect">
+		<Duration> -1 </Duration>
+		<Effect_Class> SpeedBoost </Effect_Class>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Max_Speed_Mult_Coeff </Attribute>
+			<Modifier_Value> 1.6 </Modifier_Value>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Animation_Subindex_Override </Attribute>
+			<Modifier_Integer_Value> 1 </Modifier_Integer_Value>
+			<Modifier_Type> Replacement </Modifier_Type>
+		</Effect_Component>
+
+	</Effect>
+
+	<!-- Trooper Clone Death Dissolve -->
+	
+	<Effect Name="DissolveNovusReflexClone">
+		<Duration> -1.0 </Duration>
+		<Effect_Class> Transparent </Effect_Class>
+
+		<Effect_Component Type="Dissolve">
+			<Dissolve_Effect_Name>Novus_Construction_Dissolve_Beacon</Dissolve_Effect_Name>
+			<Based_On>InverseTimer</Based_On>
+			<Duration>2.0</Duration>
+		</Effect_Component>
+	</Effect>
+	
+	
+	
+	
+	<!--*************************************************************************************************
+	************************************************************************************************** 
+	************************************************************************************************** 
+	**	
+	**												Robotic Infantry
+	**	
+	************************************************************************************************** 
+	************************************************************************************************** 
+	************************************************************************************************** -->
+	<!--=================================================================================================
+	== RoboticInfantryCaptureEffect: Capture object
+	================================================================================================== -->
+
+	<Effect Name="RoboticInfantryCaptureEffect">
+		<Duration> -1.0 </Duration>
+		<Effect_Class> CaptureObject </Effect_Class>
+
+		<Effect_Component Type="Capture">
+			<Capture_Modifier> 1.0 </Capture_Modifier>
+			<Post_Capture_SFX_Event> GUI_NEUTRAL_STRUCTURE_CAPTURED </Post_Capture_SFX_Event>
+		</Effect_Component>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Novus_Hacker_Turret_Hack_Particle </Particle_System_Type>
+		</Effect_Component>
+
+		<Effect_Component Type="Lightning">
+			<Lightning_Effect_Name> Novus_Ohm_Capture_Beam </Lightning_Effect_Name>
+			<Source_Target_Type> SourceToTarget </Source_Target_Type>
+			<Source_Bone_Name>MuzzleA_01</Source_Bone_Name>
+		</Effect_Component>
+
+	</Effect>
+
+	<!--=================================================================================================
+	== RoboticInfantryCaptureSelfVisualEffect: capture effect on the source
+	================================================================================================== -->
+
+	<Effect Name="RoboticInfantryCaptureSelfVisualEffect">
+		<Duration> -1.0 </Duration>
+		<Effect_Class> Transparent </Effect_Class>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Novus_Hacker_Turret_Hack_Particle </Particle_System_Type>
+		</Effect_Component>
+
+	</Effect>
+
+
+	<!--*************************************************************************************************
+	************************************************************************************************** 
+	************************************************************************************************** 
+	**	
+	**												Variant
+	**	
+	************************************************************************************************** 
+	************************************************************************************************** 
+	************************************************************************************************** -->
+<!-- OKSANA: Novus Variant's mirage field -->
+	<Effect Name="NovusMirageEffect">
+		<Duration> 10.0 </Duration>
+		<Effect_Class> Mirage </Effect_Class>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+
+		<Effect_Component Type="Mirage">
+			<Break_Mask> NonIdle | Movement | Ability | Attack </Break_Mask>
+		</Effect_Component>
+
+		<Effect_Component Type="Sound">
+			<Apply_Effect> SFX_Novus_Mimic </Apply_Effect> <!-- FRANK TO REPLACE -->
+		</Effect_Component>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Variant_Mirage_Field_Effect </Particle_System_Type>
+		</Effect_Component>
+
+
+      <Effect_Component Type="ApplyEffectOnRemove">
+         <Effect_Name> NovusRemoveMirageEffect </Effect_Name>
+         <Apply_On_Expiration_Only> false </Apply_On_Expiration_Only>
+      </Effect_Component>
+	</Effect>
+
+
+   <Effect Name="NovusRemoveMirageEffect">
+      <Duration> 0.1 </Duration>
+      <Effect_Class> RemoveMirage </Effect_Class>
+    
+		<Effect_Component Type="Sound">
+			<Apply_Effect> SFX_Novus_Mimic </Apply_Effect> <!-- FRANK TO REPLACE -->
+		</Effect_Component>      
+   </Effect>
+
+
+   <Effect Name="NovusBlockMirageEffect">
+		<Duration> 10.0 </Duration>
+		<Effect_Class> BlockMirage </Effect_Class>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+
+		<Effect_Component Type="BlockEffect">
+			<Block_Effect_Class> Mirage </Block_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="RemoveEffect">
+			<Remove_Effect_Class> Mirage </Remove_Effect_Class>
+		</Effect_Component>
+	</Effect>
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- OKSANA: Novus Variant's toggle weapons effect -->
+	<Effect Name="NovusToggleWeaponsEffect">
+		<Effect_Class> Transparent </Effect_Class>
+		<Duration> -1.0 </Duration>
+
+		<Effect_Component Type="DisableBehavior">
+			<Behaviors> WEAPON, TARGETING </Behaviors>
+		</Effect_Component>
+	</Effect>
+
+	<Effect Name="GlobalVisualEffect">
+		<Effect_Class> Transparent </Effect_Class>
+		<Duration> -1.0 </Duration>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Singularity_Lightning_Bolt_Strike </Particle_System_Type>
+		</Effect_Component>
+
+	</Effect>
+
+</Effects>

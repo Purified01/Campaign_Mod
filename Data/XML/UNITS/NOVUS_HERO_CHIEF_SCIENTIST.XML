@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<NOVUS_HERO_Chief_Scientist_XML>
+
+	<X12_Novus_Heroes Name="Novus_Hero_Chief_Scientist_PIP_Only">
+	
+		<Variant_Of_Existing_Type>Marker_Generic</Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+		<CategoryMask>Untargetable</CategoryMask>
+		
+		<Affiliation>Novus</Affiliation>
+		
+		<BehaviorType Name="LuaScriptBehaviorType">
+			<Lua_Global_Behaviors> HeroIcon </Lua_Global_Behaviors>
+			<Lua_Land_Behaviors> HeroIcon </Lua_Land_Behaviors>
+			
+			<Lua_Script_Data>
+            HERO_ICON = {}
+            HERO_ICON.PRIORITY = 1
+            HERO_ICON.TEXTURE = "icon_hero_tech.tga"
+            NOT_TACTICALLY_PRESENT = true
+            IS_SCIENTIST = true
+            IS_COMM_OFFICER = false
+            DefensiveAI = false
+         </Lua_Script_Data>
+			
+		</BehaviorType>
+		
+	
+		<BehaviorType Name="EncyclopediaBehaviorType">
+			<Icon_Name>icon_hero_tech.tga</Icon_Name>
+		</BehaviorType></X12_Novus_Heroes>
+
+</NOVUS_HERO_Chief_Scientist_XML>
+

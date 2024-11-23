@@ -1,0 +1,1026 @@
+<?xml version="1.0"?>
+
+<SFXEvents>
+
+
+	<SFXEvent Name="Unit_Select_Novus_Corruptor">
+		<Use_Preset>Preset_UR</Use_Preset>
+ 		<Samples>Novus_Corruptor_Select_01.wav Novus_Corruptor_Select_02.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Novus_Corruptor </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Move_Novus_Corruptor">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>Novus_Corruptor_Move_01.wav Novus_Corruptor_Move_02.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Novus_Corruptor </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_Novus_Corruptor">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>Novus_Corruptor_Attack_01.wav Novus_Corruptor_Attack_02.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Novus_Corruptor </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Novus_Infantry">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_ROB0101_ENG.wav U000_ROB0102_ENG.wav U000_ROB0103_ENG.wav U000_ROB0104_ENG.wav U000_ROB0105_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_ROB_SELECT_1, TEXT_SFX_ROB_SELECT_2, TEXT_SFX_ROB_SELECT_3, TEXT_SFX_ROB_SELECT_4, TEXT_SFX_ROB_SELECT_5</Text_ID>       
+		<Overlap_Test> Unit_Novus_Infantry </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_A_Novus_Infantry">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_ROB0201_ENG.wav U000_ROB0202_ENG.wav U000_ROB0203_ENG.wav U000_ROB0204_ENG.wav U000_ROB0205_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_ROB_ATTACK_A_1, TEXT_SFX_ROB_ATTACK_A_2, TEXT_SFX_ROB_ATTACK_A_3, TEXT_SFX_ROB_ATTACK_A_4, TEXT_SFX_ROB_ATTACK_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Novus_Infantry </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_B_Novus_Infantry">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_ROB0301_ENG.wav U000_ROB0302_ENG.wav U000_ROB0303_ENG.wav U000_ROB0304_ENG.wav U000_ROB0305_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_ROB_ATTACK_B_1, TEXT_SFX_ROB_ATTACK_B_2, TEXT_SFX_ROB_ATTACK_B_3, TEXT_SFX_ROB_ATTACK_B_4, TEXT_SFX_ROB_ATTACK_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Novus_Infantry </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_A_Novus_Infantry">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_ROB0401_ENG.wav U000_ROB0402_ENG.wav U000_ROB0403_ENG.wav U000_ROB0404_ENG.wav U000_ROB0405_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_ROB_MOVE_A_1, TEXT_SFX_ROB_MOVE_A_2, TEXT_SFX_ROB_MOVE_A_3, TEXT_SFX_ROB_MOVE_A_4, TEXT_SFX_ROB_MOVE_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Novus_Infantry </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_B_Novus_Infantry">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_ROB0501_ENG.wav U000_ROB0502_ENG.wav U000_ROB0503_ENG.wav U000_ROB0504_ENG.wav U000_ROB0505_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_ROB_MOVE_B_1, TEXT_SFX_ROB_MOVE_B_2, TEXT_SFX_ROB_MOVE_B_3, TEXT_SFX_ROB_MOVE_B_4, TEXT_SFX_ROB_MOVE_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Novus_Infantry </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_ABILITY_A_Novus_Infantry">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_ROB0601_ENG.wav U000_ROB0602_ENG.wav U000_ROB0603_ENG.wav U000_ROB0604_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_ROB_ABILITY_A_1, TEXT_SFX_ROB_ABILITY_A_2, TEXT_SFX_ROB_ABILITY_A_3, TEXT_SFX_ROB_ABILITY_A_4</Text_ID>			     
+		<Overlap_Test> Unit_Novus_Infantry </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Novus_Constructor">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_CON0101_ENG.wav U000_CON0102_ENG.wav U000_CON0103_ENG.wav U000_CON0104_ENG.wav U000_CON0105_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_CON_SELECT_1, TEXT_SFX_CON_SELECT_2, TEXT_SFX_CON_SELECT_3, TEXT_SFX_CON_SELECT_4, TEXT_SFX_CON_SELECT_5</Text_ID>       
+		<Overlap_Test> Unit_Novus_Constructor </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_A_Novus_Constructor">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_CON0201_ENG.wav U000_CON0202_ENG.wav U000_CON0203_ENG.wav U000_CON0204_ENG.wav U000_CON0205_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_CON_ATTACK_A_1, TEXT_SFX_CON_ATTACK_A_2, TEXT_SFX_CON_ATTACK_A_3, TEXT_SFX_CON_ATTACK_A_4, TEXT_SFX_CON_ATTACK_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Novus_Constructor </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_B_Novus_Constructor">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_CON0301_ENG.wav U000_CON0302_ENG.wav U000_CON0303_ENG.wav U000_CON0304_ENG.wav U000_CON0305_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_CON_ATTACK_B_1, TEXT_SFX_CON_ATTACK_B_2, TEXT_SFX_CON_ATTACK_B_3, TEXT_SFX_CON_ATTACK_B_4, TEXT_SFX_CON_ATTACK_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Novus_Constructor </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_A_Novus_Constructor">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_CON0401_ENG.wav U000_CON0402_ENG.wav U000_CON0403_ENG.wav U000_CON0404_ENG.wav U000_CON0405_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_CON_MOVE_A_1, TEXT_SFX_CON_MOVE_A_2, TEXT_SFX_CON_MOVE_A_3, TEXT_SFX_CON_MOVE_A_4, TEXT_SFX_CON_MOVE_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Novus_Constructor </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_B_Novus_Constructor">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_CON0501_ENG.wav U000_CON0502_ENG.wav U000_CON0503_ENG.wav U000_CON0504_ENG.wav U000_CON0505_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_CON_MOVE_B_1, TEXT_SFX_CON_MOVE_B_2, TEXT_SFX_CON_MOVE_B_3, TEXT_SFX_CON_MOVE_B_4, TEXT_SFX_CON_MOVE_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Novus_Constructor </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_ABILITY_A_Novus_Constructor">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_CON0601_ENG.wav U000_CON0602_ENG.wav U000_CON0603_ENG.wav U000_CON0604_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_CON_ABILITY_A_1, TEXT_SFX_CON_ABILITY_A_2, TEXT_SFX_CON_ABILITY_A_3, TEXT_SFX_CON_ABILITY_A_4</Text_ID>			     
+		<Overlap_Test> Unit_Novus_Constructor </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_ABILITY_B_Novus_Constructor">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_CON0701_ENG.wav U000_CON0702_ENG.wav U000_CON0703_ENG.wav U000_CON0704_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_CON_ABILITY_B_1, TEXT_SFX_CON_ABILITY_B_2, TEXT_SFX_CON_ABILITY_B_3, TEXT_SFX_CON_ABILITY_B_4</Text_ID>			     
+		<Overlap_Test> Unit_Novus_Constructor </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_ABILITY_C_Novus_Constructor">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_CON0801_ENG.wav U000_CON0802_ENG.wav U000_CON0803_ENG.wav U000_CON0804_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_CON_ABILITY_C_1, TEXT_SFX_CON_ABILITY_C_2, TEXT_SFX_CON_ABILITY_C_3, TEXT_SFX_CON_ABILITY_C_4</Text_ID>			     
+		<Overlap_Test> Unit_Novus_Constructor </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+	<SFXEvent Name="Unit_Select_Novus_Antimatter_Tank">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_ANT0101_ENG.wav U000_ANT0102_ENG.wav U000_ANT0103_ENG.wav U000_ANT0104_ENG.wav U000_ANT0105_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_ANT_SELECT_1, TEXT_SFX_ANT_SELECT_2, TEXT_SFX_ANT_SELECT_3, TEXT_SFX_ANT_SELECT_4, TEXT_SFX_ANT_SELECT_5</Text_ID>       
+		<Overlap_Test> Unit_Novus_Antimatter_Tank </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_A_Novus_Antimatter_Tank">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_ANT0201_ENG.wav U000_ANT0202_ENG.wav U000_ANT0203_ENG.wav U000_ANT0204_ENG.wav U000_ANT0205_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_ANT_ATTACK_A_1, TEXT_SFX_ANT_ATTACK_A_2, TEXT_SFX_ANT_ATTACK_A_3, TEXT_SFX_ANT_ATTACK_A_4, TEXT_SFX_ANT_ATTACK_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Novus_Antimatter_Tank </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_B_Novus_Antimatter_Tank">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_ANT0301_ENG.wav U000_ANT0302_ENG.wav U000_ANT0303_ENG.wav U000_ANT0304_ENG.wav U000_ANT0305_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_ANT_ATTACK_B_1, TEXT_SFX_ANT_ATTACK_B_2, TEXT_SFX_ANT_ATTACK_B_3, TEXT_SFX_ANT_ATTACK_B_4, TEXT_SFX_ANT_ATTACK_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Novus_Antimatter_Tank </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_A_Novus_Antimatter_Tank">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_ANT0401_ENG.wav U000_ANT0402_ENG.wav U000_ANT0403_ENG.wav U000_ANT0404_ENG.wav U000_ANT0405_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_ANT_MOVE_A_1, TEXT_SFX_ANT_MOVE_A_2, TEXT_SFX_ANT_MOVE_A_3, TEXT_SFX_ANT_MOVE_A_4, TEXT_SFX_ANT_MOVE_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Novus_Antimatter_Tank </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_B_Novus_Antimatter_Tank">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_ANT0501_ENG.wav U000_ANT0502_ENG.wav U000_ANT0503_ENG.wav U000_ANT0504_ENG.wav U000_ANT0505_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_ANT_MOVE_B_1, TEXT_SFX_ANT_MOVE_B_2, TEXT_SFX_ANT_MOVE_B_3, TEXT_SFX_ANT_MOVE_B_4, TEXT_SFX_ANT_MOVE_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Novus_Antimatter_Tank </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Novus_Amplifier">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_AMP0101_ENG.wav U000_AMP0102_ENG.wav U000_AMP0103_ENG.wav U000_AMP0104_ENG.wav U000_AMP0105_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_AMP_SELECT_1, TEXT_SFX_AMP_SELECT_2, TEXT_SFX_AMP_SELECT_3, TEXT_SFX_AMP_SELECT_4, TEXT_SFX_AMP_SELECT_5</Text_ID>       
+		<Overlap_Test> Unit_Novus_Amplifier </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_A_Novus_Amplifier">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_AMP0201_ENG.wav U000_AMP0202_ENG.wav U000_AMP0203_ENG.wav U000_AMP0204_ENG.wav U000_AMP0205_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_AMP_ATTACK_A_1, TEXT_SFX_AMP_ATTACK_A_2, TEXT_SFX_AMP_ATTACK_A_3, TEXT_SFX_AMP_ATTACK_A_4, TEXT_SFX_AMP_ATTACK_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Novus_Amplifier </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_B_Novus_Amplifier">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_AMP0301_ENG.wav U000_AMP0302_ENG.wav U000_AMP0303_ENG.wav U000_AMP0304_ENG.wav U000_AMP0305_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_AMP_ATTACK_B_1, TEXT_SFX_AMP_ATTACK_B_2, TEXT_SFX_AMP_ATTACK_B_3, TEXT_SFX_AMP_ATTACK_B_4, TEXT_SFX_AMP_ATTACK_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Novus_Amplifier </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_A_Novus_Amplifier">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_AMP0401_ENG.wav U000_AMP0402_ENG.wav U000_AMP0403_ENG.wav U000_AMP0404_ENG.wav U000_AMP0405_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_AMP_MOVE_A_1, TEXT_SFX_AMP_MOVE_A_2, TEXT_SFX_AMP_MOVE_A_3, TEXT_SFX_AMP_MOVE_A_4, TEXT_SFX_AMP_MOVE_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Novus_Amplifier </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_B_Novus_Amplifier">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_AMP0501_ENG.wav U000_AMP0502_ENG.wav U000_AMP0503_ENG.wav U000_AMP0504_ENG.wav U000_AMP0505_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_AMP_MOVE_B_1, TEXT_SFX_AMP_MOVE_B_2, TEXT_SFX_AMP_MOVE_B_3, TEXT_SFX_AMP_MOVE_B_4, TEXT_SFX_AMP_MOVE_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Novus_Amplifier </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_ABILITY_A_Novus_Amplifier">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_AMP0601_ENG.wav U000_AMP0602_ENG.wav U000_AMP0603_ENG.wav U000_AMP0604_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_AMP_ABILITY_A_1, TEXT_SFX_AMP_ABILITY_A_2, TEXT_SFX_AMP_ABILITY_A_3, TEXT_SFX_AMP_ABILITY_A_4</Text_ID>			     
+		<Overlap_Test> Unit_Novus_Amplifier </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Novus_Reflex_Trooper">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_RFT0101_ENG.wav U000_RFT0102_ENG.wav U000_RFT0104_ENG.wav U000_RFT0105_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_RFT_SELECT_1, TEXT_SFX_RFT_SELECT_2, TEXT_SFX_RFT_SELECT_4, TEXT_SFX_RFT_SELECT_5</Text_ID>       
+		<Overlap_Test> Unit_Novus_Reflex_Trooper </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_A_Novus_Reflex_Trooper">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_RFT0201_ENG.wav U000_RFT0202_ENG.wav U000_RFT0203_ENG.wav U000_RFT0204_ENG.wav U000_RFT0205_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_RFT_ATTACK_A_1, TEXT_SFX_RFT_ATTACK_A_2, TEXT_SFX_RFT_ATTACK_A_3, TEXT_SFX_RFT_ATTACK_A_4, TEXT_SFX_RFT_ATTACK_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Novus_Reflex_Trooper </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_B_Novus_Reflex_Trooper">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_RFT0301_ENG.wav U000_RFT0302_ENG.wav U000_RFT0303_ENG.wav U000_RFT0304_ENG.wav U000_RFT0305_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_RFT_ATTACK_B_1, TEXT_SFX_RFT_ATTACK_B_2, TEXT_SFX_RFT_ATTACK_B_3, TEXT_SFX_RFT_ATTACK_B_4, TEXT_SFX_RFT_ATTACK_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Novus_Reflex_Trooper </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_A_Novus_Reflex_Trooper">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_RFT0401_ENG.wav U000_RFT0402_ENG.wav U000_RFT0403_ENG.wav U000_RFT0404_ENG.wav U000_RFT0405_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_RFT_MOVE_A_1, TEXT_SFX_RFT_MOVE_A_2, TEXT_SFX_RFT_MOVE_A_3, TEXT_SFX_RFT_MOVE_A_4, TEXT_SFX_RFT_MOVE_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Novus_Reflex_Trooper </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_B_Novus_Reflex_Trooper">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_RFT0501_ENG.wav U000_RFT0502_ENG.wav U000_RFT0503_ENG.wav U000_RFT0504_ENG.wav U000_RFT0505_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_RFT_MOVE_B_1, TEXT_SFX_RFT_MOVE_B_2, TEXT_SFX_RFT_MOVE_B_3, TEXT_SFX_RFT_MOVE_B_4, TEXT_SFX_RFT_MOVE_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Novus_Reflex_Trooper </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_ABILITY_A_Novus_Reflex_Trooper">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_RFT0601_ENG.wav U000_RFT0602_ENG.wav U000_RFT0603_ENG.wav U000_RFT0604_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_RFT_ABILITY_A_1, TEXT_SFX_RFT_ABILITY_A_2, TEXT_SFX_RFT_ABILITY_A_3, TEXT_SFX_RFT_ABILITY_A_4</Text_ID>			     
+		<Overlap_Test> Unit_Novus_Reflex_Trooper </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Novus_Hacker">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_HAC0101_ENG.wav U000_HAC0102_ENG.wav U000_HAC0103_ENG.wav U000_HAC0104_ENG.wav U000_HAC0105_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_HAC_SELECT_1, TEXT_SFX_HAC_SELECT_2, TEXT_SFX_HAC_SELECT_3, TEXT_SFX_HAC_SELECT_4, TEXT_SFX_HAC_SELECT_5</Text_ID>       
+		<Overlap_Test> Unit_Novus_Hacker </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_A_Novus_Hacker">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_HAC0201_ENG.wav U000_HAC0202_ENG.wav U000_HAC0203_ENG.wav U000_HAC0204_ENG.wav U000_HAC0205_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_HAC_ATTACK_A_1, TEXT_SFX_HAC_ATTACK_A_2, TEXT_SFX_HAC_ATTACK_A_3, TEXT_SFX_HAC_ATTACK_A_4, TEXT_SFX_HAC_ATTACK_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Novus_Hacker </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_B_Novus_Hacker">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_HAC0301_ENG.wav U000_HAC0302_ENG.wav U000_HAC0303_ENG.wav U000_HAC0304_ENG.wav U000_HAC0305_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_HAC_ATTACK_B_1, TEXT_SFX_HAC_ATTACK_B_2, TEXT_SFX_HAC_ATTACK_B_3, TEXT_SFX_HAC_ATTACK_B_4, TEXT_SFX_HAC_ATTACK_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Novus_Hacker </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_A_Novus_Hacker">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_HAC0401_ENG.wav U000_HAC0402_ENG.wav U000_HAC0403_ENG.wav U000_HAC0404_ENG.wav U000_HAC0405_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_HAC_MOVE_A_1, TEXT_SFX_HAC_MOVE_A_2, TEXT_SFX_HAC_MOVE_A_3, TEXT_SFX_HAC_MOVE_A_4, TEXT_SFX_HAC_MOVE_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Novus_Hacker </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_B_Novus_Hacker">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_HAC0501_ENG.wav U000_HAC0502_ENG.wav U000_HAC0503_ENG.wav U000_HAC0504_ENG.wav U000_HAC0505_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_HAC_MOVE_B_1, TEXT_SFX_HAC_MOVE_B_2, TEXT_SFX_HAC_MOVE_B_3, TEXT_SFX_HAC_MOVE_B_4, TEXT_SFX_HAC_MOVE_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Novus_Hacker </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_ABILITY_A_Novus_Hacker">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_HAC0601_ENG.wav U000_HAC0602_ENG.wav U000_HAC0603_ENG.wav U000_HAC0604_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_HAC_ABILITY_A_1, TEXT_SFX_HAC_ABILITY_A_2, TEXT_SFX_HAC_ABILITY_A_3, TEXT_SFX_HAC_ABILITY_A_4</Text_ID>			     
+		<Overlap_Test> Unit_Novus_Hacker </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Novus_Field_Inverter">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_FIE0101_ENG.wav U000_FIE0102_ENG.wav U000_FIE0103_ENG.wav U000_FIE0104_ENG.wav U000_FIE0105_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_FIE_SELECT_1, TEXT_SFX_FIE_SELECT_2, TEXT_SFX_FIE_SELECT_3, TEXT_SFX_FIE_SELECT_4, TEXT_SFX_FIE_SELECT_5</Text_ID>       
+		<Overlap_Test> Unit_Novus_Field_Inverter </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_A_Novus_Field_Inverter">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_FIE0201_ENG.wav U000_FIE0202_ENG.wav U000_FIE0203_ENG.wav U000_FIE0204_ENG.wav U000_FIE0205_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_FIE_ATTACK_A_1, TEXT_SFX_FIE_ATTACK_A_2, TEXT_SFX_FIE_ATTACK_A_3, TEXT_SFX_FIE_ATTACK_A_4, TEXT_SFX_FIE_ATTACK_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Novus_Field_Inverter </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_B_Novus_Field_Inverter">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_FIE0301_ENG.wav U000_FIE0302_ENG.wav U000_FIE0303_ENG.wav U000_FIE0304_ENG.wav U000_FIE0305_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_FIE_ATTACK_B_1, TEXT_SFX_FIE_ATTACK_B_2, TEXT_SFX_FIE_ATTACK_B_3, TEXT_SFX_FIE_ATTACK_B_4, TEXT_SFX_FIE_ATTACK_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Novus_Field_Inverter </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_A_Novus_Field_Inverter">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_FIE0401_ENG.wav U000_FIE0402_ENG.wav U000_FIE0403_ENG.wav U000_FIE0404_ENG.wav U000_FIE0405_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_FIE_MOVE_A_1, TEXT_SFX_FIE_MOVE_A_2, TEXT_SFX_FIE_MOVE_A_3, TEXT_SFX_FIE_MOVE_A_4, TEXT_SFX_FIE_MOVE_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Novus_Field_Inverter </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_B_Novus_Field_Inverter">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_FIE0501_ENG.wav U000_FIE0502_ENG.wav U000_FIE0503_ENG.wav U000_FIE0504_ENG.wav U000_FIE0505_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_FIE_MOVE_B_1, TEXT_SFX_FIE_MOVE_B_2, TEXT_SFX_FIE_MOVE_B_3, TEXT_SFX_FIE_MOVE_B_4, TEXT_SFX_FIE_MOVE_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Novus_Field_Inverter </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_ABILITY_A_Novus_Field_Inverter">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_FIE0601_ENG.wav U000_FIE0602_ENG.wav U000_FIE0603_ENG.wav U000_FIE0604_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_FIE_ABILITY_A_1, TEXT_SFX_FIE_ABILITY_A_2, TEXT_SFX_FIE_ABILITY_A_3, TEXT_SFX_FIE_ABILITY_A_4</Text_ID>			     
+		<Overlap_Test> Unit_Novus_Field_Inverter </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Novus_Variant">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_VAR0101_ENG.wav U000_VAR0102_ENG.wav U000_VAR0103_ENG.wav U000_VAR0104_ENG.wav U000_VAR0105_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_VAR_SELECT_1, TEXT_SFX_VAR_SELECT_2, TEXT_SFX_VAR_SELECT_3, TEXT_SFX_VAR_SELECT_4, TEXT_SFX_VAR_SELECT_5</Text_ID>       
+		<Overlap_Test> Unit_Novus_Variant </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_A_Novus_Variant">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_VAR0201_ENG.wav U000_VAR0202_ENG.wav U000_VAR0203_ENG.wav U000_VAR0204_ENG.wav U000_VAR0205_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_VAR_ATTACK_A_1, TEXT_SFX_VAR_ATTACK_A_2, TEXT_SFX_VAR_ATTACK_A_3, TEXT_SFX_VAR_ATTACK_A_4, TEXT_SFX_VAR_ATTACK_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Novus_Variant </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_B_Novus_Variant">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_VAR0301_ENG.wav U000_VAR0302_ENG.wav U000_VAR0303_ENG.wav U000_VAR0304_ENG.wav U000_VAR0305_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_VAR_ATTACK_B_1, TEXT_SFX_VAR_ATTACK_B_2, TEXT_SFX_VAR_ATTACK_B_3, TEXT_SFX_VAR_ATTACK_B_4, TEXT_SFX_VAR_ATTACK_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Novus_Variant </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_A_Novus_Variant">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_VAR0401_ENG.wav U000_VAR0402_ENG.wav U000_VAR0403_ENG.wav U000_VAR0404_ENG.wav U000_VAR0405_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_VAR_MOVE_A_1, TEXT_SFX_VAR_MOVE_A_2, TEXT_SFX_VAR_MOVE_A_3, TEXT_SFX_VAR_MOVE_A_4, TEXT_SFX_VAR_MOVE_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Novus_Variant </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_B_Novus_Variant">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_VAR0501_ENG.wav U000_VAR0502_ENG.wav U000_VAR0503_ENG.wav U000_VAR0504_ENG.wav U000_VAR0505_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_VAR_MOVE_B_1, TEXT_SFX_VAR_MOVE_B_2, TEXT_SFX_VAR_MOVE_B_3, TEXT_SFX_VAR_MOVE_B_4, TEXT_SFX_VAR_MOVE_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Novus_Variant </Overlap_Test>
+	</SFXEvent>
+<!--
+	<SFXEvent Name="Unit_ABILITY_A_Novus_Variant">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_VAR0601_ENG.wav U000_VAR0602_ENG.wav U000_VAR0603_ENG.wav U000_VAR0604_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID />		     
+		<Overlap_Test> Unit_Novus_Variant </Overlap_Test>
+	</SFXEvent>
+-->
+
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Novus_Founder">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_FOU0101_ENG.wav U000_FOU0102_ENG.wav U000_FOU0103_ENG.wav U000_FOU0104_ENG.wav U000_FOU0105_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_FOU_SELECT_1, TEXT_SFX_FOU_SELECT_2, TEXT_SFX_FOU_SELECT_3, TEXT_SFX_FOU_SELECT_4, TEXT_SFX_FOU_SELECT_5</Text_ID>       
+		<Overlap_Test> Unit_Novus_Founder </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_A_Novus_Founder">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_FOU0201_ENG.wav U000_FOU0202_ENG.wav U000_FOU0203_ENG.wav U000_FOU0204_ENG.wav U000_FOU0205_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_FOU_ATTACK_A_1, TEXT_SFX_FOU_ATTACK_A_2, TEXT_SFX_FOU_ATTACK_A_3, TEXT_SFX_FOU_ATTACK_A_4, TEXT_SFX_FOU_ATTACK_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Novus_Founder </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_B_Novus_Founder">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_FOU0301_ENG.wav U000_FOU0302_ENG.wav U000_FOU0303_ENG.wav U000_FOU0304_ENG.wav U000_FOU0305_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_FOU_ATTACK_B_1, TEXT_SFX_FOU_ATTACK_B_2, TEXT_SFX_FOU_ATTACK_B_3, TEXT_SFX_FOU_ATTACK_B_4, TEXT_SFX_FOU_ATTACK_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Novus_Founder </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_A_Novus_Founder">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_FOU0401_ENG.wav U000_FOU0402_ENG.wav U000_FOU0403_ENG.wav U000_FOU0404_ENG.wav U000_FOU0405_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_FOU_MOVE_A_1, TEXT_SFX_FOU_MOVE_A_2, TEXT_SFX_FOU_MOVE_A_3, TEXT_SFX_FOU_MOVE_A_4, TEXT_SFX_FOU_MOVE_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Novus_Founder </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_B_Novus_Founder">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_FOU0501_ENG.wav U000_FOU0502_ENG.wav U000_FOU0503_ENG.wav U000_FOU0504_ENG.wav U000_FOU0505_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_FOU_MOVE_B_1, TEXT_SFX_FOU_MOVE_B_2, TEXT_SFX_FOU_MOVE_B_3, TEXT_SFX_FOU_MOVE_B_4, TEXT_SFX_FOU_MOVE_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Novus_Founder </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_ABILITY_A_Novus_Founder">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_FOU0601_ENG.wav U000_FOU0602_ENG.wav U000_FOU0603_ENG.wav U000_FOU0604_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_FOU_ABILITY_A_1, TEXT_SFX_FOU_ABILITY_A_2, TEXT_SFX_FOU_ABILITY_A_3, TEXT_SFX_FOU_ABILITY_A_4</Text_ID>			     
+		<Overlap_Test> Unit_Novus_Founder </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_ABILITY_B_Novus_Founder">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_FOU0701_ENG.wav U000_FOU0702_ENG.wav U000_FOU0703_ENG.wav U000_FOU0704_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_FOU_ABILITY_B_1, TEXT_SFX_FOU_ABILITY_B_2, TEXT_SFX_FOU_ABILITY_B_3, TEXT_SFX_FOU_ABILITY_B_4</Text_ID>			     
+		<Overlap_Test> Unit_Novus_Founder </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Ability_C_Novus_Founder">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_FOU0801_ENG.wav U000_FOU0802_ENG.wav U000_FOU0803_ENG.wav U000_FOU0804_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_FOU_ABILITY_C_1, TEXT_SFX_FOU_ABILITY_C_2, TEXT_SFX_FOU_ABILITY_C_3, TEXT_SFX_FOU_ABILITY_C_4</Text_ID>
+		<Overlap_Test> Unit_Novus_Founder </Overlap_Test>
+	</SFXEvent>
+
+
+	<SFXEvent Name="Unit_RETREAT_CALL_Novus_Founder">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_FOU1001_ENG.wav U000_FOU1002_ENG.wav U000_FOU1003_ENG.wav U000_FOU1004_ENG.wav U000_FOU1005_ENG.wav </Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_FOU_RETREAT_CALL_1, TEXT_SFX_FOU_RETREAT_CALL_2, TEXT_SFX_FOU_RETREAT_CALL_3, TEXT_SFX_FOU_RETREAT_CALL_4, TEXT_SFX_FOU_RETREAT_CALL_5</Text_ID>
+		<Overlap_Test> Unit_Novus_Founder </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_TAUNT_Novus_Founder">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_FOU1101_ENG.wav U000_FOU1102_ENG.wav U000_FOU1103_ENG.wav U000_FOU1104_ENG.wav U000_FOU1105_ENG.wav </Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_FOU_TAUNT_1, TEXT_SFX_FOU_TAUNT_2, TEXT_SFX_FOU_TAUNT_3, TEXT_SFX_FOU_TAUNT_4, TEXT_SFX_FOU_TAUNT_5</Text_ID>
+		<Overlap_Test> Unit_Novus_Founder </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_TAUNT_UNLOCKABLE_Novus_Founder">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_FOU1201_ENG.wav U000_FOU1202_ENG.wav U000_FOU1203_ENG.wav U000_FOU1204_ENG.wav U000_FOU1205_ENG.wav </Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_FOU_TAUNT_UNLOCKABLE_1, TEXT_SFX_FOU_TAUNT_UNLOCKABLE_2, TEXT_SFX_FOU_TAUNT_UNLOCKABLE_3, TEXT_SFX_FOU_TAUNT_UNLOCKABLE_4, TEXT_SFX_FOU_TAUNT_UNLOCKABLE_5</Text_ID>
+		<Overlap_Test> Unit_Novus_Founder </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_HEALTH_LOW_Novus_Founder">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_FOU1501_ENG.wav U000_FOU1502_ENG.wav U000_FOU1503_ENG.wav </Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_FOU_HEALTH_LOW_1, TEXT_SFX_FOU_HEALTH_LOW_2, TEXT_SFX_FOU_HEALTH_LOW_3</Text_ID>
+		<Overlap_Test> Unit_Novus_Founder </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_HEALTH_CRITICAL_Novus_Founder">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_FOU1601_ENG.wav U000_FOU1602_ENG.wav U000_FOU1603_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_FOU_HEALTH_CRITICAL_1, TEXT_SFX_FOU_HEALTH_CRITICAL_2, TEXT_SFX_FOU_HEALTH_CRITICAL_3</Text_ID>
+		<Overlap_Test> Unit_Novus_Founder </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Novus_Vertigo">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_VER0101_ENG.wav U000_VER0102_ENG.wav U000_VER0103_ENG.wav U000_VER0104_ENG.wav U000_VER0105_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_VER_SELECT_1, TEXT_SFX_VER_SELECT_2, TEXT_SFX_VER_SELECT_3, TEXT_SFX_VER_SELECT_4, TEXT_SFX_VER_SELECT_5</Text_ID>       
+		<Overlap_Test> Unit_Novus_Vertigo </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_A_Novus_Vertigo">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_VER0201_ENG.wav U000_VER0202_ENG.wav U000_VER0203_ENG.wav U000_VER0204_ENG.wav U000_VER0205_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_VER_ATTACK_A_1, TEXT_SFX_VER_ATTACK_A_2, TEXT_SFX_VER_ATTACK_A_3, TEXT_SFX_VER_ATTACK_A_4, TEXT_SFX_VER_ATTACK_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Novus_Vertigo </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_B_Novus_Vertigo">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_VER0301_ENG.wav U000_VER0302_ENG.wav U000_VER0303_ENG.wav U000_VER0304_ENG.wav U000_VER0305_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_VER_ATTACK_B_1, TEXT_SFX_VER_ATTACK_B_2, TEXT_SFX_VER_ATTACK_B_3, TEXT_SFX_VER_ATTACK_B_4, TEXT_SFX_VER_ATTACK_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Novus_Vertigo </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_A_Novus_Vertigo">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_VER0401_ENG.wav U000_VER0402_ENG.wav U000_VER0403_ENG.wav U000_VER0404_ENG.wav U000_VER0405_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_VER_MOVE_A_1, TEXT_SFX_VER_MOVE_A_2, TEXT_SFX_VER_MOVE_A_3, TEXT_SFX_VER_MOVE_A_4, TEXT_SFX_VER_MOVE_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Novus_Vertigo </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_B_Novus_Vertigo">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_VER0501_ENG.wav U000_VER0502_ENG.wav U000_VER0503_ENG.wav U000_VER0504_ENG.wav U000_VER0505_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_VER_MOVE_B_1, TEXT_SFX_VER_MOVE_B_2, TEXT_SFX_VER_MOVE_B_3, TEXT_SFX_VER_MOVE_B_4, TEXT_SFX_VER_MOVE_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Novus_Vertigo </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_ABILITY_A_Novus_Vertigo">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_VER0601_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_VER_ABILITY_A_1</Text_ID>			     
+		<Overlap_Test> Unit_Novus_Vertigo </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_ABILITY_B_Novus_Vertigo">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_VER0701_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_VER_ABILITY_B_1</Text_ID>			     
+		<Overlap_Test> Unit_Novus_Vertigo </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_ABILITY_C_Novus_Vertigo">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_VER0801_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_VER_ABILITY_C_1</Text_ID>			     
+		<Overlap_Test> Unit_Novus_Vertigo </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_RETREAT_CALL_Novus_Vertigo">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_VER1001_ENG.wav U000_VER1002_ENG.wav U000_VER1003_ENG.wav U000_VER1004_ENG.wav U000_VER1005_ENG.wav </Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_VER_RETREAT_CALL_1, TEXT_SFX_VER_RETREAT_CALL_2, TEXT_SFX_VER_RETREAT_CALL_3, TEXT_SFX_VER_RETREAT_CALL_4, TEXT_SFX_VER_RETREAT_CALL_5</Text_ID>
+		<Overlap_Test> Unit_Novus_Vertigo </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_TAUNT_Novus_Vertigo">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_VER1101_ENG.wav U000_VER1102_ENG.wav U000_VER1103_ENG.wav U000_VER1104_ENG.wav U000_VER1105_ENG.wav </Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_VER_TAUNT_1, TEXT_SFX_VER_TAUNT_2, TEXT_SFX_VER_TAUNT_3, TEXT_SFX_VER_TAUNT_4, TEXT_SFX_VER_TAUNT_5</Text_ID>
+		<Overlap_Test> Unit_Novus_Vertigo </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_TAUNT_UNLOCKABLE_Novus_Vertigo">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_VER1201_ENG.wav U000_VER1202_ENG.wav U000_VER1203_ENG.wav U000_VER1204_ENG.wav U000_VER1205_ENG.wav </Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_VER_TAUNT_UNLOCKABLE_1, TEXT_SFX_VER_TAUNT_UNLOCKABLE_2, TEXT_SFX_VER_TAUNT_UNLOCKABLE_3, TEXT_SFX_VER_TAUNT_UNLOCKABLE_4, TEXT_SFX_VER_TAUNT_UNLOCKABLE_5</Text_ID>
+		<Overlap_Test> Unit_Novus_Vertigo </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_HEALTH_LOW_Novus_Vertigo">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_VER1501_ENG.wav U000_VER1502_ENG.wav </Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_VER_HEALTH_LOW_1, TEXT_SFX_VER_HEALTH_LOW_2</Text_ID>
+		<Overlap_Test> Unit_Novus_Vertigo </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_HEALTH_CRITICAL_Novus_Vertigo">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_VER1601_ENG.wav U000_VER1602_ENG.wav </Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_VER_HEALTH_CRITICAL_1, TEXT_SFX_VER_HEALTH_CRITICAL_2</Text_ID>
+		<Overlap_Test> Unit_Novus_Vertigo </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Novus_Mirabel">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Pre_Samples>	VIK0101_ENG.wav  		VIK_Silent_ENG.wav   VIK0103_ENG.wav   	VIK_Silent_ENG.wav   VIK_Silent_ENG.wav</Pre_Samples>
+		<Samples>		U000_MIR0101_ENG.wav U000_MIR0102_ENG.wav VIK_Silent_ENG.wav 	U000_MIR0104_ENG.wav U000_MIR0105_ENG.wav </Samples>
+		<Post_Samples>	VIK_Silent_ENG.wav 	VIK0102_ENG.wav		VIK_Silent_ENG.wav	VIK_Silent_ENG.wav	VIK0104_ENG.wav</Post_Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MIR_SELECT_1, TEXT_SFX_MIR_SELECT_2, TEXT_SFX_MIR_SELECT_3, TEXT_SFX_MIR_SELECT_4, TEXT_SFX_MIR_SELECT_5</Text_ID>
+		<Overlap_Test> Unit_Novus_Mirabel </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_ATTACK_A_Novus_Mirabel">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Pre_Samples>	VIK_Silent_ENG.wav	VIK_Silent_ENG.wav   VIK_Silent_ENG.wav	VIK_Silent_ENG.wav   VIK_Silent_ENG.wav</Pre_Samples>
+		<Samples>		U000_MIR0201_ENG.wav U000_MIR0202_ENG.wav U000_MIR0203_ENG.wav VIK0106_ENG.wav U000_MIR0205_ENG.wav</Samples>
+		<Post_Samples>	VIK_Silent_ENG.wav 	VIK0105_ENG.wav		VIK_Silent_ENG.wav	VIK_Silent_ENG.wav	VIK_Silent_ENG.wav</Post_Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MIR_ATTACK_A_1, TEXT_SFX_MIR_ATTACK_A_2, TEXT_SFX_MIR_ATTACK_A_3, TEXT_SFX_MIR_ATTACK_A_4, TEXT_SFX_MIR_ATTACK_A_5</Text_ID>
+		<Overlap_Test> Unit_Novus_Mirabel </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_ATTACK_B_Novus_Mirabel">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Pre_Samples>	VIK_Silent_ENG.wav	VIK0108_ENG.wav   	VIK_Silent_ENG.wav	VIK_Silent_ENG.wav   VIK_Silent_ENG.wav</Pre_Samples>
+		<Samples>		U000_MIR0301_ENG.wav U000_MIR0302_ENG.wav U000_MIR0303_ENG.wav VIK0104_ENG.wav U000_MIR0305_ENG.wav</Samples>
+		<Post_Samples>	VIK0107_ENG.wav 		VIK_Silent_ENG.wav	VIK_Silent_ENG.wav	VIK_Silent_ENG.wav	VIK0109_ENG.wav</Post_Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MIR_ATTACK_B_1, TEXT_SFX_MIR_ATTACK_B_2, TEXT_SFX_MIR_ATTACK_B_3, TEXT_SFX_MIR_ATTACK_B_4, TEXT_SFX_MIR_ATTACK_B_5</Text_ID>
+		<Overlap_Test> Unit_Novus_Mirabel </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_A_Novus_Mirabel">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Pre_Samples>	VIK_Silent_ENG.wav	VIK_Silent_ENG.wav	VIK_Silent_ENG.wav	VIK0110_ENG.wav   	VIK_Silent_ENG.wav</Pre_Samples>
+		<Samples>		U000_MIR0401_ENG.wav U000_MIR0402_ENG.wav U000_MIR0403_ENG.wav VIK_Silent_ENG.wav 	U000_MIR0405_ENG.wav</Samples>
+		<Post_Samples>	VIK_Silent_ENG.wav	VIK_Silent_ENG.wav	VIK_Silent_ENG.wav	VIK_Silent_ENG.wav	VIK_Silent_ENG.wav</Post_Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MIR_MOVE_A_1, TEXT_SFX_MIR_MOVE_A_2, TEXT_SFX_MIR_MOVE_A_3, TEXT_SFX_MIR_MOVE_A_4, TEXT_SFX_MIR_MOVE_A_5</Text_ID>
+		<Overlap_Test> Unit_Novus_Mirabel </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_B_Novus_Mirabel">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Pre_Samples>	VIK0111_ENG.wav		VIK_Silent_ENG.wav	VIK0112_ENG.wav		VIK_Silent_ENG.wav   VIK_Silent_ENG.wav</Pre_Samples>
+		<Samples>		VIK_Silent_ENG.wav 	U000_MIR0502_ENG.wav VIK_Silent_ENG.wav 	U000_MIR0504_ENG.wav U000_MIR0505_ENG.wav</Samples>
+		<Post_Samples>	VIK_Silent_ENG.wav	VIK_Silent_ENG.wav	VIK_Silent_ENG.wav	VIK_Silent_ENG.wav	VIK_Silent_ENG.wav</Post_Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MIR_MOVE_B_1, TEXT_SFX_MIR_MOVE_B_2, TEXT_SFX_MIR_MOVE_B_3, TEXT_SFX_MIR_MOVE_B_4, TEXT_SFX_MIR_MOVE_B_5</Text_ID>
+		<Overlap_Test> Unit_Novus_Mirabel </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Ability_A_Novus_Mirabel">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Pre_Samples>	VIK_Silent_ENG.wav	VIK0113_ENG.wav		VIK_Silent_ENG.wav	VIK_Silent_ENG.wav</Pre_Samples>
+		<Samples>		U000_MIR0601_ENG.wav VIK_Silent_ENG.wav	U000_MIR0603_ENG.wav	U000_MIR0604_ENG.wav</Samples>
+		<Post_Samples>	VIK_Silent_ENG.wav	VIK_Silent_ENG.wav	VIK_Silent_ENG.wav	VIK_Silent_ENG.wav</Post_Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MIR_ABILITY_A_1, TEXT_SFX_MIR_ABILITY_A_2, TEXT_SFX_MIR_ABILITY_A_3, TEXT_SFX_MIR_ABILITY_A_4</Text_ID>
+		<Overlap_Test> Unit_Novus_Mirabel </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Ability_B_Novus_Mirabel">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Pre_Samples>	VIK_Silent_ENG.wav	VIK_Silent_ENG.wav	VIK_Silent_ENG.wav	VIK_Silent_ENG.wav</Pre_Samples>
+		<Samples>		U000_MIR0701_ENG.wav U000_MIR0702_ENG.wav	U000_MIR0703_ENG.wav	U000_MIR0704_ENG.wav</Samples>
+		<Post_Samples>	VIK_Silent_ENG.wav	VIK_Silent_ENG.wav	VIK_Silent_ENG.wav	VIK_Silent_ENG.wav</Post_Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MIR_ABILITY_B_1, TEXT_SFX_MIR_ABILITY_B_2, TEXT_SFX_MIR_ABILITY_B_3, TEXT_SFX_MIR_ABILITY_B_4</Text_ID>
+		<Overlap_Test> Unit_Novus_Mirabel </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Ability_C_Novus_Mirabel">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Pre_Samples>	VIK_Silent_ENG.wav	VIK0114_ENG.wav		VIK_Silent_ENG.wav	VIK_Silent_ENG.wav </Pre_Samples>
+		<Samples>		U000_MIR0801_ENG.wav VIK_Silent_ENG.wav	U000_MIR0803_ENG.wav U000_MIR0804_ENG.wav</Samples>
+		<Post_Samples>	VIK_Silent_ENG.wav	VIK_Silent_ENG.wav	VIK_Silent_ENG.wav	VIK0115_ENG.wav	</Post_Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MIR_ABILITY_C_1, TEXT_SFX_MIR_ABILITY_C_2, TEXT_SFX_MIR_ABILITY_C_3, TEXT_SFX_MIR_ABILITY_C_4</Text_ID>
+		<Overlap_Test> Unit_Novus_Mirabel </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Ability_D_Novus_Mirabel">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Pre_Samples>	VIK_Silent_ENG.wav	VIK_Silent_ENG.wav	VIK0116_ENG.wav		VIK_Silent_ENG.wav</Pre_Samples>
+		<Samples>		U000_MIR0901_ENG.wav U000_MIR0902_ENG.wav	VIK_Silent_ENG.wav	U000_MIR0904_ENG.wav</Samples>
+		<Post_Samples>	VIK_Silent_ENG.wav	VIK_Silent_ENG.wav	VIK_Silent_ENG.wav	VIK0117_ENG.wav</Post_Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MIR_ABILITY_D_1, TEXT_SFX_MIR_ABILITY_D_2, TEXT_SFX_MIR_ABILITY_D_3, TEXT_SFX_MIR_ABILITY_D_4</Text_ID>
+		<Overlap_Test> Unit_Novus_Mirabel </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_RETREAT_CALL_Novus_Mirabel">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Pre_Samples>	VIK_Silent_ENG.wav  	VIK_Silent_ENG.wav   VIK_Silent_ENG.wav  	VIK_Silent_ENG.wav  	VIK119_ENG.wav</Pre_Samples>
+		<Samples>		U000_MIR1001_ENG.wav U000_MIR1002_ENG.wav U000_MIR1003_ENG.wav	U000_MIR1004_ENG.wav U000_MIR1005_ENG.wav </Samples>
+		<Post_Samples>	VIK0118_ENG.wav 		VIK_Silent_ENG.wav	VIK_Silent_ENG.wav	VIK0106_ENG.wav		VIK_Silent_ENG.wav</Post_Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MIR_RETREAT_CALL_1, TEXT_SFX_MIR_RETREAT_CALL_2, TEXT_SFX_MIR_RETREAT_CALL_3, TEXT_SFX_MIR_RETREAT_CALL_4, TEXT_SFX_MIR_RETREAT_CALL_5</Text_ID>
+		<Overlap_Test> Unit_Novus_Mirabel </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_TAUNT_Novus_Mirabel">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Pre_Samples>	VIK_Silent_ENG.wav	VIK_Silent_ENG.wav   VIK_Silent_ENG.wav	VIK_Silent_ENG.wav   VIK_Silent_ENG.wav</Pre_Samples>
+		<Samples>		U000_MIR1101_ENG.wav U000_MIR1102_ENG.wav U000_MIR1103_ENG.wav U000_MIR1104_ENG.wav U000_MIR1105_ENG.wav </Samples>
+		<Post_Samples>	VIK_Silent_ENG.wav 	VIK_Silent_ENG.wav	VIK_Silent_ENG.wav	VIK_Silent_ENG.wav	VIK_Silent_ENG.wav</Post_Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MIR_TAUNT_1, TEXT_SFX_MIR_TAUNT_2, TEXT_SFX_MIR_TAUNT_3, TEXT_SFX_MIR_TAUNT_4, TEXT_SFX_MIR_TAUNT_5</Text_ID>
+		<Overlap_Test> Unit_Novus_Mirabel </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_TAUNT_UNLOCKABLE_Novus_Mirabel">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Pre_Samples>	VIK_Silent_ENG.wav	VIK_Silent_ENG.wav   VIK_Silent_ENG.wav	VIK_Silent_ENG.wav   VIK0104_ENG.wav</Pre_Samples>
+		<Samples>		U000_MIR1201_ENG.wav U000_MIR1202_ENG.wav U000_MIR1203_ENG.wav	U000_MIR1204_ENG.wav U000_MIR1205_ENG.wav </Samples>
+		<Post_Samples>	VIK_Silent_ENG.wav 	VIK_Silent_ENG.wav	VIK_Silent_ENG.wav	VIK_Silent_ENG.wav	VIK_Silent_ENG.wav</Post_Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MIR_TAUNT_UNLOCKABLE_1, TEXT_SFX_MIR_TAUNT_UNLOCKABLE_2, TEXT_SFX_MIR_TAUNT_UNLOCKABLE_3, TEXT_SFX_MIR_TAUNT_UNLOCKABLE_4, TEXT_SFX_MIR_TAUNT_UNLOCKABLE_5</Text_ID>
+		<Overlap_Test> Unit_Novus_Mirabel </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_HEALTH_LOW_Novus_Mirabel">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_MIR1501_ENG.wav U000_MIR1502_ENG.wav U000_MIR1503_ENG.wav </Samples>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_MIR_HEALTH_LOW_1, TEXT_SFX_MIR_HEALTH_LOW_2, TEXT_SFX_MIR_HEALTH_LOW_3</Text_ID>
+		<Overlap_Test> Unit_Novus_Mirabel </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_HEALTH_CRITICAL_Novus_Mirabel">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_MIR1601_ENG.wav U000_MIR1602_ENG.wav U000_MIR1603_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_MIR_HEALTH_CRITICAL_1, TEXT_SFX_MIR_HEALTH_CRITICAL_2, TEXT_SFX_MIR_HEALTH_CRITICAL_3</Text_ID>
+		<Overlap_Test> Unit_Novus_Mirabel </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Death_Novus_Mirabel">
+			<Use_Preset>Preset_UR_3D</Use_Preset>
+			<Samples>DTH_Mirabel_1.wav </Samples>
+    </SFXEvent>
+
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Novus_Dervish">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_DER0101_ENG.wav U000_DER0102_ENG.wav U000_DER0103_ENG.wav U000_DER0104_ENG.wav U000_DER0105_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_DER_SELECT_1, TEXT_SFX_DER_SELECT_2, TEXT_SFX_DER_SELECT_3, TEXT_SFX_DER_SELECT_4, TEXT_SFX_DER_SELECT_5</Text_ID>       
+		<Overlap_Test> Unit_Novus_Dervish </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_A_Novus_Dervish">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_DER0201_ENG.wav U000_DER0202_ENG.wav U000_DER0203_ENG.wav U000_DER0204_ENG.wav U000_DER0205_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_DER_ATTACK_A_1, TEXT_SFX_DER_ATTACK_A_2, TEXT_SFX_DER_ATTACK_A_3, TEXT_SFX_DER_ATTACK_A_4, TEXT_SFX_DER_ATTACK_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Novus_Dervish </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_B_Novus_Dervish">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_DER0301_ENG.wav U000_DER0302_ENG.wav U000_DER0303_ENG.wav U000_DER0304_ENG.wav U000_DER0305_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_DER_ATTACK_B_1, TEXT_SFX_DER_ATTACK_B_2, TEXT_SFX_DER_ATTACK_B_3, TEXT_SFX_DER_ATTACK_B_4, TEXT_SFX_DER_ATTACK_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Novus_Dervish </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_A_Novus_Dervish">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_DER0401_ENG.wav U000_DER0402_ENG.wav U000_DER0403_ENG.wav U000_DER0404_ENG.wav U000_DER0405_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_DER_MOVE_A_1, TEXT_SFX_DER_MOVE_A_2, TEXT_SFX_DER_MOVE_A_3, TEXT_SFX_DER_MOVE_A_4, TEXT_SFX_DER_MOVE_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Novus_Dervish </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_B_Novus_Dervish">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_DER0501_ENG.wav U000_DER0502_ENG.wav U000_DER0503_ENG.wav U000_DER0504_ENG.wav U000_DER0505_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_DER_MOVE_B_1, TEXT_SFX_DER_MOVE_B_2, TEXT_SFX_DER_MOVE_B_3, TEXT_SFX_DER_MOVE_B_4, TEXT_SFX_DER_MOVE_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Novus_Dervish </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_ABILITY_A_Novus_Dervish">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_DER0601_ENG.wav U000_DER0602_ENG.wav U000_DER0603_ENG.wav U000_DER0604_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_DER_ABILITY_A_1, TEXT_SFX_DER_ABILITY_A_2, TEXT_SFX_DER_ABILITY_A_3, TEXT_SFX_DER_ABILITY_A_4</Text_ID>			     
+		<Overlap_Test> Unit_Novus_Dervish </Overlap_Test>
+	</SFXEvent>
+<!--
+	<SFXEvent Name="Unit_ABILITY_B_Novus_Dervish">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_DER0701_ENG.wav U000_DER0702_ENG.wav U000_DER0703_ENG.wav U000_DER0704_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID />		     
+		<Overlap_Test> Unit_Novus_Dervish </Overlap_Test>
+	</SFXEvent>
+-->
+
+
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Novus_Retreat_Transport">
+		<Use_Preset>Preset_UR_3D</Use_Preset>
+		<Samples> Novus_Retreat_Transport_Select_1.wav </Samples>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Move_Novus_Retreat_Transport">
+		<Use_Preset>Preset_UR_3D</Use_Preset>
+		<Samples>Novus_Retreat_Transport_Move_1.wav </Samples>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_Novus_Retreat_Transport">
+		<Use_Preset>Preset_UR_3D</Use_Preset>
+		<Samples>Novus_Retreat_Transport_Move_1.wav </Samples>
+	</SFXEvent>
+ 
+
+
+
+
+</SFXEvents>

@@ -1,0 +1,678 @@
+<?xml version="1.0"?>
+<Novus_INF_Hacker_XML>
+
+	<!-- **************************************************************************************** -->
+	<!-- *** UNIT(S) **************************************************************************** -->
+	<!-- **************************************************************************************** -->
+
+	<X12_Novus_Units Name="Novus_Hacker">
+
+		<!-- ART -->
+		<Land_Model_Name> NI_Hacker.ALO </Land_Model_Name>
+		<!-- DEBUG: STUB SCALE AND MODEL -->
+		<Scale_Factor>1.5</Scale_Factor>
+		<Loop_Idle_Anim_00>No</Loop_Idle_Anim_00>
+		<!-- <SurfaceFX_Name>Novus_Hacker_Track</SurfaceFX_Name> -->
+		<Occlusion_Silhouette_Enabled>1</Occlusion_Silhouette_Enabled>
+		<Mouse_Collide_Override_Sphere_Radius> 10.0 </Mouse_Collide_Override_Sphere_Radius>
+      <AssetBank> BANK_NOVUS </AssetBank>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_UNIT_NOVUS_HACKER</Text_ID>
+		<GUI_Scene_Name> HealthBar_Scene_Small </GUI_Scene_Name>
+		<GUI_Receives_Input> false </GUI_Receives_Input>
+		<GUI_Min_Scale> 0.3 </GUI_Min_Scale>
+		<GUI_Max_Scale> 2.5 </GUI_Max_Scale>
+		<GUI_Default_Scale> 0.5 </GUI_Default_Scale>
+		<GUI_World_Offset> 0.0, 0.0, -10 </GUI_World_Offset>
+		<Select_Box_Scale>20</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+
+		<!-- ATTRIBUTES -->
+        <LOD_Bias>14.5</LOD_Bias>
+		<Affiliation> Novus </Affiliation>
+		<Victory_Relevant> No </Victory_Relevant>
+		<CategoryMask> Small, CanAttack, RadiationHurts, Insignificant </CategoryMask>
+		<Weather_Category>Infantry</Weather_Category>
+		<Create_Team> No </Create_Team>
+		<Can_Fall_From_Bridge> true </Can_Fall_From_Bridge>
+		<Importance> 0.3 </Importance>
+		<Shot_Type> Infantry </Shot_Type>
+
+		<Attributes SubObjectList="Yes">
+			<Is_Phasable> true </Is_Phasable>
+			<Can_Garrison_Buildings> true </Can_Garrison_Buildings>
+			<Is_Immune_To_Mind_Control> true </Is_Immune_To_Mind_Control>
+			<Is_Immune_To_Amplifier_Lockdown> true </Is_Immune_To_Amplifier_Lockdown>
+			<Tactical_Sell_Percent_Modifier> -0.5 </Tactical_Sell_Percent_Modifier>
+			<Tactical_Sell_Time_Seconds> 2.0 </Tactical_Sell_Time_Seconds>
+		</Attributes>
+
+		<!-- MOVEMENT -->
+		<MovementClass> Infantry </MovementClass>
+		<Max_Speed>1.6</Max_Speed>
+		<Max_Rate_Of_Turn>30.0</Max_Rate_Of_Turn>
+		<Stopped_Rate_Of_Turn> 12.0 </Stopped_Rate_Of_Turn>
+		<Custom_Soft_Footprint_Radius> 3.5 </Custom_Soft_Footprint_Radius>
+		<Custom_Hard_XExtent> 2.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 2.0 </Custom_Hard_YExtent>
+		<Space_Layer> LandDynamic </Space_Layer>
+		<UnitCollisionClass> Infantry </UnitCollisionClass>
+		<FormationSpacing> .5 </FormationSpacing>
+		<FormationGrouping> Standard </FormationGrouping>
+		<FormationRaggedness> 1 </FormationRaggedness>
+		<MaxJiggleDistance> 3.0 </MaxJiggleDistance>
+		<OverrideAcceleration> .05 </OverrideAcceleration>
+		<OverrideDeceleration> .05 </OverrideDeceleration>
+		<FormationOrder> 2 </FormationOrder>
+		<Movement_Animation_Speed> 1.0 </Movement_Animation_Speed>
+		<Rotation_Animation_Speed> 20.0 </Rotation_Animation_Speed>
+		<OccupationStyle>1x1</OccupationStyle>
+		<Strafe_Max_Speed_Coefficient> 1.0 </Strafe_Max_Speed_Coefficient>
+		<Backpedal_Max_Speed_Coefficient> 1.0 </Backpedal_Max_Speed_Coefficient>
+		<Strafe_Animation_Speed> 1.0 </Strafe_Animation_Speed>
+		<Backpedal_Animation_Speed> 1.0 </Backpedal_Animation_Speed>
+		<Should_Move_Anim_Lockout_Attack_Anim> true </Should_Move_Anim_Lockout_Attack_Anim>
+
+		<!-- CONFLICT -->
+		<Is_Attackable> true </Is_Attackable>
+		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Land_FOW_Reveal_Range>200.0</Land_FOW_Reveal_Range>
+		<Tactical_Health> 240 </Tactical_Health>
+
+		<Attack_Category_Restrictions> Resource | Resource_INST </Attack_Category_Restrictions>
+
+		<!-- BEHAVIORS -->
+		<Behavior>
+			PERSISTENT_UNIT,
+			EFFECT_REGISTRY
+		</Behavior>
+
+		<LandBehavior>
+         SELECTABLE,
+         RADAR_MAP_VISIBLE,
+         GUI,
+         RADAR_MAP_VISIBLE,
+         SURFACE_FX,
+         FLOW,
+         WALK_LOCOMOTOR,
+         FORMATION,
+         IDLE,
+         TARGETING,
+         REVEAL,
+         SQUASH,
+         HIDE_WHEN_FOGGED,
+         BALLISTIC,
+         EFFECT_REGISTRY,
+         EFFECT_GENERATOR,
+         ATTRIBUTE_DIRECTORY,
+         DAMAGE_TRACKING,
+         AI_RECRUITABLE,
+         TACTICAL_SELL,
+         AI_TARGET,
+         ABILITY_COUNTDOWN
+      </LandBehavior>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Armor_Type> Armor_Novus_Infantry_Heavy </Armor_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="TacticalSellBehaviorType">
+			<Sell_Effect_Generator_Name>NovusSellGenerator</Sell_Effect_Generator_Name>
+		</BehaviorType>
+		
+		<BehaviorType Name="ProductionBehaviorType">
+			<Size_Value> 10 </Size_Value>
+			<Build_Cost_Credits> 250 </Build_Cost_Credits>
+			<Build_Time_Seconds> 7 </Build_Time_Seconds>
+			<Is_Research_Tech_Tree_Lockable> Yes </Is_Research_Tech_Tree_Lockable>
+			<Extra_Enablers_Increase_Build_Rate> 1.0 </Extra_Enablers_Increase_Build_Rate>
+			<!-- 
+				Maria 11.07.2006 
+				This flag determines which types are used to populate the
+				build menu in global mode.
+			-->
+			<Is_Strategic_Buildable_Type> Yes </Is_Strategic_Buildable_Type>
+			<Strategic_UI_Build_Menu_Order>3</Strategic_UI_Build_Menu_Order>
+		</BehaviorType>
+
+		<BehaviorType Name="BuildableObjectBehaviorType">
+			<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+			<Tactical_Build_Cost_Campaign> 500 </Tactical_Build_Cost_Campaign>
+			<Tactical_Build_Cost_Multiplayer> 500 </Tactical_Build_Cost_Multiplayer>
+			<Tactical_Build_Time_Seconds> 15 </Tactical_Build_Time_Seconds>
+			<Tactical_UI_Build_Queue_Order> 1 </Tactical_UI_Build_Queue_Order>
+		</BehaviorType>
+
+
+    <BehaviorType name="AIBehaviorType">
+      <AI_Combat_Power> 1 </AI_Combat_Power>
+      <Idle_Chase_Range> 20.0 </Idle_Chase_Range> <!-- Double click guard area Keep very small-->
+      <Guard_Chase_Range> 150.0 </Guard_Chase_Range> <!-- Guard radius for unit-->
+      <Autonomous_Move_Extension_Vs_Attacker> 25.0 </Autonomous_Move_Extension_Vs_Attacker> <!--Range outside of guard area unit will move-->
+      <Attack_Move_Response_Range> 50.0 </Attack_Move_Response_Range> <!-- When given a attack move command unit will travel this distance from path to attack-->
+      <AI_Target_Level>Group_Member</AI_Target_Level>
+		 <Attack_Score_Rating> 0.2 </Attack_Score_Rating>
+		 <Scout_Score_Rating> 0.0 </Scout_Score_Rating>
+		 <Guerilla_Score_Rating> 0.0 </Guerilla_Score_Rating>
+	 </BehaviorType>
+    
+    
+		<BehaviorType Name="WeaponBehaviorType">
+			<Targeting_Priority_Set> Novus_Hacker_Target_Priority </Targeting_Priority_Set>
+			<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
+			<Targeting_Fire_Inaccuracy> 1.0 </Targeting_Fire_Inaccuracy>
+			<Targeting_Min_Attack_Distance> 0.0 </Targeting_Min_Attack_Distance>
+			<Targeting_Max_Attack_Distance> 175.0 </Targeting_Max_Attack_Distance>
+			<Can_Attack_Without_Weapon_Behavior>true</Can_Attack_Without_Weapon_Behavior>
+		</BehaviorType>
+
+		<BehaviorType NAme="LuaScriptBehaviorType">
+			<Lua_Only_Service_If_AI>True</Lua_Only_Service_If_AI>
+			<Lua_Land_Behaviors>Generic_Vehicle_Unit_Behavior,Defensive_AI_Unit_Behavior</Lua_Land_Behaviors>
+			<Lua_Script_Data>
+				GenericVehicle = {}
+				GenericVehicle.SearchRange = 150.0
+				GenericVehicle.KiteRange = 100.0
+				GenericVehicle.CrushRange = 0.0
+				DefensiveAI = {}
+				DefensiveAI.KillTurret = false
+			</Lua_Script_Data>
+		</BehaviorType>
+
+		<BehaviorType Name="EncyclopediaBehaviorType">
+			<Icon_Name> i_icon_ni_hacker.tga </Icon_Name>
+		</BehaviorType>
+
+		<BehaviorType Name="TooltipBehaviorType">
+			<Tooltip_Description_Text_ID> TEXT_TOOLTIP_DESCRIPTION_NOVUS_HACKER </Tooltip_Description_Text_ID>
+			<Tooltip_Category> TEXT_TOOLTIP_CATEGORY_INFANTRY </Tooltip_Category>
+			<Tooltip_Good_Against> TEXT_TYPE_VERSUS_VEHICLES TEXT_TYPE_VERSUS_TURRETS TEXT_TYPE_VERSUS_WALKERS </Tooltip_Good_Against>
+
+
+         <Researched_Upgrades>
+            TEXT_NOVUS_RESEARCH_TITLE_RAPID_FLOW
+            TEXT_NOVUS_RESEARCH_TITLE_NANITE_REFINEMENT_ABILITY
+            TEXT_NOVUS_RESEARCH_TITLE_IMPROVED_MANIPULATION
+            TEXT_NOVUS_RESEARCH_TITLE_NANITE_PURIFICATION
+         </Researched_Upgrades>
+		</BehaviorType>
+		
+         
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.02  0.02</Radar_Icon_Size>
+			<Is_Visible_On_Enemy_Radar> True </Is_Visible_On_Enemy_Radar>
+		</BehaviorType>
+
+		<BehaviorType Name="BallisticBehaviorType">
+			<Ballistic_Weight>1.0</Ballistic_Weight>
+		</BehaviorType>
+
+		<BehaviorType Name="BlobShadowBehaviorType">
+			<Blob_Shadow_Below_Detail_Level>1</Blob_Shadow_Below_Detail_Level>
+			<Blob_Shadow_Scale>10.0, 10.0</Blob_Shadow_Scale>
+			<Blob_Shadow_Bone_Name>B_Chest</Blob_Shadow_Bone_Name>
+			<Blob_Shadow_Material_Name>Generic_Shadow</Blob_Shadow_Material_Name>
+			<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+			<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+		</BehaviorType>
+
+		<BehaviorType Name="SFXBehaviorType">
+			<SFXEvent_Fire>SFX_Novus_Infantry_Fire</SFXEvent_Fire>
+			<SFXEvent_Select>Unit_Select_Novus_Hacker</SFXEvent_Select>
+			<SFXEvent_Move>Unit_Move_A_Novus_Hacker</SFXEvent_Move>
+			<SFXEvent_Move_At_Top_Speed>Unit_Move_B_Novus_Hacker</SFXEvent_Move_At_Top_Speed>
+			<SFXEvent_Attack>Unit_Attack_A_Novus_Hacker</SFXEvent_Attack>
+			<SFXEvent_Attack_At_Top_Speed>Unit_Attack_B_Novus_Hacker</SFXEvent_Attack_At_Top_Speed>
+			<SFXEvent_Guard />
+			<SFXEvent_Ambient_Moving> </SFXEvent_Ambient_Moving>
+			<Death_SFXEvent_Start_Die>SFX_Novus_Small_Vehicle_Death</Death_SFXEvent_Start_Die>
+			<SFXEvent_Health_Low_Warning>  </SFXEvent_Health_Low_Warning>
+			<SFXEvent_Health_Critical_Warning>  </SFXEvent_Health_Critical_Warning>
+			<SFXEvent_Enemy_Damaged_Health_Low_Warning>  </SFXEvent_Enemy_Damaged_Health_Low_Warning>
+			<SFXEvent_Enemy_Damaged_Health_Critical_Warning>  </SFXEvent_Enemy_Damaged_Health_Critical_Warning>
+
+			<SFXEvent_Tactical_Build_Started> GUI_BUILD_Vehicle </SFXEvent_Tactical_Build_Started>
+			<SFXEvent_Tactical_Build_Complete> Unit_Select_Novus_Hacker </SFXEvent_Tactical_Build_Complete>
+			<SFXEvent_Tactical_Build_Cancelled> GUI_BUILD_Vehicle_Canceled </SFXEvent_Tactical_Build_Cancelled>
+
+			<!-- Maria 05.01.2006 - Adding build sounds for Global production -->
+			<SFXEvent_Build_Started> GUI_BUILD_Vehicle </SFXEvent_Build_Started>
+			<SFXEvent_Build_Complete> Unit_Select_Novus_Hacker </SFXEvent_Build_Complete>
+			<SFXEvent_Build_Cancelled> GUI_BUILD_Vehicle_Canceled </SFXEvent_Build_Cancelled>
+		</BehaviorType>
+
+		<BehaviorType Name="GUIBehaviorType">
+			<GUI_Bracket_Size>2</GUI_Bracket_Size>
+			<GUI_Bounds_Scale>0.5</GUI_Bounds_Scale>
+			<!-- Maria 05.18.2006 - Data needed for the models attached to the mouse in Global -->
+			<GUI_Is_Top_View> No </GUI_Is_Top_View>
+			<GUI_Rotate_Angle_Degrees> 0.0 </GUI_Rotate_Angle_Degrees>
+			<GUI_Is_Model_Shifted_Down> Yes </GUI_Is_Model_Shifted_Down>
+			<GUI_Shift_Factor> 4.7 </GUI_Shift_Factor>
+			<GUI_Strategic_Mode_Scale> 0.15 </GUI_Strategic_Mode_Scale>
+		</BehaviorType>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Specific_Death_Anim_Type> DIE </Specific_Death_Anim_Type>
+			<Death_Clone> Damage_Default, Novus_Hacker_Death_Clone_Resource </Death_Clone>
+			<Death_Fade_Time>.25</Death_Fade_Time>
+			<Death_Persistence_Duration>60</Death_Persistence_Duration>
+			<Death_Speed_Min>1.0</Death_Speed_Min>
+			<Death_Speed_Max>2.0</Death_Speed_Max>
+		</BehaviorType>
+
+		<BehaviorType Name="CrushBehaviorType">
+			<Crush_Defense>10</Crush_Defense>
+      <Crush_Power>4</Crush_Power>
+		</BehaviorType>
+
+		<BehaviorType Name="FleetBehaviorType">
+			<!-- Maria 05.24.2006 - How much space does the unit take up -->
+			<Unit_Pop_Cap> 2 </Unit_Pop_Cap>
+		</BehaviorType>
+
+		<!-- ABILITIES -->
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<!-- Non-upgraded version -->
+			<Unit_Ability Name="Novus_Hacker_Control_Turret_Unit_Ability">
+				<Type>EFFECT_GENERATOR</Type>
+				<Expiration_Seconds> 100000.0 </Expiration_Seconds>
+				<Recharge_Seconds>1.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> Novus_Hacker_Control_Turret_Special_Ability </GUI_Activated_Ability_Name>
+				<Effect_Generator_Name> Novus_Hacker_Control_Turret_Effect_Generator </Effect_Generator_Name>
+				<Ignore_Lock_Unit_Ability_Attribute> Is_Mind_Controlled </Ignore_Lock_Unit_Ability_Attribute>
+			</Unit_Ability>
+
+			<!-- Upgraded version -->
+			<Unit_Ability Name="Novus_Hacker_Control_Turret_Area_Unit_Ability">
+				<Type>EFFECT_GENERATOR</Type>
+				<Expiration_Seconds> 100000.0 </Expiration_Seconds>
+				<Recharge_Seconds>1.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> Novus_Hacker_Control_Turret_Area_Special_Ability </GUI_Activated_Ability_Name>
+				<Effect_Generator_Name> Novus_Hacker_Control_Turret_Area_Effect_Generator </Effect_Generator_Name>
+				<Disable_Unit_Ability_Attribute> Is_Mind_Controlled </Disable_Unit_Ability_Attribute>
+			</Unit_Ability>
+
+			<!-- Non-upgraded version -->
+			<Unit_Ability Name="Novus_Hacker_Lockdown_Unit_Ability">
+				<Type>EFFECT_GENERATOR</Type>
+				<Expiration_Seconds> 100000.0 </Expiration_Seconds>
+				<Recharge_Seconds>3.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> Novus_Hacker_Lockdown_Special_Ability </GUI_Activated_Ability_Name>
+				<Effect_Generator_Name> Novus_Hacker_Lockdown_Effect_Generator </Effect_Generator_Name>
+				<Ignore_Lock_Unit_Ability_Attribute> Is_Mind_Controlled </Ignore_Lock_Unit_Ability_Attribute>
+			</Unit_Ability>
+
+			<!-- Upgraded version -->
+			<Unit_Ability Name="Novus_Hacker_Lockdown_Area_Unit_Ability">
+				<Type>EFFECT_GENERATOR</Type>
+				<Expiration_Seconds> 100000.0 </Expiration_Seconds>
+				<Recharge_Seconds>3.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> Novus_Hacker_Lockdown_Area_Special_Ability </GUI_Activated_Ability_Name>
+				<Effect_Generator_Name> Novus_Hacker_Lockdown_Area_Effect_Generator </Effect_Generator_Name>
+				<Disable_Unit_Ability_Attribute> Is_Mind_Controlled </Disable_Unit_Ability_Attribute>
+			</Unit_Ability>
+
+			<Unit_Ability Name="Novus_Hacker_Viral_Bomb_Unit_Ability">
+				<Type>EFFECT_GENERATOR</Type>
+				<Expiration_Seconds> 0.01 </Expiration_Seconds>
+				<Recharge_Seconds>28.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> Novus_Hacker_Viral_Bomb_Special_Ability </GUI_Activated_Ability_Name>
+				<Effect_Generator_Name> Novus_Hacker_Viral_Bomb_Effect_Generator </Effect_Generator_Name>
+				<Area_Effect_Decal_Distance> 0.0 </Area_Effect_Decal_Distance>
+				<Should_Targeting_Ignore_Objects> false </Should_Targeting_Ignore_Objects>
+				<Targeting_Type> ENEMY_OBJECT </Targeting_Type>
+			</Unit_Ability>
+
+			
+			<!-- Hacker point-blank AE blast that clears Phase, Cloak and Virus -->
+			<Unit_Ability Name="Novus_Hacker_Firewall">
+				<Type>EFFECT_GENERATOR</Type>
+				<Recharge_Seconds>18</Recharge_Seconds>
+				<Expiration_Seconds>8</Expiration_Seconds>
+				<Is_Modal>No</Is_Modal>
+				<GUI_Activated_Ability_Name> Novus_Hacker_Firewall_Special_Ability </GUI_Activated_Ability_Name>
+				<Effect_Generator_Name>NovusHackerFirewallGenerator</Effect_Generator_Name>
+				<SFXEvent_GUI_Unit_Ability_Activated>SFX_Alien_Paranoia_Start</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+
+		</Unit_Abilities_Data>
+
+		
+		<Abilities SubObjectList="Yes">
+
+			<!-- Non-upgraded version -->
+			<Effect_Generator_Ability Name="Novus_Hacker_Control_Turret_Special_Ability">
+				<Activation_Min_Range> 0 </Activation_Min_Range>
+				<Activation_Max_Range> 180 </Activation_Max_Range>
+				<Pre_Generate_Anim_Type>  </Pre_Generate_Anim_Type>
+				<Post_Generate_Anim_Type> </Post_Generate_Anim_Type>
+				<Generating_Anim_Type>  </Generating_Anim_Type>
+				<Effect_Generator_Name> Novus_Hacker_Control_Turret_Effect_Generator </Effect_Generator_Name>
+				<Activation_Style> SPECIAL_ATTACK </Activation_Style>
+				<Max_Channel_Range> 230.0 </Max_Channel_Range>
+				<Ignore_Lock_Special_Ability_Attribute> Is_Mind_Controlled </Ignore_Lock_Special_Ability_Attribute>
+				<!--Need this so we can switch targets during control when both are in range-->
+				<Deactivate_On_User_Attack_Order> true </Deactivate_On_User_Attack_Order>
+            <Deactivate_On_User_Move_Order>Yes</Deactivate_On_User_Move_Order>
+
+            <Movement_Should_Cancel_Ability>No</Movement_Should_Cancel_Ability>
+         </Effect_Generator_Ability>
+
+         <!-- Upgraded version -->
+         <Effect_Generator_Ability Name="Novus_Hacker_Control_Turret_Area_Special_Ability">
+            <Activation_Min_Range> 0 </Activation_Min_Range>
+            <Activation_Max_Range> 200 </Activation_Max_Range>
+            <Pre_Generate_Anim_Type>  </Pre_Generate_Anim_Type>
+            <Post_Generate_Anim_Type> </Post_Generate_Anim_Type>
+            <Generating_Anim_Type>  </Generating_Anim_Type>
+            <Effect_Generator_Name> Novus_Hacker_Control_Turret_Area_Effect_Generator </Effect_Generator_Name>
+            <Activation_Style> SPECIAL_ATTACK </Activation_Style>
+            <Max_Channel_Range> 250.0 </Max_Channel_Range>
+            <Disable_Special_Ability_Attribute> Is_Mind_Controlled </Disable_Special_Ability_Attribute>
+            <!--Need this so we can switch targets during control when both are in range-->
+            <Deactivate_On_User_Attack_Order> true </Deactivate_On_User_Attack_Order>
+            <Deactivate_On_User_Move_Order>Yes</Deactivate_On_User_Move_Order>
+
+            <Movement_Should_Cancel_Ability>No</Movement_Should_Cancel_Ability>
+			</Effect_Generator_Ability>
+
+			<!-- Non-upgraded version -->
+			<Effect_Generator_Ability Name="Novus_Hacker_Lockdown_Special_Ability">
+				<Applicable_Unit_Categories> All </Applicable_Unit_Categories>
+				<!-- MLL: All walkers are excluded -->
+				<Excluded_Unit_Categories> Huge + Piloted </Excluded_Unit_Categories>
+				<Activation_Min_Range> 0 </Activation_Min_Range>
+				<Activation_Max_Range> 170 </Activation_Max_Range>
+				<Pre_Generate_Anim_Type>  </Pre_Generate_Anim_Type>
+				<Post_Generate_Anim_Type> ANIM_IDLE</Post_Generate_Anim_Type>
+				<Generating_Anim_Type> ANIM_ATTACK </Generating_Anim_Type>
+				<Effect_Generator_Name> Novus_Hacker_Lockdown_Effect_Generator </Effect_Generator_Name>
+				<Activation_Style> SPECIAL_ATTACK </Activation_Style>
+				<Max_Channel_Range> 220.0 </Max_Channel_Range>
+				<Excluded_Unit_Categories> Resource, Resource_INST, Hero, Huge, Organic, Stationary </Excluded_Unit_Categories>
+				<Applicable_Unit_Categories> Small, Piloted, Flying </Applicable_Unit_Categories>
+				<Ignore_Lock_Special_Ability_Attribute> Is_Mind_Controlled </Ignore_Lock_Special_Ability_Attribute>
+				<!--Need this so we can switch targets during lockdown when both are in range-->
+				<Deactivate_On_User_Attack_Order> true </Deactivate_On_User_Attack_Order>
+			</Effect_Generator_Ability>
+
+			<!-- Upgraded version -->
+			<Effect_Generator_Ability Name="Novus_Hacker_Lockdown_Area_Special_Ability">
+				<Applicable_Unit_Categories> All </Applicable_Unit_Categories>
+				<!-- MLL: All walkers are excluded -->
+				<Excluded_Unit_Categories> Huge + Piloted </Excluded_Unit_Categories>
+				<Activation_Min_Range> 0 </Activation_Min_Range>
+				<Activation_Max_Range> 170 </Activation_Max_Range>
+				<Pre_Generate_Anim_Type>  </Pre_Generate_Anim_Type>
+				<Post_Generate_Anim_Type> ANIM_IDLE</Post_Generate_Anim_Type>
+				<Generating_Anim_Type> ANIM_ATTACK </Generating_Anim_Type>
+				<Effect_Generator_Name> Novus_Hacker_Lockdown_Area_Effect_Generator </Effect_Generator_Name>
+				<Activation_Style> SPECIAL_ATTACK </Activation_Style>
+				<Max_Channel_Range> 220.0 </Max_Channel_Range>
+				<Excluded_Unit_Categories> Resource, Resource_INST, Hero, Huge, Organic, Stationary </Excluded_Unit_Categories>
+				<Applicable_Unit_Categories> Small, Piloted, Flying </Applicable_Unit_Categories>
+				<Disable_Special_Ability_Attribute> Is_Mind_Controlled </Disable_Special_Ability_Attribute>
+				<!--Need this so we can switch targets during lockdown when both are in range-->
+				<Deactivate_On_User_Attack_Order> true </Deactivate_On_User_Attack_Order>
+			</Effect_Generator_Ability>
+
+			<Effect_Generator_Ability Name="Novus_Hacker_Viral_Bomb_Special_Ability">
+				<Activation_Min_Range> 0 </Activation_Min_Range>
+				<Activation_Max_Range> 180 </Activation_Max_Range>
+				<Effect_Generator_Name> Novus_Hacker_Viral_Bomb_Effect_Generator </Effect_Generator_Name>
+				<Activation_Style> User_Input </Activation_Style>
+				<Pre_Generate_Anim_Type> Attack_special_b </Pre_Generate_Anim_Type>
+				<Generating_Anim_Type>  </Generating_Anim_Type>
+				<Post_Generate_Anim_Type>  </Post_Generate_Anim_Type>
+            <Face_Target> true </Face_Target>
+            <Stop_And_Clear_Target_On_Remove>Yes</Stop_And_Clear_Target_On_Remove>
+				<Movement_Should_Cancel_Ability>No</Movement_Should_Cancel_Ability>
+			</Effect_Generator_Ability>
+
+
+			<Effect_Generator_Ability Name="Novus_Hacker_Firewall_Special_Ability">
+				<Activation_Min_Range> 0 </Activation_Min_Range>
+				<Activation_Max_Range> 100 </Activation_Max_Range>
+				<Effect_Generator_Name> NovusHackerFirewallGenerator </Effect_Generator_Name>
+				<Activation_Style> User_Input </Activation_Style>
+				<Is_Self_Targeted>Yes</Is_Self_Targeted>
+				<Can_Target_Allies>Yes</Can_Target_Allies>
+				<Pre_Generate_Anim_Type />
+				<Generating_Anim_Type />
+				<Post_Generate_Anim_Type />
+			</Effect_Generator_Ability>
+
+		</Abilities>
+
+
+		<Effect_Generator_Data SubObjectList="Yes">
+				 
+			<!-- Non-upgraded version -->
+			<Effect_Generator Name="Novus_Hacker_Control_Turret_Effect_Generator">
+				<Should_Deactivate_Manually> true </Should_Deactivate_Manually>
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> Novus_Hacker_Control_Turret_Effect </Effect_Name>
+					<Duration> -1.0 </Duration>
+					<Target_Gathering_Mask> Target </Target_Gathering_Mask>
+					<Target_Filter_Categories> Stationary + CanAttack </Target_Filter_Categories>
+					<Target_Filter_C> Is_Enemy_Not_Immune_To_MC	</Target_Filter_C>
+					<Deactivate_Parent_If_Idle> true </Deactivate_Parent_If_Idle>
+					<Source_SFX_Event> SFX_Novus_Hacker_Turret_Fire_Loop </Source_SFX_Event>
+					<Source_SFX_Loop_Type>ResonanceBeamWeaponEffectSFX</Source_SFX_Loop_Type>
+               <Stop_Source_SFX_On_Deactivate> true </Stop_Source_SFX_On_Deactivate>
+				</Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry2">
+					<Effect_Name> Novus_Hacker_Lockdown_Self_Effect </Effect_Name>
+					<Duration> -1.0 </Duration>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+					<Deactivate_Parent_If_Idle> true </Deactivate_Parent_If_Idle>
+				</Effect_Generator_Entry>
+				
+			</Effect_Generator>
+
+			<!-- Upgraded version -->
+			<Effect_Generator Name="Novus_Hacker_Control_Turret_Area_Effect_Generator">
+				<Should_Deactivate_Manually> true </Should_Deactivate_Manually>
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> Novus_Hacker_Control_Turret_Area_Effect </Effect_Name>
+					<Duration> -1.0 </Duration>
+					<Target_Gathering_Mask> Target | TargetAE </Target_Gathering_Mask>
+					<Area_Effect_Radius> 75 </Area_Effect_Radius>
+					<Target_Filter_Categories> Stationary + CanAttack </Target_Filter_Categories>
+					<Target_Filter_C> Is_Enemy_Not_Immune_To_MC	</Target_Filter_C>
+					<Deactivate_Parent_If_Idle> true </Deactivate_Parent_If_Idle>
+					<Source_SFX_Event> SFX_Novus_Hacker_Turret_Fire_Loop </Source_SFX_Event>
+					<Source_SFX_Loop_Type>ResonanceBeamWeaponEffectSFX</Source_SFX_Loop_Type>
+					<Stop_Source_SFX_On_Deactivate> true </Stop_Source_SFX_On_Deactivate>
+				</Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry2">
+					<Effect_Name> Novus_Hacker_Lockdown_Area_Self_Effect </Effect_Name>
+					<Duration> -1.0 </Duration>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+					<Deactivate_Parent_If_Idle> true </Deactivate_Parent_If_Idle>
+				</Effect_Generator_Entry>
+				
+			</Effect_Generator>
+
+			<!-- Non-upgraded version -->
+			<Effect_Generator Name="Novus_Hacker_Lockdown_Effect_Generator">
+				<Should_Deactivate_Manually> true </Should_Deactivate_Manually>
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> Novus_Hacker_Lockdown_Effect </Effect_Name>
+					<Duration> -1.0 </Duration>
+					<Target_Gathering_Mask> Target </Target_Gathering_Mask>
+					<Target_Filter_Categories> Small + ~Resource + ~Resource_INST + ~Organic + ~Hero | Piloted + ~Resource + ~Resource_INST + ~Hero | Flying + ~Resource + ~Resource_INST + ~Hero</Target_Filter_Categories>
+					<Target_Filter_C>  Is_Enemy </Target_Filter_C>
+					<Deactivate_Parent_If_Idle> true </Deactivate_Parent_If_Idle>
+				</Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry2">
+					<Effect_Name> Novus_Hacker_Lockdown_Self_Effect </Effect_Name>
+					<Duration> -1.0 </Duration>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+					<Deactivate_Parent_If_Idle> true </Deactivate_Parent_If_Idle>
+				</Effect_Generator_Entry>
+			</Effect_Generator>
+
+			<!-- Upgraded version -->
+			<Effect_Generator Name="Novus_Hacker_Lockdown_Area_Effect_Generator">
+				<Should_Deactivate_Manually> true </Should_Deactivate_Manually>
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> Novus_Hacker_Lockdown_Area_Effect </Effect_Name>
+					<Duration> -1.0 </Duration>
+					<Target_Gathering_Mask> Target | TargetAE </Target_Gathering_Mask>
+					<Target_Filter_Categories> Small + ~Resource + ~Resource_INST+ ~Organic + ~Hero | Piloted + ~Huge + ~Resource + ~Resource_INST + ~Hero | Flying + ~Resource + ~Resource_INST + ~Hero</Target_Filter_Categories>
+					<Target_Filter_C>  Is_Enemy </Target_Filter_C>
+					<Area_Effect_Radius> 65 </Area_Effect_Radius>
+					<Deactivate_Parent_If_Idle> true </Deactivate_Parent_If_Idle>
+					<Source_SFX_Event> SFX_Novus_Lightning_Fire </Source_SFX_Event>
+					<Source_SFX_Loop_Type>ResonanceBeamWeaponEffectSFX</Source_SFX_Loop_Type>
+					<Stop_Source_SFX_On_Deactivate> true </Stop_Source_SFX_On_Deactivate>
+               <Can_Target_Dead_Objects>No</Can_Target_Dead_Objects>
+				</Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry2">
+					<Effect_Name> Novus_Hacker_Lockdown_Area_Self_Effect </Effect_Name>
+					<Duration> -1.0 </Duration>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+					<Deactivate_Parent_If_Idle> true </Deactivate_Parent_If_Idle>
+				</Effect_Generator_Entry>
+				
+			</Effect_Generator>
+
+			<Effect_Generator Name="Novus_Hacker_Viral_Bomb_Effect_Generator">
+				<Should_Deactivate_Manually> false </Should_Deactivate_Manually>
+				<Is_Independent_Generator> false </Is_Independent_Generator>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> Novus_Hacker_Viral_Bomb_Level_1_Effect </Effect_Name>
+					<Duration> 0.25 </Duration>
+					<Target_Gathering_Mask> Target </Target_Gathering_Mask>
+					<Target_Filter_C> Has_Virus_Level_1</Target_Filter_C>
+					<Should_Add_Hardpoints_As_Targets> true </Should_Add_Hardpoints_As_Targets>
+					<!-- placeholder sfx -->
+					<Target_SFX_Event> SFX_Alien_Electro_Pulse_Fire </Target_SFX_Event>
+				</Effect_Generator_Entry>
+
+			</Effect_Generator>
+
+            <Effect_Generator Name="Novus_Hacker_Viral_Bomb_Splash_Effect_Generator">
+                <Should_Deactivate_Manually> true </Should_Deactivate_Manually>
+                <Effect_Generator_Entry Name="Entry1">
+                    <Effect_Name> Novus_Hacker_Viral_Bomb_Splash_Effect </Effect_Name>
+                    <Duration>5.0</Duration>
+                    <Target_Gathering_Mask> TargetAE </Target_Gathering_Mask>
+                    <Area_Effect_Radius> 100 </Area_Effect_Radius>
+                    <Target_Filter_Categories> Small | Piloted + ~Huge</Target_Filter_Categories>
+                    <Target_Filter_C>  Is_Enemy </Target_Filter_C>
+                </Effect_Generator_Entry>
+            </Effect_Generator>
+
+
+			<!-- This generator will cleanse any harmful effects from this unit whenever it enters flow. Unlocked via research. -->
+			<Effect_Generator Name="NovusResearchNanitePurificationEffectGenerator">
+				<Application_Signals> OBJECT_ENTERED_FLOW </Application_Signals>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> NovusResearchNanitePurificationEffect </Effect_Name>
+					<Duration> 1.0 </Duration>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+				</Effect_Generator_Entry>
+			</Effect_Generator>
+
+			
+			<Effect_Generator Name="NovusHackerFirewallGenerator">
+				<Should_Deactivate_Manually> true </Should_Deactivate_Manually>
+				<Modal_Refresh_Frequency>10.0</Modal_Refresh_Frequency>
+				<Is_Independent_Generator> true </Is_Independent_Generator>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> NovusHackerFirewallCleanseEnemy </Effect_Name>
+					<Duration> 10.0 </Duration>
+					<Target_Gathering_Mask> SelfAE </Target_Gathering_Mask>
+					<Target_Filter_C> Is_Enemy </Target_Filter_C>
+					<Area_Effect_Radius> 85 </Area_Effect_Radius>
+				</Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry2">
+					<Effect_Name> NovusHackerFirewallCleanseVirus </Effect_Name>
+					<Duration> 10.0 </Duration>
+					<Target_Gathering_Mask> Self | SelfAE </Target_Gathering_Mask>
+					<Target_Filter_C> Is_Ally </Target_Filter_C>
+					<Area_Effect_Radius> 85 </Area_Effect_Radius>
+				</Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry3">
+					<Effect_Name> NovusHackerFirewallCleanseMindControl </Effect_Name>
+					<Duration> 10.0 </Duration>
+					<Target_Gathering_Mask> Self | SelfAE </Target_Gathering_Mask>
+					<Target_Filter_C> Is_Enemy </Target_Filter_C>
+					<Area_Effect_Radius> 85 </Area_Effect_Radius>
+				</Effect_Generator_Entry>
+				
+				<Effect_Generator_Entry Name="Entry4">
+					<Effect_Name> NovusHackerFirewallSelfVisualEffect </Effect_Name>
+					<Duration>0.5</Duration>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+				</Effect_Generator_Entry>
+
+			</Effect_Generator>
+
+			<!-- Standard Sell generator  - 06/28/2007 -->
+			<!--INCLUDE ".\Data\XML\Includes\Sell_Effect_Generators\NOVUS_Sell_Generators.xml" -->
+			
+		</Effect_Generator_Data>
+
+	</X12_Novus_Units>
+
+
+
+
+	<X12_Novus_Units Name="Novus_Hacker_Death_Clone_Resource">
+		<Variant_Of_Existing_Type>Novus_Hacker</Variant_Of_Existing_Type>
+      <Use_Base_Type_By_Default> false </Use_Base_Type_By_Default>
+
+		<CategoryMask> Resource_INST </CategoryMask>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+		<Is_Attackable>Yes</Is_Attackable>
+		
+		<LandBehavior>
+			HIDE_WHEN_FOGGED,
+			BALLISTIC,
+			RESOURCE,
+			EFFECT_REGISTRY,
+			ATTRIBUTE_DIRECTORY
+		</LandBehavior>
+
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 200 </Resource_Units>
+			<Resource_For_Faction> Alien, Novus, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> true </Is_Single_Resource>
+			<Use_Death_Behavior> true </Use_Death_Behavior>
+		</BehaviorType>
+
+		<BehaviorType Name="BallisticBehaviorType">
+			<Ballistic_Weight> 1.0 </Ballistic_Weight>
+			<Should_Face_Into_Knockback> true </Should_Face_Into_Knockback>
+		</BehaviorType>
+		
+		<BehaviorType Name="ProductionBehaviorType">
+			<Is_Strategic_Buildable_Type> No </Is_Strategic_Buildable_Type>
+		</BehaviorType>
+
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+	</X12_Novus_Units>
+
+
+
+
+
+</Novus_INF_Hacker_XML>

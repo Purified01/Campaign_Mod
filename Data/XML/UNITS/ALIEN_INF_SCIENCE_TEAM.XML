@@ -1,0 +1,709 @@
+<?xml version="1.0"?>
+<Alien_INF_Science_Team_XML>
+
+	<!-- **************************************************************************************** -->
+	<!-- *** TEAM(S) **************************************************************************** -->
+	<!-- **************************************************************************************** -->
+
+	<X10_Alien_Units Name="Alien_Team_Science_Greys">
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_UNIT_GRAY_INFANTRY</Text_ID>
+		<Show_Name>No</Show_Name>
+		<Select_Box_Scale>0</Select_Box_Scale>
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+		<GUI_Scene_Name> HealthBar_Scene_Small </GUI_Scene_Name>
+
+		<!-- ATTRIBUTES -->
+		<Create_Team_Type> Alien_Team_Science_Greys </Create_Team_Type>
+		<Max_Squad_Size> 3 </Max_Squad_Size>
+		<Company_Units> Alien_Science_Grey, Alien_Science_Grey, Alien_Science_Grey </Company_Units>
+		<CategoryMask> TeamContainer, Small, Organic, CanAttack, RadiationHelps </CategoryMask>
+		<Affiliation> Alien </Affiliation>
+		<Importance> 0.2 </Importance>
+		<Shot_Type> Infantry </Shot_Type>
+
+		<Attributes SubObjectList="Yes">
+			<Is_Phasable> true </Is_Phasable>
+			<Can_Ride_In_Vehicles> true </Can_Ride_In_Vehicles>
+			<Can_Garrison_Buildings> true </Can_Garrison_Buildings>
+			<Is_Immune_To_Virus> true </Is_Immune_To_Virus>
+			<Tactical_Build_Cost_Credits />
+			<Can_Garrison_Buildings> true </Can_Garrison_Buildings>
+		</Attributes>
+
+		<!-- MOVEMENT -->
+		<MovementClass>Infantry</MovementClass>
+		<OccupationStyle>1x1</OccupationStyle>
+		<Max_Speed> 1.5 </Max_Speed>
+		<!--  This needs to be the same speed as the objects in the team -->
+		<Max_Rate_Of_Turn>180.0</Max_Rate_Of_Turn>
+		<UnitCollisionClass> Infantry </UnitCollisionClass>
+		<Space_Layer> LandDynamic </Space_Layer>
+		<FormationRaggedness> 2.0 </FormationRaggedness>
+		<FormationSpacing> 2 </FormationSpacing>
+		<MovementPredictionInterval> 4.0 </MovementPredictionInterval>
+		<ContainerArrangement> Dartboard </ContainerArrangement>
+		<FormationOrder> 3 </FormationOrder>
+		<OverrideAcceleration> .1 </OverrideAcceleration>
+		<OverrideDeceleration> .1 </OverrideDeceleration>
+
+		<!-- CONFLICT -->
+		<Is_Attackable> true </Is_Attackable>
+		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
+		<Land_FOW_Reveal_Range>200.0</Land_FOW_Reveal_Range>
+
+		<Attack_Category_Restrictions> Resource_INST+Organic+Medium </Attack_Category_Restrictions>
+
+		<!-- BEHAVIORS -->
+		<Behavior>
+			TEAM,
+			SELECTABLE,
+			UNIT_AI
+		</Behavior>
+
+		<LandBehavior>
+			GUI,
+			REVEAL,
+			LAND_TEAM_CONTAINER_LOCOMOTOR,
+			TEAM_TARGETING,
+			FORMATION,
+			AI_RECRUITABLE,
+			UNIT_ABILITY,
+			ABILITY_COUNTDOWN,
+			EFFECT_REGISTRY,
+			EFFECT_GENERATOR,
+			AI_TARGET
+		</LandBehavior>
+
+		<BehaviorType Name="ProductionBehaviorType">
+			<Size_Value> 10 </Size_Value>
+			<Build_Cost_Credits> 10 </Build_Cost_Credits>
+			<Build_Time_Seconds> 5 </Build_Time_Seconds>
+			<Is_Research_Tech_Tree_Lockable> Yes </Is_Research_Tech_Tree_Lockable>
+			<Extra_Enablers_Increase_Build_Rate> 1.0 </Extra_Enablers_Increase_Build_Rate>
+		</BehaviorType>
+
+		<BehaviorType Name="BuildableObjectBehaviorType">
+			<Tactical_Production_Queue> Tactical_Units </Tactical_Production_Queue>
+			<Tactical_Build_Cost_Campaign> 700 </Tactical_Build_Cost_Campaign>
+			<Tactical_Build_Cost_Multiplayer> 700 </Tactical_Build_Cost_Multiplayer>
+			<Tactical_Build_Time_Seconds> 5 </Tactical_Build_Time_Seconds>
+			<Tactical_UI_Build_Queue_Order> 2 </Tactical_UI_Build_Queue_Order>
+		</BehaviorType>
+
+		<BehaviorType name="AIBehaviorType">
+			<AI_Combat_Power> 1 </AI_Combat_Power>
+			<Idle_Chase_Range> 40.0 </Idle_Chase_Range>
+			<Guard_Chase_Range> 160.0 </Guard_Chase_Range>
+			<Attack_Move_Response_Range> 120.0 </Attack_Move_Response_Range>
+			<Autonomous_Move_Extension_Vs_Attacker> 160.0 </Autonomous_Move_Extension_Vs_Attacker>
+			<AI_Target_Level> Group_Member </AI_Target_Level>
+			<Idle_AI_Thread_Name>Defensive_AI_Thread</Idle_AI_Thread_Name>
+		</BehaviorType>
+
+		<!-- DEBUG: Is this an obsolete behavior as we have changed the system? -->
+		<!-- AJA: The Dummy_Idle_Threads and DEFENSIVE_THREAD_... bits aren't obsolete. -->
+		<BehaviorType Name="LuaScriptBehaviorType">
+			<Lua_Land_Behaviors> ScienceTeam, Dummy_Idle_Threads </Lua_Land_Behaviors>
+			<Lua_Script_Data>
+				SCIENCE_TEAM_ANALYZE_TIME = { }
+				SCIENCE_TEAM_ANALYZE_TIME.ALIEN_TECH_DROP_1 = 20 -- 20 seconds to analyze
+				DEFENSIVE_THREAD_GUARD_SPECIFIC_TYPES = { }
+				DEFENSIVE_THREAD_GUARD_TYPE_CATEGORIES = "TacticalBuildableStructure | Hero"
+			</Lua_Script_Data>
+		</BehaviorType>
+
+		<BehaviorType Name="WeaponBehaviorType">
+			<Targeting_Max_Attack_Distance> 140.0 </Targeting_Max_Attack_Distance>
+			<Targeting_Priority_Set> Alien_Gray_Target_Priority </Targeting_Priority_Set>
+		</BehaviorType>
+
+		<BehaviorType Name="EncyclopediaBehaviorType">
+			<Icon_Name> i_icon_ai_lost_ones.tga </Icon_Name>
+		</BehaviorType>
+
+		<BehaviorType Name="CrushBehaviorType">
+			<Crush_Defense>10</Crush_Defense>
+		</BehaviorType>
+
+		<BehaviorType Name="FleetBehaviorType">
+			<!-- Maria 05.24.2006 - How much space does the unit take up -->
+			<Unit_Pop_Cap> 1 </Unit_Pop_Cap>
+		</BehaviorType>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability Name="Grey_Phase_Unit_Ability">
+				<Type>EFFECT_GENERATOR</Type>
+				<Expiration_Seconds>20.0</Expiration_Seconds>
+				<Recharge_Seconds>20.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> Grey_Phase_Ability </GUI_Activated_Ability_Name>
+				<Effect_Generator_Name> PhaseGenerator </Effect_Generator_Name>
+			</Unit_Ability>
+
+			<Unit_Ability Name="Grey_Electro_Pulse_Unit_Ability">
+				<Type>EFFECT_GENERATOR</Type>
+				<Expiration_Seconds>2</Expiration_Seconds>
+				<Recharge_Seconds>20.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> Grey_Electro_Pulse_Ability </GUI_Activated_Ability_Name>
+				<Effect_Generator_Name> ElectroPulseGenerator </Effect_Generator_Name>
+			</Unit_Ability>
+
+			<Unit_Ability Name="Grey_Radiate_Resource_Unit_Ability">
+				<Type>EFFECT_GENERATOR</Type>
+				<Expiration_Seconds>.1</Expiration_Seconds>
+				<Recharge_Seconds>.1</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> Grey_Spy_Radiation_Ability </GUI_Activated_Ability_Name>
+				<Effect_Generator_Name> SpyRadiationGenerator </Effect_Generator_Name>
+			</Unit_Ability>
+
+			<Unit_Ability Name="Grey_Deconstruct_Unit_Ability">
+				<Type>EFFECT_GENERATOR</Type>
+				<Expiration_Seconds>10000000</Expiration_Seconds>
+				<Recharge_Seconds>.10</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> Grey_Deconstruct_Ability </GUI_Activated_Ability_Name>
+				<Effect_Generator_Name> DeconstructGenerator </Effect_Generator_Name>
+			</Unit_Ability>
+
+
+		</Unit_Abilities_Data>
+
+
+		<Abilities SubObjectList="Yes">
+
+			<Effect_Generator_Ability Name="Grey_Phase_Ability">
+				<Effect_Generator_Name> PhaseGenerator </Effect_Generator_Name>
+				<Activation_Style> User_Input </Activation_Style>
+				<Is_Self_Targeted>True</Is_Self_Targeted>
+				<Can_Target_Allies>Yes</Can_Target_Allies>
+            <Self_Targeted_Clear_Attack>Yes</Self_Targeted_Clear_Attack>
+			</Effect_Generator_Ability>
+
+			<Effect_Generator_Ability Name="Grey_Electro_Pulse_Ability">
+            <Cancel_Special_Ability_Attribute>Is_Phased</Cancel_Special_Ability_Attribute>
+
+            <Effect_Generator_Name> ElectroPulseGenerator </Effect_Generator_Name>
+				<Activation_Style> User_Input </Activation_Style>
+				<Can_Target_Allies>Yes</Can_Target_Allies>
+				<Can_Target_Enemies>Yes</Can_Target_Enemies>
+				<Is_Self_Targeted>True</Is_Self_Targeted>
+			</Effect_Generator_Ability>
+
+			<Effect_Generator_Ability Name="Grey_Spy_Radiation_Ability">
+            <Cancel_Special_Ability_Attribute>Is_Phased</Cancel_Special_Ability_Attribute>
+
+            <Effect_Generator_Name> SpyRadiationGenerator </Effect_Generator_Name>
+				<Activation_Style> Special_Attack </Activation_Style>
+				<Activation_Min_Range> 0 </Activation_Min_Range>
+				<Activation_Max_Range> 100 </Activation_Max_Range>
+				<Generating_Anim_Type> ATTACK </Generating_Anim_Type>
+				<Can_Target_Allies>Yes</Can_Target_Allies>
+				<Can_Target_Enemies>Yes</Can_Target_Enemies>
+				<Can_Target_Neutral>Yes</Can_Target_Neutral>
+			</Effect_Generator_Ability>
+
+			<Effect_Generator_Ability Name="Grey_Deconstruct_Ability">
+            <Cancel_Special_Ability_Attribute>Is_Phased</Cancel_Special_Ability_Attribute>
+
+            <Effect_Generator_Name> DeconstructGenerator </Effect_Generator_Name>
+				<Activation_Style> Special_Attack </Activation_Style>
+				<Can_Target_Allies>No</Can_Target_Allies>
+				<Can_Target_Enemies>Yes</Can_Target_Enemies>
+				<Can_Target_Neutral>Yes</Can_Target_Neutral>
+				<Generating_Anim_Type> ATTACK </Generating_Anim_Type>
+				<Applicable_Unit_Categories> Stationary </Applicable_Unit_Categories>
+			</Effect_Generator_Ability>
+
+		</Abilities>
+
+		<Effect_Generator_Data SubObjectList="Yes">
+
+			<Effect_Generator Name="PhaseGenerator">
+				<Should_Deactivate_Manually> Yes </Should_Deactivate_Manually>
+				<Is_Independent_Generator>Yes</Is_Independent_Generator>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> PhasingEffect </Effect_Name>
+					<Duration> 20.0 </Duration>
+					<Target_Gathering_Mask> self </Target_Gathering_Mask>
+					<Source_SFX_Event> SFX_Alien_Phase_Fire </Source_SFX_Event>
+					<Stop_Source_SFX_On_Deactivate> true </Stop_Source_SFX_On_Deactivate>
+               <Deactivate_Parent_If_Idle>Yes</Deactivate_Parent_If_Idle>
+
+            </Effect_Generator_Entry>
+
+			</Effect_Generator>
+
+			<Effect_Generator Name="ElectroPulseGenerator">
+				<Should_Deactivate_Manually> false </Should_Deactivate_Manually>
+				<Is_Independent_Generator>Yes</Is_Independent_Generator>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> Alien_Grey_Friendly_Electro_Pulse </Effect_Name>
+					<Duration> 15.0 </Duration>
+					<Target_Gathering_Mask> Self | SelfAE </Target_Gathering_Mask>
+					<Area_Effect_Radius> 75.0 </Area_Effect_Radius>
+					<Target_Filter_C> Is_Ally </Target_Filter_C>
+					<Source_SFX_Event> SFX_Alien_Electro_Pulse_Fire </Source_SFX_Event>
+					<Stop_Source_SFX_On_Deactivate> true </Stop_Source_SFX_On_Deactivate>
+				</Effect_Generator_Entry>
+
+				<!-- MLL: Researched upgrade to normal electro pulse
+				<Effect_Generator_Entry Name="Entry1.5"> 
+					<Effect_Name> Alien_Grey_Friendly_Upgraded_Electro_Pulse </Effect_Name>
+					<Duration> -1.0 </Duration>
+					<Target_Gathering_Mask> Self | SelfAE </Target_Gathering_Mask>
+					<Area_Effect_Radius> 75.0 </Area_Effect_Radius>
+					<Target_Filter_Function_Name> Is_Ally_Filter_Function </Target_Filter_Function_Name>
+				</Effect_Generator_Entry>
+-->
+
+
+				<Effect_Generator_Entry Name="Entry2">
+					<Effect_Name> Alien_Grey_Electro_Pulse_Sparkles </Effect_Name>
+					<Duration> 2.0 </Duration>
+					<Target_Gathering_Mask> Self | SelfAE </Target_Gathering_Mask>
+					<Area_Effect_Radius> 75.0 </Area_Effect_Radius>
+					<Target_Filter_C> Is_Ally </Target_Filter_C>
+        </Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry3">
+					<Effect_Name> Alien_Grey_Enemy_Electro_Pulse </Effect_Name>
+					<Duration> 15.0 </Duration>
+					<Target_Gathering_Mask> SelfAE </Target_Gathering_Mask>
+					<Area_Effect_Radius> 75.0 </Area_Effect_Radius>
+					<Target_Filter_C> Is_Enemy </Target_Filter_C>
+				</Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry4">
+					<Effect_Name> Alien_Grey_Electro_Pulse_Sparkles </Effect_Name>
+					<Duration> 2.0 </Duration>
+					<Target_Gathering_Mask> SelfAE </Target_Gathering_Mask>
+					<Area_Effect_Radius> 75.0 </Area_Effect_Radius>
+					<Target_Filter_C> Is_Enemy </Target_Filter_C>
+				</Effect_Generator_Entry>
+
+			</Effect_Generator>
+
+			<Effect_Generator Name="SpyRadiationGenerator">
+				<Should_Deactivate_Manually> false </Should_Deactivate_Manually>
+				<Is_Independent_Generator>false</Is_Independent_Generator>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> Alien_Grey_Spy_Radiation_Effect </Effect_Name>
+					<Target_Gathering_Mask> Target </Target_Gathering_Mask>
+					<Target_Filter_C> Non_Radiated_Resource </Target_Filter_C>
+				</Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry2">
+					<Effect_Name> Alien_Grey_Electro_Pulse_Sparkles </Effect_Name>
+					<Duration> 2.0 </Duration>
+					<Target_Gathering_Mask> Target </Target_Gathering_Mask>
+					<Target_Filter_C> Non_Radiated_Resource </Target_Filter_C>
+				</Effect_Generator_Entry>
+
+			</Effect_Generator>
+
+			<Effect_Generator Name="DeconstructGenerator">
+				<Should_Deactivate_Manually> true </Should_Deactivate_Manually>
+				<Is_Independent_Generator>false</Is_Independent_Generator>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Duration> -1.0 </Duration>
+					<Effect_Name> Alien_Grey_Deconstruct_Effect </Effect_Name>
+					<Target_Gathering_Mask> Target </Target_Gathering_Mask>
+				</Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry2">
+					<Duration> -1.0 </Duration>
+					<Effect_Name> Alien_Grey_Electro_Pulse_Sparkles </Effect_Name>
+					<Target_Gathering_Mask> SelfAE </Target_Gathering_Mask>
+					<Area_Effect_Radius> 15.0 </Area_Effect_Radius>
+          <Target_Filter_C> Is_Ally </Target_Filter_C>
+        </Effect_Generator_Entry>
+
+			</Effect_Generator>
+
+			<Effect_Generator Name="BlockMindControlEffectGenerator">
+				<Should_Deactivate_Manually> true </Should_Deactivate_Manually>
+				<Starts_Active> true </Starts_Active>
+				<Is_Independent_Generator> true </Is_Independent_Generator>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> Alien_Grey_Block_Mind_Control </Effect_Name>
+					<Duration> -1 </Duration>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+				</Effect_Generator_Entry>
+			</Effect_Generator>
+
+		</Effect_Generator_Data>
+
+
+	</X10_Alien_Units>
+
+
+	<!-- **************************************************************************************** -->
+	<!-- *** UNIT(S) **************************************************************************** -->
+	<!-- **************************************************************************************** -->
+
+	<X10_Alien_Units Name="Alien_Science_Grey">
+
+		<!-- ART -->
+		<Land_Model_Name> AI_Grey.ALO </Land_Model_Name>
+		<!-- DEBUG: STUB -->
+		<Loop_Idle_Anim_00>No</Loop_Idle_Anim_00>
+		<SurfaceFX_Name>Generic_Footprint</SurfaceFX_Name>
+		<Scale_Factor>1.7</Scale_Factor>
+		<Occlusion_Silhouette_Enabled>1</Occlusion_Silhouette_Enabled>
+		<Death_Fade_Time>.25</Death_Fade_Time>
+		<Death_Persistence_Duration>5</Death_Persistence_Duration>
+      <AssetBank> BANK_ALIEN </AssetBank>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_UNIT_GRAY_INFANTRY</Text_ID>
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+		<GUI_Receives_Input> false </GUI_Receives_Input>
+		<GUI_Min_Scale> 0.3 </GUI_Min_Scale>
+		<GUI_Max_Scale> 2.5 </GUI_Max_Scale>
+		<GUI_Default_Scale> 0.5 </GUI_Default_Scale>
+		<GUI_World_Offset> 0.0, 0.0, -10 </GUI_World_Offset>
+		<Mouse_Collide_Override_Sphere_Radius> 10.0 </Mouse_Collide_Override_Sphere_Radius>
+		<Select_Box_Scale>15</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+
+		<!-- ATTRIBUTES -->
+		<Affiliation> Alien </Affiliation>
+		<Victory_Relevant> No </Victory_Relevant>
+		<CategoryMask> Small, Organic, CanAttack, RadiationHelps </CategoryMask>
+		<Create_Team> Yes </Create_Team>
+		<Weather_Category> Infantry </Weather_Category>
+		<Can_Fall_From_Bridge> true </Can_Fall_From_Bridge>
+
+		<Attributes SubObjectList="Yes">
+			<Is_Phasable> true </Is_Phasable>
+			<Can_Ride_In_Vehicles> true </Can_Ride_In_Vehicles>
+			<Can_Garrison_Buildings> true </Can_Garrison_Buildings>
+			<Is_Immune_To_Virus> true </Is_Immune_To_Virus>
+			<Tactical_Build_Cost_Credits />
+			<Can_Garrison_Buildings> true </Can_Garrison_Buildings>
+		</Attributes>
+
+		<!-- MOVEMENT -->
+		<OccupationStyle>1x1</OccupationStyle>
+		<MovementClass> Infantry </MovementClass>
+		<UnitCollisionClass> Infantry </UnitCollisionClass>
+		<Movement_Animation_Speed> 1.25 </Movement_Animation_Speed>
+		<Rotation_Animation_Speed> 20.0 </Rotation_Animation_Speed>
+		<Walk_Animation_Speed> .366 </Walk_Animation_Speed>
+		<Crouch_Animation_Speed> .537 </Crouch_Animation_Speed>
+		<Strafe_Animation_Speed> 1.25 </Strafe_Animation_Speed>
+		<Backpedal_Animation_Speed> 1.25 </Backpedal_Animation_Speed>
+		<Strafe_Max_Speed_Coefficient> 1 </Strafe_Max_Speed_Coefficient>
+		<Backpedal_Max_Speed_Coefficient> 1 </Backpedal_Max_Speed_Coefficient>
+		<Max_Speed>1.7</Max_Speed>
+		<Max_Rate_Of_Turn>30.0</Max_Rate_Of_Turn>
+		<Stopped_Rate_Of_Turn> 12.0 </Stopped_Rate_Of_Turn>
+		<Custom_Soft_Footprint_Radius> 4.0 </Custom_Soft_Footprint_Radius>
+		<Custom_Hard_XExtent> 2.5 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 2.5 </Custom_Hard_YExtent>
+		<FormationSpacing> .5 </FormationSpacing>
+		<FormationRaggedness> 3 </FormationRaggedness>
+		<MaxJiggleDistance> 3.0 </MaxJiggleDistance>
+		<OverrideAcceleration> .125 </OverrideAcceleration>
+		<OverrideDeceleration> .125 </OverrideDeceleration>
+		<FormationOrder> 2 </FormationOrder>
+		<Should_Move_Anim_Lockout_Attack_Anim> true </Should_Move_Anim_Lockout_Attack_Anim>
+
+		<!-- CONFLICT -->
+		<Is_Attackable> true </Is_Attackable>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
+
+		<Tactical_Health> 90 </Tactical_Health>
+
+		<Projectile_Types>Proj_Grey_Laser</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>1</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>2.0</Projectile_Fire_Recharge_Seconds>
+
+		<Attack_Category_Restrictions> </Attack_Category_Restrictions>
+
+		<!-- BEHAVIORS -->
+		<Behavior>
+			SELECTABLE,
+			RADAR_MAP_VISIBLE
+		</Behavior>
+
+		<LandBehavior>
+			DAMAGE_TRACKING,
+			EFFECT_REGISTRY,
+			TURRET,
+			SURFACE_FX,
+			LAND_TEAM_INFANTRY_LOCOMOTOR,
+			FORMATION,
+			IDLE,
+			WEAPON,
+			HIDE_WHEN_FOGGED,
+			UNIT_ABILITY,
+			ABILITY_COUNTDOWN,
+			EFFECT_GENERATOR,
+			BALLISTIC
+		</LandBehavior>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Armor_Type> Armor_Civilian_Vehicle_Light </Armor_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="WeaponBehaviorType">
+			<Targeting_Priority_Set> Alien_Gray_Target_Priority </Targeting_Priority_Set>
+		</BehaviorType>
+
+		<BehaviorType Name="ProductionBehaviorType">
+			<Size_Value> 10 </Size_Value>
+			<Build_Cost_Credits> 10 </Build_Cost_Credits>
+			<Build_Time_Seconds> 5 </Build_Time_Seconds>
+			<Is_Research_Tech_Tree_Lockable> Yes </Is_Research_Tech_Tree_Lockable>
+			<Extra_Enablers_Increase_Build_Rate> 1.0 </Extra_Enablers_Increase_Build_Rate>
+		</BehaviorType>
+
+		<BehaviorType Name="BuildableObjectBehaviorType">
+			<Tactical_Production_Queue> Tactical_Units </Tactical_Production_Queue>
+			<Tactical_Build_Cost_Campaign> 275 </Tactical_Build_Cost_Campaign>
+			<Tactical_Build_Cost_Multiplayer> 275 </Tactical_Build_Cost_Multiplayer>
+			<Tactical_Build_Time_Seconds> 9999 </Tactical_Build_Time_Seconds>
+		</BehaviorType>
+
+		<BehaviorType name="AIBehaviorType">
+			<AI_Combat_Power> 1 </AI_Combat_Power>
+			<Idle_Chase_Range> 1.0 </Idle_Chase_Range>
+			<Guard_Chase_Range> 1.0 </Guard_Chase_Range>
+			<Attack_Move_Response_Range> 1.0 </Attack_Move_Response_Range>
+			<Autonomous_Move_Extension_Vs_Attacker>1.0</Autonomous_Move_Extension_Vs_Attacker>
+			<AI_Target_Level>Group_Member</AI_Target_Level>
+		</BehaviorType>
+
+
+		<BehaviorType Name="TurretBehaviorType">
+			<Barrel_Bone_Name> Barrel </Barrel_Bone_Name>
+			<Turret_Bone_Name> Turret </Turret_Bone_Name>
+			<Turret_Rotate_Speed> 20.0 </Turret_Rotate_Speed>
+			<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+			<Apply_Y_Turret_Rotate_To_Axis>1</Apply_Y_Turret_Rotate_To_Axis>
+			<Turret_Rotate_Extent_Degrees> 45.0 </Turret_Rotate_Extent_Degrees>
+			<Turret_Elevate_Extent_Degrees> 10.0 </Turret_Elevate_Extent_Degrees>
+			<Ground_Vehicle_Turret_Target> Yes </Ground_Vehicle_Turret_Target>
+			<Ground_Infantry_Turret_Target> Yes </Ground_Infantry_Turret_Target>
+			<Turret_XY_Only> true </Turret_XY_Only>
+		</BehaviorType>
+
+		<BehaviorType Name="EncyclopediaBehaviorType">
+			<Icon_Name> i_icon_ai_lost_ones.tga </Icon_Name>
+		</BehaviorType>
+
+		<BehaviorType Name="BallisticBehaviorType">
+			<Ballistic_Weight>1.0</Ballistic_Weight>
+		</BehaviorType>
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.02  0.02</Radar_Icon_Size>
+		</BehaviorType>
+
+		<BehaviorType Name="BlobShadowBehaviorType">
+			<Blob_Shadow_Below_Detail_Level>3</Blob_Shadow_Below_Detail_Level>
+			<Blob_Shadow_Scale>10.0, 10.0</Blob_Shadow_Scale>
+			<Blob_Shadow_Bone_Name>B_Chest</Blob_Shadow_Bone_Name>
+			<Blob_Shadow_Below_Detail_Level>3</Blob_Shadow_Below_Detail_Level>
+			<Blob_Shadow_Scale>5.0, 5.0</Blob_Shadow_Scale>
+			<Blob_Shadow_Material_Name>Generic_Shadow</Blob_Shadow_Material_Name>
+			<Blob_Shadow_Bone_Name>B_Chest</Blob_Shadow_Bone_Name>
+			<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+			<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+		</BehaviorType>
+
+		<BehaviorType Name="SFXBehaviorType">
+			<SFXEvent_Fire>SFX_Alien_Infantry_Fire</SFXEvent_Fire>
+			<SFXEvent_Select>Unit_Select_Alien_Lost_One</SFXEvent_Select>
+			<SFXEvent_Move>Unit_Move_Alien_Lost_One</SFXEvent_Move>
+			<SFXEvent_Attack>Unit_Attack_Alien_Lost_One</SFXEvent_Attack>
+			<SFXEvent_Guard>Unit_Move_Alien_Lost_One</SFXEvent_Guard>
+			<Death_SFXEvent_Start_Die />
+
+			<!--  
+			<SFXEvent_Ambient_Moving> Ambient_Random_Chatter_Alien_Scientist </SFXEvent_Ambient_Moving>
+			<SFXEvent_Health_Low_Warning> Unit_Health_Low_Grey </SFXEvent_Health_Low_Warning>
+			<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Grey </SFXEvent_Health_Critical_Warning>
+			<SFXEvent_Enemy_Damaged_Health_Low_Warning> Ambient_Random_Chatter_Alien_Scientist </SFXEvent_Enemy_Damaged_Health_Low_Warning>
+			<SFXEvent_Enemy_Damaged_Health_Critical_Warning> Ambient_Random_Chatter_Alien_Scientist </SFXEvent_Enemy_Damaged_Health_Critical_Warning>
+			-->
+		</BehaviorType>
+
+		<BehaviorType Name="GUIBehaviorType">
+			<GUI_Bracket_Size>2</GUI_Bracket_Size>
+			<GUI_Bounds_Scale>0.5</GUI_Bounds_Scale>
+			<!-- Maria 05.18.2006 - Data needed for the models attached to the mouse in Global -->
+			<GUI_Is_Top_View> No </GUI_Is_Top_View>
+			<GUI_Rotate_Angle_Degrees> 0.0 </GUI_Rotate_Angle_Degrees>
+			<GUI_Is_Model_Shifted_Down> Yes </GUI_Is_Model_Shifted_Down>
+			<GUI_Shift_Factor> 4.7 </GUI_Shift_Factor>
+			<GUI_Strategic_Mode_Scale> 0.22 </GUI_Strategic_Mode_Scale>
+		</BehaviorType>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Specific_Death_Anim_Type> DIE </Specific_Death_Anim_Type>
+			<Death_Clone>Damage_Masari_Peacebringer_Disintegrate, Disintegrate_Death_Clone</Death_Clone>
+		</BehaviorType>
+
+		<BehaviorType Name="CrushBehaviorType">
+			<Crush_Defense>10</Crush_Defense>
+		</BehaviorType>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability Name="Grey_Phase_Unit_Ability">
+				<Type>EFFECT_GENERATOR</Type>
+				<Expiration_Seconds>20.0</Expiration_Seconds>
+				<Recharge_Seconds>30.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> Grey_Phase_Ability </GUI_Activated_Ability_Name>
+				<Effect_Generator_Name> PhaseGenerator </Effect_Generator_Name>
+			</Unit_Ability>
+
+		</Unit_Abilities_Data>
+
+
+		<Abilities SubObjectList="Yes">
+
+			<Effect_Generator_Ability Name="Grey_Phase_Ability">
+				<Effect_Generator_Name> PhaseGenerator </Effect_Generator_Name>
+				<Activation_Style> User_Input </Activation_Style>
+				<Can_Target_Allies>Yes</Can_Target_Allies>
+				<Is_Self_Targeted>True</Is_Self_Targeted>
+            <Self_Targeted_Clear_Attack>Yes</Self_Targeted_Clear_Attack>
+			</Effect_Generator_Ability>
+
+		</Abilities>
+
+		<Effect_Generator_Data SubObjectList="Yes">
+
+			<Effect_Generator Name="PhaseGenerator">
+				<Should_Deactivate_Manually> Yes </Should_Deactivate_Manually>
+				<Is_Independent_Generator>Yes</Is_Independent_Generator>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> PhasingEffect </Effect_Name>
+					<Duration> 20.0 </Duration>
+					<Target_Gathering_Mask> self </Target_Gathering_Mask>
+					<Source_SFX_Event> SFX_Alien_Phase_Fire </Source_SFX_Event>
+					<Stop_Source_SFX_On_Deactivate> true </Stop_Source_SFX_On_Deactivate>
+               <Deactivate_Parent_If_Idle>Yes</Deactivate_Parent_If_Idle>
+
+            </Effect_Generator_Entry>
+
+			</Effect_Generator>
+
+			<Effect_Generator Name="Researched_Shift_Field_Generator">
+				<Should_Deactivate_Manually> false </Should_Deactivate_Manually>
+				<Starts_Active> false </Starts_Active>
+				<Is_Independent_Generator> true </Is_Independent_Generator>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> Shift_Field_Effect </Effect_Name>
+					<Duration> -1 </Duration>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+				</Effect_Generator_Entry>
+			</Effect_Generator>
+
+
+		</Effect_Generator_Data>
+
+
+	</X10_Alien_Units>
+
+	
+
+
+	<!-- **************************************************************************************** -->
+	<!-- *** PROJECTILES ************************************************************************ -->
+	<!-- **************************************************************************************** -->
+
+	<Projectile Name="Proj_Grey_Laser">
+
+		<!-- ART -->
+		<Land_Model_Name>p_alien_gun_projectile.ALO</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+      <AssetBank> BANK_ALIEN </AssetBank>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+		<!-- MOVEMENT -->
+		<Max_Speed>20.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
+
+		<!-- CONFLICT -->
+		<AI_Combat_Power> 1 </AI_Combat_Power>
+
+		<!-- BEHAVIORS -->
+		<Behavior>
+			PROJECTILE,
+			HIDE_WHEN_FOGGED
+		</Behavior>
+
+		<!-- Oksana: CAN'T have acceleration on projectile - will not work with INTERCEPT CODE!!!! -->
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Damage_Type> Damage_Alien_Gray_Plasma_Rifle </Damage_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="ProjectileBehaviorType">
+			<Projectile_Damages_Random_Hard_Points>No</Projectile_Damages_Random_Hard_Points>
+			<Projectile_Category>DEFAULT</Projectile_Category>
+			<Projectile_Max_Flight_Distance>5000.0</Projectile_Max_Flight_Distance>
+			<Projectile_Damage>12.0</Projectile_Damage>
+			<Projectile_Does_Shield_Damage>No</Projectile_Does_Shield_Damage>
+			<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+			<Projectile_Object_Detonation_Particle>Alien_Target_Hit</Projectile_Object_Detonation_Particle>
+			<Projectile_Object_Armor_Reduced_Detonation_Particle>Alien_Target_Hit</Projectile_Object_Armor_Reduced_Detonation_Particle>
+			<Projectile_Ground_Detonation_Particle>Alien_Ground_Hit</Projectile_Ground_Detonation_Particle>
+			<Projectile_Lifetime_Detonation_Particle>Alien_Ground_Hit</Projectile_Lifetime_Detonation_Particle>
+			<Projectile_Absorbed_By_Shields_Particle />
+			<Projectile_SFXEvent_Detonate>SFX_Alien_Detonation_1</Projectile_SFXEvent_Detonate>
+			<Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Alien_Small_Damage_Detonation </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
+		</BehaviorType>
+
+	</Projectile>
+
+
+	<!-- **************************************************************************************** -->
+	<!-- *** EDITOR SPAWN MARKER **************************************************************** -->
+	<!-- **************************************************************************************** -->
+
+	<X10_Alien_Units Name="Alien_Team_Science_Greys_Spawner">
+
+		<!-- ART -->
+		<Land_Model_Name>AI_Grey.ALO</Land_Model_Name>
+		<Scale_Factor> 5.0 </Scale_Factor>
+      <AssetBank> BANK_ALIEN </AssetBank>
+
+		<!-- INTERFACE -->
+		<Text_ID> TEXT_STORY_TRIGGER_ZONE </Text_ID>
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+		<!-- ATTRIBUTES -->
+		<Affiliation>Alien</Affiliation>
+		<Is_Marker>Yes</Is_Marker>
+		<Is_Decoration>No</Is_Decoration>
+
+		<!-- BEHAVIORS -->
+		<Behavior>MARKER, HINT</Behavior>
+
+		<BehaviorType Name="LuaScriptBehaviorType">
+			<Lua_Land_Behaviors> MarkerSpawner </Lua_Land_Behaviors>
+			<Lua_Script_Data>
+				MARKER_SPAWNER_TYPE = "Alien_Team_Science_Greys"
+			</Lua_Script_Data>
+		</BehaviorType>
+
+	</X10_Alien_Units>
+
+</Alien_INF_Science_Team_XML>

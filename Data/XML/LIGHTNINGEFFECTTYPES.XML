@@ -1,0 +1,2104 @@
+<?xml version="1.0"?>
+<LightningEffects>
+<!-- General Effects -->
+	<LightningEffect name="Default">
+		
+		<Texture_Name>lightning_default.tga</Texture_Name>
+		<Texture_Repeat>0.0</Texture_Repeat>
+		<Texture_Scroll>0.0</Texture_Scroll>
+		
+		<Width_Max>4</Width_Max>
+		<Width_Min>7</Width_Min>
+      <Displace>0.001, 0.001, 0.001</Displace>
+      <Detail>1000</Detail>
+      <Color_Start>100,100,255,255</Color_Start>
+		<Color_End>0,0,0,0</Color_End>
+		<Fadeout_Time_Max>3.0</Fadeout_Time_Max>
+		<Fadeout_Time_Min>0.3</Fadeout_Time_Min>
+		
+		<Number_Bolts>20</Number_Bolts>
+		<Bolt_Creation_Interval_Min>0.001</Bolt_Creation_Interval_Min> 
+		<Bolt_Creation_Interval_Max>0.2</Bolt_Creation_Interval_Max> 
+		
+	</LightningEffect>
+	
+	
+	<!-- Effect test -->
+	<LightningEffect name="Effect_Test_Lightning">
+		<Texture_Name>lightning_default.tga</Texture_Name>
+
+      <Width_Max>2</Width_Max>
+      <Width_Min>1</Width_Min>
+      <Displace>0.001, 0.001, 0.001</Displace>
+      <Detail>1000</Detail>
+      <Color_Start>188,175,78,255</Color_Start>
+      <Color_End>188,175,78,255</Color_End>
+      <Fadeout_Time_Max>100</Fadeout_Time_Max>
+      <Fadeout_Time_Min>100</Fadeout_Time_Min>
+     
+		<Update_All>true</Update_All>
+		<Number_Bolts>0</Number_Bolts>
+		<Bolt_Creation_Interval_Min>0.1</Bolt_Creation_Interval_Min> 
+		<Bolt_Creation_Interval_Max>0.2</Bolt_Creation_Interval_Max> 
+	
+	</LightningEffect>
+	
+
+<!-- Nature -->
+	<!-- Tornado effect -->
+	<LightningEffect name="Tornado_Lightning">
+	
+		<Texture_Name>lightning_default.tga</Texture_Name>
+		<Texture_Repeat>1.5</Texture_Repeat>
+		<Texture_Scroll>5.0</Texture_Scroll>
+		
+		<Width_Max>3</Width_Max>
+		<Width_Min>.5</Width_Min>
+		<Displace>0.5, 0.5, 0.0</Displace>
+		<Detail>.5</Detail>	
+		<Color_Start>100,100,255,255</Color_Start>
+		<Color_End>0,0,0,0</Color_End>
+		<Fadeout_Time_Max>.4</Fadeout_Time_Max>
+		<Fadeout_Time_Min>.2</Fadeout_Time_Min>
+		
+		<Update_All>true</Update_All>
+		<Number_Bolts>3</Number_Bolts>
+		<Bolt_Creation_Interval_Min>0.0</Bolt_Creation_Interval_Min> 
+		<Bolt_Creation_Interval_Max>0.001</Bolt_Creation_Interval_Max> 
+	
+	</LightningEffect>
+	<LightningEffect name="Normal_Lightning">
+	
+		<Texture_Name>lightning_default1.tga</Texture_Name>
+		<Texture_Repeat>1.5</Texture_Repeat>
+		<Texture_Scroll>1</Texture_Scroll>
+		
+		<Width_Max>3</Width_Max>
+		<Width_Min>.5</Width_Min>
+		<Displace>0.5, 0.5, 0.3</Displace>
+		<Detail>1.0</Detail>	
+		<Color_Start>200,200,255,255</Color_Start>
+		<Color_End>0,0,0,0</Color_End>
+		<Fadeout_Time_Max>.3</Fadeout_Time_Max>
+		<Fadeout_Time_Min>.1</Fadeout_Time_Min>
+		
+		<Update_All>true</Update_All>
+		<Number_Bolts>1</Number_Bolts>
+		<Bolt_Creation_Interval_Min>30</Bolt_Creation_Interval_Min> 
+		<Bolt_Creation_Interval_Max>30</Bolt_Creation_Interval_Max> 
+	
+	</LightningEffect>
+	
+	<LightningEffect name="Violent_Lightning">
+	
+		<Texture_Name>lightning_default1.tga</Texture_Name>
+		<Texture_Repeat>1.5</Texture_Repeat>
+		<Texture_Scroll>1</Texture_Scroll>
+		
+		<Width_Max>5</Width_Max>
+		<Width_Min>1</Width_Min>
+		<Displace>0.8, 0.8, 0.3</Displace>
+		<Detail>.6</Detail>	
+		<Color_Start>200,200,255,255</Color_Start>
+		<Color_End>0,0,0,0</Color_End>
+		<Fadeout_Time_Max>.5</Fadeout_Time_Max>
+		<Fadeout_Time_Min>.3</Fadeout_Time_Min>
+		
+		<Update_All>true</Update_All>
+		<Number_Bolts>2</Number_Bolts>
+		<Bolt_Creation_Interval_Min>30</Bolt_Creation_Interval_Min> 
+		<Bolt_Creation_Interval_Max>30</Bolt_Creation_Interval_Max> 
+	
+	</LightningEffect>
+<!-- End Nature -->
+	
+<!-- Alien Specific -->
+
+	<!-- Rotating beam for Cylinder -->
+	<LightningEffect name="Cylinder_Radiation_Beam">
+	
+		
+		<Texture_Name>lightning_default.tga</Texture_Name>
+		<Texture_Repeat>0.0</Texture_Repeat>
+		<Texture_Scroll>0.0</Texture_Scroll>
+
+		<Width_Max>.5</Width_Max>
+		<Width_Min>0.1</Width_Min>
+		<Displace>0.01, 0.01, 0.01</Displace>
+		<Detail>0.1</Detail>	
+		<Color_Start>255, 255, 0,0</Color_Start>
+		<Color_End>0, 255, 0,255</Color_End>
+		<Fadeout_Time_Max>101</Fadeout_Time_Max>
+		<Fadeout_Time_Min>100</Fadeout_Time_Min>
+		<Update_All>true</Update_All>
+		<Cycles_Per_Distance>-0.01</Cycles_Per_Distance>
+		<Rotations_Per_Second>-2</Rotations_Per_Second>
+		<Radius>3</Radius>
+     
+		<Number_Bolts>3</Number_Bolts>
+		<Bolt_Creation_Interval_Min>0.0</Bolt_Creation_Interval_Min> 
+		<Bolt_Creation_Interval_Max>0.1</Bolt_Creation_Interval_Max> 
+
+		<Light_Source_Name>L_Radiation_Beam</Light_Source_Name>
+
+	</LightningEffect>
+
+<LightningEffect name="Cylinder_Radiation_Beam_Core">
+	
+		<Texture_Name>AB_Habitat_Blur.tga</Texture_Name>
+		<Texture_Repeat>0.0</Texture_Repeat>
+		<Texture_Scroll>0.0</Texture_Scroll>
+		
+		<Width_Max>10</Width_Max>
+		<Width_Min>5</Width_Min>
+		<Displace>0.01, 0.01, 0.01</Displace>
+      <Detail>1000</Detail>
+      <Color_Start>0,255,0,125</Color_Start>
+		<Color_End>0,255,0,0</Color_End>
+		<Fadeout_Time_Max>0.8</Fadeout_Time_Max>
+		<Fadeout_Time_Min>0.3</Fadeout_Time_Min>
+		
+		<Update_All>true</Update_All>
+		<Number_Bolts>1</Number_Bolts>
+		<Bolt_Creation_Interval_Min>0.0</Bolt_Creation_Interval_Min> 
+		<Bolt_Creation_Interval_Max>0.1</Bolt_Creation_Interval_Max> 
+
+	</LightningEffect>
+	
+	<LightningEffect name="Mind_Control_Lightning">
+	
+		<Texture_Name>p_tractorbeam.tga</Texture_Name>
+		<Texture_Repeat>10</Texture_Repeat>
+		<Texture_Scroll>20</Texture_Scroll>
+
+		<Width_Max>3</Width_Max>
+		<Width_Min>1</Width_Min>
+		<Displace>0.02, 0.02, 0.02</Displace>
+		<Detail>.5</Detail>	
+		<Color_Start>255, 255, 0,255</Color_Start>
+		<Color_End>0, 255, 0,255</Color_End>
+		<Fadeout_Time_Max>10000</Fadeout_Time_Max>
+		<Fadeout_Time_Min>10000</Fadeout_Time_Min>
+		<Update_All>true</Update_All>
+		<Cycles_Per_Distance>-0.01</Cycles_Per_Distance>
+		<Rotations_Per_Second>-2</Rotations_Per_Second>
+		<Radius>2</Radius>
+     
+		<Number_Bolts>2</Number_Bolts>
+		<Bolt_Creation_Interval_Min>0.0</Bolt_Creation_Interval_Min> 
+		<Bolt_Creation_Interval_Max>0.1</Bolt_Creation_Interval_Max> 
+
+		<Light_Source_Name>L_Radiation_Beam</Light_Source_Name>
+	
+	</LightningEffect>
+
+
+	<LightningEffect name="Vertigo_Viral_Control_Lightning">
+		<Texture_Name>p_tractorbeam.tga</Texture_Name>
+		<Texture_Repeat>10</Texture_Repeat>
+		<Texture_Scroll>20</Texture_Scroll>
+
+		<Width_Max>3</Width_Max>
+		<Width_Min>1</Width_Min>
+		<Displace>0.02, 0.02, 0.02</Displace>
+		<Detail>.5</Detail>
+		<Color_Start>0, 120, 255,255</Color_Start>
+		<Color_End>172, 211, 255,255</Color_End>
+		<Fadeout_Time_Max>101</Fadeout_Time_Max>
+		<Fadeout_Time_Min>100</Fadeout_Time_Min>
+		<Update_All>true</Update_All>
+		<Cycles_Per_Distance>-0.01</Cycles_Per_Distance>
+		<Rotations_Per_Second>-2</Rotations_Per_Second>
+		<Radius>2</Radius>
+
+		<Number_Bolts>2</Number_Bolts>
+		<Bolt_Creation_Interval_Min>0.0</Bolt_Creation_Interval_Min>
+		<Bolt_Creation_Interval_Max>0.1</Bolt_Creation_Interval_Max>
+	</LightningEffect>
+	
+	
+	
+	
+	<LightningEffect name="Manipulator_Burden_Lightning">
+	
+		<Render_Mode> ALPHA </Render_Mode>
+		<Texture_Name>lightning_default_black.tga</Texture_Name>
+		<Texture_Repeat>1.5</Texture_Repeat>
+		<Texture_Scroll>5.0</Texture_Scroll>
+		
+		<Width_Max>2.50</Width_Max>
+		<Width_Min>2.0</Width_Min>
+		<Displace>0.1, 0.1, 0.0</Displace>
+		<Detail>1000</Detail>	
+		<Color_Start>255,255,25,255</Color_Start>
+		<Color_End>0,0,0,0</Color_End>
+		<Fadeout_Time_Max>3.0.0</Fadeout_Time_Max>
+		<Fadeout_Time_Min>2.4</Fadeout_Time_Min>
+		<Update_All>true</Update_All>
+		<Cycles_Per_Distance>-0.01</Cycles_Per_Distance>
+		<Rotations_Per_Second> 0.25 </Rotations_Per_Second>
+		<Radius>6</Radius>
+        <Radius_Inc_Per_Second> 0.0 </Radius_Inc_Per_Second>
+		
+		<Update_All>true</Update_All>
+		<Number_Bolts>1</Number_Bolts>
+		<Bolt_Creation_Interval_Min>0.8</Bolt_Creation_Interval_Min> 
+		<Bolt_Creation_Interval_Max>1.0</Bolt_Creation_Interval_Max> 
+
+		<!-- No need for a light on a black beam: Jeff <Light_Source_Name>L_Manipulator_Burden</Light_Source_Name>	-->
+	
+	</LightningEffect>
+
+	<LightningEffect name="Manipulator_Beckon_Lightning">
+	
+		<Render_Mode>ALPHA</Render_Mode>
+		<Texture_Name>lightning_default_black.tga</Texture_Name>
+		<Texture_Repeat>1.5</Texture_Repeat>
+		<Texture_Scroll>5.0</Texture_Scroll>
+		
+		<Width_Max>1.8</Width_Max>
+		<Width_Min>1.5</Width_Min>
+		<Displace>0.2, 0.2, 0.0</Displace>
+      <Detail>1000</Detail>
+      <Color_Start>0,0,0,255</Color_Start>
+		<Color_End>0,0,0,0</Color_End>
+		<Fadeout_Time_Max>1.6</Fadeout_Time_Max>
+		<Fadeout_Time_Min>1.2</Fadeout_Time_Min>
+		<Update_All>true</Update_All>
+		<Cycles_Per_Distance>-0.01</Cycles_Per_Distance>
+		<Rotations_Per_Second> -0.8 </Rotations_Per_Second>
+		<Radius>8</Radius>
+        <Radius_Inc_Per_Second> 0.0</Radius_Inc_Per_Second>
+		
+		<Update_All>true</Update_All>
+		<Number_Bolts>-2</Number_Bolts>
+		<Bolt_Creation_Interval_Min>0.6</Bolt_Creation_Interval_Min> 
+		<Bolt_Creation_Interval_Max>0.8</Bolt_Creation_Interval_Max> 
+
+	
+	</LightningEffect>
+
+   <LightningEffect name="Nufai_Tenrils_Lightning">
+
+      <Render_Mode>ALPHA</Render_Mode>
+      <Texture_Name>lightning_default_black.tga</Texture_Name>
+      <Texture_Repeat>1.5</Texture_Repeat>
+      <Texture_Scroll>5.0</Texture_Scroll>
+
+      <Width_Max>1.8</Width_Max>
+      <Width_Min>1.5</Width_Min>
+      <Displace>0.2, 0.2, 0.0</Displace>
+      <Detail>1000</Detail>
+      <Color_Start>0,0,0,255</Color_Start>
+      <Color_End>0,0,0,0</Color_End>
+      <Fadeout_Time_Max>1.6</Fadeout_Time_Max>
+      <Fadeout_Time_Min>1.2</Fadeout_Time_Min>
+      <Update_All>true</Update_All>
+      <Cycles_Per_Distance>-0.01</Cycles_Per_Distance>
+      <Rotations_Per_Second> -0.8 </Rotations_Per_Second>
+      <Radius>8</Radius>
+      <Radius_Inc_Per_Second> 0.0</Radius_Inc_Per_Second>
+
+      <Update_All>true</Update_All>
+      <Number_Bolts>-2</Number_Bolts>
+      <Bolt_Creation_Interval_Min>0.6</Bolt_Creation_Interval_Min>
+      <Bolt_Creation_Interval_Max>0.8</Bolt_Creation_Interval_Max>
+
+
+   </LightningEffect>
+	
+	<LightningEffect name="Carve_Glyph_Beam">
+	
+		<Texture_Name>lightning_default.tga</Texture_Name>
+		<Texture_Repeat>0.0</Texture_Repeat>
+		<Texture_Scroll>0.0</Texture_Scroll>
+		
+		<Width_Max>2</Width_Max>
+		<Width_Min>1</Width_Min>
+		<Displace>0.1, 0.1, 0.1</Displace>
+      <Detail>1000</Detail>
+      <Color_Start>255,255,128,255</Color_Start>
+		<Color_End>0,0,0,0</Color_End>
+		<Fadeout_Time_Max>0.8</Fadeout_Time_Max>
+		<Fadeout_Time_Min>0.3</Fadeout_Time_Min>
+		
+		<Update_All>true</Update_All>
+		<Number_Bolts>0</Number_Bolts>
+		<Bolt_Creation_Interval_Min>0.3</Bolt_Creation_Interval_Min> 
+		<Bolt_Creation_Interval_Max>0.5</Bolt_Creation_Interval_Max> 
+	
+  </LightningEffect>
+
+  <LightningEffect name="Vertigo_upload_Beam">
+
+    <Texture_Name>p_torrent_beams.tga</Texture_Name>
+    <Texture_Repeat>5.0</Texture_Repeat>
+    <Texture_Scroll>5.0</Texture_Scroll>
+
+    <Width_Max>4</Width_Max>
+    <Width_Min>2</Width_Min>
+    <Displace>0.2, 0.2, 0.0</Displace>
+    <Detail>1000</Detail>
+    <Color_Start>0,168,255,255</Color_Start>
+    <Color_End>59,101,163,0</Color_End>
+    <Fadeout_Time_Max>0.8</Fadeout_Time_Max>
+    <Fadeout_Time_Min>0.3</Fadeout_Time_Min>
+    <Update_All>true</Update_All>
+    <Cycles_Per_Distance>-0.01</Cycles_Per_Distance>
+    <Rotations_Per_Second> -0.8 </Rotations_Per_Second>
+    <Radius>8</Radius>
+    <Radius_Inc_Per_Second> 0.0</Radius_Inc_Per_Second>
+
+    <Update_All>true</Update_All>
+    <Number_Bolts>-3</Number_Bolts>
+    <Bolt_Creation_Interval_Min>0.1</Bolt_Creation_Interval_Min>
+    <Bolt_Creation_Interval_Max>0.1</Bolt_Creation_Interval_Max>
+
+  </LightningEffect>
+	
+
+	<LightningEffect name="Scarn_Beam_Effect">
+	
+		<Texture_Name>lightning_default.tga</Texture_Name>
+		<Texture_Repeat>0.0</Texture_Repeat>
+		<Texture_Scroll>0.0</Texture_Scroll>
+		
+		<Width_Max>2</Width_Max>
+		<Width_Min>2</Width_Min>
+		<Displace>0.01, 0.01, 0.01</Displace>
+      <Detail>1000</Detail>
+      <Color_Start>255,100,100,255</Color_Start>
+		<Color_End>0,0,0,0</Color_End>
+		<Fadeout_Time_Max>0.8</Fadeout_Time_Max>
+		<Fadeout_Time_Min>0.3</Fadeout_Time_Min>
+		
+		<Update_All>true</Update_All>
+		<Number_Bolts>1</Number_Bolts>
+		<Bolt_Creation_Interval_Min>0.0</Bolt_Creation_Interval_Min> 
+		<Bolt_Creation_Interval_Max>0.1</Bolt_Creation_Interval_Max> 
+	
+	</LightningEffect>
+	
+	<LightningEffect name="Teleport_Spawn_Beam">
+	
+		<Texture_Name>lightning_default.tga</Texture_Name>
+		<Texture_Repeat>0.0</Texture_Repeat>
+		<Texture_Scroll>0.0</Texture_Scroll>
+		
+		<Width_Max>6</Width_Max>
+		<Width_Min>5</Width_Min>
+		<Displace>0.01, 0.01, 0.01</Displace>
+      <Detail>1000</Detail>
+      <Color_Start>255,255,128,255</Color_Start>
+		<Color_End>0,0,0,0</Color_End>
+		<Fadeout_Time_Max>0.8</Fadeout_Time_Max>
+		<Fadeout_Time_Min>0.3</Fadeout_Time_Min>
+		
+		<Update_All>true</Update_All>
+		<Number_Bolts>1</Number_Bolts>
+		<Bolt_Creation_Interval_Min>0.0</Bolt_Creation_Interval_Min> 
+		<Bolt_Creation_Interval_Max>0.1</Bolt_Creation_Interval_Max> 
+	
+	</LightningEffect>
+	
+	<!-- Invasion M2 Demo (fired from spider walker hard point) -->
+	<LightningEffect name="Radiation_Beam">
+	
+		<Texture_Name>lightning_default.tga</Texture_Name>
+		<Texture_Repeat>0.0</Texture_Repeat>
+		<Texture_Scroll>0.0</Texture_Scroll>
+		
+		<Width_Max>2</Width_Max>
+		<Width_Min>2</Width_Min>
+		<Displace>0.01, 0.01, 0.01</Displace>
+      <Detail>1000</Detail>
+      <Color_Start>100,255,100,255</Color_Start>
+		<Color_End>0,0,0,0</Color_End>
+		<Fadeout_Time_Max>0.8</Fadeout_Time_Max>
+		<Fadeout_Time_Min>0.3</Fadeout_Time_Min>
+		
+		<Update_All>true</Update_All>
+		<Number_Bolts>1</Number_Bolts>
+		<Bolt_Creation_Interval_Min>0.0</Bolt_Creation_Interval_Min> 
+		<Bolt_Creation_Interval_Max>0.1</Bolt_Creation_Interval_Max> 
+
+		<Light_Source_Name>L_Radiation_Beam</Light_Source_Name>	
+	</LightningEffect>
+  
+
+   <LightningEffect name="Novus_Blackhole_Lightning">
+
+      <Texture_Name>lightning_default.tga</Texture_Name>
+      <Texture_Repeat>1.5</Texture_Repeat>
+      <Texture_Scroll>5.0</Texture_Scroll>
+
+      <Width_Max>2`</Width_Max>
+      <Width_Min>.5</Width_Min>
+      <Displace>0.5, 0.5, 0.0</Displace>
+      <Detail>1.0</Detail>
+      <Color_Start>100,100,255,255</Color_Start>
+      <Color_End>0,0,0,0</Color_End>
+      <Fadeout_Time_Max>.4</Fadeout_Time_Max>
+      <Fadeout_Time_Min>.2</Fadeout_Time_Min>
+
+      <Update_All>true</Update_All>
+      <Number_Bolts>1</Number_Bolts>
+      <Bolt_Creation_Interval_Min>3.0</Bolt_Creation_Interval_Min>
+      <Bolt_Creation_Interval_Max>10.0</Bolt_Creation_Interval_Max>
+
+   </LightningEffect>
+
+
+	<LightningEffect name="Novus_Hacker_Connect_core">
+
+		<Texture_Name>nv_virus.tga</Texture_Name>
+		<Texture_Repeat>10</Texture_Repeat>
+		<Texture_Scroll>0</Texture_Scroll>
+
+		<Width_Max>2.0</Width_Max>
+		<Width_Min>1.0</Width_Min>
+		<Displace>3.0, 3.0, 3.0</Displace>
+		<Detail>300</Detail>
+		<Color_Start>0,150,255,255</Color_Start>
+		<Color_End>0,100,255,0</Color_End>
+		<Fadeout_Time_Max>.5</Fadeout_Time_Max>
+		<Fadeout_Time_Min>.3</Fadeout_Time_Min>
+		<Light_Source_Name>L_NI_Hacker_core</Light_Source_Name>
+		<Update_All>true</Update_All>
+		<Number_Bolts>0</Number_Bolts>
+		<Bolt_Creation_Interval_Min>.05</Bolt_Creation_Interval_Min>
+		<Bolt_Creation_Interval_Max>.05</Bolt_Creation_Interval_Max>
+
+	</LightningEffect>
+
+	<LightningEffect name="Novus_Hacker_Connect_spark">
+
+		<Texture_Name>lightning_default.tga</Texture_Name>
+		<Texture_Repeat>1.5</Texture_Repeat>
+		<Texture_Scroll>5.0</Texture_Scroll>
+
+		<Width_Max>.8</Width_Max>
+		<Width_Min>.5</Width_Min>
+		<Displace>0.05, 0.05, .03</Displace>
+      <Detail>1000</Detail>
+      <Color_Start>150,100,255,255</Color_Start>
+		<Color_End>0,0,0,0</Color_End>
+		<Fadeout_Time_Max>.15</Fadeout_Time_Max>
+		<Fadeout_Time_Min>.1</Fadeout_Time_Min>
+
+		<Update_All>true</Update_All>
+		<Number_Bolts>0</Number_Bolts>
+		<Bolt_Creation_Interval_Min>0.05</Bolt_Creation_Interval_Min>
+		<Bolt_Creation_Interval_Max>0.1</Bolt_Creation_Interval_Max>
+
+	</LightningEffect>
+
+  <LightningEffect name="Novus_Ohm_Capture_Beam">
+
+    <Texture_Name>nv_virus.tga</Texture_Name>
+    <Texture_Repeat>10</Texture_Repeat>
+    <Texture_Scroll>1</Texture_Scroll>
+
+    <Width_Max>3.0</Width_Max>
+    <Width_Min>2.0</Width_Min>
+    <Displace>3.0, 3.0, 3.0</Displace>
+    <Detail>300</Detail>
+    <Color_Start>0,150,255,255</Color_Start>
+    <Color_End>0,100,255,0</Color_End>
+    <Fadeout_Time_Max>.5</Fadeout_Time_Max>
+    <Fadeout_Time_Min>.3</Fadeout_Time_Min>
+    <Light_Source_Name>L_NI_Hacker_core</Light_Source_Name>
+    <Update_All>true</Update_All>
+    <Number_Bolts>0</Number_Bolts>
+    <Bolt_Creation_Interval_Min>.05</Bolt_Creation_Interval_Min>
+    <Bolt_Creation_Interval_Max>.05</Bolt_Creation_Interval_Max>
+
+  </LightningEffect>
+	
+	<LightningEffect name="Novus_Corruptor_Virus_Beam">
+    <Texture_Name>nv_virus3.tga</Texture_Name>
+    <Texture_Repeat>5</Texture_Repeat>
+    <Texture_Scroll>-5</Texture_Scroll>
+
+    <Width_Max>2.5</Width_Max>
+    <Width_Min>1</Width_Min>
+    <Displace>0.01, 0.01, 0.01</Displace>
+    <Detail>.5</Detail>
+    <Color_Start>0, 120, 255,255</Color_Start>
+    <Color_End>172, 211, 255,255</Color_End>
+    <Fadeout_Time_Max>101</Fadeout_Time_Max>
+    <Fadeout_Time_Min>100</Fadeout_Time_Min>
+    <Update_All>true</Update_All>
+    <Cycles_Per_Distance>-0.01</Cycles_Per_Distance>
+    <Rotations_Per_Second>-1</Rotations_Per_Second>
+    <Radius>1</Radius>
+
+    <Number_Bolts>2</Number_Bolts>
+    <Bolt_Creation_Interval_Min>0.0</Bolt_Creation_Interval_Min>
+    <Bolt_Creation_Interval_Max>0.1</Bolt_Creation_Interval_Max>
+  </LightningEffect>
+
+	<!-- Invasion M2 Demo (fired from spider walker hard point) -->
+	<LightningEffect name="Corruptor_Laser_Beam">
+	
+		<Texture_Name>lightning_default.tga</Texture_Name>
+		<Texture_Repeat>0.0</Texture_Repeat>
+		<Texture_Scroll>0.0</Texture_Scroll>
+		
+		<Width_Max>0.75</Width_Max>
+		<Width_Min>0.35</Width_Min>
+		<Displace>0.001, 0.001, 0.001</Displace>
+		<Detail>300</Detail>	
+		<Color_Start>150,150,255,255</Color_Start>
+		<Color_End>150,150,255,255</Color_End>
+		<Fadeout_Time_Max>0.8</Fadeout_Time_Max>
+		<Fadeout_Time_Min>0.3</Fadeout_Time_Min>
+		
+		<Update_All>true</Update_All>
+		<Number_Bolts>3</Number_Bolts>
+		<Bolt_Creation_Interval_Min>0.0</Bolt_Creation_Interval_Min> 
+		<Bolt_Creation_Interval_Max>0.1</Bolt_Creation_Interval_Max> 
+
+		<Light_Source_Name>L_Corruptor_Laser_Beam_Source</Light_Source_Name>	
+	</LightningEffect>
+	
+	<LightningEffect name="Variant_Ambient_Light">
+	
+		<Texture_Name>lightning_default.tga</Texture_Name>
+		<Texture_Repeat>0.0</Texture_Repeat>
+		<Texture_Scroll>0.0</Texture_Scroll>
+		
+		<Width_Max>0.75</Width_Max>
+		<Width_Min>0.75</Width_Min>
+		<Displace>0.001, 0.001, 0.001</Displace>
+		<Detail>300</Detail>	
+		<Color_Start>0,0,0,0</Color_Start>
+		<Color_End>0,0,0,0</Color_End>
+		<Fadeout_Time_Max>.05</Fadeout_Time_Max>
+		<Fadeout_Time_Min>.02</Fadeout_Time_Min>
+		
+		<Update_All>true</Update_All>
+		<Number_Bolts>2</Number_Bolts>
+		<Bolt_Creation_Interval_Min>0.01</Bolt_Creation_Interval_Min> 
+		<Bolt_Creation_Interval_Max>0.01</Bolt_Creation_Interval_Max> 
+
+		<Light_Source_Name>L_Variant_Underneath_Ambient</Light_Source_Name>	
+	</LightningEffect>
+	
+	<!-- Beam for Defiler -->
+	<LightningEffect name="Radiation_Charge_Beam">
+	
+		<Texture_Name>lightning_default.tga</Texture_Name>
+		<Texture_Repeat>0.0</Texture_Repeat>
+		<Texture_Scroll>0.0</Texture_Scroll>
+		
+		<Width_Max>3</Width_Max>
+		<Width_Min>3</Width_Min>
+		<Displace>0.01, 0.01, 0.01</Displace>
+      <Detail>1000</Detail>
+      <Color_Start>100,255,100,64</Color_Start>
+		<Color_End>0,0,0,0</Color_End>
+		<Fadeout_Time_Max>0.8</Fadeout_Time_Max>
+		<Fadeout_Time_Min>0.3</Fadeout_Time_Min>
+		
+		<Update_All>true</Update_All>
+		<Number_Bolts>1</Number_Bolts>
+		<Bolt_Creation_Interval_Min>0.0</Bolt_Creation_Interval_Min> 
+		<Bolt_Creation_Interval_Max>0.1</Bolt_Creation_Interval_Max> 
+
+		<Light_Source_Name>L_Radiation_Beam</Light_Source_Name>	
+	</LightningEffect>
+
+	<!-- Invasion M2 Demo (fired from spider walker hard point) -->
+	<LightningEffect name="Force_Lightning">
+	
+		<Texture_Name>lightning_default.tga</Texture_Name>
+		<Texture_Repeat>1.5</Texture_Repeat>
+		<Texture_Scroll>5.0</Texture_Scroll>
+		
+		<Width_Max>3</Width_Max>
+		<Width_Min>.5</Width_Min>
+		<Displace>0.5, 0.5, 0.0</Displace>
+		<Detail>1000</Detail>	
+		<Color_Start>100,100,255,255</Color_Start>
+		<Color_End>0,0,0,0</Color_End>
+		<Fadeout_Time_Max>.4</Fadeout_Time_Max>
+		<Fadeout_Time_Min>.2</Fadeout_Time_Min>
+		
+		<Update_All>true</Update_All>
+		<Number_Bolts>3</Number_Bolts>
+		<Bolt_Creation_Interval_Min>0.0</Bolt_Creation_Interval_Min> 
+		<Bolt_Creation_Interval_Max>0.001</Bolt_Creation_Interval_Max> 
+	
+		<Light_Source_Name>L_Radiation_Beam</Light_Source_Name>	
+	</LightningEffect>
+
+  <LightningEffect name="Nufai_Tendril_Lightning">
+
+    <Render_Mode>ALPHA</Render_Mode>
+    <Texture_Name>p_Line_Globs.tga</Texture_Name>
+    <Texture_Repeat>4</Texture_Repeat>
+    <Texture_Scroll>0</Texture_Scroll>
+
+    <Width_Max>.6</Width_Max>
+    <Width_Min>.3</Width_Min>
+    <Displace>0.4, 0.3, 0.2</Displace>
+    <Detail>5.0</Detail>
+    <Color_Start>0,0,0,255</Color_Start>
+    <Color_End>0,0,0,255</Color_End>
+    <Fadeout_Time_Max>.5</Fadeout_Time_Max>
+    <Fadeout_Time_Min>.2</Fadeout_Time_Min>
+
+    <Update_All>true</Update_All>
+    <Number_Bolts>2</Number_Bolts>
+    <Bolt_Creation_Interval_Min>0.1</Bolt_Creation_Interval_Min>
+    <Bolt_Creation_Interval_Max>0.1</Bolt_Creation_Interval_Max>
+
+    <Light_Source_Name>L_Radiation_Beam</Light_Source_Name>
+  </LightningEffect>
+  
+  <LightningEffect name="Arc_Trigger_Lightning">
+
+    <Texture_Name>lightning_Novus_Signal_tower_01.tga</Texture_Name>
+    <Texture_Repeat>10</Texture_Repeat>
+    <Texture_Scroll>0</Texture_Scroll>
+
+    <Width_Max>.6</Width_Max>
+    <Width_Min>.3</Width_Min>
+    <Displace>0.4, 0.3, 0.2</Displace>
+    <Detail>5.0</Detail>
+    <Color_Start>255,155,60,255</Color_Start>
+    <Color_End>0,0,0,255</Color_End>
+    <Fadeout_Time_Max>.02</Fadeout_Time_Max>
+    <Fadeout_Time_Min>.01</Fadeout_Time_Min>
+
+    <Update_All>true</Update_All>
+    <Number_Bolts>2</Number_Bolts>
+    <Bolt_Creation_Interval_Min>0.1</Bolt_Creation_Interval_Min>
+    <Bolt_Creation_Interval_Max>0.1</Bolt_Creation_Interval_Max>
+
+    <Light_Source_Name>L_Radiation_Beam</Light_Source_Name>
+  </LightningEffect>
+	
+	<LightningEffect name="Science_Walker_Beam_norm">
+	
+		<Texture_Name>lightning_Novus_Signal_tower_01.tga</Texture_Name>
+		<Texture_Repeat>10</Texture_Repeat>
+		<Texture_Scroll>0</Texture_Scroll>
+		
+		<Width_Max>1.2</Width_Max>
+		<Width_Min>.8</Width_Min>
+		<Displace>0.01, 0.01, 0.01</Displace>
+		<Detail>300</Detail>	
+		<Color_Start>50,255,50,0</Color_Start>
+		<Color_End>100,255,100,255</Color_End>
+		<Fadeout_Time_Max>.8</Fadeout_Time_Max>
+		<Fadeout_Time_Min>.4</Fadeout_Time_Min>
+		
+		<Update_All>true</Update_All>
+		<Number_Bolts>5</Number_Bolts>
+		<Bolt_Creation_Interval_Min>.02</Bolt_Creation_Interval_Min> 
+		<Bolt_Creation_Interval_Max>.02</Bolt_Creation_Interval_Max> 
+		
+		<Light_Source_Name>L_AB_Science_walk_beam</Light_Source_Name>
+	
+	</LightningEffect>
+
+  <LightningEffect name="Alien_Grunt_Capture_Beam">
+
+    <Texture_Name>lightning_default.tga</Texture_Name>
+    <Texture_Repeat>0.0</Texture_Repeat>
+    <Texture_Scroll>0.0</Texture_Scroll>
+
+    <Width_Max>0.5</Width_Max>
+    <Width_Min>0.1</Width_Min>
+    <Displace>0.2, 0.1, 0.1</Displace>
+    <Detail>10</Detail>
+    <Color_Start>255,125,0,255</Color_Start>
+    <Color_End>255,125,0,255</Color_End>
+    <Fadeout_Time_Max>.2</Fadeout_Time_Max>
+    <Fadeout_Time_Min>.2</Fadeout_Time_Min>
+
+    <Update_All>true</Update_All>
+    <Number_Bolts>0</Number_Bolts>
+    <Bolt_Creation_Interval_Min>0.0</Bolt_Creation_Interval_Min>
+    <Bolt_Creation_Interval_Max>0.1</Bolt_Creation_Interval_Max>
+    <Light_Source_Name>L_Radiation_Beam</Light_Source_Name>
+  </LightningEffect>
+
+
+
+
+  <!-- End Alien Specific -->
+
+<!-- Novus Specific -->
+
+	<!-- Rotating beam for Resonation Effect-->
+	<LightningEffect name="Novus_Amplifier_Resonation_Beam">
+	
+		<Texture_Name>lightning_default.tga</Texture_Name>
+		<Texture_Repeat>0.0</Texture_Repeat>
+		<Texture_Scroll>0.0</Texture_Scroll>
+
+		<Width_Max>1</Width_Max>
+		<Width_Min>0.1</Width_Min>
+		<Displace>0.01, 0.01, 0.01</Displace>
+		<Detail>0.1</Detail>	
+		<Color_Start>57, 53, 249,0</Color_Start>
+		<Color_End>57, 53, 249,255</Color_End>
+		<Fadeout_Time_Max>101</Fadeout_Time_Max>
+		<Fadeout_Time_Min>100</Fadeout_Time_Min>
+		<Update_All>true</Update_All>
+		<Cycles_Per_Distance>-0.01</Cycles_Per_Distance>
+		<Rotations_Per_Second>-2</Rotations_Per_Second>
+		<Radius>15</Radius>
+     
+		<Number_Bolts>3</Number_Bolts>
+		<Bolt_Creation_Interval_Min>0.0</Bolt_Creation_Interval_Min> 
+		<Bolt_Creation_Interval_Max>0.1</Bolt_Creation_Interval_Max> 
+
+
+	</LightningEffect>
+
+
+	<!-- Rotating beam for Resonation Effect when upgraded to cascade -->
+	<LightningEffect name="Novus_Amplifier_Cascade_Resonation_Beam">
+		<Texture_Name>lightning_default.tga</Texture_Name>
+		<Texture_Repeat>0.0</Texture_Repeat>
+		<Texture_Scroll>0.0</Texture_Scroll>
+		<Width_Max>2</Width_Max>
+		<Width_Min>1</Width_Min>
+		<Displace>0.01, 0.01, 0.01</Displace>
+		<Detail>0.1</Detail>
+		<Color_Start>53, 214, 249,0</Color_Start>
+		<Color_End>53, 214, 249,255</Color_End>
+		<Fadeout_Time_Max>150</Fadeout_Time_Max>
+		<Fadeout_Time_Min>149</Fadeout_Time_Min>
+		<Update_All>true</Update_All>
+		<Cycles_Per_Distance>-0.01</Cycles_Per_Distance>
+		<Rotations_Per_Second>-2</Rotations_Per_Second>
+		<Radius>15</Radius>
+
+		<Number_Bolts>4</Number_Bolts>
+		<Bolt_Creation_Interval_Min>0.0</Bolt_Creation_Interval_Min>
+		<Bolt_Creation_Interval_Max>0.1</Bolt_Creation_Interval_Max>
+	</LightningEffect>
+	
+	
+	<LightningEffect name="Novus_Amplifier_Resonation_Beam_Core">
+
+		<Texture_Name>lightning_Novus_Signal_tower_01.tga</Texture_Name>
+		<Texture_Repeat>10</Texture_Repeat>
+		<Texture_Scroll>0</Texture_Scroll>
+
+		<Width_Max>0.6</Width_Max>
+		<Width_Min>0.6</Width_Min>
+		<Displace>0.01, 0.01, 0.01</Displace>
+		<Detail>300</Detail>
+		<Color_Start>180,180,255,255</Color_Start>
+		<Color_End>0,0,0,0</Color_End>
+		<Fadeout_Time_Max>.5</Fadeout_Time_Max>
+		<Fadeout_Time_Min>.3</Fadeout_Time_Min>
+
+		<Update_All>true</Update_All>
+		<Number_Bolts>0</Number_Bolts>
+		<Bolt_Creation_Interval_Min>.01</Bolt_Creation_Interval_Min>
+		<Bolt_Creation_Interval_Max>.02</Bolt_Creation_Interval_Max>
+
+		<Light_Source_Name>L_Novus_Amplifier_Resonation_Beam_core</Light_Source_Name>
+	</LightningEffect>
+	
+	
+	<LightningEffect name="Novus_Constructor_Beam">
+	
+		<Texture_Name>lightning_Novus_Signal_tower_01.tga</Texture_Name>
+		<Texture_Repeat>2</Texture_Repeat>
+		<Texture_Scroll>0</Texture_Scroll>
+		
+		<Width_Max>.8</Width_Max>
+		<Width_Min>.5</Width_Min>
+		<Displace>0.01, 0.01, 0.01</Displace>
+		<Detail>300</Detail>	
+		<Color_Start>180,180,255,255</Color_Start>
+		<Color_End>0,0,0,0</Color_End>
+		<Fadeout_Time_Max>.5</Fadeout_Time_Max>
+		<Fadeout_Time_Min>.3</Fadeout_Time_Min>
+		
+		<Update_All>true</Update_All>
+		<Number_Bolts>0</Number_Bolts>
+		<Bolt_Creation_Interval_Min>.01</Bolt_Creation_Interval_Min> 
+		<Bolt_Creation_Interval_Max>.02</Bolt_Creation_Interval_Max> 
+		
+		<Light_Source_Name>L_Novus_Constructor_Beam</Light_Source_Name>		
+	</LightningEffect>
+
+   <LightningEffect name="Novus_Constructor_Beam_Glow">
+
+      <Texture_Name>lightning_Novus_Signal_tower_dust.tga</Texture_Name>
+      <Texture_Repeat>10</Texture_Repeat>
+      <Texture_Scroll>5</Texture_Scroll>
+
+      <Width_Max>5</Width_Max>
+      <Width_Min>5</Width_Min>
+      <Displace>0.01, 0.01, 0.01</Displace>
+      <Detail>300</Detail>
+      <Color_Start>0,49,94,255</Color_Start>
+      <Color_End>0,0,0,0</Color_End>
+      <Fadeout_Time_Max>.5</Fadeout_Time_Max>
+      <Fadeout_Time_Min>.3</Fadeout_Time_Min>
+
+      <Update_All>true</Update_All>
+      <Number_Bolts>0</Number_Bolts>
+      <Bolt_Creation_Interval_Min>.01</Bolt_Creation_Interval_Min>
+      <Bolt_Creation_Interval_Max>.02</Bolt_Creation_Interval_Max>
+
+      <Light_Source_Name>L_Novus_Constructor_Beam</Light_Source_Name>
+   </LightningEffect>
+
+   <LightningEffect name="Novus_Collectors_Beam_Glow">
+
+      <Texture_Name>lightning_Novus_Signal_tower_dust.tga</Texture_Name>
+      <Texture_Repeat>10</Texture_Repeat>
+      <Texture_Scroll>-20</Texture_Scroll>
+
+      <Width_Max>4</Width_Max>
+      <Width_Min>4</Width_Min>
+      <Displace>0.01, 0.01, 0.01</Displace>
+      <Detail>300</Detail>
+      <Color_Start>0,25,50,255</Color_Start>
+      <Color_End>0,0,0,0</Color_End>
+      <Fadeout_Time_Max>.5</Fadeout_Time_Max>
+      <Fadeout_Time_Min>.3</Fadeout_Time_Min>
+
+      <Update_All>true</Update_All>
+      <Number_Bolts>0</Number_Bolts>
+      <Bolt_Creation_Interval_Min>.01</Bolt_Creation_Interval_Min>
+      <Bolt_Creation_Interval_Max>.02</Bolt_Creation_Interval_Max>
+
+      <Light_Source_Name>L_Novus_Constructor_Beam</Light_Source_Name>
+   </LightningEffect>
+
+	<LightningEffect name="Novus_Constructor_Beam_Upgrade">
+		<Texture_Name>lightning_Novus_Signal_tower_01.tga</Texture_Name>
+		<Texture_Repeat>10</Texture_Repeat>
+		<Texture_Scroll>0</Texture_Scroll>
+
+		<Width_Max>2</Width_Max>
+		<Width_Min>1</Width_Min>
+		<Displace>0.01, 0.01, 0.01</Displace>
+		<Detail>0.1</Detail>
+		<Color_Start>46, 126, 216,0</Color_Start>
+		<Color_End>57, 53, 249,255</Color_End>
+		<Fadeout_Time_Max>101</Fadeout_Time_Max>
+		<Fadeout_Time_Min>100</Fadeout_Time_Min>
+		<Update_All>true</Update_All>
+		<Cycles_Per_Distance>-0.01</Cycles_Per_Distance>
+		<Rotations_Per_Second>-2</Rotations_Per_Second>
+		<Radius>5</Radius>
+
+		<Number_Bolts>3</Number_Bolts>
+		<Bolt_Creation_Interval_Min>0.0</Bolt_Creation_Interval_Min>
+		<Bolt_Creation_Interval_Max>0.1</Bolt_Creation_Interval_Max>
+
+		<Light_Source_Name>L_Novus_Constructor_Beam</Light_Source_Name>
+	</LightningEffect>
+
+
+	<LightningEffect name="Novus_Constructor_Repair_Beam">
+		<Texture_Name>lightning_Novus_Signal_tower_01.tga</Texture_Name>
+		<Texture_Repeat>10</Texture_Repeat>
+		<Texture_Scroll>0</Texture_Scroll>
+
+		<Width_Max>2</Width_Max>
+		<Width_Min>1</Width_Min>
+		<Displace>0.01, 0.01, 0.01</Displace>
+		<Detail>0.1</Detail>
+		<Color_Start>5, 100, 200,0</Color_Start>
+		<Color_End>10, 149, 249,255</Color_End>
+		<Fadeout_Time_Max>101</Fadeout_Time_Max>
+		<Fadeout_Time_Min>100</Fadeout_Time_Min>
+		<Update_All>true</Update_All>
+		<Cycles_Per_Distance>-0.01</Cycles_Per_Distance>
+		<Rotations_Per_Second>-2</Rotations_Per_Second>
+		<Radius>5</Radius>
+
+		<Number_Bolts>3</Number_Bolts>
+		<Bolt_Creation_Interval_Min>0.0</Bolt_Creation_Interval_Min>
+		<Bolt_Creation_Interval_Max>0.1</Bolt_Creation_Interval_Max>
+
+		<Light_Source_Name>L_Novus_Constructor_Beam</Light_Source_Name>
+	</LightningEffect>
+		
+	
+	<LightningEffect name="Alien_Constructor_Beam">
+
+		<Texture_Name>lightning_Novus_Signal_tower_01.tga</Texture_Name>
+		<Texture_Repeat>10</Texture_Repeat>
+		<Texture_Scroll>0</Texture_Scroll>
+
+		<Width_Max>2.0</Width_Max>
+		<Width_Min>1.0</Width_Min>
+		<Displace>0.01, 0.01, 0.01</Displace>
+		<Detail>300</Detail>
+		<Color_Start>200,180,90,255</Color_Start>
+		<Color_End>0,0,0,0</Color_End>
+		<Fadeout_Time_Max>.5</Fadeout_Time_Max>
+		<Fadeout_Time_Min>.3</Fadeout_Time_Min>
+
+		<Update_All>true</Update_All>
+		<Number_Bolts>0</Number_Bolts>
+		<Bolt_Creation_Interval_Min>.01</Bolt_Creation_Interval_Min>
+		<Bolt_Creation_Interval_Max>.02</Bolt_Creation_Interval_Max>
+
+		<Light_Source_Name>L_Alien_Constructor_Beam</Light_Source_Name>
+	</LightningEffect>
+
+	<LightningEffect name="AlienCollectResourceBeam">
+
+		<Render_Mode>ALPHA</Render_Mode>
+		<Texture_Name>lightning_bump.tga</Texture_Name>
+		<Texture_Repeat>10</Texture_Repeat>
+		<Texture_Scroll>0</Texture_Scroll>
+
+		<Width_Max>5</Width_Max>
+		<Width_Min>5</Width_Min>
+		<Displace>0.01, 0.01, 0.01</Displace>
+		<Detail>300</Detail>
+		<Color_Start>255,255,255,255</Color_Start>
+		<Color_End>0,0,0,0</Color_End>
+		<Fadeout_Time_Max>.5</Fadeout_Time_Max>
+		<Fadeout_Time_Min>.3</Fadeout_Time_Min>
+
+		<Update_All>true</Update_All>
+		<Number_Bolts>0</Number_Bolts>
+		<Bolt_Creation_Interval_Min>0.0</Bolt_Creation_Interval_Min>
+		<Bolt_Creation_Interval_Max>0.001</Bolt_Creation_Interval_Max>
+	</LightningEffect>
+
+
+	
+
+	<LightningEffect name="AlienAbductsmalllaserBeam">
+		<Texture_Name>lightning_Novus_Signal_tower_01.tga</Texture_Name>
+		<Texture_Repeat>6</Texture_Repeat>
+		<Texture_Scroll>-3</Texture_Scroll>
+
+		<Width_Max>3</Width_Max>
+		<Width_Min>3</Width_Min>
+		<Displace>0.01, 0.01, 0.01</Displace>
+		<Detail>300</Detail>
+		<Color_Start>100,160,17,0</Color_Start>
+		<Color_End>0,0,0,0</Color_End>
+		<Fadeout_Time_Max>.3</Fadeout_Time_Max>
+		<Fadeout_Time_Min>.3</Fadeout_Time_Min>
+
+		<Update_All>true</Update_All>
+		<Number_Bolts>2</Number_Bolts>
+		<Bolt_Creation_Interval_Min>0.1</Bolt_Creation_Interval_Min>
+		<Bolt_Creation_Interval_Max>0.1</Bolt_Creation_Interval_Max>
+	</LightningEffect>
+
+
+	<LightningEffect name="AlienAbductlargelaserBeam">
+		<Texture_Name>lightning_Novus_Signal_tower_01.tga</Texture_Name>
+		<Texture_Repeat>10</Texture_Repeat>
+		<Texture_Scroll>3</Texture_Scroll>
+
+		<Width_Max>5</Width_Max>
+		<Width_Min>5</Width_Min>
+		<Displace>0.01, 0.01, 0.01</Displace>
+		<Detail>300</Detail>
+		<Color_Start>132,222,36,0</Color_Start>
+		<Color_End>132,222,36,0</Color_End>
+		<Fadeout_Time_Max>.3</Fadeout_Time_Max>
+		<Fadeout_Time_Min>.3</Fadeout_Time_Min>
+
+		<Update_All>true</Update_All>
+		<Number_Bolts>0</Number_Bolts>
+		<Bolt_Creation_Interval_Min>0.1</Bolt_Creation_Interval_Min>
+		<Bolt_Creation_Interval_Max>0.1</Bolt_Creation_Interval_Max>
+	</LightningEffect>
+
+	<LightningEffect name="AlienAbductsmallsuckBeam">
+		<!-- <Render_Mode> ALPHA </Render_Mode> -->
+		<Texture_Name>lightning_reaper_pull_in_cone.tga</Texture_Name>
+		
+		<Texture_Repeat>500</Texture_Repeat>
+		<Texture_Scroll>0</Texture_Scroll>
+
+		<Width_Max>2.0</Width_Max>
+		<Width_Min>1.5</Width_Min>
+		<Displace>0.01, 0.01, 0.01</Displace>
+		<Detail>700</Detail>
+		<Color_Start>0,0,0,0</Color_Start>
+		<Color_End>45,45,8,0</Color_End>
+		<Fadeout_Time_Max>.3</Fadeout_Time_Max>
+		<Fadeout_Time_Min>.2</Fadeout_Time_Min>
+
+		<Update_All>true</Update_All>
+		<Number_Bolts>9</Number_Bolts>
+		<Bolt_Creation_Interval_Min>0.1</Bolt_Creation_Interval_Min>
+		<Bolt_Creation_Interval_Max>0.1</Bolt_Creation_Interval_Max>
+		<Light_Source_Name>L_Alien_harvest_Beam</Light_Source_Name>
+	</LightningEffect>
+
+	<LightningEffect name="AlienAbductlargesuckBeam">
+		<!-- <Render_Mode> ALPHA </Render_Mode> -->
+		<Texture_Name>lightning_Novus_Signal_tower_dust.tga</Texture_Name>
+
+		<Texture_Repeat>500</Texture_Repeat>
+		<Texture_Scroll>3</Texture_Scroll>
+
+		<Width_Max>4.5</Width_Max>
+		<Width_Min>4.5</Width_Min>
+		<Displace>0.01, 0.01, 0.01</Displace>
+		<Detail>700</Detail>
+		<Color_Start>0,0,0,0</Color_Start>
+		<Color_End>10,10,10,0</Color_End>
+		<Fadeout_Time_Max>.3</Fadeout_Time_Max>
+		<Fadeout_Time_Min>.2</Fadeout_Time_Min>
+
+		<Update_All>true</Update_All>
+		<Number_Bolts>9</Number_Bolts>
+		<Bolt_Creation_Interval_Min>0.1</Bolt_Creation_Interval_Min>
+		<Bolt_Creation_Interval_Max>0.1</Bolt_Creation_Interval_Max>
+	</LightningEffect>
+
+	<LightningEffect name="AlienAbductlargesuckBeamWave">
+		<!-- <Render_Mode> ALPHA </Render_Mode> -->
+		<Texture_Name>lightning_wave.tga</Texture_Name>
+
+		<Texture_Repeat>500</Texture_Repeat>
+		<Texture_Scroll>3</Texture_Scroll>
+
+		<Width_Max>4.5</Width_Max>
+		<Width_Min>4.0</Width_Min>
+		<Displace>0.01, 0.01, 0.01</Displace>
+		<Detail>700</Detail>
+		<Color_Start>60,60,20,0</Color_Start>
+		<Color_End>60,60,20,0</Color_End>
+		<Fadeout_Time_Max>3.0</Fadeout_Time_Max>
+		<Fadeout_Time_Min>3.0</Fadeout_Time_Min>
+
+		<Update_All>true</Update_All>
+		<Number_Bolts>1</Number_Bolts>
+		<Bolt_Creation_Interval_Min>0.1</Bolt_Creation_Interval_Min>
+		<Bolt_Creation_Interval_Max>0.1</Bolt_Creation_Interval_Max>
+	</LightningEffect>
+
+
+
+	<LightningEffect name="Novus_Signal_tower">
+	
+		<Texture_Name>lightning_Novus_Signal_tower_01.tga</Texture_Name>
+		<Texture_Repeat>10</Texture_Repeat>
+		<Texture_Scroll>0</Texture_Scroll>
+		
+		<Width_Max>1</Width_Max>
+		<Width_Min>.5</Width_Min>
+		<Displace>0.01, 0.01, 0.01</Displace>
+		<Detail>300</Detail>	
+		<Color_Start>0,0,0,0</Color_Start>
+		<Color_End>100,100,255,255</Color_End>
+		<Fadeout_Time_Max>.5</Fadeout_Time_Max>
+		<Fadeout_Time_Min>.3</Fadeout_Time_Min>
+		
+		<Update_All>true</Update_All>
+		<Number_Bolts>0</Number_Bolts>
+		<Bolt_Creation_Interval_Min>.05</Bolt_Creation_Interval_Min> 
+		<Bolt_Creation_Interval_Max>.05</Bolt_Creation_Interval_Max> 
+	
+	</LightningEffect>
+
+	<LightningEffect name="Novus_Signal_tower_Flow">
+
+		<Texture_Name>lightning_Novus_Signal_tower_01.tga</Texture_Name>
+		<Texture_Repeat>10</Texture_Repeat>
+		<Texture_Scroll>0</Texture_Scroll>
+
+		<Width_Max>0.5</Width_Max>
+		<Width_Min>0.25</Width_Min>
+		<Displace>0.01, 0.01, 0.01</Displace>
+		<Detail>300</Detail>
+		<Color_Start>0,0,0,0</Color_Start>
+		<Color_End>40,100,255,255</Color_End>
+		<Fadeout_Time_Max>.5</Fadeout_Time_Max>
+		<Fadeout_Time_Min>.4</Fadeout_Time_Min>
+
+		<Update_All>true</Update_All>
+		<Number_Bolts>0</Number_Bolts>
+		<Bolt_Creation_Interval_Min>.05</Bolt_Creation_Interval_Min>
+		<Bolt_Creation_Interval_Max>.05</Bolt_Creation_Interval_Max>
+
+	</LightningEffect>
+
+	
+	<!-- Tornado effect -->
+	<LightningEffect name="Antimatter_Tank_Lightning_Decoration">
+	
+		<Texture_Name>lightning_default.tga</Texture_Name>
+		<Texture_Repeat>1.5</Texture_Repeat>
+		<Texture_Scroll>5.0</Texture_Scroll>
+		
+		<Width_Max>1.0</Width_Max>
+		<Width_Min>.5</Width_Min>
+		<Displace>0.5, 0.5, 0.0</Displace>
+      <Detail>1000</Detail>
+      <Color_Start>100,100,255,255</Color_Start>
+		<Color_End>0,0,0,0</Color_End>
+		<Fadeout_Time_Max>.1</Fadeout_Time_Max>
+		<Fadeout_Time_Min>.05</Fadeout_Time_Min>
+		
+		<Update_All>true</Update_All>
+		<Number_Bolts>1</Number_Bolts>
+		<Bolt_Creation_Interval_Min>0.0</Bolt_Creation_Interval_Min> 
+		<Bolt_Creation_Interval_Max>0.001</Bolt_Creation_Interval_Max> 
+	
+	</LightningEffect>
+	
+	<LightningEffect name="NB_Power_node_big_bolt">
+	
+		<Texture_Name>lightning_default.tga</Texture_Name>
+		<Texture_Repeat>3.0</Texture_Repeat>
+		<Texture_Scroll>0.0</Texture_Scroll>
+		
+		<Width_Max>4.0</Width_Max>
+		<Width_Min>2.0</Width_Min>
+		<Displace>0.3, 0.3, 0.0</Displace>
+      <Detail>1000</Detail>
+      <Color_Start>75,75,255,255</Color_Start>
+      <Color_End>0,0,0,0</Color_End>
+      <Fadeout_Time_Max>.2</Fadeout_Time_Max>
+      <Fadeout_Time_Min>.1</Fadeout_Time_Min>
+
+      <Update_All>true</Update_All>
+      <Number_Bolts>10</Number_Bolts>
+      <Bolt_Creation_Interval_Min>0.2</Bolt_Creation_Interval_Min>
+      <Bolt_Creation_Interval_Max>0.8</Bolt_Creation_Interval_Max>
+
+   </LightningEffect>
+
+   <LightningEffect name="NB_Small_Straight_bolt">
+
+      <Texture_Name>lightning_default.tga</Texture_Name>
+      <Texture_Repeat>1.5</Texture_Repeat>
+      <Texture_Scroll>5.0</Texture_Scroll>
+
+      <Width_Max>1.0</Width_Max>
+      <Width_Min>0.5</Width_Min>
+      <Displace>0.3, 0.3, 0.0</Displace>
+      <Detail>1000</Detail>
+      <Color_Start>150,150,255,255</Color_Start>
+		<Color_End>0,0,0,0</Color_End>
+		<Fadeout_Time_Max>.1</Fadeout_Time_Max>
+		<Fadeout_Time_Min>.05</Fadeout_Time_Min>
+		
+		<Update_All>true</Update_All>
+		<Number_Bolts>1</Number_Bolts>
+		<Bolt_Creation_Interval_Min>0.0</Bolt_Creation_Interval_Min> 
+		<Bolt_Creation_Interval_Max>0.001</Bolt_Creation_Interval_Max> 
+	
+	</LightningEffect>
+	
+	<LightningEffect name="NB_medium_Straight_bolt">
+	
+		<Texture_Name>lightning_default.tga</Texture_Name>
+		<Texture_Repeat>1.5</Texture_Repeat>
+		<Texture_Scroll>5.0</Texture_Scroll>
+		
+		<Width_Max>2.0</Width_Max>
+		<Width_Min>1.5</Width_Min>
+		<Displace>0.3, 0.3, 0.0</Displace>
+      <Detail>1000</Detail>
+      <Color_Start>150,150,255,255</Color_Start>
+      <Color_End>0,0,0,0</Color_End>
+      <Fadeout_Time_Max>.1</Fadeout_Time_Max>
+      <Fadeout_Time_Min>.05</Fadeout_Time_Min>
+
+      <Update_All>true</Update_All>
+      <Number_Bolts>1</Number_Bolts>
+      <Bolt_Creation_Interval_Min>0.0</Bolt_Creation_Interval_Min>
+      <Bolt_Creation_Interval_Max>0.001</Bolt_Creation_Interval_Max>
+
+   </LightningEffect>
+
+   <LightningEffect name="NB_Build_bolt">
+
+      <Texture_Name>lightning_default.tga</Texture_Name>
+      <Texture_Repeat>1.5</Texture_Repeat>
+      <Texture_Scroll>5.0</Texture_Scroll>
+
+      <Width_Max>1.0</Width_Max>
+      <Width_Min>0.5</Width_Min>
+      <Displace>0.15, 0.15, 0.0</Displace>
+      <Detail>10</Detail>
+      <Color_Start>150,150,255,255</Color_Start>
+		<Color_End>0,0,0,0</Color_End>
+		<Fadeout_Time_Max>.1</Fadeout_Time_Max>
+		<Fadeout_Time_Min>.05</Fadeout_Time_Min>
+		
+		<Update_All>true</Update_All>
+		<Number_Bolts>1</Number_Bolts>
+		<Bolt_Creation_Interval_Min>0.0</Bolt_Creation_Interval_Min> 
+		<Bolt_Creation_Interval_Max>0.1</Bolt_Creation_Interval_Max> 
+	
+	</LightningEffect>
+
+	<LightningEffect name="NB_Build_bolt_2">
+
+		<Texture_Name>lightning_default.tga</Texture_Name>
+		<Texture_Repeat>1.5</Texture_Repeat>
+		<Texture_Scroll>5.0</Texture_Scroll>
+
+		<Width_Max>1.0</Width_Max>
+		<Width_Min>0.5</Width_Min>
+		<Displace>0.3, 0.3, 0.15</Displace>
+      <Detail>1000</Detail>
+      <Color_Start>150,150,255,255</Color_Start>
+		<Color_End>0,0,0,0</Color_End>
+		<Fadeout_Time_Max>.1</Fadeout_Time_Max>
+		<Fadeout_Time_Min>.05</Fadeout_Time_Min>
+
+		<Update_All>true</Update_All>
+		<Number_Bolts>1</Number_Bolts>
+		<Bolt_Creation_Interval_Min>0.1</Bolt_Creation_Interval_Min>
+		<Bolt_Creation_Interval_Max>0.7</Bolt_Creation_Interval_Max>
+
+	</LightningEffect>
+	
+	<LightningEffect name="Variant_Ground_Bolts">
+	
+		<Texture_Name>lightning_default.tga</Texture_Name>
+		<Texture_Repeat>1.5</Texture_Repeat>
+		<Texture_Scroll>5.0</Texture_Scroll>
+		
+		<Width_Max>1.0</Width_Max>
+		<Width_Min>.2</Width_Min>
+		<Displace>0.5, 0.5, 0.2</Displace>
+      <Detail>1000</Detail>
+      <Color_Start>100,100,255,255</Color_Start>
+		<Color_End>0,0,0,0</Color_End>
+		<Fadeout_Time_Max>.05</Fadeout_Time_Max>
+		<Fadeout_Time_Min>.03</Fadeout_Time_Min>
+		
+		<Update_All>true</Update_All>
+		<Number_Bolts>1</Number_Bolts>
+		<Bolt_Creation_Interval_Min>0.2</Bolt_Creation_Interval_Min> 
+		<Bolt_Creation_Interval_Max>0.5</Bolt_Creation_Interval_Max> 
+	
+	</LightningEffect>
+	
+	<LightningEffect name="Feild_Inverter_Sheild">
+	
+		<Texture_Name>lightning_default.tga</Texture_Name>
+		<Texture_Repeat>1.5</Texture_Repeat>
+		<Texture_Scroll>5.0</Texture_Scroll>
+		
+		<Width_Max>2.0</Width_Max>
+		<Width_Min>.5</Width_Min>
+		<Displace>0.5, 0.5, 0.0</Displace>
+      <Detail>1000</Detail>
+      <Color_Start>180,180,255,255</Color_Start>
+		<Color_End>0,0,0,0</Color_End>
+		<Fadeout_Time_Max>.02</Fadeout_Time_Max>
+		<Fadeout_Time_Min>.01</Fadeout_Time_Min>
+		
+		<Update_All>true</Update_All>
+		<Number_Bolts>5</Number_Bolts>
+		<Bolt_Creation_Interval_Min>0.0</Bolt_Creation_Interval_Min> 
+		<Bolt_Creation_Interval_Max>0.001</Bolt_Creation_Interval_Max> 
+	
+	</LightningEffect>
+<!-- End Novus Specific -->
+
+<!-- Military Specific -->
+<!-- End Military Specific -->
+
+<!-- ===============================   Masari Specific ================================  -->
+
+   <LightningEffect name="ZB_Sky_turret_core">
+
+      <Texture_Name>lightning_Novus_Signal_tower_01.tga</Texture_Name>
+      <Texture_Repeat>10</Texture_Repeat>
+      <Texture_Scroll>0</Texture_Scroll>
+
+      <Width_Max>.5</Width_Max>
+      <Width_Min>.5</Width_Min>
+      <Displace>0.01, 0.01, 0.01</Displace>
+      <Detail>300</Detail>
+      <Color_Start>0,0,0,0</Color_Start>
+      <Color_End>205,205,104,255</Color_End>
+      <Fadeout_Time_Max>.5</Fadeout_Time_Max>
+      <Fadeout_Time_Min>.3</Fadeout_Time_Min>
+
+      <Update_All>true</Update_All>
+      <Number_Bolts>0</Number_Bolts>
+      <Bolt_Creation_Interval_Min>.05</Bolt_Creation_Interval_Min>
+      <Bolt_Creation_Interval_Max>.05</Bolt_Creation_Interval_Max>
+
+   </LightningEffect>
+
+   <LightningEffect name="ZB_Sky_turret_Glow">
+
+      <Texture_Name>lightning_Novus_Signal_tower_01.tga</Texture_Name>
+      <Texture_Repeat>10</Texture_Repeat>
+      <Texture_Scroll>0</Texture_Scroll>
+
+      <Width_Max>8</Width_Max>
+      <Width_Min>6</Width_Min>
+      <Displace>0.01, 0.01, 0.01</Displace>
+      <Detail>300</Detail>
+      <Color_Start>0,0,0,0</Color_Start>
+      <Color_End>100,100,45,255</Color_End>
+      <Fadeout_Time_Max>.5</Fadeout_Time_Max>
+      <Fadeout_Time_Min>.3</Fadeout_Time_Min>
+
+      <Update_All>true</Update_All>
+      <Number_Bolts>0</Number_Bolts>
+      <Bolt_Creation_Interval_Min>.05</Bolt_Creation_Interval_Min>
+      <Bolt_Creation_Interval_Max>.05</Bolt_Creation_Interval_Max>
+      <Light_Source_Name>L_Masari_Sky_Turret_Light</Light_Source_Name>
+
+   </LightningEffect>
+
+   <LightningEffect name="ZV_Peacebringer_core">
+
+      <Texture_Name>lightning_Novus_Signal_tower_01.tga</Texture_Name>
+      <Texture_Repeat>10</Texture_Repeat>
+      <Texture_Scroll>0</Texture_Scroll>
+
+      <Width_Max>.5</Width_Max>
+      <Width_Min>.5</Width_Min>
+      <Displace>0.01, 0.01, 0.01</Displace>
+      <Detail>300</Detail>
+      <Color_Start>189,165,224,255</Color_Start>
+      <Color_End>189,165,224,255</Color_End>
+      <Fadeout_Time_Max>.5</Fadeout_Time_Max>
+      <Fadeout_Time_Min>.3</Fadeout_Time_Min>
+
+      <Update_All>true</Update_All>
+      <Number_Bolts>0</Number_Bolts>
+      <Bolt_Creation_Interval_Min>.05</Bolt_Creation_Interval_Min>
+      <Bolt_Creation_Interval_Max>.05</Bolt_Creation_Interval_Max>
+
+   </LightningEffect>
+
+   <LightningEffect name="ZV_Peacebringer_Glow">
+
+      <Texture_Name>lightning_Novus_Signal_tower_dust.tga</Texture_Name>
+      <Texture_Repeat>1</Texture_Repeat>
+      <Texture_Scroll>10</Texture_Scroll>
+
+      <Width_Max>3</Width_Max>
+      <Width_Min>2.5</Width_Min>
+      <Displace>0.01, 0.01, 0.01</Displace>
+      <Detail>300</Detail>
+      <Color_Start>80,20,100,255</Color_Start>
+      <Color_End>80,20,100,255</Color_End>
+      <Fadeout_Time_Max>.5</Fadeout_Time_Max>
+      <Fadeout_Time_Min>.3</Fadeout_Time_Min>
+
+      <Update_All>true</Update_All>
+      <Number_Bolts>0</Number_Bolts>
+      <Bolt_Creation_Interval_Min>.05</Bolt_Creation_Interval_Min>
+      <Bolt_Creation_Interval_Max>.05</Bolt_Creation_Interval_Max>
+      <Light_Source_Name>L_Masari_Sky_Turret_Light</Light_Source_Name>
+
+   </LightningEffect>
+
+   <LightningEffect name="ZV_Peacebringer_Glow_Snake">
+
+      <Texture_Name>lightning_Novus_Signal_tower_01.tga</Texture_Name>
+      <Texture_Repeat>1.5</Texture_Repeat>
+      <Texture_Scroll>0</Texture_Scroll>
+
+      <Width_Max>1</Width_Max>
+      <Width_Min>1</Width_Min>
+      <Displace>0.05, 0.05, 0.0</Displace>
+      <Detail>2.5</Detail>
+      <Color_Start>189,165,224,255</Color_Start>
+      <Color_End>189,165,224,255</Color_End>
+      <Fadeout_Time_Max>100</Fadeout_Time_Max>
+      <Fadeout_Time_Min>100</Fadeout_Time_Min>
+
+      <Update_All>true</Update_All>
+      <Cycles_Per_Distance>-0.01</Cycles_Per_Distance>
+      <Rotations_Per_Second> 0.3 </Rotations_Per_Second>
+      <Radius>1.0</Radius>
+      <Radius_Inc_Per_Second> -0.0</Radius_Inc_Per_Second>
+
+      <Update_All>true</Update_All>
+      <Number_Bolts>2</Number_Bolts>
+      <Bolt_Creation_Interval_Min>0.6</Bolt_Creation_Interval_Min>
+      <Bolt_Creation_Interval_Max>0.8</Bolt_Creation_Interval_Max>
+   </LightningEffect>
+
+   <LightningEffect name="ZV_Peacebringer_Heat_Suck">
+
+      <Render_Mode>HEAT</Render_Mode>
+      <Texture_Name>lightning_heat_curve.tga</Texture_Name>
+      <Texture_Repeat>10</Texture_Repeat>
+      <Texture_Scroll>-5.0</Texture_Scroll>
+
+      <Width_Max>6</Width_Max>
+      <Width_Min>4</Width_Min>
+      <Displace>0.01, 0.01, 0.01</Displace>
+      <Detail>300</Detail>
+      <Color_Start>0,0,0,255</Color_Start>
+      <Color_End>100,100,45,255</Color_End>
+      <Fadeout_Time_Max>.5</Fadeout_Time_Max>
+      <Fadeout_Time_Min>.3</Fadeout_Time_Min>
+
+      <Update_All>true</Update_All>
+      <Number_Bolts>0</Number_Bolts>
+      <Bolt_Creation_Interval_Min>.05</Bolt_Creation_Interval_Min>
+      <Bolt_Creation_Interval_Max>.05</Bolt_Creation_Interval_Max>
+      <Light_Source_Name>L_Masari_Sky_Turret_Light</Light_Source_Name>
+
+   </LightningEffect>
+   
+	<LightningEffect name="ZB_Natural_Interupter_Light">
+
+		<Texture_Name>lightning_default1.tga</Texture_Name>
+		<Texture_Repeat>3.0</Texture_Repeat>
+		<Texture_Scroll>0.0</Texture_Scroll>
+
+		<Width_Max>2.0</Width_Max>
+		<Width_Min>2.0</Width_Min>
+		<Displace>0.1, 0.1, 0.1</Displace>
+      <Detail>1000</Detail>
+      <Color_Start>254,218,60,255</Color_Start>
+      <Color_End>0,0,0,0</Color_End>
+      <Fadeout_Time_Max>.5</Fadeout_Time_Max>
+      <Fadeout_Time_Min>.5</Fadeout_Time_Min>
+
+      <Update_All>true</Update_All>
+      <Number_Bolts>2</Number_Bolts>
+      <Bolt_Creation_Interval_Min>0.3</Bolt_Creation_Interval_Min>
+      <Bolt_Creation_Interval_Max>0.35</Bolt_Creation_Interval_Max>
+
+   </LightningEffect>
+
+   <LightningEffect name="Masari_Electircity_Arc_Attack">
+
+      <Texture_Name>lightning_default.tga</Texture_Name>
+      <Texture_Repeat>10</Texture_Repeat>
+      <Texture_Scroll>0</Texture_Scroll>
+
+      <Width_Max>3.0</Width_Max>
+      <Width_Min>1.0</Width_Min>
+      <Displace>0.5, 0.3, 0.0</Displace>
+      <Detail>15.0</Detail>
+      <Color_Start>0,0,0,0</Color_Start>
+      <Color_End>100,100,255,255</Color_End>
+      <Fadeout_Time_Max>.3</Fadeout_Time_Max>
+      <Fadeout_Time_Min>.1</Fadeout_Time_Min>
+
+      <Update_All>true</Update_All>
+      <Number_Bolts>0</Number_Bolts>
+      <Bolt_Creation_Interval_Min>0.0</Bolt_Creation_Interval_Min>
+      <Bolt_Creation_Interval_Max>0.001</Bolt_Creation_Interval_Max>
+   </LightningEffect>
+
+   <LightningEffect name="Masari_Electircity_Arc_staff">
+
+      <Texture_Name>lightning_default.tga</Texture_Name>
+      <Texture_Repeat>10</Texture_Repeat>
+      <Texture_Scroll>0</Texture_Scroll>
+
+      <Width_Max>1.0</Width_Max>
+      <Width_Min>0.1</Width_Min>
+      <Displace>0.2, 0.2, 0.2</Displace>
+      <Detail>15</Detail>
+      <Color_Start>0,0,0,0</Color_Start>
+		<Color_End>100,100,255,255</Color_End>
+		<Fadeout_Time_Max>.0001</Fadeout_Time_Max>
+		<Fadeout_Time_Min>.0001</Fadeout_Time_Min>
+		
+		<Update_All>true</Update_All>
+		<Number_Bolts>5</Number_Bolts>
+		<Bolt_Creation_Interval_Min>0.0001</Bolt_Creation_Interval_Min> 
+		<Bolt_Creation_Interval_Max>0.001</Bolt_Creation_Interval_Max> 
+	</LightningEffect>
+
+	
+   <LightningEffect name="Masari_Disciple_Light_Weapon_Beam">
+
+      <Texture_Name>lightning_default.tga</Texture_Name>
+      <Texture_Repeat>0.0</Texture_Repeat>
+      <Texture_Scroll>0.0</Texture_Scroll>
+
+      <Width_Max>3</Width_Max>
+      <Width_Min>3</Width_Min>
+      <Displace>0.01, 0.01, 0.01</Displace>
+      <Detail>1000</Detail>
+      <Color_Start>252,255,221,255</Color_Start>
+		<Color_End>0,0,0,0</Color_End>
+		<Fadeout_Time_Max>100</Fadeout_Time_Max>
+		<Fadeout_Time_Min>100</Fadeout_Time_Min>
+
+		<Update_All>true</Update_All>
+		<Number_Bolts>0</Number_Bolts>
+		<Bolt_Creation_Interval_Min>0.0</Bolt_Creation_Interval_Min>
+		<Bolt_Creation_Interval_Max>0.1</Bolt_Creation_Interval_Max>
+		<Light_Source_Name>L_Radiation_Beam</Light_Source_Name>
+	</LightningEffect>
+
+  <LightningEffect name="Masari_Disciple_Capture_Beam">
+
+    <Texture_Name>Masari_door_scroll.tga</Texture_Name>
+    <Texture_Repeat>5.0</Texture_Repeat>
+    <Texture_Scroll>-10.0</Texture_Scroll>
+
+    <Width_Max>3</Width_Max>
+    <Width_Min>2</Width_Min>
+    <Displace>0.01, 0.01, 0.01</Displace>
+    <Detail>1000</Detail>
+    <Color_Start>252,255,0,255</Color_Start>
+    <Color_End>255,255,0,255</Color_End>
+    <Fadeout_Time_Max>100</Fadeout_Time_Max>
+    <Fadeout_Time_Min>100</Fadeout_Time_Min>
+
+    <Update_All>true</Update_All>
+    <Number_Bolts>1</Number_Bolts>
+    <Bolt_Creation_Interval_Min>0.0</Bolt_Creation_Interval_Min>
+    <Bolt_Creation_Interval_Max>0.1</Bolt_Creation_Interval_Max>
+    <Light_Source_Name>L_Radiation_Beam</Light_Source_Name>
+  </LightningEffect>
+
+
+  <LightningEffect name="Masari_Sentry_Light_Weapon_Beam">
+
+      <Texture_Name>lightning_Novus_Signal_tower_dust.tga</Texture_Name>
+      <Texture_Repeat>10.0</Texture_Repeat>
+      <Texture_Scroll>-5.0</Texture_Scroll>
+
+      <Width_Max>4</Width_Max>
+      <Width_Min>3</Width_Min>
+      <Displace>0.001, 0.001, 0.001</Displace>
+      <Detail>1000</Detail>
+      <Color_Start>100,150,60,255</Color_Start>
+      <Color_End>100,150,60,255</Color_End>
+      <Fadeout_Time_Max>100</Fadeout_Time_Max>
+      <Fadeout_Time_Min>100</Fadeout_Time_Min>
+
+      <Update_All>true</Update_All>
+      <Number_Bolts>1</Number_Bolts>
+      <Bolt_Creation_Interval_Min>0.1</Bolt_Creation_Interval_Min>
+      <Bolt_Creation_Interval_Max>0.2</Bolt_Creation_Interval_Max>
+      <Light_Source_Name>L_Masari_Sentry</Light_Source_Name>
+  </LightningEffect>
+
+  <LightningEffect name="Masari_Sentry_Light_Weapon_Beam_Core">
+
+     <Texture_Name>lightning_default.tga</Texture_Name>
+     <Texture_Repeat>0.0</Texture_Repeat>
+     <Texture_Scroll>0.0</Texture_Scroll>
+
+     <Width_Max>.5</Width_Max>
+     <Width_Min>.5</Width_Min>
+     <Displace>0.001, 0.001, 0.001</Displace>
+     <Detail>1000</Detail>
+     <Color_Start>252,255,221,255</Color_Start>
+     <Color_End>252,255,221,255</Color_End>
+     <Fadeout_Time_Max>.2</Fadeout_Time_Max>
+     <Fadeout_Time_Min>.0</Fadeout_Time_Min>
+
+     <Update_All>true</Update_All>
+     <Number_Bolts>1</Number_Bolts>
+     <Bolt_Creation_Interval_Min>0.1</Bolt_Creation_Interval_Min>
+     <Bolt_Creation_Interval_Max>0.2</Bolt_Creation_Interval_Max>
+  </LightningEffect>
+
+  <LightningEffect name="Masari_Sentry_Light_Weapon_Avenger_Beam">
+
+     <Texture_Name>lightning_Novus_Signal_tower_dust.tga</Texture_Name>
+     <Texture_Repeat>50.0</Texture_Repeat>
+     <Texture_Scroll>-10.0</Texture_Scroll>
+
+     <Width_Max>6</Width_Max>
+     <Width_Min>6</Width_Min>
+     <Displace>0.001, 0.001, 0.001</Displace>
+     <Detail>1000</Detail>
+     <Color_Start>100,150,60,255</Color_Start>
+     <Color_End>100,150,60,255</Color_End>
+     <Fadeout_Time_Max>100</Fadeout_Time_Max>
+     <Fadeout_Time_Min>100</Fadeout_Time_Min>
+
+     <Update_All>true</Update_All>
+     <Number_Bolts>1</Number_Bolts>
+     <Bolt_Creation_Interval_Min>0.1</Bolt_Creation_Interval_Min>
+     <Bolt_Creation_Interval_Max>0.2</Bolt_Creation_Interval_Max>
+     <Light_Source_Name>L_Masari_Sentry_Avenger</Light_Source_Name>
+  </LightningEffect>
+
+  <LightningEffect name="Masari_Sentry_Light_Weapon_Avenger_Beam_Core">
+
+     <Texture_Name>lightning_default.tga</Texture_Name>
+     <Texture_Repeat>0.0</Texture_Repeat>
+     <Texture_Scroll>0.0</Texture_Scroll>
+
+     <Width_Max>2</Width_Max>
+     <Width_Min>2</Width_Min>
+     <Displace>0.001, 0.001, 0.001</Displace>
+     <Detail>1000</Detail>
+     <Color_Start>252,255,221,255</Color_Start>
+     <Color_End>252,255,221,255</Color_End>
+     <Fadeout_Time_Max>.2</Fadeout_Time_Max>
+     <Fadeout_Time_Min>.0</Fadeout_Time_Min>
+
+     <Update_All>true</Update_All>
+     <Number_Bolts>1</Number_Bolts>
+     <Bolt_Creation_Interval_Min>0.1</Bolt_Creation_Interval_Min>
+     <Bolt_Creation_Interval_Max>0.2</Bolt_Creation_Interval_Max>
+  </LightningEffect>
+
+
+
+   <LightningEffect name="Masari_Sentry_With_Avenger_Light_Weapon_Beam">
+
+      <Texture_Name>lightning_default.tga</Texture_Name>
+      <Texture_Repeat>0.0</Texture_Repeat>
+      <Texture_Scroll>0.0</Texture_Scroll>
+
+      <Width_Max>3</Width_Max>
+      <Width_Min>3</Width_Min>
+      <Displace>0.001, 0.001, 0.001</Displace>
+      <Detail>1000</Detail>
+      <Color_Start>50,255,50,255</Color_Start>
+      <Color_End>50,255,50,255</Color_End>
+      <Fadeout_Time_Max>100</Fadeout_Time_Max>
+      <Fadeout_Time_Min>100</Fadeout_Time_Min>
+
+      <Update_All>true</Update_All>
+      <Number_Bolts>0</Number_Bolts>
+      <Bolt_Creation_Interval_Min>0.0</Bolt_Creation_Interval_Min>
+      <Bolt_Creation_Interval_Max>0.1</Bolt_Creation_Interval_Max>
+      <Light_Source_Name>L_Radiation_Beam</Light_Source_Name>
+   </LightningEffect>
+
+	<LightningEffect name="Masari_Architect_Structure_Build_Beam">
+
+		<Texture_Name>lightning_default.tga</Texture_Name>
+		<Texture_Repeat>0.0</Texture_Repeat>
+		<Texture_Scroll>0.0</Texture_Scroll>
+
+		<Width_Max>2</Width_Max>
+		<Width_Min>1</Width_Min>
+		<Displace>0.001, 0.001, 0.001</Displace>
+		<Detail>1000</Detail>
+		<Color_Start>188,175,78,255</Color_Start>
+		<Color_End>188,175,78,255</Color_End>
+		<Fadeout_Time_Max>1000</Fadeout_Time_Max>
+		<Fadeout_Time_Min>1000</Fadeout_Time_Min>
+
+		<Update_All>true</Update_All>
+		<Number_Bolts>0</Number_Bolts>
+		<Bolt_Creation_Interval_Min>1000</Bolt_Creation_Interval_Min>
+		<Bolt_Creation_Interval_Max>1000</Bolt_Creation_Interval_Max>
+		<Light_Source_Name>L_Masari_Build_beam_light</Light_Source_Name>
+
+	</LightningEffect>
+   
+   <LightningEffect name="Masari_Architect_Assist_Structure_Beam">
+
+      <Texture_Name>lightning_default.tga</Texture_Name>
+      <Texture_Repeat>0.0</Texture_Repeat>
+      <Texture_Scroll>0.0</Texture_Scroll>
+
+      <Width_Max>1</Width_Max>
+      <Width_Min>1</Width_Min>
+      <Displace>0.001, 0.001, 0.001</Displace>
+      <Detail>1000</Detail>
+      <Color_Start>188,175,78,255</Color_Start>
+      <Color_End>188,175,78,255</Color_End>
+      <Fadeout_Time_Max>1000</Fadeout_Time_Max>
+      <Fadeout_Time_Min>1000</Fadeout_Time_Min>
+
+      <Update_All>true</Update_All>
+      <Number_Bolts>0</Number_Bolts>
+      <Bolt_Creation_Interval_Min>1000</Bolt_Creation_Interval_Min>
+      <Bolt_Creation_Interval_Max>1000</Bolt_Creation_Interval_Max>
+      <Light_Source_Name>L_Masari_Assist_beam_light</Light_Source_Name>
+
+   </LightningEffect>
+
+	<LightningEffect name="Masari_Architect_Heal_Beam">
+
+		<Texture_Name>lightning_default.tga</Texture_Name>
+		<Texture_Repeat>0.0</Texture_Repeat>
+		<Texture_Scroll>0.0</Texture_Scroll>
+
+		<Width_Max>2</Width_Max>
+		<Width_Min>1</Width_Min>
+		<Displace>0.001, 0.001, 0.001</Displace>
+		<Detail>1000</Detail>
+		<Color_Start>188,175,78,255</Color_Start>
+		<Color_End>188,175,78,255</Color_End>
+		<Fadeout_Time_Max>100</Fadeout_Time_Max>
+		<Fadeout_Time_Min>100</Fadeout_Time_Min>
+
+		<Update_All>true</Update_All>
+		<Number_Bolts>0</Number_Bolts>
+		<Bolt_Creation_Interval_Min>100</Bolt_Creation_Interval_Min>
+		<Bolt_Creation_Interval_Max>100</Bolt_Creation_Interval_Max>
+      <Light_Source_Name>L_Masari_Heal_beam_light</Light_Source_Name>
+
+
+   </LightningEffect>
+
+   <LightningEffect name="Masari_Architect_Heal_Structure_Beam">
+
+      <Texture_Name>lightning_default.tga</Texture_Name>
+      <Texture_Repeat>0.0</Texture_Repeat>
+      <Texture_Scroll>0.0</Texture_Scroll>
+
+      <Width_Max>2</Width_Max>
+      <Width_Min>1</Width_Min>
+      <Displace>0.001, 0.001, 0.001</Displace>
+      <Detail>1000</Detail>
+      <Color_Start>188,175,78,255</Color_Start>
+      <Color_End>188,175,78,255</Color_End>
+      <Fadeout_Time_Max>100</Fadeout_Time_Max>
+      <Fadeout_Time_Min>100</Fadeout_Time_Min>
+
+      <Update_All>true</Update_All>
+      <Number_Bolts>0</Number_Bolts>
+      <Bolt_Creation_Interval_Min>100</Bolt_Creation_Interval_Min>
+      <Bolt_Creation_Interval_Max>100</Bolt_Creation_Interval_Max>
+
+
+   </LightningEffect>
+
+   <LightningEffect name="Masari_Architect_Improve_Production_On_Structure_Beam">
+
+      <Texture_Name>lightning_default.tga</Texture_Name>
+      <Texture_Repeat>0.0</Texture_Repeat>
+      <Texture_Scroll>0.0</Texture_Scroll>
+
+      <Width_Max>2</Width_Max>
+      <Width_Min>1</Width_Min>
+      <Displace>0.001, 0.001, 0.001</Displace>
+      <Detail>1000</Detail>
+      <Color_Start>188,175,78,255</Color_Start>
+      <Color_End>188,175,78,255</Color_End>
+      <Fadeout_Time_Max>100</Fadeout_Time_Max>
+      <Fadeout_Time_Min>100</Fadeout_Time_Min>
+
+      <Update_All>true</Update_All>
+      <Number_Bolts>0</Number_Bolts>
+      <Bolt_Creation_Interval_Min>100</Bolt_Creation_Interval_Min>
+      <Bolt_Creation_Interval_Max>100</Bolt_Creation_Interval_Max>
+      <Light_Source_Name>L_Masari_Assist_Construction_light</Light_Source_Name>
+
+   </LightningEffect>
+
+
+   <LightningEffect name="Masari_Architect_Improve_Construction_On_Structure_Beam">
+
+      <Texture_Name>lightning_default.tga</Texture_Name>
+      <Texture_Repeat>0.0</Texture_Repeat>
+      <Texture_Scroll>0.0</Texture_Scroll>
+
+      <Width_Max>2</Width_Max>
+      <Width_Min>1</Width_Min>
+      <Displace>0.001, 0.001, 0.001</Displace>
+      <Detail>1000</Detail>
+      <Color_Start>188,175,78,255</Color_Start>
+      <Color_End>188,175,78,255</Color_End>
+      <Fadeout_Time_Max>100</Fadeout_Time_Max>
+      <Fadeout_Time_Min>100</Fadeout_Time_Min>
+
+      <Update_All>true</Update_All>
+      <Number_Bolts>0</Number_Bolts>
+      <Bolt_Creation_Interval_Min>100</Bolt_Creation_Interval_Min>
+      <Bolt_Creation_Interval_Max>100</Bolt_Creation_Interval_Max>
+      
+
+
+
+   </LightningEffect>
+
+   <LightningEffect name="Masari_Architect_Improve_Harvesting_By_Structure_Beam">
+
+      <Texture_Name>lightning_default.tga</Texture_Name>
+      <Texture_Repeat>0.0</Texture_Repeat>
+      <Texture_Scroll>0.0</Texture_Scroll>
+
+      <Width_Max>3</Width_Max>
+      <Width_Min>2</Width_Min>
+      <Displace>0.001, 0.001, 0.001</Displace>
+      <Detail>1000</Detail>
+      <Color_Start>188,175,78,255</Color_Start>
+      <Color_End>188,175,78,255</Color_End>
+      <Fadeout_Time_Max>100</Fadeout_Time_Max>
+      <Fadeout_Time_Min>100</Fadeout_Time_Min>
+
+      <Update_All>true</Update_All>
+      <Number_Bolts>0</Number_Bolts>
+      <Bolt_Creation_Interval_Min>100</Bolt_Creation_Interval_Min>
+      <Bolt_Creation_Interval_Max>100</Bolt_Creation_Interval_Max>
+
+
+   </LightningEffect>
+
+
+   <LightningEffect name="Masari_Architect_Improve_Attack_By_Structure_Beam">
+
+      <Texture_Name>lightning_default.tga</Texture_Name>
+      <Texture_Repeat>0.0</Texture_Repeat>
+      <Texture_Scroll>0.0</Texture_Scroll>
+
+      <Width_Max>2</Width_Max>
+      <Width_Min>1</Width_Min>
+      <Displace>0.001, 0.001, 0.001</Displace>
+      <Detail>1000</Detail>
+      <Color_Start>188,175,78,255</Color_Start>
+      <Color_End>188,175,78,255</Color_End>
+      <Fadeout_Time_Max>100</Fadeout_Time_Max>
+      <Fadeout_Time_Min>100</Fadeout_Time_Min>
+
+      <Update_All>true</Update_All>
+      <Number_Bolts>0</Number_Bolts>
+      <Bolt_Creation_Interval_Min>100</Bolt_Creation_Interval_Min>
+      <Bolt_Creation_Interval_Max>100</Bolt_Creation_Interval_Max>
+
+   </LightningEffect>
+   
+   
+	<!-- End Masari Specific -->
+
+  <!-- NM06 REACTOR LIGHTNING -->
+  <LightningEffect name="Reactor_Lightning">
+
+    <Texture_Name>lightning_default2.tga</Texture_Name>
+    <Texture_Repeat>1.5</Texture_Repeat>
+    <Texture_Scroll>5.0</Texture_Scroll>
+
+    <Width_Max>2</Width_Max>
+    <Width_Min>1</Width_Min>
+    <Displace>0.5, 0.5, 0.0</Displace>
+    <Detail>13</Detail>
+    <Color_Start>100,100,255,255</Color_Start>
+    <Color_End>0,0,0,0</Color_End>
+    <Fadeout_Time_Max>.4</Fadeout_Time_Max>
+    <Fadeout_Time_Min>.2</Fadeout_Time_Min>
+
+    <Update_All>true</Update_All>
+    <Number_Bolts>3</Number_Bolts>
+    <Bolt_Creation_Interval_Min>0.0</Bolt_Creation_Interval_Min>
+    <Bolt_Creation_Interval_Max>0.001</Bolt_Creation_Interval_Max>
+
+    <!-- <Light_Source_Name>L_Radiation_Beam</Light_Source_Name> -->
+  </LightningEffect>
+
+
+
+
+
+	<LightningEffect name="Masari_Piercing_Gaze_Light_Beam">
+
+		<Texture_Name>lightning_default.tga</Texture_Name>
+		<Texture_Repeat>0.0</Texture_Repeat>
+		<Texture_Scroll>0.0</Texture_Scroll>
+
+		<Width_Max>10</Width_Max>
+		<Width_Min>10</Width_Min>
+		<Displace>0.01, 0.01, 0.01</Displace>
+      <Detail>1000</Detail>
+      <Color_Start>252,255,221,255</Color_Start>
+		<Color_End>0,0,0,0</Color_End>
+		<Fadeout_Time_Max>100</Fadeout_Time_Max>
+		<Fadeout_Time_Min>100</Fadeout_Time_Min>
+
+		<Update_All>true</Update_All>
+		<Number_Bolts>1</Number_Bolts>
+		<Bolt_Creation_Interval_Min>0.0</Bolt_Creation_Interval_Min>
+		<Bolt_Creation_Interval_Max>0.1</Bolt_Creation_Interval_Max>
+		<Light_Source_Name>L_Radiation_Beam</Light_Source_Name>
+	</LightningEffect>
+
+	
+	<LightningEffect name="Masari_Piercing_Gaze_Dark_Beam">
+
+		<Render_Mode>ALPHA</Render_Mode>
+		<Texture_Name>lightning_default_black.tga</Texture_Name>
+		<Texture_Repeat>1.5</Texture_Repeat>
+		<Texture_Scroll>5.0</Texture_Scroll>
+
+		<Width_Max>6</Width_Max>
+		<Width_Min>6</Width_Min>
+		<Displace>0.2, 0.2, 0.0</Displace>
+      <Detail>1000</Detail>
+      <Color_Start>45,2,70,255</Color_Start>
+		<Color_End>0,0,0,0</Color_End>
+		<Fadeout_Time_Max>100</Fadeout_Time_Max>
+		<Fadeout_Time_Min>100</Fadeout_Time_Min>
+
+		<Update_All>true</Update_All>
+		<Cycles_Per_Distance>-0.01</Cycles_Per_Distance>
+		<Rotations_Per_Second> -0.8 </Rotations_Per_Second>
+		<Radius>8</Radius>
+		<Radius_Inc_Per_Second> 0.0</Radius_Inc_Per_Second>
+
+		<Update_All>true</Update_All>
+		<Number_Bolts>-2</Number_Bolts>
+		<Bolt_Creation_Interval_Min>0.6</Bolt_Creation_Interval_Min>
+		<Bolt_Creation_Interval_Max>0.8</Bolt_Creation_Interval_Max>
+	</LightningEffect>
+
+
+
+
+	<LightningEffect name="Military_Laser_Turret_Beam">
+
+    <Texture_Name>lightning_Novus_Signal_tower_01.tga</Texture_Name>
+    <Texture_Repeat>10</Texture_Repeat>
+    <Texture_Scroll>0</Texture_Scroll>
+
+    <Width_Max>2</Width_Max>
+    <Width_Min>1</Width_Min>
+    <Displace>0.01, 0.01, 0.01</Displace>
+    <Detail>0.1</Detail>
+    <Color_Start>249, 67, 37,0</Color_Start>
+    <Color_End>251, 58, 58,255</Color_End>
+    <Fadeout_Time_Max>101</Fadeout_Time_Max>
+    <Fadeout_Time_Min>100</Fadeout_Time_Min>
+    <Update_All>true</Update_All>
+    <Cycles_Per_Distance>-0.01</Cycles_Per_Distance>
+    <Rotations_Per_Second>-2</Rotations_Per_Second>
+    <Radius>2</Radius>
+
+    <Number_Bolts>3</Number_Bolts>
+    <Bolt_Creation_Interval_Min>0.0</Bolt_Creation_Interval_Min>
+    <Bolt_Creation_Interval_Max>0.1</Bolt_Creation_Interval_Max>
+
+    <Light_Source_Name>L_Novus_Constructor_Beam</Light_Source_Name>
+  </LightningEffect>
+
+
+
+
+	<LightningEffect name="Orlok_Crush_Beam_Layer_01">
+		<!-- <Render_Mode> ALPHA </Render_Mode> -->
+		<Texture_Name>lightning_reaper_pull_in_cone.tga</Texture_Name>
+
+		<Texture_Repeat>500</Texture_Repeat>
+		<Texture_Scroll>0</Texture_Scroll>
+
+		<Width_Max>2.0</Width_Max>
+		<Width_Min>1.5</Width_Min>
+		<Displace>0.01, 0.01, 0.01</Displace>
+		<Detail>700</Detail>
+		<Color_Start>0,0,0,0</Color_Start>
+		<Color_End>45,8,8,0</Color_End>
+		<Fadeout_Time_Max>.3</Fadeout_Time_Max>
+		<Fadeout_Time_Min>.2</Fadeout_Time_Min>
+
+		<Update_All>true</Update_All>
+		<Number_Bolts>9</Number_Bolts>
+		<Bolt_Creation_Interval_Min>0.1</Bolt_Creation_Interval_Min>
+		<Bolt_Creation_Interval_Max>0.1</Bolt_Creation_Interval_Max>
+		<Light_Source_Name>L_Alien_harvest_Beam</Light_Source_Name>
+	</LightningEffect>
+
+	<LightningEffect name="Orlok_Crush_Beam_Layer_02">
+		<!-- <Render_Mode> ALPHA </Render_Mode> -->
+		<Texture_Name>lightning_Novus_Signal_tower_dust.tga</Texture_Name>
+
+		<Texture_Repeat>500</Texture_Repeat>
+		<Texture_Scroll>3</Texture_Scroll>
+
+		<Width_Max>4.5</Width_Max>
+		<Width_Min>4.5</Width_Min>
+		<Displace>0.01, 0.01, 0.01</Displace>
+		<Detail>700</Detail>
+		<Color_Start>0,0,0,0</Color_Start>
+		<Color_End>10,10,10,0</Color_End>
+		<Fadeout_Time_Max>.3</Fadeout_Time_Max>
+		<Fadeout_Time_Min>.2</Fadeout_Time_Min>
+
+		<Update_All>true</Update_All>
+		<Number_Bolts>9</Number_Bolts>
+		<Bolt_Creation_Interval_Min>0.1</Bolt_Creation_Interval_Min>
+		<Bolt_Creation_Interval_Max>0.1</Bolt_Creation_Interval_Max>
+	</LightningEffect>
+
+	<LightningEffect name="Orlok_Crush_Beam_Layer_03">
+		<!-- <Render_Mode> ALPHA </Render_Mode> -->
+		<Texture_Name>lightning_wave.tga</Texture_Name>
+
+		<Texture_Repeat>500</Texture_Repeat>
+		<Texture_Scroll>3</Texture_Scroll>
+
+		<Width_Max>4.5</Width_Max>
+		<Width_Min>4.0</Width_Min>
+		<Displace>0.01, 0.01, 0.01</Displace>
+		<Detail>700</Detail>
+		<Color_Start>60,20,20,0</Color_Start>
+		<Color_End>60,20,20,0</Color_End>
+		<Fadeout_Time_Max>3.0</Fadeout_Time_Max>
+		<Fadeout_Time_Min>3.0</Fadeout_Time_Min>
+
+		<Update_All>true</Update_All>
+		<Number_Bolts>1</Number_Bolts>
+		<Bolt_Creation_Interval_Min>0.1</Bolt_Creation_Interval_Min>
+		<Bolt_Creation_Interval_Max>0.1</Bolt_Creation_Interval_Max>
+	</LightningEffect>
+
+  <LightningEffect name="Orlok_Crush_Beam_Layer_04">
+    <Texture_Name>lightning_wave.tga</Texture_Name>
+
+    <Texture_Repeat>500</Texture_Repeat>
+    <Texture_Scroll>3</Texture_Scroll>
+
+    <Width_Max>4.5</Width_Max>
+    <Width_Min>4.0</Width_Min>
+    <Displace>0.01, 0.01, 0.01</Displace>
+    <Detail>700</Detail>
+    <Color_Start>246,90,36,0</Color_Start>
+    <Color_End>246,90,36,0</Color_End>
+    <Fadeout_Time_Max>3.0</Fadeout_Time_Max>
+    <Fadeout_Time_Min>3.0</Fadeout_Time_Min>
+
+    <Update_All>true</Update_All>
+    <Number_Bolts>1</Number_Bolts>
+    <Bolt_Creation_Interval_Min>0.1</Bolt_Creation_Interval_Min>
+    <Bolt_Creation_Interval_Max>0.1</Bolt_Creation_Interval_Max>
+  </LightningEffect>
+
+
+	<LightningEffect name="Hacker_Viral_Bomb_Activate_Lightning">
+		<Texture_Name>p_Line_Globs.tga</Texture_Name>
+		<Texture_Repeat>4</Texture_Repeat>
+		<Texture_Scroll>0</Texture_Scroll>
+
+		<Width_Max>.6</Width_Max>
+		<Width_Min>.3</Width_Min>
+		<Displace>0.4, 0.3, 0.2</Displace>
+		<Detail>5.0</Detail>
+		<Color_Start>0,156,255,255</Color_Start>
+		<Color_End>60,202,255,255</Color_End>
+		<Fadeout_Time_Max>.5</Fadeout_Time_Max>
+		<Fadeout_Time_Min>.2</Fadeout_Time_Min>
+
+		<Update_All>true</Update_All>
+		<Number_Bolts>2</Number_Bolts>
+		<Bolt_Creation_Interval_Min>0.1</Bolt_Creation_Interval_Min>
+		<Bolt_Creation_Interval_Max>0.1</Bolt_Creation_Interval_Max>
+
+		<Light_Source_Name>L_Radiation_Beam</Light_Source_Name>
+	</LightningEffect>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</LightningEffects>

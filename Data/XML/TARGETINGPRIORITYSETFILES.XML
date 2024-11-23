@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+
+<Targeting_Priority_Set_Files>
+
+	<File>GroundUnitTargetingPriorities.xml</File>
+
+<!--
+	<File>TurretTargetingPriorities.xml</File>
+	<File>SpaceUnitTargetingPriorities.xml</File>
+-->
+
+</Targeting_Priority_Set_Files>

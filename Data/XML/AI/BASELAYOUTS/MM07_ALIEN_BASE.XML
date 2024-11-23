@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<Base_Layouts>
+	<Base_Layout Name="MM07_Alien_Base" Absolute="true" Faction="ALIEN">
+		<ALIEN_WALKER_HABITAT ZAngle="0.00"> 3637.68 3647.79 </ALIEN_WALKER_HABITAT>
+		<ALIEN_WALKER_ASSEMBLY ZAngle="0.00"> 1301.54, 3687.79 </ALIEN_WALKER_ASSEMBLY>
+	</Base_Layout>
+</Base_Layouts>

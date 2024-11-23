@@ -1,0 +1,343 @@
+<?xml version="1.0"?>
+<Military_Defense_Turret_XML>
+
+<!-- **************************************************************************************** -->	
+<!-- *** UNIT(S) **************************************************************************** -->	
+<!-- **************************************************************************************** -->
+
+	<X11_Military_Structures Name="Military_Turret_Ground">
+
+		<!-- ART -->
+		<Land_Model_Name>MB_Turret.ALO</Land_Model_Name>
+		<Scale_Factor>1.7</Scale_Factor> 
+		<Is_Attack_Anim_Looped> true </Is_Attack_Anim_Looped>		
+		<Looped_Attack_Anim_Timeout> 5 </Looped_Attack_Anim_Timeout>
+    <Last_State_Visible_Under_FOW> True </Last_State_Visible_Under_FOW>
+    <Initial_State_Visible_Under_FOW>True</Initial_State_Visible_Under_FOW>
+      <AssetBank> BANK_MILITARY </AssetBank>
+		
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_UNIT_MILITARY_TURRET</Text_ID>
+		<Icon_Name>i_icon_mb_turret.tga</Icon_Name>
+		<GUI_Scene_Name> HealthBar_Scene_Small </GUI_Scene_Name> 
+		<GUI_Receives_Input> false </GUI_Receives_Input>
+		<GUI_Min_Scale> 0.3 </GUI_Min_Scale>
+		<GUI_Max_Scale> 2.5 </GUI_Max_Scale>
+		<GUI_Default_Scale> 0.5 </GUI_Default_Scale>
+		<GUI_World_Offset> 0.0, 0.0, -40 </GUI_World_Offset>
+		<Select_Box_Scale>45</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+		
+		<!-- ATTRIBUTES -->
+		<Affiliation>Military</Affiliation>
+		<CategoryMask> Large, Stationary, CanAttack </CategoryMask>
+		<Victory_Relevant>no</Victory_Relevant>
+				
+		<!-- MOVEMENT -->
+		<Space_Layer> LandDynamic </Space_Layer>	
+		<MovementClass>Building</MovementClass>
+		<UnitCollisionClass> High Obstacle </UnitCollisionClass>	
+		<Custom_Hard_XExtent> 10.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+				
+		<!-- CONFLICT -->
+		<Is_Attackable> true </Is_Attackable>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Ranged_Target_Z_Adjust>6.0</Ranged_Target_Z_Adjust>
+
+		<Tactical_Health> 800 </Tactical_Health>
+		<Projectile_Types> Proj_Military_Turret_01 </Projectile_Types>
+		<Land_FOW_Reveal_Range>275.0</Land_FOW_Reveal_Range>
+
+		<!-- Just in case we hit situations where the target gets so close we can't turn to hit it we should have a minimum range.  That way
+		we can break off targeting and shoot something else.  Let's make it as small as possible though -->
+		<Targeting_Min_Attack_Distance>50.0</Targeting_Min_Attack_Distance>
+		<Targeting_Max_Attack_Distance>250</Targeting_Max_Attack_Distance>
+
+		<Targeting_Priority_Set>Military_Turret_Target_Priority</Targeting_Priority_Set>
+		<Targeting_Fire_Inaccuracy> 7.0 </Targeting_Fire_Inaccuracy>
+
+		<Targeting_Stickiness_Time_Threshold>10.0</Targeting_Stickiness_Time_Threshold>
+
+		<Projectile_Fire_Recharge_Seconds>1.85</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Recharge_Max_Random_Frames> 2 </Projectile_Fire_Recharge_Max_Random_Frames>
+		<Projectile_Fire_Pulse_Count>25</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.18</Projectile_Fire_Pulse_Delay_Seconds>
+
+        <Attack_Category_Restrictions> Resource, Resource_INST </Attack_Category_Restrictions>
+
+        <Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>       
+        <Land_Damage_SFX>null,SFX_GENERIC_DETONATION, SFX_GENERIC_DETONATION,SFX_GENERIC_DETONATION</Land_Damage_SFX>
+		
+		<!-- BEHAVIORS -->
+		<Behavior>
+			GROUND_STRUCTURE,
+			SELECTABLE
+		</Behavior>
+		
+		<LandBehavior>
+			ATTRIBUTE_DIRECTORY,
+			EFFECT_REGISTRY,
+			GUI,
+			RADAR_MAP_VISIBLE,
+			IDLE,
+			TURRET,
+			TARGETING,
+			WEAPON,
+			UNIT_AI,
+			REVEAL,
+			HIDE_WHEN_FOGGED,
+			STUNNABLE,
+			EARTHQUAKE_TARGET,
+			AI_TARGET
+		</LandBehavior>
+
+		<BehaviorType name="AIBehaviorType">
+			<AI_Target_Level>Individual</AI_Target_Level>
+		</BehaviorType>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Armor_Type> Armor_Military_Structure_Turret </Armor_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="GameEventSourceBehaviorType">
+			<Game_Event_Source_Category> Structure </Game_Event_Source_Category>
+		</BehaviorType>
+
+		<BehaviorType Name="ProductionBehaviorType">
+			<Is_Research_Tech_Tree_Lockable> No </Is_Research_Tech_Tree_Lockable>
+		</BehaviorType>
+
+		<BehaviorType Name="GroundStructureBehaviorType">
+			<Is_Command_Center> No </Is_Command_Center>
+		</BehaviorType>
+
+		<BehaviorType Name="EncyclopediaBehaviorType">
+			<Icon_Name />
+			<!-- For automated control groups by object type (playing with Game Controller), we typically use -->
+			<!-- the Icon_Name. If there is a defined Control_Group_Icon_Name in XML, it will be used as an override. -->
+			<Control_Group_Icon_Name> I_CG_M_Turret.tga </Control_Group_Icon_Name>
+		</BehaviorType>
+
+		<BehaviorType Name="TooltipBehaviorType">
+			<Tooltip_Description_Text_ID> TEXT_TOOLTIP_DESCRIPTION_MILITARY_DEFENSIVE_TURRET </Tooltip_Description_Text_ID>
+			<Tooltip_Category> TEXT_TOOLTIP_CATEGORY_STRUCTURE </Tooltip_Category>
+			<Tooltip_Good_Against> </Tooltip_Good_Against>
+			<Tooltip_Vulnerable_To> </Tooltip_Vulnerable_To>
+		</BehaviorType>
+		
+		<BehaviorType Name="TurretBehaviorType">
+			<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+			<Turret_Elevate_Extent_Degrees>90</Turret_Elevate_Extent_Degrees>
+			<Turret_Rotate_Speed>6.0</Turret_Rotate_Speed>
+			<Turret_Bone_Name>Turret_00</Turret_Bone_Name>
+			<Barrel_Bone_Name>Barrel_00</Barrel_Bone_Name>
+			<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+			<Apply_Y_Turret_Rotate_To_Axis>1</Apply_Y_Turret_Rotate_To_Axis>
+		</BehaviorType>
+
+        <BehaviorType Name="DeathFXBehaviorType">
+            <Death_Clone>Damage_Default, Military_Turret_Death_Clone</Death_Clone>
+            <Death_Explosions>Large_Explosion_Land</Death_Explosions>
+            <Death_Speed_Min> 100.0 </Death_Speed_Min>
+            <Death_Speed_Max> 120.0 </Death_Speed_Max>
+            <Death_Ang_Min> 1.0 </Death_Ang_Min>
+            <Death_Ang_Max> 2.0 </Death_Ang_Max>
+            <Death_Horizontal_Speed>10.0</Death_Horizontal_Speed>
+        </BehaviorType>
+		
+		<BehaviorType Name="BlobShadowBehaviorType">
+			<Blob_Shadow_Scale>25.0, 25.0</Blob_Shadow_Scale>
+			<Blob_Shadow_Material_Name>Square_Shadow</Blob_Shadow_Material_Name>
+			<Blob_Shadow_Below_Detail_Level>2</Blob_Shadow_Below_Detail_Level>
+			<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+			<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+		</BehaviorType>
+		
+		<BehaviorType Name="SFXBehaviorType">
+			<SFXEvent_Sold_Tactical />
+			<SFXEvent_Select />
+			<SFXEvent_Weapon_Firing_Loop> SFX_Military_Turret_Fire </SFXEvent_Weapon_Firing_Loop>
+			<SFXEvent_Fire />
+			<SFXEvent_Turret_Rotating_Loop> SFX_Military_Medium_Turret_Loop </SFXEvent_Turret_Rotating_Loop>
+			<Death_SFXEvent_Start_Die>SFX_Military_Turret_Death</Death_SFXEvent_Start_Die>
+		</BehaviorType>
+				
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Death_Explosions>Small_Explosion_Land</Death_Explosions>
+			<Remove_Upon_Death> Yes </Remove_Upon_Death> <!-- Yes: Instantly destroy death clone when effects are started -->
+		</BehaviorType>
+		
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.03 0.03</Radar_Icon_Size>
+		</BehaviorType>
+		
+		<BehaviorType Name="GUIBehaviorType">
+			<GUI_Bracket_Size>0</GUI_Bracket_Size>
+		</BehaviorType>
+
+		<BehaviorType Name="CrushBehaviorType">
+			<Crush_Defense>60</Crush_Defense>
+		</BehaviorType>
+
+	</X11_Military_Structures>
+
+
+
+	<!-- jdg military turret for use in Tut01 -->
+	<X11_Military_Structures Name="Tut01_Military_Turret_Ground">
+		<Variant_Of_Existing_Type> Military_Turret_Ground </Variant_Of_Existing_Type>
+		<Targeting_Max_Attack_Distance>140</Targeting_Max_Attack_Distance>
+
+		<BehaviorType Name="ProductionBehaviorType">
+			<Is_Strategic_Buildable_Type> No </Is_Strategic_Buildable_Type>
+		</BehaviorType>
+	</X11_Military_Structures>
+
+
+
+	<!-- **************************************************************************************** -->	
+<!-- *** PROJECTILES ************************************************************************ -->	
+<!-- **************************************************************************************** -->
+
+	<Projectile Name="Proj_Military_Turret_01">
+
+		<!-- ART -->
+		<Land_Model_Name>Laser_Military_Turret_Machine_Gun</Land_Model_Name>
+		<!-- AI Removed the tank projectile on purpose - plese don't change back w/o talking to me -->		
+		<Scale_Factor>1.0</Scale_Factor>
+		
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+				
+		<!-- MOVEMENT -->
+		<Max_Speed>17</Max_Speed>
+		<Max_Rate_Of_Turn>0</Max_Rate_Of_Turn>
+		
+		<!-- CONFLICT -->
+		<AI_Combat_Power> 1 </AI_Combat_Power>
+
+		<!-- BEHAVIORS -->
+		<Behavior>
+			PROJECTILE,
+			HIDE_WHEN_FOGGED
+		</Behavior>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Damage_Type> Damage_Military_Turret </Damage_Type>
+		</BehaviorType>
+		
+		<BehaviorType Name="ProjectileBehaviorType">
+			<Projectile_Category>laser</Projectile_Category>
+			<Projectile_Rocket_Straight_Distance>500</Projectile_Rocket_Straight_Distance>
+			<Projectile_Max_Flight_Distance>500.0</Projectile_Max_Flight_Distance>
+			<Projectile_Max_Scan_Range>600.0</Projectile_Max_Scan_Range>
+			<Projectile_Damage>15.0</Projectile_Damage>
+			<Projectile_Blast_Area_Damage> 2 </Projectile_Blast_Area_Damage>
+			<Projectile_Blast_Area_Range> 10 </Projectile_Blast_Area_Range>
+			<Projectile_SFXEvent_Detonate>SFX_Military_Detonation_1</Projectile_SFXEvent_Detonate>
+			<Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Military_Small_Damage_Detonation </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
+			<Projectile_Does_Shield_Damage>No</Projectile_Does_Shield_Damage>
+			<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+			<Projectile_Object_Detonation_Particle>Bullets_hit</Projectile_Object_Detonation_Particle>
+			<Projectile_Object_Armor_Reduced_Detonation_Particle>Bullets_hit</Projectile_Object_Armor_Reduced_Detonation_Particle>
+			<Projectile_Ground_Detonation_Particle>Military_Rifle_Dirt_Collide</Projectile_Ground_Detonation_Particle>
+		</BehaviorType>
+
+	</Projectile>
+
+    <!-- **************************************************************************************** -->
+    <!-- *** DEATH CLONE(S)********************************************************************** -->
+    <!-- **************************************************************************************** -->
+
+    <X11_Military_Structures Name="Military_Turret_Death_Clone">
+
+        <!-- ART -->
+        <Land_Model_Name>MB_Turret_hulk.ALO</Land_Model_Name>
+        <Scale_Factor>1.7</Scale_Factor>
+        <AssetBank> BANK_MILITARY </AssetBank>
+
+        <!-- INTERFACE -->
+        <Text_ID>TEXT_NONE</Text_ID>
+        <Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+        <Space_Layer> LandDynamic </Space_Layer>
+        <UnitCollisionClass> Vehicle </UnitCollisionClass>
+        <Custom_Hard_XExtent> 28.0 </Custom_Hard_XExtent>
+        <Custom_Hard_YExtent> 16.0 </Custom_Hard_YExtent>
+
+        <!-- ATTRIBUTES -->
+        <CategoryMask> Medium, Piloted, Resource </CategoryMask>
+        <IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+
+        <!-- CONFLICT -->
+        <Ranged_Target_Z_Adjust>0.1</Ranged_Target_Z_Adjust>
+
+        <!-- BEHAVIORS -->
+        <LandBehavior>
+            SPAWN_DEBRIS,
+            DEBRIS,
+            RESOURCE,
+				ATTRIBUTE_DIRECTORY,
+            EFFECT_REGISTRY
+        </LandBehavior>
+
+        <BehaviorType Name="DebrisBehaviorType">
+            <Debris_Min_Lifetime_Seconds> 1.0 </Debris_Min_Lifetime_Seconds>
+            <Debris_Max_Lifetime_Seconds> 3.0 </Debris_Max_Lifetime_Seconds>
+        </BehaviorType>
+
+        <BehaviorType Name="SpawnDebrisBehaviorType">
+            <Creation_Debris_Types>               
+                Military_AbramsM2_Tank_Debris_03,
+                Military_AbramsM2_Tank_Debris_04,
+                Military_AbramsM2_Tank_Debris_05,
+                Military_AbramsM2_Tank_Debris_04,
+                Military_AbramsM2_Tank_Debris_05,
+                Military_AbramsM2_Tank_Debris_03,
+                Military_AbramsM2_Tank_Debris_04,
+                Military_AbramsM2_Tank_Debris_05,
+                Military_AbramsM2_Tank_Debris_03,
+                Military_AbramsM2_Tank_Debris_04,
+                Military_AbramsM2_Tank_Debris_05,
+                Military_AbramsM2_Tank_Debris_03,
+                Military_AbramsM2_Tank_Debris_05,
+                Military_AbramsM2_Tank_Debris_04,
+                Military_AbramsM2_Tank_Debris_05
+            </Creation_Debris_Types>
+            <Debris_Speed_Min> 50.0 </Debris_Speed_Min>
+            <Debris_Speed_Max> 100.0 </Debris_Speed_Max>
+            <Debris_Outward_Speed_Min> 50.0 </Debris_Outward_Speed_Min>
+            <Debris_Outward_Speed_Max> 100.0 </Debris_Outward_Speed_Max>
+            <Debris_Ang_Min> 1.0 </Debris_Ang_Min>
+            <Debris_Ang_Max> 30.0 </Debris_Ang_Max>
+        </BehaviorType>
+
+        <BehaviorType Name="BallisticBehaviorType">
+            <Ballistic_Weight>9.0</Ballistic_Weight>
+            <Ballistic_Bounce>0.3</Ballistic_Bounce>
+        </BehaviorType>
+
+        <BehaviorType Name="DeathFXBehaviorType">
+            <Death_Explosions>Generic_Explosion_Medium_tendrils</Death_Explosions>
+            <Death_Speed_Min> 100.0 </Death_Speed_Min>
+            <Death_Speed_Max> 120.0 </Death_Speed_Max>
+            <Death_Ang_Min> 1.0 </Death_Ang_Min>
+            <Death_Ang_Max> 2.0 </Death_Ang_Max>
+            <Death_Horizontal_Speed>10.0</Death_Horizontal_Speed>
+            <Death_SFXEvent_Start_Die>SFX_Military_Medium_Vehicle_Death</Death_SFXEvent_Start_Die>
+            <Death_Fade_Time> 0.25 </Death_Fade_Time>
+            <Death_Persistence_Duration> 3.0 </Death_Persistence_Duration>
+        </BehaviorType>
+
+        <BehaviorType Name="ArmorAndDamageBehaviorType">
+            <Damage_Type> Damage_Default </Damage_Type>
+        </BehaviorType>      
+
+    </X11_Military_Structures>
+
+
+
+
+</Military_Defense_Turret_XML>

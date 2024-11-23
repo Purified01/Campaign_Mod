@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<Cinematic_FX>
+
+
+
+
+  <X72_Cinematics_FX Name="Cinematic_Large_Smoke">
+    
+    <Is_Placed_By_Editor>true</Is_Placed_By_Editor>
+    <Land_Model_Name>MOV_LargeSmoke_TUT01.alo</Land_Model_Name>
+    <Behavior>SELECTABLE</Behavior>
+    <Scale_Factor>1.0</Scale_Factor>
+    <Is_Decoration>No</Is_Decoration>   
+    
+  </X72_Cinematics_FX>
+
+  <X72_Cinematics_FX Name="Cin_ground_fire_medium">
+
+    <Is_Placed_By_Editor>true</Is_Placed_By_Editor>
+    <Land_Model_Name>Cin_Fire_Ground_Medium.alo</Land_Model_Name>
+    <Behavior>SELECTABLE</Behavior>
+    <Scale_Factor>1.0</Scale_Factor>
+    <Is_Decoration>No</Is_Decoration>
+
+  </X72_Cinematics_FX>
+
+  <!--X80_Special_Effects Name="Alien_Radiation_Lrg_Rectangle">
+    <Text_ID>Alien radiation Medium</Text_ID>
+    <Land_Model_Name>fx_radiation_lrg_Rectangle.alo</Land_Model_Name>
+    <Behavior>SELECTABLE</Behavior>
+    <Scale_Factor>1.0</Scale_Factor>
+    <Is_Decoration>No</Is_Decoration>
+
+    <BehaviorType Name="SFXBehaviorType">
+      <SFXEvent_Engine_Idle_Loop> SFX_Generic_Radiation_Loop </SFXEvent_Engine_Idle_Loop>
+    </BehaviorType>
+
+  </X80_Special_Effects-->
+
+</Cinematic_FX>

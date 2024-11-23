@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+
+<Campaign_Files>
+
+	<!-- 	<File>Campaigns_Demos.xml</File> -->
+	<File>Campaigns_Story.xml</File>
+	<File>Campaigns_Global.xml</File>
+	<File>Campaigns_Tutorial.xml</File>
+	<File>Campaigns_Special_Edition.xml</File>
+	<File>Campaigns_Custom.xml</File>
+
+</Campaign_Files>

@@ -1,0 +1,592 @@
+<?xml version="1.0"?>
+
+<SFXEvents>
+
+	<!-- ======================================= -->
+	<!--  		  ALIEN FOOTSTEPS / ANIM SFX		-->
+	<!-- ======================================= -->
+
+	   <SFXEvent Name="SFX_Anim_Alien_Walker_Foot_Plant">
+			<Use_Preset>Preset_FSV_HUGE</Use_Preset>
+			<Samples>FS_AW_01.wav FS_AW_02.wav FS_AW_03.wav FS_AW_04.wav</Samples>
+	   </SFXEvent>
+
+	   <SFXEvent Name="SFX_Anim_Alien_Walker_Water_Foot_Plant">
+			<Use_Preset>Preset_FSV_HUGE</Use_Preset>
+			<Samples>FS_AW_Water_01.wav FS_AW_Water_02.wav FS_AW_Water_03.wav FS_AW_Water_04.wav</Samples>
+	   </SFXEvent>
+
+	   <SFXEvent Name="SFX_Anim_Alien_Walker_Hydraulics">
+			<Use_Preset>Preset_FSV</Use_Preset>
+			<Samples>FS_Alien_Hydraulic_3.wav</Samples>  	
+			<Min_Pitch>85</Min_Pitch>
+			<Max_Pitch>115</Max_Pitch>
+			<Min_Volume>46</Min_Volume>
+			<Max_Volume>66</Max_Volume>
+	   </SFXEvent>
+
+	   <SFXEvent Name="SFX_Anim_Alien_Walker_Fall">
+			<Use_Preset>Preset_EXP_Large</Use_Preset>
+			<Samples>EXP_Alien_Walker_Fall_1.wav</Samples>
+	   </SFXEvent>
+
+	   <SFXEvent Name="SFX_Anim_Alien_Walker_Steam">
+			<Use_Preset>Preset_EXP</Use_Preset>
+			<Samples>Steam_1.wav Steam_2.wav Steam_3.wav</Samples>
+			<Min_Pitch>50</Min_Pitch>
+			<Max_Pitch>75</Max_Pitch>
+	   </SFXEvent>
+
+	   <SFXEvent Name="SFX_Anim_Alien_Walker_Impact">
+			<Use_Preset>Preset_EXP_Large</Use_Preset>
+			<Samples>EXP_Alien_Walker_Impact_2.wav</Samples>
+	   </SFXEvent>
+
+
+
+
+	   <SFXEvent Name="SFX_Anim_Alien_Meteor_Start">
+			<Use_Preset>Preset_EXP_Large</Use_Preset>
+			<Samples>EGB_Meteor_Start_1.wav</Samples>
+	   </SFXEvent>
+
+	   <SFXEvent Name="SFX_Anim_Alien_Meteor_Fly_By">
+			<Use_Preset>Preset_EGB_Large</Use_Preset>
+			<Samples>EGB_Meteor_By_2.wav</Samples>
+	   </SFXEvent>
+
+
+
+
+
+
+
+
+
+	   <SFXEvent Name="SFX_Anim_Small_AW_Foot_Plant">
+			<Use_Preset>Preset_FSV</Use_Preset>
+			<Samples>FS_Small_AW_1.wav FS_Small_AW_2.wav FS_Small_AW_3.wav FS_Small_AW_4.wav FS_Small_AW_5.wav FS_Small_AW_7.wav FS_Small_AW_8.wav</Samples>
+	   </SFXEvent>
+
+	   <SFXEvent Name="SFX_Anim_Small_AW_Water_Foot_Plant">
+			<Use_Preset>Preset_FSV</Use_Preset>
+			<Samples>FS_Small_AW_Water_1.wav FS_Small_AW_Water_2.wav FS_Small_AW_Water_3.wav FS_Small_AW_Water_4.wav</Samples>
+	   </SFXEvent>
+
+	   <SFXEvent Name="SFX_Anim_Small_AW_Hydraulics">
+			<Use_Preset>Preset_FSV</Use_Preset>
+			<Samples>FS_Alien_Hydraulic_6.wav</Samples>  	
+			<Min_Pitch>85</Min_Pitch>
+			<Max_Pitch>115</Max_Pitch>
+			<Min_Volume>46</Min_Volume>
+			<Max_Volume>66</Max_Volume>
+	   </SFXEvent>
+
+
+	   <SFXEvent Name="SFX_Anim_Smallest_AW_Foot_Plant">
+			<Use_Preset>Preset_FSV</Use_Preset>
+			<Samples>FS_Small_AW_1.wav FS_Small_AW_2.wav FS_Small_AW_3.wav FS_Small_AW_4.wav FS_Small_AW_5.wav FS_Small_AW_7.wav FS_Small_AW_8.wav</Samples>
+			<Min_Pitch>200</Min_Pitch>
+			<Max_Pitch>200</Max_Pitch>
+			<Min_Volume>25</Min_Volume>
+			<Max_Volume>25</Max_Volume>
+	   </SFXEvent>
+
+
+
+
+
+ 
+
+		<SFXEvent Name="SFX_Anim_Alien_Brute_Foot_Plant">
+			<Use_Preset>Preset_FSI</Use_Preset>
+			<Samples>FS_Brute_1.wav FS_Brute_2.wav FS_Brute_3.wav FS_Brute_4.wav FS_Brute_5.wav FS_Brute_6.wav FS_Brute_7.wav</Samples>
+			<Min_Volume>30</Min_Volume>
+			<Max_Volume>30</Max_Volume>
+		</SFXEvent>
+
+		<SFXEvent Name="SFX_Anim_Alien_Brute_Beat_Chest">
+			<Use_Preset>Preset_FSI</Use_Preset>
+			<Samples>FS_Brute_Beat_1.wav FS_Brute_Beat_2.wav FS_Brute_Beat_3.wav FS_Brute_Beat_4.wav</Samples>
+			<Min_Volume>30</Min_Volume>
+			<Max_Volume>30</Max_Volume>
+		</SFXEvent>
+
+      <SFXEvent Name="SFX_Anim_Alien_Brute_Fist_SFX">
+			<Use_Preset>Preset_EXP</Use_Preset>
+			<Samples>EXP_Brute_Fist_1.wav</Samples>      
+		</SFXEvent>
+
+
+
+
+
+
+		<SFXEvent Name="SFX_Anim_Alien_Beacon_Deploy">
+			<Use_Preset>Preset_EGB</Use_Preset>
+			<Samples>ANM_Alien_Beacon_Deploy_1.wav</Samples>
+			<Min_Volume>100</Min_Volume>
+			<Max_Volume>100</Max_Volume>
+		</SFXEvent>
+
+		<SFXEvent Name="SFX_Anim_Alien_Beacon_UnDeploy">
+			<Use_Preset>Preset_EGB</Use_Preset>
+			<Samples>ANM_Alien_Beacon_UnDeploy_1.wav</Samples>
+			<Min_Volume>100</Min_Volume>
+			<Max_Volume>100</Max_Volume>
+		</SFXEvent>
+
+
+
+
+
+		<SFXEvent Name="SFX_Anim_Alien_Orlok_Deploy_Start">
+			<Use_Preset>Preset_EGB</Use_Preset>
+			<Samples>ANM_Alien_Orlok_Open_Hatch.wav</Samples>
+		</SFXEvent>
+
+		<SFXEvent Name="SFX_Anim_Alien_Orlok_Deploy_Loop">
+			<Use_Preset>Preset_EGB</Use_Preset>
+			<Samples>ANM_Alien_Orlok_Opening_Hatch.wav</Samples>
+		</SFXEvent>
+
+		<SFXEvent Name="SFX_Anim_Alien_Orlok_Deploy_Stop">
+			<Use_Preset>Preset_EXP</Use_Preset>
+			<Samples>ANM_Alien_Orlok_Close_Hatch.wav</Samples>
+		</SFXEvent>
+
+
+
+
+
+
+		<SFXEvent Name="SFX_Anim_Alien_Orlok_Deploy_Claw">
+			<Use_Preset>Preset_EGB</Use_Preset>
+			<Samples>ANM_Alien_Orlok_Open_Claw_1.wav</Samples>
+		</SFXEvent>
+
+
+		<SFXEvent Name="SFX_Anim_Alien_Orlok_Deploy_Endure">
+			<Use_Preset>Preset_EGB</Use_Preset>
+			<Samples>ANM_Alien_Orlok_Endure_1.wav</Samples>
+		</SFXEvent>
+
+		<SFXEvent Name="SFX_Anim_Alien_Orlok_UnDeploy_Endure">
+			<Use_Preset>Preset_EGB</Use_Preset>
+			<Samples>ANM_Alien_Orlok_Endure_Off_1.wav</Samples>
+		</SFXEvent>
+
+
+
+
+
+
+		<SFXEvent Name="SFX_Anim_Alien_Nufai_Foot_Plant">
+			<Use_Preset>Preset_FSI</Use_Preset>
+			<Samples>FS_Brute_1.wav FS_Brute_2.wav FS_Brute_3.wav FS_Brute_4.wav FS_Brute_5.wav FS_Brute_6.wav FS_Brute_7.wav</Samples>
+			<Min_Volume>30</Min_Volume>
+			<Max_Volume>30</Max_Volume>
+		</SFXEvent>
+
+
+	<!-- ======================================= -->
+	<!--  		  NOVUS FOOTSTEPS / ANIM SFX		-->
+	<!-- ======================================= -->
+
+		<SFXEvent Name="SFX_Anim_Snow_Robot_Infantry_Foot_Plant">
+			<Use_Preset>Preset_FSI</Use_Preset>
+			<Samples>FS_Snow_1.wav FS_Snow_2.wav FS_Snow_3.wav FS_Snow_4.wav FS_Snow_5.wav FS_Snow_6.wav FS_Snow_7.wav FS_Snow_8.wav</Samples>
+		</SFXEvent>
+
+		<SFXEvent Name="SFX_Anim_Dirt_Robot_Infantry_Foot_Plant">
+			<Use_Preset>Preset_FSI</Use_Preset>
+			<Samples>FS_Dirt_1.wav FS_Dirt_2.wav FS_Dirt_3.wav FS_Dirt_4.wav FS_Dirt_5.wav FS_Dirt_6.wav FS_Dirt_7.wav FS_Dirt_8.wav</Samples>
+		</SFXEvent>
+	
+		<SFXEvent Name="SFX_Anim_Concrete_Robot_Infantry_Foot_Plant">
+			<Use_Preset>Preset_FSI</Use_Preset>
+			<Samples>FS_Concrete_1.wav FS_Concrete_2.wav FS_Concrete_3.wav FS_Concrete_4.wav FS_Concrete_5.wav FS_Concrete_6.wav</Samples>
+		</SFXEvent>
+	
+		<SFXEvent Name="SFX_Anim_Grass_Robot_Infantry_Foot_Plant">
+         <Use_Preset>Preset_FSI</Use_Preset>
+         <Samples>FS_Grass_1.wav FS_Grass_2.wav FS_Grass_3.wav FS_Grass_4.wav FS_Grass_5.wav FS_Grass_6.wav FS_Grass_7.wav FS_Grass_8.wav</Samples>
+      </SFXEvent>
+	
+		<SFXEvent Name="SFX_Anim_Mud_Robot_Infantry_Foot_Plant">
+			<Use_Preset>Preset_FSI</Use_Preset>
+			<Samples>FS_Mud_1.wav FS_Mud_2.wav FS_Mud_3.wav FS_Mud_4.wav</Samples>
+      </SFXEvent>
+
+		<SFXEvent Name="SFX_Anim_Water_Robot_Infantry_Foot_Plant">
+			<Use_Preset>Preset_FSI</Use_Preset>
+			<Samples>FS_Water_1.wav FS_Water_2.wav FS_Water_3.wav FS_Water_4.wav</Samples>
+		</SFXEvent>
+
+
+
+
+
+
+		<SFXEvent Name="SFX_Anim_Mech_Foot_Plant">
+			<Use_Preset>Preset_FSV</Use_Preset>
+			<Samples>FS_Mech_1.wav FS_Mech_2.wav FS_Mech_3.wav FS_Mech_4.wav</Samples>
+		</SFXEvent>
+
+		<SFXEvent Name="SFX_Anim_Mech_Motor_Move">
+			<Use_Preset>Preset_FSI</Use_Preset>
+			<Samples>FS_Mech_Motor_Move_1.wav FS_Mech_Motor_Move_2.wav FS_Mech_Motor_Move_3.wav FS_Mech_Motor_Move_4.wav</Samples>
+			<Min_Volume>80</Min_Volume>
+			<Max_Volume>80</Max_Volume>
+            <Probability>70</Probability>
+		</SFXEvent>
+
+		<SFXEvent Name="SFX_Anim_Mech_Motor_Attack">
+			<Use_Preset>Preset_FSI</Use_Preset>
+			<Samples>FS_Mech_Motor_Attack_1.wav</Samples>
+			<Min_Volume>100</Min_Volume>
+			<Max_Volume>100</Max_Volume>
+		</SFXEvent>
+
+		<SFXEvent Name="SFX_Anim_Mech_Motor_Stop">
+			<Use_Preset>Preset_FSI</Use_Preset>
+			<Samples>FS_Mech_Motor_Stop_1.wav</Samples>
+			<Min_Volume>80</Min_Volume>
+			<Max_Volume>80</Max_Volume>
+		</SFXEvent>
+
+		<SFXEvent Name="SFX_Anim_Mech_Deploy">
+			<Use_Preset>Preset_FSI</Use_Preset>
+			<Samples>EGB_Mech_Deploy_1.wav</Samples>
+			<Min_Volume>100</Min_Volume>
+			<Max_Volume>100</Max_Volume>
+		</SFXEvent>
+
+		<SFXEvent Name="SFX_Anim_Mech_UnDeploy">
+			<Use_Preset>Preset_FSI</Use_Preset>
+			<Samples>EGB_Mech_UnDeploy_1.wav</Samples>
+			<Min_Volume>100</Min_Volume>
+			<Max_Volume>100</Max_Volume>
+		</SFXEvent>
+
+		<SFXEvent Name="SFX_Anim_Mech_Take_Off">
+			<Use_Preset>Preset_GUN_HERO</Use_Preset>
+			<Samples>EGB_Mech_Take_Off.wav</Samples>
+		</SFXEvent>
+
+		<SFXEvent Name="SFX_Anim_Mech_Land">
+			<Use_Preset>Preset_GUN_HERO</Use_Preset>
+			<Samples>EGB_Mech_Land.wav</Samples>
+		</SFXEvent>
+
+
+
+
+
+
+		<SFXEvent Name="SFX_Anim_Robot_Motor_Move">
+			<Use_Preset>Preset_FSI</Use_Preset>
+			<Samples>FS_Robot_Motor_Move_1.wav FS_Robot_Motor_Move_2.wav FS_Robot_Motor_Move_3.wav FS_Robot_Motor_Move_4.wav</Samples>
+            <Probability>50</Probability>
+		</SFXEvent>
+
+ 		<SFXEvent Name="SFX_Anim_Constructor_Motor_Move">
+			<Use_Preset>Preset_FSI</Use_Preset>
+			<Samples>ANM_Constructor_Motor_Move_1.wav ANM_Constructor_Motor_Move_2.wav</Samples>
+            <Probability>50</Probability>
+		</SFXEvent>
+
+  		<SFXEvent Name="SFX_Anim_Constructor_Motor_Short_Move">
+			<Use_Preset>Preset_FSI</Use_Preset>
+			<Samples>ANM_Constructor_Motor_Move_Short_1.wav ANM_Constructor_Motor_Move_Short_2.wav</Samples>
+            <Probability>50</Probability>
+		</SFXEvent>
+
+
+
+
+
+      <SFXEvent Name="SFX_Anim_Novus_Walker_Foot_Plant">
+			<Use_Preset>Preset_FSV</Use_Preset>
+			<Samples>FS_Field_Inverter_1.wav FS_Field_Inverter_2.wav FS_Field_Inverter_3.wav FS_Field_Inverter_4.wav</Samples>
+      </SFXEvent>
+
+      <SFXEvent Name="SFX_Anim_Novus_Walker_Water_Foot_Plant">
+			<Use_Preset>Preset_FSV</Use_Preset>
+			<Samples>FS_Field_Inverter_1.wav FS_Field_Inverter_2.wav FS_Field_Inverter_3.wav FS_Field_Inverter_4.wav</Samples>
+      </SFXEvent>
+
+      <SFXEvent Name="SFX_Anim_Novus_Walker_Deploy">
+			<Use_Preset>Preset_FSI</Use_Preset>
+			<Samples>ANM_Field_Inverter_Deploy_1.wav</Samples>
+			<Min_Volume>100</Min_Volume>
+			<Max_Volume>100</Max_Volume>
+      </SFXEvent>
+
+      <SFXEvent Name="SFX_Anim_Novus_Walker_UnDeploy">
+			<Use_Preset>Preset_FSI</Use_Preset>
+			<Samples>ANM_Field_Inverter_Deploy_1.wav</Samples>
+			<Min_Volume>100</Min_Volume>
+			<Max_Volume>100</Max_Volume>
+      </SFXEvent>
+
+
+
+
+
+      <SFXEvent Name="SFX_Anim_Novus_Walker_Small_Foot_Plant">
+			<Use_Preset>Preset_FSM</Use_Preset>
+			<Samples>FS_Constructor_1.wav FS_Constructor_2.wav FS_Constructor_3.wav FS_Constructor_4.wav</Samples>
+      </SFXEvent>
+
+      <SFXEvent Name="SFX_Anim_Novus_Walker_Small_Water_Foot_Plant">
+			<Use_Preset>Preset_FSM</Use_Preset>
+			<Samples>FS_Constructor_1.wav FS_Constructor_2.wav FS_Constructor_3.wav FS_Constructor_4.wav</Samples>
+      </SFXEvent>
+
+      <SFXEvent Name="SFX_Anim_Novus_Walker_Small_Body_Fall">
+			<Use_Preset>Preset_FSM</Use_Preset>
+			<Samples>ANM_Constructor_Bodyfall_1.wav</Samples>
+      </SFXEvent>
+
+
+
+
+
+
+		<SFXEvent Name="SFX_Anim_Novus_Founder_Foot_Plant">
+			<Use_Preset>Preset_FSM</Use_Preset>
+			<Samples>FS_Founder_1.wav FS_Founder_2.wav FS_Founder_3.wav FS_Founder_4.wav</Samples>
+			<Min_Volume>60</Min_Volume>
+			<Max_Volume>60</Max_Volume>
+		</SFXEvent>
+
+      <SFXEvent Name="SFX_Anim_Novus_Founder_Body_Fall">
+			<Use_Preset>Preset_FSM</Use_Preset>
+			<Samples>ANM_Founder_Bodyfall_1.wav</Samples>
+      </SFXEvent>
+
+
+
+
+
+
+
+      <SFXEvent Name="SFX_Anim_Novus_Nanites_Movement">
+			<Use_Preset>Preset_FSI</Use_Preset>
+			<Samples>ANM_Novus_Nanites_Move_1.wav ANM_Novus_Nanites_Move_2.wav ANM_Novus_Nanites_Move_3.wav ANM_Novus_Nanites_Move_4.wav ANM_Novus_Nanites_Move_5.wav ANM_Novus_Nanites_Move_6.wav ANM_Novus_Nanites_Move_7.wav ANM_Novus_Nanites_Move_8.wav ANM_Novus_Nanites_Move_9.wav ANM_Novus_Nanites_Move_10.wav</Samples>
+			<Min_Volume>30</Min_Volume>
+			<Max_Volume>30</Max_Volume>
+      </SFXEvent>
+
+
+
+
+
+
+      <SFXEvent Name="SFX_Anim_Reflector_Deploy">
+			<Use_Preset>Preset_FSI</Use_Preset>
+			<Samples>ANM_Reflector_Deploy_1.wav</Samples>
+			<Min_Volume>100</Min_Volume>
+			<Max_Volume>100</Max_Volume>
+      </SFXEvent>
+
+      <SFXEvent Name="SFX_Anim_Reflector_UnDeploy">
+			<Use_Preset>Preset_FSI</Use_Preset>
+			<Samples>ANM_Reflector_UnDeploy_1.wav</Samples>
+			<Min_Volume>100</Min_Volume>
+			<Max_Volume>100</Max_Volume>
+      </SFXEvent>
+
+      <SFXEvent Name="SFX_Anim_Reflector_Lock">
+			<Use_Preset>Preset_FSI</Use_Preset>
+			<Samples>ANM_Reflector_Lock_1.wav</Samples>
+			<Min_Volume>100</Min_Volume>
+			<Max_Volume>100</Max_Volume>
+      </SFXEvent>
+
+
+
+
+
+
+		<SFXEvent Name="SFX_Anim_Amplifier_Deploy">
+         <Use_Preset>Preset_EGB</Use_Preset>
+			<Samples>EGB_Amplifier_Deploy_1.wav</Samples>
+			<Min_Volume>100</Min_Volume>
+			<Max_Volume>100</Max_Volume>
+		</SFXEvent>
+
+		<SFXEvent Name="SFX_Anim_Amplifier_UnDeploy">
+			<Use_Preset>Preset_EGB</Use_Preset>
+			<Samples>EGB_Amplifier_UnDeploy_1.wav</Samples>
+			<Min_Volume>100</Min_Volume>
+			<Max_Volume>100</Max_Volume>
+		</SFXEvent>
+
+		<SFXEvent Name="SFX_Anim_Amplifier_Pulse">
+			<Use_Preset>Preset_GUNV</Use_Preset>
+			<Samples>GUN_Amplifier_Pulse_1.wav</Samples>
+		</SFXEvent>
+
+
+
+
+
+
+
+		<SFXEvent Name="SFX_Anim_Antimatter_Deploy">
+			<Use_Preset>Preset_EGB</Use_Preset>
+			<Samples>EGB_Antimatter_Deploy_1.wav</Samples>
+		</SFXEvent>
+
+		<SFXEvent Name="SFX_Anim_Antimatter_UnDeploy">
+			<Use_Preset>Preset_EGB</Use_Preset>
+			<Samples>EGB_Antimatter_UnDeploy_1.wav</Samples>
+		</SFXEvent>
+
+		<SFXEvent Name="SFX_Anim_Antimatter_Spin_Attack">
+			<Use_Preset>Preset_EGB</Use_Preset>
+			<Samples>EGB_Antimatter_Spin_Attack_1.wav</Samples>
+		</SFXEvent>
+
+
+
+
+
+		<SFXEvent Name="SFX_Anim_Novus_Reflex_Attack">
+			<Use_Preset>Preset_EGB</Use_Preset>
+			<Samples>ANM_Reflex_Saw_5.wav ANM_Reflex_Saw_6.wav</Samples>
+		</SFXEvent>
+
+
+
+
+
+
+
+	<!-- ======================================= -->
+	<!--  		  NOVUS FOOTSTEPS / ANIM SFX		-->
+	<!-- ======================================= -->
+
+		<SFXEvent Name="SFX_Anim_Masari_Scyth_Swing">
+			<Use_Preset>Preset_EGB</Use_Preset>
+			<Samples>GUN_Masari_Electric_Swing_2.wav</Samples>
+		</SFXEvent>
+
+
+
+
+
+
+
+
+
+	<!-- ======================================= -->
+	<!--  		  GENERIC FOOTSTEPS / ANIM SFX	-->
+	<!-- ======================================= -->
+	
+		<SFXEvent Name="SFX_Anim_Snow_Infantry_Foot_Plant">
+			<Use_Preset>Preset_FSI</Use_Preset>
+			<Samples>FS_Snow_1.wav FS_Snow_2.wav FS_Snow_3.wav FS_Snow_4.wav FS_Snow_5.wav FS_Snow_6.wav FS_Snow_7.wav FS_Snow_8.wav</Samples>
+		</SFXEvent>
+
+		<SFXEvent Name="SFX_Anim_Dirt_Infantry_Foot_Plant">
+			<Use_Preset>Preset_FSI</Use_Preset>
+			<Samples>FS_Dirt_1.wav FS_Dirt_2.wav FS_Dirt_3.wav FS_Dirt_4.wav FS_Dirt_5.wav FS_Dirt_6.wav FS_Dirt_7.wav FS_Dirt_8.wav</Samples>
+		</SFXEvent>
+	
+		<SFXEvent Name="SFX_Anim_Concrete_Infantry_Foot_Plant">
+			<Use_Preset>Preset_FSI</Use_Preset>
+			<Samples>FS_Concrete_1.wav FS_Concrete_2.wav FS_Concrete_3.wav FS_Concrete_4.wav FS_Concrete_5.wav FS_Concrete_6.wav</Samples>
+		</SFXEvent>
+	
+		<SFXEvent Name="SFX_Anim_Grass_Infantry_Foot_Plant">
+			<Use_Preset>Preset_FSI</Use_Preset>
+			<Samples>FS_Grass_1.wav FS_Grass_2.wav FS_Grass_3.wav FS_Grass_4.wav FS_Grass_5.wav FS_Grass_6.wav FS_Grass_7.wav FS_Grass_8.wav</Samples>
+		</SFXEvent>
+	
+		<SFXEvent Name="SFX_Anim_Mud_Infantry_Foot_Plant">
+			<Use_Preset>Preset_FSI</Use_Preset>
+			<Samples>FS_Mud_1.wav FS_Mud_2.wav FS_Mud_3.wav FS_Mud_4.wav</Samples>
+		</SFXEvent>
+
+		<SFXEvent Name="SFX_Anim_Water_Infantry_Foot_Plant">
+			<Use_Preset>Preset_FSI</Use_Preset>
+			<Samples>FS_Water_1.wav FS_Water_2.wav FS_Water_3.wav FS_Water_4.wav</Samples>
+		</SFXEvent>
+
+
+
+
+
+		<SFXEvent Name="SFX_Anim_Snow_Infantry_Body_Fall">
+			<Use_Preset>Preset_UR_3D</Use_Preset>
+			<Samples>BF_Snow_1.wav</Samples>
+		</SFXEvent>
+
+		<SFXEvent Name="SFX_Anim_Dirt_Infantry_Body_Fall">
+			<Use_Preset>Preset_UR_3D</Use_Preset>
+			<Samples>BF_Dirt_1.wav</Samples>
+		</SFXEvent>
+
+		<SFXEvent Name="SFX_Anim_Concrete_Infantry_Body_Fall">
+			<Use_Preset>Preset_UR_3D</Use_Preset>
+			<Samples>BF_Concrete_1.wav</Samples>
+		</SFXEvent>
+
+		<SFXEvent Name="SFX_Anim_Grass_Infantry_Body_Fall">
+			<Use_Preset>Preset_UR_3D</Use_Preset>
+			<Samples>BF_Grass_1.wav</Samples>
+		</SFXEvent>
+
+		<SFXEvent Name="SFX_Anim_Mud_Infantry_Body_Fall">
+			<Use_Preset>Preset_UR_3D</Use_Preset>
+			<Samples>BF_Mud_1.wav</Samples>
+		</SFXEvent>
+
+		<SFXEvent Name="SFX_Anim_Water_Infantry_Body_Fall">
+			<Use_Preset>Preset_UR_3D</Use_Preset>
+			<Samples>BF_Mud_1.wav</Samples>
+		</SFXEvent>
+
+
+
+
+		<SFXEvent Name="SFX_Infantry_Splat">
+			<Use_Preset>Preset_UR_3D</Use_Preset>
+			<Samples>BF_Splat_1.wav</Samples>
+		</SFXEvent>
+
+
+
+		<SFXEvent Name="SFX_Anim_Infantry_Whoosh">
+			<Use_Preset>Preset_EGB</Use_Preset>
+			<Samples>Whoosh_1.wav Whoosh_2.wav Whoosh_3.wav Whoosh_4.wav Whoosh_5.wav</Samples>
+		</SFXEvent>
+
+		<SFXEvent Name="SFX_Anim_Ammobelt_Movement">
+			<Use_Preset>Preset_FSI</Use_Preset>
+			<Samples>ANM_Ammobelt_Movement_1.wav ANM_Ammobelt_Movement_2.wav ANM_Ammobelt_Movement_3.wav ANM_Ammobelt_Movement_4.wav</Samples>
+		</SFXEvent>
+
+
+
+	 <SFXEvent Name="SFX_Anim_Water_Tower_Creak">
+			<Use_Preset>Preset_EXP</Use_Preset>
+			<Samples>ANM_Generic_Metal_Creak_1.wav</Samples>      
+    </SFXEvent>
+
+	 <SFXEvent Name="SFX_Anim_Water_Tower_Pipe_break">
+			<Use_Preset>Preset_EXP</Use_Preset>
+			<Samples>ANM_Generic_Water_Pipe_Break_1.wav</Samples>      
+    </SFXEvent>
+
+	 <SFXEvent Name="SFX_Anim_Water_Tower_Hit_Ground">
+			<Use_Preset>Preset_EXP_Large</Use_Preset>
+			<Samples>EXP_Generic_Water_Tower_1.wav</Samples>      
+    </SFXEvent>
+
+  
+	  
+</SFXEvents>

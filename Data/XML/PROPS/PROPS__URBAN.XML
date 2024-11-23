@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+
+<Props_Urban_XML>
+
+<!-- **************************************************************************************** -->	
+<!-- *** OBJECT(S) ************************************************************************** -->	
+<!-- **************************************************************************************** -->	
+
+	<X40_Props_Urban Name="_Median_Grass_Circle">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>WO_Street_Median_Circle_Grass.alo</Land_Model_Name>
+		<Scale_Factor>4.0</Scale_Factor>
+		<Is_Decoration>Yes</Is_Decoration>
+		<Is_UI_Relevant> false </Is_UI_Relevant>
+
+		<Is_Deleted_By_Tornado>false</Is_Deleted_By_Tornado>
+		<Tornado_Movement_Factor>0</Tornado_Movement_Factor>
+
+	</X40_Props_Urban>
+
+	
+	<X40_Props_Urban Name="_Median_Rock_Circle">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>WO_Street_Median_Circle_Rock.alo</Land_Model_Name>
+		<Scale_Factor>4.0</Scale_Factor>
+		<Is_Decoration>Yes</Is_Decoration>
+		<Is_UI_Relevant> false </Is_UI_Relevant>
+
+		<Is_Deleted_By_Tornado>false</Is_Deleted_By_Tornado>
+		<Tornado_Movement_Factor>0</Tornado_Movement_Factor>
+	</X40_Props_Urban>
+	
+	
+	<X40_Props_Urban Name="_Median_Grass_Corner">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>WO_Street_Median_Corner_Grass.alo</Land_Model_Name>
+		<Scale_Factor>3.0</Scale_Factor>
+		<Is_Decoration>Yes</Is_Decoration>
+		<Is_UI_Relevant> false </Is_UI_Relevant>
+
+		<Is_Deleted_By_Tornado>false</Is_Deleted_By_Tornado>
+		<Tornado_Movement_Factor>0</Tornado_Movement_Factor>
+	</X40_Props_Urban>
+
+	
+	<X40_Props_Urban Name="_Median_Rock_Corner">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>WO_Street_Median_Corner_Rock.alo</Land_Model_Name>
+		<Scale_Factor>3.0</Scale_Factor>
+		<Is_Decoration>Yes</Is_Decoration>
+		<Is_UI_Relevant> false </Is_UI_Relevant>
+		
+		<Is_Deleted_By_Tornado>false</Is_Deleted_By_Tornado>
+		<Tornado_Movement_Factor>0</Tornado_Movement_Factor>
+	</X40_Props_Urban>
+	
+	
+	<X40_Props_Urban Name="_Median_Grass_HalfCircle">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>WO_Street_Median_HalfCircle_Grass.alo</Land_Model_Name>
+		<Scale_Factor>3.0</Scale_Factor>
+		<Is_Decoration>Yes</Is_Decoration>
+		<Is_UI_Relevant> false </Is_UI_Relevant>
+
+		<Is_Deleted_By_Tornado>false</Is_Deleted_By_Tornado>
+		<Tornado_Movement_Factor>0</Tornado_Movement_Factor>
+	</X40_Props_Urban>
+
+	
+	<X40_Props_Urban Name="_Median_Rock_HalfCircle">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>WO_Street_Median_HalfCircle_Rock.alo</Land_Model_Name>
+		<Scale_Factor>3.0</Scale_Factor>
+		<Is_Decoration>Yes</Is_Decoration>
+		<Is_UI_Relevant> false </Is_UI_Relevant>
+
+		<Is_Deleted_By_Tornado>false</Is_Deleted_By_Tornado>
+		<Tornado_Movement_Factor>0</Tornado_Movement_Factor>
+	</X40_Props_Urban>
+	
+	
+	<X40_Props_Urban Name="_Median_Grass_Straight">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>WO_Street_Median_Long_Grass.alo</Land_Model_Name>
+		<Scale_Factor>3.0</Scale_Factor>
+		<Is_Decoration>Yes</Is_Decoration>
+		<Is_UI_Relevant> false </Is_UI_Relevant>
+
+		<Is_Deleted_By_Tornado>false</Is_Deleted_By_Tornado>
+		<Tornado_Movement_Factor>0</Tornado_Movement_Factor>
+	</X40_Props_Urban>
+
+	
+	<X40_Props_Urban Name="_Median_Rock_Straight">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>WO_Street_Median_Long_Rock.alo</Land_Model_Name>
+		<Scale_Factor>3.0</Scale_Factor>
+		<Is_Decoration>Yes</Is_Decoration>
+		<Is_UI_Relevant> false </Is_UI_Relevant>
+
+		<Is_Deleted_By_Tornado>false</Is_Deleted_By_Tornado>
+		<Tornado_Movement_Factor>0</Tornado_Movement_Factor>
+	</X40_Props_Urban>
+
+	
+	<X40_Props_Urban Name="_Dumpster_01">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>WO_Dumpster.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<LandBehavior></LandBehavior>
+		<Can_Be_Miraged>Yes</Can_Be_Miraged>
+		<Is_UI_Relevant> false </Is_UI_Relevant>
+		
+		<UnitCollisionClass> Medium Obstacle </UnitCollisionClass>
+		<Space_Layer> LandStatic </Space_Layer>
+		<Custom_Hard_XExtent> 3.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 4.0 </Custom_Hard_YExtent>
+	</X40_Props_Urban>
+
+	<X40_Props_Urban Name="_Fountain_Round">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>WO_Fountain_Round.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<Is_UI_Relevant> false </Is_UI_Relevant>
+		<BehaviorType Name="SFXBehaviorType">
+         <SFXEvent_Engine_Idle_Loop> SFX_Generic_Fountain_Loop </SFXEvent_Engine_Idle_Loop>
+      </BehaviorType>
+
+	</X40_Props_Urban>
+
+	<X40_Props_Urban Name="_Statue_01">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>WO_Statue01.alo</Land_Model_Name>
+		<Scale_Factor>4</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<Is_UI_Relevant> false </Is_UI_Relevant>
+		
+		<UnitCollisionClass> Infantry </UnitCollisionClass>
+		<Space_Layer> LandStatic </Space_Layer>
+		<Custom_Hard_XExtent> 1.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 1.0 </Custom_Hard_YExtent>
+		<Can_Be_Miraged>Yes</Can_Be_Miraged>
+	</X40_Props_Urban>
+
+	<X40_Props_Urban Name="_Fountain_01">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>WO_Fountain01.alo</Land_Model_Name>
+		<!-- Scaled in art, please notify JeffP if you need this changed -->
+		<Scale_Factor>1</Scale_Factor>
+		<Is_Decoration>Yes</Is_Decoration>
+		<Is_UI_Relevant> false </Is_UI_Relevant>
+
+		<BehaviorType Name="SFXBehaviorType">
+         <SFXEvent_Engine_Idle_Loop> SFX_Generic_Fountain_Loop </SFXEvent_Engine_Idle_Loop>
+      </BehaviorType>
+
+		<UnitCollisionClass> Infantry </UnitCollisionClass>
+		<Space_Layer> LandStatic </Space_Layer>
+		<Custom_Hard_XExtent> 4.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 4.0 </Custom_Hard_YExtent>
+		<Can_Be_Miraged>Yes</Can_Be_Miraged>
+	</X40_Props_Urban>
+
+</Props_Urban_XML>
+
+
+

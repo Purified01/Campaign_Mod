@@ -1,0 +1,682 @@
+<?xml version="1.0"?>
+<NovusGameEventNotification>
+
+  	<!-- ======================================================================= -->
+	<!-- This event is received when a unit gets killed by an attacker			  -->
+	<!-- ======================================================================= -->
+	<GameEvent Name="Unit_Killed" >
+
+		<GameEventNotification Category="All">
+			<Stacks>Yes</Stacks>
+			<Stack_If_Within_Radius>400</Stack_If_Within_Radius>
+			<Quiet_Time>0</Quiet_Time>
+			<Expiration_Time>3.0</Expiration_Time>
+			<Service_Delay_Time>1.0</Service_Delay_Time>
+
+			<Notifications SubObjectList="Yes">
+            
+            <!-- Notification @ Magnitude below 5-->
+				<Notification_Description>
+					<Broadcast_To>Owner</Broadcast_To>
+               <Min_Magnitude>0</Min_Magnitude>
+               <Max_Magnitude>5</Max_Magnitude>
+					<Radar_Map_Event>Game_Event_Combat_Low_Importance</Radar_Map_Event>
+					<SFX_Notification>COM_LOST_UNIT</SFX_Notification>
+				</Notification_Description>
+
+            <!-- Notification @ Magnitude 5 and up -->
+            <Notification_Description>
+               <Min_Magnitude>5</Min_Magnitude>
+               <Broadcast_To>Owner</Broadcast_To>
+               <Radar_Map_Event>Game_Event_Combat_High_Importance</Radar_Map_Event>
+               <SFX_Notification>COM_MASSIVE_LOSS_OF_UNITS</SFX_Notification>
+            </Notification_Description>
+
+         </Notifications>
+		</GameEventNotification>
+
+
+		<GameEventNotification Category="Structure">
+			<Stacks>No</Stacks>
+			<Expiration_Time>3.0</Expiration_Time>
+			<Service_Delay_Time>0.0</Service_Delay_Time>
+
+			<Notifications SubObjectList="Yes">
+				<Notification_Description>
+					<Broadcast_To>Owner</Broadcast_To>
+					<Radar_Map_Event>Game_Event_Combat_High_Importance</Radar_Map_Event>
+					<SFX_Notification>COM_LOST_STRUCTURE</SFX_Notification>
+				</Notification_Description>
+			</Notifications>
+		</GameEventNotification>
+
+      <!-- LOST CAPTURED STRUCTURE-->
+      <GameEventNotification Category="NeutralStructure">
+         <Stacks>Yes</Stacks>
+         <Stack_If_Within_Radius>400</Stack_If_Within_Radius>
+         <Quiet_Time>5.0</Quiet_Time>
+         <Expiration_Time>2.0</Expiration_Time>
+         <Service_Delay_Time>0.5</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <Radar_Map_Event>Game_Event_Combat_Medium_Importance</Radar_Map_Event>
+               <SFX_Notification> COM_LOST_STRUCTURE </SFX_Notification>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+
+      <GameEventNotification Category="Walker">
+			<Stacks>No</Stacks>
+			<Expiration_Time>3.0</Expiration_Time>
+			<Service_Delay_Time>0.0</Service_Delay_Time>
+
+			<Notifications SubObjectList="Yes">
+				<Notification_Description>
+					<Broadcast_To>Owner</Broadcast_To>
+					<Radar_Map_Event>Game_Event_Combat_High_Importance</Radar_Map_Event>
+					<SFX_Notification></SFX_Notification>
+				</Notification_Description>
+			</Notifications>
+		</GameEventNotification>
+
+		<GameEventNotification Category="Hero">
+			<Stacks>No</Stacks>
+			<Expiration_Time>3.0</Expiration_Time>
+			<Service_Delay_Time>0.0</Service_Delay_Time>
+
+			<Notifications SubObjectList="Yes">
+				<Notification_Description>
+					<Broadcast_To>Owner</Broadcast_To>
+					<Radar_Map_Event>Game_Event_Combat_High_Importance</Radar_Map_Event>
+					<SFX_Notification>COM_LOST_HERO</SFX_Notification>
+				</Notification_Description>
+			</Notifications>
+		</GameEventNotification>
+
+	</GameEvent>
+
+
+	<!-- ======================================================================= -->
+	<!-- This event is received when a unit is damaged by an enemy object		  -->
+	<!-- ======================================================================= -->
+	<GameEvent Name="Unit_Under_Attack" >
+
+		<GameEventNotification Category="All">
+			<Stacks>Yes</Stacks>
+			<Stack_If_Within_Radius>400</Stack_If_Within_Radius>
+			<Quiet_Time>0</Quiet_Time>
+			<Expiration_Time>15.0</Expiration_Time>
+			<Service_Delay_Time>1.0</Service_Delay_Time>
+
+			<Notifications SubObjectList="Yes">
+				<Notification_Description>
+					<Broadcast_To>Owner</Broadcast_To>
+					<Radar_Map_Event>Game_Event_Combat_Low_Importance</Radar_Map_Event>
+					<SFX_Notification>COM_UNDER_ATTACK_UNIT</SFX_Notification>
+				</Notification_Description>
+			</Notifications>
+		</GameEventNotification>
+
+
+		<GameEventNotification Category="Structure">
+			<Stacks>No</Stacks>
+			<Expiration_Time>15.0</Expiration_Time>
+			<Service_Delay_Time>0.0</Service_Delay_Time>
+
+			<Notifications SubObjectList="Yes">
+				<Notification_Description>
+					<Broadcast_To>Owner</Broadcast_To>
+					<Radar_Map_Event>Game_Event_Combat_High_Importance</Radar_Map_Event>
+					<SFX_Notification>COM_UNDER_ATTACK_STRUCTURE</SFX_Notification>
+				</Notification_Description>
+			</Notifications>
+		</GameEventNotification>
+
+      <!-- CAPTURED STRUCTURE UNDER ATTACK -->
+      <GameEventNotification Category="NeutralStructure">
+         <Stacks>No</Stacks>
+         <Expiration_Time>15.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <Radar_Map_Event>Game_Event_Combat_High_Importance</Radar_Map_Event>
+               <SFX_Notification>COM_UNDER_ATTACK_STRUCTURE</SFX_Notification>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+
+      
+      <GameEventNotification Category="Walker">
+         <Stacks>No</Stacks>
+         <Expiration_Time>15.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <Radar_Map_Event>Game_Event_Combat_High_Importance</Radar_Map_Event>
+               <SFX_Notification></SFX_Notification>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+
+      <GameEventNotification Category="Hero">
+         <Stacks>No</Stacks>
+         <Expiration_Time>20.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <Radar_Map_Event>Game_Event_Combat_High_Importance</Radar_Map_Event>
+               <Broadcast_Only_If_In_Frustum> false </Broadcast_Only_If_In_Frustum>
+               <SFX_Notification>COM_UNDER_ATTACK_HERO</SFX_Notification>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+   </GameEvent>
+
+
+   <!-- ======================================================================= -->
+   <!-- This event is received when a tactical object is sold					  	  -->
+   <!-- ======================================================================= -->
+   <GameEvent Name="Tactical_Object_Sold" >
+
+      <GameEventNotification Category="All">
+         <Stacks>No</Stacks>
+         <Expiration_Time>3.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <Radar_Map_Event>Game_Event_Info_Medium_Importance</Radar_Map_Event>
+               <SFX_Notification>GUI_SOLD_UNIT</SFX_Notification>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+   </GameEvent>
+
+
+
+   <!-- ======================================================================= -->
+   <!-- This event is received when a structure construction completes   		  -->
+   <!-- ======================================================================= -->
+   <GameEvent Name="Tactical_Construction_Completed" >
+
+      <GameEventNotification Category="All">
+         <Stacks>No</Stacks>
+         <Expiration_Time>3.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <Radar_Map_Event>Game_Event_Info_Medium_Importance</Radar_Map_Event>
+               <SFX_Notification></SFX_Notification>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+   </GameEvent>
+
+
+
+
+   <!-- ======================================================================= -->
+	<!-- This event is received when a structure under construction is killed 	  -->
+	<!-- ======================================================================= -->
+	<GameEvent Name="Tactical_Construction_Killed" >
+
+		<GameEventNotification Category="All">
+			<Stacks>No</Stacks>
+			<Expiration_Time>3.0</Expiration_Time>
+			<Service_Delay_Time>0.0</Service_Delay_Time>
+			<Notifications SubObjectList="Yes">
+				<Notification_Description>
+					<Broadcast_To>Owner</Broadcast_To>
+					<Radar_Map_Event>Game_Event_Combat_High_Importance</Radar_Map_Event>
+					<SFX_Notification>GUI_BUILD_VEHICLE_CANCELED</SFX_Notification>
+				</Notification_Description>
+			</Notifications>
+		</GameEventNotification>
+	</GameEvent>
+
+
+
+   <!-- ======================================================================= -->
+   <!-- This event is received when Super_Weapon is built			  	           -->
+   <!-- ======================================================================= -->
+   <GameEvent Name="Super_Weapon_Built" >
+
+      <GameEventNotification Category="All">
+         <Stacks>No</Stacks>
+         <Expiration_Time>15.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>All</Broadcast_To>
+               <Broadcast_Only_If_In_Frustum> false </Broadcast_Only_If_In_Frustum>
+               <Radar_Map_Event>Game_Event_Info_High_Importance</Radar_Map_Event>
+               <SFX_Notification>COM_SUPER_WEAPON_BUILT</SFX_Notification>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+   </GameEvent>
+   
+   <!-- ======================================================================= -->
+	<!-- This event is received when Super_Weapon is Ready			  	           -->
+	<!-- ======================================================================= -->
+	<GameEvent Name="Super_Weapon_Ready" >
+
+		<GameEventNotification Category="All">
+			<Stacks>No</Stacks>
+			<Expiration_Time>15.0</Expiration_Time>
+			<Service_Delay_Time>0.0</Service_Delay_Time>
+
+			<Notifications SubObjectList="Yes">
+				<Notification_Description>
+               <Broadcast_To>All</Broadcast_To>
+               <Broadcast_Only_If_In_Frustum> false </Broadcast_Only_If_In_Frustum>
+               <Radar_Map_Event>Game_Event_Info_High_Importance</Radar_Map_Event>
+               <SFX_Notification>COM_SUPER_WEAPON_READY</SFX_Notification>
+            </Notification_Description>
+			</Notifications>
+		</GameEventNotification>
+	</GameEvent>
+
+
+	<!-- ======================================================================= -->
+	<!-- This event is received when Super_Weapon is launched					  	  -->
+	<!-- ======================================================================= -->
+	<GameEvent Name="Super_Weapon_Launched" >
+
+		<GameEventNotification Category="All">
+			<Stacks>No</Stacks>
+			<Expiration_Time>15.0</Expiration_Time>
+			<Service_Delay_Time>0.0</Service_Delay_Time>
+
+			<Notifications SubObjectList="Yes">
+				<Notification_Description>
+               <Broadcast_To>All</Broadcast_To>
+               <Broadcast_Only_If_In_Frustum> false </Broadcast_Only_If_In_Frustum>
+               <Radar_Map_Event>Game_Event_Info_High_Importance</Radar_Map_Event>
+					<SFX_Notification>GUI_SUPER_WEAPON_LAUNCHED</SFX_Notification>
+				</Notification_Description>
+			</Notifications>
+		</GameEventNotification>
+	</GameEvent>
+
+
+   <!-- ======================================================================= -->
+   <!-- This event is received when Super_Weapon_Built            			  	  -->
+   <!-- ======================================================================= -->
+   <GameEvent Name="Mega_Weapon_Built" >
+
+      <GameEventNotification Category="All">
+         <Stacks>No</Stacks>
+         <Expiration_Time>15.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>All</Broadcast_To>
+               <Broadcast_Only_If_In_Frustum> false </Broadcast_Only_If_In_Frustum>
+               <Radar_Map_Event>Game_Event_Info_High_Importance</Radar_Map_Event>
+               <SFX_Notification>COM_MEGA_WEAPON_BUILT</SFX_Notification>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+   </GameEvent>
+
+
+
+   <!-- ======================================================================= -->
+   <!-- This event is received when Super_Weapon is Ready			  	           -->
+   <!-- ======================================================================= -->
+   <GameEvent Name="Mega_Weapon_Ready" >
+
+      <GameEventNotification Category="All">
+         <Stacks>No</Stacks>
+         <Expiration_Time>15.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>All</Broadcast_To>
+               <Broadcast_Only_If_In_Frustum> false </Broadcast_Only_If_In_Frustum>
+               <Radar_Map_Event>Game_Event_Info_High_Importance</Radar_Map_Event>
+               <SFX_Notification>COM_MEGA_WEAPON_READY</SFX_Notification>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+   </GameEvent>
+
+
+   <!-- ======================================================================= -->
+   <!-- This event is received when Super_Weapon is launched					  	  -->
+   <!-- ======================================================================= -->
+   <GameEvent Name="Mega_Weapon_Launched" >
+
+      <GameEventNotification Category="All">
+         <Stacks>No</Stacks>
+         <Expiration_Time>15.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>All</Broadcast_To>
+               <Broadcast_Only_If_In_Frustum> false </Broadcast_Only_If_In_Frustum>
+               <Radar_Map_Event>Game_Event_Info_High_Importance</Radar_Map_Event>
+               <SFX_Notification>GUI_MEGA_WEAPON_LAUNCHED</SFX_Notification>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+   </GameEvent>
+   
+   
+	<!-- ======================================================================= -->
+	<!-- This event is received when packaged research is completed				  -->
+	<!-- ======================================================================= -->
+	<GameEvent Name="Research_Completed" >
+
+		<GameEventNotification Category="All">
+			<Stacks>No</Stacks>
+			<Expiration_Time>3.0</Expiration_Time>
+			<Service_Delay_Time>0.0</Service_Delay_Time>
+
+			<Notifications SubObjectList="Yes">
+				<Notification_Description>
+					<Broadcast_To>Owner</Broadcast_To>
+					<SFX_Notification>GUI_BUILD_RESEARCH_COMPLETE</SFX_Notification>
+				</Notification_Description>
+			</Notifications>
+		</GameEventNotification>
+	</GameEvent>
+
+	<!-- ======================================================================= -->
+	<!-- This event is received when an objective is completed						  -->
+	<!-- ======================================================================= -->
+	<GameEvent Name="Objective_Completed" >
+
+		<GameEventNotification Category="All">
+			<Stacks>No</Stacks>
+			<Expiration_Time>3.0</Expiration_Time>
+			<Service_Delay_Time>0.0</Service_Delay_Time>
+
+			<Notifications SubObjectList="Yes">
+				<Notification_Description>
+					<Broadcast_To>Owner</Broadcast_To>
+					<SFX_Notification>COM_OBJECTIVE_COMPLETED</SFX_Notification>
+				</Notification_Description>
+			</Notifications>
+		</GameEventNotification>
+	</GameEvent>
+
+	<!-- ======================================================================= -->
+	<!-- This event is received when there was not enough resources to complete  -->
+	<!-- requested action																		  -->
+	<!-- ======================================================================= -->
+	<GameEvent Name="Not_Enough_Resources" >
+
+		<GameEventNotification Category="All">
+			<Stacks>No</Stacks>
+			<Expiration_Time>3.0</Expiration_Time>
+			<Service_Delay_Time>0.0</Service_Delay_Time>
+
+			<Notifications SubObjectList="Yes">
+				<Notification_Description>
+					<Broadcast_To>Owner</Broadcast_To>
+					<SFX_Notification>COM_UNABLE_NOT_ENOUGH_RESOURCES</SFX_Notification>
+				</Notification_Description>
+			</Notifications>
+		</GameEventNotification>
+	</GameEvent>
+
+
+
+   <!-- ======================================================================= -->
+   <!-- This event is received when an enemy object gets revealed from under FOW-->
+   <!-- ======================================================================= -->
+   <GameEvent Name="Enemy_Object_Sighted">
+
+      <GameEventNotification Category="TacticalBuildBeacon">
+         <Stacks>Yes</Stacks>
+         <Stack_If_Within_Radius>400</Stack_If_Within_Radius>
+         <Quiet_Time>0</Quiet_Time>
+         <Expiration_Time>3.0</Expiration_Time>
+         <Service_Delay_Time>1.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <Radar_Map_Event>Game_Event_Combat_Low_Importance</Radar_Map_Event>
+               <SFX_Notification/>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+
+      <GameEventNotification Category="StructureUnderConstruction">
+         <Stacks>Yes</Stacks>
+         <Stack_If_Within_Radius>400</Stack_If_Within_Radius>
+         <Quiet_Time>0</Quiet_Time>
+         <Expiration_Time>3.0</Expiration_Time>
+         <Service_Delay_Time>1.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <Radar_Map_Event>Game_Event_Combat_Low_Importance</Radar_Map_Event>
+               <SFX_Notification/>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+
+      <GameEventNotification Category="Hero">
+         <Stacks>Yes</Stacks>
+         <Stack_If_Within_Radius>400</Stack_If_Within_Radius>
+         <Quiet_Time>0</Quiet_Time>
+         <Expiration_Time>3.0</Expiration_Time>
+         <Service_Delay_Time>1.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <Radar_Map_Event>Game_Event_Combat_High_Importance</Radar_Map_Event>
+               <SFX_Notification/>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+
+   </GameEvent>
+
+   <!-- ======================================================================= -->
+   <!-- This event is received when an object gets revealed from under FOW 	  -->
+   <!-- ======================================================================= -->
+   <GameEvent Name="Object_Sighted">
+      <!-- significant resource discovered -->
+      <GameEventNotification Category="SignificantResource">
+         <Stacks>Yes</Stacks>
+         <Stack_If_Within_Radius>400</Stack_If_Within_Radius>
+         <Quiet_Time>0</Quiet_Time>
+         <Expiration_Time>3.0</Expiration_Time>
+         <Service_Delay_Time>1.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <Broadcast_If_Visible_Only>Yes</Broadcast_If_Visible_Only>
+               <Radar_Map_Event>Game_Event_Info_Medium_Importance</Radar_Map_Event>
+               <SFX_Notification/>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+   </GameEvent>
+
+
+
+   <!-- ======================================================================= -->
+   <!-- This event is received when resource gets depleted                      -->
+   <!-- ======================================================================= -->
+   <GameEvent Name="Resource_Depleted" >
+
+      <GameEventNotification Category="All">
+         <Stacks>Yes</Stacks>
+         <Stack_If_Within_Radius>400</Stack_If_Within_Radius>
+         <Quiet_Time>0</Quiet_Time>
+         <Expiration_Time>3.0</Expiration_Time>
+         <Service_Delay_Time>1.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <!-- play to all that can see this object -->
+               <Broadcast_To>Owner</Broadcast_To>
+               <Broadcast_If_Visible_Only>Yes</Broadcast_If_Visible_Only>
+               <Radar_Map_Event>Game_Event_Info_Low_Importance</Radar_Map_Event>
+               <SFX_Notification/>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+   </GameEvent>
+
+   <!-- ======================================================================= -->
+   <!-- This event is received when unit's health gets below LOW threshold		  -->
+   <!-- ======================================================================= -->
+   <GameEvent Name="Unit_Health_Low" >
+
+      <GameEventNotification Category="Structure">
+         <Stacks>No</Stacks>
+         <Expiration_Time>15.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <Radar_Map_Event>Game_Event_Combat_Medium_Importance</Radar_Map_Event>
+               <SFX_Notification/>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+
+      <GameEventNotification Category="Hero">
+         <Stacks>No</Stacks>
+         <Expiration_Time>15.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <Radar_Map_Event>Game_Event_Combat_Medium_Importance</Radar_Map_Event>
+               <SFX_Notification/>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+   </GameEvent>
+
+
+   <!-- ======================================================================= -->
+   <!-- This event is received when unit's health gets below CRITICAL threshold		  -->
+   <!-- ======================================================================= -->
+   <GameEvent Name="Unit_Health_Critical">
+
+      <GameEventNotification Category="Structure">
+         <Stacks>No</Stacks>
+         <Expiration_Time>15.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <Radar_Map_Event>Game_Event_Combat_High_Importance</Radar_Map_Event>
+               <SFX_Notification/>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+
+      <GameEventNotification Category="Hero">
+         <Stacks>No</Stacks>
+         <Expiration_Time>15.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <Radar_Map_Event>Game_Event_Combat_High_Importance</Radar_Map_Event>
+               <SFX_Notification/>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+   </GameEvent>
+
+
+
+   <!-- =======================================================================     -->
+   <!-- Tactical Construction object can't start the build.                         -->
+   <!-- The beacon is destroyed in this case. This typically happens when player    -->
+   <!-- placed beacon into FOW and when constructor got there, the beacon was in    -->
+   <!-- a bad spot (say, inside a building). 	                                    -->
+   <!-- =======================================================================     -->
+   <GameEvent Name="Tactical_Construction_Not_Feasible">
+
+      <GameEventNotification Category="All">
+         <Stacks>No</Stacks>
+         <Expiration_Time>15.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <Radar_Map_Event>Game_Event_Info_High_Importance</Radar_Map_Event>
+               <SFX_Notification/>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+
+   </GameEvent>
+
+	<!-- ======================================================================= -->
+	<!-- GLOBAL SPY READY                        										  -->
+	<!-- ======================================================================= -->
+	<GameEvent Name="Global_Spy_Ready">
+		<GameEventNotification Category="All">
+			<Stacks>No</Stacks>
+			<Expiration_Time>3.0</Expiration_Time>
+			<Service_Delay_Time>0.0</Service_Delay_Time>
+
+			<Notifications SubObjectList="Yes">
+				<Notification_Description>
+					<Broadcast_To>Owner</Broadcast_To>
+					<Broadcast_Only_If_In_Frustum> false </Broadcast_Only_If_In_Frustum>
+					<Radar_Map_Event>Game_Event_Info_High_Importance</Radar_Map_Event>
+					<SFX_Notification>GUI_Spying_Ready</SFX_Notification>
+				</Notification_Description>
+			</Notifications>
+		</GameEventNotification>
+	</GameEvent>
+
+	<!-- ======================================================================= -->
+	<!-- GLOBAL REPAIR READY                        									  -->
+	<!-- ======================================================================= -->
+	<GameEvent Name="Global_Repair_Ready">
+		<GameEventNotification Category="All">
+			<Stacks>No</Stacks>
+			<Expiration_Time>3.0</Expiration_Time>
+			<Service_Delay_Time>0.0</Service_Delay_Time>
+
+			<Notifications SubObjectList="Yes">
+				<Notification_Description>
+					<Broadcast_To>Owner</Broadcast_To>
+					<Broadcast_Only_If_In_Frustum> false </Broadcast_Only_If_In_Frustum>
+					<Radar_Map_Event>Game_Event_Info_High_Importance</Radar_Map_Event>
+					<SFX_Notification>GUI_Repair_Ready</SFX_Notification>
+				</Notification_Description>
+			</Notifications>
+		</GameEventNotification>
+	</GameEvent>
+
+
+</NovusGameEventNotification>
+

@@ -1,0 +1,1160 @@
+<?xml version="1.0"?>
+
+<!--
+
+    Light Field Sources
+
+    These "lights" render into the light field 
+    
+    The 'Type' field can have the following values:
+		POINT - point light centered at the origin
+		HCONE - horizontal cone with its point at the origin
+		DUAL_HCONE - two cones (headlights) 
+		DUAL_OPPOSED_HCONE - two opposed cones (police sirens)
+		LINE - line light source
+-->
+
+<LightFieldSources>
+
+    <LightFieldSource Name="Test">
+        <Type>POINT</Type>
+        <Diffuse>1.0,1.0,1.0</Diffuse>
+        <Intensity>0.3</Intensity>
+        <Width>60.0</Width>
+        <Length>60.0</Length>
+        <Height>0.1f</Height>
+        <Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+        <Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+    </LightFieldSource>
+    
+    <!-- 
+		For lights referenced by ALO/MAX files we can keep track of things by using a simple naming convention
+		e.g. WO_Streetlight.max uses the light source named L_WO_StreetLight
+    -->
+    
+    <LightFieldSource Name="L_WO_Streetlight">
+        <Type>POINT</Type>
+        <Diffuse>1.0,0.9,0.5</Diffuse>
+        <Intensity>0.8</Intensity>
+        <Width>80.0</Width>
+        <Length>80.0</Length>
+        <Height>5.1f</Height>
+        <Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+        <Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+    </LightFieldSource>
+
+    <LightFieldSource Name="L_Flare_Light">
+       <Type>POINT</Type>
+       <Diffuse>1.0,0.15,0.15</Diffuse>
+        <Intensity>0.5</Intensity>
+        <Width>30.0</Width>
+        <Length>30.0</Length>
+        <Height>0.1f</Height>
+        <Is_Affected_By_Global_Light_Field_Intensity>True</Is_Affected_By_Global_Light_Field_Intensity>
+        <Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+        <Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+    </LightFieldSource>
+
+  <LightFieldSource Name="I_Highlight_FX">
+    <Type>POINT</Type>
+    <Diffuse>0.25,0.6,1.0</Diffuse>
+    <Intensity>0.5</Intensity>
+    <Width>50.0</Width>
+    <Length>50.0</Length>
+    <Height>0.1f</Height>
+    <Is_Affected_By_Global_Light_Field_Intensity>False</Is_Affected_By_Global_Light_Field_Intensity>
+    <Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+    <Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+  </LightFieldSource>
+  
+    <LightFieldSource Name="L_WO_PoliceLightBlue">
+        <Type>DUAL_OPPOSED_HCONE</Type>
+        <Diffuse>0.0,0.0,1.0</Diffuse>
+        <Intensity>1.0</Intensity>
+        <Width>30.0</Width>
+        <Length>60.0</Length>
+        <Height>20.0</Height>
+        <Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+        <Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+        <Angular_Velocity>15</Angular_Velocity>
+    </LightFieldSource>
+
+    <LightFieldSource Name="L_WO_PoliceLightRed">
+        <Type>DUAL_OPPOSED_HCONE</Type>
+        <Diffuse>1.0,0.0,0.0</Diffuse>
+        <Intensity>1.0</Intensity>
+        <Width>30.0</Width>
+        <Length>60.0</Length>
+        <Height>20.0</Height>
+        <Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+        <Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+        <Angular_Velocity>15</Angular_Velocity>
+    </LightFieldSource>
+
+    <LightFieldSource Name="L_WO_AmbLightRed">
+        <Type>DUAL_OPPOSED_HCONE</Type>
+        <Diffuse>1.0,0.0,0.0</Diffuse>
+        <Intensity>0.20</Intensity>
+        <Width>50.0</Width>
+        <Length>60.0</Length>
+        <Height>20.0</Height>
+        <Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+        <Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+        <Angular_Velocity>15</Angular_Velocity>
+    </LightFieldSource>
+
+	<LightFieldSource Name="L_WO_ParkingLights2">
+        <Type>POINT</Type>
+        <Diffuse>1.0,0.9,0.5</Diffuse>
+        <Intensity>0.8</Intensity>
+        <Width>70.0</Width>
+        <Length>70.0</Length>
+        <Height>0.1f</Height>
+        <Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+        <Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+    </LightFieldSource>
+
+	<LightFieldSource Name="L_WO_ParkingLights4">
+        <Type>POINT</Type>
+        <Diffuse>1.0,0.9,0.5</Diffuse>
+        <Intensity>0.8</Intensity>
+        <Width>70.0</Width>
+        <Length>70.0</Length>
+        <Height>0.1f</Height>
+        <Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+        <Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+    </LightFieldSource>
+
+	
+	<LightFieldSource Name="L_MV_Hummer">
+        <Type>DUAL_HCONE</Type>
+        <Diffuse>1.0,1.0,1.0</Diffuse>
+        <Intensity>0.2</Intensity>
+        <Width>40.0</Width>
+        <Length>40.0</Length>
+        <Height>3.0f</Height>
+        <Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+        <Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+    </LightFieldSource>
+
+	<LightFieldSource Name="L_ZI_Disciple">
+        <Type>POINT</Type>
+        <Diffuse>1.0,1.0,0.3</Diffuse>
+        <Intensity>0.7</Intensity>
+        <Width>15.0</Width>
+        <Length>10.0</Length>
+        <Height>0.1f</Height>
+        <Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+        <Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+    </LightFieldSource>
+
+    <!-- 
+		Effects - e.g. lights for explosions, etc.
+    -->
+
+	<LightFieldSource Name="L_Small_Explosion_Land">
+        <Type>POINT</Type>
+        <Diffuse>1.0,0.8,0.22</Diffuse>
+        <Intensity>0.5</Intensity>
+        <Width>80.0</Width>
+        <Length>80.0</Length>
+        <Height>0.1f</Height>
+        <Auto_Destruct_Time>0.5</Auto_Destruct_Time>
+        <Auto_Destruct_Fade_Time>0.4</Auto_Destruct_Fade_Time>
+    </LightFieldSource>
+    
+    <LightFieldSource Name="L_Generic_Large_Fire">
+        <Type>POINT</Type>
+        <Diffuse>1.0,0.8,.22</Diffuse>
+        <Intensity>.5</Intensity>
+        <Width>65.0</Width>
+        <Length>65.0</Length>
+        <Height>65.1f</Height>
+        <Intensity_Noise_Scale>0.15</Intensity_Noise_Scale>
+        <Intensity_Noise_Time_Scale>15</Intensity_Noise_Time_Scale>
+        <Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+        <Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+	
+	<LightFieldSource Name="L_Generic_Medium_Fire">
+        <Type>POINT</Type>
+        <Diffuse>1.0,0.8,.22</Diffuse>
+        <Intensity>.7</Intensity>
+        <Width>35.0</Width>
+        <Length>35.0</Length>
+        <Height>35.1f</Height>
+        <Intensity_Noise_Scale>0.1</Intensity_Noise_Scale>
+        <Intensity_Noise_Time_Scale>10</Intensity_Noise_Time_Scale>
+        <Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+        <Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+	
+	<LightFieldSource Name="L_Generic_Small_Fire">
+        <Type>POINT</Type>
+        <Diffuse>1.0,0.8,.22</Diffuse>
+        <Intensity>.5</Intensity>
+        <Width>20.0</Width>
+        <Length>20.0</Length>
+        <Height>20.1</Height>
+        <Intensity_Noise_Scale>0.1</Intensity_Noise_Scale>
+        <Intensity_Noise_Time_Scale>10</Intensity_Noise_Time_Scale>
+        <Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+        <Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+	
+		<LightFieldSource Name="L_Generic_Small_Fire_Faint">
+        <Type>POINT</Type>
+        <Diffuse>1.0,0.8,.22</Diffuse>
+        <Intensity>.1</Intensity>
+        <Width>10.0</Width>
+        <Length>10.0</Length>
+        <Height>10.1</Height>
+        <Intensity_Noise_Scale>0.1</Intensity_Noise_Scale>
+        <Intensity_Noise_Time_Scale>10</Intensity_Noise_Time_Scale>
+        <Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+        <Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+
+
+	<!-- =========================== Military =================================== -->
+
+
+	<LightFieldSource Name="L_Moore_flash">
+		<Type>POINT</Type>
+		<Diffuse>1.0,0.95,0.52</Diffuse>
+		<Intensity>0.5</Intensity>
+		<Width>10.0</Width>
+		<Length>10.0</Length>
+		<Height>0.1f</Height>
+		 <Intensity_Noise_Scale>0.15</Intensity_Noise_Scale>
+        <Intensity_Noise_Time_Scale>15</Intensity_Noise_Time_Scale>
+		<Is_Affected_By_Global_Light_Field_Intensity>True</Is_Affected_By_Global_Light_Field_Intensity>
+		<Auto_Destruct_Time>0.5</Auto_Destruct_Time>
+		<Auto_Destruct_Fade_Time>0.3</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+
+
+	<LightFieldSource Name="L_Military_Turret">
+		<Type>POINT</Type>
+		<Diffuse>1.0,0.95,0.52</Diffuse>
+		<Intensity>0.3</Intensity>
+		<Width>15.0</Width>
+		<Length>15.0</Length>
+		<Height>15.0f</Height>
+		<Is_Affected_By_Global_Light_Field_Intensity>True</Is_Affected_By_Global_Light_Field_Intensity>
+		<Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+		<Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+
+	<LightFieldSource Name="L_MV_Apache_spotlight">
+		<Type>HCONE</Type>
+		<Diffuse>1.0,1.0,1.0</Diffuse>
+		<Intensity>0.9</Intensity>
+		<Width>25.0</Width>
+		<Length>80.0</Length>
+		<Height>0.1f</Height>
+		<Is_Affected_By_Global_Light_Field_Intensity>True</Is_Affected_By_Global_Light_Field_Intensity>
+		<Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+		<Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+
+	<LightFieldSource Name="L_MV_Apache_spotlight_point">
+		<Type>POINT</Type>
+		<Diffuse>1.0,0.95,0.52</Diffuse>
+		<Intensity>0.9</Intensity>
+		<Width>25.0</Width>
+		<Length>25.0</Length>
+		<Height>0.1f</Height>
+		<Is_Affected_By_Global_Light_Field_Intensity>True</Is_Affected_By_Global_Light_Field_Intensity>
+		<Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+		<Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+	
+	<LightFieldSource Name="L_mi_rocketlauncher_rocket">
+		<Type>POINT</Type>
+		<Diffuse>0.5,0.45,0.25</Diffuse>
+		<Intensity>0.01</Intensity>
+		<Width>30.0</Width>
+		<Length>30.0</Length>
+		<Height>0.1f</Height>
+		<Is_Affected_By_Global_Light_Field_Intensity>True</Is_Affected_By_Global_Light_Field_Intensity>
+		<Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+		<Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+
+	<LightFieldSource Name="L_mi_rocketlauncher_fire">
+		<Type>POINT</Type>
+		<Diffuse>1.0,0.95,0.52</Diffuse>
+		<Intensity>0.2</Intensity>
+		<Width>30.0</Width>
+		<Length>30.0</Length>
+		<Height>0.1f</Height>
+		<Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+		<Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+
+	<!-- =========================== Alien =================================== -->
+
+	<LightFieldSource Name="L_AI_Lost_one_bomb">
+		<Type>POINT</Type>
+		<Diffuse>0.3,0.95,0.3</Diffuse>
+		<Intensity>0.6</Intensity>
+		<Width>30.0</Width>
+		<Length>30.0</Length>
+		<Height>30.0f</Height>
+		<Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+		<Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+
+	<LightFieldSource Name="L_AI_Lost_one_bullet">
+		<Type>POINT</Type>
+		<Diffuse>0.52,0.95,0.1</Diffuse>
+		<Intensity>0.3</Intensity>
+		<Width>10.0</Width>
+		<Length>15.0</Length>
+		<Height>10.1f</Height>
+		<Is_Affected_By_Global_Light_Field_Intensity>false</Is_Affected_By_Global_Light_Field_Intensity>
+		<Auto_Destruct_Time>0.5</Auto_Destruct_Time>
+		<Auto_Destruct_Fade_Time>0.4</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+
+	<LightFieldSource Name="L_AI_Lost_one_Ground_Hit">
+		<Type>POINT</Type>
+		<Diffuse>0.52,0.95,0.1</Diffuse>
+		<Intensity>0.2</Intensity>
+		<Width>15.0</Width>
+		<Length>15.0</Length>
+		<Height>0.1f</Height>
+		<Auto_Destruct_Time>0.5</Auto_Destruct_Time>
+		<Auto_Destruct_Fade_Time>0.4</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+
+	<LightFieldSource Name="L_AI_Lost_one_Target_Hit">
+		<Type>POINT</Type>
+		<Diffuse>0.52,0.95,0.1</Diffuse>
+		<Intensity>0.3</Intensity>
+		<Width>18.0</Width>
+		<Length>18.0</Length>
+		<Height>0.1f</Height>
+		<Auto_Destruct_Time>0.5</Auto_Destruct_Time>
+		<Auto_Destruct_Fade_Time>0.4</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+	
+	<LightFieldSource Name="L_Alien_Ground_Hit">
+        <Type>POINT</Type>
+        <Diffuse>0.52,0.95,1.0</Diffuse>
+        <Intensity>0.3</Intensity>
+        <Width>60.0</Width>
+        <Length>60.0</Length>
+        <Height>0.1f</Height>
+        <Auto_Destruct_Time>0.5</Auto_Destruct_Time>
+        <Auto_Destruct_Fade_Time>0.4</Auto_Destruct_Fade_Time>
+    </LightFieldSource>
+
+	<LightFieldSource Name="L_Alien_Reaper_Turret_Collection_Beam">
+		<Type>POINT</Type>
+		<Diffuse>0.2,0.3,0.05</Diffuse>
+		<Intensity>0.3</Intensity>
+		<Is_Affected_By_Global_Light_Field_Intensity>false</Is_Affected_By_Global_Light_Field_Intensity>
+		<Width>100.0</Width>
+		<Length>100.0</Length>
+		<Height>0.1f</Height>		
+	</LightFieldSource>
+
+	<LightFieldSource Name="L_Alien_Ground_Hit_02">
+        <Type>POINT</Type>
+        <Diffuse>0.52,0.95,1.0</Diffuse>
+        <Intensity>0.3</Intensity>
+        <Width>60.0</Width>
+        <Length>60.0</Length>
+        <Height>0.1f</Height>
+        <Auto_Destruct_Time>0.5</Auto_Destruct_Time>
+        <Auto_Destruct_Fade_Time>0.4</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+
+	<LightFieldSource Name="L_Alien_Target_Hit">
+        <Type>POINT</Type>
+        <Diffuse>0.52,0.95,1.0</Diffuse>
+        <Intensity>0.3</Intensity>
+        <Width>60.0</Width>
+        <Length>60.0</Length>
+        <Height>0.1f</Height>
+        <Auto_Destruct_Time>0.5</Auto_Destruct_Time>
+        <Auto_Destruct_Fade_Time>0.5</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+
+	<LightFieldSource Name="L_Alien_Barracks_Plasma_Hit">
+        <Type>POINT</Type>
+        <Diffuse>0.52,0.95,1.0</Diffuse>
+        <Intensity>0.3</Intensity>
+        <Width>60.0</Width>
+        <Length>60.0</Length>
+        <Height>0.1f</Height>
+        <Auto_Destruct_Time>0.5</Auto_Destruct_Time>
+        <Auto_Destruct_Fade_Time>0.5</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+	
+	<LightFieldSource Name="L_Alien_Barracks_Electric_Hit">
+        <Type>POINT</Type>
+        <Diffuse>0.52,0.95,1.0</Diffuse>
+        <Intensity>0.3</Intensity>
+        <Width>60.0</Width>
+        <Length>60.0</Length>
+        <Height>0.1f</Height>
+        <Auto_Destruct_Time>0.5</Auto_Destruct_Time>
+        <Auto_Destruct_Fade_Time>0.5</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+	
+	<LightFieldSource Name="L_alien_plasma_projectile_big">
+        <Type>POINT</Type>
+        <Diffuse>0.52,0.95,0.52</Diffuse>
+        <Intensity>.4</Intensity>
+        <Width>130.0</Width>
+        <Length>130.0</Length>
+        <Height>0.1f</Height>
+        <Intensity_Noise_Scale>0.15</Intensity_Noise_Scale>
+        <Intensity_Noise_Time_Scale>15</Intensity_Noise_Time_Scale>
+        <Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+        <Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+	
+	<LightFieldSource Name="L_alien_plasma_projectile_big_small">
+        <Type>POINT</Type>
+        <Diffuse>0.52,0.95,0.52</Diffuse>
+        <Intensity>.8</Intensity>
+        <Width>40.0</Width>
+        <Length>40.0</Length>
+        <Height>0.1f</Height>
+        <Intensity_Noise_Scale>0.15</Intensity_Noise_Scale>
+        <Intensity_Noise_Time_Scale>15</Intensity_Noise_Time_Scale>
+        <Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+        <Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+
+	<LightFieldSource Name="L_alien_orlok_plasma_small">
+		<Type>POINT</Type>
+		<Diffuse>0.52,0.95,0.52</Diffuse>
+		<Intensity>0.05</Intensity>
+		<Width>20.0</Width>
+		<Length>20.0</Length>
+		<Height>0.1f</Height>
+		<Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+		<Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+	
+	<LightFieldSource Name="L_Large_Explosion_Land">
+        <Type>POINT</Type>
+        <Diffuse>1.0,0.8,0.22</Diffuse>
+        <Intensity>0.6</Intensity>
+        <Width>60.0</Width>
+        <Length>60.0</Length>
+        <Height>0.1f</Height>
+        <Auto_Destruct_Time>0.5</Auto_Destruct_Time>
+        <Auto_Destruct_Fade_Time>0.5</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+	
+	<LightFieldSource Name="L_Military_Biggy_Explosion">
+        <Type>POINT</Type>
+        <Diffuse>1.0,0.8,0.22</Diffuse>
+        <Intensity>0.3</Intensity>
+        <Width>60.0</Width>
+        <Length>60.0</Length>
+        <Height>0.1f</Height>
+        <Auto_Destruct_Time>0.5</Auto_Destruct_Time>
+        <Auto_Destruct_Fade_Time>0.5</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+
+	<LightFieldSource Name="L_Radiation_Beam">
+        <Type>LINE</Type>
+        <Diffuse>0.5,1.0,0.5</Diffuse>
+        <Intensity>0.4</Intensity>
+        <Width>100.0</Width>
+        <Length>1.0</Length>
+        <Height>0.1f</Height>
+        <Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+        <Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+
+	<LightFieldSource Name="L_Alien_harvest_Beam">
+		<Type>LINE</Type>
+		<Diffuse>0.5,0.5,0.1</Diffuse>
+		<Intensity>0.4</Intensity>
+		<Width>35.0</Width>
+		<Length>1.0</Length>
+		<Height>0.1f</Height>
+		<Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+		<Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+
+	<LightFieldSource Name="L_Alien_harvest_attack_Beam">
+		<Type>LINE</Type>
+		<Diffuse>1.0,0.3,0.3</Diffuse>
+		<Intensity>0.4</Intensity>
+		<Width>20.0</Width>
+		<Length>1.0</Length>
+		<Height>0.1f</Height>
+		<Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+		<Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+
+	<LightFieldSource Name="L_Alien_Constructor_Beam">
+		<Type>LINE</Type>
+		<Diffuse>1.0,0.6,0.2</Diffuse>
+		<Intensity>0.3</Intensity>
+		<Width>50.0</Width>
+		<Length>20.0</Length>
+		<Height>0.1f</Height>
+		<Intensity_Noise_Scale>0.1</Intensity_Noise_Scale>
+		<Intensity_Noise_Time_Scale>25.0</Intensity_Noise_Time_Scale>
+		<Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+		<Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+	
+	<LightFieldSource Name="L_Variant_Underneath_Ambient">
+        <Type>LINE</Type>
+        <Diffuse>.2,.2,1.0</Diffuse>
+        <Intensity>0.3</Intensity>
+        <Width>35.0</Width>
+        <Length>60.0</Length>
+        <Height>0.0001</Height>
+        <Auto_Destruct_Time>0.5</Auto_Destruct_Time>
+        <Auto_Destruct_Fade_Time>0.5</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+
+	<LightFieldSource Name="L_Corruptor_Laser_Beam_Source">
+        <Type>LINE</Type>
+        <Diffuse>.2,.2,1.0</Diffuse>
+        <Intensity>0.3</Intensity>
+        <Width>50.0</Width>
+        <Length>30.0</Length>
+        <Height>300.0</Height>
+        <Auto_Destruct_Time>0.5</Auto_Destruct_Time>
+        <Auto_Destruct_Fade_Time>0.5</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+	
+	<LightFieldSource Name="L_Corruptor_Laser_Beam_target">
+        <Type>POINT</Type>
+        <Diffuse>.4,.4,1.0</Diffuse>
+        <Intensity>0.7</Intensity>
+        <Width>50.0</Width>
+        <Length>50.0</Length>
+        <Height>1.5f</Height>
+        <Auto_Destruct_Time>0.5</Auto_Destruct_Time>
+        <Auto_Destruct_Fade_Time>1.0</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+	
+	<LightFieldSource Name="L_Corruptor_Laser_Virus_target">
+        <Type>POINT</Type>
+        <Diffuse>1.0,1.0,1.0</Diffuse>
+        <Intensity>-0.7</Intensity>
+        <Width>50.0</Width>
+        <Length>50.0</Length>
+        <Height>1.5f</Height>
+        <Auto_Destruct_Time>0.5</Auto_Destruct_Time>
+        <Auto_Destruct_Fade_Time>1.0</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+	
+	<LightFieldSource Name="L_Corruptor_Laser_Beam_miss">
+        <Type>POINT</Type>
+        <Diffuse>.2,.2,1.0</Diffuse>
+        <Intensity>0.5</Intensity>
+        <Width>30.0</Width>
+        <Length>30.0</Length>
+        <Height>0.000f</Height>
+        <Auto_Destruct_Time>0.2</Auto_Destruct_Time>
+        <Auto_Destruct_Fade_Time>0.2</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+	
+	 <LightFieldSource Name="L_Radiation_Light">
+        <Type>POINT</Type>
+        <Diffuse>0.1,0.5,0.0</Diffuse>
+        <Intensity>1.0</Intensity>
+        <Width>120.0</Width>
+        <Length>120.0</Length>
+        <Height>40.0f</Height>
+        <Is_Affected_By_Global_Light_Field_Intensity>false</Is_Affected_By_Global_Light_Field_Intensity>
+        <Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+        <Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+    </LightFieldSource>
+
+
+	<!-- ================================ Novus Specific ===================================== -->
+
+
+   <LightFieldSource Name="L_NB_Blackhole_bomb">
+      <Type>POINT</Type>
+      <Diffuse>0.0,0.25,0.5</Diffuse>
+      <Intensity>0.05</Intensity>
+      <Width>70.0</Width>
+      <Length>70.0</Length>
+      <Height>0.1f</Height>
+      <Is_Affected_By_Global_Light_Field_Intensity>False</Is_Affected_By_Global_Light_Field_Intensity>
+      <Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+      <Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+   </LightFieldSource>
+   
+	<LightFieldSource Name="L_NB_Portal_ambient">
+		<Type>POINT</Type>
+		<Diffuse>0.0,0.55,1.0</Diffuse>
+		<Intensity>0.1</Intensity>
+		<Width>70.0</Width>
+		<Length>70.0</Length>
+		<Height>0.1f</Height>
+		<Is_Affected_By_Global_Light_Field_Intensity>True</Is_Affected_By_Global_Light_Field_Intensity>
+		<Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+		<Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+
+   <LightFieldSource Name="L_NV_Collectors_Target">
+      <Type>POINT</Type>
+      <Diffuse>0.0,0.50,1.15</Diffuse>
+      <Intensity>1.0</Intensity>
+      <Width>30.0</Width>
+      <Length>30.0</Length>
+      <Height>30.0</Height>      
+      <Is_Affected_By_Global_Light_Field_Intensity>False</Is_Affected_By_Global_Light_Field_Intensity>
+      <Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+      <Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+   </LightFieldSource>
+
+	<LightFieldSource Name="L_NV_Viktor_Rocket_hit">
+		<Type>POINT</Type>
+		<Diffuse>0.3,0.5,0.7</Diffuse>
+		<Intensity>0.3</Intensity>
+		<Width>60.0</Width>
+		<Length>60.0</Length>
+		<Height>0.1f</Height>
+		<Auto_Destruct_Time>0.5</Auto_Destruct_Time>
+		<Auto_Destruct_Fade_Time>0.5</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+
+	<LightFieldSource Name="L_NI_Hacker_source">
+		<Type>POINT</Type>
+		<Diffuse>0.3,0.2,0.8</Diffuse>
+		<Intensity>0.3</Intensity>
+		<Width>20.0</Width>
+		<Length>20.0</Length>
+		<Height>20.0f</Height>
+		<Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+		<Auto_Destruct_Fade_Time>0.5</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+
+	<LightFieldSource Name="L_NI_Hacker_core">
+		<Type>LINE</Type>
+		<Diffuse>0.3,0.2,1.0</Diffuse>
+		<Intensity>0.2</Intensity>
+		<Width>10.0</Width>
+		<Length>1.0</Length>
+		<Height>0.1f</Height>
+		<Intensity_Noise_Scale>0.1</Intensity_Noise_Scale>
+		<Intensity_Noise_Time_Scale>25.0</Intensity_Noise_Time_Scale>
+		<Auto_Destruct_Time>0.1</Auto_Destruct_Time>
+		<Auto_Destruct_Fade_Time>0.1</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+	
+	
+	
+	<LightFieldSource Name="L_NV_Viktor">
+		<Type>POINT</Type>
+		<Diffuse>0.3,0.5,0.7</Diffuse>
+		<Intensity>0.1</Intensity>
+		<Width>30.0</Width>
+		<Length>30.0</Length>
+		<Height>30.0</Height>
+		<Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+		<Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+	
+	
+	<LightFieldSource Name="L_Novus_Amplifier_Resonation_Beam">
+        <Type>LINE</Type>
+        <Diffuse>0.2,0.2,1.0</Diffuse>
+        <Intensity>0.3</Intensity>
+        <Width>100.0</Width>
+        <Length>1.0</Length>
+        <Height>0.1f</Height>
+        <Intensity_Noise_Scale>0.5</Intensity_Noise_Scale>
+        <Intensity_Noise_Time_Scale>25.0</Intensity_Noise_Time_Scale>
+        <Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+        <Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+
+	<LightFieldSource Name="L_Novus_Amplifier_Resonation_Beam_core">
+		<Type>LINE</Type>
+		<Diffuse>0.2,0.2,1.0</Diffuse>
+		<Intensity>0.25</Intensity>
+		<Width>30.0</Width>
+		<Length>1.0</Length>
+		<Height>0.1f</Height>
+		<Intensity_Noise_Scale>0.1</Intensity_Noise_Scale>
+		<Intensity_Noise_Time_Scale>25.0</Intensity_Noise_Time_Scale>
+		<Auto_Destruct_Time>0.1</Auto_Destruct_Time>
+		<Auto_Destruct_Fade_Time>0.1</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+	
+	<LightFieldSource Name="L_Novus_Constructor_Beam">
+        <Type>LINE</Type>
+        <Diffuse>0.5,0.5,1.0</Diffuse>
+        <Intensity>0.3</Intensity>
+        <Width>60.0</Width>
+        <Length>20.0</Length>
+        <Height>0.1f</Height>
+        <Intensity_Noise_Scale>0.1</Intensity_Noise_Scale>
+        <Intensity_Noise_Time_Scale>25.0</Intensity_Noise_Time_Scale>
+        <Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+        <Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+	
+	<LightFieldSource Name="L_Novus_Constructor_core">
+        <Type>POINT</Type>
+        <Diffuse>0.3,0.3,0.7</Diffuse>
+        <Intensity>0.7</Intensity>
+        <Width>80.0</Width>
+        <Length>80.0</Length>
+        <Height>1.1f</Height>
+        <Intensity_Noise_Scale>0.1</Intensity_Noise_Scale>
+        <Intensity_Noise_Time_Scale>25.0</Intensity_Noise_Time_Scale>
+        <Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+        <Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+
+	<LightFieldSource Name="L_Novus_rail_hit">
+		<Type>POINT</Type>
+		<Diffuse>0.22,0.22,0.9</Diffuse>
+		<Intensity>0.3</Intensity>
+		<Width>30.0</Width>
+		<Length>30.0</Length>
+		<Height>0.1f</Height>
+		<Auto_Destruct_Time>0.5</Auto_Destruct_Time>
+		<Auto_Destruct_Fade_Time>0.5</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+	
+	<LightFieldSource Name="L_AB_Science_walk_beam">
+        <Type>LINE</Type>
+        <Diffuse>0.1,0.6,0.1</Diffuse>
+        <Intensity>0.3</Intensity>
+        <Width>100.0</Width>
+        <Length>100.0</Length>
+        <Height>5.0f</Height>
+        <Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+        <Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+	
+	<LightFieldSource Name="L_Manipulator_Burden">
+        <Type>LINE</Type>
+        <Diffuse>1.0,1.0,0.1</Diffuse>
+        <Intensity>0.3</Intensity>
+        <Width>100.0</Width>
+        <Length>1.0</Length>
+        <Height>0.1f</Height>
+        <Intensity_Noise_Scale>0.5</Intensity_Noise_Scale>
+        <Intensity_Noise_Time_Scale>25.0</Intensity_Noise_Time_Scale>
+        <Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+        <Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+	
+	<LightFieldSource Name="L_Manipulator_Beckon">
+        <Type>LINE</Type>
+        <Diffuse>1.0,0.2,0.2</Diffuse>
+        <Intensity>0.3</Intensity>
+        <Width>100.0</Width>
+        <Length>1.0</Length>
+        <Height>0.1f</Height>
+        <Intensity_Noise_Scale>0.5</Intensity_Noise_Scale>
+        <Intensity_Noise_Time_Scale>25.0</Intensity_Noise_Time_Scale>
+        <Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+        <Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+
+	<!-- **************************************************************************************** -->
+	<!-- *** MASARI ***************************************************************************** -->
+	<!-- **************************************************************************************** -->
+
+  <LightFieldSource Name="L_Masari_Heal_beam_light">
+    <Type>LINE</Type>
+    <Diffuse>0.5,0.4,0.15</Diffuse>
+    <Intensity>0.4</Intensity>
+    <Width>15.0</Width>
+    <Length>1.0</Length>
+    <Height>0.1f</Height>
+    <Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+    <Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+  </LightFieldSource>
+  
+  <LightFieldSource Name="L_Masari_Assist_beam_light">
+    <Type>LINE</Type>
+    <Diffuse>0.5,0.4,0.15</Diffuse>
+    <Intensity>0.4</Intensity>
+    <Width>20.0</Width>
+    <Length>1.0</Length>
+    <Height>0.1f</Height>
+    <Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+    <Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+  </LightFieldSource>
+   
+
+   <LightFieldSource Name="L_Masari_Assist_Construction_light">
+      <Type>LINE</Type>
+      <Diffuse>0.5,0.4,0.15</Diffuse>
+      <Intensity>0.4</Intensity>
+      <Width>20.0</Width>
+      <Length>1.0</Length>
+      <Height>0.1f</Height>
+      <Intensity_Noise_Scale>0.3</Intensity_Noise_Scale>
+      <Intensity_Noise_Time_Scale>1.0</Intensity_Noise_Time_Scale>
+      <Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+      <Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+   </LightFieldSource>
+  
+	<LightFieldSource Name="L_Masari_Build_beam_light">
+		<Type>LINE</Type>
+		<Diffuse>0.5,0.4,0.15</Diffuse>
+		<Intensity>0.4</Intensity>
+		<Width>50.0</Width>
+		<Length>1.0</Length>
+		<Height>0.1f</Height>
+      <Intensity_Noise_Scale>0.1</Intensity_Noise_Scale>
+      <Intensity_Noise_Time_Scale>25.0</Intensity_Noise_Time_Scale>
+		<Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+		<Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+
+   <LightFieldSource Name="L_Masari_Sky_Turret_Light">
+      <Type>LINE</Type>
+      <Diffuse>0.2,0.2,0.05</Diffuse>
+      <Intensity>0.4</Intensity>
+      <Width>50.0</Width>
+      <Length>1.0</Length>
+      <Height>0.1f</Height>
+      <Intensity_Noise_Scale>0.1</Intensity_Noise_Scale>
+      <Intensity_Noise_Time_Scale>25.0</Intensity_Noise_Time_Scale>
+      <Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+      <Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+   </LightFieldSource>
+
+   <LightFieldSource Name="L_Masari_Sentry">
+      <Type>LINE</Type>
+      <Diffuse>0.2,0.2,0.05</Diffuse>
+      <Intensity>0.4</Intensity>
+      <Width>10.0</Width>
+      <Length>1.0</Length>
+      <Height>0.1f</Height>
+      <Intensity_Noise_Scale>0.1</Intensity_Noise_Scale>
+      <Intensity_Noise_Time_Scale>25.0</Intensity_Noise_Time_Scale>
+      <Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+      <Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+   </LightFieldSource>
+
+   <LightFieldSource Name="L_Masari_Sentry_Avenger">
+      <Type>LINE</Type>
+      <Diffuse>0.3,0.3,0.1</Diffuse>
+      <Intensity>0.4</Intensity>
+      <Width>20.0</Width>
+      <Length>1.0</Length>
+      <Height>0.1f</Height>
+      <Intensity_Noise_Scale>0.1</Intensity_Noise_Scale>
+      <Intensity_Noise_Time_Scale>25.0</Intensity_Noise_Time_Scale>
+      <Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+      <Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+   </LightFieldSource>
+	
+	<LightFieldSource Name="L_default_Masari_light">
+		<Type>POINT</Type>
+		<Diffuse>0.2,0.2,0.1</Diffuse>
+		<Intensity>0.02</Intensity>
+		<Width>30.0</Width>
+		<Length>30.0</Length>
+		<Height>20.0</Height>
+		<Is_Affected_By_Global_Light_Field_Intensity>True</Is_Affected_By_Global_Light_Field_Intensity>
+		<Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+		<Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+
+   <LightFieldSource Name="L_Masari_Super_weapon_L">
+      <Type>POINT</Type>
+      <Diffuse>0.5,0.25,0.0</Diffuse>
+      <Intensity>0.3</Intensity>
+      <Width>60.0</Width>
+      <Length>60.0</Length>
+      <Height>20.0</Height>
+      <Is_Affected_By_Global_Light_Field_Intensity>True</Is_Affected_By_Global_Light_Field_Intensity>
+      <Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+      <Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+   </LightFieldSource>
+
+   <LightFieldSource Name="L_default_Masari_light_Lrg">
+      <Type>POINT</Type>
+      <Diffuse>0.2,0.2,0.1</Diffuse>
+      <Intensity>0.02</Intensity>
+      <Width>40.0</Width>
+      <Length>40.0</Length>
+      <Height>20.0</Height>
+      <Is_Affected_By_Global_Light_Field_Intensity>True</Is_Affected_By_Global_Light_Field_Intensity>
+      <Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+      <Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+   </LightFieldSource>
+
+   <LightFieldSource Name="L_default_Masari_light_Lrg_Det">
+      <Type>POINT</Type>
+      <Diffuse>0.2,0.2,0.1</Diffuse>
+      <Intensity>0.02</Intensity>
+      <Width>40.0</Width>
+      <Length>40.0</Length>
+      <Height>20.0</Height>
+      <Is_Affected_By_Global_Light_Field_Intensity>True</Is_Affected_By_Global_Light_Field_Intensity>
+      <Auto_Destruct_Time>0.2</Auto_Destruct_Time>
+      <Auto_Destruct_Fade_Time>0.1</Auto_Destruct_Fade_Time>
+   </LightFieldSource>
+
+   <LightFieldSource Name="L_default_Masari_Dark_Lrg">
+      <Type>POINT</Type>
+      <Diffuse>0.19,0.15,0.3</Diffuse>
+      <Intensity>0.02</Intensity>
+      <Width>40.0</Width>
+      <Length>40.0</Length>
+      <Height>40.0</Height>
+      <Is_Affected_By_Global_Light_Field_Intensity>False</Is_Affected_By_Global_Light_Field_Intensity>
+      <Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+      <Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+   </LightFieldSource>
+
+   <LightFieldSource Name="L_default_Masari_Dark_Lrg_Det">
+      <Type>POINT</Type>
+      <Diffuse>0.2,0.0,0.3</Diffuse>
+      <Intensity>0.02</Intensity>
+      <Width>40.0</Width>
+      <Length>40.0</Length>
+      <Height>40.0</Height>
+      <Is_Affected_By_Global_Light_Field_Intensity>True</Is_Affected_By_Global_Light_Field_Intensity>
+      <Auto_Destruct_Time>0.2</Auto_Destruct_Time>
+      <Auto_Destruct_Fade_Time>0.1</Auto_Destruct_Fade_Time>
+   </LightFieldSource>
+
+   <LightFieldSource Name="L_default_Masari_light_flash">
+      <Type>POINT</Type>
+      <Diffuse>0.5,0.5,0.2</Diffuse>
+      <Intensity>0.5</Intensity>
+      <Width>50.0</Width>
+      <Length>50.0</Length>
+      <Height>50.0</Height>
+      <Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+      <Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+   </LightFieldSource>
+
+   <LightFieldSource Name="L_default_Masari_light_core_bright">
+      <Type>POINT</Type>
+      <Diffuse>0.8,0.8,0.4</Diffuse>
+      <Intensity>0.5</Intensity>
+      <Width>8.0</Width>
+      <Length>8.0</Length>
+      <Height>8.0</Height>
+      <Is_Affected_By_Global_Light_Field_Intensity>True</Is_Affected_By_Global_Light_Field_Intensity>
+      <Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+      <Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+   </LightFieldSource>
+
+	<LightFieldSource Name="L_default_Masari_light_core">
+		<Type>POINT</Type>
+		<Diffuse>0.3,0.3,0.2</Diffuse>
+		<Intensity>0.1</Intensity>
+		<Width>8.0</Width>
+		<Length>8.0</Length>
+		<Height>8.0</Height>
+		<Is_Affected_By_Global_Light_Field_Intensity>True</Is_Affected_By_Global_Light_Field_Intensity>
+		<Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+		<Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+
+	<LightFieldSource Name="L_Masari_Purifying_Light_Small">
+		<Type>POINT</Type>
+		<Diffuse>0.3,0.3,0.2</Diffuse>
+		<Intensity>0.5</Intensity>
+		<Width>16.0</Width>
+		<Length>16.0</Length>
+		<Height>8.0</Height>
+		<Is_Affected_By_Global_Light_Field_Intensity>True</Is_Affected_By_Global_Light_Field_Intensity>
+		<Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+		<Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+
+
+	<LightFieldSource Name="L_Masari_Purifying_Light_Medium">
+		<Type>POINT</Type>
+		<Diffuse>0.3,0.3,0.2</Diffuse>
+		<Intensity>0.6</Intensity>
+		<Width>30.0</Width>
+		<Length>30.0</Length>
+		<Height>8.0</Height>
+		<Is_Affected_By_Global_Light_Field_Intensity>True</Is_Affected_By_Global_Light_Field_Intensity>
+		<Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+		<Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+
+
+	<LightFieldSource Name="L_Masari_Purifying_Light_Large">
+		<Type>POINT</Type>
+		<Diffuse>0.3,0.3,0.2</Diffuse>
+		<Intensity>0.7</Intensity>
+		<Width>45.0</Width>
+		<Length>45.0</Length>
+		<Height>8.0</Height>
+		<Is_Affected_By_Global_Light_Field_Intensity>True</Is_Affected_By_Global_Light_Field_Intensity>
+		<Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+		<Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+
+	<LightFieldSource Name="L_default_Masari_Disciple_dark">
+		<Type>POINT</Type>
+		<Diffuse>0.2,0.0,0.2</Diffuse>
+		<Intensity>0.02</Intensity>
+		<Width>20.0</Width>
+		<Length>20.0</Length>
+		<Height>20.0</Height>
+		<Is_Affected_By_Global_Light_Field_Intensity>True</Is_Affected_By_Global_Light_Field_Intensity>
+		<Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+		<Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+
+	<LightFieldSource Name="L_default_Masari_Disciple_dark_Explosion">
+		<Type>POINT</Type>
+		<Diffuse>0.3,0.05,0.3</Diffuse>
+		<Intensity>0.3</Intensity>
+		<Width>50.0</Width>
+		<Length>50.0</Length>
+		<Height>20.0</Height>
+		<Is_Affected_By_Global_Light_Field_Intensity>True</Is_Affected_By_Global_Light_Field_Intensity>
+		<Auto_Destruct_Time>0.2</Auto_Destruct_Time>
+		<Auto_Destruct_Fade_Time>0.1</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+
+   <LightFieldSource Name="L_default_Masari_Disciple_dark_Explosion_S">
+      <Type>POINT</Type>
+      <Diffuse>0.3,0.05,0.3</Diffuse>
+      <Intensity>0.5</Intensity>
+      <Width>30.0</Width>
+      <Length>30.0</Length>
+      <Height>20.0</Height>
+      <Is_Affected_By_Global_Light_Field_Intensity>True</Is_Affected_By_Global_Light_Field_Intensity>
+      <Auto_Destruct_Time>0.2</Auto_Destruct_Time>
+      <Auto_Destruct_Fade_Time>0.1</Auto_Destruct_Fade_Time>
+   </LightFieldSource>
+
+	<LightFieldSource Name="L_Skylord_Masari_light_Explosion">
+		<Type>POINT</Type>
+		<Diffuse>0.6,0.6,0.4</Diffuse>
+		<Intensity>0.6</Intensity>
+		<Width>50.0</Width>
+		<Length>50.0</Length>
+		<Height>20.0</Height>
+		<Is_Affected_By_Global_Light_Field_Intensity>True</Is_Affected_By_Global_Light_Field_Intensity>
+		<Auto_Destruct_Time>0.3</Auto_Destruct_Time>
+		<Auto_Destruct_Fade_Time>0.2</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+
+   <LightFieldSource Name="L_Skylord_Masari_light_Explosion_S">
+      <Type>POINT</Type>
+      <Diffuse>0.6,0.6,0.4</Diffuse>
+      <Intensity>0.8</Intensity>
+      <Width>30.0</Width>
+      <Length>30.0</Length>
+      <Height>20.0</Height>
+      <Is_Affected_By_Global_Light_Field_Intensity>True</Is_Affected_By_Global_Light_Field_Intensity>
+      <Auto_Destruct_Time>0.3</Auto_Destruct_Time>
+      <Auto_Destruct_Fade_Time>0.2</Auto_Destruct_Fade_Time>
+   </LightFieldSource>
+	
+	<LightFieldSource Name="L_Skylord_Masari_light">
+		<Type>POINT</Type>
+		<Diffuse>0.2,0.2,0.1</Diffuse>
+		<Intensity>0.02</Intensity>
+		<Width>50.0</Width>
+		<Length>50.0</Length>
+		<Height>20.0</Height>
+		<Is_Affected_By_Global_Light_Field_Intensity>True</Is_Affected_By_Global_Light_Field_Intensity>
+		<Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+		<Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+
+	<LightFieldSource Name="L_Skylord_Masari_light_core">
+		<Type>POINT</Type>
+		<Diffuse>0.3,0.3,0.2</Diffuse>
+		<Intensity>0.1</Intensity>
+		<Width>18.0</Width>
+		<Length>18.0</Length>
+		<Height>8.0</Height>
+		<Is_Affected_By_Global_Light_Field_Intensity>True</Is_Affected_By_Global_Light_Field_Intensity>
+		<Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+		<Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+
+	<LightFieldSource Name="L_Masari_INT_light_rays_Sml">
+		<Type>POINT</Type>
+		<Diffuse>0.5,0.5,0.4</Diffuse>
+		<Intensity>0.3</Intensity>
+		<Width>30.0</Width>
+		<Length>30.0</Length>
+		<Height>20.0</Height>
+		<Is_Affected_By_Global_Light_Field_Intensity>True</Is_Affected_By_Global_Light_Field_Intensity>
+		<Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+		<Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+
+	<LightFieldSource Name="L_Masari_INT_light_rays_Med">
+		<Type>POINT</Type>
+		<Diffuse>0.5,0.5,0.4</Diffuse>
+		<Intensity>0.2</Intensity>
+		<Width>60.0</Width>
+		<Length>60.0</Length>
+		<Height>20.0</Height>
+		<Is_Affected_By_Global_Light_Field_Intensity>True</Is_Affected_By_Global_Light_Field_Intensity>
+		<Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+		<Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+
+	<LightFieldSource Name="L_Masari_INT_light_rays_Lrg">
+		<Type>POINT</Type>
+		<Diffuse>0.5,0.5,0.4</Diffuse>
+		<Intensity>0.2</Intensity>
+		<Width>90.0</Width>
+		<Length>90.0</Length>
+		<Height>20.0</Height>
+		<Is_Affected_By_Global_Light_Field_Intensity>True</Is_Affected_By_Global_Light_Field_Intensity>
+		<Auto_Destruct_Time>0.0</Auto_Destruct_Time>
+		<Auto_Destruct_Fade_Time>0.0</Auto_Destruct_Fade_Time>
+	</LightFieldSource>
+
+	
+
+</LightFieldSources>
+
+
+<!--
+
+    OBSOLETE!   (Invasion is using Light FIELDs above)
+
+	Light source definitions.
+
+	Be careful with the light source names, they may have to co-exist with other "model names" in the game (e.g. all
+	of the ALO objects)
+
+
+	OBSOLETE!  
+    
+-->
+<!-- This file had 2 roots! = syntax error -Eric_Y
+<LightSources>
+
+	<LightSource Name="LightSourceSmallGreen">
+		<Diffuse>0,1,0</Diffuse>
+		<Intensity>0.4</Intensity>
+		<Radius>40.0</Radius>
+		<Falloff_Start>20</Falloff_Start>
+		<Auto_Destruct_Time>0.4</Auto_Destruct_Time>		< ! - - light goes away in this amount of time - - >
+		<Auto_Destruct_Fade_Time>0.4</Auto_Destruct_Fade_Time>
+		<Blob_Radius>30.0</Blob_Radius>			 <! - - often the terrain blob needs a smaller radius than the light - - >
+		<Blob_Color>0,1,0</Blob_Color>
+		<Blob_Intensity>0.15</Blob_Intensity>	   < ! - - additive blob, probably should be very subtle! - - >
+	</LightSource>
+
+</LightSources>
+-->

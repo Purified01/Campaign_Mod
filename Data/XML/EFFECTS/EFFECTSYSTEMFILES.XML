@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+
+
+<EffectSystemFiles>
+
+	<File>GENERIC_Effects.xml</File>
+	<File>ACHIEVEMENTS_Effects.xml</File>
+
+	<File>NEUTRAL_Effects.xml</File>
+
+   <File>MASARI_DMA_Effects.xml</File>
+   <File>MASARI_GENERIC_Effects.xml</File>
+	<File>MASARI_RESEARCH_Effects.xml</File>
+	<File>MASARI_STRUCTURE_Effects.xml</File>
+	<File>MASARI_HERO_Effects.xml</File>
+	<File>MASARI_INF_Effects.xml</File>
+	<File>MASARI_VEH_Effects.xml</File>
+	<File>MASARI_AIR_Effects.xml</File>
+	
+	<File>ALIEN_GENERIC_Effects.xml</File>
+	<File>ALIEN_STRUCTURE_Effects.xml</File>
+	<File>ALIEN_WALKER_Effects.xml</File>
+	<File>ALIEN_HERO_Effects.xml</File>
+	<File>ALIEN_INF_Effects.xml</File>
+	<File>ALIEN_VEH_Effects.xml</File>
+
+	<File>NOVUS_GENERIC_Effects.xml</File>
+	<File>NOVUS_RESEARCH_Effects.xml</File>
+	<File>NOVUS_PATCH_Effects.xml</File>
+	<File>NOVUS_STRUCTURE_Effects.xml</File>
+	<File>NOVUS_HERO_Effects.xml</File>
+	<File>NOVUS_INF_Effects.xml</File>
+	<File>NOVUS_VEH_Effects.xml</File>
+	<File>NOVUS_AIR_Effects.xml</File>
+
+</EffectSystemFiles>
+

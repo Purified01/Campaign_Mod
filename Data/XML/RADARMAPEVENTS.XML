@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+
+<RadarMapEvents>
+	
+	<Radar_Map_Event Name="Default_Click">
+		<Event_Model_Name>I_minimap_default_click.alo</Event_Model_Name>
+		<Event_Model_Scale>0.001</Event_Model_Scale>
+		<Event_Duration>.8</Event_Duration>
+		<Event_Single_Instance>No</Event_Single_Instance>
+	</Radar_Map_Event>
+
+	<Radar_Map_Event Name="Default_Attack_Click">
+		<Event_Model_Name>I_minimap_attack_move_click.alo</Event_Model_Name>
+		<Event_Model_Scale>0.001</Event_Model_Scale>
+		<Event_Duration>.8</Event_Duration>
+		<Event_Single_Instance>No</Event_Single_Instance>
+	</Radar_Map_Event>
+
+
+	<Radar_Map_Event Name="Default_Double_Click">
+		<Event_Model_Name>I_minimap_death_target.alo</Event_Model_Name>
+		<Event_Model_Scale>0.001</Event_Model_Scale>
+		<Event_Duration>.8</Event_Duration>
+		<Event_Single_Instance>No</Event_Single_Instance>
+	</Radar_Map_Event>
+
+	<Radar_Map_Event Name="Default_Unit_Die">
+		<Event_Model_Name>I_minimap_death_target.alo</Event_Model_Name>
+		<Event_Model_Scale>0.002</Event_Model_Scale>
+		<Event_Duration>1.0</Event_Duration>
+		<Event_Single_Instance>No</Event_Single_Instance>
+	</Radar_Map_Event>
+
+	<Radar_Map_Event Name="Default_Control_Point_Transition">
+		<Event_Model_Name>I_minimap_control_point.alo</Event_Model_Name>
+		<Event_Model_Scale>0.002</Event_Model_Scale>
+		<Event_Duration>1.0</Event_Duration>
+		<Event_Single_Instance>No</Event_Single_Instance>
+	</Radar_Map_Event>
+
+	<Radar_Map_Event Name="Default_Beacon_Placement">
+		<Event_Model_Name>I_minimap_beacon.alo</Event_Model_Name>
+		<Event_Model_Scale>0.003</Event_Model_Scale>
+		<Event_Duration>10.0</Event_Duration>
+		<Event_Single_Instance>No</Event_Single_Instance>
+	</Radar_Map_Event>
+	
+	<Radar_Map_Event Name="Default_Beacon_Placement_Persistent">
+		<Event_Model_Name>I_minimap_beacon.alo</Event_Model_Name>
+		<Event_Model_Scale>0.003</Event_Model_Scale>
+		<Event_Persistent>Yes</Event_Persistent>
+		<Event_Single_Instance>No</Event_Single_Instance>
+	</Radar_Map_Event>
+
+	<Radar_Map_Event Name="Interdict_Activated">
+		<Event_Model_Name>I_minimap_beacon.alo</Event_Model_Name>
+		<Event_Model_Scale>0.002</Event_Model_Scale>
+		<Event_Single_Instance>No</Event_Single_Instance>
+		<Event_Persistent>Yes</Event_Persistent>
+	</Radar_Map_Event>
+
+	<Radar_Map_Event Name="Galactic_Build_Complete_Planet_Ping">
+		<Event_Model_Name>I_minimap_death_target.alo</Event_Model_Name>
+		<Event_Model_Scale>0.002 </Event_Model_Scale>
+		<Event_Duration>5.0</Event_Duration>
+		<Event_Single_Instance>No</Event_Single_Instance>
+	</Radar_Map_Event>
+
+	<Radar_Map_Event Name="DEFAULT">
+		<Event_Model_Name>I_minimap_default_click.alo</Event_Model_Name>
+		<Event_Model_Scale>0.004</Event_Model_Scale>
+		<Event_Duration>5.0</Event_Duration>
+		<Event_Single_Instance>No</Event_Single_Instance>
+		<Event_Persistent>Yes</Event_Persistent>
+	</Radar_Map_Event>
+
+	<Radar_Map_Event Name="ENEMY">
+		<Event_Model_Name>I_minimap_death_target.alo</Event_Model_Name>
+		<Event_Model_Scale>0.001</Event_Model_Scale>
+		<Event_Duration>1.0</Event_Duration>
+		<Event_Single_Instance>No</Event_Single_Instance>
+	</Radar_Map_Event>
+
+	<Radar_Map_Event Name="Default_Control_Group_Selection">
+		<Event_Model_Name>I_minimap_beacon.alo</Event_Model_Name>
+		<Event_Model_Scale>0.001</Event_Model_Scale>
+		<Event_Duration>3.0</Event_Duration>
+		<Event_Single_Instance>No</Event_Single_Instance>
+		<Event_Persistent>No</Event_Persistent>
+	</Radar_Map_Event>
+
+	<Radar_Map_Event Name="Game_Event_Combat_Low_Importance">
+		<Event_Model_Name>p_minimap_combat_low.alo</Event_Model_Name>
+		<Event_Model_Scale>0.002</Event_Model_Scale>
+		<Event_Duration>1.0</Event_Duration>
+		<Event_Single_Instance>No</Event_Single_Instance>
+	</Radar_Map_Event>
+
+	<Radar_Map_Event Name="Game_Event_Combat_Medium_Importance">
+		<Event_Model_Name>p_minimap_combat_med.alo</Event_Model_Name>
+		<Event_Model_Scale>0.002</Event_Model_Scale>
+		<Event_Duration>1.0</Event_Duration>
+		<Event_Single_Instance>No</Event_Single_Instance>
+	</Radar_Map_Event>
+
+	<Radar_Map_Event Name="Game_Event_Combat_High_Importance">
+		<Event_Model_Name>p_minimap_combat_high.alo</Event_Model_Name>
+		<Event_Model_Scale>0.002</Event_Model_Scale>
+		<Event_Duration>1.0</Event_Duration>
+		<Event_Single_Instance>No</Event_Single_Instance>
+	</Radar_Map_Event>
+
+	<Radar_Map_Event Name="Game_Event_Info_Low_Importance">
+		<Event_Model_Name>p_minimap_info_low.alo</Event_Model_Name>
+		<Event_Model_Scale>0.002</Event_Model_Scale>
+		<Event_Duration>1.0</Event_Duration>
+		<Event_Single_Instance>No</Event_Single_Instance>
+	</Radar_Map_Event>
+
+	<Radar_Map_Event Name="Game_Event_Info_Medium_Importance">
+		<Event_Model_Name>p_minimap_info_med.alo</Event_Model_Name>
+		<Event_Model_Scale>0.002</Event_Model_Scale>
+		<Event_Duration>1.0</Event_Duration>
+		<Event_Single_Instance>No</Event_Single_Instance>
+	</Radar_Map_Event>
+
+	<Radar_Map_Event Name="Game_Event_Info_High_Importance">
+		<Event_Model_Name>p_minimap_info_high.alo</Event_Model_Name>
+		<Event_Model_Scale>0.002</Event_Model_Scale>
+		<Event_Duration>1.0</Event_Duration>
+		<Event_Single_Instance>No</Event_Single_Instance>
+	</Radar_Map_Event>
+	
+	<Radar_Map_Event Name="Game_Event_Info_High_Importance_Persistent">
+		<Event_Model_Name>p_minimap_info_high_persistent.alo</Event_Model_Name>
+		<Event_Model_Scale>0.002</Event_Model_Scale>
+		<Event_Persistent>Yes</Event_Persistent>
+		<Event_Single_Instance>No</Event_Single_Instance>
+	</Radar_Map_Event>
+
+   <Radar_Map_Event Name="Default_MP_Beacon_Placement">
+      <Event_Model_Name>p_minimap_friendly_rally_color.alo</Event_Model_Name>
+      <Event_Model_Scale>0.002</Event_Model_Scale>
+      <Event_Duration>6.0</Event_Duration>
+      <Should_Colorize> Yes </Should_Colorize>
+   </Radar_Map_Event>
+		
+</RadarMapEvents>
+

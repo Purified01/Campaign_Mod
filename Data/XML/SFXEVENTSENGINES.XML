@@ -1,0 +1,1011 @@
+<?xml version="1.0"?>
+
+<SFXEvents>
+
+	<!-- ======================================= -->
+	<!--  		    MILITARY ENGINE SFX		 	 -->
+	<!-- ======================================= -->
+
+		<SFXEvent Name="SFX_Military_Tracked_Idle_Engine_Loop">
+			<Use_Preset>Preset_EGL_Idle</Use_Preset>
+			<Samples>EGL_Tank_Idle_1.wav</Samples>
+		</SFXEvent>
+   
+        <SFXEvent Name="SFX_Military_Tracked_Moving_Engine_Loop">
+            <Use_Preset>Preset_EGL</Use_Preset>
+            <Samples>EGL_Tank_Moving_1.wav</Samples>
+        </SFXEvent>
+
+        <SFXEvent Name="SFX_Military_Tracked_Moving_Water_Engine_Loop">
+            <Use_Preset>Preset_EGL</Use_Preset>
+            <Samples>EGL_Tank_Moving_1.wav</Samples>
+        </SFXEvent>
+
+        <SFXEvent Name="SFX_Military_Tank_Start">
+            <Use_Preset>Preset_EGL_INSANE</Use_Preset>
+            <Samples>EGB_Tank_Start_2.wav</Samples>
+        </SFXEvent>
+
+
+
+
+
+
+
+		<SFXEvent Name="SFX_Military_Hero_Tracked_Idle_Engine_Loop">
+			<Use_Preset>Preset_EGL_Idle</Use_Preset>
+			<Samples>EGL_Hero_Tank_Idle_1.wav</Samples>
+		</SFXEvent>
+   
+        <SFXEvent Name="SFX_Military_Hero_Tracked_Moving_Engine_Loop">
+            <Use_Preset>Preset_EGL</Use_Preset>
+            <Samples>EGL_Hero_Tank_Moving_1.wav</Samples>
+        </SFXEvent>
+
+
+
+
+
+		<SFXEvent Name="SFX_Military_Hummer_Idle_Engine_Loop">
+			<Use_Preset>Preset_EGL_Idle</Use_Preset>
+			<Samples>EGL_Military_Hummer_Idle.wav</Samples>
+		</SFXEvent>
+   
+      <SFXEvent Name="SFX_Military_Hummer_Moving_Engine_Loop">
+          <Use_Preset>Preset_EGL</Use_Preset>
+          <Samples>EGL_Military_Hummer_Moving.wav</Samples>
+      </SFXEvent>
+
+
+
+
+
+
+		<SFXEvent Name="SFX_Military_Apache_Idle_Engine_Loop">
+			<Use_Preset>Preset_EGL_Idle</Use_Preset>
+			<Samples>EGL_Military_Apache.wav</Samples>
+		</SFXEvent>
+   
+      <SFXEvent Name="SFX_Military_Apache_Moving_Engine_Loop">
+          <Use_Preset>Preset_EGL</Use_Preset>
+          <Samples>EGL_Military_Apache.wav</Samples>
+      </SFXEvent>
+
+
+
+
+
+
+        <SFXEvent Name="SFX_Military_Dragonfly_FlyBy">
+            <Use_Preset>Preset_EGB</Use_Preset>
+            <Samples>EGB_Dragonfly_1.wav</Samples>
+        </SFXEvent>
+
+        <SFXEvent Name="SFX_Military_Dragonfly_Idle_Engine_Loop">
+            <Use_Preset>Preset_EGL_Idle</Use_Preset>
+            <Samples>EGL_Dragonfly_1.wav</Samples>
+        </SFXEvent>
+
+        <SFXEvent Name="SFX_Military_Dragonfly_Engine_Loop">
+            <Use_Preset>Preset_EGL</Use_Preset>
+            <Samples>EGL_Dragonfly_1.wav</Samples>
+        </SFXEvent>
+
+
+
+
+
+        <SFXEvent Name="SFX_Military_SRT_Engine_Loop">
+            <Use_Preset>Preset_EGL</Use_Preset>
+            <Samples>EGL_Jet_Loop_1.wav</Samples>
+        </SFXEvent>
+
+        <SFXEvent Name="SFX_Military_SRT_FlyBy_Fast">        	<!-- Cinematic use only-->
+            <Use_Preset>Preset_EGL_INSANE</Use_Preset>
+            <Samples>EGB_Jet_By_1.wav</Samples>
+            <Min_Volume>80</Min_Volume>
+    		<Max_Volume>80</Max_Volume>
+        </SFXEvent>
+
+        <SFXEvent Name="SFX_Military_SRT_FlyBy_Start">        	<!-- Cinematic use only-->
+            <Use_Preset>Preset_EGL_INSANE</Use_Preset>
+            <Samples>EGB_Jet_By_5.wav</Samples>
+        </SFXEvent>
+
+        <SFXEvent Name="SFX_Military_SRT_FlyBy">        	<!-- Cinematic use only-->
+            <Use_Preset>Preset_EGB_Large</Use_Preset>
+            <Samples>EGB_Jet_By_4.wav</Samples>
+        </SFXEvent>
+
+		  <SFXEvent Name="SFX_Military_SRT_FlyBy_TEMP_2D">        	<!-- Cinematic use only-->
+				<Use_Preset>Preset_EGB_Large</Use_Preset>
+				<Samples>EGB_Jet_By_4.wav</Samples>
+				<Is_2D> Yes </Is_2D>
+				<Is_3D> No </Is_3D>
+				<Min_Volume>80</Min_Volume>
+				<Max_Volume>80</Max_Volume>
+		  </SFXEvent>
+
+
+
+        <SFXEvent Name="SFX_Military_SRT_Takeoff">   		<!-- Cinematic use only-->
+            <Use_Preset>Preset_EGB_Large</Use_Preset>
+            <Samples>EGB_Jet_Takeoff_1.wav</Samples>
+        </SFXEvent>
+
+        <SFXEvent Name="SFX_Military_SRT_Land">     		<!-- Cinematic use only-->
+            <Use_Preset>Preset_EGB_Large</Use_Preset>
+            <Samples>EGB_Jet_Land_1.wav</Samples>
+        </SFXEvent>
+
+        <SFXEvent Name="SFX_Military_SRT_Door_Start">
+            <Use_Preset>Preset_EGB</Use_Preset>
+            <Samples>EGB_Jet_Door_Start_1.wav</Samples>
+        </SFXEvent>
+
+        <SFXEvent Name="SFX_Military_SRT_Door_Open">
+            <Use_Preset>Preset_EGB</Use_Preset>
+            <Samples>EGB_Jet_Door_Open_1.wav</Samples>
+        </SFXEvent>
+
+        <SFXEvent Name="SFX_Military_SRT_Door_Stop">
+            <Use_Preset>Preset_EGB</Use_Preset>
+    		<Samples>EGB_Jet_Door_Stop_1.wav</Samples>
+        </SFXEvent>
+
+
+
+
+
+        <SFXEvent Name="SFX_Military_Dropship_Takeoff">       	<!-- Cinematic use only-->
+            <Use_Preset>Preset_EGB_Large</Use_Preset>
+            <Samples>EGB_Jet_Takeoff_2.wav</Samples>
+        </SFXEvent>
+
+        <SFXEvent Name="SFX_Military_Dropship_Land">           		<!-- Cinematic use only-->
+            <Use_Preset>Preset_EGB_Large</Use_Preset>
+            <Samples>EGB_Jet_Land_2.wav</Samples>
+        </SFXEvent>
+
+        <SFXEvent Name="SFX_Military_Dropship_FlyBy_Fast">        	<!-- Cinematic use only-->
+            <Use_Preset>Preset_EGB_Large</Use_Preset>
+    		<Samples>EGB_Jet_By_1.wav</Samples>
+            <Min_Pitch>130</Min_Pitch>
+            <Max_Pitch>130</Max_Pitch>
+        </SFXEvent>
+
+
+
+
+
+		<SFXEvent Name="SFX_Military_Small_Turret_Loop">
+			<Use_Preset>Preset_EGL</Use_Preset>
+			<Samples>EGL_Turret_Loop_1.wav</Samples>
+		</SFXEvent>
+
+		<SFXEvent Name="SFX_Military_Medium_Turret_Loop">
+			<Use_Preset>Preset_EGL</Use_Preset>
+			<Samples>EGL_Turret_Loop_1.wav</Samples>
+		</SFXEvent>
+
+		<SFXEvent Name="SFX_Military_Large_Turret_Loop">
+			<Use_Preset>Preset_EGL</Use_Preset>
+			<Samples>EGL_Turret_Loop_1.wav</Samples>
+		</SFXEvent>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- ======================================= -->
+	<!--  		    NOVUS ENGINE SFX		 	 -->
+	<!-- ======================================= -->
+
+	<SFXEvent Name="SFX_Novus_Amplifier_Idle_Engine_Loop">
+		<Use_Preset>Preset_EGL_Idle</Use_Preset>
+		<Samples>EGL_Amplifier_1.wav</Samples>
+	</SFXEvent>
+
+	<SFXEvent Name="SFX_Novus_Amplifier_Moving_Engine_Loop">
+		<Use_Preset>Preset_EGL</Use_Preset>
+		<Samples>EGL_Amplifier_1.wav</Samples>
+	</SFXEvent>
+
+
+
+
+
+	<SFXEvent Name="SFX_Novus_Antimatter_Idle_Engine_Loop">
+		<Use_Preset>Preset_EGL_Idle</Use_Preset>
+		<Samples>EGL_Antimatter_Tank_1.wav</Samples>
+	</SFXEvent>
+
+	<SFXEvent Name="SFX_Novus_Antimatter_Moving_Engine_Loop">
+		<Use_Preset>Preset_EGL</Use_Preset>
+		<Samples>EGL_Antimatter_Tank_1.wav</Samples>
+	</SFXEvent>
+
+
+
+
+	<SFXEvent Name="SFX_Novus_Collector_Idle_Engine_Loop">
+		<Use_Preset>Preset_EGL_Idle</Use_Preset>
+		<Samples>EGL_Collector_1.wav</Samples>
+	</SFXEvent>
+
+	<SFXEvent Name="SFX_Novus_Collector_Moving_Engine_Loop">
+		<Use_Preset>Preset_EGL</Use_Preset>
+		<Samples>EGL_Collector_1.wav</Samples>
+	</SFXEvent>
+
+
+
+
+
+	<SFXEvent Name="SFX_Novus_Corruptor_Idle_Engine_Loop">
+		<Use_Preset>Preset_EGL_Idle</Use_Preset>
+		<Samples>EGL_Corruptor_1.wav</Samples>
+	</SFXEvent>
+
+	<SFXEvent Name="SFX_Novus_Corruptor_Moving_Engine_Loop">
+		<Use_Preset>Preset_EGL</Use_Preset>
+		<Samples>EGL_Corruptor_1.wav</Samples>
+	</SFXEvent>
+
+	<SFXEvent Name="SFX_Novus_Corruptor_Take_Off">
+	  <Use_Preset>Preset_EGB</Use_Preset>
+	  <Samples>EGB_Novus_Corruptor_Take_Off_1.wav</Samples>
+	</SFXEvent>
+
+	<SFXEvent Name="SFX_Novus_Corruptor_Landing">
+	  <Use_Preset>Preset_EGB</Use_Preset>
+	  <Samples>EGB_Novus_Corruptor_Landing_1.wav</Samples>
+	</SFXEvent>
+
+
+
+
+	<SFXEvent Name="SFX_Novus_Variant_Idle_Engine_Loop">
+		<Use_Preset>Preset_EGL_Idle</Use_Preset>
+		<Samples>EGL_Antimatter_Tank_1.wav</Samples>
+	</SFXEvent>
+
+	<SFXEvent Name="SFX_Novus_Variant_Moving_Engine_Loop">
+		<Use_Preset>Preset_EGL</Use_Preset>
+		<Samples>EGL_Antimatter_Tank_1.wav</Samples>
+	</SFXEvent>
+
+
+
+
+
+	<SFXEvent Name="SFX_Novus_Dervish_FlyBy">
+	  <Use_Preset>Preset_EGB</Use_Preset>
+	  <Samples>EGB_Dervish_By_1.wav</Samples>
+	</SFXEvent>
+
+	<SFXEvent Name="SFX_Novus_Dervish_Sonic_FlyBy">
+	  <Use_Preset>Preset_EGB</Use_Preset>
+	  <Samples>EGB_Dervish_Sonic_By_1.wav</Samples>
+	</SFXEvent>
+
+	<SFXEvent Name="SFX_Novus_Dervish_Spin_Attack">
+	  <Use_Preset>Preset_GUN_HERO</Use_Preset>
+	  <Samples>EGB_Dervish_Spin_Attack_1.wav</Samples>
+	</SFXEvent>
+
+	<SFXEvent Name="SFX_Novus_Dervish_Idle_Engine_Loop">
+		<Use_Preset>Preset_EGL_Idle</Use_Preset>
+		<Samples>EGL_Dervish_2.wav</Samples>
+	</SFXEvent>
+
+	<SFXEvent Name="SFX_Novus_Dervish_Moving_Engine_Loop">
+	  <Use_Preset>Preset_EGL</Use_Preset>
+	  <Samples>EGL_Dervish_2.wav</Samples>
+	</SFXEvent>
+
+
+
+
+
+
+
+	<SFXEvent Name="SFX_Novus_Vertigo_FlyBy">
+	  <Use_Preset>Preset_EGB</Use_Preset>
+	  <Samples>EGB_Novus_Vertigo_By_1.wav EGB_Novus_Vertigo_By_2.wav</Samples>
+	</SFXEvent>
+
+	<SFXEvent Name="SFX_Novus_Vertigo_Idle_Engine_Loop">
+		<Use_Preset>Preset_EGL_Idle</Use_Preset>
+		<Samples>EGL_Vertigo_1.wav</Samples>
+	</SFXEvent>
+
+	<SFXEvent Name="SFX_Novus_Vertigo_Moving_Engine_Loop">
+	  <Use_Preset>Preset_EGL</Use_Preset>
+	  <Samples>EGL_Vertigo_1.wav</Samples>
+	</SFXEvent>
+
+
+
+
+
+
+
+
+	<SFXEvent Name="SFX_Novus_Mech_FlyBy">
+	  <Use_Preset>Preset_EGB</Use_Preset>
+	  <Samples>EGB_Mech_Take_Off.wav</Samples>
+	</SFXEvent>
+
+	<SFXEvent Name="SFX_Novus_Mech_Idle_Engine_Loop">
+		<Use_Preset>Preset_EGL_Idle</Use_Preset>
+		<Samples>EGL_Mech_1.wav</Samples>
+	</SFXEvent>
+
+	<SFXEvent Name="SFX_Novus_Mech_Moving_Engine_Loop">
+		<Use_Preset>Preset_EGL</Use_Preset>
+		<Samples>EGL_Mech_1.wav</Samples>
+	</SFXEvent>
+
+
+
+
+
+
+
+	<SFXEvent Name="SFX_Novus_Flow_Start">
+	  <Use_Preset>Preset_EGB</Use_Preset>
+	  <Samples>EGB_Novus_Flow_Start_1.wav</Samples>
+	</SFXEvent>
+
+	<SFXEvent Name="SFX_Novus_Flow_Loop">
+		<Use_Preset>Preset_EGL_Idle</Use_Preset>
+		<Samples>EGL_Novus_Flow_Loop_1.wav</Samples>
+	</SFXEvent>
+
+	<SFXEvent Name="SFX_Novus_Flow_Stop">
+	  <Use_Preset>Preset_EGB</Use_Preset>
+	  <Samples>EGB_Novus_Flow_Stop_1.wav</Samples>
+	</SFXEvent>
+
+
+
+
+
+	<SFXEvent Name="SFX_Novus_Reflex_FlyBy">
+	  <Use_Preset>Preset_EGB</Use_Preset>
+	  <Samples>EGB_Reflex_1.wav</Samples>
+	</SFXEvent>
+
+	<SFXEvent Name="SFX_Novus_Reflex_Moving_Engine_Loop">
+		<Use_Preset>Preset_EGL</Use_Preset>
+		<Samples>EGL_Mech_1.wav</Samples>
+      <Min_Pitch>150</Min_Pitch>
+      <Max_Pitch>150</Max_Pitch>
+	</SFXEvent>
+
+
+
+
+		<SFXEvent Name="SFX_Novus_Small_Turret_Loop">
+			<Use_Preset>Preset_EGL</Use_Preset>
+			<Samples>EGL_Turret_Loop_1.wav</Samples>
+		</SFXEvent>
+
+		<SFXEvent Name="SFX_Novus_Medium_Turret_Loop">
+			<Use_Preset>Preset_EGL</Use_Preset>
+			<Samples>EGL_Turret_Loop_1.wav</Samples>
+		</SFXEvent>
+
+		<SFXEvent Name="SFX_Novus_Large_Turret_Loop">
+			<Use_Preset>Preset_EGL</Use_Preset>
+			<Samples>EGL_Turret_Loop_1.wav</Samples>
+		</SFXEvent>
+
+
+
+
+
+
+	  <SFXEvent Name="SFX_Novus_Retreat_Transport_Idle_Engine_Loop">
+		 <Use_Preset>Preset_EGL_Large_Idle</Use_Preset>
+		 <Samples>EGL_Novus_Retreat_Transport_1.wav</Samples>
+	  </SFXEvent>
+
+	  <SFXEvent Name="SFX_Novus_Retreat_Transport_Moving_Engine_Loop">
+		 <Use_Preset>Preset_EGL_Large</Use_Preset>
+		 <Samples>EGL_Novus_Retreat_Transport_1.wav</Samples>
+      </SFXEvent>
+
+	  <SFXEvent Name="SFX_Novus_Retreat_Transport_Fly_By">
+		 <Use_Preset>Preset_EGB_Large</Use_Preset>
+		 <Samples>EGB_Novus_Retreat_Transport_1.wav</Samples>
+      </SFXEvent>
+
+
+
+
+
+	<!-- ======================================= -->
+	<!--  		    ALIEN ENGINE SFX		 	 -->
+	<!-- ======================================= -->
+
+	  <SFXEvent Name="SFX_Alien_Meteor_Start">
+		<Use_Preset>Preset_EXP_Large</Use_Preset>
+		<Samples>EGB_Meteor_Start_1.wav</Samples>
+      </SFXEvent>
+
+      <SFXEvent Name="SFX_Alien_Meteor_By">
+		<Use_Preset>Preset_EGB_Large</Use_Preset>
+		<Samples>EGB_Meteor_By_2.wav EGB_Meteor_By_3.wav</Samples>
+	  </SFXEvent>
+
+
+
+	  <SFXEvent Name="SFX_Alien_Tank_Idle_Engine_Loop">
+		 <Use_Preset>Preset_EGL_Idle</Use_Preset>
+		 <Samples>EGL_Alien_Tank_Moving.wav</Samples>
+	  </SFXEvent>
+
+	  <SFXEvent Name="SFX_Alien_Tank_Moving_Engine_Loop">
+		 <Use_Preset>Preset_EGL</Use_Preset>
+		 <Samples>EGL_Alien_Tank_Moving.wav</Samples>
+      </SFXEvent>
+
+	  <SFXEvent Name="SFX_Alien_Tank_Take_Off">
+		 <Use_Preset>Preset_EGB</Use_Preset>
+		 <Samples>EGB_Alien_Tank_Take_Off_1.wav</Samples>
+	  </SFXEvent>
+
+	  <SFXEvent Name="SFX_Alien_Tank_Landing">
+		 <Use_Preset>Preset_EGB</Use_Preset>
+		 <Samples>EGB_Alien_Tank_Landing_1.wav</Samples>
+	  </SFXEvent>
+
+
+
+
+
+	  <SFXEvent Name="SFX_Alien_Nufai_Idle_Engine_Loop">
+		 <Use_Preset>Preset_EGL_Idle</Use_Preset>
+		 <Samples>EGL_Alien_Tank_Moving.wav</Samples>
+	  </SFXEvent>
+
+	  <SFXEvent Name="SFX_Alien_Nufai_Moving_Engine_Loop">
+		 <Use_Preset>Preset_EGL</Use_Preset>
+		 <Samples>EGL_Alien_Tank_Moving.wav</Samples>
+      </SFXEvent>
+
+	  <SFXEvent Name="SFX_Alien_Nufai_Take_Off">
+		 <Use_Preset>Preset_EGB</Use_Preset>
+		 <Samples>EGB_Alien_Tank_Take_Off_1.wav</Samples>
+	  </SFXEvent>
+
+	  <SFXEvent Name="SFX_Alien_Nufai_Landing">
+		 <Use_Preset>Preset_EGB</Use_Preset>
+		 <Samples>EGB_Alien_Tank_Landing_1.wav</Samples>
+	  </SFXEvent>
+
+
+
+
+
+	  <SFXEvent Name="SFX_Alien_Gatherer_Idle_Engine_Loop">
+		 <Use_Preset>Preset_EGL_Idle</Use_Preset>
+		 <Samples>EGL_Alien_Gatherer_Idle_1.wav</Samples>
+	  </SFXEvent>
+
+	  <SFXEvent Name="SFX_Alien_Gatherer_Moving_Engine_Loop">
+		 <Use_Preset>Preset_EGL</Use_Preset>
+		 <Samples>EGL_Alien_Gatherer_Moving_1.wav</Samples>
+     </SFXEvent>
+
+	  <SFXEvent Name="SFX_Alien_Gatherer_Absorb">
+		 <Use_Preset>Preset_EGB</Use_Preset>
+		 <Samples>EGB_Alien_Gatherer_Absorb_1.wav EGB_Alien_Gatherer_Absorb_2.wav EGB_Alien_Gatherer_Absorb_3.wav EGB_Alien_Gatherer_Absorb_4.wav EGB_Alien_Gatherer_Absorb_5.wav EGB_Alien_Gatherer_Absorb_6.wav</Samples>
+	  </SFXEvent>
+
+
+
+
+	  <SFXEvent Name="SFX_Alien_Cylinder_Idle_Engine_Loop">
+		 <Use_Preset>Preset_EGL_Idle</Use_Preset>
+		 <Samples>EGL_Alien_Cylinder_4.wav</Samples>
+	  </SFXEvent>
+
+	  <SFXEvent Name="SFX_Alien_Cylinder_Moving_Engine_Loop">
+		 <Use_Preset>Preset_EGL</Use_Preset>
+		 <Samples>EGL_Alien_Cylinder_4.wav</Samples>
+      </SFXEvent>
+
+	  <SFXEvent Name="SFX_Alien_Cylinder_Fly_By">
+		 <Use_Preset>Preset_EGB</Use_Preset>
+		 <Samples>EGB_Alien_Cylinder_Fly_By_1.wav</Samples>
+      </SFXEvent>
+
+
+
+
+
+
+	  <SFXEvent Name="SFX_Alien_Collector_Idle_Engine_Loop">
+		 <Use_Preset>Preset_EGL_Idle</Use_Preset>
+		 <Samples>EGL_Alien_Cylinder_1.wav</Samples>
+	  </SFXEvent>
+
+	  <SFXEvent Name="SFX_Alien_Collector_Moving_Engine_Loop">
+		 <Use_Preset>Preset_EGL</Use_Preset>
+		 <Samples>EGL_Alien_Cylinder_1.wav</Samples>
+      </SFXEvent>
+
+
+
+
+
+
+	  <SFXEvent Name="SFX_Alien_Defiler_Idle_Engine_Loop">
+		 <Use_Preset>Preset_EGL_Idle</Use_Preset>
+		 <Samples>EGL_Alien_Defiler_1.wav</Samples>
+	  </SFXEvent>
+
+	  <SFXEvent Name="SFX_Alien_Defiler_Moving_Engine_Loop">
+		 <Use_Preset>Preset_EGL</Use_Preset>
+		 <Samples>EGL_Alien_Defiler_1.wav</Samples>
+      </SFXEvent>
+
+
+
+
+
+
+	  <SFXEvent Name="SFX_Alien_Saucer_Idle_Engine_Loop">
+		 <Use_Preset>Preset_EGL_Idle</Use_Preset>
+		 <Samples>EGL_Alien_Saucer_1.wav</Samples>
+	  </SFXEvent>
+
+	  <SFXEvent Name="SFX_Alien_Saucer_Moving_Engine_Loop">
+		 <Use_Preset>Preset_EGL</Use_Preset>
+		 <Samples>EGL_Alien_Saucer_1.wav</Samples>
+      </SFXEvent>
+
+	  <SFXEvent Name="SFX_Alien_Saucer_Fly_By">
+		 <Use_Preset>Preset_EGB</Use_Preset>
+		 <Samples>EGB_Alien_Ship_Fly_By_1.wav</Samples>
+      </SFXEvent>
+
+		<SFXEvent Name="SFX_Alien_Saucer_Fly_By_TEMP_2D">
+		  <Use_Preset>Preset_EGB</Use_Preset>
+		  <Samples>EGB_Alien_Ship_Fly_By_1.wav</Samples>
+		  <Is_2D> Yes </Is_2D>
+		  <Is_3D> No </Is_3D>
+		  <Min_Volume>80</Min_Volume>
+		  <Max_Volume>80</Max_Volume>
+		 </SFXEvent>
+
+
+
+
+
+
+
+
+
+
+	  <SFXEvent Name="SFX_Alien_Retreat_Transport_Idle_Engine_Loop">
+		 <Use_Preset>Preset_EGL_Large_Idle</Use_Preset>
+		 <Samples>EGL_Alien_Retreat_Transport_1.wav</Samples>
+	  </SFXEvent>
+
+	  <SFXEvent Name="SFX_Alien_Retreat_Transport_Moving_Engine_Loop">
+		 <Use_Preset>Preset_EGL_Large</Use_Preset>
+		 <Samples>EGL_Alien_Retreat_Transport_1.wav</Samples>
+      </SFXEvent>
+
+	  <SFXEvent Name="SFX_Alien_Retreat_Transport_Fly_By">
+		 <Use_Preset>Preset_EGB_Large</Use_Preset>
+		 <Samples>EGB_Alien_Retreat_Transport_1.wav</Samples>
+      </SFXEvent>
+
+	  <SFXEvent Name="SFX_Alien_Retreat_Transport_Long_Fly_By">
+		 <Use_Preset>Preset_EGB_Large</Use_Preset>
+		 <Samples>EGB_Alien_Retreat_Transport_Long_1.wav</Samples>
+      </SFXEvent>
+
+		<SFXEvent Name="SFX_Alien_Retreat_Transport_Fly_By_TEMP_2D">
+		  <Use_Preset>Preset_EGB_Large</Use_Preset>
+		  <Samples>EGB_Alien_Retreat_Transport_1.wav</Samples>
+		  <Is_2D> Yes </Is_2D>
+		  <Is_3D> No </Is_3D>
+		  <Min_Volume>80</Min_Volume>
+		  <Max_Volume>80</Max_Volume>
+		</SFXEvent>
+
+
+
+
+
+
+
+
+
+
+
+
+	  <SFXEvent Name="SFX_Alien_Glyph_Carver_Idle_Engine_Loop">
+		 <Use_Preset>Preset_EGL_Idle</Use_Preset>
+		 <Samples>EGL_Alien_Glyph_Carver_1.wav</Samples>
+	  </SFXEvent>
+
+	  <SFXEvent Name="SFX_Alien_Glyph_Carver_Moving_Engine_Loop">
+		 <Use_Preset>Preset_EGL</Use_Preset>
+		 <Samples>EGL_Alien_Glyph_Carver_1.wav</Samples>
+      </SFXEvent>
+
+
+
+
+
+
+	  <SFXEvent Name="SFX_Alien_Habitat_Idle_Engine_Loop">
+		 <Use_Preset>Preset_EGL</Use_Preset>
+		 <Samples>EGL_Alien_Walker_Moving_3.wav</Samples>
+     </SFXEvent>
+
+	  <SFXEvent Name="SFX_Alien_Habitat_Moving_Engine_Loop">
+		 <Use_Preset>Preset_EGL</Use_Preset>
+		 <Samples>EGL_Alien_Walker_Moving_3.wav</Samples>
+     </SFXEvent>
+
+
+
+	  <SFXEvent Name="SFX_Alien_Assembly_Idle_Engine_Loop">
+		 <Use_Preset>Preset_EGL</Use_Preset>
+		 <Samples>EGL_Alien_Walker_Moving.wav</Samples>
+     </SFXEvent>
+
+	  <SFXEvent Name="SFX_Alien_Assembly_Moving_Engine_Loop">
+		 <Use_Preset>Preset_EGL</Use_Preset>
+		 <Samples>EGL_Alien_Walker_Moving.wav</Samples>
+     </SFXEvent>
+
+
+
+	  <SFXEvent Name="SFX_Alien_Science_Idle_Engine_Loop">
+		 <Use_Preset>Preset_EGL</Use_Preset>
+		 <Samples>EGL_Alien_Walker_Moving_2.wav</Samples>
+     </SFXEvent>
+
+	  <SFXEvent Name="SFX_Alien_Science_Moving_Engine_Loop">
+		 <Use_Preset>Preset_EGL</Use_Preset>
+		 <Samples>EGL_Alien_Walker_Moving_2.wav</Samples>
+     </SFXEvent>
+
+
+
+	  <SFXEvent Name="SFX_Alien_Walker_Random_Breath">
+          <Use_Preset>Preset_EGB_Large</Use_Preset>
+          <Samples> Alien_Walker_Breath.wav</Samples>
+      </SFXEvent>
+
+	  <SFXEvent Name="SFX_Alien_Walker_Health_Low">
+          <Use_Preset>Preset_EGB_Large</Use_Preset>
+          <Samples> Alien_Walker_Health_Low.wav</Samples>
+      </SFXEvent>
+
+      <SFXEvent Name="SFX_Alien_Walker_Announce">
+          <Use_Preset>Preset_EGB_Large</Use_Preset>
+          <Samples> Alien_Walker_Announce_2.wav</Samples>
+      </SFXEvent>
+
+      <SFXEvent Name="SFX_Alien_Walker_Announce_2">
+          <Use_Preset>Preset_EGB_Large</Use_Preset>
+          <Samples> Alien_Walker_Announce_3A.wav</Samples>
+      </SFXEvent>
+
+	  <SFXEvent Name="SFX_Alien_Walker_Fly_By">
+		 <Use_Preset>Preset_EGB_Large</Use_Preset>
+		 <Samples>EGB_Alien_Walker_Fly_By_1.wav</Samples>
+      </SFXEvent>
+
+		<SFXEvent Name="SFX_Alien_Walker_Fly_By_TEMP_2D">
+		  <Use_Preset>Preset_EGB_Large</Use_Preset>
+		  <Samples>EGB_Alien_Walker_Fly_By_1.wav</Samples>
+		  <Is_2D> Yes </Is_2D>
+		  <Is_3D> No </Is_3D>
+		  <Min_Volume>80</Min_Volume>
+		  <Max_Volume>80</Max_Volume>
+		 </SFXEvent>
+
+
+	  <SFXEvent Name="SFX_Alien_Walker_Steam_Short">
+		 <Use_Preset>Preset_EGB_Large</Use_Preset>
+		 <Samples>Steam_1.wav Steam_2.wav</Samples>
+      </SFXEvent>
+
+	  <SFXEvent Name="SFX_Alien_Walker_Steam_Long">
+		 <Use_Preset>Preset_EGB_Large</Use_Preset>
+		 <Samples>Steam_3.wav</Samples>
+      </SFXEvent>
+
+
+
+
+
+
+	  <SFXEvent Name="SFX_Alien_Small_Turret_Loop">
+		 <Use_Preset>Preset_EGL</Use_Preset>
+		 <Samples>EGL_Alien_Medium_Turret_1.wav</Samples>
+      </SFXEvent>
+
+	  <SFXEvent Name="SFX_Alien_Medium_Turret_Loop">
+		 <Use_Preset>Preset_EGL</Use_Preset>
+		 <Samples>EGL_Alien_Medium_Turret_1.wav</Samples>
+      </SFXEvent>
+
+	  <SFXEvent Name="SFX_Alien_Large_Turret_Loop">
+		 <Use_Preset>Preset_EGL</Use_Preset>
+		 <Samples>EGL_Alien_Large_Turret_1.wav</Samples>
+      </SFXEvent>
+
+
+
+
+
+	  <SFXEvent Name="SFX_Alien_Orlok_Idle_Engine_Loop">
+		 <Use_Preset>Preset_EGL_Idle</Use_Preset>
+		 <Samples>EGL_Alien_Orlok_1.wav</Samples>
+	  </SFXEvent>
+
+	  <SFXEvent Name="SFX_Alien_Orlok_Moving_Engine_Loop">
+		 <Use_Preset>Preset_EGL</Use_Preset>
+		 <Samples>EGL_Alien_Orlok_1.wav</Samples>
+         <Min_Pitch>70</Min_Pitch>
+         <Max_Pitch>70</Max_Pitch>
+      </SFXEvent>
+
+	  <SFXEvent Name="SFX_Alien_Orlok_Fly_By">
+		 <Use_Preset>Preset_EGB</Use_Preset>
+		 <Samples>EGB_Alien_Orlok_1.wav EGB_Alien_Orlok_2.wav EGB_Alien_Orlok_3.wav EGB_Alien_Orlok_4.wav</Samples>
+      </SFXEvent>
+
+
+
+
+	  <SFXEvent Name="SFX_Alien_Descolator_Idle_Engine_Loop">
+		 <Use_Preset>Preset_EGL_Idle</Use_Preset>
+		 <Samples>EGL_Alien_Descolator_1.wav</Samples>
+	  </SFXEvent>
+
+
+
+
+	<!-- ======================================= -->
+	<!--  		    MASARI ENGINE SFX		 	 -->
+	<!-- ======================================= -->
+
+
+	  <SFXEvent Name="SFX_Masari_Small_Turret_Loop">
+		 <Use_Preset>Preset_EGL</Use_Preset>
+		 <Samples>EGL_Masari_Medium_Turret_1.wav</Samples>
+      </SFXEvent>
+
+	  <SFXEvent Name="SFX_Masari_Medium_Turret_Loop">
+		 <Use_Preset>Preset_EGL</Use_Preset>
+		 <Samples>EGL_Masari_Medium_Turret_1.wav</Samples>
+      </SFXEvent>
+
+	  <SFXEvent Name="SFX_Masari_Large_Turret_Loop">
+		 <Use_Preset>Preset_EGL</Use_Preset>
+		 <Samples>EGL_Masari_Large_Turret_1.wav</Samples>
+      </SFXEvent>
+
+
+
+
+
+	  <SFXEvent Name="SFX_Masari_Fire_Idle_Engine_Loop">
+		 <Use_Preset>Preset_EGL_Idle</Use_Preset>
+		 <Samples>EGL_Masari_Fire_Fly_1.wav</Samples>
+	  </SFXEvent>
+
+	  <SFXEvent Name="SFX_Masari_Fire_Moving_Engine_Loop">
+		 <Use_Preset>Preset_EGL</Use_Preset>
+		 <Samples>EGL_Masari_Fire_Fly_1.wav</Samples>
+     </SFXEvent>
+
+
+
+
+
+	  <SFXEvent Name="SFX_Masari_Ice_Idle_Engine_Loop">
+		 <Use_Preset>Preset_EGL_Idle</Use_Preset>
+		 <Samples>EGL_Masari_Ice_Fly_1.wav</Samples>
+	  </SFXEvent>
+
+	  <SFXEvent Name="SFX_Masari_Ice_Moving_Engine_Loop">
+		 <Use_Preset>Preset_EGL</Use_Preset>
+		 <Samples>EGL_Masari_Ice_Fly_1.wav</Samples>
+     </SFXEvent>
+
+
+
+
+
+
+	  <SFXEvent Name="SFX_Masari_Figment_Idle_Engine_Loop">
+		 <Use_Preset>Preset_EGL_Idle</Use_Preset>
+		 <Samples>EGL_Masari_Vehicle_1.wav</Samples>
+	  </SFXEvent>
+
+	  <SFXEvent Name="SFX_Masari_Figment_Moving_Engine_Loop">
+		 <Use_Preset>Preset_EGL</Use_Preset>
+		 <Samples>EGL_Masari_Vehicle_1.wav</Samples>
+     </SFXEvent>
+
+
+
+
+
+	  <SFXEvent Name="SFX_Masari_Sentry_Idle_Engine_Loop">
+		 <Use_Preset>Preset_EGL_Idle</Use_Preset>
+		 <Samples>EGL_Masari_Vehicle_2.wav</Samples>
+	  </SFXEvent>
+
+	  <SFXEvent Name="SFX_Masari_Sentry_Moving_Engine_Loop">
+		 <Use_Preset>Preset_EGL</Use_Preset>
+		 <Samples>EGL_Masari_Vehicle_2.wav</Samples>
+     </SFXEvent>
+
+
+
+
+
+
+
+	  <SFXEvent Name="SFX_Masari_Peacebringer_Idle_Engine_Loop">
+		 <Use_Preset>Preset_EGL_Idle</Use_Preset>
+		 <Samples>EGL_Masari_Vehicle_3.wav</Samples>
+	  </SFXEvent>
+
+	  <SFXEvent Name="SFX_Masari_Peacebringer_Moving_Engine_Loop">
+		 <Use_Preset>Preset_EGL</Use_Preset>
+		 <Samples>EGL_Masari_Vehicle_3.wav</Samples>
+     </SFXEvent>
+
+
+
+
+
+	  <SFXEvent Name="SFX_Masari_Conqueror_Idle_Engine_Loop">
+		 <Use_Preset>Preset_EGL_Idle</Use_Preset>
+		 <Samples>EGL_Masari_Vehicle_3.wav</Samples>
+     </SFXEvent>
+
+	  <SFXEvent Name="SFX_Masari_Conqueror_Moving_Engine_Loop">
+		 <Use_Preset>Preset_EGL</Use_Preset>
+		 <Samples>EGL_Masari_Vehicle_3.wav</Samples>
+     </SFXEvent>
+
+
+
+
+
+
+	  <SFXEvent Name="SFX_Masari_Inquisitor_Moving_Engine_Loop">
+		 <Use_Preset>Preset_EGL_Idle</Use_Preset>
+		 <Samples>EGL_Masari_Ice_Fly_1.wav</Samples>
+     </SFXEvent>
+
+	  <SFXEvent Name="SFX_Masari_Inquisitor_Fly_By">
+		 <Use_Preset>Preset_EGB</Use_Preset>
+		 <Samples>EGB_Masari_Seeker_FlyBy_1.wav EGB_Masari_Seeker_FlyBy_2.wav EGB_Masari_Seeker_FlyBy_3.wav</Samples>
+     </SFXEvent>
+
+
+
+
+	  <SFXEvent Name="SFX_Masari_Skylord_Moving_Engine_Loop">
+		 <Use_Preset>Preset_EGL_Idle</Use_Preset>
+		 <Samples>EGL_Masari_Ice_Fly_1.wav</Samples>
+     </SFXEvent>
+
+	  <SFXEvent Name="SFX_Masari_Skylord_Fly_By">
+		 <Use_Preset>Preset_EGB</Use_Preset>
+		 <Samples>EGB_Masari_Skylord_FlyBy_1.wav EGB_Masari_Skylord_FlyBy_2.wav</Samples>
+     </SFXEvent>
+
+
+
+
+	  <SFXEvent Name="SFX_Masari_Retreat_Transport_Idle_Engine_Loop">
+		 <Use_Preset>Preset_EGL_Large_Idle</Use_Preset>
+		 <Samples>EGL_Masari_Retreat_Transport_1.wav</Samples>
+	  </SFXEvent>
+
+	  <SFXEvent Name="SFX_Masari_Retreat_Transport_Moving_Engine_Loop">
+		 <Use_Preset>Preset_EGL_Large</Use_Preset>
+		 <Samples>EGL_Masari_Retreat_Transport_1.wav</Samples>
+      </SFXEvent>
+
+	  <SFXEvent Name="SFX_Masari_Retreat_Transport_Fly_By">
+		 <Use_Preset>Preset_EGB_Large</Use_Preset>
+		 <Samples>EGB_Masari_Retreat_Transport_1.wav</Samples>
+      </SFXEvent>
+
+
+
+
+
+
+
+	<!-- ======================================= -->
+	<!--  		    MISC PROP ENGINE SFX		 -->
+	<!-- ======================================= -->
+
+	<SFXEvent Name="SFX_Police_Siren_Loop">
+		<Use_Preset>Preset_EGL</Use_Preset>
+		<Samples> EGL_Police_Siren_Loop_1.wav</Samples>
+	</SFXEvent>
+
+	<SFXEvent Name="SFX_Car_Idle_Loop">
+		<Use_Preset>Preset_EGL</Use_Preset>
+		<Samples> EGL_Car_Idle_Loop_1.wav</Samples>
+	</SFXEvent>
+
+	<SFXEvent Name="SFX_Car_Moving_Loop">
+		<Use_Preset>Preset_EGL</Use_Preset>
+		<Samples> EGL_Car_Moving_Loop.wav</Samples>
+	</SFXEvent>
+
+	<SFXEvent Name="SFX_Truck_Idle_Loop">
+		<Use_Preset>Preset_EGL</Use_Preset>
+		<Samples> EGL_Car_Idle_Loop_1.wav</Samples>
+		<Min_Pitch>60</Min_Pitch> 
+		<Max_Pitch>60</Max_Pitch> 
+	</SFXEvent>
+
+	<SFXEvent Name="SFX_Truck_Moving_Loop">
+		<Use_Preset>Preset_EGL</Use_Preset>
+		<Samples> EGL_Car_Moving_Loop.wav</Samples>
+		<Min_Pitch>60</Min_Pitch> 
+		<Max_Pitch>60</Max_Pitch> 
+	</SFXEvent>
+
+	<SFXEvent Name="SFX_Police_Car_Moving_Loop">
+		<Use_Preset>Preset_EGL</Use_Preset>
+		<Samples> EGL_Police_Car_Moving_Loop.wav</Samples>
+	</SFXEvent>
+
+	<SFXEvent Name="SFX_Ambulance_Moving_Loop">
+		<Use_Preset>Preset_EGL</Use_Preset>
+		<Samples> EGL_Ambulance_Moving_Loop.wav</Samples>
+	</SFXEvent>
+
+	<SFXEvent Name="SFX_Tractor_Idle_Engine_Loop">
+		<Use_Preset>Preset_EGL</Use_Preset>
+		<Samples>EGL_Tank_Idle_1.wav</Samples>
+		<Min_Pitch>50</Min_Pitch> 
+		<Max_Pitch>50</Max_Pitch> 
+	</SFXEvent>
+   
+	<SFXEvent Name="SFX_Tractor_Moving_Engine_Loop">
+       <Use_Preset>Preset_EGL</Use_Preset>
+       <Samples>EGL_Tank_Moving_1.wav</Samples>
+		<Min_Pitch>50</Min_Pitch> 
+		<Max_Pitch>50</Max_Pitch> 
+	</SFXEvent>
+
+
+
+
+  	
+
+</SFXEvents>

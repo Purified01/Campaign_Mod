@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Factions.XML specify which RadarMap Filter to create on start for each faction.	-->
+<!-- If there is no filter specified for a faction, the radar will be permanently off  -->
+<!-- for that faction.																						-->
+
+<Radar_Map_Filters>
+
+	<!-- ===================================================================================== -->
+	<!--					Default Radar Map Filter																	 -->
+	<!-- ===================================================================================== -->
+	<X90_Other_Objects Name="Radar_Map_Filter">
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+		<Is_Decoration>No</Is_Decoration>
+		<CategoryMask>Untargetable</CategoryMask>
+
+		<Behavior>
+			MARKER,
+			ATTRIBUTE_DIRECTORY,
+			EFFECT_REGISTRY
+		</Behavior>
+
+		<!-- Each derived radar map filter will specify its own set of attributes -->
+	</X90_Other_Objects>
+
+
+	<!-- ===================================================================================== -->
+	<!--					Alien Radar Map Filter																	 -->
+	<!-- ===================================================================================== -->
+	<X90_Other_Objects Name="Alien_Radar_Map_Filter">
+		<Variant_Of_Existing_Type>Radar_Map_Filter</Variant_Of_Existing_Type>
+
+		<Attributes SubObjectList="Yes">
+			<Radar_Map_Enable>				Yes 	</Radar_Map_Enable>
+			<Radar_Map_Allow_Mouse_Input>	Yes	</Radar_Map_Allow_Mouse_Input>
+         <Radar_Map_Is_Grayscale>      Yes   </Radar_Map_Is_Grayscale>
+			<Radar_Map_Show_Terrain>		Yes 	</Radar_Map_Show_Terrain>
+			<Radar_Map_Show_Passability>	No    </Radar_Map_Show_Passability>
+			<Radar_Map_Show_FOW>				Yes	</Radar_Map_Show_FOW>
+			<Radar_Map_Show_Owned>			Yes	</Radar_Map_Show_Owned>
+			<Radar_Map_Show_Allied>			Yes	</Radar_Map_Show_Allied>
+			<Radar_Map_Show_Enemy>			No		</Radar_Map_Show_Enemy>
+			<Radar_Map_Show_Neutral>		No		</Radar_Map_Show_Neutral>
+			<Radar_Map_Show_Fogged>			No		</Radar_Map_Show_Fogged>
+		</Attributes>
+	</X90_Other_Objects>
+
+
+
+	<!-- ===================================================================================== -->
+	<!--					Novus Radar Map Filter																	 -->
+	<!-- ===================================================================================== -->
+	<X90_Other_Objects Name="Novus_Radar_Map_Filter">
+		<Variant_Of_Existing_Type>Radar_Map_Filter</Variant_Of_Existing_Type>
+
+		<Attributes SubObjectList="Yes">
+			<Radar_Map_Enable>				Yes 	</Radar_Map_Enable>
+			<Radar_Map_Allow_Mouse_Input>	Yes	</Radar_Map_Allow_Mouse_Input>
+         <Radar_Map_Is_Grayscale>      Yes   </Radar_Map_Is_Grayscale>
+         <Radar_Map_Show_Terrain>		Yes	</Radar_Map_Show_Terrain>
+			<Radar_Map_Show_Passability>	No    </Radar_Map_Show_Passability>
+			<Radar_Map_Show_FOW>				Yes	</Radar_Map_Show_FOW>
+			<Radar_Map_Show_Owned>			Yes	</Radar_Map_Show_Owned>
+			<Radar_Map_Show_Allied>			Yes	</Radar_Map_Show_Allied>
+			<Radar_Map_Show_Enemy>			No		</Radar_Map_Show_Enemy>
+			<Radar_Map_Show_Neutral>		No		</Radar_Map_Show_Neutral>
+			<Radar_Map_Show_Fogged>			No		</Radar_Map_Show_Fogged>
+		</Attributes>
+	</X90_Other_Objects>
+
+
+	<!-- ===================================================================================== -->
+	<!--					Masari Radar Map Filter																	 -->
+	<!-- ===================================================================================== -->
+	<X90_Other_Objects Name="Masari_Radar_Map_Filter">
+		<Variant_Of_Existing_Type>Radar_Map_Filter</Variant_Of_Existing_Type>
+
+		<Attributes SubObjectList="Yes">
+			<Radar_Map_Enable>				Yes 	</Radar_Map_Enable>
+			<Radar_Map_Allow_Mouse_Input>	Yes	</Radar_Map_Allow_Mouse_Input>
+         <Radar_Map_Is_Grayscale>      Yes    </Radar_Map_Is_Grayscale>
+         <Radar_Map_Show_Terrain>		Yes 	</Radar_Map_Show_Terrain>
+         <Radar_Map_Show_Passability>	No    </Radar_Map_Show_Passability>
+			<Radar_Map_Show_FOW>				Yes	</Radar_Map_Show_FOW>
+			<Radar_Map_Show_Owned>			Yes	</Radar_Map_Show_Owned>
+			<Radar_Map_Show_Allied>			Yes	</Radar_Map_Show_Allied>
+			<Radar_Map_Show_Enemy>			No		</Radar_Map_Show_Enemy>
+			<Radar_Map_Show_Neutral>		No		</Radar_Map_Show_Neutral>
+			<Radar_Map_Show_Fogged>			No		</Radar_Map_Show_Fogged>
+		</Attributes>
+	</X90_Other_Objects>
+
+
+
+	<!-- ===================================================================================== -->
+	<!--					Military Radar Map Filter																 -->
+	<!-- ===================================================================================== -->
+	<X90_Other_Objects Name="Military_Radar_Map_Filter">
+		<Variant_Of_Existing_Type>Radar_Map_Filter</Variant_Of_Existing_Type>
+
+		<Attributes SubObjectList="Yes">
+			<Radar_Map_Enable>				Yes 	</Radar_Map_Enable>
+			<Radar_Map_Allow_Mouse_Input>	Yes	</Radar_Map_Allow_Mouse_Input>
+         <Radar_Map_Is_Grayscale>      No    </Radar_Map_Is_Grayscale>
+         <Radar_Map_Show_Terrain>		Yes 	</Radar_Map_Show_Terrain>
+         <Radar_Map_Show_Passability>	No    </Radar_Map_Show_Passability>
+			<Radar_Map_Show_FOW>				Yes		</Radar_Map_Show_FOW>
+			<Radar_Map_Show_Owned>			Yes	</Radar_Map_Show_Owned>
+			<Radar_Map_Show_Allied>			Yes	</Radar_Map_Show_Allied>
+			<Radar_Map_Show_Enemy>			Yes		</Radar_Map_Show_Enemy>
+			<Radar_Map_Show_Neutral>		Yes		</Radar_Map_Show_Neutral>
+			<Radar_Map_Show_Fogged>			No		</Radar_Map_Show_Fogged>
+		</Attributes>
+	</X90_Other_Objects>
+
+
+	<!-- ===================================================================================== -->
+	<!--					Default Campaign Radar Map Filter													 -->
+	<!-- ===================================================================================== -->
+	<X90_Other_Objects Name="Default_Campaign_Radar_Map_Filter">
+		<Variant_Of_Existing_Type>Radar_Map_Filter</Variant_Of_Existing_Type>
+
+		<Attributes SubObjectList="Yes">
+			<Radar_Map_Enable>				Yes 	</Radar_Map_Enable>
+			<Radar_Map_Allow_Mouse_Input>	Yes	</Radar_Map_Allow_Mouse_Input>
+         <Radar_Map_Is_Grayscale>      No    </Radar_Map_Is_Grayscale>
+         <Radar_Map_Show_Terrain>		Yes	</Radar_Map_Show_Terrain>
+			<Radar_Map_Show_Passability>	No    </Radar_Map_Show_Passability>
+			<Radar_Map_Show_FOW>				Yes	</Radar_Map_Show_FOW>
+			<Radar_Map_Show_Owned>			Yes	</Radar_Map_Show_Owned>
+			<Radar_Map_Show_Allied>			Yes	</Radar_Map_Show_Allied>
+			<Radar_Map_Show_Enemy>			No	   </Radar_Map_Show_Enemy>
+			<Radar_Map_Show_Neutral>		No	   </Radar_Map_Show_Neutral>
+			<Radar_Map_Show_Fogged>			No 	</Radar_Map_Show_Fogged>
+		</Attributes>
+	</X90_Other_Objects>
+	
+</Radar_Map_Filters>

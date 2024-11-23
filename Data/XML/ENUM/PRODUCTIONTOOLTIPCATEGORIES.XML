@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<EnumDefinition>
+   
+   <!-- 
+         NOTE: the default category value is SELF, that is, the text used for the type when it appears as a production 
+         dependency is its own text (display name) 
+    -->
+   <Ignore> 0 </Ignore> <!-- This category is assigned to objects that must be ignored for dependencies displays (eg. the constructors) -->
+   <Command_Center/>
+   <Structure_Upgrade/>  <!-- This is for upgrades such as the Blade Assembly so that it shows as 'Robotic Assembly's Blade Assembly Upgrade' 
+                              or something of the sort.  As such, its text id depends on the upgrade it belongs to so that it doens't 
+                              need to be set on the factions' file but on the upgrade's tooltip behavior type. The field to add this text 
+                              id is: <Tooltip_Structure_Upgrade_Production_Category_Text> -->
+</EnumDefinition>

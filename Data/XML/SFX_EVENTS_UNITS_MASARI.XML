@@ -1,0 +1,1391 @@
+<?xml version="1.0"?>
+
+<SFXEvents>
+	
+	<SFXEvent Name="Unit_Select_Masari_Altea">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_ALT0101_ENG.wav U000_ALT0102_ENG.wav U000_ALT0103_ENG.wav U000_ALT0104_ENG.wav U000_ALT0105_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_ALT_SELECT_1, TEXT_SFX_ALT_SELECT_2, TEXT_SFX_ALT_SELECT_3, TEXT_SFX_ALT_SELECT_4, TEXT_SFX_ALT_SELECT_5</Text_ID>       
+		<Overlap_Test> Unit_Masari_Altea </Overlap_Test>
+	</SFXEvent>
+<!-- 
+	<SFXEvent Name="Unit_Attack_A_Masari_Altea">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_ALT0201_ENG.wav U000_ALT0202_ENG.wav U000_ALT0203_ENG.wav U000_ALT0204_ENG.wav U000_ALT0205_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_ALT_ATTACK_A_1, TEXT_SFX_ALT_ATTACK_A_2, TEXT_SFX_ALT_ATTACK_A_3, TEXT_SFX_ALT_ATTACK_A_4, TEXT_SFX_ALT_ATTACK_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Altea </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_B_Masari_Altea">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_ALT0301_ENG.wav U000_ALT0302_ENG.wav U000_ALT0303_ENG.wav U000_ALT0304_ENG.wav U000_ALT0305_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_ALT_ATTACK_B_1, TEXT_SFX_ALT_ATTACK_B_2, TEXT_SFX_ALT_ATTACK_B_3, TEXT_SFX_ALT_ATTACK_B_4, TEXT_SFX_ALT_ATTACK_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Masari_Altea </Overlap_Test>
+	</SFXEvent>
+-->
+	<SFXEvent Name="Unit_MOVE_A_Masari_Altea">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_ALT0401_ENG.wav U000_ALT0402_ENG.wav U000_ALT0403_ENG.wav U000_ALT0404_ENG.wav U000_ALT0405_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_ALT_MOVE_A_1, TEXT_SFX_ALT_MOVE_A_2, TEXT_SFX_ALT_MOVE_A_3, TEXT_SFX_ALT_MOVE_A_4, TEXT_SFX_ALT_MOVE_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Altea </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_B_Masari_Altea">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_ALT0501_ENG.wav U000_ALT0502_ENG.wav U000_ALT0503_ENG.wav U000_ALT0504_ENG.wav U000_ALT0505_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_ALT_MOVE_B_1, TEXT_SFX_ALT_MOVE_B_2, TEXT_SFX_ALT_MOVE_B_3, TEXT_SFX_ALT_MOVE_B_4, TEXT_SFX_ALT_MOVE_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Masari_Altea </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_ABILITY_A_Masari_Altea">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_ALT0601_ENG.wav U000_ALT0602_ENG.wav U000_ALT0603_ENG.wav U000_ALT0604_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_ALT_ABILITY_A_1, TEXT_SFX_ALT_ABILITY_A_2, TEXT_SFX_ALT_ABILITY_A_3, TEXT_SFX_ALT_ABILITY_A_4</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Altea </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_ABILITY_B_Masari_Altea">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_ALT0701_ENG.wav U000_ALT0702_ENG.wav U000_ALT0703_ENG.wav U000_ALT0704_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_ALT_ABILITY_B_1, TEXT_SFX_ALT_ABILITY_B_2, TEXT_SFX_ALT_ABILITY_B_3, TEXT_SFX_ALT_ABILITY_B_4</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Altea </Overlap_Test>
+	</SFXEvent>
+
+
+	<SFXEvent Name="Unit_RETREAT_CALL_Masari_Altea">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_ALT1001_ENG.wav U000_ALT1002_ENG.wav U000_ALT1003_ENG.wav U000_ALT1004_ENG.wav U000_ALT1005_ENG.wav </Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_ALT_RETREAT_CALL_1, TEXT_SFX_ALT_RETREAT_CALL_2, TEXT_SFX_ALT_RETREAT_CALL_3, TEXT_SFX_ALT_RETREAT_CALL_4, TEXT_SFX_ALT_RETREAT_CALL_5</Text_ID>
+		<Overlap_Test> Unit_Masari_Altea </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_TAUNT_Masari_Altea">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_ALT1101_ENG.wav U000_ALT1102_ENG.wav U000_ALT1103_ENG.wav U000_ALT1104_ENG.wav U000_ALT1105_ENG.wav </Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_ALT_TAUNT_1, TEXT_SFX_ALT_TAUNT_2, TEXT_SFX_ALT_TAUNT_3, TEXT_SFX_ALT_TAUNT_4, TEXT_SFX_ALT_TAUNT_5</Text_ID>
+		<Overlap_Test> Unit_Masari_Altea </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_TAUNT_UNLOCKABLE_Masari_Altea">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_ALT1201_ENG.wav U000_ALT1202_ENG.wav U000_ALT1203_ENG.wav U000_ALT1204_ENG.wav U000_ALT1205_ENG.wav </Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_ALT_TAUNT_UNLOCKABLE_1, TEXT_SFX_ALT_TAUNT_UNLOCKABLE_2, TEXT_SFX_ALT_TAUNT_UNLOCKABLE_3, TEXT_SFX_ALT_TAUNT_UNLOCKABLE_4, TEXT_SFX_ALT_TAUNT_UNLOCKABLE_5</Text_ID>
+		<Overlap_Test> Unit_Masari_Altea </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_HEALTH_LOW_Masari_Altea">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_ALT1501_ENG.wav U000_ALT1502_ENG.wav U000_ALT1503_ENG.wav  </Samples>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_ALT_HEALTH_LOW_1, TEXT_SFX_ALT_HEALTH_LOW_2, TEXT_SFX_ALT_HEALTH_LOW_3</Text_ID>
+		<Overlap_Test> Unit_Masari_Altea </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_HEALTH_CRITICAL_Masari_Altea">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_ALT1601_ENG.wav U000_ALT1602_ENG.wav </Samples>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_ALT_HEALTH_CRITICAL_1, TEXT_SFX_ALT_HEALTH_CRITICAL_2</Text_ID>
+		<Overlap_Test> Unit_Masari_Altea </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Death_Masari_Altea">
+			<Use_Preset>Preset_UR_3D</Use_Preset>
+			<Samples>DTH_Altea_1.wav </Samples>
+    </SFXEvent>
+
+
+
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Masari_Charos">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_CHA0101_ENG.wav U000_CHA0102_ENG.wav U000_CHA0103_ENG.wav U000_CHA0104_ENG.wav U000_CHA0105_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_CHA_SELECT_1, TEXT_SFX_CHA_SELECT_2, TEXT_SFX_CHA_SELECT_3, TEXT_SFX_CHA_SELECT_4, TEXT_SFX_CHA_SELECT_5</Text_ID>       
+		<Overlap_Test> Unit_Masari_Charos </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_A_Masari_Charos">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_CHA0201_ENG.wav U000_CHA0202_ENG.wav U000_CHA0203_ENG.wav U000_CHA0204_ENG.wav U000_CHA0205_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_CHA_ATTACK_A_1, TEXT_SFX_CHA_ATTACK_A_2, TEXT_SFX_CHA_ATTACK_A_3, TEXT_SFX_CHA_ATTACK_A_4, TEXT_SFX_CHA_ATTACK_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Charos </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_B_Masari_Charos">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_CHA0301_ENG.wav U000_CHA0302_ENG.wav U000_CHA0303_ENG.wav U000_CHA0304_ENG.wav U000_CHA0305_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_CHA_ATTACK_B_1, TEXT_SFX_CHA_ATTACK_B_2, TEXT_SFX_CHA_ATTACK_B_3, TEXT_SFX_CHA_ATTACK_B_4, TEXT_SFX_CHA_ATTACK_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Masari_Charos </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_A_Masari_Charos">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_CHA0401_ENG.wav U000_CHA0402_ENG.wav U000_CHA0403_ENG.wav U000_CHA0404_ENG.wav U000_CHA0405_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_CHA_MOVE_A_1, TEXT_SFX_CHA_MOVE_A_2, TEXT_SFX_CHA_MOVE_A_3, TEXT_SFX_CHA_MOVE_A_4, TEXT_SFX_CHA_MOVE_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Charos </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_B_Masari_Charos">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_CHA0501_ENG.wav U000_CHA0502_ENG.wav U000_CHA0503_ENG.wav U000_CHA0504_ENG.wav U000_CHA0505_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_CHA_MOVE_B_1, TEXT_SFX_CHA_MOVE_B_2, TEXT_SFX_CHA_MOVE_B_3, TEXT_SFX_CHA_MOVE_B_4, TEXT_SFX_CHA_MOVE_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Masari_Charos </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_ABILITY_A_Masari_Charos">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_CHA0601_ENG.wav U000_CHA0602_ENG.wav U000_CHA0603_ENG.wav U000_CHA0604_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_CHA_ABILITY_A_1, TEXT_SFX_CHA_ABILITY_A_2, TEXT_SFX_CHA_ABILITY_A_3, TEXT_SFX_CHA_ABILITY_A_4</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Charos </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_ABILITY_B_Masari_Charos">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_CHA0701_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_CHA_ABILITY_B_1</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Charos </Overlap_Test>
+	</SFXEvent>
+
+
+	<SFXEvent Name="Unit_RETREAT_CALL_Masari_Charos">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_CHA1001_ENG.wav U000_CHA1002_ENG.wav U000_CHA1003_ENG.wav U000_CHA1004_ENG.wav U000_CHA1005_ENG.wav </Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_CHA_RETREAT_CALL_1, TEXT_SFX_CHA_RETREAT_CALL_2, TEXT_SFX_CHA_RETREAT_CALL_3, TEXT_SFX_CHA_RETREAT_CALL_4, TEXT_SFX_CHA_RETREAT_CALL_5</Text_ID>
+		<Overlap_Test> Unit_Masari_Charos </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_TAUNT_Masari_Charos">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_CHA1101_ENG.wav U000_CHA1102_ENG.wav U000_CHA1103_ENG.wav U000_CHA1104_ENG.wav U000_CHA1105_ENG.wav </Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_CHA_TAUNT_1, TEXT_SFX_CHA_TAUNT_2, TEXT_SFX_CHA_TAUNT_3, TEXT_SFX_CHA_TAUNT_4, TEXT_SFX_CHA_TAUNT_5</Text_ID>
+		<Overlap_Test> Unit_Masari_Charos </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_TAUNT_UNLOCKABLE_Masari_Charos">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_CHA1201_ENG.wav U000_CHA1202_ENG.wav U000_CHA1203_ENG.wav U000_CHA1204_ENG.wav U000_CHA1205_ENG.wav </Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_CHA_TAUNT_UNLOCKABLE_1, TEXT_SFX_CHA_TAUNT_UNLOCKABLE_2, TEXT_SFX_CHA_TAUNT_UNLOCKABLE_3, TEXT_SFX_CHA_TAUNT_UNLOCKABLE_4, TEXT_SFX_CHA_TAUNT_UNLOCKABLE_5</Text_ID>
+		<Overlap_Test> Unit_Masari_Charos </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_HEALTH_LOW_Masari_Charos">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_CHA1501_ENG.wav U000_CHA1502_ENG.wav </Samples>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_CHA_HEALTH_LOW_1, TEXT_SFX_CHA_HEALTH_LOW_2</Text_ID>
+		<Overlap_Test> Unit_Masari_Charos </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_HEALTH_CRITICAL_Masari_Charos">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_CHA1601_ENG.wav U000_CHA1602_ENG.wav U000_CHA1603_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_CHA_HEALTH_CRITICAL_1, TEXT_SFX_CHA_HEALTH_CRITICAL_2, TEXT_SFX_CHA_HEALTH_CRITICAL_3</Text_ID>
+		<Overlap_Test> Unit_Masari_Charos </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Death_Masari_Charos">
+			<Use_Preset>Preset_UR_3D</Use_Preset>
+			<Samples>DTH_Charos_1.wav </Samples>
+    </SFXEvent>
+
+
+
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Masari_Zessus">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_ZES0101_ENG.wav U000_ZES0102_ENG.wav U000_ZES0103_ENG.wav U000_ZES0104_ENG.wav U000_ZES0105_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_ZES_SELECT_1, TEXT_SFX_ZES_SELECT_2, TEXT_SFX_ZES_SELECT_3, TEXT_SFX_ZES_SELECT_4, TEXT_SFX_ZES_SELECT_5</Text_ID>       
+		<Overlap_Test> Unit_Masari_Zessus </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_A_Masari_Zessus">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_ZES0201_ENG.wav U000_ZES0202_ENG.wav U000_ZES0203_ENG.wav U000_ZES0204_ENG.wav U000_ZES0205_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_ZES_ATTACK_A_1, TEXT_SFX_ZES_ATTACK_A_2, TEXT_SFX_ZES_ATTACK_A_3, TEXT_SFX_ZES_ATTACK_A_4, TEXT_SFX_ZES_ATTACK_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Zessus </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_B_Masari_Zessus">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_ZES0301_ENG.wav U000_ZES0302_ENG.wav U000_ZES0303_ENG.wav U000_ZES0304_ENG.wav U000_ZES0305_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_ZES_ATTACK_B_1, TEXT_SFX_ZES_ATTACK_B_2, TEXT_SFX_ZES_ATTACK_B_3, TEXT_SFX_ZES_ATTACK_B_4, TEXT_SFX_ZES_ATTACK_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Masari_Zessus </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_A_Masari_Zessus">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_ZES0401_ENG.wav U000_ZES0402_ENG.wav U000_ZES0403_ENG.wav U000_ZES0404_ENG.wav U000_ZES0405_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_ZES_MOVE_A_1, TEXT_SFX_ZES_MOVE_A_2, TEXT_SFX_ZES_MOVE_A_3, TEXT_SFX_ZES_MOVE_A_4, TEXT_SFX_ZES_MOVE_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Zessus </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_B_Masari_Zessus">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_ZES0501_ENG.wav U000_ZES0502_ENG.wav U000_ZES0503_ENG.wav U000_ZES0504_ENG.wav U000_ZES0505_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_ZES_MOVE_B_1, TEXT_SFX_ZES_MOVE_B_2, TEXT_SFX_ZES_MOVE_B_3, TEXT_SFX_ZES_MOVE_B_4, TEXT_SFX_ZES_MOVE_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Masari_Zessus </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_ABILITY_A_Masari_Zessus">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_ZES0601_ENG.wav U000_ZES0602_ENG.wav U000_ZES0603_ENG.wav U000_ZES0604_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_ZES_ABILITY_A_1, TEXT_SFX_ZES_ABILITY_A_2, TEXT_SFX_ZES_ABILITY_A_3, TEXT_SFX_ZES_ABILITY_A_4</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Zessus </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_ABILITY_B_Masari_Zessus">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_ZES0701_ENG.wav U000_ZES0702_ENG.wav U000_ZES0703_ENG.wav U000_ZES0704_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_ZES_ABILITY_B_1, TEXT_SFX_ZES_ABILITY_B_2, TEXT_SFX_ZES_ABILITY_B_3, TEXT_SFX_ZES_ABILITY_B_4</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Zessus </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Ability_C_Masari_Zessus">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_ZES0801_ENG.wav U000_ZES0802_ENG.wav U000_ZES0803_ENG.wav U000_ZES0804_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_ZES_ABILITY_C_1, TEXT_SFX_ZES_ABILITY_C_2, TEXT_SFX_ZES_ABILITY_C_3, TEXT_SFX_ZES_ABILITY_C_4</Text_ID>
+		<Overlap_Test> Unit_Masari_Zessus </Overlap_Test>
+	</SFXEvent>
+
+
+	<SFXEvent Name="Unit_RETREAT_CALL_Masari_Zessus">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_ZES1001_ENG.wav U000_ZES1002_ENG.wav U000_ZES1003_ENG.wav U000_ZES1004_ENG.wav U000_ZES1005_ENG.wav </Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_ZES_RETREAT_CALL_1, TEXT_SFX_ZES_RETREAT_CALL_2, TEXT_SFX_ZES_RETREAT_CALL_3, TEXT_SFX_ZES_RETREAT_CALL_4, TEXT_SFX_ZES_RETREAT_CALL_5</Text_ID>
+		<Overlap_Test> Unit_Masari_Zessus </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_TAUNT_Masari_Zessus">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_ZES1101_ENG.wav U000_ZES1102_ENG.wav U000_ZES1103_ENG.wav U000_ZES1104_ENG.wav U000_ZES1105_ENG.wav </Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_ZES_TAUNT_1, TEXT_SFX_ZES_TAUNT_2, TEXT_SFX_ZES_TAUNT_3, TEXT_SFX_ZES_TAUNT_4, TEXT_SFX_ZES_TAUNT_5</Text_ID>
+		<Overlap_Test> Unit_Masari_Zessus </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_TAUNT_UNLOCKABLE_Masari_Zessus">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_ZES1201_ENG.wav U000_ZES1202_ENG.wav U000_ZES1203_ENG.wav U000_ZES1204_ENG.wav U000_ZES1205_ENG.wav </Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_ZES_TAUNT_UNLOCKABLE_1, TEXT_SFX_ZES_TAUNT_UNLOCKABLE_2, TEXT_SFX_ZES_TAUNT_UNLOCKABLE_3, TEXT_SFX_ZES_TAUNT_UNLOCKABLE_4, TEXT_SFX_ZES_TAUNT_UNLOCKABLE_5</Text_ID>
+		<Overlap_Test> Unit_Masari_Zessus </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_HEALTH_LOW_Masari_Zessus">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_ZES1501_ENG.wav U000_ZES1502_ENG.wav </Samples>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_ZES_HEALTH_LOW_1, TEXT_SFX_ZES_HEALTH_LOW_2</Text_ID>
+		<Overlap_Test> Unit_Masari_Zessus </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_HEALTH_CRITICAL_Masari_Zessus">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_ZES1601_ENG.wav U000_ZES1602_ENG.wav U000_ZES1603_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_ZES_HEALTH_CRITICAL_1, TEXT_SFX_ZES_HEALTH_CRITICAL_2, TEXT_SFX_ZES_HEALTH_CRITICAL_3</Text_ID>
+		<Overlap_Test> Unit_Masari_Zessus </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Death_Masari_Zessus">
+			<Use_Preset>Preset_UR_3D</Use_Preset>
+			<Samples>DTH_Zessus_1.wav </Samples>
+    </SFXEvent>
+
+
+
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Masari_Architect">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_ARC0101_ENG.wav U000_ARC0102_ENG.wav U000_ARC0103_ENG.wav U000_ARC0104_ENG.wav U000_ARC0105_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_ARC_SELECT_1, TEXT_SFX_ARC_SELECT_2, TEXT_SFX_ARC_SELECT_3, TEXT_SFX_ARC_SELECT_4, TEXT_SFX_ARC_SELECT_5</Text_ID>       
+		<Overlap_Test> Unit_Masari_Architect </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_A_Masari_Architect">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_ARC0201_ENG.wav U000_ARC0202_ENG.wav U000_ARC0203_ENG.wav U000_ARC0204_ENG.wav U000_ARC0205_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_ARC_ATTACK_A_1, TEXT_SFX_ARC_ATTACK_A_2, TEXT_SFX_ARC_ATTACK_A_3, TEXT_SFX_ARC_ATTACK_A_4, TEXT_SFX_ARC_ATTACK_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Architect </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_B_Masari_Architect">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_ARC0301_ENG.wav U000_ARC0302_ENG.wav U000_ARC0303_ENG.wav U000_ARC0304_ENG.wav U000_ARC0305_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_ARC_ATTACK_B_1, TEXT_SFX_ARC_ATTACK_B_2, TEXT_SFX_ARC_ATTACK_B_3, TEXT_SFX_ARC_ATTACK_B_4, TEXT_SFX_ARC_ATTACK_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Masari_Architect </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_A_Masari_Architect">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_ARC0401_ENG.wav U000_ARC0402_ENG.wav U000_ARC0403_ENG.wav U000_ARC0404_ENG.wav U000_ARC0405_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_ARC_MOVE_A_1, TEXT_SFX_ARC_MOVE_A_2, TEXT_SFX_ARC_MOVE_A_3, TEXT_SFX_ARC_MOVE_A_4, TEXT_SFX_ARC_MOVE_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Architect </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_B_Masari_Architect">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_ARC0501_ENG.wav U000_ARC0502_ENG.wav U000_ARC0503_ENG.wav U000_ARC0504_ENG.wav U000_ARC0505_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_ARC_MOVE_B_1, TEXT_SFX_ARC_MOVE_B_2, TEXT_SFX_ARC_MOVE_B_3, TEXT_SFX_ARC_MOVE_B_4, TEXT_SFX_ARC_MOVE_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Masari_Architect </Overlap_Test>
+	</SFXEvent>
+<!--
+	<SFXEvent Name="Unit_ABILITY_A_Masari_Architect">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_ARC0601_ENG.wav U000_ARC0602_ENG.wav U000_ARC0603_ENG.wav U000_ARC0604_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID />		     
+		<Overlap_Test> Unit_Masari_Architect </Overlap_Test>
+	</SFXEvent>
+-->
+	<SFXEvent Name="Unit_ABILITY_B_Masari_Architect">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_ARC0701_ENG.wav U000_ARC0702_ENG.wav U000_ARC0703_ENG.wav U000_ARC0704_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_ARC_ABILITY_B_1, TEXT_SFX_ARC_ABILITY_B_2, TEXT_SFX_ARC_ABILITY_B_3, TEXT_SFX_ARC_ABILITY_B_4</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Architect </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Ability_C_Masari_Architect">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_ARC0801_ENG.wav U000_ARC0802_ENG.wav U000_ARC0803_ENG.wav U000_ARC0804_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_ARC_ABILITY_C_1, TEXT_SFX_ARC_ABILITY_C_2, TEXT_SFX_ARC_ABILITY_C_3, TEXT_SFX_ARC_ABILITY_C_4</Text_ID>
+		<Overlap_Test> Unit_Masari_Architect </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Ability_D_Masari_Architect">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_ARC0901_ENG.wav U000_ARC0902_ENG.wav U000_ARC0903_ENG.wav U000_ARC0904_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_ARC_ABILITY_D_1, TEXT_SFX_ARC_ABILITY_D_2, TEXT_SFX_ARC_ABILITY_D_3, TEXT_SFX_ARC_ABILITY_D_4</Text_ID>
+		<Overlap_Test> Unit_Masari_Architect </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Masari_Disciple">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_DIS0101_ENG.wav U000_DIS0102_ENG.wav U000_DIS0103_ENG.wav U000_DIS0104_ENG.wav U000_DIS0105_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_DIS_SELECT_1, TEXT_SFX_DIS_SELECT_2, TEXT_SFX_DIS_SELECT_3, TEXT_SFX_DIS_SELECT_4, TEXT_SFX_DIS_SELECT_5</Text_ID>       
+		<Overlap_Test> Unit_Masari_Disciple </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_A_Masari_Disciple">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_DIS0201_ENG.wav U000_DIS0202_ENG.wav U000_DIS0203_ENG.wav U000_DIS0204_ENG.wav U000_DIS0205_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_DIS_ATTACK_A_1, TEXT_SFX_DIS_ATTACK_A_2, TEXT_SFX_DIS_ATTACK_A_3, TEXT_SFX_DIS_ATTACK_A_4, TEXT_SFX_DIS_ATTACK_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Disciple </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_B_Masari_Disciple">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_DIS0301_ENG.wav U000_DIS0302_ENG.wav U000_DIS0303_ENG.wav U000_DIS0304_ENG.wav U000_DIS0305_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_DIS_ATTACK_B_1, TEXT_SFX_DIS_ATTACK_B_2, TEXT_SFX_DIS_ATTACK_B_3, TEXT_SFX_DIS_ATTACK_B_4, TEXT_SFX_DIS_ATTACK_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Masari_Disciple </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_A_Masari_Disciple">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_DIS0401_ENG.wav U000_DIS0402_ENG.wav U000_DIS0403_ENG.wav U000_DIS0404_ENG.wav U000_DIS0405_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_DIS_MOVE_A_1, TEXT_SFX_DIS_MOVE_A_2, TEXT_SFX_DIS_MOVE_A_3, TEXT_SFX_DIS_MOVE_A_4, TEXT_SFX_DIS_MOVE_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Disciple </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_B_Masari_Disciple">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_DIS0501_ENG.wav U000_DIS0502_ENG.wav U000_DIS0503_ENG.wav U000_DIS0504_ENG.wav U000_DIS0505_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_DIS_MOVE_B_1, TEXT_SFX_DIS_MOVE_B_2, TEXT_SFX_DIS_MOVE_B_3, TEXT_SFX_DIS_MOVE_B_4, TEXT_SFX_DIS_MOVE_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Masari_Disciple </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Masari_Conqueror">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_CQR0101_ENG.wav U000_CQR0102_ENG.wav U000_CQR0103_ENG.wav U000_CQR0104_ENG.wav U000_CQR0105_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_CQR_SELECT_1, TEXT_SFX_CQR_SELECT_2, TEXT_SFX_CQR_SELECT_3, TEXT_SFX_CQR_SELECT_4, TEXT_SFX_CQR_SELECT_5</Text_ID>       
+		<Overlap_Test> Unit_Masari_Conqueror </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_A_Masari_Conqueror">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_CQR0201_ENG.wav U000_CQR0202_ENG.wav U000_CQR0203_ENG.wav U000_CQR0204_ENG.wav U000_CQR0205_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_CQR_ATTACK_A_1, TEXT_SFX_CQR_ATTACK_A_2, TEXT_SFX_CQR_ATTACK_A_3, TEXT_SFX_CQR_ATTACK_A_4, TEXT_SFX_CQR_ATTACK_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Conqueror </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_B_Masari_Conqueror">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_CQR0301_ENG.wav U000_CQR0302_ENG.wav U000_CQR0303_ENG.wav U000_CQR0304_ENG.wav U000_CQR0305_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_CQR_ATTACK_B_1, TEXT_SFX_CQR_ATTACK_B_2, TEXT_SFX_CQR_ATTACK_B_3, TEXT_SFX_CQR_ATTACK_B_4, TEXT_SFX_CQR_ATTACK_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Masari_Conqueror </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_A_Masari_Conqueror">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_CQR0401_ENG.wav U000_CQR0402_ENG.wav U000_CQR0403_ENG.wav U000_CQR0404_ENG.wav U000_CQR0405_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_CQR_MOVE_A_1, TEXT_SFX_CQR_MOVE_A_2, TEXT_SFX_CQR_MOVE_A_3, TEXT_SFX_CQR_MOVE_A_4, TEXT_SFX_CQR_MOVE_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Conqueror </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_B_Masari_Conqueror">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_CQR0501_ENG.wav U000_CQR0502_ENG.wav U000_CQR0503_ENG.wav U000_CQR0504_ENG.wav U000_CQR0505_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_CQR_MOVE_B_1, TEXT_SFX_CQR_MOVE_B_2, TEXT_SFX_CQR_MOVE_B_3, TEXT_SFX_CQR_MOVE_B_4, TEXT_SFX_CQR_MOVE_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Masari_Conqueror </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_ABILITY_A_Masari_Conqueror">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_CQR0601_ENG.wav U000_CQR0602_ENG.wav U000_CQR0603_ENG.wav U000_CQR0604_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_CQR_ABILITY_A_1, TEXT_SFX_CQR_ABILITY_A_2, TEXT_SFX_CQR_ABILITY_A_3, TEXT_SFX_CQR_ABILITY_A_4</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Conqueror </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Masari_Conqueror_Avenger">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_CQA0101_ENG.wav U000_CQA0102_ENG.wav U000_CQA0103_ENG.wav U000_CQA0104_ENG.wav U000_CQA0105_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_CQA_SELECT_1, TEXT_SFX_CQA_SELECT_2, TEXT_SFX_CQA_SELECT_3, TEXT_SFX_CQA_SELECT_4, TEXT_SFX_CQA_SELECT_5</Text_ID>       
+		<Overlap_Test> Unit_Masari_Conqueror_Avenger </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_A_Masari_Conqueror_Avenger">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_CQA0201_ENG.wav U000_CQA0202_ENG.wav U000_CQA0203_ENG.wav U000_CQA0204_ENG.wav U000_CQA0205_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_CQA_ATTACK_A_1, TEXT_SFX_CQA_ATTACK_A_2, TEXT_SFX_CQA_ATTACK_A_3, TEXT_SFX_CQA_ATTACK_A_4, TEXT_SFX_CQA_ATTACK_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Conqueror_Avenger </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_B_Masari_Conqueror_Avenger">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_CQA0301_ENG.wav U000_CQA0302_ENG.wav U000_CQA0303_ENG.wav U000_CQA0304_ENG.wav U000_CQA0305_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_CQA_ATTACK_B_1, TEXT_SFX_CQA_ATTACK_B_2, TEXT_SFX_CQA_ATTACK_B_3, TEXT_SFX_CQA_ATTACK_B_4, TEXT_SFX_CQA_ATTACK_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Masari_Conqueror_Avenger </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_A_Masari_Conqueror_Avenger">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_CQA0401_ENG.wav U000_CQA0402_ENG.wav U000_CQA0403_ENG.wav U000_CQA0404_ENG.wav U000_CQA0405_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_CQA_MOVE_A_1, TEXT_SFX_CQA_MOVE_A_2, TEXT_SFX_CQA_MOVE_A_3, TEXT_SFX_CQA_MOVE_A_4, TEXT_SFX_CQA_MOVE_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Conqueror_Avenger </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_B_Masari_Conqueror_Avenger">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_CQA0501_ENG.wav U000_CQA0502_ENG.wav U000_CQA0503_ENG.wav U000_CQA0504_ENG.wav U000_CQA0505_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_CQA_MOVE_B_1, TEXT_SFX_CQA_MOVE_B_2, TEXT_SFX_CQA_MOVE_B_3, TEXT_SFX_CQA_MOVE_B_4, TEXT_SFX_CQA_MOVE_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Masari_Conqueror_Avenger </Overlap_Test>
+	</SFXEvent>
+<!--
+	<SFXEvent Name="Unit_ABILITY_A_Masari_Conqueror_Avenger">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_CQA0601_ENG.wav U000_CQA0602_ENG.wav U000_CQA0603_ENG.wav U000_CQA0604_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID />    
+		<Overlap_Test> Unit_Masari_Conqueror_Avenger </Overlap_Test>
+	</SFXEvent>
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Masari_Figment">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_FIG0101_ENG.wav U000_FIG0102_ENG.wav U000_FIG0103_ENG.wav U000_FIG0104_ENG.wav U000_FIG0105_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_FIG_SELECT_1, TEXT_SFX_FIG_SELECT_2, TEXT_SFX_FIG_SELECT_3, TEXT_SFX_FIG_SELECT_4, TEXT_SFX_FIG_SELECT_5</Text_ID>       
+		<Overlap_Test> Unit_Masari_Figment </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_A_Masari_Figment">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_FIG0201_ENG.wav U000_FIG0202_ENG.wav U000_FIG0203_ENG.wav U000_FIG0204_ENG.wav U000_FIG0205_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_FIG_ATTACK_A_1, TEXT_SFX_FIG_ATTACK_A_2, TEXT_SFX_FIG_ATTACK_A_3, TEXT_SFX_FIG_ATTACK_A_4, TEXT_SFX_FIG_ATTACK_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Figment </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_B_Masari_Figment">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_FIG0301_ENG.wav U000_FIG0302_ENG.wav U000_FIG0303_ENG.wav U000_FIG0304_ENG.wav U000_FIG0305_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_FIG_ATTACK_B_1, TEXT_SFX_FIG_ATTACK_B_2, TEXT_SFX_FIG_ATTACK_B_3, TEXT_SFX_FIG_ATTACK_B_4, TEXT_SFX_FIG_ATTACK_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Masari_Figment </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_A_Masari_Figment">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_FIG0401_ENG.wav U000_FIG0402_ENG.wav U000_FIG0403_ENG.wav U000_FIG0404_ENG.wav U000_FIG0405_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_FIG_MOVE_A_1, TEXT_SFX_FIG_MOVE_A_2, TEXT_SFX_FIG_MOVE_A_3, TEXT_SFX_FIG_MOVE_A_4, TEXT_SFX_FIG_MOVE_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Figment </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_B_Masari_Figment">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_FIG0501_ENG.wav U000_FIG0502_ENG.wav U000_FIG0503_ENG.wav U000_FIG0504_ENG.wav U000_FIG0505_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_FIG_MOVE_B_1, TEXT_SFX_FIG_MOVE_B_2, TEXT_SFX_FIG_MOVE_B_3, TEXT_SFX_FIG_MOVE_B_4, TEXT_SFX_FIG_MOVE_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Masari_Figment </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_ABILITY_A_Masari_Figment">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_FIG0601_ENG.wav U000_FIG0602_ENG.wav U000_FIG0603_ENG.wav U000_FIG0604_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_FIG_ABILITY_A_1, TEXT_SFX_FIG_ABILITY_A_2, TEXT_SFX_FIG_ABILITY_A_3, TEXT_SFX_FIG_ABILITY_A_4</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Figment </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Masari_Figment_Avenger">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_FGA0101_ENG.wav U000_FGA0102_ENG.wav U000_FGA0103_ENG.wav U000_FGA0104_ENG.wav U000_FGA0105_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_FGA_SELECT_1, TEXT_SFX_FGA_SELECT_2, TEXT_SFX_FGA_SELECT_3, TEXT_SFX_FGA_SELECT_4, TEXT_SFX_FGA_SELECT_5</Text_ID>       
+		<Overlap_Test> Unit_Masari_Figment_Avenger </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_A_Masari_Figment_Avenger">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_FGA0201_ENG.wav U000_FGA0202_ENG.wav U000_FGA0203_ENG.wav U000_FGA0204_ENG.wav U000_FGA0205_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_FGA_ATTACK_A_1, TEXT_SFX_FGA_ATTACK_A_2, TEXT_SFX_FGA_ATTACK_A_3, TEXT_SFX_FGA_ATTACK_A_4, TEXT_SFX_FGA_ATTACK_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Figment_Avenger </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_B_Masari_Figment_Avenger">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_FGA0301_ENG.wav U000_FGA0302_ENG.wav U000_FGA0303_ENG.wav U000_FGA0304_ENG.wav U000_FGA0305_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_FGA_ATTACK_B_1, TEXT_SFX_FGA_ATTACK_B_2, TEXT_SFX_FGA_ATTACK_B_3, TEXT_SFX_FGA_ATTACK_B_4, TEXT_SFX_FGA_ATTACK_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Masari_Figment_Avenger </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_A_Masari_Figment_Avenger">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_FGA0401_ENG.wav U000_FGA0402_ENG.wav U000_FGA0403_ENG.wav U000_FGA0404_ENG.wav U000_FGA0405_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_FGA_MOVE_A_1, TEXT_SFX_FGA_MOVE_A_2, TEXT_SFX_FGA_MOVE_A_3, TEXT_SFX_FGA_MOVE_A_4, TEXT_SFX_FGA_MOVE_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Figment_Avenger </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_B_Masari_Figment_Avenger">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_FGA0501_ENG.wav U000_FGA0502_ENG.wav U000_FGA0503_ENG.wav U000_FGA0504_ENG.wav U000_FGA0505_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_FGA_MOVE_B_1, TEXT_SFX_FGA_MOVE_B_2, TEXT_SFX_FGA_MOVE_B_3, TEXT_SFX_FGA_MOVE_B_4, TEXT_SFX_FGA_MOVE_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Masari_Figment_Avenger </Overlap_Test>
+	</SFXEvent>
+<!--
+	<SFXEvent Name="Unit_ABILITY_A_Masari_Figment_Avenger">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_FGA0601_ENG.wav U000_FGA0602_ENG.wav U000_FGA0603_ENG.wav U000_FGA0604_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID />		     
+		<Overlap_Test> Unit_Masari_Figment_Avenger </Overlap_Test>
+	</SFXEvent>
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Masari_Peacebringer">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_PCB0101_ENG.wav U000_PCB0102_ENG.wav U000_PCB0103_ENG.wav U000_PCB0104_ENG.wav U000_PCB0105_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_PCB_SELECT_1, TEXT_SFX_PCB_SELECT_2, TEXT_SFX_PCB_SELECT_3, TEXT_SFX_PCB_SELECT_4, TEXT_SFX_PCB_SELECT_5</Text_ID>       
+		<Overlap_Test> Unit_Masari_Peacebringer </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_A_Masari_Peacebringer">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_PCB0201_ENG.wav U000_PCB0202_ENG.wav U000_PCB0203_ENG.wav U000_PCB0204_ENG.wav U000_PCB0205_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_PCB_ATTACK_A_1, TEXT_SFX_PCB_ATTACK_A_2, TEXT_SFX_PCB_ATTACK_A_3, TEXT_SFX_PCB_ATTACK_A_4, TEXT_SFX_PCB_ATTACK_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Peacebringer </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_B_Masari_Peacebringer">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_PCB0301_ENG.wav U000_PCB0302_ENG.wav U000_PCB0303_ENG.wav U000_PCB0304_ENG.wav U000_PCB0305_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_PCB_ATTACK_B_1, TEXT_SFX_PCB_ATTACK_B_2, TEXT_SFX_PCB_ATTACK_B_3, TEXT_SFX_PCB_ATTACK_B_4, TEXT_SFX_PCB_ATTACK_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Masari_Peacebringer </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_A_Masari_Peacebringer">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_PCB0401_ENG.wav U000_PCB0402_ENG.wav U000_PCB0403_ENG.wav U000_PCB0404_ENG.wav U000_PCB0405_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_PCB_MOVE_A_1, TEXT_SFX_PCB_MOVE_A_2, TEXT_SFX_PCB_MOVE_A_3, TEXT_SFX_PCB_MOVE_A_4, TEXT_SFX_PCB_MOVE_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Peacebringer </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_B_Masari_Peacebringer">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_PCB0501_ENG.wav U000_PCB0502_ENG.wav U000_PCB0503_ENG.wav U000_PCB0504_ENG.wav U000_PCB0505_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_PCB_MOVE_B_1, TEXT_SFX_PCB_MOVE_B_2, TEXT_SFX_PCB_MOVE_B_3, TEXT_SFX_PCB_MOVE_B_4, TEXT_SFX_PCB_MOVE_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Masari_Peacebringer </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_ABILITY_A_Masari_Peacebringer">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_PCB0601_ENG.wav U000_PCB0602_ENG.wav U000_PCB0603_ENG.wav U000_PCB0604_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_PCB_ABILITY_A_1, TEXT_SFX_PCB_ABILITY_A_2, TEXT_SFX_PCB_ABILITY_A_3, TEXT_SFX_PCB_ABILITY_A_4</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Peacebringer </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Masari_Peacebringer_Avenger">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_PCA0101_ENG.wav U000_PCA0102_ENG.wav U000_PCA0103_ENG.wav U000_PCA0104_ENG.wav U000_PCA0105_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_PCA_SELECT_1, TEXT_SFX_PCA_SELECT_2, TEXT_SFX_PCA_SELECT_3, TEXT_SFX_PCA_SELECT_4, TEXT_SFX_PCA_SELECT_5</Text_ID>       
+		<Overlap_Test> Unit_Masari_Peacebringer_Avenger </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_A_Masari_Peacebringer_Avenger">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_PCA0201_ENG.wav U000_PCA0202_ENG.wav U000_PCA0203_ENG.wav U000_PCA0204_ENG.wav U000_PCA0205_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_PCA_ATTACK_A_1, TEXT_SFX_PCA_ATTACK_A_2, TEXT_SFX_PCA_ATTACK_A_3, TEXT_SFX_PCA_ATTACK_A_4, TEXT_SFX_PCA_ATTACK_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Peacebringer_Avenger </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_B_Masari_Peacebringer_Avenger">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_PCA0301_ENG.wav U000_PCA0302_ENG.wav U000_PCA0303_ENG.wav U000_PCA0304_ENG.wav U000_PCA0305_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_PCA_ATTACK_B_1, TEXT_SFX_PCA_ATTACK_B_2, TEXT_SFX_PCA_ATTACK_B_3, TEXT_SFX_PCA_ATTACK_B_4, TEXT_SFX_PCA_ATTACK_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Masari_Peacebringer_Avenger </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_A_Masari_Peacebringer_Avenger">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_PCA0401_ENG.wav U000_PCA0402_ENG.wav U000_PCA0403_ENG.wav U000_PCA0404_ENG.wav U000_PCA0405_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_PCA_MOVE_A_1, TEXT_SFX_PCA_MOVE_A_2, TEXT_SFX_PCA_MOVE_A_3, TEXT_SFX_PCA_MOVE_A_4, TEXT_SFX_PCA_MOVE_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Peacebringer_Avenger </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_B_Masari_Peacebringer_Avenger">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_PCA0501_ENG.wav U000_PCA0502_ENG.wav U000_PCA0503_ENG.wav U000_PCA0504_ENG.wav U000_PCA0505_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_PCA_MOVE_B_1, TEXT_SFX_PCA_MOVE_B_2, TEXT_SFX_PCA_MOVE_B_3, TEXT_SFX_PCA_MOVE_B_4, TEXT_SFX_PCA_MOVE_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Masari_Peacebringer_Avenger </Overlap_Test>
+	</SFXEvent>
+<!--
+	<SFXEvent Name="Unit_ABILITY_A_Masari_Peacebringer_Avenger">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_PCA0601_ENG.wav U000_PCA0602_ENG.wav U000_PCA0603_ENG.wav U000_PCA0604_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID />		     
+		<Overlap_Test> Unit_Masari_Peacebringer_Avenger </Overlap_Test>
+	</SFXEvent>
+-->
+
+
+
+
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Masari_Inquisitor">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_INQ0101_ENG.wav U000_INQ0102_ENG.wav U000_INQ0103_ENG.wav U000_INQ0104_ENG.wav U000_INQ0105_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_INQ_SELECT_1, TEXT_SFX_INQ_SELECT_2, TEXT_SFX_INQ_SELECT_3, TEXT_SFX_INQ_SELECT_4, TEXT_SFX_INQ_SELECT_5</Text_ID>       
+		<Overlap_Test> Unit_Masari_Inquisitor </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_A_Masari_Inquisitor">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_INQ0201_ENG.wav U000_INQ0202_ENG.wav U000_INQ0203_ENG.wav U000_INQ0204_ENG.wav U000_INQ0205_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_INQ_ATTACK_A_1, TEXT_SFX_INQ_ATTACK_A_2, TEXT_SFX_INQ_ATTACK_A_3, TEXT_SFX_INQ_ATTACK_A_4, TEXT_SFX_INQ_ATTACK_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Inquisitor </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_B_Masari_Inquisitor">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_INQ0301_ENG.wav U000_INQ0302_ENG.wav U000_INQ0303_ENG.wav U000_INQ0304_ENG.wav U000_INQ0305_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_INQ_ATTACK_B_1, TEXT_SFX_INQ_ATTACK_B_2, TEXT_SFX_INQ_ATTACK_B_3, TEXT_SFX_INQ_ATTACK_B_4, TEXT_SFX_INQ_ATTACK_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Masari_Inquisitor </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_A_Masari_Inquisitor">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_INQ0401_ENG.wav U000_INQ0402_ENG.wav U000_INQ0403_ENG.wav U000_INQ0404_ENG.wav U000_INQ0405_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_INQ_MOVE_A_1, TEXT_SFX_INQ_MOVE_A_2, TEXT_SFX_INQ_MOVE_A_3, TEXT_SFX_INQ_MOVE_A_4, TEXT_SFX_INQ_MOVE_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Inquisitor </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_B_Masari_Inquisitor">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_INQ0501_ENG.wav U000_INQ0502_ENG.wav U000_INQ0503_ENG.wav U000_INQ0504_ENG.wav U000_INQ0505_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_INQ_MOVE_B_1, TEXT_SFX_INQ_MOVE_B_2, TEXT_SFX_INQ_MOVE_B_3, TEXT_SFX_INQ_MOVE_B_4, TEXT_SFX_INQ_MOVE_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Masari_Inquisitor </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_ABILITY_A_Masari_Inquisitor">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_INQ0601_ENG.wav U000_INQ0602_ENG.wav U000_INQ0603_ENG.wav U000_INQ0604_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_INQ_ABILITY_A_1, TEXT_SFX_INQ_ABILITY_A_2, TEXT_SFX_INQ_ABILITY_A_3, TEXT_SFX_INQ_ABILITY_A_4</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Inquisitor </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_ABILITY_B_Masari_Inquisitor">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_INQ0701_ENG.wav U000_INQ0702_ENG.wav U000_INQ0703_ENG.wav U000_INQ0704_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_INQ_ABILITY_B_1, TEXT_SFX_INQ_ABILITY_B_2, TEXT_SFX_INQ_ABILITY_B_3, TEXT_SFX_INQ_ABILITY_B_4</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Inquisitor </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Masari_Inquisitor_Avenger">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_IQA0101_ENG.wav U000_IQA0102_ENG.wav U000_IQA0103_ENG.wav U000_IQA0104_ENG.wav U000_IQA0105_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_IQA_SELECT_1, TEXT_SFX_IQA_SELECT_2, TEXT_SFX_IQA_SELECT_3, TEXT_SFX_IQA_SELECT_4, TEXT_SFX_IQA_SELECT_5</Text_ID>       
+		<Overlap_Test> Unit_Masari_Inquisitor_Avenger </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_A_Masari_Inquisitor_Avenger">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_IQA0201_ENG.wav U000_IQA0202_ENG.wav U000_IQA0203_ENG.wav U000_IQA0204_ENG.wav U000_IQA0205_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_IQA_ATTACK_A_1, TEXT_SFX_IQA_ATTACK_A_2, TEXT_SFX_IQA_ATTACK_A_3, TEXT_SFX_IQA_ATTACK_A_4, TEXT_SFX_IQA_ATTACK_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Inquisitor_Avenger </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_B_Masari_Inquisitor_Avenger">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_IQA0301_ENG.wav U000_IQA0302_ENG.wav U000_IQA0303_ENG.wav U000_IQA0304_ENG.wav U000_IQA0305_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_IQA_ATTACK_B_1, TEXT_SFX_IQA_ATTACK_B_2, TEXT_SFX_IQA_ATTACK_B_3, TEXT_SFX_IQA_ATTACK_B_4, TEXT_SFX_IQA_ATTACK_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Masari_Inquisitor_Avenger </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_A_Masari_Inquisitor_Avenger">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_IQA0401_ENG.wav U000_IQA0402_ENG.wav U000_IQA0403_ENG.wav U000_IQA0404_ENG.wav U000_IQA0405_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_IQA_MOVE_A_1, TEXT_SFX_IQA_MOVE_A_2, TEXT_SFX_IQA_MOVE_A_3, TEXT_SFX_IQA_MOVE_A_4, TEXT_SFX_IQA_MOVE_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Inquisitor_Avenger </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_B_Masari_Inquisitor_Avenger">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_IQA0501_ENG.wav U000_IQA0502_ENG.wav U000_IQA0503_ENG.wav U000_IQA0504_ENG.wav U000_IQA0505_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_IQA_MOVE_B_1, TEXT_SFX_IQA_MOVE_B_2, TEXT_SFX_IQA_MOVE_B_3, TEXT_SFX_IQA_MOVE_B_4, TEXT_SFX_IQA_MOVE_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Masari_Inquisitor_Avenger </Overlap_Test>
+	</SFXEvent>
+<!--
+	<SFXEvent Name="Unit_ABILITY_A_Masari_Inquisitor_Avenger">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_IQA0601_ENG.wav U000_IQA0602_ENG.wav U000_IQA0603_ENG.wav U000_IQA0604_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID />		     
+		<Overlap_Test> Unit_Masari_Inquisitor_Avenger </Overlap_Test>
+	</SFXEvent>
+-->
+
+
+
+
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Masari_Sentry">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_SNT0101_ENG.wav U000_SNT0102_ENG.wav U000_SNT0103_ENG.wav U000_SNT0104_ENG.wav U000_SNT0105_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_SNT_SELECT_1, TEXT_SFX_SNT_SELECT_2, TEXT_SFX_SNT_SELECT_3, TEXT_SFX_SNT_SELECT_4, TEXT_SFX_SNT_SELECT_5</Text_ID>       
+		<Overlap_Test> Unit_Masari_Sentry </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_A_Masari_Sentry">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_SNT0201_ENG.wav U000_SNT0202_ENG.wav U000_SNT0203_ENG.wav U000_SNT0204_ENG.wav U000_SNT0205_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_SNT_ATTACK_A_1, TEXT_SFX_SNT_ATTACK_A_2, TEXT_SFX_SNT_ATTACK_A_3, TEXT_SFX_SNT_ATTACK_A_4, TEXT_SFX_SNT_ATTACK_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Sentry </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_B_Masari_Sentry">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_SNT0301_ENG.wav U000_SNT0302_ENG.wav U000_SNT0303_ENG.wav U000_SNT0304_ENG.wav U000_SNT0305_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_SNT_ATTACK_B_1, TEXT_SFX_SNT_ATTACK_B_2, TEXT_SFX_SNT_ATTACK_B_3, TEXT_SFX_SNT_ATTACK_B_4, TEXT_SFX_SNT_ATTACK_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Masari_Sentry </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_A_Masari_Sentry">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_SNT0401_ENG.wav U000_SNT0402_ENG.wav U000_SNT0403_ENG.wav U000_SNT0404_ENG.wav U000_SNT0405_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_SNT_MOVE_A_1, TEXT_SFX_SNT_MOVE_A_2, TEXT_SFX_SNT_MOVE_A_3, TEXT_SFX_SNT_MOVE_A_4, TEXT_SFX_SNT_MOVE_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Sentry </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_B_Masari_Sentry">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_SNT0501_ENG.wav U000_SNT0502_ENG.wav U000_SNT0503_ENG.wav U000_SNT0504_ENG.wav U000_SNT0505_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_SNT_MOVE_B_1, TEXT_SFX_SNT_MOVE_B_2, TEXT_SFX_SNT_MOVE_B_3, TEXT_SFX_SNT_MOVE_B_4, TEXT_SFX_SNT_MOVE_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Masari_Sentry </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_ABILITY_A_Masari_Sentry">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_SNT0601_ENG.wav U000_SNT0602_ENG.wav U000_SNT0603_ENG.wav U000_SNT0604_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_SNT_ABILITY_A_1, TEXT_SFX_SNT_ABILITY_A_2, TEXT_SFX_SNT_ABILITY_A_3, TEXT_SFX_SNT_ABILITY_A_4</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Sentry </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_ABILITY_B_Masari_Sentry">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_SNT0701_ENG.wav U000_SNT0702_ENG.wav U000_SNT0703_ENG.wav U000_SNT0704_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_SNT_ABILITY_B_1, TEXT_SFX_SNT_ABILITY_B_2, TEXT_SFX_SNT_ABILITY_B_3, TEXT_SFX_SNT_ABILITY_B_4</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Sentry </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Masari_Sentry_Avenger">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_SNA0101_ENG.wav U000_SNA0102_ENG.wav U000_SNA0103_ENG.wav U000_SNA0104_ENG.wav U000_SNA0105_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_SNA_SELECT_1, TEXT_SFX_SNA_SELECT_2, TEXT_SFX_SNA_SELECT_3, TEXT_SFX_SNA_SELECT_4, TEXT_SFX_SNA_SELECT_5</Text_ID>       
+		<Overlap_Test> Unit_Masari_Sentry_Avenger </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_A_Masari_Sentry_Avenger">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_SNA0201_ENG.wav U000_SNA0202_ENG.wav U000_SNA0203_ENG.wav U000_SNA0204_ENG.wav U000_SNA0205_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_SNA_ATTACK_A_1, TEXT_SFX_SNA_ATTACK_A_2, TEXT_SFX_SNA_ATTACK_A_3, TEXT_SFX_SNA_ATTACK_A_4, TEXT_SFX_SNA_ATTACK_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Sentry_Avenger </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_B_Masari_Sentry_Avenger">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_SNA0301_ENG.wav U000_SNA0302_ENG.wav U000_SNA0303_ENG.wav U000_SNA0304_ENG.wav U000_SNA0305_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_SNA_ATTACK_B_1, TEXT_SFX_SNA_ATTACK_B_2, TEXT_SFX_SNA_ATTACK_B_3, TEXT_SFX_SNA_ATTACK_B_4, TEXT_SFX_SNA_ATTACK_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Masari_Sentry_Avenger </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_A_Masari_Sentry_Avenger">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_SNA0401_ENG.wav U000_SNA0402_ENG.wav U000_SNA0403_ENG.wav U000_SNA0404_ENG.wav U000_SNA0405_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_SNA_MOVE_A_1, TEXT_SFX_SNA_MOVE_A_2, TEXT_SFX_SNA_MOVE_A_3, TEXT_SFX_SNA_MOVE_A_4, TEXT_SFX_SNA_MOVE_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Sentry_Avenger </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_B_Masari_Sentry_Avenger">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_SNA0501_ENG.wav U000_SNA0502_ENG.wav U000_SNA0503_ENG.wav U000_SNA0504_ENG.wav U000_SNA0505_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_SNA_MOVE_B_1, TEXT_SFX_SNA_MOVE_B_2, TEXT_SFX_SNA_MOVE_B_3, TEXT_SFX_SNA_MOVE_B_4, TEXT_SFX_SNA_MOVE_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Masari_Sentry_Avenger </Overlap_Test>
+	</SFXEvent>
+<!--
+	<SFXEvent Name="Unit_ABILITY_A_Masari_Sentry_Avenger">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_SNA0601_ENG.wav U000_SNA0602_ENG.wav U000_SNA0603_ENG.wav U000_SNA0604_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID />		     
+		<Overlap_Test> Unit_Masari_Sentry_Avenger </Overlap_Test>
+	</SFXEvent>
+-->
+
+
+
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Masari_Skylord">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_SKY0101_ENG.wav U000_SKY0102_ENG.wav U000_SKY0103_ENG.wav U000_SKY0104_ENG.wav U000_SKY0105_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_SKY_SELECT_1, TEXT_SFX_SKY_SELECT_2, TEXT_SFX_SKY_SELECT_3, TEXT_SFX_SKY_SELECT_4, TEXT_SFX_SKY_SELECT_5</Text_ID>       
+		<Overlap_Test> Unit_Masari_Skylord </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_A_Masari_Skylord">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_SKY0201_ENG.wav U000_SKY0202_ENG.wav U000_SKY0203_ENG.wav U000_SKY0204_ENG.wav U000_SKY0205_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_SKY_ATTACK_A_1, TEXT_SFX_SKY_ATTACK_A_2, TEXT_SFX_SKY_ATTACK_A_3, TEXT_SFX_SKY_ATTACK_A_4, TEXT_SFX_SKY_ATTACK_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Skylord </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_B_Masari_Skylord">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_SKY0301_ENG.wav U000_SKY0302_ENG.wav U000_SKY0303_ENG.wav U000_SKY0304_ENG.wav U000_SKY0305_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_SKY_ATTACK_B_1, TEXT_SFX_SKY_ATTACK_B_2, TEXT_SFX_SKY_ATTACK_B_3, TEXT_SFX_SKY_ATTACK_B_4, TEXT_SFX_SKY_ATTACK_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Masari_Skylord </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_A_Masari_Skylord">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_SKY0401_ENG.wav U000_SKY0402_ENG.wav U000_SKY0403_ENG.wav U000_SKY0404_ENG.wav U000_SKY0405_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_SKY_MOVE_A_1, TEXT_SFX_SKY_MOVE_A_2, TEXT_SFX_SKY_MOVE_A_3, TEXT_SFX_SKY_MOVE_A_4, TEXT_SFX_SKY_MOVE_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Skylord </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_B_Masari_Skylord">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_SKY0501_ENG.wav U000_SKY0502_ENG.wav U000_SKY0503_ENG.wav U000_SKY0504_ENG.wav U000_SKY0505_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_SKY_MOVE_B_1, TEXT_SFX_SKY_MOVE_B_2, TEXT_SFX_SKY_MOVE_B_3, TEXT_SFX_SKY_MOVE_B_4, TEXT_SFX_SKY_MOVE_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Masari_Skylord </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_ABILITY_A_Masari_Skylord">
+		<Use_Preset>Preset_EGB</Use_Preset>
+		<Samples> </Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>	     
+		<Overlap_Test> Unit_Masari_Skylord </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_ABILITY_B_Masari_Skylord">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_SKY0701_ENG.wav U000_SKY0702_ENG.wav U000_SKY0703_ENG.wav U000_SKY0704_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_SKY_ABILITY_B_1, TEXT_SFX_SKY_ABILITY_B_2, TEXT_SFX_SKY_ABILITY_B_3, TEXT_SFX_SKY_ABILITY_B_4</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Skylord </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Masari_Skylord_Avenger">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_SKA0101_ENG.wav U000_SKA0102_ENG.wav U000_SKA0103_ENG.wav U000_SKA0104_ENG.wav U000_SKA0105_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_SKA_SELECT_1, TEXT_SFX_SKA_SELECT_2, TEXT_SFX_SKA_SELECT_3, TEXT_SFX_SKA_SELECT_4, TEXT_SFX_SKA_SELECT_5</Text_ID>       
+		<Overlap_Test> Unit_Masari_Skylord_Avenger </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_A_Masari_Skylord_Avenger">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_SKA0201_ENG.wav U000_SKA0202_ENG.wav U000_SKA0203_ENG.wav U000_SKA0204_ENG.wav U000_SKA0205_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_SKA_ATTACK_A_1, TEXT_SFX_SKA_ATTACK_A_2, TEXT_SFX_SKA_ATTACK_A_3, TEXT_SFX_SKA_ATTACK_A_4, TEXT_SFX_SKA_ATTACK_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Skylord_Avenger </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_B_Masari_Skylord_Avenger">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_SKA0301_ENG.wav U000_SKA0302_ENG.wav U000_SKA0303_ENG.wav U000_SKA0304_ENG.wav U000_SKA0305_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_SKA_ATTACK_B_1, TEXT_SFX_SKA_ATTACK_B_2, TEXT_SFX_SKA_ATTACK_B_3, TEXT_SFX_SKA_ATTACK_B_4, TEXT_SFX_SKA_ATTACK_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Masari_Skylord_Avenger </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_A_Masari_Skylord_Avenger">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_SKA0401_ENG.wav U000_SKA0402_ENG.wav U000_SKA0403_ENG.wav U000_SKA0404_ENG.wav U000_SKA0405_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_SKA_MOVE_A_1, TEXT_SFX_SKA_MOVE_A_2, TEXT_SFX_SKA_MOVE_A_3, TEXT_SFX_SKA_MOVE_A_4, TEXT_SFX_SKA_MOVE_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Skylord_Avenger </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_B_Masari_Skylord_Avenger">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_SKA0501_ENG.wav U000_SKA0502_ENG.wav U000_SKA0503_ENG.wav U000_SKA0504_ENG.wav U000_SKA0505_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_SKA_MOVE_B_1, TEXT_SFX_SKA_MOVE_B_2, TEXT_SFX_SKA_MOVE_B_3, TEXT_SFX_SKA_MOVE_B_4, TEXT_SFX_SKA_MOVE_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Masari_Skylord_Avenger </Overlap_Test>
+	</SFXEvent>
+<!--
+	<SFXEvent Name="Unit_ABILITY_A_Masari_Skylord_Avenger">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_SKA0601_ENG.wav U000_SKA0602_ENG.wav U000_SKA0603_ENG.wav U000_SKA0604_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID />		     
+		<Overlap_Test> Unit_Masari_Skylord_Avenger </Overlap_Test>
+	</SFXEvent>
+-->
+
+
+
+
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Masari_Seer">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_SEE0101_ENG.wav U000_SEE0102_ENG.wav U000_SEE0103_ENG.wav U000_SEE0104_ENG.wav U000_SEE0105_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_SEE_SELECT_1, TEXT_SFX_SEE_SELECT_2, TEXT_SFX_SEE_SELECT_3, TEXT_SFX_SEE_SELECT_4, TEXT_SFX_SEE_SELECT_5</Text_ID>       
+		<Overlap_Test> Unit_Masari_Seer </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_A_Masari_Seer">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_SEE0201_ENG.wav U000_SEE0202_ENG.wav U000_SEE0203_ENG.wav U000_SEE0204_ENG.wav U000_SEE0205_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_SEE_ATTACK_A_1, TEXT_SFX_SEE_ATTACK_A_2, TEXT_SFX_SEE_ATTACK_A_3, TEXT_SFX_SEE_ATTACK_A_4, TEXT_SFX_SEE_ATTACK_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Seer </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_B_Masari_Seer">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_SEE0301_ENG.wav U000_SEE0302_ENG.wav U000_SEE0303_ENG.wav U000_SEE0304_ENG.wav U000_SEE0305_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_SEE_ATTACK_B_1, TEXT_SFX_SEE_ATTACK_B_2, TEXT_SFX_SEE_ATTACK_B_3, TEXT_SFX_SEE_ATTACK_B_4, TEXT_SFX_SEE_ATTACK_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Masari_Seer </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_A_Masari_Seer">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_SEE0401_ENG.wav U000_SEE0402_ENG.wav U000_SEE0403_ENG.wav U000_SEE0404_ENG.wav U000_SEE0405_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_SEE_MOVE_A_1, TEXT_SFX_SEE_MOVE_A_2, TEXT_SFX_SEE_MOVE_A_3, TEXT_SFX_SEE_MOVE_A_4, TEXT_SFX_SEE_MOVE_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Masari_Seer </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_B_Masari_Seer">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_SEE0501_ENG.wav U000_SEE0502_ENG.wav U000_SEE0503_ENG.wav U000_SEE0504_ENG.wav U000_SEE0505_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_SEE_MOVE_B_1, TEXT_SFX_SEE_MOVE_B_2, TEXT_SFX_SEE_MOVE_B_3, TEXT_SFX_SEE_MOVE_B_4, TEXT_SFX_SEE_MOVE_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Masari_Seer </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Masari_Retreat_Transport">
+		<Use_Preset>Preset_UR_3D</Use_Preset>
+		<Samples> Masari_Retreat_Transport_Select_1.wav </Samples>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Move_Masari_Retreat_Transport">
+		<Use_Preset>Preset_UR_3D</Use_Preset>
+		<Samples>Masari_Retreat_Transport_Move_1.wav </Samples>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_Masari_Retreat_Transport">
+		<Use_Preset>Preset_UR_3D</Use_Preset>
+		<Samples>Masari_Retreat_Transport_Move_1.wav </Samples>
+	</SFXEvent>
+
+
+
+
+	<SFXEvent Name="Unit_Death_Masari_Male">
+			<Use_Preset>Preset_UR_3D</Use_Preset>
+			<Samples>Male_Civilian_Death_6.wav Male_Civilian_Death_7.wav Male_Civilian_Death_8.wav Male_Civilian_Death_9.wav Male_Civilian_Death_10.wav Male_Civilian_Death_11.wav Male_Civilian_Death_12.wav Male_Civilian_Death_13.wav Male_Civilian_Death_14.wav Male_Civilian_Death_15.wav Male_Civilian_Death_16.wav Male_Civilian_Death_17.wav Male_Civilian_Death_18.wav </Samples>
+    </SFXEvent>
+
+	<SFXEvent Name="Unit_Death_Masari_Female">
+			<Use_Preset>Preset_UR_3D</Use_Preset>
+			<Samples>Female_Civilian_Death_2.wav Female_Civilian_Death_3.wav Female_Civilian_Death_5.wav Female_Civilian_Death_6.wav</Samples>
+    </SFXEvent>
+
+
+</SFXEvents>

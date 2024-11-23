@@ -1,0 +1,2641 @@
+<?xml version="1.0"?>
+<Attributes>
+
+
+	<!-- =================================================================================================
+==		 Tactical_Sell_Percent_Modifier
+================================================================================================== -->
+	<Attribute_Definition Name="Tactical_Sell_Percent_Modifier">
+		<Type> MultiplicativeCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Starting_Attributes> Type_Tactical_Sell_Percent_Modifier </Starting_Attributes>
+		<Default_Value> 0.0 </Default_Value>
+  </Attribute_Definition>
+
+	<Attribute_Definition Name="Type_Tactical_Sell_Percent_Modifier">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObjectType </Directory>
+		<Default_Value> 0.0 </Default_Value>
+      <Should_Auto_Publish> no </Should_Auto_Publish>
+  </Attribute_Definition>
+
+
+
+   <!-- =================================================================================================
+==		 Duration attribute 
+================================================================================================== -->
+   <Attribute_Definition Name="Tactical_Sell_Time_Seconds">
+      <Type> LinearCombination </Type>
+      <Directory> GameObject </Directory>
+      <Minimum> 0 </Minimum>
+      <Base_Attribute> Type_Tactical_Sell_Time_Seconds </Base_Attribute>
+      <Multiplicative_Attribute> Tactical_Sell_Time_Seconds_Mult_Coeff </Multiplicative_Attribute>
+      <Additive_Attribute> Tactical_Sell_Time_Seconds_Add_Coeff </Additive_Attribute>
+      <Default_Value> 5.0 </Default_Value>
+   </Attribute_Definition>
+
+   <Attribute_Definition Name="Tactical_Sell_Time_Seconds_Mult_Coeff">
+      <Type> MultiplicativeCoefficient </Type>
+      <Directory> GameObject </Directory>
+      <Minimum> 0 </Minimum>
+      <Default_Value> 1.0 </Default_Value>
+   </Attribute_Definition>
+
+   <Attribute_Definition Name="Tactical_Sell_Time_Seconds_Add_Coeff">
+      <Type> AdditiveCoefficient </Type>
+      <Directory> GameObject </Directory>
+      <Default_Value> 0.0 </Default_Value>
+   </Attribute_Definition>
+
+
+   <Attribute_Definition Name="Type_Tactical_Sell_Time_Seconds">
+      <Type> AdditiveCoefficient </Type>
+      <Directory> GameObjectType </Directory>
+      <Minimum> 0 </Minimum>
+      <Default_Value> 5.0 </Default_Value>
+   </Attribute_Definition>
+
+
+<!-- =================================================================================================
+==		 Mind_Control_Duration attribute 
+================================================================================================== -->
+	<Attribute_Definition Name="Mind_Control_Duration">
+		<Type> LinearCombination </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Base_Attribute> Type_Mind_Control_Duration </Base_Attribute>
+		<Multiplicative_Attribute> Mind_Control_Duration_Mult_Coeff </Multiplicative_Attribute>
+		<Additive_Attribute> Mind_Control_Duration_Add_Coeff </Additive_Attribute>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Mind_Control_Duration_Mult_Coeff">
+		<Type> MultiplicativeCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Default_Value> 1.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Mind_Control_Duration_Add_Coeff">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+
+	<Attribute_Definition Name="Type_Mind_Control_Duration">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObjectType </Directory>
+		<Minimum> 0 </Minimum>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+
+	<!-- =================================================================================================
+==		 Duration attribute 
+================================================================================================== -->
+    <Attribute_Definition Name="Effect_Duration_1">
+          <Type> LinearCombination </Type>
+          <Directory> GameObject </Directory>
+          <Minimum> 0 </Minimum>
+          <Base_Attribute> Type_Effect_Duration_1 </Base_Attribute>
+          <Multiplicative_Attribute> Effect_Duration_Mult_Coeff_1 </Multiplicative_Attribute>
+          <Additive_Attribute> Effect_Duration_Add_Coeff_1 </Additive_Attribute>
+          <Default_Value> 0.0 </Default_Value>
+      </Attribute_Definition>
+
+      <Attribute_Definition Name="Effect_Duration_Mult_Coeff_1">
+          <Type> MultiplicativeCoefficient </Type>
+          <Directory> GameObject </Directory>
+          <Minimum> 0 </Minimum>
+          <Default_Value> 1.0 </Default_Value>
+      </Attribute_Definition>
+
+      <Attribute_Definition Name="Effect_Duration_Add_Coeff_1">
+          <Type> AdditiveCoefficient </Type>
+          <Directory> GameObject </Directory>
+          <Default_Value> 0.0 </Default_Value>
+      </Attribute_Definition>
+
+
+      <Attribute_Definition Name="Type_Effect_Duration_1">
+          <Type> AdditiveCoefficient </Type>
+          <Directory> GameObjectType </Directory>
+          <Minimum> 0 </Minimum>
+          <Default_Value> 0.0 </Default_Value>
+      </Attribute_Definition>
+
+
+
+
+   <!-- =================================================================================================
+==		 Duration attribute 
+================================================================================================== -->
+   <Attribute_Definition Name="Phase_Effect_Duration">
+      <Type> LinearCombination </Type>
+      <Directory> GameObject </Directory>
+      <Minimum> 0 </Minimum>
+      <Base_Attribute> Type_Phase_Effect_Duration </Base_Attribute>
+      <Multiplicative_Attribute> Phase_Effect_Duration_Mult_Coeff </Multiplicative_Attribute>
+      <Additive_Attribute> Phase_Effect_Duration_Add_Coeff </Additive_Attribute>
+      <Default_Value> 0.0 </Default_Value>
+   </Attribute_Definition>
+
+   <Attribute_Definition Name="Phase_Effect_Duration_Mult_Coeff">
+      <Type> MultiplicativeCoefficient </Type>
+      <Directory> GameObject </Directory>
+      <Minimum> 0 </Minimum>
+      <Default_Value> 1.0 </Default_Value>
+   </Attribute_Definition>
+
+   <Attribute_Definition Name="Phase_Effect_Duration_Add_Coeff">
+      <Type> AdditiveCoefficient </Type>
+      <Directory> GameObject </Directory>
+      <Default_Value> 0.0 </Default_Value>
+   </Attribute_Definition>
+
+
+   <Attribute_Definition Name="Type_Phase_Effect_Duration">
+      <Type> AdditiveCoefficient </Type>
+      <Directory> GameObjectType </Directory>
+      <Minimum> 0 </Minimum>
+      <Default_Value> 0.0 </Default_Value>
+   </Attribute_Definition>
+
+
+
+
+
+   <!-- =================================================================================================
+==		 Damage attribute 
+================================================================================================== -->
+   <Attribute_Definition Name="Effect_Damage_Amount">
+      <Type> LinearCombination </Type>
+      <Directory> GameObject </Directory>
+      <Minimum> 0 </Minimum>
+      <Base_Attribute> Type_Effect_Damage_Amount </Base_Attribute>
+      <Multiplicative_Attribute> Effect_Damage_Amount_Mult_Coeff </Multiplicative_Attribute>
+      <Additive_Attribute> Effect_Damage_Amount_Add_Coeff </Additive_Attribute>
+      <Default_Value> 0.0 </Default_Value>
+   </Attribute_Definition>
+
+   <Attribute_Definition Name="Effect_Damage_Amount_Mult_Coeff">
+      <Type> MultiplicativeCoefficient </Type>
+      <Directory> GameObject </Directory>
+      <Minimum> 0 </Minimum>
+      <Default_Value> 1.0 </Default_Value>
+   </Attribute_Definition>
+
+   <Attribute_Definition Name="Effect_Damage_Amount_Add_Coeff">
+      <Type> AdditiveCoefficient </Type>
+      <Directory> GameObject </Directory>
+      <Default_Value> 0.0 </Default_Value>
+   </Attribute_Definition>
+
+
+   <Attribute_Definition Name="Type_Effect_Damage_Amount">
+      <Type> AdditiveCoefficient </Type>
+      <Directory> GameObjectType </Directory>
+      <Minimum> 0 </Minimum>
+      <Default_Value> 0.0 </Default_Value>
+   </Attribute_Definition>
+
+
+
+
+   <!-- =================================================================================================
+==		 Max_Speed composite attribute 
+================================================================================================== -->
+
+	<Attribute_Definition Name="Max_Speed">
+		<Type> LinearCombination </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Base_Attribute> Max_Speed_GOT </Base_Attribute>
+		<Multiplicative_Attribute> Max_Speed_Mult_Coeff </Multiplicative_Attribute>
+		<Additive_Attribute> Max_Speed_Add_Coeff </Additive_Attribute>
+		<Default_Value> 1.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Max_Speed_Mult_Coeff">
+		<Type> MultiplicativeCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Default_Value> 1.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Max_Speed_Add_Coeff">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Max_Speed_GOT">
+		<Type> GameObjectTypeDataMember </Type>
+		<Directory> GameObjectType </Directory>
+		<XML_Data_Name> Max_Speed </XML_Data_Name>
+		<Minimum> 0 </Minimum>
+		<Default_Value> 1.0 </Default_Value>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+==		 Rate_Of_Turn_Add: increases the rate of turn (movement)
+================================================================================================== -->
+	<Attribute_Definition Name="Rate_Of_Turn_Add">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum>999999</Maximum>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+==		 Harvest_Material_Add: increases the rate of harvesters 
+================================================================================================== -->
+	<Attribute_Definition Name="Harvest_Material_Add">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0 </Default_Value>
+		<Minimum> -1 </Minimum>
+		<Maximum>999999</Maximum>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+==		 Harvest_Material_Storage_Add: increases the storage of resources (currently only Masari)
+================================================================================================== -->
+	<Attribute_Definition Name="Harvest_Material_Storage_Add">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum>999999</Maximum>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+==		 Number_Of_Assigned_Builders
+================================================================================================== -->
+	<Attribute_Definition Name="Number_Of_Assigned_Builders">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum>999</Maximum>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+==		 Structure_Upgrade_Rate: increase in build rate for structures and hard points
+==		 Used with Number_Of_Assigned_Builders.
+================================================================================================== -->
+	<Attribute_Definition Name="Structure_Upgrade_Rate">
+		<Type> StorageFloat </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum>999</Maximum>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+==		 Structure_Upgrade_Rate_Max: max build rate allowed from builders * upgrade
+================================================================================================== -->
+	<Attribute_Definition Name="Structure_Upgrade_Rate_Max">
+		<Type> StorageFloat </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum>9999</Maximum>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+==		 Structure_Speed_Build: builder increase of build rate not tied to number of builders
+================================================================================================== -->
+	<Attribute_Definition Name="Structure_Speed_Build">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum>999999</Maximum>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+==		 Structure_Slow_Build: builder decrease of build rate not tied to number of builders
+================================================================================================== -->
+	<Attribute_Definition Name="Structure_Slow_Build">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum>999999</Maximum>
+	</Attribute_Definition>
+
+   <!-- =================================================================================================
+	==		Structure Construction Rate Cap attributes 
+	================================================================================================== -->
+   <Attribute_Definition Name="Type_Max_Structure_Build_Rate">
+      <Type> AdditiveCoefficient </Type>
+      <Directory> GameObjectType </Directory>
+      <Default_Value> 10 </Default_Value>
+     <Should_Auto_Publish> no </Should_Auto_Publish>
+   </Attribute_Definition>
+
+   <Attribute_Definition Name="Max_Structure_Build_Rate">
+      <Type> AdditiveCoefficient </Type>
+      <Directory> GameObject </Directory>
+      <Starting_Attributes> Type_Max_Structure_Build_Rate </Starting_Attributes>
+      <Default_Value> 10 </Default_Value>
+   </Attribute_Definition>
+
+<!-- =================================================================================================
+==		 EMP_Stun_Effect attribute to show units hit by stun. Used by superweapons to stop recharge
+================================================================================================== -->
+	<Attribute_Definition Name="EMP_Stun_Effect">
+		<Type> BooleanOr </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+	</Attribute_Definition>
+
+<!-- =================================================================================================
+==		 Inverter_Shield_Up attribute to show that our shield is up
+================================================================================================== -->
+	<Attribute_Definition Name="Inverter_Shield_Up">
+		<Type> BooleanOr </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+==		 Patch_Viral_Reboot attribute to show units viral rebooted
+================================================================================================== -->
+	<Attribute_Definition Name="Patch_Viral_Reboot">
+		<Type> BooleanOr </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+	</Attribute_Definition>
+	
+	<!-- =================================================================================================
+==		 Powered_By_Patch attribute used by by objects that are patch powered
+================================================================================================== -->
+	<Attribute_Definition Name="Powered_By_Patch">
+		<Type> BooleanOr </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+	</Attribute_Definition>
+
+<!-- =================================================================================================
+==		 Is_Build_Anim_Finished attribute
+================================================================================================== -->
+	<Attribute_Definition Name="Is_Build_Anim_Finished">
+		<Type> BooleanOr </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+	</Attribute_Definition>
+
+<!-- =================================================================================================
+==		 Radiation_Wave_Width: additonal wave width
+==		 
+================================================================================================== -->
+	<Attribute_Definition Name="Radiation_Wave_Width">
+		<Type> StorageFloat </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum>9999.0</Maximum>
+	</Attribute_Definition>
+
+<!-- =================================================================================================
+==		 Mind_Magnet_Targets: additonal max targets
+==		 
+================================================================================================== -->
+	<Attribute_Definition Name="Mind_Magnet_Targets">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum>9999.0</Maximum>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+==		 AI_Mind_Magnet_Targets: additonal max targets
+==		 
+================================================================================================== -->
+	<Attribute_Definition Name="AI_Mind_Magnet_Targets">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum>9999.0</Maximum>
+	</Attribute_Definition>
+	
+	<!-- =================================================================================================
+==		 Cascade_Hard_Points: hard point attribute count
+==		 
+================================================================================================== -->
+	<Attribute_Definition Name="Cascade_Hard_Points">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum>999999</Maximum>
+	</Attribute_Definition>
+
+<!-- =================================================================================================
+==		 Scan_Nodes: how many scan nodes
+==		 
+================================================================================================== -->
+	<Attribute_Definition Name="Scan_Nodes">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum>999999</Maximum>
+	</Attribute_Definition>
+
+<!-- =================================================================================================
+==		 Is_Repairable_Bridge GOT attribute 
+================================================================================================== -->
+	<Attribute_Definition Name="Type_Is_Repairable_Bridge">
+		<Type> StorageInt </Type>
+		<Directory> GameObjectType </Directory>
+		<Minimum> 0 </Minimum>
+		<Default_Integer_Value> 0 </Default_Integer_Value>
+	</Attribute_Definition>
+
+<!-- =================================================================================================
+==		 Is_Phasable composite attribute 
+================================================================================================== -->
+	<Attribute_Definition Name="Type_Animation_Subindex_Override">
+		<Type> GameObjectTypeDataMember </Type>
+		<Directory> GameObjectType </Directory>
+		<XML_Data_Name> Walk_Locomotor_Anim_Subindex </XML_Data_Name>
+		<Minimum> -1 </Minimum>
+		<Default_Integer_Value> -1 </Default_Integer_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Animation_Subindex_Override">
+		<Type> StorageInt </Type>
+		<Directory> GameObject </Directory>
+		<Starting_Attributes> Type_Animation_Subindex_Override </Starting_Attributes>
+		<Default_Integer_Value> -1 </Default_Integer_Value>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+==		 Is_Phasable composite attribute 
+================================================================================================== -->
+	<Attribute_Definition Name="Type_Is_Phasable">
+		<Type> BooleanAnd </Type>
+		<Directory> GameObjectType </Directory>
+		<Default_Value> 0.0 </Default_Value>
+    <Should_Auto_Publish> no </Should_Auto_Publish>
+  </Attribute_Definition>
+
+  <Attribute_Definition Name="Is_Phasable">
+    <Type> BooleanAnd </Type>
+    <Directory> GameObject </Directory>
+    <Starting_Attributes> Type_Is_Phasable </Starting_Attributes>
+    <Default_Value> 0.0 </Default_Value>
+  </Attribute_Definition>
+
+	<!-- =================================================================================================
+==		 Is_Fleet composite attribute 
+================================================================================================== -->
+	<Attribute_Definition Name="Type_Is_Fleet">
+		<Type> BooleanAnd </Type>
+		<Directory> GameObjectType </Directory>
+		<Default_Value> 0.0 </Default_Value>
+    <Should_Auto_Publish> no </Should_Auto_Publish>
+  </Attribute_Definition>
+
+  <Attribute_Definition Name="Is_Fleet">
+    <Type> BooleanAnd </Type>
+    <Directory> GameObject </Directory>
+    <Starting_Attributes> Type_Is_Fleet </Starting_Attributes>
+    <Default_Value> 0.0 </Default_Value>
+  </Attribute_Definition>
+
+
+	<!-- =================================================================================================
+==		 Is_Mutant_Slave composite attribute 
+================================================================================================== -->
+
+	<Attribute_Definition Name="Type_Is_Mutant_Slave">
+		<Type> BooleanAnd </Type>
+		<Directory> GameObjectType </Directory>
+		<Default_Value> 0.0 </Default_Value>
+    <Should_Auto_Publish> no </Should_Auto_Publish>
+  </Attribute_Definition>
+
+	<Attribute_Definition Name="Is_Mutant_Slave">
+		<Type> BooleanAnd </Type>
+		<Directory> GameObject </Directory>
+		<Starting_Attributes> Type_Is_Mutant_Slave </Starting_Attributes>
+		<Default_Value> 0.0 </Default_Value>
+  </Attribute_Definition>
+
+	<!-- =================================================================================================
+==		 Is_Immune_To_Mind_Control composite attribute 
+================================================================================================== -->
+
+	<Attribute_Definition Name="Type_Is_Immune_To_Mind_Control">
+		<Type> BooleanAnd </Type>
+		<Directory> GameObjectType </Directory>
+		<Default_Value> 0.0 </Default_Value>
+    <Should_Auto_Publish> no </Should_Auto_Publish>
+  </Attribute_Definition>
+
+	<Attribute_Definition Name="Is_Immune_To_Mind_Control">
+		<Type> BooleanAnd </Type>
+		<Directory> GameObject </Directory>
+		<Starting_Attributes> Type_Is_Immune_To_Mind_Control </Starting_Attributes>
+		<Default_Value> 0.0 </Default_Value>
+  </Attribute_Definition>
+
+	<!-- =================================================================================================
+==		 Can_Be_Captured composite attribute 
+================================================================================================== -->
+
+	<Attribute_Definition Name="Type_Can_Be_Captured">
+		<Type> BooleanAnd </Type>
+		<Directory> GameObjectType </Directory>
+		<Default_Value> 0.0 </Default_Value>
+    <Should_Auto_Publish> no </Should_Auto_Publish>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Can_Be_Captured">
+		<Type> BooleanAnd </Type>
+		<Directory> GameObject </Directory>
+		<Starting_Attributes> Type_Can_Be_Captured </Starting_Attributes>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+==		 Is_Resistant_To_Mind_Control composite attribute 
+================================================================================================== -->
+
+<!--  cleaned out by Jonathan Burgess, contact me if you need it back.
+  <Attribute_Definition Name="Type_Is_Resistant_To_Mind_Control">
+		<Type> BooleanAnd </Type>
+		<Directory> GameObjectType </Directory>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Is_Resistant_To_Mind_Control">
+		<Type> BooleanAnd </Type>
+		<Directory> GameObject </Directory>
+		<Starting_Attributes> Type_Is_Resistant_To_Mind_Control </Starting_Attributes>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+-->
+  
+	<!-- =================================================================================================
+==		 Affected_By_Novus composite attribute 
+================================================================================================== -->
+	<Attribute_Definition Name="Type_Affected_By_Novus_Signal">
+		<Type> BooleanAnd </Type>
+		<Directory> GameObjectType </Directory>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Affected_By_Novus_Signal">
+		<Type> BooleanAnd </Type>
+		<Directory> GameObject </Directory>
+		<Starting_Attributes> Type_Affected_By_Novus_Signal </Starting_Attributes>
+		<Default_Value> 0.0 </Default_Value>
+    
+  </Attribute_Definition>
+
+
+	<!-- =================================================================================================
+==		 Transmits_Novus_Signal composite attribute 
+================================================================================================== -->
+	<Attribute_Definition Name="Type_Transmits_Novus_Signal">
+		<Type> BooleanOr </Type>
+		<Directory> GameObjectType </Directory>
+		<Default_Value> 0.0 </Default_Value>
+    <Should_Auto_Publish> no </Should_Auto_Publish>
+  </Attribute_Definition>
+
+	<Attribute_Definition Name="Transmits_Novus_Signal">
+		<Type> BooleanOr </Type>
+		<Directory> GameObject </Directory>
+		<Starting_Attributes> Type_Transmits_Novus_Signal </Starting_Attributes>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+
+	<!-- =================================================================================================
+==		 Can_Garrison_Buildings composite attribute 
+================================================================================================== -->
+	<Attribute_Definition Name="Type_Can_Garrison_Buildings">
+		<Type> BooleanAnd </Type>
+		<Directory> GameObjectType </Directory>
+		<Default_Value> 0.0 </Default_Value>
+    <Should_Auto_Publish> no </Should_Auto_Publish>
+  </Attribute_Definition>
+	
+	<Attribute_Definition Name="Can_Garrison_Buildings">
+		<Type> BooleanAnd </Type>
+		<Directory> GameObject </Directory>
+		<Starting_Attributes> Type_Can_Garrison_Buildings </Starting_Attributes>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+<!-- =================================================================================================
+==		 Can_Enter_Resource_Depot composite attribute 
+================================================================================================== -->
+	
+	<!--<Attribute_Definition Name="Type_Can_Enter_Resource_Depot">
+		<Type> BooleanOr </Type>
+		<Directory> GameObjectType </Directory>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Can_Enter_Resource_Depot">
+		<Type> BooleanOr </Type>
+		<Directory> GameObject </Directory>
+		<Starting_Attributes> Type_Can_Enter_Resource_Depot </Starting_Attributes>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>-->
+
+
+	<!-- =================================================================================================
+==		 Collector_Resource_Gain_Multiplier attribute 
+================================================================================================== -->
+	<Attribute_Definition Name="Collector_Resource_Gain_Multiplier">
+		<Type> MultiplicativeCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 1.0 </Default_Value>
+	</Attribute_Definition>
+
+
+	<!-- =================================================================================================
+==		 Can_Ride_In_Vehicles composite attribute 
+================================================================================================== -->
+	<Attribute_Definition Name="Type_Can_Ride_In_Vehicles">
+		<Type> BooleanAnd </Type>
+		<Directory> GameObjectType </Directory>
+		<Default_Value> 0.0 </Default_Value>
+    <Should_Auto_Publish> no </Should_Auto_Publish>
+  </Attribute_Definition>
+
+	<Attribute_Definition Name="Can_Ride_In_Vehicles">
+		<Type> BooleanAnd </Type>
+		<Directory> GameObject </Directory>
+		<Starting_Attributes> Type_Can_Ride_In_Vehicles </Starting_Attributes>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+==		 Too_Big_For_Faction_Transport composite attribute 
+================================================================================================== -->
+	<Attribute_Definition Name="Type_Too_Big_For_Faction_Transport">
+		<Type> BooleanOr </Type>
+		<Directory> GameObjectType </Directory>
+		<Default_Value> 0.0 </Default_Value>
+    <Should_Auto_Publish> no </Should_Auto_Publish>
+  </Attribute_Definition>
+
+	<Attribute_Definition Name="Too_Big_For_Faction_Transport">
+		<Type> BooleanOr </Type>
+		<Directory> GameObject </Directory>
+		<Starting_Attributes> Type_Too_Big_For_Faction_Transport </Starting_Attributes>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+
+	<!-- =================================================================================================
+==		 Is_Degarrison composite attribute 
+================================================================================================== -->
+<!-- Jonathan Burgess, removed for size constraints
+  <Attribute_Definition Name="Type_Is_Degarrison">
+		<Type> BooleanOr </Type>
+		<Directory> GameObjectType </Directory>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Is_Degarrison">
+		<Type> BooleanOr </Type>
+		<Directory> GameObject </Directory>
+		<Starting_Attributes> Type_Is_Degarrison </Starting_Attributes>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+-->
+
+
+<!-- =================================================================================================
+==		 Should_Aways_Flow composite attribute 
+================================================================================================== -->
+	<Attribute_Definition Name="Type_Should_Aways_Flow">
+		<Type> BooleanOr </Type>
+		<Directory> GameObjectType </Directory>
+		<Default_Value> 0.0 </Default_Value>
+    <Should_Auto_Publish> no </Should_Auto_Publish>
+  </Attribute_Definition>
+
+	<Attribute_Definition Name="Should_Aways_Flow">
+		<Type> BooleanOr </Type>
+		<Directory> GameObject </Directory>
+		<Starting_Attributes> Type_Should_Aways_Flow </Starting_Attributes>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+
+
+	<!-- =================================================================================================
+	==		 Flow_Speed_Multiplier composite attribute (attribute value = 1.0 + sum of all modifiers)
+	================================================================================================== -->
+
+  <Attribute_Definition Name="Type_Flow_Speed_Multiplier">
+    <Type> AdditiveCoefficient </Type>
+    <Directory> GameObjectType </Directory>
+    <Minimum> 0.0 </Minimum>
+    <Default_Value> 0.0 </Default_Value>
+  </Attribute_Definition>
+
+  <Attribute_Definition Name="Flow_Speed_Multiplier">
+		<Type> MultiplicativeCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0.0 </Minimum>
+		<Starting_Attributes> Type_Flow_Speed_Multiplier </Starting_Attributes>
+		<Default_Value> 1.0 </Default_Value>
+	</Attribute_Definition>
+
+
+	<!-- =================================================================================================
+	==		 Damage_Taken Multiplier 
+	================================================================================================== -->
+	<Attribute_Definition Name="Damage_Taken_Mult_Coeff">
+		<Type> MultiplicativeCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Default_Value> 1.0 </Default_Value>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+	==		 Damage_Cast Multiplier 
+    ==  Note that GameObject::Take_Damage() will check objects that fired them for this multiplier and
+    ==  factor it in.
+	================================================================================================== -->
+	<Attribute_Definition Name="Damage_Cast_Mult_Coeff">
+		<Type> MultiplicativeCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Default_Value> 1.0 </Default_Value>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+	==		 Fleet speed Delay and Rate Multipliers
+	================================================================================================== -->
+	<Attribute_Definition Name="Fleet_Speed_Delay_Multiplier">
+		<Type> MultiplicativeCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Default_Value> 1.0 </Default_Value>
+	</Attribute_Definition>
+
+
+	<Attribute_Definition Name="Fleet_Speed_Rate_Multiplier">
+		<Type> MultiplicativeCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Default_Value> 1.0 </Default_Value>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+	==		 Weapon Delay and Rate Multipliers
+	================================================================================================== -->
+	<Attribute_Definition Name="Weapon_Delay_Multiplier">
+		<Type> MultiplicativeCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Default_Value> 1.0 </Default_Value>
+	</Attribute_Definition>
+
+
+	<Attribute_Definition Name="Weapon_Rate_Multiplier">
+		<Type> MultiplicativeCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Default_Value> 1.0 </Default_Value>
+	</Attribute_Definition>
+
+
+	<!-- =================================================================================================
+==		 Novus_Power_Glow attributes
+================================================================================================== -->
+	<!--<Attribute_Definition Name="Novus_Power_Glow_Red">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Novus_Power_Glow_Green">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Novus_Power_Glow_Blue">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Novus_Power_Glow_Alpha">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+		<Default_Value> 1.0 </Default_Value>
+	</Attribute_Definition>-->
+
+
+
+
+	<!-- =================================================================================================
+==		 Tactical_Build_Cost_Credits composite attribute 
+================================================================================================== -->
+	<Attribute_Definition Name="Tactical_Build_Cost_Credits">
+		<Type> LinearCombination </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Base_Attribute> Tactical_Build_Cost_Credits_GOT </Base_Attribute>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Tactical_Build_Cost_Credits_GOT">
+		<Type> GameObjectTypeFunction </Type>
+		<Directory> GameObjectType </Directory>
+		<GOT_Function_Name> Get_Tactical_Build_Cost_Credits_Basic </GOT_Function_Name>
+		<Minimum> 0 </Minimum>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+
+	<!-- =================================================================================================
+==		 Generator_Area_Effect_Radius_1 composite attribute 
+================================================================================================== -->
+	<Attribute_Definition Name="Generator_Area_Effect_Radius_1">
+		<Type> LinearCombination </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Base_Attribute> Type_Generator_Area_Effect_Radius_1 </Base_Attribute>
+		<Multiplicative_Attribute> Generator_Area_Effect_Radius_Mult_Coeff_1 </Multiplicative_Attribute>
+		<Additive_Attribute> Generator_Area_Effect_Radius_Add_Coeff_1 </Additive_Attribute>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Generator_Area_Effect_Radius_Mult_Coeff_1">
+		<Type> MultiplicativeCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Default_Value> 1.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Generator_Area_Effect_Radius_Add_Coeff_1">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+
+	<Attribute_Definition Name="Type_Generator_Area_Effect_Radius_1">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObjectType </Directory>
+		<Minimum> 0 </Minimum>
+		<Default_Value> 0.0 </Default_Value>
+    <Should_Auto_Publish> no </Should_Auto_Publish>
+  </Attribute_Definition>
+   
+   
+   
+
+	<!-- =================================================================================================
+==		 Novus_Power_Transmission_Radius composite attribute 
+================================================================================================== -->
+	<Attribute_Definition Name="Novus_Power_Transmission_Radius">
+		<Type> LinearCombination </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Base_Attribute> Type_Novus_Power_Transmission_Radius </Base_Attribute>
+		<Multiplicative_Attribute> Novus_Power_Transmission_Radius_Mult_Coeff </Multiplicative_Attribute>
+		<Additive_Attribute> Novus_Power_Transmission_Radius_Add_Coeff </Additive_Attribute>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Novus_Power_Transmission_Radius_Mult_Coeff">
+		<Type> MultiplicativeCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Default_Value> 1.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Novus_Power_Transmission_Radius_Add_Coeff">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Type_Novus_Power_Transmission_Radius">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObjectType </Directory>
+		<Minimum> 0 </Minimum>
+		<Default_Value> 0.0 </Default_Value>
+    <Should_Auto_Publish> no </Should_Auto_Publish>
+  </Attribute_Definition>
+
+	<!-- =================================================================================================
+==		 Novus_Power_Powerup_Radius composite attribute 
+================================================================================================== -->
+	<Attribute_Definition Name="Novus_Power_Powerup_Radius">
+		<Type> LinearCombination </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Base_Attribute> Type_Novus_Power_Powerup_Radius </Base_Attribute>
+		<Multiplicative_Attribute> Novus_Power_Powerup_Radius_Mult_Coeff </Multiplicative_Attribute>
+		<Additive_Attribute> Novus_Power_Powerup_Radius_Add_Coeff </Additive_Attribute>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Novus_Power_Powerup_Radius_Mult_Coeff">
+		<Type> MultiplicativeCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Default_Value> 1.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Novus_Power_Powerup_Radius_Add_Coeff">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Type_Novus_Power_Powerup_Radius">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObjectType </Directory>
+		<Minimum> 0 </Minimum>
+		<Default_Value> 0.0 </Default_Value>
+    <Should_Auto_Publish> no </Should_Auto_Publish>
+  </Attribute_Definition>
+
+<!-- =================================================================================================
+==		 Novus_Flow_Radius composite attribute 
+================================================================================================== -->
+
+	<Attribute_Definition Name="Novus_Flow_Radius">
+		<Type> LinearCombination </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Base_Attribute> Type_Novus_Flow_Radius </Base_Attribute>
+		<Multiplicative_Attribute> Novus_Flow_Radius_Mult_Coeff </Multiplicative_Attribute>
+		<Additive_Attribute> Novus_Flow_Radius_Add_Coeff </Additive_Attribute>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Novus_Flow_Radius_Mult_Coeff">
+		<Type> MultiplicativeCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Default_Value> 1.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Novus_Flow_Radius_Add_Coeff">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Type_Novus_Flow_Radius">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObjectType </Directory>
+		<Minimum> 0 </Minimum>
+		<Default_Value> 0.0 </Default_Value>
+    <Should_Auto_Publish> no </Should_Auto_Publish>
+  </Attribute_Definition>
+
+<!-- =================================================================================================
+==		 Generator_Area_Effect_Radius_2 composite attribute 
+================================================================================================== -->
+	<Attribute_Definition Name="Generator_Area_Effect_Radius_2">
+		<Type> LinearCombination </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Base_Attribute> Type_Generator_Area_Effect_Radius_2 </Base_Attribute>
+		<Multiplicative_Attribute> Generator_Area_Effect_Radius_Mult_Coeff_2 </Multiplicative_Attribute>
+		<Additive_Attribute> Generator_Area_Effect_Radius_Add_Coeff_2 </Additive_Attribute>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Generator_Area_Effect_Radius_Mult_Coeff_2">
+		<Type> MultiplicativeCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Default_Value> 1.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Generator_Area_Effect_Radius_Add_Coeff_2">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Type_Generator_Area_Effect_Radius_2">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObjectType </Directory>
+		<Minimum> 0 </Minimum>
+		<Default_Value> 0.0 </Default_Value>
+    <Should_Auto_Publish> no </Should_Auto_Publish>
+  </Attribute_Definition>
+
+
+
+
+   <!-- =================================================================================================
+==		Generic_Composite_Attribute_1 composite attribute 
+================================================================================================== -->
+   <Attribute_Definition Name="Generic_Composite_Attribute_1">
+      <Type> LinearCombination </Type>
+      <Directory> GameObject </Directory>
+      <Minimum> 0 </Minimum>
+      <Base_Attribute> Type_Generic_Composite_Attribute_1 </Base_Attribute>
+      <Multiplicative_Attribute> Generic_Composite_Attribute_Mult_Coeff_1 </Multiplicative_Attribute>
+      <Additive_Attribute> Generic_Composite_Attribute_Add_Coeff_1 </Additive_Attribute>
+      <Default_Value> 0.0 </Default_Value>
+   </Attribute_Definition>
+
+   <Attribute_Definition Name="Generic_Composite_Attribute_Mult_Coeff_1">
+      <Type> MultiplicativeCoefficient </Type>
+      <Directory> GameObject </Directory>
+      <Minimum> 0 </Minimum>
+      <Default_Value> 1.0 </Default_Value>
+   </Attribute_Definition>
+
+   <Attribute_Definition Name="Generic_Composite_Attribute_Add_Coeff_1">
+      <Type> AdditiveCoefficient </Type>
+      <Directory> GameObject </Directory>
+      <Default_Value> 0.0 </Default_Value>
+   </Attribute_Definition>
+
+   <Attribute_Definition Name="Type_Generic_Composite_Attribute_1">
+      <Type> AdditiveCoefficient </Type>
+      <Directory> GameObjectType </Directory>
+      <Minimum> 0 </Minimum>
+      <Default_Value> 0.0 </Default_Value>
+      <Should_Auto_Publish> no </Should_Auto_Publish>
+   </Attribute_Definition>
+
+
+   <!-- =================================================================================================
+==		Generic_Composite_Attribute_2 composite attribute 
+================================================================================================== -->
+   <Attribute_Definition Name="Generic_Composite_Attribute_2">
+      <Type> LinearCombination </Type>
+      <Directory> GameObject </Directory>
+      <Minimum> 0 </Minimum>
+      <Base_Attribute> Type_Generic_Composite_Attribute_2 </Base_Attribute>
+      <Multiplicative_Attribute> Generic_Composite_Attribute_Mult_Coeff_2 </Multiplicative_Attribute>
+      <Additive_Attribute> Generic_Composite_Attribute_Add_Coeff_2 </Additive_Attribute>
+      <Default_Value> 0.0 </Default_Value>
+   </Attribute_Definition>
+
+   <Attribute_Definition Name="Generic_Composite_Attribute_Mult_Coeff_2">
+      <Type> MultiplicativeCoefficient </Type>
+      <Directory> GameObject </Directory>
+      <Minimum> 0 </Minimum>
+      <Default_Value> 1.0 </Default_Value>
+   </Attribute_Definition>
+
+   <Attribute_Definition Name="Generic_Composite_Attribute_Add_Coeff_2">
+      <Type> AdditiveCoefficient </Type>
+      <Directory> GameObject </Directory>
+      <Default_Value> 0.0 </Default_Value>
+   </Attribute_Definition>
+
+   <Attribute_Definition Name="Type_Generic_Composite_Attribute_2">
+      <Type> AdditiveCoefficient </Type>
+      <Directory> GameObjectType </Directory>
+      <Minimum> 0 </Minimum>
+      <Default_Value> 0.0 </Default_Value>
+      <Should_Auto_Publish> no </Should_Auto_Publish>
+   </Attribute_Definition>
+
+   
+   
+<!-- =================================================================================================
+==		 Is_Immune_To_Virus composite attribute 
+================================================================================================== -->
+	<Attribute_Definition Name="Type_Is_Immune_To_Virus">
+		<Type> BooleanAnd </Type>
+		<Directory> GameObjectType </Directory>
+		<Default_Value> 0.0 </Default_Value>
+    <Should_Auto_Publish> no </Should_Auto_Publish>
+  </Attribute_Definition>
+
+	<Attribute_Definition Name="Is_Immune_To_Virus">
+		<Type> BooleanAnd </Type>
+		<Directory> GameObject </Directory>
+		<Starting_Attributes> Type_Is_Immune_To_Virus </Starting_Attributes>
+		<Default_Value> 0.0 </Default_Value>
+  </Attribute_Definition>
+
+
+
+
+	<!-- =================================================================================================
+==		 Is_Immune_To_Amplifier_Lockdown composite attribute 
+================================================================================================== -->
+	
+	<Attribute_Definition Name="Type_Is_Immune_To_Amplifier_Lockdown">
+		<Type> BooleanOr </Type>
+		<Directory> GameObjectType </Directory>
+		<Default_Value> 0.0 </Default_Value>
+		<Should_Auto_Publish> no </Should_Auto_Publish>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Is_Immune_To_Amplifier_Lockdown">
+		<Type> BooleanOr</Type>
+		<Directory> GameObject </Directory>
+		<Starting_Attributes> Type_Is_Immune_To_Amplifier_Lockdown </Starting_Attributes>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+	
+	
+	
+
+	<!-- =================================================================================================
+==		 Land_FOW_Reveal composite attribute 
+================================================================================================== -->
+	<Attribute_Definition Name="Max_Attribute_Land_FOW_Reveal">
+		<Type> LinearCombination </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Base_Attribute> Max_Land_FOW_Reveal_GOT </Base_Attribute>
+		<Multiplicative_Attribute> Max_Land_FOW_Reveal_Mult_Coeff </Multiplicative_Attribute>
+		<Additive_Attribute> Max_Land_FOW_Reveal_Add_Coeff </Additive_Attribute>
+		<Default_Value> 1.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Max_Land_FOW_Reveal_Mult_Coeff">
+		<Type> MultiplicativeCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Default_Value> 1.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Max_Land_FOW_Reveal_Add_Coeff">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Max_Land_FOW_Reveal_GOT">
+		<Type> GameObjectTypeDataMember </Type>
+		<Directory> GameObjectType </Directory>
+		<XML_Data_Name> Land_FOW_Reveal_Range </XML_Data_Name>
+		<Minimum> 0 </Minimum>
+		<Default_Value> 1.0 </Default_Value>
+	</Attribute_Definition>
+
+<!-- =================================================================================================
+==		 Special_Ability_Range stuff
+================================================================================================== -->
+
+	<Attribute_Definition Name="Special_Ability_Range_Mult_Coeff">
+		<Type> MultiplicativeCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Default_Value> 1.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Special_Ability_Range_Add_Coeff">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+==		 Weapon_Range composite attribute 
+================================================================================================== -->
+	<Attribute_Definition Name="Weapon_Range">
+		<Type> LinearCombination </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Base_Attribute> Weapon_Range_GOT </Base_Attribute>
+		<Multiplicative_Attribute> Weapon_Range_Mult_Coeff </Multiplicative_Attribute>
+		<Additive_Attribute> Weapon_Range_Add_Coeff </Additive_Attribute>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Weapon_Range_Mult_Coeff">
+		<Type> MultiplicativeCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Default_Value> 1.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Weapon_Range_Add_Coeff">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Weapon_Range_GOT">
+		<Type> GameObjectTypeDataMember </Type>
+		<Directory> GameObjectType </Directory>
+		<XML_Data_Name> Targeting_Max_Attack_Distance </XML_Data_Name>
+		<Minimum> 0 </Minimum>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+
+
+
+
+	<!-- =================================================================================================
+==		 Virus_Level  attribute 
+================================================================================================== -->
+	<Attribute_Definition Name="Virus_Level">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+==		 Virus_At_Max  attribute: Used as a flag to stop structure behaviors
+================================================================================================== -->
+	<Attribute_Definition Name="Virus_At_Max">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+==		 Create_Radiation_Mutant attribute 
+================================================================================================== -->
+	<Attribute_Definition Name="Create_Radiation_Mutant">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+
+	<!-- =================================================================================================
+   ==		 Unit Build Rate Multiplier attribute
+   ================================================================================================== -->
+
+	<Attribute_Definition Name="Unit_Build_Rate_Multiplier">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<!-- allow lower than to allow stacking etc -->
+		<Minimum> -999.0 </Minimum>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+   <!-- =================================================================================================
+	==		Unit Build Rate Cap attributes - the build rate for any enabler can NEVER go above this cap.
+	================================================================================================== -->
+   <Attribute_Definition Name="Type_Max_Unit_Build_Rate">
+      <Type> AdditiveCoefficient </Type>
+      <Directory> GameObjectType </Directory>
+      <Default_Value> 10 </Default_Value>
+     <Should_Auto_Publish> no </Should_Auto_Publish>
+   </Attribute_Definition>
+
+   <Attribute_Definition Name="Max_Unit_Build_Rate">
+      <Type> AdditiveCoefficient </Type>
+      <Directory> GameObject </Directory>
+      <Starting_Attributes> Type_Max_Unit_Build_Rate </Starting_Attributes>
+      <Default_Value> 10 </Default_Value>
+   </Attribute_Definition>
+   
+
+	<!-- =================================================================================================
+	==		 Build Cost multiplier for units. Attribute present on structure that produces the units.
+	================================================================================================== -->
+	<Attribute_Definition Name="Unit_Tactical_Build_Cost_Multiplier">
+		<Type> MultiplicativeCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0.0 </Minimum>
+		<Default_Value> 1.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Unit_Strategic_Build_Cost_Multiplier">
+		<Type> MultiplicativeCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0.0 </Minimum>
+		<Default_Value> 1.0 </Default_Value>
+	</Attribute_Definition>	
+
+	<Attribute_Definition Name="Render_Tint_Red">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Render_Tint_Green">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Render_Tint_Blue">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+
+
+   <!-- =================================================================================================
+	==		Dark Matter Armor (DMA) attributes
+	================================================================================================== -->
+   <Attribute_Definition Name="Type_DMA_Max">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObjectType </Directory>
+		<Default_Value> 0.0 </Default_Value>
+     <Should_Auto_Publish> no </Should_Auto_Publish>
+   </Attribute_Definition>
+
+	<Attribute_Definition Name="DMA_Max">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Starting_Attributes> Type_DMA_Max </Starting_Attributes>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Current_DMA_Level">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum_Attribute> DMA_Max </Maximum_Attribute>
+		<Has_No_Modifier_Memory> true </Has_No_Modifier_Memory>
+	</Attribute_Definition>
+
+   <Attribute_Definition Name="DMA_Regen_Rate">
+      <Type> LinearCombination </Type>
+      <Directory> GameObject </Directory>
+      <Minimum> 0 </Minimum>
+      <Base_Attribute> Type_DMA_Regen_Rate </Base_Attribute>
+      <Multiplicative_Attribute> DMA_Regen_Rate_Mult_Coeff </Multiplicative_Attribute>
+      <Additive_Attribute> DMA_Regen_Rate_Add_Coeff </Additive_Attribute>
+      <Default_Value> 1.0 </Default_Value>
+   </Attribute_Definition>
+
+   <Attribute_Definition Name="DMA_Regen_Rate_Mult_Coeff">
+      <Type> MultiplicativeCoefficient </Type>
+      <Directory> GameObject </Directory>
+      <Minimum> 0 </Minimum>
+      <Default_Value> 1.0 </Default_Value>
+   </Attribute_Definition>
+
+   <Attribute_Definition Name="DMA_Regen_Rate_Add_Coeff">
+      <Type> AdditiveCoefficient </Type>
+      <Directory> GameObject </Directory>
+      <Default_Value> 0.0 </Default_Value>
+   </Attribute_Definition>
+
+
+   <Attribute_Definition Name="Type_DMA_Regen_Rate">
+      <Type> AdditiveCoefficient </Type>
+      <Directory> GameObjectType </Directory>
+      <Default_Value> 0.0 </Default_Value>
+     <Should_Auto_Publish> no </Should_Auto_Publish>
+   </Attribute_Definition>
+
+   
+
+
+
+<!-- =================================================================================================
+==		 Additive_Shield_Recharge_Rate attribute
+================================================================================================== -->
+	<Attribute_Definition Name="Additive_Shield_Recharge_Rate">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+<!-- =================================================================================================
+==		 Is_Global_Stealthed attribute
+================================================================================================== -->
+	<Attribute_Definition Name="Is_Global_Stealthed">
+		<Type> BooleanOr </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+	</Attribute_Definition>
+
+<!-- =================================================================================================
+==		 Weapon_Recharge_Reset attribute
+================================================================================================== -->
+	<Attribute_Definition Name="Weapon_Recharge_Reset">
+		<Type> BooleanOr </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+	</Attribute_Definition>
+
+<!-- =================================================================================================
+==		 Is_Blocking_Global_Stealth attribute
+================================================================================================== -->
+	<Attribute_Definition Name="Is_Blocking_Global_Stealth">
+		<Type> BooleanOr </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+	</Attribute_Definition>
+
+   
+<!-- =================================================================================================
+==		 Is_Weapon_Upgraded attribute
+================================================================================================== -->
+   <Attribute_Definition Name="Is_Weapon_Upgraded">
+      <Type> BooleanOr </Type>
+      <Directory> GameObject </Directory>
+      <Default_Value> 0.0 </Default_Value>
+      <Minimum> 0 </Minimum>
+      <Maximum> 1 </Maximum>
+   </Attribute_Definition>
+   
+<!-- =================================================================================================
+==		 Cascade_Affected attribute
+================================================================================================== -->
+	<Attribute_Definition Name="Cascade_Affected">
+		<Type> BooleanOr </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+	</Attribute_Definition>
+
+
+<!-- =================================================================================================
+==		 Is_Mind_Controlled attribute
+================================================================================================== -->
+	<Attribute_Definition Name="Is_Mind_Controlled">
+		<Type> BooleanOr </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+	</Attribute_Definition>
+
+   <!-- =================================================================================================
+==		 Is_Phased attribute
+================================================================================================== -->
+   <Attribute_Definition Name="Is_Phased">
+      <Type> BooleanOr </Type>
+      <Directory> GameObject </Directory>
+      <Default_Value> 0.0 </Default_Value>
+      <Minimum> 0 </Minimum>
+      <Maximum> 1 </Maximum>
+   </Attribute_Definition>
+
+   <!-- =================================================================================================
+==		 Is_Passenger_Onboard attribute
+================================================================================================== -->
+   <Attribute_Definition Name="Is_Passenger_Onboard">
+      <Type> BooleanOr </Type>
+      <Directory> GameObject </Directory>
+      <Default_Value> 0.0 </Default_Value>
+      <Minimum> 0 </Minimum>
+      <Maximum> 1 </Maximum>
+   </Attribute_Definition>
+
+
+   <!-- =================================================================================================
+   ==		 Number_Of_Active_Assistants attribute
+   ================================================================================================== -->
+   <Attribute_Definition Name="Number_Of_Active_Assistants">
+      <Type> AdditiveCoefficient </Type>
+      <Directory> GameObject </Directory>
+      <Default_Value> 0.0 </Default_Value>
+      <Minimum> 0 </Minimum>
+      <Maximum> 100 </Maximum>
+   </Attribute_Definition>
+
+
+
+
+   <!-- =================================================================================================
+==		 Is_Walker_Mind_Controlled attribute
+================================================================================================== -->
+	<Attribute_Definition Name="Is_Walker_Mind_Controlled">
+		<Type> BooleanOr </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+==		 Scanning_Relay_Present attribute
+================================================================================================== -->
+<Attribute_Definition Name="Scanning_Relay_Present">
+		<Type> BooleanOr </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+	</Attribute_Definition>
+
+<!-- =================================================================================================
+==		 Unable_To_Crush_Stationary attribute
+================================================================================================== -->
+	<Attribute_Definition Name="Unable_To_Crush_Stationary">
+		<Type> BooleanOr </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+==		 Radiation_Weapon_fired attribute
+================================================================================================== -->
+	<Attribute_Definition Name="Radiation_Weapon_fired">
+		<Type> BooleanOr </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+==		 Is_Being_Abducted attribute
+================================================================================================== -->
+	<Attribute_Definition Name="Is_Being_Abducted">
+		<Type> BooleanOr </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+	</Attribute_Definition>
+
+	<!--
+=================================================================================================
+==		 Is_Being_Dissolved attribute
+================================================================================================== -->
+	<Attribute_Definition Name="Is_Being_Dissolved">
+		<Type> BooleanOr </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+==		 No_Harvesting attribute
+================================================================================================== -->
+	<Attribute_Definition Name="No_Harvesting">
+		<Type> BooleanOr </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+==		 No_Harvesting attribute
+================================================================================================== -->
+	<Attribute_Definition Name="Auto_Harvest">
+		<Type> BooleanOr </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+	</Attribute_Definition>
+
+
+	<!-- =================================================================================================
+==		 Started_Hardpoint_Upgrade	 attribute
+================================================================================================== -->
+	<Attribute_Definition Name="Started_Hardpoint_Upgrade">
+		<Type> BooleanOr </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+==		 Walker_Jump_Enabled attribute
+================================================================================================== -->
+	<Attribute_Definition Name="Walker_Jump_Enabled">
+		<Type> BooleanOr </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+==		 Walker_Jump_Disabled attribute
+================================================================================================== -->
+	<Attribute_Definition Name="Walker_Jump_Disabled">
+		<Type> BooleanOr </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+==		 Is_Paranoid - fires fevereshly at any target nearby, friendly or enemy
+================================================================================================== -->
+	<Attribute_Definition Name="Is_Paranoid">
+		<Type> BooleanOr </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+	</Attribute_Definition>
+
+
+	<!-- =================================================================================================
+==		 Is_Paranoid - fires fevereshly at any target nearby, friendly or enemy
+================================================================================================== -->
+	<Attribute_Definition Name="Can_Safely_Unphase">
+		<Type> BooleanOr </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+	</Attribute_Definition>
+
+
+	<!-- =================================================================================================
+==		 Is_Grounded attribute
+================================================================================================== -->
+	<Attribute_Definition Name="Is_Grounded">
+		<Type> BooleanOr </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+	</Attribute_Definition>
+
+
+
+
+	<!-- =================================================================================================
+== [10/2/2006]	 Attribute for chaining Resonance Beam attack - the target filter function
+				 needs to filter out tragets that already under attack to prevent 
+				 chaining loops - Oksana Kubushyna
+================================================================================================== -->
+	<Attribute_Definition Name="Is_Under_Resonance_Beam_Attack">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum> 100 </Maximum>
+	</Attribute_Definition>
+
+
+<!-- =================================================================================================
+==	Unit Ability Countdown Delay and Rate attributes, NOTE: this affects ALL unit abilities 
+==  on the unit.
+== Delay slows down recharge, rate speed up recharge
+================================================================================================== -->
+	<Attribute_Definition Name="Unit_Ability_Countdown_Delay_Multiplier">
+		<Type> MultiplicativeCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Default_Value> 1.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Unit_Ability_Countdown_Rate_Multiplier">
+		<Type> MultiplicativeCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+
+	<!-- =================================================================================================
+==		 Attribute that modifies all other damage attributes
+================================================================================================== -->
+
+	<Attribute_Definition Name="Universal_Damage_Modifier">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+==		 Unit Extra_Health Multiplier attribute
+================================================================================================== -->
+
+	<Attribute_Definition Name="Unit_Extra_Health_Multiplier">
+		<Type> MultiplicativeCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 1.0 </Minimum>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+==		 Novus_Signal_Tower_Boosted attribute
+================================================================================================== -->
+	<Attribute_Definition Name="Novus_Signal_Tower_Boosted">
+		<Type> BooleanOr </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+==		 Novus_Signal_Tower_Boosted attribute
+================================================================================================== -->
+	<Attribute_Definition Name="Novus_Signal_Vehicle_Boosted">
+		<Type> BooleanOr </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+==		 Generator_AE_Special_Ability_Radius composite attribute 
+================================================================================================== -->
+	<Attribute_Definition Name="Spy_Increase_FOW_Range">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+
+	<!-- =================================================================================================
+==		 Show_On_Enemy_Radar attribute
+================================================================================================== -->
+	<Attribute_Definition Name="Dont_Show_On_Enemy_Radar">
+		<Type> BooleanOr </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+==		 Untargetable_Until_Attacks attribute
+================================================================================================== -->
+	<Attribute_Definition Name="Is_Untargetable_Until_Attacks">
+		<Type> BooleanOr </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+==		 Is_Rebuildable_Avenger composite attribute 
+================================================================================================== -->
+
+	<Attribute_Definition Name="Type_Is_Rebuildable_Avenger">
+		<Type> BooleanOr </Type>
+		<Directory> GameObjectType </Directory>
+		<Default_Value> 0.0 </Default_Value>
+    <Should_Auto_Publish>No</Should_Auto_Publish>
+  </Attribute_Definition>
+
+	<Attribute_Definition Name="Is_Rebuildable_Avenger">
+		<Type> BooleanOr </Type>
+		<Directory> GameObject </Directory>
+		<Starting_Attributes> Type_Is_Rebuildable_Avenger </Starting_Attributes>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+==		 Is_Novus_Signal_Object composite attribute 
+================================================================================================== -->
+	<!-- removed by Jonathan Burgess
+   <Attribute_Definition Name="Type_Is_Novus_Signal_Object">
+		<Type> BooleanAnd </Type>
+		<Directory> GameObjectType </Directory>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Is_Novus_Signal_Object">
+		<Type> BooleanAnd </Type>
+		<Directory> GameObject </Directory>
+		<Starting_Attributes> Type_Is_Novus_Signal_Object </Starting_Attributes>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>-->
+
+	<!-- =================================================================================================
+==	Unit Weapon accuracy increase and decrease modifiers. 1.0 on increase halves the incaccuracy, 1.0 on decrease 
+==  increases inaccuacy by 2x
+================================================================================================== -->
+	<Attribute_Definition Name="Weapon_Accuracy_Increase_Multiplier">
+		<Type> MultiplicativeCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Default_Value> 1.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Weapon_Accuracy_Decrease_Multiplier">
+		<Type> MultiplicativeCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Default_Value> 1.0 </Default_Value>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+==	MLL: When the unit is the target this is used to decrease accuracy of shots at it. 
+== 1.0 increases inaccuracy by 2x
+================================================================================================== -->
+	<Attribute_Definition Name="As_Target_Accuracy_Decrease_Multiplier">
+		<Type> MultiplicativeCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Default_Value> 1.0 </Default_Value>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+==	MLL: This attribute keeps track of the player that put the special spy radiation on it.
+================================================================================================== -->
+	<Attribute_Definition Name="Spy_Radiated_Player_ID">
+		<Type> StorageInt </Type>
+		<Directory> GameObject </Directory>
+		<Default_Integer_Value> -1 </Default_Integer_Value>
+	</Attribute_Definition>
+
+<!-- =================================================================================================
+==	KDB: This attribute keeps track of the player that originally owned the object.
+================================================================================================== -->
+	<Attribute_Definition Name="Object_Original_Owner_ID">
+		<Type> StorageInt </Type>
+		<Directory> GameObject </Directory>
+		<Default_Integer_Value> -1 </Default_Integer_Value>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+==	MLL: This attribute tells the mimic ability to stop.
+================================================================================================== -->
+	<!--<Attribute_Definition Name="Stop_Mimic">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>-->
+
+	<Attribute_Definition Name="Explode_Inverter">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+
+
+	<!-- =================================================================================================
+==		 Destroy_On_Ability_Use : Chance to destroy the unit on each ability acitvation
+================================================================================================== -->
+	<Attribute_Definition Name="Destroy_On_Ability_Use">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+==		 Novus_Signal_Tower_Boosted attribute
+================================================================================================== -->
+	<Attribute_Definition Name="EM_Protection_On">
+		<Type> BooleanOr </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+==		 Is_Alien_Gravitic_Upgrade composite attribute 
+================================================================================================== -->
+	<Attribute_Definition Name="Type_Is_Alien_Gravitic_Upgrade">
+		<Type> BooleanAnd </Type>
+		<Directory> GameObjectType </Directory>
+		<Default_Value> 0.0 </Default_Value>
+  </Attribute_Definition>
+
+	<Attribute_Definition Name="Is_Alien_Gravitic_Upgrade">
+		<Type> BooleanAnd </Type>
+		<Directory> GameObject </Directory>
+		<Starting_Attributes> Type_Is_Alien_Gravitic_Upgrade </Starting_Attributes>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+==		 Category_Mask composite attribute 
+================================================================================================== -->
+
+	<Attribute_Definition Name="Category_Mask_GOT">
+		<Type> GameObjectTypeDataMember </Type>
+		<Directory> GameObjectType </Directory>
+		<XML_Data_Name> CategoryMask </XML_Data_Name>
+		<Default_Integer_Value> 0 </Default_Integer_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Category_Mask">
+		<Type> BitwiseCombination </Type>
+		<Directory> GameObject </Directory>
+		<Starting_Attributes> Category_Mask_GOT </Starting_Attributes>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+==	 Is_Ground_Adverse_Effect_Emitter attribute - is this a dummy object created to produce
+==	 some kind of harmful effect on the ground, s.a. radiation, fire etc???	
+================================================================================================== -->
+	<Attribute_Definition Name="Type_Is_Ground_Adverse_Effect_Emitter">
+		<Type> BooleanOr </Type>
+		<Directory> GameObjectType </Directory>
+		<Default_Value> 0.0 </Default_Value>
+    <Should_Auto_Publish>No</Should_Auto_Publish>
+  </Attribute_Definition>
+
+	<Attribute_Definition Name="Is_Ground_Adverse_Effect_Emitter">
+		<Type> BooleanOr </Type>
+		<Directory> GameObject </Directory>
+		<Starting_Attributes> Type_Is_Ground_Adverse_Effect_Emitter </Starting_Attributes>
+		<Default_Value> 0.0 </Default_Value>
+
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+==		 Earthquake_Amplitude attribute 
+================================================================================================== -->
+	<Attribute_Definition Name="Earthquake_Amplitude">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1.0 </Maximum>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+==		 Whirlwind_Rotational_Velocity attribute 
+================================================================================================== -->
+	<Attribute_Definition Name="Whirlwind_Rotational_Velocity">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum> 360.0 </Maximum>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+==		 Whirlwind_Threshold attribute 
+================================================================================================== -->
+	<Attribute_Definition Name="Whirlwind_Threshold">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0 </Default_Value>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+==		 Whirlwind_Chance attribute 
+================================================================================================== -->
+	<Attribute_Definition Name="Whirlwind_Chance">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+		<Maximum> 1.0 </Maximum>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+	==		 Is_Using_Alt_Model attribute 
+	================================================================================================== -->
+	<Attribute_Definition Name="Is_Using_Alt_Model">
+		<Type> BooleanOr </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+	</Attribute_Definition>
+
+
+	<!-- =================================================================================================
+	==	
+	================================================================================================== -->
+	<Attribute_Definition Name="Animation_Type_Override_1">
+		<Type> StorageInt </Type>
+		<Directory> GameObject </Directory>
+		<!-- <Default_Integer_Value Converter="ModelAnimType"> -1 </Default_Integer_Value> -->
+		<!-- Value of -1 corresponds to ANIM_NONE -->
+		<Default_Integer_Value> -1 </Default_Integer_Value>
+	</Attribute_Definition>
+
+
+	<!-- =================================================================================================
+	==	
+	================================================================================================== -->
+	<Attribute_Definition Name="Animation_Type_Override_2">
+		<Type> StorageInt </Type>
+		<Directory> GameObject </Directory>
+		<!-- <Default_Integer_Value Converter="ModelAnimType"> -1 </Default_Integer_Value> -->
+		<!-- Value of -1 corresponds to ANIM_NONE -->
+		<Default_Integer_Value> -1 </Default_Integer_Value>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+	==	
+	================================================================================================== -->
+	<Attribute_Definition Name="Animation_Type_Override_3">
+		<Type> StorageInt </Type>
+		<Directory> GameObject </Directory>
+		<!-- <Default_Integer_Value Converter="ModelAnimType"> -1 </Default_Integer_Value> -->
+		<!-- Value of -1 corresponds to ANIM_NONE -->
+		<Default_Integer_Value> -1 </Default_Integer_Value>
+	</Attribute_Definition>
+
+
+	<!-- =================================================================================================
+	==	
+	================================================================================================== -->
+	<Attribute_Definition Name="Explode_Recharge_Mult">
+		<Type> LinearCombination </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Base_Attribute> Type_Explode_Recharge_Mult </Base_Attribute>
+		<Multiplicative_Attribute> Explode_Recharge_Mult_Mult_Coeff </Multiplicative_Attribute>
+		<Additive_Attribute> Explode_Recharge_Mult_Add_Coeff </Additive_Attribute>
+		<Default_Value> 1.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Explode_Recharge_Mult_Mult_Coeff">
+		<Type> MultiplicativeCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Default_Value> 1.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Explode_Recharge_Mult_Add_Coeff">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Type_Explode_Recharge_Mult">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObjectType </Directory>
+		<Minimum> 0 </Minimum>
+		<Default_Value> 0.0 </Default_Value>
+    <Should_Auto_Publish>No</Should_Auto_Publish>
+  </Attribute_Definition>
+
+
+	<!-- =================================================================================================
+	==	
+	================================================================================================== -->
+	<Attribute_Definition Name="Blizzard_Recharge_Mult">
+		<Type> LinearCombination </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Base_Attribute> Type_Blizzard_Recharge_Mult </Base_Attribute>
+		<Multiplicative_Attribute> Blizzard_Recharge_Mult_Mult_Coeff </Multiplicative_Attribute>
+		<Additive_Attribute> Blizzard_Recharge_Mult_Add_Coeff </Additive_Attribute>
+		<Default_Value> 1.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Blizzard_Recharge_Mult_Mult_Coeff">
+		<Type> MultiplicativeCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Default_Value> 1.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Blizzard_Recharge_Mult_Add_Coeff">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Type_Blizzard_Recharge_Mult">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObjectType </Directory>
+		<Minimum> 0 </Minimum>
+		<Default_Value> 0.0 </Default_Value>
+    <Should_Auto_Publish>No</Should_Auto_Publish>
+  </Attribute_Definition>
+
+	<!-- =================================================================================================
+	==	Power related attributes
+	================================================================================================== -->
+
+	<Attribute_Definition Name="Is_Powered">
+		<Type> BitwiseCombination </Type>
+		<Directory> GameObject </Directory>
+		<Default_Integer_Value> 0 </Default_Integer_Value>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+	==	
+	================================================================================================== -->
+	<Attribute_Definition Name="Teleportation_Recharge_Mult">
+		<Type> LinearCombination </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Base_Attribute> Type_Teleportation_Recharge_Mult </Base_Attribute>
+		<Multiplicative_Attribute> Teleportation_Recharge_Mult_Mult_Coeff </Multiplicative_Attribute>
+		<Additive_Attribute> Teleportation_Recharge_Mult_Add_Coeff </Additive_Attribute>
+		<Default_Value> 1.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Teleportation_Recharge_Mult_Mult_Coeff">
+		<Type> MultiplicativeCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> 0 </Minimum>
+		<Default_Value> 1.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Teleportation_Recharge_Mult_Add_Coeff">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Type_Teleportation_Recharge_Mult">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObjectType </Directory>
+		<Minimum> 0 </Minimum>
+		<Default_Value> 0.0 </Default_Value>
+    <Should_Auto_Publish>No</Should_Auto_Publish>
+  </Attribute_Definition>
+
+
+	<Attribute_Definition Name="Source_Arc_Angle">
+		<Type> StorageFloat </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum> 360 </Maximum>
+	</Attribute_Definition>
+
+   <!-- =================================================================================================
+   ==		 Novus Patch cooldown time modifier composite attribute 
+   ================================================================================================== -->
+	<Attribute_Definition Name="Patch_Cooldown_Time_Modifier">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+		<Minimum> -1.0 </Minimum>
+		<Starting_Attributes> Type_Patch_Cooldown_Time_Modifier </Starting_Attributes>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Type_Patch_Cooldown_Time_Modifier">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObjectType </Directory>
+		<Minimum> -1.0 </Minimum>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+   <!-- =================================================================================================
+   ==		 Novus Patch duration time composite attribute 
+   ================================================================================================== -->
+   <Attribute_Definition Name="Patch_Duration_Time_Seconds">
+      <Type> AdditiveCoefficient </Type>
+      <Directory> GameObject </Directory>
+      <Minimum> -1.0 </Minimum>
+      <Starting_Attributes> Patch_Duration_Time_Seconds_GOT </Starting_Attributes>
+      <Default_Value> 0.0 </Default_Value>
+   </Attribute_Definition>
+
+  <Attribute_Definition Name="Patch_Duration_Time_Seconds_GOT">
+      <Type> GameObjectTypeDataMember </Type>
+      <Directory> GameObjectType </Directory>
+      <XML_Data_Name> Patch_Duration_Time_Seconds </XML_Data_Name>
+      <Minimum> -1.0 </Minimum>
+      <Default_Value> 0.0 </Default_Value>
+      <Should_Auto_Publish>No</Should_Auto_Publish>
+  </Attribute_Definition>
+   
+   
+	<!-- Novus Collector resource grabbing speed modifier. Works out to: Sleep_time_in_secs = normal_sleep_time * (1.0 + modifiers) -->
+	<Attribute_Definition Name="Resource_Seconds_Per_Grab_Multiplier">
+		<Type> MultiplicativeCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Minimum> -1.0 </Minimum>
+		<Default_Value> 1.0 </Default_Value>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+==		 Flyover_Damage
+================================================================================================== -->
+	<Attribute_Definition Name="Flyover_Damage">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Starting_Attributes> Type_Flyover_Damage </Starting_Attributes>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Type_Flyover_Damage">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObjectType </Directory>
+		<Default_Value> 0.0 </Default_Value>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+==		 Hostile_Speed_Multiplier
+================================================================================================== -->
+	<Attribute_Definition Name="Hostile_Speed_Multiplier">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Starting_Attributes> Type_Hostile_Speed_Multiplier </Starting_Attributes>
+		<Default_Value> 1.0 </Default_Value>
+	</Attribute_Definition>
+
+	<Attribute_Definition Name="Type_Hostile_Speed_Multiplier">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObjectType </Directory>
+		<Default_Value> 1.0 </Default_Value>
+    <Should_Auto_Publish>No</Should_Auto_Publish>
+  </Attribute_Definition>
+
+
+
+   <!-- ===================================================================== -->
+   <!--									Modify tooltip								   		-->
+   <Attribute_Definition Name="Type_Tooltip_Description_Text_ID">
+      <Type> String </Type>
+      <Directory> GameObjectType </Directory>
+
+      <!-- never ever auto-publish string modifiers - they are very expensive!!! -->
+      <Should_Auto_Publish>No</Should_Auto_Publish>
+   </Attribute_Definition>
+
+   <Attribute_Definition Name="Tooltip_Description_Text_ID">
+      <Type> String </Type>
+      <Directory> GameObject </Directory>
+      <Starting_Attributes> Type_Tooltip_Description_Text_ID </Starting_Attributes>
+      
+      <!-- never ever auto-publish string modifiers - they are very expensive!!! -->
+      <Should_Auto_Publish>No</Should_Auto_Publish>
+   </Attribute_Definition>
+
+   
+   
+   <!-- ===================================================================== -->
+   <!--									Modify text ID						   				-->
+   <Attribute_Definition Name="Type_Text_ID">
+      <Type> String </Type>
+      <Directory> GameObjectType </Directory>
+
+      <!-- never ever auto-publish string modifiers - they are very expensive!!! -->
+      <Should_Auto_Publish>No</Should_Auto_Publish>
+   </Attribute_Definition>
+
+   <Attribute_Definition Name="Text_ID">
+      <Type> String </Type>
+      <Directory> GameObject </Directory>
+      <Starting_Attributes> Type_Text_ID </Starting_Attributes>
+
+      <!-- never ever auto-publish string modifiers - they are very expensive!!! -->
+      <Should_Auto_Publish>No</Should_Auto_Publish>
+   </Attribute_Definition>
+
+
+   <!-- ===================================================================== -->
+   <!--									Avenger's Regeneration  		   				-->
+   <Attribute_Definition Name="Type_Regenerate_Type">
+      <Type> String </Type>
+      <Directory> GameObjectType </Directory>
+
+      <!-- never ever auto-publish string modifiers - they are very expensive!!! -->
+      <Should_Auto_Publish>No</Should_Auto_Publish>
+   </Attribute_Definition>
+
+   <Attribute_Definition Name="Regenerate_Type">
+      <Type> String </Type>
+      <Directory> GameObject </Directory>
+      <Starting_Attributes> Type_Regenerate_Type </Starting_Attributes>
+
+      <!-- never ever auto-publish string modifiers - they are very expensive!!! -->
+      <Should_Auto_Publish>No</Should_Auto_Publish>
+   </Attribute_Definition>
+
+   <!-- =================================================================================================
+   ==		 Is_Phoenix attribute
+   ================================================================================================== -->
+   <Attribute_Definition Name="Is_Phoenix">
+      <Type> BooleanOr </Type>
+      <Directory> GameObject </Directory>
+      <Default_Value> 0.0 </Default_Value>
+      <Minimum> 0 </Minimum>
+      <Maximum> 1 </Maximum>
+   </Attribute_Definition>
+
+   
+   <!-- ===================================================================== -->
+   <!--									Phoenix Effect           		   				-->
+   <Attribute_Definition Name="Type_Phoenix_Type">
+      <Type> String </Type>
+      <Directory> GameObjectType </Directory>
+
+      <!-- never ever auto-publish string modifiers - they are very expensive!!! -->
+      <Should_Auto_Publish>No</Should_Auto_Publish>
+   </Attribute_Definition>
+
+   <Attribute_Definition Name="Phoenix_Type">
+      <Type> String </Type>
+      <Directory> GameObject </Directory>
+      <Starting_Attributes> Type_Phoenix_Type </Starting_Attributes>
+
+      <!-- never ever auto-publish string modifiers - they are very expensive!!! -->
+      <Should_Auto_Publish>No</Should_Auto_Publish>
+   </Attribute_Definition>
+
+	<!-- 
+=================================================================================================
+=================================================================================================
+=================================================================================================
+==		 RADAR MAP ATTRIBUTES
+=================================================================================================
+=================================================================================================
+================================================================================================== -->
+
+	<!-- ===================================================================== -->
+	<!--									Show Radar Map											-->
+	<Attribute_Definition Name="Type_Radar_Map_Enable">
+		<Type> BitwiseCombination </Type>
+		<Directory> GameObjectType </Directory>
+		<Default_Integer_Value> 0 </Default_Integer_Value>
+    <Should_Auto_Publish>No</Should_Auto_Publish>
+  </Attribute_Definition>
+
+	<Attribute_Definition Name="Radar_Map_Enable">
+		<Type> BitwiseCombination </Type>
+		<Directory> GameObject </Directory>
+		<Default_Integer_Value> 0 </Default_Integer_Value>
+		<Starting_Attributes> Type_Radar_Map_Enable </Starting_Attributes>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+	</Attribute_Definition>
+
+
+	<!-- ===================================================================== -->
+	<!--									Allow Mouse Input 									-->
+	<Attribute_Definition Name="Type_Radar_Map_Allow_Mouse_Input">
+		<Type> BitwiseCombination </Type>
+		<Directory> GameObjectType </Directory>
+		<Default_Integer_Value> 0 </Default_Integer_Value>
+    <Should_Auto_Publish>No</Should_Auto_Publish>
+  </Attribute_Definition>
+
+	<Attribute_Definition Name="Radar_Map_Allow_Mouse_Input">
+		<Type> BitwiseCombination </Type>
+		<Directory> GameObject </Directory>
+		<Default_Integer_Value> 0 </Default_Integer_Value>
+		<Starting_Attributes> Type_Radar_Map_Allow_Mouse_Input </Starting_Attributes>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+	</Attribute_Definition>
+
+
+	<!-- ===================================================================== -->
+	<!--									Show terrain											-->
+	<Attribute_Definition Name="Type_Radar_Map_Show_Terrain">
+		<Type> BitwiseCombination </Type>
+		<Directory> GameObjectType </Directory>
+		<Default_Integer_Value> 0 </Default_Integer_Value>
+    <Should_Auto_Publish>No</Should_Auto_Publish>
+  </Attribute_Definition>
+
+	<Attribute_Definition Name="Radar_Map_Show_Terrain">
+		<Type> BitwiseCombination </Type>
+		<Directory> GameObject </Directory>
+		<Default_Integer_Value> 0 </Default_Integer_Value>
+		<Starting_Attributes> Type_Radar_Map_Show_Terrain </Starting_Attributes>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+	</Attribute_Definition>
+
+   <!-- ===================================================================== -->
+   <!--									Show terrain											-->
+   <Attribute_Definition Name="Type_Radar_Map_Is_Grayscale">
+      <Type> BitwiseCombination </Type>
+      <Directory> GameObjectType </Directory>
+      <Default_Integer_Value> 0 </Default_Integer_Value>
+      <Should_Auto_Publish>No</Should_Auto_Publish>
+   </Attribute_Definition>
+
+   <Attribute_Definition Name="Radar_Map_Is_Grayscale">
+      <Type> BitwiseCombination </Type>
+      <Directory> GameObject </Directory>
+      <Default_Integer_Value> 0 </Default_Integer_Value>
+      <Starting_Attributes> Type_Radar_Map_Is_Grayscale </Starting_Attributes>
+      <Minimum> 0 </Minimum>
+      <Maximum> 1 </Maximum>
+   </Attribute_Definition>
+	
+	<!-- ===================================================================== -->
+	<!--									Show passability										-->
+	<Attribute_Definition Name="Type_Radar_Map_Show_Passability">
+		<Type> BitwiseCombination </Type>
+		<Directory> GameObjectType </Directory>
+		<Default_Integer_Value> 0 </Default_Integer_Value>
+    <Should_Auto_Publish>No</Should_Auto_Publish>
+  </Attribute_Definition>
+
+	<Attribute_Definition Name="Radar_Map_Show_Passability">
+		<Type> BitwiseCombination </Type>
+		<Directory> GameObject </Directory>
+		<Default_Integer_Value> 0 </Default_Integer_Value>
+		<Starting_Attributes> Type_Radar_Map_Show_Passability </Starting_Attributes>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+	</Attribute_Definition>
+
+
+	<!-- ===================================================================== -->
+	<!--									Show fog of war										-->
+	<Attribute_Definition Name="Type_Radar_Map_Show_FOW">
+		<Type> BitwiseCombination </Type>
+		<Directory> GameObjectType </Directory>
+		<Default_Integer_Value> 0 </Default_Integer_Value>
+    <Should_Auto_Publish>No</Should_Auto_Publish>
+  </Attribute_Definition>
+
+	<Attribute_Definition Name="Radar_Map_Show_FOW">
+		<Type> BitwiseCombination </Type>
+		<Directory> GameObject </Directory>
+		<Default_Integer_Value> 0 </Default_Integer_Value>
+		<Starting_Attributes> Type_Radar_Map_Show_FOW </Starting_Attributes>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+	</Attribute_Definition>
+
+
+	<!-- ===================================================================== -->
+	<!--									Show own units											-->
+	<Attribute_Definition Name="Type_Radar_Map_Show_Owned">
+		<Type> BitwiseCombination </Type>
+		<Directory> GameObjectType </Directory>
+		<Default_Integer_Value> 0 </Default_Integer_Value>
+    <Should_Auto_Publish>No</Should_Auto_Publish>
+  </Attribute_Definition>
+
+	<Attribute_Definition Name="Radar_Map_Show_Owned">
+		<Type> BitwiseCombination </Type>
+		<Directory> GameObject </Directory>
+		<Default_Integer_Value> 0 </Default_Integer_Value>
+		<Starting_Attributes> Type_Radar_Map_Show_Owned </Starting_Attributes>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+	</Attribute_Definition>
+
+
+
+	<!-- ===================================================================== -->
+	<!--									Show allied units										-->
+	<Attribute_Definition Name="Type_Radar_Map_Show_Allied">
+		<Type> BitwiseCombination </Type>
+		<Directory> GameObjectType </Directory>
+		<Default_Integer_Value> 0 </Default_Integer_Value>
+    <Should_Auto_Publish>No</Should_Auto_Publish>
+  </Attribute_Definition>
+
+	<Attribute_Definition Name="Radar_Map_Show_Allied">
+		<Type> BitwiseCombination </Type>
+		<Directory> GameObject </Directory>
+		<Default_Integer_Value> 0 </Default_Integer_Value>
+		<Starting_Attributes> Type_Radar_Map_Show_Allied </Starting_Attributes>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+	</Attribute_Definition>
+
+
+	<!-- ===================================================================== -->
+	<!--									Show enemy units										-->
+	<Attribute_Definition Name="Type_Radar_Map_Show_Enemy">
+		<Type> BitwiseCombination </Type>
+		<Directory> GameObjectType </Directory>
+		<Default_Integer_Value> 0 </Default_Integer_Value>
+    <Should_Auto_Publish>No</Should_Auto_Publish>
+  </Attribute_Definition>
+
+	<Attribute_Definition Name="Radar_Map_Show_Enemy">
+		<Type> BitwiseCombination </Type>
+		<Directory> GameObject </Directory>
+		<Default_Integer_Value> 0 </Default_Integer_Value>
+		<Starting_Attributes> Type_Radar_Map_Show_Enemy </Starting_Attributes>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+	</Attribute_Definition>
+
+
+	<!-- ===================================================================== -->
+	<!--									Show neutral units									-->
+	<Attribute_Definition Name="Type_Radar_Map_Show_Neutral">
+		<Type> BitwiseCombination </Type>
+		<Directory> GameObjectType </Directory>
+		<Default_Integer_Value> 0 </Default_Integer_Value>
+    <Should_Auto_Publish>No</Should_Auto_Publish>
+  </Attribute_Definition>
+
+	<Attribute_Definition Name="Radar_Map_Show_Neutral">
+		<Type> BitwiseCombination </Type>
+		<Directory> GameObject </Directory>
+		<Default_Integer_Value> 0 </Default_Integer_Value>
+		<Starting_Attributes> Type_Radar_Map_Show_Neutral </Starting_Attributes>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+	</Attribute_Definition>
+
+	<!-- ===================================================================== -->
+	<!--									Show fogged units										-->
+	<Attribute_Definition Name="Type_Radar_Map_Show_Fogged">
+		<Type> BitwiseCombination </Type>
+		<Directory> GameObjectType </Directory>
+		<Default_Integer_Value> 0 </Default_Integer_Value>
+    <Should_Auto_Publish>No</Should_Auto_Publish>
+  </Attribute_Definition>
+
+	<Attribute_Definition Name="Radar_Map_Show_Fogged">
+		<Type> BitwiseCombination </Type>
+		<Directory> GameObject </Directory>
+		<Default_Integer_Value> 0 </Default_Integer_Value>
+		<Starting_Attributes> Type_Radar_Map_Show_Fogged </Starting_Attributes>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+	</Attribute_Definition>
+
+	<!-- =================================================================================================
+   ==		 Walker production cost reduction attribute 
+   ================================================================================================== -->
+	<!-- Usually applied to local object -->
+	<Attribute_Definition Name="Walker_Production_Cost_Reduction">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+		<Minimum> 0.0 </Minimum>
+		<Maximum> 1.0 </Maximum>
+	</Attribute_Definition>
+
+	<!-- Usually applied to all production -->
+	<Attribute_Definition Name="Global_Production_Cost_Reduction">
+		<Type> AdditiveCoefficient </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+		<Minimum> 0.0 </Minimum>
+		<Maximum> 1.0 </Maximum>
+	</Attribute_Definition>
+
+<!-- =================================================================================================
+==		 Disable_Unit_Abilities - 
+================================================================================================== -->
+	<Attribute_Definition Name="Disable_Unit_Abilities">
+		<Type> BooleanOr </Type>
+		<Directory> GameObject </Directory>
+		<Default_Value> 0.0 </Default_Value>
+		<Minimum> 0 </Minimum>
+		<Maximum> 1 </Maximum>
+	</Attribute_Definition>
+
+	<!-- 
+=================================================================================================
+=================================================================================================
+=================================================================================================
+==		 RADAR MAP ATTRIBUTES
+=================================================================================================
+=================================================================================================
+================================================================================================== -->
+
+	<!-- =================================================================================================
+	==		 SuperWeaponCanBeTeleported: Can this be teleported by Zessus ?
+	================================================================================================== -->
+		<Attribute_Definition Name="Type_Super_Weapon_Can_Be_Teleported">
+			<Type> BooleanAnd </Type>
+			<Directory> GameObjectType </Directory>
+			<Default_Value> 0.0 </Default_Value>
+			<Should_Auto_Publish> no </Should_Auto_Publish>
+		</Attribute_Definition>
+
+		<Attribute_Definition Name="Super_Weapon_Can_Be_Teleported">
+			<Type> BooleanAnd </Type>
+			<Directory> GameObject </Directory>
+			<Starting_Attributes> Type_Super_Weapon_Can_Be_Teleported </Starting_Attributes>
+			<Default_Value> 0.0 </Default_Value>
+		</Attribute_Definition>
+
+
+</Attributes>
+

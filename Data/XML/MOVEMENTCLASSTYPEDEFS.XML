@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<MovementClassType>
+	<Infantry> Clear | Rough | Unbuildable | Bridge </Infantry>
+	<Wheeled> Clear | Unbuildable | Bridge </Wheeled>
+	<Walker> Clear | Unbuildable | Bridge </Walker>
+	<Flying> Clear | Steep | ShallowWater | DeepWater | Obstacle | Impassable | Rough | Unbuildable | Bridge </Flying>
+	<Tracked> Clear | Unbuildable | Bridge </Tracked>
+	<Hover> Clear | ShallowWater | DeepWater | Unbuildable | Bridge </Hover>
+	<LargeWalker> Clear | Steep | ShallowWater | Obstacle | Rough | Unbuildable </LargeWalker>
+	<Space> Clear | Steep | ShallowWater | DeepWater | Obstacle | Impassable | Rough | Unbuildable | Bridge </Space>
+	<Building> Clear </Building>
+	<Phased> Clear | Rough | Obstacle | Unbuildable | Bridge </Phased>
+	<WaterWalker> Clear | Rough | Unbuildable | ShallowWater | DeepWater | Bridge </WaterWalker>
+</MovementClassType>
+

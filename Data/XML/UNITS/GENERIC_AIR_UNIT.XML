@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GENERIC_Unit>
+
+	<X90_Other_Objects Name="Generic_Air_Unit">
+
+		<LandBehavior>
+			EFFECT_GENERATOR
+		</LandBehavior>
+			
+
+		<Effect_Generator_Data SubObjectList="Yes"> 
+		
+			<Effect_Generator Name="GenericAirUnitLandedEffectGenerator">
+				<Should_Deactivate_Manually> False </Should_Deactivate_Manually>
+				<Is_Independent_Generator> True </Is_Independent_Generator>
+				<Modal_Refresh_Frequency> 1.0 </Modal_Refresh_Frequency>
+				<Starts_Active> True </Starts_Active>
+				
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> GenericLandedEffect </Effect_Name>
+					<Duration> 1.1 </Duration>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+					<Target_Filter_C> Is_Not_Flying </Target_Filter_C>
+				</Effect_Generator_Entry>	
+			</Effect_Generator>
+			
+		</Effect_Generator_Data>
+				
+	</X90_Other_Objects>
+
+</GENERIC_Unit>

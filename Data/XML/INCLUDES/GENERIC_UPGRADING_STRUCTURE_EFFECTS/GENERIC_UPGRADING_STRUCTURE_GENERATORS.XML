@@ -1,0 +1,16 @@
+<!-- Include file: Upgrading Structure Effects. - Maria -->
+<!-- this generator deals with pausing all functionality of a structure that is being upgraded, 
+     that is, turret attacks, income generation, etc. are paused until construction is done -->
+
+
+<Effect_Generator Name="UpgradingStructureEffectGenerator">
+   <Should_Deactivate_Manually> yes </Should_Deactivate_Manually>
+   <Is_Independent_Generator> yes </Is_Independent_Generator>
+   <Modal_Refresh_Frequency> 3.0 </Modal_Refresh_Frequency>
+
+   <Effect_Generator_Entry Name="Entry1">
+      <Duration> 3.1 </Duration>
+      <Effect_Name> UpgradingStructureEffect </Effect_Name>
+      <Target_Gathering_Mask> SelfHPParent </Target_Gathering_Mask>
+   </Effect_Generator_Entry>
+</Effect_Generator>

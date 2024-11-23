@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<EnumDefinition>
+
+	<MatterConversion/>
+	<MatterConversionBlock/>
+	<Transparent/>				<!-- generic "All" effect class -->
+	<HeroPerks/>				
+
+	<SFX1/>
+	<SFX2/>
+	<SFX3/>
+	<Fire/>
+	<NovusSignal/>
+	<NovusSingalConnectionVisual/>
+	<Radiation/>
+	<RadiatedWeapon/>
+	<RadiatedWeaponVisual/>
+	<GammaRadiatedWeapon/>
+	<HealTerrain/>
+	<SpeedBoost/>
+	<FireRateEffectClass/>
+	<MindControl/>
+   <MindControlVisual/>
+	<Burden/>
+	<Phased/>
+	<ResonanceBeam/>
+	<ResonanceLockdown/>
+	<ConsumptionSpray/>
+	<InverterResonance/>
+	<Disintegrate/>
+   <DisintegrateVisual/>
+	<ToyDamage/>
+	<TractorBeam/>
+	<GenericAttribute/>
+	<InstantDeath/>
+	<NovusSignalTower/>
+	<DervishSpin/>
+	<Scale/>
+	<Cloaking/>
+	<Mirage/>
+	<BlockMirage/>
+   <RemoveMirage/>
+	<BlackOut/>
+	<BlackOutTarget/>
+	<RevealCloaking/>
+	<NegateRevealCloaking/>
+	<DefilerRadiation/>
+	<NovusVirus/>
+	<NovusVirusBomb/>
+	<NovusVirusBombSplash/>
+	<TacticalBuild/>
+   <TacticalUpgradedBuild/>
+   <TacticalBuildSingleBuilder/>
+   <Healing/>
+	<MutantDeath/>
+	<MutantNoHeal/>
+	<MutantCreation/>
+	<MutantClaws/>
+	<MutantGlob/>
+	<DefilerRadiationReveal/>
+	<DefilerRadiationVisualAttack/>
+	<DefilerRadiationDefile/>
+	<GruntShotgunRadiation/>
+	<MutantSlowDeath/>
+	<Beckon/>
+	<BeckonDamage/>
+	<DefilerExpandBleedRadius/>
+	<DefilerBleedVisual/>
+   <DefilerBleedVisualGamma/>
+   <BleedMoved/>
+   <BleedMovedGamma/>
+	<DisableAutoTargeting/>
+	<AutoEnableAbilityFlag/>
+	<PropagateEffect/>
+	<Destabilize/>
+	<IceSnare/>
+	<IceDamage/>
+	<EffectCleanse/>
+	
+   <!-- DMA -->
+   <DMAVisual/>
+	<DMARegen/>
+	<DMARemove/>
+	<BlockDMARegen/>
+
+	<OrlokSiegeGun/>
+	<OrlokEndureAttack/>
+	<OrlokPreSwitch/>
+	<OrlokFreezeAutofire/>
+	<OrlokCrushAttack/>
+   
+	<Resource/>
+	<MasariAvenger/>
+   <MasariPhoenix/>
+   <MasariRegenerateAvenger/>
+	<ElementalModeVisual/>
+	<AvengerShield/>
+	<Stun/>
+	<Screech/>
+	<StunVisual/>
+	<NovusSignalVehicle/>
+	<EMField/>
+	<SightLink/>
+   <SightLinkVisual/>
+	<BurningSight/>
+	<FireDamage/>
+	<AreaEffectMod1/>
+	<ElectroPulse/>
+	<ElectroPulseSparkles/>
+	<ShiftField/>
+	<SpyRadiated/>
+	<Deconstruct/>
+	<AreaEffectMod2/>
+	<SpyRangeMod1/>
+	<SpyRangeMod2/>
+	<StructuralDisruption/>
+	<LandedEffect/>
+	<DisableOnEnemyRadar/>
+	<PreAvengerRebuild/>
+	<AvengerRebuild/>
+	<Upload/>
+   <UploadTarget/>
+   <UploadSparkles/>
+	<Download/>
+	<DownloadSparkles/>
+	<UploadSelf/>
+	<RevealMap/>
+	<Blizzard/>
+   <BlizzardDMAUpgrade/>
+	<Teleportation_Start/>
+	<Teleportation_Finish/>
+	<PatchBackupSystems/>
+	<PatchExtrapolation/>
+	<PatchOptimizedAssembly/>
+	<PatchOverclock/>
+	<PatchEmergencyPower/>
+	<PatchRapidPatching/>
+	<PatchRadiationCasing/>
+	<PatchCoolantBoost/>
+	<PatchViralCascadeAura/>
+	<PatchBlock/>
+	<PatchViralReboot/>
+	<PatchSpectrumCycle/>
+	<DestroyPatch/>
+	<ClearMindControl/>
+	<NovusVirusAuraGenerators/>
+	<DeactivateNovusVirusAuraGenerators/>
+	<ResearchRapidRebuildBlock/>
+	<ResearchAdvancedFlow/>
+	<FlowSpeed/>
+	<PowerTransmissionRadius/>
+	<Powered/>
+	<ResearchNaniteRefinement/>
+	<ResearchCollectionEfficiency/>
+	<ResearchNanitePurification/>
+
+	<FounderRebuild/>
+	
+   <AchievementEffect/>
+	<LockUnlockAchievementEffect/>
+   <AchievementLeadership/>
+   <AchievementProtector/>
+   <AchievementResearcher/>
+   <AchievementAlliance/>
+   <AchievementRawPower/>
+   <AchievementNaniteMastery/>
+   <AchievementHeroMastery/>
+   <AchievementWeaponMastery/>
+   <AchievementFlightMastery/>
+   <AchievementSignalMastery/>
+   <AchievementRoboticMastery/>
+   <AchievementScienceMastery/>
+   <AchievementKineticSeer/>
+   <AchievementTimeManipulator/>
+   <AchievementDarkStrategist/>
+   <AchievementLightbringer/>
+   <AchievementModularProficiency/>
+   <AchievementMasariProtectus/>
+   <AchievementGiftOfTheArchitect/>
+   <AchievementBovineDefender/>
+   <AchievementAssaultSpecialist/>
+   <AchievementMutagenSpecialist/>
+   <AchievementQuantumSpecialist/>
+   <AchievementSocketEmblem/>
+   <AchievementInsigniaOfCorruption/>
+   <AchievementKamalsBlessing/>
+
+
+
+
+   <ViralControl/>
+	<Insignificant/>
+	<HeatSink/>
+	<WalkerVision/>
+	<WalkerPrediction/>
+	<Transfer/>
+	<AlienConsumption/>
+	<AlienPhaseClaw/>
+	<Paranoia/>
+	<ParanoiaUpgrade/>
+	<MasariVortex/>
+	<ResearchFieryFury/>
+	<PurifyingLight/>
+   <PurifyingLightVisual/>
+   <CripplingShots/>
+	<CripplingShotsVisual/>
+   <UpgradingStructure/>
+	<MasariCleanse/>
+	<SightRange/>
+	<DissolveVisual/>
+	<RadiationCascade/>
+   <RadiationCascadeReadyVisual/>
+   <RadiationCascadeNotReadyVisual/>
+   <ScanDronePresent/>
+
+	<SelfDestructCountdown/>
+	<SelfDestruct/>
+
+	<ScarnBeam/>
+	<ScarnBeamVisual/>
+	
+	<DeployMine/>
+	
+	<WalkerConsumptionBoost/>
+	<WalkerConsumptionDestroy/>
+	<WalkerTerrainConditioner/>
+   <WalkerTerrainConditionerGamma/>
+	<WalkerTerrainConditionerSelf/>
+   <WalkerTerrainConditionerSelfGamma/>
+   <WalkerTerrainConditionerDestruct/>
+	<WalkerMMLSelf/>
+	<WalkerMMLClearPhase/>
+	<CascadeMuzzle/>
+	<CascadeWave/>
+	<CylinderVision/>
+	<AlienRelocatorBeam/>
+	<UpgradeFakeHardpoint />
+	<UpgradeStructureSpeed />
+	<UpgradeStructureFireRate />
+	<CylinderTeleport/>
+	<VisualOne/>
+	<WalkerWarmingPod/>
+	<GroundingConduit/>
+	<WalkerOnLanding/>
+	<WalkerOnLandingVisual/>
+	<WalkerJumpEnable/>
+	<WalkerJumpSpeedUp/>
+	<DarkMatterBlind/>
+	<ElectricityDamage/>
+	<IncreaseBuildSpeed/>
+	<UpgradeBuilding/>
+	<UpgradeSpeedIncrease/>
+   <ImproveAttack/>
+   <Unmake/>
+	<Peace/>
+	<StormGate/>
+	<SnowBlind/>
+	<Reformat/>
+	<Tednrils/>
+   <WindDamage/>
+   <WindShake/>
+   <EarthquakeDamage/>
+   <EarthquakeShake/>
+	
+	<AttachBoltMine1/>
+	<AttachBoltMine2/>
+	<AttachBoltMine3/>
+	<GatheringBlock/>
+
+	<IceSlow/>
+	
+	<Volatile/>
+	<Scythe/>
+	<SwitchToAltModel/>
+
+	<BlazeOfGlory/>
+	<IceCrystals/>
+
+	<LockIceCrystals/>
+	<LockBlazeOfGlory/>
+
+	<KnockBack/>
+	<MagmaChannel/>
+   <MagmaChannelUpgraded/>
+   <MagmaChannelSpawn/>
+	<DarkWeapon/>
+	
+	<AlienHarvest/>
+	<AlienHarvestVisual/>
+	<AlienHarvestSFX/>
+	<AlienHarvestFinalize/>
+	<EnableRadiationCascade/>
+	
+	<FleetSpeedBoost/>
+	<ProductionIncrease/>
+
+	<GravityBomb/>
+	<LightningAttack/>
+	<PsiBlast/>
+	<PsiBlastExplosion/>
+
+	<Garrison/>
+	<CaptureObject/>
+
+	<MoveSpeed/>
+	<AbilityRecharge/>
+   <PlayerProduction/>
+	<WalkerArmor/>
+	<WalkerSpeed/>
+	<WalkerNoCrush/>
+	<PlasmaDamage/>
+	<RadiateResource/>
+	<RadiateResourceVisual/>
+	<MatterEngineHarvest/>
+	<MatterEngineHarvestResearched/>
+	<MatterEngineExplosion/>
+	<MatterEngineExplosionVisual/>
+	<GlobalStealth/>
+	
+	<HarmonicPulseOwnerLock/>
+	<FriendlyRegionHOT/>
+	<RegionDefense/>
+
+   <MeleeAttack/>
+
+   <ScanPulse/>
+   <ScanPulseEnemyUpgrade/>
+   <ScanPulseFriendly/>
+
+   <CheckAmmo/>
+
+   <FireMineDetonation/>
+   <IceMineDetonation/>
+   <MineEffectDuration/>
+   <DebugCategory1/>
+   <DebugCategory2/>
+   <DebugCategory3/>
+
+
+   <PassengerOnboardBonus/>
+
+   <RevealToEnemyRadar/>
+
+	<Incignificance/>
+
+	<MatterEngineLeech/>
+
+   <LightBeam/>
+   <UpgradedLightBeam/>
+
+   <FireVortex/>
+   <FireVortexVisual/>
+
+   <MasariLightModeVisual/>
+   <MasariDarkModeVisual/>
+
+   <MineDetonation/>
+
+	<AlateaBeneficialField/>
+   <AlateaBeneficialFieldVisual/>
+   
+   <Stage1PostConstruction/>
+   <Stage2PostConstruction/>
+
+   <!-- Architect Assist Structure effects -->
+   <AssistStructure/>
+   <AssistStructureIncreaseBuildSpeed/>
+   <AssistStructureIncreaseBuildSpeedVisual/>
+   <AssistStructureIncreaseHarvestSpeed/>
+   <AssistStructureImproveAttack/>
+   <AssistStructureImproveAttackVisual/>
+   <AssistStructureHeal/>
+   <AssistStructureHealVisual/>
+	<AssistStructureIncreaseUpgradeSpeed/>
+
+	<Abduction/>
+	<AbductionVisual/>
+
+	<AlienHarvestFinalizeVisual/>
+	<MineInvulnerability/>
+	<WalkerHasControl/>
+
+	<InverterShieldUp/>
+	<InverterShieldDown/>
+	
+</EnumDefinition>

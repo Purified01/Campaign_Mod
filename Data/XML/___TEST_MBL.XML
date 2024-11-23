@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<UEA_Units>
+
+	<!-- MBL TEST OBJECT BEGIN -->
+	<!-- MBL TEST OBJECT BEGIN -->
+	<!-- MBL TEST OBJECT BEGIN -->
+	<X99_Test_Objects Name="MBL_Test_UEA_Cube">
+
+		<Land_Model_Name> Test_Hardpoint_Turret_Attachment.alo </Land_Model_Name>
+
+		<Affiliation> Military </Affiliation>
+
+		<!-- Any unit that has hard points requires a Behavior entry with HARD_POINT_MANAGER -->
+		<!-- Any object that is a hard point requires a Behavior entry with HARD_POINT -->
+		<!-- <Behavior> HARD_POINT_MANAGER, SELECTABLE </Behavior> -->
+		<Behavior> SELECTABLE, CIVILIAN_SPAWNER </Behavior> 
+
+		<!-- Structural Support Hard Points -->
+		<!-- 
+		<Attached_Hard_Points> 
+			MBL_Test_Hard_Point_Structural_Support, Hardpoint_Attach_00
+			MBL_Test_Hard_Point_Structural_Support, Hardpoint_Attach_01
+			MBL_Test_Hard_Point_Structural_Support, Hardpoint_Attach_02
+			MBL_Test_Hard_Point_Structural_Support, Hardpoint_Attach_03
+		</Attached_Hard_Points>
+		-->
+
+		<!-- Turret Hard Points -->
+		<!-- 
+		<Attached_Hard_Points> 
+			MBL_Test_Hard_Point_Turret, Hardpoint_Attach_00
+			MBL_Test_Hard_Point_Turret, Hardpoint_Attach_01
+			MBL_Test_Hard_Point_Turret, Hardpoint_Attach_02
+			MBL_Test_Hard_Point_Turret, Hardpoint_Attach_03
+			MBL_Test_Hard_Point_Turret, Hardpoint_Attach_04
+			MBL_Test_Hard_Point_Turret, Hardpoint_Attach_05
+			MBL_Test_Hard_Point_Turret, Hardpoint_Attach_06
+			MBL_Test_Hard_Point_Turret, Hardpoint_Attach_07
+		</Attached_Hard_Points>
+		-->
+
+		<!-- Fixed Weapon Hard Points -->
+		<!-- 
+		<Attached_Hard_Points> 
+			MBL_Test_Hard_Point_Fixed_Weapon, Hardpoint_Attach_00
+			MBL_Test_Hard_Point_Fixed_Weapon, Hardpoint_Attach_01
+			MBL_Test_Hard_Point_Fixed_Weapon, Hardpoint_Attach_02
+			MBL_Test_Hard_Point_Fixed_Weapon, Hardpoint_Attach_03
+			MBL_Test_Hard_Point_Fixed_Weapon, Hardpoint_Attach_04
+			MBL_Test_Hard_Point_Fixed_Weapon, Hardpoint_Attach_05
+			MBL_Test_Hard_Point_Fixed_Weapon, Hardpoint_Attach_06
+			MBL_Test_Hard_Point_Fixed_Weapon, Hardpoint_Attach_07
+		</Attached_Hard_Points>
+		-->
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Armor_Type> Armor_Default </Armor_Type>
+			<Damage_Type> Damage_Default </Damage_Type>
+		</BehaviorType>
+
+		<!-- MBL TEST DATA -->
+		<BehaviorType Name="CivilianSpawnerBehaviorType">
+
+			<Is_Civilian_Spawner> True </Is_Civilian_Spawner>
+			<Is_Civilian_Despawner> False </Is_Civilian_Despawner>
+
+			<Civilian_Spawn_Types> American_Civilian_Urban_01_Wartime_Spawned, American_Civilian_Urban_01_Wartime_Spawned, American_Civilian_Urban_01_Wartime_Spawned </Civilian_Spawn_Types>
+
+			<!-- Spawn 5 civilians when destroyed -->
+			<Civilian_Spawn_On_Death_Min_Count> 5 </Civilian_Spawn_On_Death_Min_Count>
+			<Civilian_Spawn_On_Death_Max_Count> 5 </Civilian_Spawn_On_Death_Max_Count>
+
+			<!-- 
+				Example of spawn on damage tiers: 
+					5 tiers of damage, or every 20% of damage (5 x 20% = 100%)
+					First tier of damage will spawn 1-3 civilians 
+					Final tier of damage will spawn 5-15 civilians
+					All tiers in between will ramp from min 1-3 to 5-15 every 20% (20% x 5 tiers = 100%)
+						Tier 1 is when hitting >0% damaged: 1-3 spawned (First Tier - very first damage)
+						Tier 2 is when hitting 20% damaged: 2-6 spawned
+						Tier 3 is when hitting 40% damaged: 3-9 spawned
+						Tier 4 is when hitting 60% damaged: 4-12 spawned
+						Tier 5 is when hitting 80% damaged: 5-15 spawned (Last Tier)
+			-->
+			<Civilian_Spawn_On_Damage_Tiers> 5 </Civilian_Spawn_On_Damage_Tiers> <!-- 5 = Every 20% -->
+			<Civilian_Spawn_On_Damage_First_Tier_Min_Count> 1 </Civilian_Spawn_On_Damage_First_Tier_Min_Count> <!-- Must be 0+ -->
+			<Civilian_Spawn_On_Damage_First_Tier_Max_Count> 3 </Civilian_Spawn_On_Damage_First_Tier_Max_Count> <!-- Must be 0+ -->
+			<Civilian_Spawn_On_Damage_Last_Tier_Min_Count> 5 </Civilian_Spawn_On_Damage_Last_Tier_Min_Count>	<!-- Must be 0+ -->
+			<Civilian_Spawn_On_Damage_Last_Tier_Max_Count> 15 </Civilian_Spawn_On_Damage_Last_Tier_Max_Count>	<!-- Must be 0+ -->
+
+		</BehaviorType>
+		<!-- END MBL TEST DATA -->
+
+	</X99_Test_Objects>
+	<!-- MBL TEST OBJECT END -->
+	<!-- MBL TEST OBJECT END -->
+	<!-- MBL TEST OBJECT END -->
+	
+</UEA_Units>
+

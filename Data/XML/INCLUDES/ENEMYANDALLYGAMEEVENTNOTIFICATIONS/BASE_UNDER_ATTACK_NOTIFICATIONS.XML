@@ -1,0 +1,29 @@
+
+<!-- Include file: Setup for the VO notification when an OPPONENT's BASE IS UNDER ATTACK
+      (we only broadcast it to allies now) -->
+
+   <!-- ALLY NOTIFICATIONS -->
+   <!-- ::::::::::::::::::::::::::::::::::::::::::::::: -->
+   <Notification_Description>
+      <Broadcast_To>Ally_Hierarchy</Broadcast_To>
+      <Broadcast_Only_If_In_Frustum> false </Broadcast_Only_If_In_Frustum>
+      <Radar_Map_Event>Game_Event_Info_Medium_Importance</Radar_Map_Event>
+      <SFX_Notification> HCO_ALLY_STATUS_1 </SFX_Notification>
+   </Notification_Description>   
+
+   <Notification_Description>
+      <Broadcast_To>Ally_Novus</Broadcast_To>
+      <Broadcast_Only_If_In_Frustum> false </Broadcast_Only_If_In_Frustum>
+      <Radar_Map_Event>Game_Event_Info_Medium_Importance</Radar_Map_Event>
+      <SFX_Notification>NCO_ALLY_STATUS_1</SFX_Notification>
+   </Notification_Description>
+
+   <Notification_Description>
+      <Broadcast_To>Ally_Masari</Broadcast_To>
+      <Broadcast_Only_If_In_Frustum> false </Broadcast_Only_If_In_Frustum>
+      <Radar_Map_Event>Game_Event_Info_Medium_Importance</Radar_Map_Event>
+      <SFX_Notification>MCO_ALLY_STATUS_1</SFX_Notification>
+   </Notification_Description>
+   <!-- ::::::::::::::::::::::::::::::::::::::::::::::: -->
+
+   

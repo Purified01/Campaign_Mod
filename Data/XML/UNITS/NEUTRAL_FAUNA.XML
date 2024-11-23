@@ -1,0 +1,187 @@
+<?xml version="1.0"?>
+<Neutral_Fauna_XML>
+
+<!-- **************************************************************************************** -->	
+<!-- *** UNIT(S) **************************************************************************** -->	
+<!-- **************************************************************************************** -->	
+
+	<X60_Neutral_Fauna Name="_Cow_01">
+		<!-- ART -->
+		<Land_Model_Name>Ww_cow.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NEUTRAL_FAUNA_COW</Text_ID>
+
+		<!-- ATTRIBUTES -->
+		<CategoryMask> Medium, Organic, Insignificant, Resource_INST </CategoryMask>
+		<Affiliation>CIVILIAN</Affiliation>
+		<Can_Be_Miraged>Yes</Can_Be_Miraged>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> LandStatic </Space_Layer>
+		<UnitCollisionClass> Vehicle </UnitCollisionClass>
+		<Custom_Soft_Footprint_Radius> 3.5 </Custom_Soft_Footprint_Radius>
+		<Custom_Hard_XExtent> 2.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 2.0 </Custom_Hard_YExtent>
+
+		<!-- CONFLICT -->
+		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
+		<Is_Valid_Target>True</Is_Valid_Target>
+		<Is_Attackable>true</Is_Attackable>
+
+		<Tactical_Health> 100 </Tactical_Health>
+
+		<!-- BEHAVIORS -->
+
+		<LandBehavior> IDLE, RESOURCE, EFFECT_REGISTRY, ATTRIBUTE_DIRECTORY, BALLISTIC </LandBehavior>
+
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 500 </Resource_Units>
+			<Resource_For_Faction> Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> true </Is_Single_Resource>
+		</BehaviorType>
+
+		<BehaviorType Name="BallisticBehaviorType">
+			<Ballistic_Weight>6.0</Ballistic_Weight>
+			<Ballistic_Bounce>0.3</Ballistic_Bounce>
+		</BehaviorType>
+		
+		<BehaviorType Name="CrushBehaviorType">
+			<Crush_Defense> 20 </Crush_Defense>
+			<Crush_Power> 15 </Crush_Power>
+			<Should_Check_Faction_On_Crush> false </Should_Check_Faction_On_Crush>
+		</BehaviorType>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Death_Clone>Damage_Default, _Cow_Mutilated</Death_Clone>
+			<Death_Spawn> Damage_Alien_AE_Radiation, Alien_Mutant_Slave_Cow </Death_Spawn>
+			<Death_Spawn> Damage_Alien_Mutant_Slave_Grenade, Alien_Mutant_Slave_Cow </Death_Spawn>
+			<Death_Spawn> Damage_Alien_Mutant_Slave_Claws, Alien_Mutant_Slave_Cow </Death_Spawn>
+			<Death_Spawn> Damage_Alien_Mutant_Slave_Knockback, Alien_Mutant_Slave_Cow </Death_Spawn>
+			<Death_Fade_Time> 0.25 </Death_Fade_Time>
+			<Death_Persistence_Duration> 120 </Death_Persistence_Duration>
+		</BehaviorType>
+				
+	</X60_Neutral_Fauna>
+
+	
+	
+	
+	<X60_Neutral_Fauna Name="_Cow_02">
+		<!-- ART -->
+		<Land_Model_Name>Ww_cow_brown.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NEUTRAL_FAUNA_COW</Text_ID>
+
+		<!-- ATTRIBUTES -->
+		<CategoryMask> Medium, Organic, Insignificant, Resource_INST </CategoryMask>
+		<Affiliation>CIVILIAN</Affiliation>
+		<Can_Be_Miraged>Yes</Can_Be_Miraged>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> LandStatic </Space_Layer>
+		<UnitCollisionClass> Vehicle </UnitCollisionClass>
+		<Custom_Soft_Footprint_Radius> 3.5 </Custom_Soft_Footprint_Radius>
+		<Custom_Hard_XExtent> 2.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 2.0 </Custom_Hard_YExtent>
+
+		<!-- CONFLICT -->
+		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
+		<Is_Valid_Target>True</Is_Valid_Target>
+		<Is_Attackable>true</Is_Attackable>
+		
+		<Tactical_Health> 100 </Tactical_Health>
+		
+		<!-- BEHAVIORS -->
+		
+		<LandBehavior> IDLE, RESOURCE, EFFECT_REGISTRY, ATTRIBUTE_DIRECTORY </LandBehavior>
+				
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+		
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 500 </Resource_Units>
+			<Resource_For_Faction> Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> true </Is_Single_Resource>
+		</BehaviorType>
+
+		<BehaviorType Name="CrushBehaviorType">
+			<Crush_Defense> 20 </Crush_Defense>
+			<Crush_Power> 15 </Crush_Power>
+			<Should_Check_Faction_On_Crush> false </Should_Check_Faction_On_Crush>
+		</BehaviorType>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Death_Clone>Damage_Default, _Cow_Mutilated</Death_Clone>
+			<Death_Spawn> Damage_Alien_AE_Radiation, Alien_Mutant_Slave_Cow </Death_Spawn>
+			<Death_Spawn> Damage_Alien_Mutant_Slave_Grenade, Alien_Mutant_Slave_Cow </Death_Spawn>
+			<Death_Spawn> Damage_Alien_Mutant_Slave_Claws, Alien_Mutant_Slave_Cow </Death_Spawn>
+			<Death_Spawn> Damage_Alien_Mutant_Slave_Knockback, Alien_Mutant_Slave_Cow </Death_Spawn>
+			<Death_Fade_Time> 0.25 </Death_Fade_Time>
+			<Death_Persistence_Duration> 120 </Death_Persistence_Duration>
+		</BehaviorType>
+		
+	</X60_Neutral_Fauna>
+
+	
+	<X60_Neutral_Fauna Name="_Cow_Mutilated">
+		<!-- ART -->
+		<Land_Model_Name>ww_cow_mutilated.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NEUTRAL_FAUNA_COW</Text_ID>
+
+		<!-- ATTRIBUTES -->
+		<CategoryMask> Medium, Organic, Insignificant, Resource_INST </CategoryMask>
+		<Affiliation>CIVILIAN</Affiliation>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> LandStatic </Space_Layer>
+		<UnitCollisionClass> Vehicle </UnitCollisionClass>
+		<Custom_Soft_Footprint_Radius> 3.5 </Custom_Soft_Footprint_Radius>
+		<Custom_Hard_XExtent> 2.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 2.0 </Custom_Hard_YExtent>
+
+		<!-- CONFLICT -->
+		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
+		<Is_Valid_Target>True</Is_Valid_Target>
+		<Is_Attackable>true</Is_Attackable>
+		
+		<!-- BEHAVIORS -->
+		
+		<LandBehavior> RESOURCE, EFFECT_REGISTRY, ATTRIBUTE_DIRECTORY </LandBehavior>
+				
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+		
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 500 </Resource_Units>
+			<Resource_For_Faction> Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> true </Is_Single_Resource>
+		</BehaviorType>
+
+		<BehaviorType Name="CrushBehaviorType">
+			<Crush_Defense> 20 </Crush_Defense>
+			<Crush_Power> 15 </Crush_Power>
+			<Should_Check_Faction_On_Crush> false </Should_Check_Faction_On_Crush>
+		</BehaviorType>
+		
+	</X60_Neutral_Fauna>
+
+</Neutral_Fauna_XML>
+
+
+

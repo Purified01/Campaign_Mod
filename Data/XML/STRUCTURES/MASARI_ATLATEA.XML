@@ -1,0 +1,898 @@
+<?xml version="1.0"?>
+<Masari_Atlatea_XML>
+
+	<!-- **************************************************************************************** -->
+	<!-- *** STRUCTURE ************************************************************************** -->
+	<!-- **************************************************************************************** -->
+
+	<X13_Masari_Structures Name="Masari_Atlatea">
+
+		<!-- ART -->
+		<Land_Model_Name>ZB_HQ_atlatea.alo</Land_Model_Name>
+		<Scale_Factor>1.6</Scale_Factor>
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+      <AssetBank> BANK_MASARI </AssetBank>
+		<Exclude_From_Distance_Fade> true </Exclude_From_Distance_Fade>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_MASARI_STRUCTURE_ATLATEA</Text_ID>
+
+		<!-- ATTRIBUTES -->
+		<CategoryMask> Large, Stationary </CategoryMask>
+		<Affiliation> Masari</Affiliation>
+		<Victory_Relevant> Yes </Victory_Relevant>
+		<Importance> 0.6 </Importance>
+		<Shot_Type> Circle </Shot_Type>
+
+      <Attributes SubObjectList="Yes">
+         <!-- Maximum allowed production rate at this enabler -->
+         <Max_Unit_Build_Rate>4</Max_Unit_Build_Rate>
+
+         <!-- Dark Matter Armor -->
+         <DMA_Max> 800.0 </DMA_Max>
+         <DMA_Regen_Rate> 25.0 </DMA_Regen_Rate>
+      </Attributes>
+
+      <!-- MOVEMENT -->
+      <Space_Layer> LandGiant | LandDynamic </Space_Layer>
+      <MovementClass>Building</MovementClass>
+      <UnitCollisionClass> High Obstacle </UnitCollisionClass>
+		<Custom_Hard_XExtent> 73.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 55.0 </Custom_Hard_YExtent>
+     <Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+      <Tornado_Movement_Factor>0.00001</Tornado_Movement_Factor>
+
+      <!-- CONFLICT -->
+      <Is_Attackable> true </Is_Attackable>
+      <Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+      <Ranged_Target_Z_Adjust> 10.0 </Ranged_Target_Z_Adjust>
+      <Tactical_Health> 6000 </Tactical_Health>
+		
+      <Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+      <Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+      <Land_Damage_SFX>null,SFX_GENERIC_DETONATION, SFX_GENERIC_DETONATION,null</Land_Damage_SFX>
+
+      <!-- BEHAVIORS -->
+      <Behavior>
+			SELECTABLE,
+			GROUND_STRUCTURE,
+			EFFECT_REGISTRY,
+			EFFECT_GENERATOR,
+			ATTRIBUTE_DIRECTORY,
+			TACTICAL_ENABLER,
+			PERSISTENT_UNIT
+		</Behavior>
+
+      <LandBehavior>
+			HARD_POINT_MANAGER,
+			TACTICAL_BUILD_OBJECTS,
+			GUI,
+			RADAR_MAP_VISIBLE,
+			REVEAL,
+			HIDE_WHEN_FOGGED,
+			UNIT_AI,
+			AI_RECRUITABLE,
+			AI_TARGET,
+			IDLE,
+			SWITCH_TYPE,
+			TERRAFORM,
+			CREATE_CHILDREN,
+			<!-- ELEMENTAL_MODE must be last because it causes add behavior to be called -->
+         ELEMENTAL_MODE
+      </LandBehavior>
+
+	<BehaviorType Name="LuaScriptBehaviorType">
+		<Lua_Global_Behaviors> GlobalResourceStructureBehavior </Lua_Global_Behaviors>
+		<Lua_Land_Behaviors> GlobalResourceStructureBehavior </Lua_Land_Behaviors>
+		<Lua_Script_Data>
+			GlobalResourcesPerCycle = 45
+			GlobalResourceCap = 250
+			TacticalResourcesPerCycle = 25
+			TacticalResourceCap = 250
+		</Lua_Script_Data>
+	</BehaviorType>
+
+      <!-- NOTE: for Masari types the TooltipBehaviorData must be set in all 3 versions!!!!.
+            However, the Production_Tooltip_Category should only be set in the 'generic' versions  
+            since this is the version queried for production dependencies for the tooltip display. -->
+      <BehaviorType Name="TooltipBehaviorType">
+         <Tooltip_Description_Text_ID> TEXT_TOOLTIP_DESCRIPTION_MASARI_ATLATEA </Tooltip_Description_Text_ID>
+         <Tooltip_Category> TEXT_TOOLTIP_CATEGORY_STRUCTURE </Tooltip_Category>
+         <Production_Tooltip_Category> Command_Center </Production_Tooltip_Category>
+      </BehaviorType>
+      
+         <Researched_Upgrades>
+		TEXT_MASARI_RESEARCH_TITLE_BURNING_BRILLIANCE
+		TEXT_MASARI_RESEARCH_TITLE_ADVANCED_DARK_MATTER_ARMOR
+		TEXT_MASARI_RESEARCH_TITLE_DARK_MATTER_AFINITY
+		TEXT_MASARI_RESEARCH_TITLE_DARK_MATTER_MASTERY
+		TEXT_MASARI_RESEARCH_TITLE_STATIONARY_REVELATION
+		TEXT_MASARI_RESEARCH_TITLE_CLEANSING_ENERGY
+         </Researched_Upgrades>
+	 
+      <BehaviorType Name="TerraformBehaviorType">
+         <Bib_X_Extent> 93 </Bib_X_Extent>
+         <Bib_Y_Extent> 75 </Bib_Y_Extent>
+      </BehaviorType>
+
+      <BehaviorType Name="GameEventSourceBehaviorType">
+         <Game_Event_Source_Category> Structure </Game_Event_Source_Category>
+      </BehaviorType>
+
+      <BehaviorType Name="ProductionBehaviorType">
+         <Size_Value> 10 </Size_Value>
+         <Build_Cost_Credits> 0 </Build_Cost_Credits>
+         <Build_Time_Seconds> 600 </Build_Time_Seconds>
+         <Is_Research_Tech_Tree_Lockable> Yes </Is_Research_Tech_Tree_Lockable>
+         <Strategic_Sell_Percentage> 0.5 </Strategic_Sell_Percentage>
+         <!-- MARIA 10.11.2006 - we can only have one megacorp center at all times! -->
+         <!-- DEBUG: We'll want to set up the other factions hqs with this value as well -->
+         <Build_Limit_Current_Per_Player> 1 </Build_Limit_Current_Per_Player>
+		</BehaviorType>
+
+		<BehaviorType Name="TacticalSettingsBehaviorType">
+			<Starting_Tactical_Credits> 1000 </Starting_Tactical_Credits>
+		</BehaviorType>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Armor_Type> Armor_Masari_Structure_Heavy </Armor_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="GroundStructureBehaviorType">
+			<!-- Maria 03/20/2006 -->
+			<!-- Whenever a structure has the GROUND_STRUCTURE behavior, we must specify whether it is a regular -->
+			<!-- special structure or a Command Center!!!!!!! -->
+			<Is_Command_Center> Yes </Is_Command_Center>
+			<Enables_Research> Yes </Enables_Research>
+			<Defense_Force>
+				Masari_Architect, Masari_Architect, Masari_Architect, Masari_Architect,
+				Masari_Disciple, Masari_Disciple, Masari_Disciple, Masari_Disciple, Masari_Disciple, Masari_Disciple, Masari_Disciple,
+				Masari_Seer, Masari_Seer,
+				Masari_Sentry,	Masari_Sentry,
+				Masari_Seeker,	Masari_Seeker,
+				Masari_Figment, Masari_Figment,
+				Masari_Peacebringer
+			</Defense_Force>
+			<!-- Starting this at cost of above units * 0.5 -->
+			<Reinforcement_Cost_To_Adjacent_Territory> 780 </Reinforcement_Cost_To_Adjacent_Territory>
+
+			<!-- Removed re-arm time to avoid elaborate anti-exploit defense force buyback rules -->
+			<Rearm_Time_Seconds> 180.0 </Rearm_Time_Seconds>
+			<Upgrade_Socket_Count> 2 </Upgrade_Socket_Count>
+			<Empty_Upgrade_Socket_Type> Masari_Command_Center_Empty_Socket </Empty_Upgrade_Socket_Type>
+			<In_Production_Upgrade_Socket_Type> Masari_Command_Center_In_Production_Socket </In_Production_Upgrade_Socket_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Death_Clone>Damage_Default, Masari_Atlatea_Death_Clone</Death_Clone>
+			<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+			<Death_Clone_Keep_Behaviors> EFFECT_REGISTRY </Death_Clone_Keep_Behaviors>
+			<Death_Fade_Time> 0.25 </Death_Fade_Time>
+			<Death_Persistence_Duration> 1 </Death_Persistence_Duration>
+			<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+		</BehaviorType>
+
+      <BehaviorType Name="RadarMapBehaviorType">
+         <Radar_Icon_Size>0.05  0.05</Radar_Icon_Size>
+      </BehaviorType>
+
+      <BehaviorType Name="SFXBehaviorType">
+			<SFXEvent_Fire>SFX_Masari_Vehicle_Fire</SFXEvent_Fire>
+			<SFXEvent_Fire_Detonate>SFX_Masari_Detonation_1</SFXEvent_Fire_Detonate>
+         <SFXEvent_Select>SFX_Structure_Select_Masari_Atlatea</SFXEvent_Select>
+         <Death_SFXEvent_Start_Die> SFX_Masari_Large_Structure_Death</Death_SFXEvent_Start_Die>
+         <SFXEvent_Unit_Lost />
+         <SFXEvent_Tactical_Build_Started>GUI_BUILD_Structure</SFXEvent_Tactical_Build_Started>
+         <SFXEvent_Tactical_Build_Complete>SFX_Structure_Select_Masari_Atlatea</SFXEvent_Tactical_Build_Complete>
+         <SFXEvent_Tactical_Build_Cancelled>GUI_BUILD_Structure_Canceled</SFXEvent_Tactical_Build_Cancelled>
+      </BehaviorType>
+
+      <BehaviorType Name="CrushBehaviorType">
+         <Crush_Defense>90</Crush_Defense>
+      </BehaviorType>
+
+      <BehaviorType Name="ElementalModeType">
+      </BehaviorType>
+
+      <BehaviorType Name="TypeSwitchBehaviorType">
+         <!-- List of types this object can switch to - This is mainly needed to inforce build limits and must be
+					only added to the base type used for production dependencies purposes -->
+      </BehaviorType>
+
+      <BehaviorType Name="TacticalBuildObjectsBehaviorType">
+			<!--
+			Maria 09.21.2006 ** Although this structures do not have any kind of 'build power' in tactical mode
+			I am re-using this behavior type to define the types of upgrades that are available for this structure
+			(so that I can use the HP Socket build dependencies system)
+			-->
+         <HP_Socket_Type> Masari_Atlatea_Socket </HP_Socket_Type>
+
+         <Tactical_Build_Hard_Point_Attachment_Bone> HP_Attach </Tactical_Build_Hard_Point_Attachment_Bone>
+        	<!-- uses HP_Attach_00 to HP_Attach_02, the following line combined with previous line defines this -->
+			<Tactical_Build_Hard_Point_Bone_Variations> 3 </Tactical_Build_Hard_Point_Bone_Variations>
+         <Minimum_Time_Before_Pad_Can_Build_Again />
+         <Visible_To_Enemies_When_Empty>Yes</Visible_To_Enemies_When_Empty>
+         <Hides_When_Built_On>No</Hides_When_Built_On>
+         <Destroy_When_Child_Dies>No</Destroy_When_Child_Dies>
+      </BehaviorType>
+
+		<BehaviorType Name="TacticalEnablerBehaviorType">
+			<Enables_Reinforcements> true </Enables_Reinforcements>
+		</BehaviorType>		
+
+      <!-- MARIA 05.10.2006 -->
+      <!-- This behavior types determine the type of 3d global icon that will represent this structure!. -->
+      <BehaviorType Name="GlobalIconBehaviorType">
+         <Global_Icon_Object_Type_Name> Masari_Atlatea_Global_Icon </Global_Icon_Object_Type_Name>
+         <!-- Only the Icon objects are Dummy Global Icons! -->
+         <Is_Dummy_Global_Icon> No </Is_Dummy_Global_Icon>
+      </BehaviorType>
+
+      <BehaviorType Name="BlobShadowBehaviorType">
+         <No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+         <No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+      </BehaviorType>
+
+      <BehaviorType Name="EncyclopediaBehaviorType">
+         <Building_Queue_Type> Command </Building_Queue_Type>
+         <Icon_Name>i_icon_mb_atlatea.tga</Icon_Name>
+      </BehaviorType>
+
+      <BehaviorType Name="GUIBehaviorType">
+         <GUI_Row> 0 </GUI_Row>
+         <GUI_Scene_Name> HealthBar_Scene_Large </GUI_Scene_Name>
+         <GUI_Receives_Input> false </GUI_Receives_Input>
+         <GUI_Bounds_Scale>0.5</GUI_Bounds_Scale>
+         <GUI_Min_Scale> 0.3 </GUI_Min_Scale>
+         <GUI_Max_Scale> 2.5 </GUI_Max_Scale>
+         <GUI_Default_Scale> 0.5 </GUI_Default_Scale>
+         <GUI_World_Offset> 0.0, 0.0, -20 </GUI_World_Offset>
+         <GUI_Bracket_Size>2</GUI_Bracket_Size>
+      </BehaviorType>
+
+      <BehaviorType Name="SelectableBehaviorType">
+         <Select_Box_Scale>175</Select_Box_Scale>
+         <Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+         <Selection_Blob_Material_Name>Selection_Masari_Land_Large</Selection_Blob_Material_Name>
+      </BehaviorType>
+
+      <BehaviorType Name="AIBehaviorType">
+         <AI_Combat_Power> 1 </AI_Combat_Power>
+			<AI_Target_Level>Individual</AI_Target_Level>
+			<Allow_Multiple_Recruitment>True</Allow_Multiple_Recruitment>
+		</BehaviorType>
+
+      <BehaviorType Name="RevealBehaviorType">
+         <Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+      </BehaviorType>
+
+      <BehaviorType Name="ElementalModeBehaviorType">
+         <Elemental_Object_Types> Fire, Masari_Atlatea_Fire </Elemental_Object_Types>
+         <Elemental_Object_Types> Ice, Masari_Atlatea_Ice </Elemental_Object_Types>
+         <Elemental_Object_Types> Electricity, Masari_Atlatea_Electricity </Elemental_Object_Types>
+      </BehaviorType>
+
+      <BehaviorType Name="SwitchTypeBehaviorType">
+         <Keep_Hardpoints_On_Switch> true </Keep_Hardpoints_On_Switch>
+         <Type_Switch_Types> Masari_Atlatea_Fire, Masari_Atlatea_Ice  </Type_Switch_Types>
+         <Switch_Effect_Generator_Name> MasariSwitchGenerator </Switch_Effect_Generator_Name>
+      </BehaviorType>
+
+      <Effect_Generator_Data SubObjectList="Yes">
+
+         <Effect_Generator Name="MasariSwitchGenerator">
+            <Should_Deactivate_Manually> false </Should_Deactivate_Manually>
+            <Is_Independent_Generator>Yes</Is_Independent_Generator>
+
+            <Effect_Generator_Entry Name="Entry1">
+               <Duration> 0.5 </Duration>
+               <Base_Delay> 0.4 </Base_Delay>
+               <Effect_Name> MasariFullArmorEffect </Effect_Name>
+               <Target_Gathering_Mask> Self </Target_Gathering_Mask>
+               <!-- only in ice mode -->
+              <Target_Filter_C> In_Ice_Mode </Target_Filter_C>
+            </Effect_Generator_Entry>
+
+         </Effect_Generator>
+
+         <Effect_Generator Name="MasariStationaryRevelationGenerator">
+            <Should_Deactivate_Manually> false </Should_Deactivate_Manually>
+            <Is_Independent_Generator>Yes</Is_Independent_Generator>
+            <Modal_Refresh_Frequency> 3.0 </Modal_Refresh_Frequency>
+            <Starts_Active> yes </Starts_Active>
+
+            <Effect_Generator_Entry Name="Entry1">
+               <Duration> 3.1 </Duration>
+               <Effect_Name> MasariStationaryRevelationEffect </Effect_Name>
+               <Target_Gathering_Mask> Self </Target_Gathering_Mask>
+            </Effect_Generator_Entry>
+
+         </Effect_Generator>
+
+         <Effect_Generator Name="AtlateaRegionHOTEffectGenerator">
+            <Starts_Active> yes </Starts_Active>
+            <Modal_Refresh_Frequency> 1.0 </Modal_Refresh_Frequency>
+            <Effect_Generator_Entry Name="Entry1">
+               <Effect_Name> HQFriendlyRegionHOTEffect </Effect_Name>
+               <Duration> 0.2 </Duration>
+               <Target_Gathering_Mask> GlobalRegion </Target_Gathering_Mask>
+            </Effect_Generator_Entry>
+         </Effect_Generator>
+
+      </Effect_Generator_Data>
+
+		<Create_Children_Data SubObjectList="Yes">
+
+			<Create_Child_Data>
+				<Type> Masari_Atlatea_Air_Proxy </Type>
+				<Creation_Trigger> OnParentBehaviorFirstService </Creation_Trigger>
+				<Destruction_Trigger> OnParentBehaviorRemove </Destruction_Trigger>
+			</Create_Child_Data>
+
+		</Create_Children_Data>
+
+	</X13_Masari_Structures>
+
+	<X13_Masari_Structures Name="Masari_Atlatea_Air_Proxy">
+
+		<!-- ART -->
+		<Scale_Factor> 1.6 </Scale_Factor>
+		<Is_Decoration> No </Is_Decoration>
+		<Exclude_From_Distance_Fade> true </Exclude_From_Distance_Fade>
+
+		<!-- INTERFACE -->
+		<Text_ID> TEXT_NONE </Text_ID>
+		<Is_Placed_By_Editor> false </Is_Placed_By_Editor>
+
+		<!-- ATTRIBUTES -->
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> Air </Space_Layer>
+		<MovementClass> LargeWalker </MovementClass>
+		<UnitCollisionClass> High Obstacle </UnitCollisionClass>
+		<Custom_Hard_XExtent> 18.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 18.0 </Custom_Hard_YExtent>
+		<Custom_Hard_XExtent_Offset> -28.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_YExtent_Offset> 0.0 </Custom_Hard_YExtent_Offset>
+
+	</X13_Masari_Structures>
+
+
+   <!-- **************************************************************************************** -->
+   <!-- *** VARIANTS *************************************************************************** -->
+   <!-- **************************************************************************************** -->
+
+   <!-- ********************************** Fire *************************************** -->
+
+   <X13_Masari_Structures Name="Masari_Atlatea_Fire">
+      <Variant_Of_Existing_Type> Masari_Atlatea </Variant_Of_Existing_Type>
+      <Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+      <BehaviorType Name="GroundStructureBehaviorType">
+         <Is_Buildable_By_Constructor> false </Is_Buildable_By_Constructor>
+      </BehaviorType>
+
+      <BehaviorType Name="TooltipBehaviorType">
+         <Tooltip_Description_Text_ID> </Tooltip_Description_Text_ID>
+         <Tooltip_Category> TEXT_TOOLTIP_CATEGORY_STRUCTURE </Tooltip_Category>
+      </BehaviorType>
+
+
+      <BehaviorType Name="TypeSwitchBehaviorType">
+		</BehaviorType>
+
+
+      <Effect_Generator_Data SubObjectList="Yes" Replace="No">
+
+         <Effect_Generator Name="AtlateaFireVisualGenerator">
+            <Starts_Active> true </Starts_Active>
+
+            <Effect_Generator_Entry Name="Entry1">
+               <Effect_Name> AtlateaFireVisualEffect </Effect_Name>
+               <Duration> -1.0 </Duration>
+               <Target_Gathering_Mask> Self </Target_Gathering_Mask>
+            </Effect_Generator_Entry>
+
+         </Effect_Generator>
+
+         <!-- Standard DMA generator - Oksana 05/14/2007 -->
+         <!--INCLUDE ".\Data\XML\Includes\Masari_DMA\MASARI_DMA_Light_Mode_Generators.xml" -->
+
+
+         <Effect_Generator Name="MasariResearchBurningAuraEffectGenerator">
+            <Should_Deactivate_Manually> false </Should_Deactivate_Manually>
+            <Modal_Refresh_Frequency> 2.0 </Modal_Refresh_Frequency>
+            <Starts_Active> true </Starts_Active>
+
+            <Effect_Generator_Entry Name="Entry1">
+               <Effect_Name> MasariResearchBurningAuraEffect </Effect_Name>
+               <Duration> 1.8 </Duration>
+               <Target_Gathering_Mask> SelfAE </Target_Gathering_Mask>
+               <Target_Filter_Categories>~DeathCloneResource </Target_Filter_Categories>
+               <Target_Filter_C> Is_Enemy </Target_Filter_C>
+               <Area_Effect_Radius> 125.0 </Area_Effect_Radius>
+            </Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry2">
+					<Effect_Name> MasariResearchBurningAuraSelfEffect </Effect_Name>
+					<Duration> 2.1 </Duration>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+				</Effect_Generator_Entry>
+
+			</Effect_Generator>
+
+      </Effect_Generator_Data>
+
+
+      <BehaviorType Name="SwitchTypeBehaviorType">
+         <Keep_Hardpoints_On_Switch> true </Keep_Hardpoints_On_Switch>
+      </BehaviorType>
+   </X13_Masari_Structures>
+
+   <!-- ********************************** Ice *************************************** -->
+
+   <X13_Masari_Structures Name="Masari_Atlatea_Ice">
+      <Variant_Of_Existing_Type> Masari_Atlatea </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+		<BehaviorType Name="RevealBehaviorType">
+			<Land_FOW_Reveal_Range>200.0</Land_FOW_Reveal_Range>
+		</BehaviorType>
+		
+		<BehaviorType Name="GroundStructureBehaviorType">
+			<Is_Buildable_By_Constructor> false </Is_Buildable_By_Constructor>
+		</BehaviorType>
+
+		<BehaviorType Name="TypeSwitchBehaviorType">
+		</BehaviorType>
+
+      <BehaviorType Name="TooltipBehaviorType">
+         <Tooltip_Description_Text_ID> </Tooltip_Description_Text_ID>
+         <Tooltip_Category> TEXT_TOOLTIP_CATEGORY_STRUCTURE </Tooltip_Category>
+      </BehaviorType>
+
+		<BehaviorType Name="SwitchTypeBehaviorType">
+			<Keep_Hardpoints_On_Switch> true </Keep_Hardpoints_On_Switch>
+		</BehaviorType>
+		
+		<Effect_Generator_Data SubObjectList="Yes" Replace="No">
+
+			<Effect_Generator Name="AtlateaIceVisualGenerator">
+
+				<Starts_Active> true </Starts_Active>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> AtlateaIceVisualEffect </Effect_Name>
+					<Duration> -1.0 </Duration>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+				</Effect_Generator_Entry>
+
+			</Effect_Generator>
+
+         <!-- Standard DMA generator - Oksana 05/14/2007 -->
+         <!--INCLUDE ".\Data\XML\Includes\Masari_DMA\MASARI_DMA_Dark_Mode_Generators_Structure.xml" -->
+
+      </Effect_Generator_Data>
+
+   </X13_Masari_Structures>
+
+
+	
+	<!-- **************************************************************************************** -->
+	<!-- ****DEATH CLONE(S)********************************************************************** -->
+	<!-- **************************************************************************************** -->
+
+
+	<X13_Masari_Structures Name="Masari_Atlatea_Death_Clone">
+
+		<!-- ART -->
+		<Land_Model_Name>ZB_HQ_atlatea_DC.alo</Land_Model_Name>
+		<Scale_Factor>1.6</Scale_Factor>
+		<AssetBank> BANK_MASARI </AssetBank>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+		<!-- ATTRIBUTES -->
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+
+		<!-- CONFLICT -->
+		<Ranged_Target_Z_Adjust>0.1</Ranged_Target_Z_Adjust>
+
+		<LandBehavior>
+			EFFECT_REGISTRY,
+			EFFECT_GENERATOR,
+			ATTRIBUTE_DIRECTORY,
+			PARTICLE
+		</LandBehavior>
+
+		<BehaviorType Name="SFXBehaviorType">
+			<Death_SFXEvent_End_Die />
+			<Death_SFXEvent_Start_Die> SFX_Masari_Large_Structure_Death </Death_SFXEvent_Start_Die>
+		</BehaviorType>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Specific_Death_Anim_Type> DIE </Specific_Death_Anim_Type>
+			<Death_Fade_Time> 0.25 </Death_Fade_Time>
+			<Death_Persistence_Duration> 3.0 </Death_Persistence_Duration>
+		</BehaviorType>
+
+	</X13_Masari_Structures>
+
+
+
+
+
+
+
+
+
+
+	<!-- **************************************************************************************** -->
+   <!-- *** HARDPOINTS ************************************************************************* -->
+   <!-- **************************************************************************************** -->
+
+   <HardPoint Name="Masari_Atlatea_HP">
+
+      <!-- ART -->
+      <Scale_Factor>0.95</Scale_Factor>
+      <!-- _00, _01, _02, etc. is automatically attached -->
+      <Target_Bones> </Target_Bones>
+      <Exclude_From_Distance_Fade> true </Exclude_From_Distance_Fade>
+
+      <!-- INTERFACE -->
+      <Is_Placed_By_Editor> false </Is_Placed_By_Editor>
+
+      <!-- ATTRIBUTES -->
+      <Affiliation> Masari </Affiliation>
+		<CategoryMask> HardPoint </CategoryMask>
+
+      <!-- CONFLICT -->
+      <Is_Attackable> true </Is_Attackable>
+      <Collidable_By_Projectile_Living> Yes </Collidable_By_Projectile_Living>
+      <Collidable_By_Projectile_Dead> No </Collidable_By_Projectile_Dead>
+      <Ranged_Target_Z_Adjust> 30.0 </Ranged_Target_Z_Adjust>
+      <Tactical_Health> 1000 </Tactical_Health>
+
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_GENERIC_DETONATION, SFX_GENERIC_DETONATION,null</Land_Damage_SFX>
+		
+      <!-- BEHAVIORS -->
+      <!-- Any unit that has hard points requires a Behavior entry with HARD_POINT_MANAGER, and an <Attached_Hard_Points> list  -->
+      <!-- Any object that is a hard point requires a Behavior entry with HARD_POINT -->
+      <Behavior>
+			SELECTABLE,
+			EFFECT_REGISTRY,
+			EFFECT_GENERATOR,
+			ATTRIBUTE_DIRECTORY,
+			HARD_POINT,
+			PERSISTENT_UNIT
+		</Behavior>
+
+      <LandBehavior>
+         <!--JOEXMLCLEAN GUI,-->
+         IDLE,
+         HIDE_WHEN_FOGGED
+      </LandBehavior>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Armor_Type> Armor_Novus_Structure_Heavy </Armor_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="HardPointBehaviorType">
+			<HP_Type> HARD_POINT_DUMMY_ART </HP_Type>
+			<HP_Replacement_Object_Type_When_Destroyed />
+			<HP_Single_Destruction_Destroys_Parent> No </HP_Single_Destruction_Destroys_Parent>
+			<!-- Destroying this one hard point will trigger the parent object to be destroyed -->
+		</BehaviorType>
+
+		<BehaviorType Name="SFXBehaviorType">
+			<SFXEvent_Fire>  </SFXEvent_Fire>
+			<Death_SFXEvent_Start_Die> SFX_Masari_HP_Weapon_1_Death </Death_SFXEvent_Start_Die>
+			<SFXEvent_Turret_Rotating_Loop> SFX_Masari_Medium_Turret_Loop </SFXEvent_Turret_Rotating_Loop>
+		</BehaviorType>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Remove_Upon_Death> Yes </Remove_Upon_Death>
+			<!-- Yes: Instantly destroy death clone when effects are started -->
+			<Death_Explosions> Small_Explosion_Land </Death_Explosions>
+		</BehaviorType>
+
+		<BehaviorType Name="CrushBehaviorType">
+			<Crush_Defense>90</Crush_Defense>
+		</BehaviorType>
+
+      <Effect_Generator_Data SubObjectList="Yes" Replace="No">
+
+         <!-- Standard DMA generator - Oksana 05/14/2007 -->
+         <!--INCLUDE ".\Data\XML\Includes\Masari_DMA\MASARI_DMA_Hardpoint_Generators.xml" -->
+
+      </Effect_Generator_Data>
+
+	</HardPoint>
+
+	<!-- ********************************************************************** -->
+	<HardPoint Name="Masari_Atlatea_Basic_Defense_Upgrade">
+		<Variant_Of_Existing_Type>Masari_Atlatea_HP</Variant_Of_Existing_Type>
+		<Land_Model_Name>ZBHQ_Basic_Defenses.alo </Land_Model_Name>
+		<Scale_Factor>1.6</Scale_Factor>
+      <AssetBank> BANK_MASARI </AssetBank>
+
+		<CategoryMask> HardPoint, CanAttack </CategoryMask>
+		<Ranged_Target_Z_Adjust> 10.0 </Ranged_Target_Z_Adjust>
+
+		<Text_ID>TEXT_MASARI_STRATEGIC_UPGRADE_BASIC_DEFENSE</Text_ID>
+
+		<Behavior>
+			HARD_POINT,
+			SELECTABLE,
+			EFFECT_REGISTRY,
+			EFFECT_GENERATOR,
+			ATTRIBUTE_DIRECTORY,
+			PERSISTENT_UNIT
+		</Behavior>
+
+		<LandBehavior>
+			IDLE,
+			UNIT_AI,
+			DAMAGE_TRACKING,
+			AI_TARGET,
+			AI_RECRUITABLE,
+			HIDE_WHEN_FOGGED,
+			TARGETING,
+			WEAPON,
+			TURRET
+		</LandBehavior>
+		
+		<!-- Maria 08.09.2006  We want this object to be buildable -->
+		<BehaviorType Name="ProductionBehaviorType">
+			<Size_Value>10</Size_Value>
+			<Score_Cost_Credits>1</Score_Cost_Credits>
+			<Build_Cost_Credits>125</Build_Cost_Credits>
+			<Build_Time_Seconds>30</Build_Time_Seconds>
+			<Is_Research_Tech_Tree_Lockable> Yes </Is_Research_Tech_Tree_Lockable>
+			<Strategic_Sell_Percentage>0.5</Strategic_Sell_Percentage>
+			<Is_Command_Center_Upgrade> Yes </Is_Command_Center_Upgrade>
+		</BehaviorType>
+
+		<BehaviorType Name="EncyclopediaBehaviorType">
+			<Icon_Name> i_icon_m_strategic_upgrade_basic_defense.tga </Icon_Name>
+		</BehaviorType>
+
+		<BehaviorType Name="TooltipBehaviorType">
+			<Tooltip_Description_Text_ID> TEXT_TOOLTIP_DESCRIPTION_MASARI_STRATEGIC_UPGRADE_BASIC_DEFENSE </Tooltip_Description_Text_ID>
+			<Tooltip_Category> TEXT_TOOLTIP_CATEGORY_HARD_POINT </Tooltip_Category>
+		</BehaviorType>
+          
+		<BehaviorType Name="HardPointBehaviorType">
+			<HP_Influences_Region> true </HP_Influences_Region>
+			<HP_Type> HARD_POINT_WEAPON_LASER </HP_Type>
+			<HP_Replacement_Object_Type_When_Destroyed />
+			<HP_Single_Destruction_Destroys_Parent> No </HP_Single_Destruction_Destroys_Parent>
+			<!-- Destroying this one hard point will trigger the parent object to be destroyed -->
+		</BehaviorType>
+
+		<BehaviorType Name="WeaponBehaviorType">
+			<Targeting_Priority_Set> Global_HQ_Defense_Turret_Target_Priority </Targeting_Priority_Set>
+			<Targeting_Fire_Inaccuracy> 1.0 </Targeting_Fire_Inaccuracy>
+			<Targeting_Min_Attack_Distance> 0.0 </Targeting_Min_Attack_Distance>
+			<Targeting_Max_Attack_Distance> 300.0 </Targeting_Max_Attack_Distance>
+			<Targeting_Stickiness_Time_Threshold> 5.0 </Targeting_Stickiness_Time_Threshold>
+
+			<Projectile_Types> Proj_Masari_Skylord_Light_Bomb </Projectile_Types>
+			<Projectile_Fire_Pulse_Count> 8 </Projectile_Fire_Pulse_Count>
+			<Projectile_Fire_Pulse_Delay_Seconds> 0.5 </Projectile_Fire_Pulse_Delay_Seconds>
+			<Projectile_Fire_Recharge_Seconds> 6.0 </Projectile_Fire_Recharge_Seconds>
+		</BehaviorType>
+
+		<BehaviorType Name="TurretBehaviorType">
+			<Turret_Rotate_Extent_Degrees> 360 </Turret_Rotate_Extent_Degrees>
+			<Turret_Elevate_Extent_Degrees> 180 </Turret_Elevate_Extent_Degrees>
+			<Turret_Bone_Name> Turret_00 </Turret_Bone_Name>
+			<Barrel_Bone_Name> Barrel_00 </Barrel_Bone_Name>
+			<Turret_Rotate_Speed> 5.0 </Turret_Rotate_Speed>
+			<Apply_Z_Turret_Rotate_To_Axis> 2 </Apply_Z_Turret_Rotate_To_Axis>
+			<Apply_Y_Turret_Rotate_To_Axis> 1 </Apply_Y_Turret_Rotate_To_Axis>
+			<Ground_Vehicle_Turret_Target> Yes </Ground_Vehicle_Turret_Target>
+			<Air_Vehicle_Turret_Target> No </Air_Vehicle_Turret_Target>
+		</BehaviorType>
+
+		<Effect_Generator_Data SubObjectList="Yes" Replace="No">
+			<Effect_Generator Name="AtlateaBasicDefenseEffectGenerator">
+				<Starts_Active> yes </Starts_Active>
+				<Modal_Refresh_Frequency> 3.0 </Modal_Refresh_Frequency>
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> GenericGlobalRegionDefenseEffect </Effect_Name>
+					<Duration> 3.2 </Duration>
+					<Target_Gathering_Mask> GlobalRegion </Target_Gathering_Mask>
+					<Target_Filter_C> Has_Behavior_Region </Target_Filter_C>
+				</Effect_Generator_Entry>
+			</Effect_Generator>
+		</Effect_Generator_Data>
+
+	</HardPoint>
+
+	
+	<!-- ********************************************************************** -->
+	<HardPoint Name="Masari_Atlatea_Block_Spying_Upgrade">
+		<Variant_Of_Existing_Type>Masari_Atlatea_HP</Variant_Of_Existing_Type>
+		<Land_Model_Name>ZBHQ_Block_Spying.alo </Land_Model_Name>
+		<Scale_Factor>1.6</Scale_Factor>
+
+		<Text_ID>TEXT_MASARI_STRATEGIC_UPGRADE_BLOCK_SPYING</Text_ID>
+		<Ranged_Target_Z_Adjust> 10.0 </Ranged_Target_Z_Adjust>
+
+		<!-- Maria 08.09.2006  We want this object to be buildable -->
+		<BehaviorType Name="ProductionBehaviorType">
+			<Size_Value>10</Size_Value>
+			<Score_Cost_Credits>1</Score_Cost_Credits>
+			<Build_Cost_Credits>220</Build_Cost_Credits>
+			<Build_Time_Seconds>30</Build_Time_Seconds>
+			<Is_Research_Tech_Tree_Lockable> Yes </Is_Research_Tech_Tree_Lockable>
+			<Strategic_Sell_Percentage>0.5</Strategic_Sell_Percentage>
+			<Is_Command_Center_Upgrade> Yes </Is_Command_Center_Upgrade>
+		</BehaviorType>
+
+		<BehaviorType Name="EncyclopediaBehaviorType">
+			<Icon_Name> i_icon_m_strategic_upgrade_block_spying.tga </Icon_Name>
+		</BehaviorType>
+
+	<BehaviorType Name="TooltipBehaviorType">
+		<Tooltip_Description_Text_ID> TEXT_TOOLTIP_DESCRIPTION_MASARI_STRATEGIC_UPGRADE_BLOCK_SPYING </Tooltip_Description_Text_ID>
+		<Tooltip_Category> TEXT_TOOLTIP_CATEGORY_HARD_POINT </Tooltip_Category>
+	</BehaviorType>	
+		
+	</HardPoint>
+
+
+	<!-- ********************************************************************** -->
+	<HardPoint Name="Masari_Atlatea_Command_And_Control_Upgrade">
+		<Variant_Of_Existing_Type>Masari_Atlatea_HP</Variant_Of_Existing_Type>
+		<Land_Model_Name>ZBHQ_Command_Control.alo </Land_Model_Name>
+		<Scale_Factor>1.6</Scale_Factor>
+
+		<Text_ID>TEXT_MASARI_STRATEGIC_UPGRADE_COMMAND_CONTROL</Text_ID>
+
+		<!-- Maria 08.09.2006  We want this object to be buildable -->
+		<BehaviorType Name="ProductionBehaviorType">
+			<Size_Value>10</Size_Value>
+			<Score_Cost_Credits>1</Score_Cost_Credits>
+			<Build_Cost_Credits>155</Build_Cost_Credits>
+			<Build_Time_Seconds>30</Build_Time_Seconds>
+			<Is_Research_Tech_Tree_Lockable> Yes </Is_Research_Tech_Tree_Lockable>
+			<Strategic_Sell_Percentage>0.5</Strategic_Sell_Percentage>
+			<Is_Command_Center_Upgrade> Yes </Is_Command_Center_Upgrade>
+		</BehaviorType>
+
+		<BehaviorType Name="EncyclopediaBehaviorType">
+			<Icon_Name> i_icon_m_strategic_upgrade_command.tga </Icon_Name>
+		</BehaviorType>
+
+	<BehaviorType Name="TooltipBehaviorType">
+		<Tooltip_Description_Text_ID> TEXT_TOOLTIP_DESCRIPTION_MASARI_STRATEGIC_UPGRADE_COMMAND_CONTROL </Tooltip_Description_Text_ID>
+		<Tooltip_Category> TEXT_TOOLTIP_CATEGORY_HARD_POINT </Tooltip_Category>
+	</BehaviorType>
+
+		<Effect_Generator_Data SubObjectList="Yes" Replace="No">
+
+			<Effect_Generator Name="MasariCommandControlGenerator">
+				<Should_Deactivate_Manually> false </Should_Deactivate_Manually>
+				<Starts_Active> true </Starts_Active>
+				<Additive_Apply_Signals> OBJECT_CREATION, OBJECT_OWNER_CHANGED </Additive_Apply_Signals>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> MasariCommandControlEffect </Effect_Name>
+					<Duration> -1.0 </Duration>
+					<Target_Gathering_Mask> GlobalAll </Target_Gathering_Mask>
+					<Target_Filter_C> Is_Own_Fleet </Target_Filter_C>
+				</Effect_Generator_Entry>
+
+			</Effect_Generator>
+
+		</Effect_Generator_Data>
+
+	</HardPoint>
+
+
+	<!-- ********************************************************************** -->
+	<HardPoint Name="Masari_Atlatea_Megaweapon_Countermeasure_Upgrade">
+		<Variant_Of_Existing_Type>Masari_Atlatea_HP</Variant_Of_Existing_Type>
+		<Land_Model_Name>ZBHQ_Mega_Counter.alo </Land_Model_Name>
+		<Scale_Factor> 1.4 </Scale_Factor>
+
+		<Text_ID>TEXT_MASARI_STRATEGIC_UPGRADE_MW_COUNTERMEASURES</Text_ID>
+		<Ranged_Target_Z_Adjust> 20.0 </Ranged_Target_Z_Adjust>
+
+		<!-- Maria 08.09.2006  We want this object to be buildable -->
+		<BehaviorType Name="ProductionBehaviorType">
+			<Size_Value>10</Size_Value>
+			<Score_Cost_Credits>1</Score_Cost_Credits>
+			<Build_Cost_Credits>250</Build_Cost_Credits>
+			<Build_Time_Seconds>30</Build_Time_Seconds>
+			<Is_Research_Tech_Tree_Lockable> Yes </Is_Research_Tech_Tree_Lockable>
+			<Strategic_Sell_Percentage>0.5</Strategic_Sell_Percentage>
+			<Is_Command_Center_Upgrade> Yes </Is_Command_Center_Upgrade>
+		</BehaviorType>
+
+		<BehaviorType Name="EncyclopediaBehaviorType">
+			<Icon_Name> i_icon_m_strategic_upgrade_megaweapon_counter.tga </Icon_Name>
+		</BehaviorType>
+
+	<BehaviorType Name="TooltipBehaviorType">
+		<Tooltip_Description_Text_ID> TEXT_TOOLTIP_DESCRIPTION_MASARI_STRATEGIC_UPGRADE_MW_COUNTERMEASURES </Tooltip_Description_Text_ID>
+		<Tooltip_Category> TEXT_TOOLTIP_CATEGORY_HARD_POINT </Tooltip_Category>
+	</BehaviorType>
+		
+	</HardPoint>
+
+
+	<!-- ********************************************************************** -->
+	<HardPoint Name="Masari_Atlatea_Repair_Superweapon">
+		<Variant_Of_Existing_Type>Masari_Atlatea_HP</Variant_Of_Existing_Type>
+		<Land_Model_Name>ABHQ_repair.alo </Land_Model_Name>
+		<Scale_Factor>1.6</Scale_Factor>
+
+		<Text_ID>TEXT_MASARI_STRATEGIC_UPGRADE_REPAIR</Text_ID>
+
+		<!-- Maria 08.09.2006  We want this object to be buildable -->
+		<BehaviorType Name="ProductionBehaviorType">
+			<Size_Value>10</Size_Value>
+			<Score_Cost_Credits>1</Score_Cost_Credits>
+			<Build_Cost_Credits>155</Build_Cost_Credits>
+			<Build_Time_Seconds>300</Build_Time_Seconds>
+			<Is_Research_Tech_Tree_Lockable> Yes </Is_Research_Tech_Tree_Lockable>
+			<Strategic_Sell_Percentage>0.5</Strategic_Sell_Percentage>
+			<Is_Command_Center_Upgrade> Yes </Is_Command_Center_Upgrade>
+		</BehaviorType>
+
+		<BehaviorType Name="LuaScriptBehaviorType">
+			<Lua_Global_Behaviors> GlobalRepairBehavior </Lua_Global_Behaviors>
+			<Lua_Script_Data>
+				RepairCooldownTime = 300.0
+				RepairEffectName = "Masari_Repair_Region_Particle"
+			</Lua_Script_Data>			
+		</BehaviorType>
+
+		<BehaviorType Name="EncyclopediaBehaviorType">
+			<Icon_Name> i_icon_m_strategic_upgrade_repair.tga </Icon_Name>
+		</BehaviorType>
+
+	<BehaviorType Name="TooltipBehaviorType">
+		<Tooltip_Description_Text_ID> TEXT_TOOLTIP_DESCRIPTION_MASARI_STRATEGIC_UPGRADE_REPAIR </Tooltip_Description_Text_ID>
+		<Tooltip_Category> TEXT_TOOLTIP_CATEGORY_HARD_POINT </Tooltip_Category>
+	</BehaviorType>
+
+	</HardPoint>
+
+	<!-- ********************************************************************** -->
+	<!-- These types are actually shared by all Novus command centers -->
+	<HardPoint Name="Masari_Command_Center_Empty_Socket">
+		<Variant_Of_Existing_Type> Masari_Atlatea_HP </Variant_Of_Existing_Type>
+		<BehaviorType Name="ProductionBehaviorType">
+			<Is_Command_Center_Upgrade> Yes </Is_Command_Center_Upgrade>
+		</BehaviorType>
+		<BehaviorType Name="EncyclopediaBehaviorType">
+			<Icon_Name> i_icon_build_upgrade.tga </Icon_Name>
+		</BehaviorType>
+		<BehaviorType Name="HardPointBehaviorType">
+			<HP_Is_Immune_To_Damage> true </HP_Is_Immune_To_Damage>
+		</BehaviorType>		
+	</HardPoint>
+
+	<HardPoint Name="Masari_Command_Center_In_Production_Socket">
+		<Variant_Of_Existing_Type> Masari_Atlatea_HP </Variant_Of_Existing_Type>
+		<BehaviorType Name="ProductionBehaviorType">
+			<Is_Command_Center_Upgrade> Yes </Is_Command_Center_Upgrade>
+		</BehaviorType>
+
+		<BehaviorType Name="LuaScriptBehaviorType">
+			<Lua_Global_Behaviors> UnitInProduction </Lua_Global_Behaviors>
+		</BehaviorType>
+	</HardPoint>
+	
+	
+</Masari_Atlatea_XML>

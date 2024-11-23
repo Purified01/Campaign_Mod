@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<Military_Drop_Zone_XML>
+
+<!-- Structure is unused, and has been reduced to a prop for decorative purposes in single player -->	
+
+	<X11_Military_Structures Name="Military_Drop_Zone">
+
+      <Land_Model_Name> MB_LZ.ALO </Land_Model_Name>
+      <Scale_Factor> 1.0 </Scale_Factor>
+      <Is_Decoration> Yes </Is_Decoration>
+      <Text_ID> TEXT_NONE </Text_ID>
+      <LandBehavior> COMBINABLE </LandBehavior>
+      <Is_UI_Relevant> false </Is_UI_Relevant>
+    <Last_State_Visible_Under_FOW> True </Last_State_Visible_Under_FOW>
+    <Initial_State_Visible_Under_FOW>True</Initial_State_Visible_Under_FOW>
+
+	</X11_Military_Structures>
+
+</Military_Drop_Zone_XML>

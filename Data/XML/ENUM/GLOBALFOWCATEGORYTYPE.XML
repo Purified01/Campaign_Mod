@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<!-- Dynamic enum definition for GlobalFOWCategoryType  -->
+<EnumDefinition>
+
+	<!-- This is a bitfield! If we hit the 32 entry barrier, I'll look into support 64 bit enums -->
+	
+	<GlobalFOWOwner>				0x00000001		</GlobalFOWOwner>
+	<GlobalFOWLabel>				0x00000002		</GlobalFOWLabel>
+	<GlobalFOWCommand>			0x00000004		</GlobalFOWCommand>
+	<GlobalFOWArmy>				0x00000008		</GlobalFOWArmy>
+	<GlobalFOWHero>				0x00000010		</GlobalFOWHero>
+	<GlobalFOWInfo>				0x00000020		</GlobalFOWInfo>
+		
+	<GlobalFOWAll>					0xFFFFFFFF		</GlobalFOWAll>
+	<GlobalFOWNone>				0x00000000		</GlobalFOWNone>
+	
+</EnumDefinition>
+
+

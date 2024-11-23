@@ -1,0 +1,863 @@
+<?xml version="1.0"?>
+<Military_Hero_Tank_XML>
+
+<!-- **************************************************************************************** -->	
+<!-- *** UNIT(S) **************************************************************************** -->	
+<!-- **************************************************************************************** -->	
+
+	<X11_Military_Heroes Name="Military_Hero_Tank">
+
+		<!-- ART -->
+		<Land_Model_Name>MV_Thumper.alo</Land_Model_Name>
+		<Scale_Factor>0.8</Scale_Factor>
+		<SurfaceFX_Name>Generic_Track</SurfaceFX_Name>
+		<Tread_Scroll_Rate>0.167</Tread_Scroll_Rate>
+		<Occlusion_Silhouette_Enabled>1</Occlusion_Silhouette_Enabled>
+      <AssetBank> BANK_MILITARY </AssetBank>
+				
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_MILITARY_HERO_TANK</Text_ID>
+		<Icon_Name>icon_hero1.tga</Icon_Name>
+		<Is_Placed_By_Editor>true</Is_Placed_By_Editor>
+		<GUI_Scene_Name> HealthBar_Scene_Medium </GUI_Scene_Name> 
+		<GUI_Receives_Input> false </GUI_Receives_Input>
+		<GUI_Min_Scale> 0.3 </GUI_Min_Scale>
+		<GUI_Max_Scale> 2.5 </GUI_Max_Scale>
+		<GUI_Default_Scale> 0.5 </GUI_Default_Scale>
+		<GUI_World_Offset> 0.0, 0.0, -20 </GUI_World_Offset>
+		<Select_Box_Scale>100</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+		<Highlight_Blob_Material_Name>Highlight_Military_Hero</Highlight_Blob_Material_Name>
+
+		<!-- ATTRIBUTES -->
+        <LOD_Bias>4</LOD_Bias>
+		<Affiliation>Military</Affiliation>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<CategoryMask> Medium, Piloted, CanAttack, Hero, RadiationHurts </CategoryMask>
+		<Victory_Relevant> No </Victory_Relevant>
+		<Weather_Category>Tracked</Weather_Category>
+		<Can_Fall_From_Bridge> true </Can_Fall_From_Bridge>
+		<Importance> 0.8 </Importance>
+		<Shot_Type> Vehicle </Shot_Type>
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+		<Ranking_In_Category> 2 </Ranking_In_Category>
+		
+		<!-- MOVEMENT -->
+		<MovementClass>Tracked</MovementClass>
+		<OccupationStyle>1x1</OccupationStyle>
+		<Max_Speed>1.2</Max_Speed>
+		<Max_Rate_Of_Turn>4.5</Max_Rate_Of_Turn>
+		<Space_Layer> LandDynamic </Space_Layer>
+		<UnitCollisionClass> Vehicle </UnitCollisionClass>
+		<OverrideAcceleration> .05 </OverrideAcceleration>
+		<OverrideDeceleration> .05 </OverrideDeceleration>
+		<FormationSpacing> 1 </FormationSpacing>
+		<FormationOrder> 8 </FormationOrder>
+		<FormationGrouping> Standard </FormationGrouping>
+		<FormationRaggedness> .6 </FormationRaggedness>
+		<MaxJiggleDistance> 1 </MaxJiggleDistance>
+		<Custom_Hard_XExtent> 26.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 20.0 </Custom_Hard_YExtent>
+		<Close_Enough_Angle_For_Move_Start> 75 </Close_Enough_Angle_For_Move_Start>
+		<Movement_Animation_Speed> 1.4 </Movement_Animation_Speed>
+		<Should_Keep_Tangent_To_Terrain> true </Should_Keep_Tangent_To_Terrain>
+		<Formation_Custom_Position> Middle </Formation_Custom_Position>		
+		
+		<!-- CONFLICT -->
+		<Is_Attackable>true</Is_Attackable>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+		<Ranged_Target_Z_Adjust>6.0</Ranged_Target_Z_Adjust>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+		<Land_FOW_Reveal_Range>220.0</Land_FOW_Reveal_Range>
+		<Attack_Category_Restrictions> Flying | Resource | Resource_INST </Attack_Category_Restrictions>	
+
+		<Tactical_Health> 1000 </Tactical_Health>
+
+		<Land_Damage_Thresholds>1, 0.66, 0.33</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2</Land_Damage_Alternates>
+		<Land_Damage_SFX />
+
+		<!-- BEHAVIORS -->
+		<!-- Any unit that has hard points requires a Behavior entry with HARD_POINT_MANAGER -->
+		<!-- Any object that is a hard point requires a Behavior entry with HARD_POINT -->
+		<Behavior>
+			SELECTABLE, 
+			RADAR_MAP_VISIBLE 
+		</Behavior>
+		
+		<LandBehavior>
+			STUNNABLE, 
+			GUI, 
+			ABILITY_COUNTDOWN, 
+			RADAR_MAP_VISIBLE, 
+			HARD_POINT_MANAGER, 
+			TURRET, 
+			TREAD_SCROLL, 
+			WALK_LOCOMOTOR, 
+			FORMATION, 
+			IDLE, 
+			TARGETING, 
+			WEAPON,  
+			REVEAL, 
+			HIDE_WHEN_FOGGED, 
+			SURFACE_FX, 
+			UNIT_AI, 
+			DAMAGE_TRACKING, 
+			SQUASH, 
+			EFFECT_GENERATOR, 
+			EFFECT_REGISTRY, 
+			AI_RECRUITABLE, 
+			AI_TARGET,
+			BALLISTIC
+		</LandBehavior>
+		
+		<StrategicBehavior>GLOBAL_ICON</StrategicBehavior>
+
+		<BehaviorType Name="GameEventSourceBehaviorType">
+			<Game_Event_Source_Category> Hero </Game_Event_Source_Category>
+		</BehaviorType>
+		
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Armor_Type> Armor_Military_Hero_Tank </Armor_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="ProductionBehaviorType">
+			<Size_Value> 10 </Size_Value>
+			<Is_Research_Tech_Tree_Lockable> Yes </Is_Research_Tech_Tree_Lockable>
+		</BehaviorType>
+
+    <BehaviorType name="AIBehaviorType">
+      <AI_Combat_Power> 1 </AI_Combat_Power>
+      <Idle_Chase_Range> 20.0 </Idle_Chase_Range> <!-- Double click guard area Keep very small-->
+      <Guard_Chase_Range> 190.0 </Guard_Chase_Range> <!-- Guard radius for unit-->
+      <Autonomous_Move_Extension_Vs_Attacker> 25.0 </Autonomous_Move_Extension_Vs_Attacker>  <!--Range outside of guard area unit will move-->
+      <Attack_Move_Response_Range> 50.0 </Attack_Move_Response_Range>  <!-- When given a attack move command unit will travel this distance from path to attack-->
+      <AI_Target_Level>Individual</AI_Target_Level>
+    </BehaviorType>
+
+		<BehaviorType Name="WeaponBehaviorType">
+			<Muzzle_Bone_Name> MuzzleA </Muzzle_Bone_Name>
+			<Should_Sync_Attack_Anim_Speed_To_Next_Shot> true </Should_Sync_Attack_Anim_Speed_To_Next_Shot>
+			<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
+			<Targeting_Priority_Set> AntiDefault </Targeting_Priority_Set>
+			<Targeting_Fire_Inaccuracy> 1.0 </Targeting_Fire_Inaccuracy>		
+			<Targeting_Min_Attack_Distance> 0.0 </Targeting_Min_Attack_Distance>
+			<Targeting_Max_Attack_Distance> 220.0 </Targeting_Max_Attack_Distance>
+			<Projectile_Types>Proj_Military_Hero_Tank_Cannon</Projectile_Types>
+			<!-- Note that the current attack animation rotates the barrels and does 5 bursts - this timing attempts to match -->
+			<Projectile_Fire_Recharge_Seconds>2.0</Projectile_Fire_Recharge_Seconds>
+			<Projectile_Fire_Pulse_Count>3</Projectile_Fire_Pulse_Count>
+			<Projectile_Fire_Pulse_Delay_Seconds>0.4</Projectile_Fire_Pulse_Delay_Seconds>
+         <Attack_Animation_Is_Overlay>No</Attack_Animation_Is_Overlay>
+			<Is_Attack_Anim_Looped> true </Is_Attack_Anim_Looped>
+			<Looped_Attack_Anim_Timeout> 10 </Looped_Attack_Anim_Timeout>
+			<Should_Sync_Attack_Anim_Speed_To_Next_Shot> no </Should_Sync_Attack_Anim_Speed_To_Next_Shot>
+		</BehaviorType>
+
+		<BehaviorType Name="EncyclopediaBehaviorType">
+			<Icon_Name>i_button_mv_tank4.tga</Icon_Name>
+		</BehaviorType>
+		
+		<BehaviorType Name="TooltipBehaviorType">
+			<Tooltip_Description_Text_ID> TEXT_TOOLTIP_DESCRIPTION_MILITARY_HERO_SGT_WOOLARD </Tooltip_Description_Text_ID>
+			<Tooltip_Category> TEXT_TOOLTIP_CATEGORY_HERO </Tooltip_Category>
+			<Tooltip_Good_Against> </Tooltip_Good_Against>
+			<Tooltip_Vulnerable_To> </Tooltip_Vulnerable_To>
+		</BehaviorType>
+
+      		<BehaviorType Name="DeathFXBehaviorType">
+         		<Death_Clone>Damage_Default, Military_Hero_Tank_Death_Clone</Death_Clone>
+         		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+         		<Death_Speed_Min> 100.0 </Death_Speed_Min>
+         		<Death_Speed_Max> 120.0 </Death_Speed_Max>
+         		<Death_Ang_Min> 1.0 </Death_Ang_Min>
+         		<Death_Ang_Max> 2.0 </Death_Ang_Max>
+         		<Death_Horizontal_Speed>10.0</Death_Horizontal_Speed>
+      		</BehaviorType>
+
+     		 <BehaviorType Name="BallisticBehaviorType">
+         		<Ballistic_Weight>2.5</Ballistic_Weight>
+         		<Ballistic_Bounce>0.5</Ballistic_Bounce>
+      		</BehaviorType>
+		
+		<BehaviorType Name="LuaScriptBehaviorType">
+			<Lua_Global_Behaviors> HeroIcon </Lua_Global_Behaviors>
+			<Lua_Land_Behaviors> HeroIcon </Lua_Land_Behaviors>
+			<Lua_Script_Data>
+            HERO_ICON = {}
+            HERO_ICON.PRIORITY = 2
+            HERO_ICON.TEXTURE = "icon_hero3.tga"
+            NOT_TACTICALLY_PRESENT = false
+            IS_SCIENTIST = false
+            IS_COMM_OFFICER = false
+            DefensiveAI = false
+         </Lua_Script_Data>
+		</BehaviorType>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Death_Explosions>large_explosion_land</Death_Explosions>
+		</BehaviorType>
+
+		<BehaviorType Name="SFXBehaviorType">
+			<SFXEvent_Fire>SFX_Military_Hero_Tank_Fire</SFXEvent_Fire>
+			<SFXEvent_Select>Unit_Select_Military_Woolard</SFXEvent_Select>
+			<SFXEvent_Move>Unit_Move_A_Military_Woolard</SFXEvent_Move>
+			<SFXEvent_Move_At_Top_Speed>Unit_Move_B_Military_Woolard</SFXEvent_Move_At_Top_Speed>
+			<SFXEvent_Attack>Unit_Attack_A_Military_Woolard</SFXEvent_Attack>
+			<SFXEvent_Attack_At_Top_Speed>Unit_Attack_B_Military_Woolard</SFXEvent_Attack_At_Top_Speed>
+         <SFXEvent_Guard />
+			<SFXEvent_Turret_Rotating_Loop> SFX_Military_Medium_Turret_Loop </SFXEvent_Turret_Rotating_Loop>
+			<Death_SFXEvent_Start_Die>SFX_Military_Large_Vehicle_Death</Death_SFXEvent_Start_Die>
+			<SFXEvent_Engine_Idle_Loop> SFX_Military_Hero_Tracked_Idle_Engine_Loop </SFXEvent_Engine_Idle_Loop>
+			<SFXEvent_Engine_Moving_Loop> SFX_Military_Hero_Tracked_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
+			<SFXEvent_Unit_Lost />
+			<SFXEvent_Tactical_Build_Started>GUI_BUILD_Hero</SFXEvent_Tactical_Build_Started>
+			<SFXEvent_Tactical_Build_Complete>Unit_Select_Military_Woolard</SFXEvent_Tactical_Build_Complete>
+			<SFXEvent_Tactical_Build_Cancelled>GUI_BUILD_Hero_Canceled</SFXEvent_Tactical_Build_Cancelled>		
+			
+			<!-- Maria 05.01.2006 - Adding build sounds for Global production -->
+			<SFXEvent_Build_Started>GUI_BUILD_Hero</SFXEvent_Build_Started>
+			<SFXEvent_Build_Complete>Unit_Select_Military_Woolard</SFXEvent_Build_Complete>
+			<SFXEvent_Build_Cancelled>GUI_BUILD_Hero_Canceled</SFXEvent_Build_Cancelled>
+		</BehaviorType>
+
+		<BehaviorType Name="BlobShadowBehaviorType">
+			<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+			<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+		</BehaviorType>
+		
+		<BehaviorType Name="GUIBehaviorType">
+			<GUI_Bracket_Size>1</GUI_Bracket_Size>
+		</BehaviorType>
+		
+		<BehaviorType Name="TurretBehaviorType">
+			<Turret_Bone_Name> b_turret </Turret_Bone_Name>
+			<Turret_Rotate_Speed> 2.0 </Turret_Rotate_Speed>
+			<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+			<Apply_Y_Turret_Rotate_To_Axis>1</Apply_Y_Turret_Rotate_To_Axis>
+			<Turret_Rotate_Extent_Degrees> 120.0 </Turret_Rotate_Extent_Degrees>
+			<Turret_Elevate_Extent_Degrees> 30.0 </Turret_Elevate_Extent_Degrees>
+			<Ground_Vehicle_Turret_Target> Yes </Ground_Vehicle_Turret_Target>
+		</BehaviorType>
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.03  0.03</Radar_Icon_Size>
+		</BehaviorType>
+
+		<BehaviorType Name="CrushBehaviorType">
+			<Crush_Defense>99</Crush_Defense>
+			<Crush_Power>35</Crush_Power>
+		</BehaviorType>
+		
+		<BehaviorType Name="FleetBehaviorType">
+			<!-- Maria 05.10.2006 - Adding new field to support limiting the pop cap of a the hero's fleet -->			
+			<!-- Maria 09.05.2006 - changing the pop cap associated to a hero so that it is ALWAYS <= the regional pop cap -->
+			<!-- associated to the hero's faction (refer to field <Regional_Pop_Cap> in Factions.xml for each of the playable factions) -->			
+			<Associated_Pop_Cap> 20 </Associated_Pop_Cap>
+			<!-- Maria 05.24.2006 - How much space does the unit take up -->
+			<Unit_Pop_Cap> 1 </Unit_Pop_Cap>
+		</BehaviorType>
+											
+		<!-- ABILITIES -->
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability Name="Thumper_Saturate_Area">
+				<Type>ATTACK_POSITION</Type>
+				<Expiration_Seconds> 5.0 </Expiration_Seconds>
+				<Recharge_Seconds>20.0</Recharge_Seconds>
+			   <Targeting_Fire_Inaccuracy_Fixed_Radius_Override>40</Targeting_Fire_Inaccuracy_Fixed_Radius_Override>
+				<Area_Effect_Decal_Distance> 70.0 </Area_Effect_Decal_Distance> 
+				<Effect_Generator_Name> Saturate_Area_Fire_Rate_Boost </Effect_Generator_Name>
+				<GUI_Activated_Ability_Name> Military_Hero_Tank_Saturate_Area_Ability </GUI_Activated_Ability_Name>
+				<Targeting_Type> LAND_ANY_LOCATION </Targeting_Type>
+				<Should_Targeting_Ignore_Objects> Yes </Should_Targeting_Ignore_Objects>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+		<Abilities SubObjectList="Yes">
+			<Attack_Position_Ability Name="Military_Hero_Tank_Saturate_Area_Ability">
+				<Activation_Min_Range> 0  </Activation_Min_Range>
+				<Activation_Max_Range> 225 </Activation_Max_Range>
+				<Power_Up_Down_Anim_Speed>2.0</Power_Up_Down_Anim_Speed>
+				<Applicable_Unit_Categories> DummyTarget </Applicable_Unit_Categories>
+				<Activation_Style> User_Input </Activation_Style>
+				<Use_Continuous_Fire>Yes</Use_Continuous_Fire>
+				<Terminate_Effect_On_Move_Command> Yes </Terminate_Effect_On_Move_Command>
+			</Attack_Position_Ability> 
+		</Abilities>
+		
+		<Effect_Generator_Data SubObjectList="Yes"> 
+				 
+			<Effect_Generator Name="Saturate_Area_Fire_Rate_Boost">
+				<Should_Deactivate_Manually> true </Should_Deactivate_Manually>
+								
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> FireRateBoostEffect </Effect_Name>
+					<Duration> -1.0 </Duration>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+				</Effect_Generator_Entry>
+	
+			</Effect_Generator>
+
+			<Effect_Generator Name="HeroPerksEffectGenerator">
+				<Should_Deactivate_Manually> true </Should_Deactivate_Manually>
+				<Starts_Active> true </Starts_Active>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> WoolardHeroPerksEffect </Effect_Name>
+					<Duration> -1 </Duration>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+				</Effect_Generator_Entry>
+			</Effect_Generator>
+			
+		</Effect_Generator_Data>
+
+		<!-- HARDPOINTS -->
+		<!-- will be able to shoot on objects that have been revealed by dynamic scanner -->
+		<Attached_Hard_Points> 
+			HP_Military_Hero_Tank_Minigun, HP_HERO
+		</Attached_Hard_Points>
+		
+	</X11_Military_Heroes>
+	
+
+<!-- **************************************************************************************** -->	
+<!-- *** VARIANTS *************************************************************************** -->	
+<!-- **************************************************************************************** -->	
+
+	<X11_Military_Heroes Name="Military_Hero_Tank_PIP_Only">
+		<Variant_Of_Existing_Type>Marker_Generic</Variant_Of_Existing_Type>
+
+		<!-- INTERFACE -->
+		<Icon_Name>i_button_uea_hero1.tga</Icon_Name>
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+		
+		<!-- ATTRIBUTES -->
+		<CategoryMask> Untargetable </CategoryMask>
+		
+		<!-- BEHAVIORS -->
+		<BehaviorType Name="LuaScriptBehaviorType">
+			<Lua_Global_Behaviors> HeroIcon </Lua_Global_Behaviors>
+			<Lua_Land_Behaviors> HeroIcon </Lua_Land_Behaviors>
+			<Lua_Script_Data>
+            HERO_ICON = {}
+            HERO_ICON.PRIORITY = 1
+            HERO_ICON.TEXTURE = "i_button_mv_tank4.tga"
+            NOT_TACTICALLY_PRESENT = true
+            IS_SCIENTIST = false
+            IS_COMM_OFFICER = false
+            DefensiveAI = false
+         </Lua_Script_Data>
+		</BehaviorType>
+
+	</X11_Military_Heroes>
+
+   <!-- **************************************************************************************** -->
+   <!-- *** DEATH CLONE(S)********************************************************************** -->
+   <!-- **************************************************************************************** -->
+
+   <X11_Military_Units Name="Military_Hero_Tank_Death_Clone">
+
+      <!-- ART -->
+      <Land_Model_Name>MV_Thumper_DC.ALO</Land_Model_Name>
+      <Scale_Factor>0.8</Scale_Factor>
+      <AssetBank> BANK_MILITARY </AssetBank>
+
+      <!-- INTERFACE -->
+      <Text_ID>TEXT_NONE</Text_ID>
+      <Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+		<Space_Layer> LandDynamic </Space_Layer>
+		<UnitCollisionClass> Vehicle </UnitCollisionClass>
+		<Custom_Hard_XExtent> 28.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 16.0 </Custom_Hard_YExtent>
+
+		<!-- ATTRIBUTES -->
+      <CategoryMask> Medium, Piloted, Resource </CategoryMask>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+
+		<!-- CONFLICT -->
+      <Ranged_Target_Z_Adjust>0.1</Ranged_Target_Z_Adjust>
+
+      <!-- BEHAVIORS -->
+      <LandBehavior>
+         SPAWN_DEBRIS,
+         DEBRIS,
+         RESOURCE,
+         EFFECT_REGISTRY,
+         HIDE_WHEN_FOGGED
+      </LandBehavior>
+
+      <BehaviorType Name="DebrisBehaviorType">
+         <Debris_Min_Lifetime_Seconds> 3.0 </Debris_Min_Lifetime_Seconds>
+         <Debris_Max_Lifetime_Seconds> 7.0 </Debris_Max_Lifetime_Seconds>
+      </BehaviorType>
+
+      <BehaviorType Name="SpawnDebrisBehaviorType">
+         <Creation_Debris_Types>
+            Military_Hero_Tank_Debris_01,
+            Military_Hero_Tank_Debris_02,
+            Military_Hero_Tank_Debris_05,
+            Military_Hero_Tank_Debris_03,
+            Military_Hero_Tank_Debris_04,
+            Military_Hero_Tank_Debris_05,
+            Military_Hero_Tank_Debris_04,
+            Military_Hero_Tank_Debris_05,
+            Military_Hero_Tank_Debris_03,
+            Military_Hero_Tank_Debris_04,
+            Military_Hero_Tank_Debris_05,
+            Military_Hero_Tank_Debris_03,
+            Military_Hero_Tank_Debris_04,
+            Military_Hero_Tank_Debris_05,
+            Military_Hero_Tank_Debris_04,
+            Military_Hero_Tank_Debris_05,
+            Military_Hero_Tank_Debris_03,
+            Military_Hero_Tank_Debris_04,
+            Military_Hero_Tank_Debris_05,
+            Military_Hero_Tank_Debris_03,
+            Military_Hero_Tank_Debris_04,
+            Military_Hero_Tank_Debris_05,
+            Military_Hero_Tank_Debris_03,
+            Military_Hero_Tank_Debris_05,
+            Military_Hero_Tank_Debris_04,
+            Military_Hero_Tank_Debris_05
+         </Creation_Debris_Types>
+         <Debris_Speed_Min> 50.0 </Debris_Speed_Min>
+         <Debris_Speed_Max> 100.0 </Debris_Speed_Max>
+         <Debris_Outward_Speed_Min> 50.0 </Debris_Outward_Speed_Min>
+         <Debris_Outward_Speed_Max> 100.0 </Debris_Outward_Speed_Max>
+         <Debris_Ang_Min> 1.0 </Debris_Ang_Min>
+         <Debris_Ang_Max> 30.0 </Debris_Ang_Max>
+      </BehaviorType>
+
+      <BehaviorType Name="BallisticBehaviorType">
+         <Ballistic_Weight>9.0</Ballistic_Weight>
+         <Ballistic_Bounce>0.3</Ballistic_Bounce>
+      </BehaviorType>
+
+      <BehaviorType Name="DeathFXBehaviorType">
+         <Death_Explosions>Generic_Explosion_Medium_tendrils</Death_Explosions>
+         <Death_Speed_Min> 100.0 </Death_Speed_Min>
+         <Death_Speed_Max> 120.0 </Death_Speed_Max>
+         <Death_Ang_Min> 1.0 </Death_Ang_Min>
+         <Death_Ang_Max> 2.0 </Death_Ang_Max>
+         <Death_Horizontal_Speed>10.0</Death_Horizontal_Speed>
+         <Death_SFXEvent_Start_Die>SFX_Military_Medium_Vehicle_Death</Death_SFXEvent_Start_Die>
+      </BehaviorType>
+
+      <BehaviorType Name="ArmorAndDamageBehaviorType">
+         <Damage_Type> Damage_Default </Damage_Type>
+      </BehaviorType>
+
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 1000 </Resource_Units>
+			<Resource_For_Faction> Military, Novus, Alien, Masari </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+			<Use_Death_Behavior> true </Use_Death_Behavior>
+		</BehaviorType>	
+
+   </X11_Military_Units>
+
+   <X11_Military_Units Name="Military_Hero_Tank_Debris_01">
+
+      <!-- ART -->
+      <Land_Model_Name>MV_tank_debri_B.ALO</Land_Model_Name>
+      <Scale_Factor>0.9</Scale_Factor>
+      <AssetBank> BANK_MILITARY </AssetBank>
+
+      <!-- INTERFACE -->
+      <Text_ID>TEXT_NONE</Text_ID>
+      <Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+      <!-- ATTRIBUTES -->
+      <Remove_Upon_Death>true</Remove_Upon_Death>
+
+      <!-- Non-decoration debris will have to have HIDE_WHEN_FOGGED behavior to properly hide.-->
+      <!-- Decoration debris will not be created if spawned under FOW. -Oksana -->
+      <Is_Decoration>Yes</Is_Decoration>
+      
+      <!-- CONFLICT -->
+      <Tactical_Health>9999</Tactical_Health>
+
+      <!-- BEHAVIORS -->
+      <LandBehavior>
+         BALLISTIC,
+         DEBRIS
+      </LandBehavior>
+
+      <BehaviorType Name="BallisticBehaviorType">
+         <Ballistic_Weight>6.0</Ballistic_Weight>
+         <Ballistic_Bounce>0.2</Ballistic_Bounce>
+      </BehaviorType>
+
+      <BehaviorType Name="DebrisBehaviorType">
+         <Debris_Min_Lifetime_Seconds> 3.0 </Debris_Min_Lifetime_Seconds>
+         <Debris_Max_Lifetime_Seconds> 7.0 </Debris_Max_Lifetime_Seconds>
+      </BehaviorType>
+
+      <BehaviorType Name="ArmorAndDamageBehaviorType">
+         <Damage_Type> Damage_Default </Damage_Type>
+      </BehaviorType>
+
+   </X11_Military_Units>
+
+   <X11_Military_Units Name="Military_Hero_Tank_Debris_02">
+
+      <!-- ART -->
+      <Land_Model_Name>MV_tank_debri_C.ALO</Land_Model_Name>
+      <Scale_Factor>0.9</Scale_Factor>
+      <AssetBank> BANK_MILITARY </AssetBank>
+
+      <!-- INTERFACE -->
+      <Text_ID>TEXT_NONE</Text_ID>
+      <Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+      <!-- ATTRIBUTES -->
+      <Remove_Upon_Death>true</Remove_Upon_Death>
+
+      <!-- Non-decoration debris will have to have HIDE_WHEN_FOGGED behavior to properly hide.-->
+      <!-- Decoration debris will not be created if spawned under FOW. -Oksana -->
+      <Is_Decoration>Yes</Is_Decoration>
+      
+      <!-- CONFLICT -->
+      <Tactical_Health>9999</Tactical_Health>
+
+      <!-- BEHAVIORS -->
+      <LandBehavior>
+         BALLISTIC,
+         DEBRIS
+      </LandBehavior>
+
+      <BehaviorType Name="BallisticBehaviorType">
+         <Ballistic_Weight>4.0</Ballistic_Weight>
+         <Ballistic_Bounce>0.2</Ballistic_Bounce>
+      </BehaviorType>
+
+      <BehaviorType Name="DebrisBehaviorType">
+         <Debris_Min_Lifetime_Seconds> 3.0 </Debris_Min_Lifetime_Seconds>
+         <Debris_Max_Lifetime_Seconds> 7.0 </Debris_Max_Lifetime_Seconds>
+      </BehaviorType>
+
+      <BehaviorType Name="ArmorAndDamageBehaviorType">
+         <Damage_Type> Damage_Default </Damage_Type>
+      </BehaviorType>
+
+   </X11_Military_Units>
+
+   <X11_Military_Units Name="Military_Hero_Tank_Debris_03">
+
+      <!-- ART -->
+      <Land_Model_Name>MV_tank_debri_D.ALO</Land_Model_Name>
+      <Scale_Factor>0.9</Scale_Factor>
+      <AssetBank> BANK_MILITARY </AssetBank>
+
+      <!-- INTERFACE -->
+      <Text_ID>TEXT_NONE</Text_ID>
+      <Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+      <!-- ATTRIBUTES -->
+      <Remove_Upon_Death>true</Remove_Upon_Death>
+      
+      <!-- Non-decoration debris will have to have HIDE_WHEN_FOGGED behavior to properly hide.-->
+      <!-- Decoration debris will not be created if spawned under FOW. -Oksana -->
+      <Is_Decoration>Yes</Is_Decoration>
+      
+
+      <!-- CONFLICT -->
+      <Tactical_Health>9999</Tactical_Health>
+
+      <!-- BEHAVIORS -->
+      <LandBehavior>
+         BALLISTIC,
+         DEBRIS
+      </LandBehavior>
+
+      <BehaviorType Name="BallisticBehaviorType">
+         <Ballistic_Weight>3.0</Ballistic_Weight>
+         <Ballistic_Bounce>0.25</Ballistic_Bounce>
+      </BehaviorType>
+
+      <BehaviorType Name="DebrisBehaviorType">
+         <Debris_Min_Lifetime_Seconds> 3.0 </Debris_Min_Lifetime_Seconds>
+         <Debris_Max_Lifetime_Seconds> 7.0 </Debris_Max_Lifetime_Seconds>
+      </BehaviorType>
+
+      <BehaviorType Name="ArmorAndDamageBehaviorType">
+         <Damage_Type> Damage_Default </Damage_Type>
+      </BehaviorType>
+
+   </X11_Military_Units>
+
+   <X11_Military_Units Name="Military_Hero_Tank_Debris_04">
+
+      <!-- ART -->
+      <Land_Model_Name>MV_tank_debri_E.ALO</Land_Model_Name>
+      <Scale_Factor>0.9</Scale_Factor>
+      <AssetBank> BANK_MILITARY </AssetBank>
+
+      <!-- INTERFACE -->
+      <Text_ID>TEXT_NONE</Text_ID>
+      <Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+      <!-- ATTRIBUTES -->
+      <Remove_Upon_Death>true</Remove_Upon_Death>
+
+      <!-- Non-decoration debris will have to have HIDE_WHEN_FOGGED behavior to properly hide.-->
+      <!-- Decoration debris will not be created if spawned under FOW. -Oksana -->
+      <Is_Decoration>Yes</Is_Decoration>
+      
+      <!-- CONFLICT -->
+      <Tactical_Health>9999</Tactical_Health>
+
+      <!-- BEHAVIORS -->
+      <LandBehavior>
+         BALLISTIC,
+         DEBRIS
+      </LandBehavior>
+
+      <BehaviorType Name="BallisticBehaviorType">
+         <Ballistic_Weight>1.6</Ballistic_Weight>
+         <Ballistic_Bounce>0.25</Ballistic_Bounce>
+      </BehaviorType>
+
+      <BehaviorType Name="DebrisBehaviorType">
+         <Debris_Min_Lifetime_Seconds> 3.0 </Debris_Min_Lifetime_Seconds>
+         <Debris_Max_Lifetime_Seconds> 7.0 </Debris_Max_Lifetime_Seconds>
+      </BehaviorType>
+
+      <BehaviorType Name="ArmorAndDamageBehaviorType">
+         <Damage_Type> Damage_Default </Damage_Type>
+      </BehaviorType>
+
+   </X11_Military_Units>
+
+   <X11_Military_Units Name="Military_Hero_Tank_Debris_05">
+
+      <!-- ART -->
+      <Land_Model_Name>MV_tank_debri_F.ALO</Land_Model_Name>
+      <Scale_Factor>0.9</Scale_Factor>
+      <AssetBank> BANK_MILITARY </AssetBank>
+
+      <!-- INTERFACE -->
+      <Text_ID>TEXT_NONE</Text_ID>
+      <Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+      <!-- ATTRIBUTES -->
+      <Remove_Upon_Death>true</Remove_Upon_Death>
+
+      <!-- Non-decoration debris will have to have HIDE_WHEN_FOGGED behavior to properly hide.-->
+      <!-- Decoration debris will not be created if spawned under FOW. -Oksana -->
+      <Is_Decoration>Yes</Is_Decoration>
+      
+      <!-- CONFLICT -->
+      <Tactical_Health>9999</Tactical_Health>
+
+      <!-- BEHAVIORS -->
+      <LandBehavior>
+         BALLISTIC,
+         DEBRIS
+      </LandBehavior>
+
+      <BehaviorType Name="BallisticBehaviorType">
+         <Ballistic_Weight>1.5</Ballistic_Weight>
+         <Ballistic_Bounce>0.25</Ballistic_Bounce>
+      </BehaviorType>
+
+      <BehaviorType Name="DebrisBehaviorType">
+         <Debris_Min_Lifetime_Seconds> 3.0 </Debris_Min_Lifetime_Seconds>
+         <Debris_Max_Lifetime_Seconds> 7.0 </Debris_Max_Lifetime_Seconds>
+      </BehaviorType>
+
+      <BehaviorType Name="ArmorAndDamageBehaviorType">
+         <Damage_Type> Damage_Default </Damage_Type>
+      </BehaviorType>
+
+   </X11_Military_Units>
+
+<!-- **************************************************************************************** -->	
+<!-- *** PROJECTILES ************************************************************************ -->	
+<!-- **************************************************************************************** -->
+
+	<Projectile Name="Proj_Military_Hero_Tank_Minigun">
+
+		<!-- ART -->
+		<Land_Model_Name>p_marine_gun_projectile.ALO</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+		
+		<!-- MOVEMENT -->
+		<Max_Speed>18.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
+		
+		<!-- CONFLICT -->
+		<AI_Combat_Power> 1 </AI_Combat_Power>
+
+		<!-- BEHAVIORS -->
+		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Damage_Type> Damage_Military_Hero_Tank_Minigun </Damage_Type>
+		</BehaviorType>
+		
+		<BehaviorType Name="ProjectileBehaviorType">
+			<Projectile_Damages_Random_Hard_Points>No</Projectile_Damages_Random_Hard_Points>
+			<Projectile_Category>DEFAULT</Projectile_Category>
+			<Projectile_Max_Flight_Distance>5000.0</Projectile_Max_Flight_Distance>
+			<Projectile_Damage>12.0</Projectile_Damage>
+			<Projectile_Does_Shield_Damage>No</Projectile_Does_Shield_Damage>
+			<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+			<Projectile_Object_Detonation_Particle>Tiny_Dud</Projectile_Object_Detonation_Particle>
+			<Projectile_Object_Armor_Reduced_Detonation_Particle>Tiny_Dud</Projectile_Object_Armor_Reduced_Detonation_Particle>
+			<Projectile_Ground_Detonation_Particle>Military_Rifle_Dirt_Collide</Projectile_Ground_Detonation_Particle>
+			<Projectile_Lifetime_Detonation_Particle>Military_Rifle_Dirt_Collide</Projectile_Lifetime_Detonation_Particle>
+			<Projectile_Absorbed_By_Shields_Particle />
+			<Projectile_SFXEvent_Detonate />
+			<Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Military_Small_Damage_Detonation </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
+			<Projectile_Causes_Terrain_Damage>false</Projectile_Causes_Terrain_Damage>
+			<Projectile_Causes_Blackening>false</Projectile_Causes_Blackening>
+			<Terrain_Damage_Radius>10.0</Terrain_Damage_Radius>
+		</BehaviorType>
+
+	</Projectile>
+	
+	<Projectile Name="Proj_Military_Hero_Tank_Cannon">
+
+		<!-- ART -->
+		<Land_Model_Name>p_thumper_gun.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+		
+		<!-- MOVEMENT -->
+		<Max_Speed>38.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
+		
+		<!-- CONFLICT -->
+		<AI_Combat_Power> 1 </AI_Combat_Power>
+
+		<!-- BEHAVIORS -->
+		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Damage_Type> Damage_Military_Hero_Tank_Cannon </Damage_Type>
+		</BehaviorType>
+		
+    <BehaviorType Name="ProjectileBehaviorType">
+      <Projectile_Category>laser</Projectile_Category>
+      <Projectile_Max_Flight_Distance>3000.0</Projectile_Max_Flight_Distance>
+      <Projectile_Max_Scan_Range>600.0</Projectile_Max_Scan_Range>
+      <Projectile_Damage>0.0</Projectile_Damage>
+      <Projectile_Blast_Area_Damage> 75 </Projectile_Blast_Area_Damage>
+      <Projectile_Blast_Area_Range> 25 </Projectile_Blast_Area_Range>
+      <Projectile_SFXEvent_Detonate>SFX_Military_Detonation_1</Projectile_SFXEvent_Detonate>
+      <Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Military_Small_Damage_Detonation </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
+      <Projectile_Does_Shield_Damage>No</Projectile_Does_Shield_Damage>
+      <Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+      <Projectile_Object_Detonation_Particle>Tank_Direct_Hit</Projectile_Object_Detonation_Particle>
+      <Projectile_Ground_Detonation_Particle>Tank_Ground_Hit</Projectile_Ground_Detonation_Particle>
+      <Projectile_Lifetime_Detonation_Particle>Tank_Direct_Hit</Projectile_Lifetime_Detonation_Particle>
+      <Projectile_Absorbed_By_Shields_Particle>Tank_Direct_Hit</Projectile_Absorbed_By_Shields_Particle>
+      <Projectile_Causes_Knockback_To_Enemy_Units> True </Projectile_Causes_Knockback_To_Enemy_Units>
+      <Projectile_Ballistic_Knockback_Radius>25.0</Projectile_Ballistic_Knockback_Radius>
+      <Ballistic_Knockback_Probability>1.0</Ballistic_Knockback_Probability>
+      <Ballistic_Knockback_Strength>40.0</Ballistic_Knockback_Strength>
+      <Projectile_Causes_Blackening>true</Projectile_Causes_Blackening>
+      <Terrain_Damage_Radius>30.0</Terrain_Damage_Radius>
+    </BehaviorType>
+	
+	</Projectile>
+
+
+<!-- **************************************************************************************** -->	
+<!-- **** HARDPOINTS ************************************************************************ -->	
+<!-- **************************************************************************************** -->
+
+	<HardPoint Name="HP_Military_Hero_Tank_Minigun">
+
+		<!-- ART -->
+		<Land_Model_Name> mv_thumper_hp_gun.ALO </Land_Model_Name>
+		<Scale_Factor> 1.0 </Scale_Factor> 
+		<Is_Attack_Anim_Looped> true </Is_Attack_Anim_Looped>		
+		<Looped_Attack_Anim_Timeout> 5 </Looped_Attack_Anim_Timeout>
+		<Occlusion_Silhouette_Enabled>0</Occlusion_Silhouette_Enabled>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_MILITARY_HERO_TANK</Text_ID>
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+		
+		<!-- ATTRIBUTES -->
+		<HP_Type> HARD_POINT_WEAPON_LASER </HP_Type>
+		<Affiliation> Military </Affiliation>
+		<CategoryMask> Medium </CategoryMask>
+		<Victory_Relevant> No </Victory_Relevant> 
+		
+		<!-- CONFLICT -->
+		<Projectile_Types> Proj_Military_Hero_Tank_Minigun </Projectile_Types>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<HP_Is_Immune_To_Damage>Yes</HP_Is_Immune_To_Damage>
+		<AI_Combat_Power> 1 </AI_Combat_Power>
+		<Land_FOW_Reveal_Range>330.0</Land_FOW_Reveal_Range>
+		<Ranged_Target_Z_Adjust>0.5</Ranged_Target_Z_Adjust>
+
+		<Tactical_Health> 500 </Tactical_Health>
+		
+		<Land_Damage_Thresholds>1, 0.66, 0.33</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2</Land_Damage_Alternates>
+				
+		<!-- BEHAVIORS -->
+		<!-- Any unit that has hard points requires a Behavior entry with HARD_POINT_MANAGER, and an <Attached_Hard_Points> list  -->
+		<!-- Any object that is a hard point requires a Behavior entry with HARD_POINT -->
+		<Behavior> HARD_POINT </Behavior>
+		<LandBehavior> TURRET, TARGETING </LandBehavior>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Damage_Type> Damage_Military_Hero_Tank_Minigun </Damage_Type>
+			<Armor_Type> Armor_Military_Hero </Armor_Type>
+		</BehaviorType> 
+
+		<BehaviorType Name="WeaponBehaviorType">
+			<Muzzle_Bone_Name> MuzzleA </Muzzle_Bone_Name>
+			<Targeting_Priority_Set> AntiDefault </Targeting_Priority_Set>
+			<Attack_Category_Restrictions> Stationary | Piloted | DummyTarget | Resource | Resource_INST </Attack_Category_Restrictions>	
+			<!-- Note: Deployed/Undeployed here checks for PARENT's deployment state -->
+			<Fire_Weapon_When_Deployed>Yes</Fire_Weapon_When_Deployed>
+			<Fire_Weapon_When_Undeployed>No</Fire_Weapon_When_Undeployed>
+			<Targeting_Stickiness_Time_Threshold>30.0</Targeting_Stickiness_Time_Threshold>
+			<Targeting_Fire_Inaccuracy> 1.0 </Targeting_Fire_Inaccuracy>		
+			<Targeting_Min_Attack_Distance>10.0</Targeting_Min_Attack_Distance>
+			<Targeting_Max_Attack_Distance> 200.0 </Targeting_Max_Attack_Distance>
+			<Projectile_Fire_Recharge_Seconds>1</Projectile_Fire_Recharge_Seconds>
+			<Projectile_Fire_Recharge_Max_Random_Frames> 2 </Projectile_Fire_Recharge_Max_Random_Frames>
+			<Projectile_Fire_Pulse_Count>30</Projectile_Fire_Pulse_Count>
+			<Projectile_Fire_Pulse_Delay_Seconds>0.08</Projectile_Fire_Pulse_Delay_Seconds>
+		</BehaviorType>
+
+	 	<BehaviorType Name="TurretBehaviorType">
+			<Turret_Bone_Name> b_turret </Turret_Bone_Name>
+			<Barrel_Bone_Name> b_barrel </Barrel_Bone_Name>
+			<Turret_Rotate_Speed> 6.0 </Turret_Rotate_Speed>
+			<Apply_Z_Turret_Rotate_To_Axis>1</Apply_Z_Turret_Rotate_To_Axis>
+			<Apply_Y_Turret_Rotate_To_Axis>2</Apply_Y_Turret_Rotate_To_Axis>
+			<Turret_Rotate_Extent_Degrees> 360.0 </Turret_Rotate_Extent_Degrees>
+			<Turret_Elevate_Extent_Degrees> 20.0 </Turret_Elevate_Extent_Degrees>
+		</BehaviorType>
+		
+		<BehaviorType Name="TooltipBehaviorType">
+			<Tooltip_Description_Text_ID> TEXT_TOOLTIP_DESCRIPTION_MILITARY_HERO_SGT_WOOLARD </Tooltip_Description_Text_ID>
+			<Tooltip_Category> TEXT_TOOLTIP_CATEGORY_HERO </Tooltip_Category>
+			<Tooltip_Good_Against> </Tooltip_Good_Against>
+			<Tooltip_Vulnerable_To> </Tooltip_Vulnerable_To>
+		</BehaviorType>
+		
+		<BehaviorType Name="SFXBehaviorType">
+			<SFXEvent_Fire>SFX_Military_Infantry_Fire</SFXEvent_Fire>
+		</BehaviorType>
+
+	</HardPoint>
+
+</Military_Hero_Tank_XML>

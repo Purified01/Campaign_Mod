@@ -1,0 +1,549 @@
+<?xml version="1.0"?>
+
+<SFXEvents>
+
+
+	<SFXEvent Name="GUI_Main_Menu_Mouse_Over">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Main_Menu_MO_2.wav</Samples>     
+	</SFXEvent>   
+
+	<SFXEvent Name="GUI_Main_Menu_Button_Select">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Main_Menu_Select_2.wav</Samples>     
+	</SFXEvent>  
+
+	<SFXEvent Name="GUI_Main_Menu_Back_Select">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Main_Menu_Back_Select_1.wav</Samples>     
+	</SFXEvent> 
+
+	<SFXEvent Name="GUI_Main_Menu_Options_Select">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Main_Menu_Options_Select_1.wav</Samples>     
+	</SFXEvent> 
+
+	<SFXEvent Name="GUI_Main_Menu_Options_Mouse_Over">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_MO_1.wav</Samples>     
+	</SFXEvent>   
+
+
+
+
+
+
+
+	<SFXEvent Name="GUI_Create_Control_Group">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Create_Control_Group_1.wav</Samples>     
+	</SFXEvent>   
+
+	<SFXEvent Name="GUI_Previous_Control_Group">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Previous_Control_Group_1.wav</Samples>     
+	</SFXEvent>   
+
+	<SFXEvent Name="GUI_Reset_Camera">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Reset_Camera_1.wav</Samples>     
+	</SFXEvent>   
+
+
+
+
+
+
+	<SFXEvent Name="GUI_Alarm">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Alarm_1.wav</Samples>     
+	</SFXEvent>  
+
+	<SFXEvent Name="GUI_Timer">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Timer_1.wav</Samples>  
+		<Min_Volume>60</Min_Volume>
+		<Max_Volume>60</Max_Volume>
+	</SFXEvent>  
+
+
+
+
+
+
+	<SFXEvent Name="GUI_MegaWeapon_Built">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_MegaWeapon_Ready_1.wav</Samples>     
+	</SFXEvent>  
+
+	<SFXEvent Name="GUI_Repair_Ready">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Repair_1.wav</Samples>     
+	</SFXEvent>  
+
+	<SFXEvent Name="GUI_Spying_Ready">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Spying_1.wav</Samples>     
+	</SFXEvent>  
+
+	<SFXEvent Name="GUI_Spying_Activated">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Spying_1.wav</Samples>     
+	</SFXEvent> 
+
+	<SFXEvent Name="GUI_Spying_Blocked">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Spying_Blocked_1.wav</Samples>     
+	</SFXEvent>  
+
+	<SFXEvent Name="GUI_Megaweapon_Blocked">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Megaweapon_Blocked_1.wav</Samples>     
+	</SFXEvent>  
+
+
+
+
+
+	<SFXEvent Name="GUI_Alien_Purifier_Ready">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Alien_Purifier_1.wav</Samples>     
+	</SFXEvent>  
+
+	<SFXEvent Name="GUI_Alien_Purifier_Launched">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Alien_Purifier_Launched_1.wav</Samples>     
+	</SFXEvent>  
+
+
+
+
+	<SFXEvent Name="GUI_Alien_Radiation_Cascade_Built">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Alien_Radiation_Cascade_1.wav</Samples>     
+	</SFXEvent>  
+
+	<SFXEvent Name="GUI_Alien_Radiation_Cascade_Launched">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUN_Alien_Radiation_Cascade_1.wav</Samples>     
+	</SFXEvent>  
+
+
+
+
+
+	<SFXEvent Name="GUI_Alien_Mass_Drop_Launched">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Alien_Mass_Drop_Launched_1.wav</Samples>     
+	</SFXEvent>  
+
+
+	<SFXEvent Name="GUI_Alien_Mass_Drop_Power_Up">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Alien_Mass_Power_Up_1.wav</Samples>     
+	</SFXEvent>  
+
+
+
+
+	<SFXEvent Name="GUI_Alien_Scan_Pulse">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Alien_Scan_Pulse_1.wav</Samples>     
+	</SFXEvent>  
+
+
+
+
+
+
+
+	<SFXEvent Name="GUI_Novus_Mass_Cannon_Ready">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Novus_Mass_Cannon_1.wav</Samples>     
+	</SFXEvent>  
+
+	<SFXEvent Name="GUI_Novus_Mass_Cannon_Launched">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Novus_Mass_Cannon_Launched_1.wav</Samples>     
+	</SFXEvent>  
+
+
+
+
+	<SFXEvent Name="GUI_Novus_EMP_Launched">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Novus_EMP_Launched_1.wav</Samples>     
+	</SFXEvent>  
+
+	<SFXEvent Name="GUI_Novus_Gravity_Bomb_Launched">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Novus_Gravity_Bomb_Launched_1.wav</Samples>     
+	</SFXEvent>  
+
+
+
+
+
+	<SFXEvent Name="GUI_Masari_Magma_Power_Up">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Masari_Magma_1.wav</Samples>     
+	</SFXEvent> 
+
+	<SFXEvent Name="GUI_Masari_Magma_Weapon_Ready">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Masari_Magma_1.wav</Samples>     
+	</SFXEvent>  
+
+	<SFXEvent Name="GUI_Masari_Magma_Weapon_Launched">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Masari_Magma_Launched_1.wav</Samples>     
+	</SFXEvent> 
+
+
+
+
+	<SFXEvent Name="GUI_Masari_Matter_Storm_Launched">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Masari_Matter_Storm_Launched_1.wav</Samples>     
+	</SFXEvent>  
+
+	<SFXEvent Name="GUI_Masari_Burning_Wrath_Launched">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Masari_Burning_Wratch_Launched_1.wav</Samples>     
+	</SFXEvent>  
+
+
+
+
+
+
+	<SFXEvent Name="GUI_Generic_Mouse_Over">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_MO_1.wav</Samples>     
+	</SFXEvent>   
+
+	<SFXEvent Name="GUI_Generic_Button_Select">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Select_1.wav</Samples>     
+	</SFXEvent>   
+
+	<SFXEvent Name="GUI_Generic_Bad_Sound">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Bad_Sound_1.wav</Samples>     
+	</SFXEvent>   
+
+	<SFXEvent Name="GUI_Generic_Drag">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Drag_1.wav</Samples>     
+	</SFXEvent>   
+
+	<SFXEvent Name="GUI_Generic_Drop">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Drop_1.wav</Samples>     
+	</SFXEvent>   
+
+	<SFXEvent Name="GUI_Generic_Open_Window">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Open_4.wav</Samples>     
+	</SFXEvent>   
+
+	<SFXEvent Name="GUI_Generic_Close_Window">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Close_4.wav</Samples>     
+	</SFXEvent>   
+
+	<SFXEvent Name="GUI_Generic_Research_Start">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Research_Start_1.wav</Samples>     
+	</SFXEvent>   
+
+
+
+
+
+	<SFXEvent Name="GUI_Generic_Objective_Complete">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Objective_Complete_1.wav</Samples>     
+	</SFXEvent>   
+
+	<SFXEvent Name="GUI_Generic_Transit">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Transit_1.wav</Samples>     
+	</SFXEvent>  
+
+	<SFXEvent Name="GUI_Hint_Icon_Shown">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Alien_Toggle_2.wav</Samples>     
+	</SFXEvent>
+
+   <SFXEvent Name="GUI_Hint_Text_Shown">
+      <Use_Preset>Preset_GUI</Use_Preset>
+      <Samples>GUI_Open_4.wav</Samples>
+   </SFXEvent>
+
+   <SFXEvent Name="GUI_Hint_Text_Closed">
+      <Use_Preset>Preset_GUI</Use_Preset>
+      <Samples>GUI_Close_4.wav</Samples>
+   </SFXEvent>
+
+
+
+   <!-- NOVUS TOGGLE SWITCHES -->
+
+	<SFXEvent Name="GUI_Novus_Toggle_1">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Novus_Toggle_1.wav</Samples>    
+		<Min_Volume>100</Min_Volume>
+		<Max_Volume>100</Max_Volume>
+	</SFXEvent>  
+
+	<SFXEvent Name="GUI_Novus_Toggle_2">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Novus_Toggle_2.wav</Samples>     
+		<Min_Volume>100</Min_Volume>
+		<Max_Volume>100</Max_Volume>
+	</SFXEvent>  
+
+	<SFXEvent Name="GUI_Novus_Toggle_3">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Novus_Toggle_3.wav</Samples>  
+		<Min_Volume>100</Min_Volume>
+		<Max_Volume>100</Max_Volume>
+	</SFXEvent>  
+
+	<SFXEvent Name="GUI_Novus_Toggle_4">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Novus_Toggle_4.wav</Samples>  
+		<Min_Volume>100</Min_Volume>
+		<Max_Volume>100</Max_Volume>
+	</SFXEvent>  
+
+	<SFXEvent Name="GUI_Novus_Toggle_5">				<!-- Founder Signal Tap ability toggle -->
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Novus_Toggle_5.wav</Samples>
+		<Min_Volume>100</Min_Volume>
+		<Max_Volume>100</Max_Volume>
+	</SFXEvent>  
+
+	<SFXEvent Name="GUI_Novus_Toggle_6">				<!-- Mimic ability toggle -->
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Novus_Toggle_6.wav</Samples>
+		<Min_Volume>100</Min_Volume>
+		<Max_Volume>100</Max_Volume>
+	</SFXEvent>  
+
+	<SFXEvent Name="GUI_Novus_Toggle_7">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Novus_Toggle_7.wav</Samples>
+		<Min_Volume>100</Min_Volume>
+		<Max_Volume>100</Max_Volume>
+	</SFXEvent> 
+
+	<SFXEvent Name="GUI_Novus_Toggle_8">          	<!-- Variant ability toggle -->
+ 		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Novus_Toggle_8.wav</Samples>
+		<Min_Volume>100</Min_Volume>
+		<Max_Volume>100</Max_Volume>
+	</SFXEvent>  
+
+
+
+
+
+
+
+	<SFXEvent Name="GUI_NOVUS_ABILITY_SNIPE">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples></Samples>
+		<Min_Volume>100</Min_Volume>
+		<Max_Volume>100</Max_Volume>
+	</SFXEvent>  
+
+	<SFXEvent Name="GUI_NOVUS_ABILITY_ROCKET">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Novus_Ability_Rockets_1.wav</Samples>
+		<Min_Volume>100</Min_Volume>
+		<Max_Volume>100</Max_Volume>
+	</SFXEvent>  
+
+	<SFXEvent Name="GUI_NOVUS_ABILITY_SPIN">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Novus_Toggle_3.wav</Samples>
+		<Min_Volume>100</Min_Volume>
+		<Max_Volume>100</Max_Volume>
+	</SFXEvent> 
+
+	<SFXEvent Name="GUI_NOVUS_ABILITY_SWITCH_MODES">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Novus_Ability_Switch_Modes_1.wav</Samples>
+		<Min_Volume>100</Min_Volume>
+		<Max_Volume>100</Max_Volume>
+	</SFXEvent> 
+
+	<SFXEvent Name="GUI_NOVUS_ABILITY_SWITCH_WEAPONS">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Novus_Ability_Weapon_Switch_1.wav</Samples>
+		<Min_Volume>60</Min_Volume>
+		<Max_Volume>60</Max_Volume>
+	</SFXEvent> 
+
+
+
+
+
+
+
+	<!-- Temporary: Copy of GUI_Generic_Mouse_Over above: Since still referenced by UI code from EAW -->
+	<SFXEvent Name="GUI_Common_Dialog_Button_Hilight">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_MO_1.wav</Samples>     
+	</SFXEvent>   
+	
+	<!-- Temporary: Copy of GUI_Generic_Button_Select: Since still referenced by UI code from EAW -->
+	<SFXEvent Name="GUI_Common_Dialog_Button_Press">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Select_1.wav</Samples>     
+	</SFXEvent>   
+
+
+	<SFXEvent Name="GUI_Common_Dialog_Tooltip">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Tooltip_1.wav</Samples>     
+	</SFXEvent>   
+
+	<SFXEvent Name="GUI_Sold_Unit">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Sold_Unit_1.wav</Samples>     
+	</SFXEvent>  
+
+
+
+
+
+	<SFXEvent Name="GUI_BUILD_INFANTRY">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_BUILD_INFANTRY_1.wav</Samples>     
+	</SFXEvent>  
+
+	<SFXEvent Name="GUI_BUILD_HERO">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_BUILD_HERO_1.wav</Samples>     
+	</SFXEvent> 
+
+	<SFXEvent Name="GUI_BUILD_VEHICLE">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_BUILD_VEHICLE_1.wav</Samples>     
+	</SFXEvent>  
+
+	<SFXEvent Name="GUI_BUILD_STRUCTURE">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_BUILD_STRUCTURE_1.wav</Samples>     
+	</SFXEvent>  
+
+	<SFXEvent Name="GUI_BUILD_UPGRADE">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_BUILD_UPGRADE_1.wav</Samples>     
+	</SFXEvent>  
+
+
+
+
+
+
+	<SFXEvent Name="GUI_BUILD_INFANTRY_CANCELED">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_BUILD_CANCELED_1.wav</Samples>     
+	</SFXEvent>  
+
+	<SFXEvent Name="GUI_BUILD_HERO_CANCELED">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_BUILD_CANCELED_1.wav</Samples>     
+	</SFXEvent>  
+
+	<SFXEvent Name="GUI_BUILD_VEHICLE_CANCELED">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_BUILD_CANCELED_1.wav</Samples>     
+	</SFXEvent>  
+
+	<SFXEvent Name="GUI_BUILD_STRUCTURE_CANCELED">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_BUILD_CANCELED_1.wav</Samples>     
+	</SFXEvent>  
+
+	<SFXEvent Name="GUI_BUILD_UPGRADE_CANCELED">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_BUILD_UPGRADE_CANCELED_1.wav</Samples>     
+	</SFXEvent>  
+
+
+
+
+	<SFXEvent Name="GUI_BUILD_UPGRADE_COMPLETE">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_BUILD_UPGRADE_COMPLETE_1.wav</Samples>     
+	</SFXEvent>  
+
+
+
+
+
+
+	<SFXEvent Name="GUI_SUPER_WEAPON_LAUNCHED">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_SUPER_WEAPON_LAUNCHED_1.wav</Samples>     
+	</SFXEvent>
+   
+   <SFXEvent Name="GUI_MEGA_WEAPON_LAUNCHED">
+      <Use_Preset>Preset_GUI</Use_Preset>
+      <Samples>GUI_SUPER_WEAPON_LAUNCHED_1.wav</Samples>
+   </SFXEvent>
+   
+   <SFXEvent Name="GUI_BUILD_RESEARCH_COMPLETE">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_BUILD_RESEARCH_COMPLETE_1.wav</Samples>     
+	</SFXEvent>  
+
+
+
+
+	<SFXEvent Name="GUI_Text_Scroll">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Text_Scroll_1.wav</Samples>     
+	</SFXEvent>    
+
+	<SFXEvent Name="GUI_Text_End">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Text_End_1.wav</Samples>
+		<Kills_Previous_Object_SFX>Yes</Kills_Previous_Object_SFX>
+	</SFXEvent>    
+
+
+
+
+	<SFXEvent Name="GUI_Credits">
+		<Use_Preset>Preset_GUI</Use_Preset>
+		<Samples>GUI_Credits_1.wav</Samples>     
+	</SFXEvent>
+
+
+
+   <SFXEvent Name="GUI_BEACON_PLACED">
+      <Use_Preset>Preset_GUI</Use_Preset>
+      <Samples>GUI_BUILD_UPGRADE_COMPLETE_1.wav</Samples>
+   </SFXEvent>
+
+
+   <SFXEvent Name="GUI_PATCH_ACTIVATED">
+      <Use_Preset>Preset_GUI</Use_Preset>
+      <Samples>GUI_Novus_Patch_1.wav</Samples>
+   </SFXEvent>
+
+   <SFXEvent Name="GUI_NEUTRAL_STRUCTURE_CAPTURED">
+      <Use_Preset>Preset_GUI</Use_Preset>
+      <Samples>GUI_Capture_Structure_1.wav</Samples>
+   </SFXEvent>
+
+   
+
+</SFXEvents>
+

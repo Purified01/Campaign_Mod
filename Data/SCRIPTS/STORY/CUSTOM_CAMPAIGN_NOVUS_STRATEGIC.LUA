@@ -35,7 +35,6 @@ function Definitions()
     
 	bool_user_chose_mission = false
 	global_story_dialogue_done=false
-	novus_base_table = {}
 end
 
 function State_Init(message)
@@ -179,14 +178,6 @@ function State_Start_NM01(message)
 		end
 		
 	end
-end
-
-function Global_Store_Novus_Layout(given_table)
-	novus_base_table = given_table
-end
-
-function Global_Load_Novus_Layout()
-	return novus_base_table
 end
 
 

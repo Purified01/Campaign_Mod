@@ -79,6 +79,10 @@ function State_Init(message)
 	masari.Allow_AI_Unit_Behavior(false)
 	novus_two.Allow_AI_Unit_Behavior(false)
 	
+	novus.Lock_Unit_Ability("Novus_Hero_Founder", "Novus_Founder_Retreat_From_Tactical_Ability", true, STORY)
+	novus.Lock_Unit_Ability("Novus_Hero_Vertigo", "Novus_Vertigo_Retreat_From_Tactical_Ability", true, STORY)
+	novus.Lock_Unit_Ability("Novus_Hero_Mech", "Novus_Mech_Retreat_From_Tactical_Ability", true, STORY)
+
 		Stop_All_Speech()
 		Flush_PIP_Queue()
 		Allow_Speech_Events(true)
@@ -107,12 +111,6 @@ function Thread_Mission_Start()
 	objective_c_completed=false;
 	objective_d_completed=false;
 	
-	buildtower=Find_Hint("MARKER_GENERIC","buildtower2")
-	tower_built=false;
-	buildpower=Find_Hint("MARKER_GENERIC","buildpower")
-	power_built=false;
-	
-	transportspawn=Find_Hint("MARKER_GENERIC","transportspawn")
 	
 	novusbase1=Find_Hint("MARKER_GENERIC","novusbase1")
 		
@@ -181,7 +179,18 @@ function Thread_Mission_Start()
         end
     end
 	
-	Create_Thread("Thread_Mission_Complete");
+	Create_Thread("Aliens_Attack_Base")
+
+    while not(objective_b_completed) do
+        Sleep(1)
+        if not mission_success and not mission_failure then
+            if alien_forces_defeated>=2 then
+                objective_b_completed=true;
+            end
+        end
+    end
+
+	Create_Thread("Thread_Mission_Complete")
 	
 end
 

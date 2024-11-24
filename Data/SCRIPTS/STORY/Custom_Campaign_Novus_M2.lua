@@ -10,9 +10,6 @@ require("PGColors")
 -- called from other scripts. (The data is stored here.)
 require("PGObjectives")
 require("PGSpawnUnits")
-require("PGAchievementAward")
-require("PGHintSystemDefs")
-require("PGHintSystem")
 require("Story_Campaign_Hint_System")
 require("RetryMission")
 
@@ -61,28 +58,17 @@ end
 -- below are all the various states that this script will go through
 function State_Init(message)
 	if message == OnEnter then
-		-- ***** ACHIEVEMENT_AWARD *****
-		PGAchievementAward_Init()
-		-- ***** ACHIEVEMENT_AWARD *****
-
-		-- ***** HINT SYSTEM *****
-		PGHintSystemDefs_Init()
-		PGHintSystem_Init()
-		local scene = Get_Game_Mode_GUI_Scene()
-		Register_Hint_Context_Scene(scene)			-- Set the scene to which independant hints will be attached.
-		-- ***** HINT SYSTEM *****
-
 		Fade_Screen_Out(0)
 
-	uea.Allow_AI_Unit_Behavior(false)
-	aliens.Allow_AI_Unit_Behavior(false)
-	masari.Allow_AI_Unit_Behavior(false)
-	novus_two.Allow_AI_Unit_Behavior(false)
-	
-	novus.Lock_Unit_Ability("Novus_Hero_Founder", "Novus_Founder_Retreat_From_Tactical_Ability", true, STORY)
-	novus.Lock_Unit_Ability("Novus_Hero_Vertigo", "Novus_Vertigo_Retreat_From_Tactical_Ability", true, STORY)
-	novus.Lock_Unit_Ability("Novus_Hero_Mech", "Novus_Mech_Retreat_From_Tactical_Ability", true, STORY)
-	novus.Lock_Object_Type(Find_Object_Type("NM04_NOVUS_PORTAL"),true,STORY)
+		uea.Allow_AI_Unit_Behavior(false)
+		aliens.Allow_AI_Unit_Behavior(false)
+		masari.Allow_AI_Unit_Behavior(false)
+		novus_two.Allow_AI_Unit_Behavior(false)
+		
+		novus.Lock_Unit_Ability("Novus_Hero_Founder", "Novus_Founder_Retreat_From_Tactical_Ability", true, STORY)
+		novus.Lock_Unit_Ability("Novus_Hero_Vertigo", "Novus_Vertigo_Retreat_From_Tactical_Ability", true, STORY)
+		novus.Lock_Unit_Ability("Novus_Hero_Mech", "Novus_Mech_Retreat_From_Tactical_Ability", true, STORY)
+		novus.Lock_Object_Type(Find_Object_Type("NM04_NOVUS_PORTAL"),true,STORY)
 
 		Stop_All_Speech()
 		Flush_PIP_Queue()
@@ -163,25 +149,25 @@ function Thread_Mission_Start()
 	
 end
 
--- adds mission objective for objective B
+-- adds mission objective for objective A
 function Show_Objective_A()
-	-- Get_Game_Mode_GUI_Scene().Raise_Event_Immediate("Set_Minor_Announcement_Text", nil, {"TEXT_CUSTOM_CAMPAIGN_GENERIC_DESTROY"} )
-	Sleep(time_objective_sleep)
+	Sleep(3)
 	objective_a = Add_Objective("TEXT_CUSTOM_CAMPAIGN_ATTACK_WALKER")
 	walker1.Add_Reveal_For_Player(novus)
-	sleep(2)
+	Sleep(3)
 	objective_b = Add_Objective("TEXT_CUSTOM_CAMPAIGN_ATTACK_WALKER")
 	walker2.Add_Reveal_For_Player(novus)
-	sleep(2)
+	Sleep(3)
 	objective_c = Add_Objective("TEXT_CUSTOM_CAMPAIGN_ATTACK_WALKER")
 	walker3.Add_Reveal_For_Player(novus)
 end
 
 
 function Aliens_Attack_Base()
+	Sleep(15)
 	alien_forces = { "ALIEN_GRUNT", "ALIEN_GRUNT", "ALIEN_GRUNT", "ALIEN_GRUNT", "Alien_RECON_TANK", "Alien_RECON_TANK" }
 	alien_forces_attack = SpawnList(alien_forces, walkerspawn.Get_Position(), aliens)
-	walker=Create_Generic_Object(Find_Object_Type("CUSTOMIZED_ALIEN_WALKER_ASSEMBLY"), walkerspawn.Get_Position(), aliens)
+	walker=Create_Generic_Object(Find_Object_Type("HM06_ORLOK_HABITAT_WALKER"), walkerspawn.Get_Position(), aliens)
 	Hunt(alien_forces_attack, "PrioritiesLikeOneWouldExpectThemToBe", false, false, walkerattack, 350)
 	walker.Move_To(walkerattack)
 	Create_Thread("Thread_Assembly_Walker_Produce",{walker,3})
@@ -212,7 +198,7 @@ function Aliens_Attack_Base()
 	end
 	
 	Sleep(30)
-	if not(mission_success)
+	if not(mission_success) and not(mission_failure) then
     	Create_Thread("Aliens_Attack_Base")
 	end
 end

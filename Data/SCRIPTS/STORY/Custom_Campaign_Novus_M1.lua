@@ -10,9 +10,6 @@ require("PGColors")
 -- called from other scripts. (The data is stored here.)
 require("PGObjectives")
 require("PGSpawnUnits")
-require("PGAchievementAward")
-require("PGHintSystemDefs")
-require("PGHintSystem")
 require("Story_Campaign_Hint_System")
 require("RetryMission")
 
@@ -61,28 +58,17 @@ end
 -- below are all the various states that this script will go through
 function State_Init(message)
 	if message == OnEnter then
-		-- ***** ACHIEVEMENT_AWARD *****
-		PGAchievementAward_Init()
-		-- ***** ACHIEVEMENT_AWARD *****
-
-		-- ***** HINT SYSTEM *****
-		PGHintSystemDefs_Init()
-		PGHintSystem_Init()
-		local scene = Get_Game_Mode_GUI_Scene()
-		Register_Hint_Context_Scene(scene)			-- Set the scene to which independant hints will be attached.
-		-- ***** HINT SYSTEM *****
-
 		Fade_Screen_Out(0)
 
-	uea.Allow_AI_Unit_Behavior(false)
-	aliens.Allow_AI_Unit_Behavior(false)
-	masari.Allow_AI_Unit_Behavior(false)
-	novus_two.Allow_AI_Unit_Behavior(false)
-	
-	novus.Lock_Unit_Ability("Novus_Hero_Founder", "Novus_Founder_Retreat_From_Tactical_Ability", true, STORY)
-	novus.Lock_Unit_Ability("Novus_Hero_Vertigo", "Novus_Vertigo_Retreat_From_Tactical_Ability", true, STORY)
-	novus.Lock_Unit_Ability("Novus_Hero_Mech", "Novus_Mech_Retreat_From_Tactical_Ability", true, STORY)
-	novus.Lock_Object_Type(Find_Object_Type("NM04_NOVUS_PORTAL"),true,STORY)
+		uea.Allow_AI_Unit_Behavior(false)
+		aliens.Allow_AI_Unit_Behavior(false)
+		masari.Allow_AI_Unit_Behavior(false)
+		novus_two.Allow_AI_Unit_Behavior(false)
+		
+		novus.Lock_Unit_Ability("Novus_Hero_Founder", "Novus_Founder_Retreat_From_Tactical_Ability", true, STORY)
+		novus.Lock_Unit_Ability("Novus_Hero_Vertigo", "Novus_Vertigo_Retreat_From_Tactical_Ability", true, STORY)
+		novus.Lock_Unit_Ability("Novus_Hero_Mech", "Novus_Mech_Retreat_From_Tactical_Ability", true, STORY)
+		novus.Lock_Object_Type(Find_Object_Type("NM04_NOVUS_PORTAL"),true,STORY)
 
 		Stop_All_Speech()
 		Flush_PIP_Queue()

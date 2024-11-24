@@ -82,6 +82,7 @@ function State_Init(message)
 	novus.Lock_Unit_Ability("Novus_Hero_Founder", "Novus_Founder_Retreat_From_Tactical_Ability", true, STORY)
 	novus.Lock_Unit_Ability("Novus_Hero_Vertigo", "Novus_Vertigo_Retreat_From_Tactical_Ability", true, STORY)
 	novus.Lock_Unit_Ability("Novus_Hero_Mech", "Novus_Mech_Retreat_From_Tactical_Ability", true, STORY)
+	novus.Lock_Object_Type(Find_Object_Type("NM04_NOVUS_PORTAL"),true,STORY)
 
 		Stop_All_Speech()
 		Flush_PIP_Queue()
@@ -410,12 +411,10 @@ end
 -- below are the various functions used in this script
 function Force_Victory(player)
 		if player == novus then
-			Export_Base_To_Global()
-			
-				-- Inform the campaign script of our victory.
-				global_script.Call_Function("Novus_Tactical_Mission_Over", true) -- true == player wins/false == player loses
-				--Quit_Game_Now( winning_player, quit_to_main_menu, destroy_loser_forces, build_temp_command_center, VerticalSliceTriggerVictorySplashFlag)
-				Quit_Game_Now(player, false, true, false)
+			-- Inform the campaign script of our victory.
+			global_script.Call_Function("Novus_Tactical_Mission_Over", true) -- true == player wins/false == player loses
+			--Quit_Game_Now( winning_player, quit_to_main_menu, destroy_loser_forces, build_temp_command_center, VerticalSliceTriggerVictorySplashFlag)
+			Quit_Game_Now(player, false, true, false)
 			--end
 		else
 			Show_Retry_Dialog()

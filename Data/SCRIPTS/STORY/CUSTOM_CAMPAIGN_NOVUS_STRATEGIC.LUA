@@ -67,9 +67,6 @@ function State_Init(message)
 		
 		Pause_Sun(true)
 	end
-    -- Register_Game_Scoring_Commands()
-    -- Set_Next_State("State_Start_NM01")
-    -- Force_Land_Invasion(Find_First_Object("Region15"), aliens, novus, false)
 end
 
 function State_Start_NM01_Dialogue(message)
@@ -187,16 +184,16 @@ function On_Land_Invasion()
         InvasionInfo.OverrideMapName = "./Data/Art/Maps/CustomCampaignM1.ted"
         InvasionInfo.TacticalScript = "Custom_Campaign_Novus_M1"
         InvasionInfo.UseStrategicPersistence = false
-        InvasionInfo.UseStrategicProductionRules = false
+        InvasionInfo.UseStrategicProductionRules = true
         InvasionInfo.StartingContext = "CustomCampaign"
         InvasionInfo.NightMission = true
     elseif CurrentState == "State_Start_NM02" then 
-		InvasionInfo.OverrideMapName = "./Data/Art/Maps/M24_Midwest.ted"
-		InvasionInfo.TacticalScript = "Story_Campaign_Novus_NM02"
+		InvasionInfo.OverrideMapName = "./Data/Art/Maps/CustomCampaignM2.ted"
+		InvasionInfo.TacticalScript = "Custom_Campaign_Novus_M2"
 		InvasionInfo.UseStrategicPersistence = false
 		InvasionInfo.UseStrategicProductionRules = true
-		InvasionInfo.StartingContext = "StoryCampaign"
-		InvasionInfo.NightMission = true
+		InvasionInfo.StartingContext = "CustomCampaign"
+		InvasionInfo.NightMission = false
     end
 end
 
@@ -204,10 +201,15 @@ function Novus_Tactical_Mission_Over(victorious)
     if CurrentState == "State_Start_NM01" then 
 		if victorious then
 			NM01_successful = true
-			Set_Next_State("State_Start_NM02")
+			Set_Next_State("State_Start_NM02_Dialogue")
+		end
+    elseif CurrentState == "State_Start_NM02" then 
+		if victorious then
+			NM01_successful = true
+			Set_Next_State("State_Start_NM02_Dialogue")
 		end
     end
-    
+
 	if not victorious then
 		Retry_Current_Mission()
 	end

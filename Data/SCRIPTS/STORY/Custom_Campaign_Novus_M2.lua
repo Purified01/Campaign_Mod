@@ -113,34 +113,16 @@ function Thread_Mission_Start()
 	objective_d_completed=false;
 	
 	
-	novusbase1=Find_Hint("MARKER_GENERIC","novusbase1")
-		
-	alien_walkers_spawned=false
-	superweapon_ready=false
-	
-	sub_base_built=false;
-	base_built=false;
-	
-	lastattack1=Find_Hint("MARKER_GENERIC_YELLOW","lastattack1")
-	lastattack2=Find_Hint("MARKER_GENERIC_YELLOW","lastattack2")
-	lastattack3=Find_Hint("MARKER_GENERIC_YELLOW","lastattack3")
-	
-	alienspawn1=Find_Hint("MARKER_GENERIC","alienspawn1")
-	alienspawn2=Find_Hint("MARKER_GENERIC","alienspawn2")
-	alienspawn3=Find_Hint("MARKER_GENERIC","alienspawn3")
-	alienattack1=Find_Hint("MARKER_GENERIC","alienattack1")
-	alienattack2=Find_Hint("MARKER_GENERIC","alienattack2")
-	alienattack3=Find_Hint("MARKER_GENERIC","alienattack3")
-	sites_defended=false;
-	
-	alien_spawn_brutality=Find_Hint("MARKER_GENERIC","spawnalienbrutality")
-	alien_forces_brutality=Find_Hint("MARKER_GENERIC","alienbrutality")
-	
-	alieninvasionspawn1=Find_Hint("MARKER_GENERIC","alieninvasionspawn1")
-	alieninvasionspawn2=Find_Hint("MARKER_GENERIC","alieninvasionspawn2")
-	base_defended=false;
-	alien_forces_defeated=0
-	
+	walker1 = Find_Hint("HM06_KAMAL_ASSEMBLY_WALKER","targetwalker1")
+	walker2 = Find_Hint("HM06_KAMAL_ASSEMBLY_WALKER","targetwalker2")
+	walker3 = Find_Hint("HM06_KAMAL_ASSEMBLY_WALKER","targetwalker3")
+	Register_Death_Event(walker1, Death_Walker_1)
+	Register_Death_Event(walker2, Death_Walker_2)
+	Register_Death_Event(walker3, Death_Walker_3)
+
+	walkerspawn=Find_Hint("MARKER_GENERIC","walkerspawn")
+	walkerattack=Find_Hint("MARKER_GENERIC","walkerattack")
+
 	story_dialogue_first=false
 	story_dialogue_last=false
 	
@@ -151,7 +133,7 @@ function Thread_Mission_Start()
 	
 	reminder_wait_time=45
 	
-	novus.Give_Money(20000)
+	novus.Give_Money(5000)
 	
 	Point_Camera_At(hero)
 	Lock_Controls(1)
@@ -168,34 +150,15 @@ function Thread_Mission_Start()
 	Lock_Controls(0)
 	End_Cinematic_Camera()
         
-	Sleep(4)
-	Create_Thread("Thread_Mission_Complete")
     Show_Objective_A()
-    Create_Thread("Aliens_Attack_Resources")
+    Create_Thread("Aliens_Attack_Base")
 
-    while not(objective_a_completed) do
-        Sleep(1)
-        if not mission_success and not mission_failure then
-            if sites_defended then
-				Objective_Complete(objective_a)
-                objective_a_completed=true;
-            end
-        end
-    end
-	
-    Show_Objective_B()
-	Create_Thread("Aliens_Attack_Base")
 
-    while not(objective_b_completed) do
+    while not(objective_a_completed) and not(objective_b_completed) and not(objective_c_completed) do
         Sleep(1)
-        if not mission_success and not mission_failure then
-            if alien_forces_defeated>=2 then
-				Objective_Complete(objective_b)
-                objective_b_completed=true;
-            end
-        end
     end
 
+	mission_success = true
 	Create_Thread("Thread_Mission_Complete")
 	
 end
@@ -204,96 +167,60 @@ end
 function Show_Objective_A()
 	-- Get_Game_Mode_GUI_Scene().Raise_Event_Immediate("Set_Minor_Announcement_Text", nil, {"TEXT_CUSTOM_CAMPAIGN_GENERIC_DESTROY"} )
 	Sleep(time_objective_sleep)
-	objective_a = Add_Objective("TEXT_CUSTOM_CAMPAIGN_GENERIC_DESTROY")
+	objective_a = Add_Objective("TEXT_CUSTOM_CAMPAIGN_ATTACK_WALKER")
+	walker1.Add_Reveal_For_Player(novus)
+	sleep(2)
+	objective_b = Add_Objective("TEXT_CUSTOM_CAMPAIGN_ATTACK_WALKER")
+	walker2.Add_Reveal_For_Player(novus)
+	sleep(2)
+	objective_c = Add_Objective("TEXT_CUSTOM_CAMPAIGN_ATTACK_WALKER")
+	walker3.Add_Reveal_For_Player(novus)
 end
 
--- adds mission objective for objective B
-function Show_Objective_B()
-	-- Get_Game_Mode_GUI_Scene().Raise_Event_Immediate("Set_Minor_Announcement_Text", nil, {"TEXT_CUSTOM_CAMPAIGN_GENERIC_ATTACK"} )
-	Sleep(time_objective_sleep)
-	objective_a = Add_Objective("TEXT_CUSTOM_CAMPAIGN_GENERIC_ATTACK")
-end
 
-function Aliens_Attack_Resources()
-	local alienspawns1arr=Find_All_Objects_With_Hint("alienspawn1")
-	alien_forces = { "ALIEN_GRUNT", "ALIEN_GRUNT", "ALIEN_LOST_ONE", "ALIEN_LOST_ONE", "ALIEN_LOST_ONE", "ALIEN_DEFILER" }
+function Aliens_Attack_Base()
+	alien_forces = { "ALIEN_GRUNT", "ALIEN_GRUNT", "ALIEN_GRUNT", "ALIEN_GRUNT", "Alien_RECON_TANK", "Alien_RECON_TANK" }
+	alien_forces_attack = SpawnList(alien_forces, walkerspawn.Get_Position(), aliens)
+	walker=Create_Generic_Object(Find_Object_Type("CUSTOMIZED_ALIEN_WALKER_ASSEMBLY"), walkerspawn.Get_Position(), aliens)
+	Hunt(alien_forces_attack, "PrioritiesLikeOneWouldExpectThemToBe", false, false, walkerattack, 350)
+	walker.Move_To(walkerattack)
+	Create_Thread("Thread_Assembly_Walker_Produce",{walker,3})
 
-	for i=1, #alienspawns1arr do
-		alien_forces_1 = SpawnList(alien_forces, alienspawns1arr[i].Get_Position(), aliens)
-		Hunt(alien_forces_1, "PrioritiesLikeOneWouldExpectThemToBe", false, false, alienattack1, 350)
-		drone=Create_Generic_Object(Find_Object_Type("Alien_Superweapon_Reaper_Turret"), alienspawns1arr[i].Get_Position(), aliens)
-		table.insert(alien_forces_1,drone)
-
-		drone.Highlight(true,-50)
-		drone.Move_To(alienattack1)
-	end
-	
-	local drone_distance = drone.Get_Distance(alienattack1)
+	local walker_distance = walker.Get_Distance(walkerattack)
 	
 	aliens_left=1
-	local drone_time = 0.0
+	local walker_time = 0.0
 	while aliens_left>0 do
 		aliens_left=0
-		for i, unit in pairs(alien_forces_1) do
+		for i, unit in pairs(alien_forces_attack) do
 			if TestValid(unit) then
 				aliens_left=aliens_left+1
 			end
 		end
 		
-		if TestValid(drone) and GetCurrentTime() > drone_time then
+		if TestValid(walker) and GetCurrentTime() > walker_time then
 			-- KDB keep giving this unit move commands
-			local new_dist = drone.Get_Distance(alienattack1)
-			drone_time = GetCurrentTime() + 6.0
-			if new_dist > 250.0 and new_dist >= drone_distance then
-				drone_distance = new_dist
-				drone.Move_To(alienattack1)
+			local new_dist = walker.Get_Distance(walkerattack)
+			walker_time = GetCurrentTime() + 6.0
+			if new_dist > 250.0 and new_dist >= walker_distance then
+				walker_distance = new_dist
+				walker.Move_To(walkerattack)
 			end
 		end
 		
 		Sleep(1)
 	end
 	
-
-	sites_defended=true
-end
-
-
-function Aliens_Attack_Base()
-	alien_forces_a = Create_Generic_Object(Find_Object_Type("NM01_CUSTOM_HABITAT_WALKER"),alieninvasionspawn1.Get_Position(), aliens)
-	alien_forces_a.Get_Script().Call_Function("Register_For_Walker_Death", Script, "Death_Alien_Forces_A") 
-	Create_Thread("Thread_Habitat_Walker_Produce",{alien_forces_a,2})
-	--Register_Death_Event(alien_forces_a, Death_Alien_Forces_A)
-	Sleep(.25)
-	alien_forces_b = Create_Generic_Object(Find_Object_Type("NM01_CUSTOM_HABITAT_WALKER"),alieninvasionspawn2.Get_Position(), aliens)
-	alien_forces_b.Get_Script().Call_Function("Register_For_Walker_Death", Script, "Death_Alien_Forces_B") 
-	Create_Thread("Thread_Habitat_Walker_Produce",{alien_forces_b,2})
-	--Register_Death_Event(alien_forces_b, Death_Alien_Forces_B)
-	alien_walkers_spawned=true
-	
-	Sleep(1)
-	
-	alien_forces_a.Add_Reveal_For_Player(novus)
-	alien_forces_b.Add_Reveal_For_Player(novus)
-	
-	if TestValid(novusbase1) then
-		alien_forces_a.Move_To(novusbase1)
-		alien_forces_b.Move_To(novusbase1)
-	else 
-		if TestValid(hero) then
-			alien_forces_a.Move_To(hero)
-			alien_forces_b.Move_To(hero)
-		end
-	end
-	
-	while not story_dialogue_last do
-		Sleep(1)
+	Sleep(30)
+	if not(mission_success)
+    	Create_Thread("Aliens_Attack_Base")
 	end
 end
 
-function Thread_Habitat_Walker_Produced_Hunt()
-	while alien_forces_defeated<2 do
-		local grunts=Find_All_Objects_Of_Type("ALIEN_GRUNT")
-		for i, unit in pairs(grunts) do
+function Thread_Assembly_Walker_Produced_Hunt()
+	while true do
+		local saucers=Find_All_Objects_Of_Type("ALIEN_FOO_CORE")
+		for i, unit in pairs(saucers) do
 			Hunt(unit, "PrioritiesLikeOneWouldExpectThemToBe", false, true, unit, 300)
 			--unit.Guard_Target(novusbase7)
 		end
@@ -301,10 +228,10 @@ function Thread_Habitat_Walker_Produced_Hunt()
 	end
 end
 
-function Thread_Habitat_Walker_Produce(params)
+function Thread_Assembly_Walker_Produce(params)
 	local walker_obj,number = params[1],params[2]
-	local prod_unit=Find_Object_Type("ALIEN_GRUNT")
-	local prod_num=4
+	local prod_unit=Find_Object_Type("ALIEN_FOO_CORE")
+	local prod_num=6
 	local built={}
 	local inqueue={}
 	local queued=0
@@ -334,14 +261,21 @@ function Thread_Habitat_Walker_Produce(params)
 	end
 end
 
-function Death_Alien_Forces_A()
-	alien_forces_defeated=alien_forces_defeated+1
+
+function Death_Walker_1()
+	objective_a_completed = true
+	Objective_Complete(objective_a)
 end
 
-function Death_Alien_Forces_B()
-	alien_forces_defeated=alien_forces_defeated+1
+function Death_Walker_2()
+	objective_b_completed = true
+	Objective_Complete(objective_b)
 end
 
+function Death_Walker_3()
+	objective_c_completed = true
+	Objective_Complete(objective_c)
+end
 --on hero death, force defeat
 --jdg 12/05/07 fix for a SEGA bug where Mirabel's death would not end mission...
 --had to remove/move the blockoncommand'ing of the talking heads.

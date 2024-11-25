@@ -140,7 +140,7 @@ function Thread_Mission_Start()
     Create_Thread("Aliens_Attack_Base")
 
 
-    while not(objective_a_completed) and not(objective_b_completed) and not(objective_c_completed) do
+    while not(objective_a_completed) or not(objective_b_completed) or not(objective_c_completed) do
         Sleep(1)
     end
 

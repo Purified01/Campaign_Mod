@@ -80,8 +80,7 @@ function State_Start_NM01_Dialogue(message)
 		global_story_dialogue_setup = false
 		start_mission_ready=false
 		current_global_story_dialogue_id = Create_Thread("NM01_Global_Story_Dialogue")
-		Create_Thread("Thread_Region_Flash", Find_First_Object("Region22"))
-		
+
 		Play_Music("Music_Technical_Data")
 		
 	elseif message == OnUpdate then
@@ -129,23 +128,22 @@ end
 
 function NM01_Global_Story_Dialogue()
 	Lock_Controls(1)
-	Point_Sun_At(Find_First_Object("Region15"))
+	Point_Sun_At(Find_First_Object("Region1"))
 	Point_Camera_At.Set_Transition_Time(1,1)
-	Point_Camera_At(Find_First_Object("Region22"))
+	Point_Camera_At(Find_First_Object("Region23"))
 	Fade_Screen_In(1)
 	
-		local region=Find_First_Object("Region22")
 		local hero = Find_First_Object("Novus_Hero_Mech")
 		local fleet = hero.Get_Parent_Object()
-		fleet.Move_Fleet_To_Region(Find_First_Object("Region22"), true)
+		fleet.Move_Fleet_To_Region(Find_First_Object("Region23"), true)
 		global_story_dialogue_setup = true
 		
 	old_zoom_time = Zoom_Camera.Set_Transition_Time(5)
 	Zoom_Camera(.3)
 		
-	transition_time = 2
+	transition_time = 4
 	Point_Camera_At.Set_Transition_Time(transition_time, transition_time)
-	Point_Camera_At(Find_First_Object("Region15"))
+	Point_Camera_At(Find_First_Object("Region1"))
 		
 	Fade_Screen_Out(2)
 	Sleep(2)
@@ -157,14 +155,14 @@ function State_Start_NM01(message)
 		Allow_Speech_Events(true)
 		
 		Fade_Screen_Out(0)
-		Point_Sun_At(Find_First_Object("Region15"))
+		Point_Sun_At(Find_First_Object("Region1"))
 		
 	elseif message == OnUpdate then
 		if bool_user_chose_mission ~= true then
 			UI_Set_Loading_Screen_Faction_ID(PG_FACTION_NOVUS)
 			UI_Set_Loading_Screen_Background("splash_novus.tga")
 			UI_Set_Loading_Screen_Mission_Text("TEXT_SP_MISSION_NVS01_LOAD_SCREEN_TEXT")
-			Force_Land_Invasion(Find_First_Object("Region15"), aliens, novus, false)
+			Force_Land_Invasion(Find_First_Object("Region1"), aliens, novus, false)
 		end
 		
 	end
@@ -209,7 +207,7 @@ function State_Start_NM02_Dialogue(message)
 					Set_PIP_Model(3, nil)
 					
 					Point_Camera_At.Set_Transition_Time(1,1)
-					Point_Camera_At(Find_First_Object("Region15"))
+					Point_Camera_At(Find_First_Object("Region1"))
 					Zoom_Camera.Set_Transition_Time(1)
 					Zoom_Camera(1)
 					
@@ -227,15 +225,14 @@ end
 
 function NM02_Global_Story_Dialogue()
 	Lock_Controls(1)
-	Point_Sun_At(Find_First_Object("Region1"))
+	Point_Sun_At(Find_First_Object("Region3"))
 	Point_Camera_At.Set_Transition_Time(1,1)
-	Point_Camera_At(Find_First_Object("Region15"))
+	Point_Camera_At(Find_First_Object("Region1"))
 	Fade_Screen_In(1)
 	
-		local region=Find_First_Object("Region15")
 		local hero = Find_First_Object("Novus_Hero_Mech")
 		local fleet = hero.Get_Parent_Object()
-		fleet.Move_Fleet_To_Region(Find_First_Object("Region15"), true)
+		fleet.Move_Fleet_To_Region(Find_First_Object("Region1"), true)
 		global_story_dialogue_setup = true
 		
 	old_zoom_time = Zoom_Camera.Set_Transition_Time(5)
@@ -243,7 +240,7 @@ function NM02_Global_Story_Dialogue()
 		
 	transition_time = 2
 	Point_Camera_At.Set_Transition_Time(transition_time, transition_time)
-	Point_Camera_At(Find_First_Object("Region1"))
+	Point_Camera_At(Find_First_Object("Region3"))
 		
 	Fade_Screen_Out(2)
 	Sleep(2)
@@ -255,14 +252,14 @@ function State_Start_NM02(message)
 		Allow_Speech_Events(true)
 		
 		Fade_Screen_Out(0)
-		Point_Sun_At(Find_First_Object("Region1"))
+		Point_Sun_At(Find_First_Object("Region3"))
 		
 	elseif message == OnUpdate then
 		if bool_user_chose_mission ~= true then
 			UI_Set_Loading_Screen_Faction_ID(PG_FACTION_NOVUS)
 			UI_Set_Loading_Screen_Background("splash_novus.tga")
 			UI_Set_Loading_Screen_Mission_Text("TEXT_SP_MISSION_NVS01_LOAD_SCREEN_TEXT")
-			Force_Land_Invasion(Find_First_Object("Region1"), aliens, novus, false)
+			Force_Land_Invasion(Find_First_Object("Region3"), aliens, novus, false)
 		end
 		
 	end

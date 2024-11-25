@@ -1,9 +1,0 @@
-<?xml version="1.0" ?>
-
-<GameXMLFiles>
-
-	<File filename="GameObjectFiles.xml"				type="GameObjectType"				metafile="true"/>
-  <!-- <File filename="Structures/Alien_Force_Wall.xml"       type="GameObjectType"      metafile="false"/> -->
-	
-</GameXMLFiles>
-

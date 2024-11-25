@@ -1,5 +1,0 @@
-<?xml version="1.0" ?>
-<!-- Dynamic enum definition for EffectCategoryType  -->
-<EnumDefinition>
-    <CanBeRemovedByAbility> 0x1 </CanBeRemovedByAbility>
-</EnumDefinition>

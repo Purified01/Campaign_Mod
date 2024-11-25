@@ -33,21 +33,11 @@
 		<Trade_Routes> 
 			Region23_Region1, 
 			Region1_Region3, 
-			<!-- Region3_Region1,  -->
-			<!-- Region26_Region27, 
-			Region27_Region24, 
-			Region27_Region23, 
-			Region27_Region22, 
-			Region27_Region34, 
-			Region27_Region11, 
-			Region24_Region22, 
-			Region22_Region15, 
-			Region15_Region1, 
-			Region1_Region8, 
-			Region8_Region7, 
-			Region7_Region21, 
-			Region21_Region30, 
-			Region30_Region15 -->
+			Region3_Region4, 
+			Region4_Region15, 
+			Region15_Region16, 
+			Region16_Region17, 
+			Region17_Region18, 
         </Trade_Routes>
 
 		<Starting_Active_Player> Novus </Starting_Active_Player>
@@ -65,11 +55,11 @@
 
 		<Starting_Forces> Alien, Region1, Alien_Hierarchy_Core </Starting_Forces>
 		<Starting_Forces> Alien, Region3, Alien_Hierarchy_Core </Starting_Forces>
-		<Starting_Forces> Alien, Region8, Alien_Hierarchy_Core </Starting_Forces>
-		<Starting_Forces> Alien, Region7, Alien_Hierarchy_Core </Starting_Forces>
-		<Starting_Forces> Alien, Region21, Alien_Hierarchy_Core </Starting_Forces>
-		<Starting_Forces> Alien, Region30, Alien_Hierarchy_Core </Starting_Forces>
-		<Starting_Forces> Alien, Region24, Alien_Hierarchy_Core </Starting_Forces>
+		<Starting_Forces> Alien, Region4, Alien_Hierarchy_Core </Starting_Forces>
+		<Starting_Forces> Alien, Region15, Alien_Hierarchy_Core </Starting_Forces>
+		<Starting_Forces> Alien, Region16, Alien_Hierarchy_Core </Starting_Forces>
+		<Starting_Forces> Alien, Region17, Alien_Hierarchy_Core </Starting_Forces>
+		<Starting_Forces> Alien, Region18, Alien_Hierarchy_Core </Starting_Forces>
 			
    </Campaign>
 

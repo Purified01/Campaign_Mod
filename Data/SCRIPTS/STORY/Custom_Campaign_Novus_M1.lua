@@ -154,7 +154,6 @@ function Thread_Mission_Start()
 	Lock_Controls(0)
 	End_Cinematic_Camera()
         
-	Create_Thread("Thread_Mission_Complete")
     Show_Objective_A()
     Create_Thread("Aliens_Attack_Resources")
 

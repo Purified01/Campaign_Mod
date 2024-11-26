@@ -69,6 +69,7 @@ function State_Init(message)
 		novus.Lock_Unit_Ability("Novus_Hero_Vertigo", "Novus_Vertigo_Retreat_From_Tactical_Ability", true, STORY)
 		novus.Lock_Unit_Ability("Novus_Hero_Mech", "Novus_Mech_Retreat_From_Tactical_Ability", true, STORY)
 		novus.Lock_Object_Type(Find_Object_Type("NM04_NOVUS_PORTAL"),true,STORY)
+		novus.Lock_Object_Type(Find_Object_Type("NOVUS_SUPERWEAPON_GRAVITY_BOMB"),true,STORY)
 
 		Stop_All_Speech()
 		Flush_PIP_Queue()

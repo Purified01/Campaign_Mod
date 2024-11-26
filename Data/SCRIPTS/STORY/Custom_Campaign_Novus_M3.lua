@@ -32,6 +32,7 @@ function Definitions()
 	
 	novus_two=Find_Player("NovusTwo")
 
+
 	PGColors_Init_Constants()
 --	aliens.Enable_Colorization(true, COLOR_RED)
 --	uea.Enable_Colorization(true, COLOR_GREEN)
@@ -91,21 +92,47 @@ function Thread_Mission_Start()
 	failure_text="TEXT_SP_MISSION_MISSION_FAILED"
 
 	--define defeat condifition: hero dies
-	hero = Find_Hint("NOVUS_HERO_MECH", "mirabel") 
-	Register_Death_Event(hero, Death_Hero)
+	hero1 = Find_Hint("NOVUS_HERO_MECH", "mirabel") 
+	hero2 = Find_Hint("NOVUS_HERO_VERTIGO", "vertigo") 
+	Register_Death_Event(hero1, Death_Hero_M)
+	Register_Death_Event(hero2, Death_Hero_V)
 	
 	objective_a_completed=false;
 	objective_b_completed=false;
 	objective_c_completed=false;
 	objective_d_completed=false;
 	
+    protect = Find_Hint("NOVUS_MEGAWEAPON", "protect")
+	-- Register_Death_Event(protect, Death_Objective)
 	
-	walker1 = Find_Hint("HM06_KAMAL_ASSEMBLY_WALKER","targetwalker1")
-	walker2 = Find_Hint("HM06_KAMAL_ASSEMBLY_WALKER","targetwalker2")
-	walker3 = Find_Hint("HM06_KAMAL_ASSEMBLY_WALKER","targetwalker3")
-	Register_Death_Event(walker1, Death_Walker_1)
-	Register_Death_Event(walker2, Death_Walker_2)
-	Register_Death_Event(walker3, Death_Walker_3)
+	base1 = Find_Hint("MASARI_KEY_INSPIRATION","destroybasemain")
+	base2 = Find_Hint("MASARI_FOUNDATION","destroybasea")
+	base3 = Find_Hint("MASARI_FOUNDATION","destroybaseb")
+	Register_Death_Event(base1, Death_Base_1)
+	Register_Death_Event(base2, Death_Base_2)
+	Register_Death_Event(base3, Death_Base_3)
+
+	object_type_enforcer = Find_Object_Type("MASARI_ENFORCER")
+	object_type_enforcer_fire = Find_Object_Type("MASARI_ENFORCER_FIRE")
+	object_type_enforcer_ice = Find_Object_Type("MASARI_ENFORCER_ICE")
+    object_type_sentry = Find_Object_Type("MASARI_SENTRY")
+    object_type_sentry_fire = Find_Object_Type("MASARI_SENTRY_FIRE")
+    object_type_sentry_ice = Find_Object_Type("MASARI_SENTRY_ICE")
+    object_type_peace_bringer = Find_Object_Type("MASARI_PEACEBRINGER")
+    object_type_peace_bringer_fire = Find_Object_Type("MASARI_PEACEBRINGER_FIRE")
+    object_type_peace_bringer_ice = Find_Object_Type("MASARI_PEACEBRINGER_ICE")
+    object_type_inquisitor = Find_Object_Type("MASARI_SEEKER")
+    object_type_inquisitor_fire = Find_Object_Type("MASARI_SEEKER_FIRE")
+    object_type_inquisitor_ice = Find_Object_Type("MASARI_SEEKER_ICE")
+    object_type_disciple = Find_Object_Type("MASARI_DISCIPLE")
+    object_type_disciple_fire = Find_Object_Type("MASARI_DISCIPLE_FIRE")
+    object_type_disciple_ice = Find_Object_Type("MASARI_DISCIPLE_ICE")
+    vehicle_production_lista = Find_All_Objects_With_Hint("vehicleproductiona")
+    vehicle_production_listb = Find_All_Objects_With_Hint("vehicleproductionb")
+    vehicle_production_listc = Find_All_Objects_With_Hint("vehicleproductionc")
+    air_production_list = Find_All_Objects_With_Hint("airproduction")
+    infantry_production_lista = Find_All_Objects_With_Hint("infantryproductiona")
+    infantry_production_listb = Find_All_Objects_With_Hint("infantryproductionb")
 
 	walkerspawn=Find_Hint("MARKER_GENERIC","walkerspawn")
 	walkerattack=Find_Hint("MARKER_GENERIC","walkerattack")
@@ -120,15 +147,16 @@ function Thread_Mission_Start()
 	
 	reminder_wait_time=45
 	
-	novus.Give_Money(5000)
+	novus.Give_Money(10000)
+	masari.Give_Money(99999)
 	
-	Point_Camera_At(hero)
+	Point_Camera_At(protect)
 	Lock_Controls(1)
 	Fade_Screen_Out(0)
 	Start_Cinematic_Camera()
 	Letter_Box_In(0)
-	Transition_Cinematic_Target_Key(hero, 0, 0, 0, 0, 0, 0, 0, 0)
-	Transition_Cinematic_Camera_Key(hero, 0, 200, 55, 65, 1, 0, 0, 0)
+	Transition_Cinematic_Target_Key(protect, 0, 0, 0, 0, 0, 0, 0, 0)
+	Transition_Cinematic_Camera_Key(protect, 0, 200, 55, 65, 1, 0, 0, 0)
 	Fade_Screen_In(1) 
 	Transition_To_Tactical_Camera(5)
 	Sleep(1)
@@ -138,7 +166,7 @@ function Thread_Mission_Start()
 	End_Cinematic_Camera()
         
     Show_Objective_A()
-    Create_Thread("Aliens_Attack_Base")
+    Create_Thread("Masari_Attack_Base")
 
 
     while not(objective_a_completed) or not(objective_b_completed) or not(objective_c_completed) do
@@ -152,127 +180,209 @@ end
 
 -- adds mission objective for objective A
 function Show_Objective_A()
+	objective_a = Add_Objective("TEXT_CUSTOM_CAMPAIGN_MEGAWEAPON_PROTECT")
+	base1.Add_Reveal_For_Player(novus)
 	Sleep(3)
-	objective_a = Add_Objective("TEXT_CUSTOM_CAMPAIGN_ATTACK_WALKER")
-	walker1.Add_Reveal_For_Player(novus)
+	objective_a = Add_Objective("TEXT_CUSTOM_CAMPAIGN_ATTACK_BASE")
+	base1.Add_Reveal_For_Player(novus)
 	Sleep(3)
-	objective_b = Add_Objective("TEXT_CUSTOM_CAMPAIGN_ATTACK_WALKER")
-	walker2.Add_Reveal_For_Player(novus)
-	Sleep(3)
-	objective_c = Add_Objective("TEXT_CUSTOM_CAMPAIGN_ATTACK_WALKER")
-	walker3.Add_Reveal_For_Player(novus)
+	objective_b = Add_Objective("TEXT_CUSTOM_CAMPAIGN_ATTACK_BASE")
+	base2.Add_Reveal_For_Player(novus)
+	objective_c = Add_Objective("TEXT_CUSTOM_CAMPAIGN_ATTACK_BASE")
+	base3.Add_Reveal_For_Player(novus)
 end
 
 
-function Aliens_Attack_Base()
-	Sleep(15)
-	alien_forces = { "ALIEN_GRUNT", "ALIEN_GRUNT", "ALIEN_GRUNT", "ALIEN_GRUNT", "Alien_RECON_TANK", "Alien_RECON_TANK" }
-	alien_forces_attack = SpawnList(alien_forces, walkerspawn.Get_Position(), aliens)
-	walker=Create_Generic_Object(Find_Object_Type("MM07_ALIEN_HABITAT_WALKER_LOSTONES"), walkerspawn.Get_Position(), aliens)
-	Hunt(alien_forces_attack, "PrioritiesLikeOneWouldExpectThemToBe", false, false, walkerattack, 350)
-	walker.Move_To(walkerattack)
-	Create_Thread("Thread_Habitat_Walker_Produce",{walker,3})
+function Masari_Attack_Base()
+	-- Sleep(15)
+	Create_Thread("Thread_Construct_Enforcers")
+	Create_Thread("Thread_Construct_Sentries")
+	Create_Thread("Thread_Construct_Peace_Bringers")
+	Create_Thread("Thread_Construct_Disciples_Fast")
+	Create_Thread("Thread_Construct_Disciples_Slow")
+	Create_Thread("Thread_Construct_Inquistors")
+end
 
-	local walker_distance = walker.Get_Distance(walkerattack)
+
+function Thread_Construct_Enforcers()
+	local i, structure
 	
-	aliens_left=1
-	local walker_time = 0.0
-	while aliens_left>0 do
-		aliens_left=0
-		for i, unit in pairs(alien_forces_attack) do
-			if TestValid(unit) then
-				aliens_left=aliens_left+1
-			end
-		end
-		
-		if TestValid(walker) and GetCurrentTime() > walker_time then
-			-- KDB keep giving this unit move commands
-			local new_dist = walker.Get_Distance(walkerattack)
-			walker_time = GetCurrentTime() + 6.0
-			if new_dist > 250.0 and new_dist >= walker_distance then
-				walker_distance = new_dist
-				walker.Move_To(walkerattack)
-			end
-		end
-		
-		Sleep(1)
-	end
-	
-	Sleep(30)
-	if not(mission_success) and not(mission_failure) then
-    	Create_Thread("Aliens_Attack_Base")
-	end
-end
-
-function Thread_Habitat_Walker_Produced_Hunt()
-	while true do
-		local saucers=Find_All_Objects_Of_Type("ALIEN_LOST_ONE")
-		for i, unit in pairs(saucers) do
-			Hunt(unit, "PrioritiesLikeOneWouldExpectThemToBe", false, true, unit, 300)
-			--unit.Guard_Target(novusbase7)
-		end
-		Sleep(GameRandom(5,7))
-	end
-end
-
-function Thread_Habitat_Walker_Produce(params)
-	local walker_obj,number = params[1],params[2]
-	local prod_unit=Find_Object_Type("ALIEN_LOST_ONE")
-	local prod_num=6
-	local built={}
-	local inqueue={}
-	local queued=0
-	local build=0
-	while TestValid(walker_obj) do
-		queued=0
-		built=Find_All_Objects_Of_Type(prod_unit)
-		inqueue=walker_obj.Tactical_Enabler_Get_Queued_Objects()
-		if inqueue then
-			for i, unit in pairs(inqueue) do
-				if TestValid(unit) then
-					if unit.Get_Type()==prod_unit then
-						queued=queued+1
-					end
+	while not mission_success and not mission_failure do
+		for i,structure in pairs(vehicle_production_listb) do
+			if TestValid(structure) then
+				if structure.Get_Hull() > 0 then
+					Tactical_Enabler_Begin_Production(structure, object_type_enforcer, 2, masari)
 				end
 			end
 		end
-		if table.getn(built)>0 then 
-			build=table.getn(built)/2
-		else
-			build=0
-		end
-		if (queued+build)<prod_num then
-			Tactical_Enabler_Begin_Production(walker_obj, prod_unit, 1, aliens)
-		end
-		Sleep(GameRandom(20,25))
+
+		Sleep(GameRandom(10,20))
+	
 	end
 end
 
+function Thread_Construct_Sentries()
+	local i, structure
+	
+	while not mission_success and not mission_failure do
+		for i,structure in pairs(vehicle_production_listc) do
+			if TestValid(structure) then
+				if structure.Get_Hull() > 0 then
+					Tactical_Enabler_Begin_Production(structure, object_type_sentry, 2, masari)
+				end
+			end
+		end
 
-function Death_Walker_1()
+		Sleep(GameRandom(5,20))
+	
+	end
+end
+
+function Thread_Construct_Peace_Bringers()
+	local i, structure
+	
+	while not mission_success and not mission_failure do
+		for i,structure in pairs(vehicle_production_lista) do
+			if TestValid(structure) then
+				if structure.Get_Hull() > 0 then
+					Tactical_Enabler_Begin_Production(structure, object_type_peace_bringer, 2, masari)
+				end
+			end
+		end
+
+		Sleep(GameRandom(25,40))
+	
+	end
+end
+
+function Thread_Construct_Disciples_Slow()
+	local i, structure
+	
+	while not mission_success and not mission_failure do
+		for i,structure in pairs(infantry_production_listb) do
+			if TestValid(structure) then
+				if structure.Get_Hull() > 0 then
+					Tactical_Enabler_Begin_Production(structure, object_type_disciple, 2, masari)
+				end
+			end
+		end
+
+		Sleep(GameRandom(20, 30))
+	
+	end
+end
+
+function Thread_Construct_Disciples_Fast()
+	local i, structure
+	
+	while not mission_success and not mission_failure do
+		for i,structure in pairs(infantry_production_lista) do
+			if TestValid(structure) then
+				if structure.Get_Hull() > 0 then
+					Tactical_Enabler_Begin_Production(structure, object_type_disciple, 2, masari)
+				end
+			end
+		end
+
+		Sleep(GameRandom(15,20))
+	
+	end
+end
+
+function Thread_Construct_Inquistors()
+	local i, structure
+	
+	while not mission_success and not mission_failure do
+		for i,structure in pairs(air_production_list) do
+			if TestValid(structure) then
+				if structure.Get_Hull() > 0 then
+					Tactical_Enabler_Begin_Production(structure, object_type_inquisitor, 2, masari)
+				end
+			end
+		end
+
+		Sleep(GameRandom(20,50))
+	
+	end
+end
+
+function Story_On_Construction_Complete(obj)
+	local nearest, obj_type
+	
+	if TestValid(obj) then
+		obj_type = obj.Get_Type()
+		if obj_type == object_type_enforcer or obj_type == object_type_enforcer_fire or obj_type == object_type_enforcer_ice then
+      	    Hunt(obj, "AntiDefault", true, false)
+        end
+		if obj_type == object_type_peace_bringer or obj_type == object_type_peace_bringer_fire or obj_type == object_type_peace_bringer_ice then
+      	    Hunt(obj, "AntiDefault", true, false)
+        end
+		if obj_type == object_type_inquisitor or obj_type == object_type_inquisitor_fire or obj_type == object_type_inquisitor_ice then
+      	    Hunt(obj, "AntiDefault", true, false)
+        end
+        if obj_type == object_type_sentry or obj_type == object_type_sentry_fire or obj_type == object_type_sentry_ice then
+		    obj.Attack_Move(protect.Get_Position())
+        end
+        if obj_type == object_type_disciple or obj_type == object_type_disciple_fire or obj_type == object_type_disciple_ice then
+			local p = GameRandom(20,50)
+			if p % 2 then
+		    	obj.Attack_Move(protect.Get_Position())
+			else 
+				Hunt(obj, "AntiDefault", true, false)
+			end
+        end
+   end
+end
+
+
+function Death_Base_1()
 	objective_a_completed = true
 	Objective_Complete(objective_a)
 end
 
-function Death_Walker_2()
+function Death_Base_2()
 	objective_b_completed = true
 	Objective_Complete(objective_b)
 end
 
-function Death_Walker_3()
+function Death_Base_3()
 	objective_c_completed = true
 	Objective_Complete(objective_c)
 end
 --on hero death, force defeat
 --jdg 12/05/07 fix for a SEGA bug where Mirabel's death would not end mission...
 --had to remove/move the blockoncommand'ing of the talking heads.
-function Death_Hero()
-	Create_Thread("Thread_Death_Hero")
+function Death_Hero_M()
+	Create_Thread("Thread_Death_Mirabel")
 end
 
-function Thread_Death_Hero()
+function Death_Hero_V()
+	Create_Thread("Thread_Death_Vertigo")
+end
+
+function Death_Objective()
+	Create_Thread("Thread_Death_Objective")
+end
+
+function Thread_Death_Mirabel()
 	BlockOnCommand(Queue_Talking_Head(pip_novcomm, "NVS01_SCENE06_14"))
 	failure_text="TEXT_SP_MISSION_MISSION_FAILED_HERO_DEAD_MIRABEL"
+	if mission_failure == false then
+		Create_Thread("Thread_Mission_Failed")
+	end
+end
+
+function Thread_Death_Vertigo()
+	BlockOnCommand(Queue_Talking_Head(pip_novcomm, "NVS01_SCENE06_14"))
+	failure_text="TEXT_SP_MISSION_MISSION_FAILED_HERO_DEAD_VERTIGO"
+	if mission_failure == false then
+		Create_Thread("Thread_Mission_Failed")
+	end
+end
+
+function Thread_Death_Objective()
+	BlockOnCommand(Queue_Talking_Head(pip_novcomm, "NVS01_SCENE06_14"))
+	failure_text="TEXT_CUSTOM_CAMPAIGN_FAILED_PROTECT"
 	if mission_failure == false then
 		Create_Thread("Thread_Mission_Failed")
 	end

@@ -415,8 +415,8 @@ end
 function On_Land_Invasion()
 
     if CurrentState == "State_Start_NM01" then
-        InvasionInfo.OverrideMapName = "./Data/Art/Maps/CustomCampaignM1.ted"
-        InvasionInfo.TacticalScript = "Custom_Campaign_Novus_M1"
+        InvasionInfo.OverrideMapName = "./Data/Art/Maps/CustomCampaignM3.ted"
+        InvasionInfo.TacticalScript = "Custom_Campaign_Novus_M3"
         InvasionInfo.UseStrategicPersistence = false
         InvasionInfo.UseStrategicProductionRules = false
         InvasionInfo.StartingContext = "CustomCampaign"

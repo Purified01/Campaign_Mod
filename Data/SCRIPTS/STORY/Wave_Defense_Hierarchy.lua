@@ -39,10 +39,14 @@ function Definitions()
     lost = "ALIEN_LOST_ONE"
     var = "NOVUS_VARIANT"
     amtank = "NOVUS_ANTIMATTER_TANK"
+    senty = "MASARI_SENTRY"
 
     H_I_1 = genUnits({grunt, lost}, {8, 6})
     N_V_1 = genUnits({var}, {8})
     N_V_2 = genUnits({var, amtank}, {6, 4})
+
+    N_V_F = genUnits({var}, {3})
+    M_V_F = genUnits({senty}, {3})
 
 end
 
@@ -102,9 +106,8 @@ function Thread_Mission_Start(message)
 	H.Make_Ally(M)
 	H.Make_Ally(M)
 
-
+	wavesCompleted = 0
 	startloc = Find_Hint("ALIEN_HIERARCHY_CORE", "start") 
-
 
     spawnFrontL = Find_Hint("MARKER_GENERIC_RED", "spawn1")
     spawnBack = Find_Hint("MARKER_GENERIC_RED", "spawn2")
@@ -112,6 +115,8 @@ function Thread_Mission_Start(message)
     spawnBackL = Find_Hint("MARKER_GENERIC_RED", "spawn4")
     spawnBackR = Find_Hint("MARKER_GENERIC_RED", "spawn5")
     spawnFrontR = Find_Hint("MARKER_GENERIC_RED", "spawn6")
+
+	spawnLocs = {spawnFront, spawnFrontR, spawnFrontL, spawnBack, spawnBackR, spawnBackL}
 
 	FogOfWar.Reveal(aliens, spawnFront, 600, 600)
 	FogOfWar.Reveal(aliens, spawnBack, 600, 600)
@@ -136,16 +141,61 @@ function Thread_Mission_Start(message)
 
     Sleep(3)
 
-    Create_Thread("Spawn_Wave")
+    Create_Thread("Spawn_Wave", {N_V_F, N_V_F})
+
+	while (wavesCompleted < 1) do 
+		Sleep(1) 
+	end
+
+    Create_Thread("Spawn_Wave", {N_V_F, M_V_F, N_V_F})
+
+    Sleep(2)
 
     -- Create_Thread("Thread_Mission_Complete")
 end
 
 
-function Spawn_Wave()
-    Hunt(SpawnList(H_I_1, spawnFrontL.Get_Position(), H), "PrioritiesLikeOneWouldExpectThemToBe", true, false)
-    Hunt(SpawnList(N_V_1, spawnFrontR.Get_Position(), N), "PrioritiesLikeOneWouldExpectThemToBe", true, false)
-    Hunt(SpawnList(TableConcat(H_I_1, N_V_2), spawnFront.Get_Position(), M), "PrioritiesLikeOneWouldExpectThemToBe", true, false)
+function Spawn_Wave(spawns)
+	spawnGroups = {spawns[1], spawns[2], spawns[3], spawns[4], spawns[5], spawns[6]}
+	locIdx = GameRandom(1,6)
+	spawnIdx = 0
+	spawnsList = {}
+	
+	waveText = string.format("Defeat Wave %d", wavesCompleted + 1)
+	defeatWave = Add_Objective(waveText)
+	unitCounter = Add_Objective("Units Left: 0")
+
+	for l = 1, #spawnGroups do
+		if spawnGroups[l] ~= nil then
+			locIdx = (locIdx + l) % 6 + 1
+			spawnsList[spawnIdx] = SpawnList(spawnGroups[l], spawnLocs[locIdx].Get_Position(), M)
+			Hunt(spawnsList[spawnIdx], "AntiDefault", true, false)
+			spawnIdx = spawnIdx + 1
+		end
+	end
+
+	invaders_left=1
+	while invaders_left>0 do
+		invaders_left=0
+		for i = 0, #spawnsList do
+			if spawnsList[i] ~= nil then
+				for j, unit in pairs(spawnsList[i]) do
+					if TestValid(unit) then
+						invaders_left=invaders_left+1
+						waveText = string.format("Units Left: %d", invaders_left)
+						Set_Objective_Text(unitCounter, waveText)
+					end
+				end
+			end
+		end
+
+		Sleep(1)
+	end
+	Set_Objective_Text(unitCounter, "Units Left: 0")
+	
+	Objective_Complete(unitCounter)
+	Objective_Complete(defeatWave)
+	wavesCompleted = wavesCompleted + 1
 end
 
 function Story_On_Construction_Complete(obj)

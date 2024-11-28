@@ -112,6 +112,8 @@ function Thread_Mission_Start()
 	Register_Death_Event(base2, Death_Base_2)
 	Register_Death_Event(base3, Death_Base_3)
 
+    build_type_vault = Find_All_Objects_With_Hint("upgradelab")
+	object_type_guardian = Find_Object_Type("MASARI_GUARDIAN_FIRE")
 	object_type_enforcer = Find_Object_Type("MASARI_ENFORCER")
 	object_type_enforcer_fire = Find_Object_Type("MASARI_ENFORCER_FIRE")
 	object_type_enforcer_ice = Find_Object_Type("MASARI_ENFORCER_ICE")
@@ -195,6 +197,8 @@ end
 
 function Masari_Attack_Base()
 	-- Sleep(15)
+	Create_Thread("Thread_Upgrade_Turrets")
+	Create_Thread("Thread_Upgrade_Knowledge")
 	Create_Thread("Thread_Construct_Enforcers")
 	Create_Thread("Thread_Construct_Sentries")
 	Create_Thread("Thread_Construct_Peace_Bringers")
@@ -203,6 +207,39 @@ function Masari_Attack_Base()
 	Create_Thread("Thread_Construct_Inquistors")
 end
 
+function Thread_Upgrade_Knowledge()
+	local i, structure
+	
+	while not mission_success and not mission_failure do
+		for i,structure in pairs(build_type_vault) do
+			if TestValid(structure) then
+				if structure.Get_Hull() > 0 then
+					Story_AI_Request_Build_Hard_Point(masari, Find_Object_Type("Masari_Adepts_Lab_Upgrade_HP"), structure)
+				end
+			end
+		end
+
+		Sleep(GameRandom(10,20))
+	
+	end
+end
+
+function Thread_Upgrade_Turrets()
+	local i, structure
+	
+	while not mission_success and not mission_failure do
+		for i,structure in pairs(object_type_guardian) do
+			if TestValid(structure) then
+				if structure.Get_Hull() > 0 then
+					Story_AI_Request_Build_Hard_Point(masari, Find_Object_Type("Masari_Guardian_Two_Faced_HP"), structure)
+				end
+			end
+		end
+
+		Sleep(GameRandom(10,20))
+	
+	end
+end
 
 function Thread_Construct_Enforcers()
 	local i, structure

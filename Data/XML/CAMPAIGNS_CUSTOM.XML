@@ -245,4 +245,47 @@
 
 	</Campaign>
 	
+	<!-- Wave Defense Campaigns -->
+
+	<Campaign Name="Wave_Defense_Campaign_Hierarchy_Strategic">
+
+		<Campaign_Set> Custom_Global_Campaign_Wave_Defense </Campaign_Set>
+		<Script_Name>Wave_Defense_Hierarchy_Strategic</Script_Name>
+
+		<Text_ID> TEXT_CAMPAIGN_WAVE_DEFENSE </Text_ID>
+		<Description_Text> TEXT_CAMPAIGN_WAVE_DEFENSE_DESCRIPTION </Description_Text>
+
+		<Starting_Credits>Novus,10000</Starting_Credits>
+		<Starting_Credits>Alien,10000</Starting_Credits>
+		<Starting_Credits>Military,20000</Starting_Credits>
+		<Starting_Credits>Masari,2000</Starting_Credits>
+
+		<Camera_Shift_X> 0.0 </Camera_Shift_X>
+		<Camera_Shift_Y> 0.0 </Camera_Shift_Y>
+		<Camera_Distance> 500.0  </Camera_Distance>
+
+		<Locations> Global_Core_Art_Model </Locations>
+		<Locations> Global_Core_Art_Model_Stars </Locations>
+
+		<Trade_Routes> 
+			Region23_Region1, 
+			Region1_Region3, 
+        </Trade_Routes>
+
+		<Starting_Active_Player> Alien </Starting_Active_Player>
+		<AI_Player_Control> Novus, DefaultAIPlayer </AI_Player_Control>
+		
+		<Starting_Forces> Alien, Region22, Alien_Theory_Core </Starting_Forces>
+		<Starting_Forces> Alien, Region23, Alien_Theory_Core </Starting_Forces>
+		<Starting_Forces> Alien, Region24, Alien_Theory_Core </Starting_Forces>
+		<Starting_Forces> Alien, Region26, Alien_Theory_Core </Starting_Forces>
+		<Starting_Forces> Alien, Region27, Alien_Theory_Core </Starting_Forces>
+		<Starting_Forces> Alien, Region34, Alien_Theory_Core </Starting_Forces>
+		<Starting_Forces> Alien, Region35, Alien_Theory_Core </Starting_Forces>
+
+		<Starting_Forces> Alien, Region23, Alien_Hero_Orlok</Starting_Forces>
+
+		<Starting_Forces> Novus, Region1, Novus_Central_Processor </Starting_Forces>
+			
+   </Campaign>
 </Campaigns>

@@ -1258,6 +1258,30 @@
 
 
 
+   <X13_Masari_Structures Name="Masari_Guardian_With_Two_Face_Upgrade">
+      <Variant_Of_Existing_Type>Masari_Guardian</Variant_Of_Existing_Type>
+
+      <!-- Maria 12.04.2006 we do not want this to show up in the build menu so we must override the 
+		  Is_Buildable_By_Constructor flag. -->
+      <BehaviorType Name="GroundStructureBehaviorType">
+         <Is_Buildable_By_Constructor> No </Is_Buildable_By_Constructor>
+      </BehaviorType>
+
+      <BehaviorType Name="ProductionBehaviorType">
+         <Is_Strategic_Buildable_Type> No </Is_Strategic_Buildable_Type>
+      </BehaviorType>
+		<Is_Placed_By_Editor> True </Is_Placed_By_Editor>
+
+      <BehaviorType Name="LuaScriptBehaviorType">
+         <Lua_Land_Behaviors> CustomizedWalker </Lua_Land_Behaviors>
+         <Lua_Script_Data>
+            HARD_POINT_CONFIGURATION_TABLE = {}   <!--***  DO NOT FORGET THIS LINE *** -->
+            HARD_POINT_CONFIGURATION_TABLE.Masari_Guardian_With_Two_Face_Upgrade = "Masari_Guardian_Two_Faced_HP"
+         </Lua_Script_Data>
+      </BehaviorType>
+
+   </X13_Masari_Structures>
+
 
 
 	<!-- **************************************************************************************** -->

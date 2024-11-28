@@ -31,6 +31,7 @@ function Definitions()
 	PGFactions_Init()
 	PGColors_Init_Constants()
 
+	aliens.Enable_Colorization(true, COLOR_ORANGE)
     ZM01_successful = false
     
 	bool_user_chose_mission = false
@@ -163,7 +164,7 @@ function On_Land_Invasion()
     end
 end
 
-function Novus_Tactical_Mission_Over(victorious)
+function Hierarchy_Tactical_Mission_Over(victorious)
     if CurrentState == "State_Start_Defense" then 
 		if victorious then
 			ZM01_successful = true

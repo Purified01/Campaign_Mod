@@ -14,6 +14,7 @@ require("PGObjectives")
 
 ---------------------------------------------------------------------------------------------------
 
+
 function Definitions()
 	--MessageBox("%s -- definitions", tostring(Script))
 	Define_State("State_Init", State_Init)
@@ -22,33 +23,59 @@ function Definitions()
 	neutral = Find_Player("Neutral")
 	civilian = Find_Player("Civilian")
 	military = Find_Player("Military")
-	novus = Find_Player("Novus")
+	N = Find_Player("Novus")
 	aliens = Find_Player("Alien")
-	masari = Find_Player("Masari")
+	H = Find_Player("Alien_ZM06_KamalRex")
+	M = Find_Player("Masari")
 
-	
 	-- Variables
 	mission_success = false
 	mission_failure = false
     
-	
-	
 	--this allows a win here to be reported to the strategic level lua script
 	global_script = Get_Game_Mode_Script("Strategic")
+
+    grunt = "ALIEN_GRUNT"
+    lost = "ALIEN_LOST_ONE"
+    var = "NOVUS_VARIANT"
+    amtank = "NOVUS_ANTIMATTER_TANK"
+
+    H_I_1 = genUnits({grunt, lost}, {8, 6})
+    N_V_1 = genUnits({var}, {8})
+    N_V_2 = genUnits({var, amtank}, {6, 4})
+
 end
 
+function TableConcat(t1,t2)
+    for i=1,#t2 do
+        t1[#t1+1] = t2[i]
+    end
+    return t1
+end
+
+function genUnits(types, counts)
+    local result = {}
+    for i = 1, #types do
+        -- Add the string 'count' times to the result array
+        for j = 1, counts[i] do
+            table.insert(result, types[i])
+        end
+    end
+
+    return result
+end
 
 --***************************************STATES****************************************************************************************************
 -- below are all the various states that this script will go through
 
 function State_Init(message)
 	if message == OnEnter then
-		novus.Allow_Autonomous_AI_Goal_Activation(false)
-		masari.Allow_Autonomous_AI_Goal_Activation(false)		
+		N.Allow_Autonomous_AI_Goal_Activation(false)
+		M.Allow_Autonomous_AI_Goal_Activation(false)		
 	
         military.Allow_AI_Unit_Behavior(false)
-        novus.Allow_AI_Unit_Behavior(false)
-        masari.Allow_AI_Unit_Behavior(false)
+        N.Allow_AI_Unit_Behavior(false)
+        M.Allow_AI_Unit_Behavior(false)
 	
 		Stop_All_Speech()
 		Flush_PIP_Queue()
@@ -68,8 +95,29 @@ function State_Init(message)
 end
 
 function Thread_Mission_Start(message) 
+	N.Make_Ally(M)
+	N.Make_Ally(H)
+	M.Make_Ally(N)
+	M.Make_Ally(H)
+	H.Make_Ally(M)
+	H.Make_Ally(M)
+
+
 	startloc = Find_Hint("ALIEN_HIERARCHY_CORE", "start") 
-	
+
+
+    spawnFrontL = Find_Hint("MARKER_GENERIC_RED", "spawn1")
+    spawnBack = Find_Hint("MARKER_GENERIC_RED", "spawn2")
+    spawnFront = Find_Hint("MARKER_GENERIC_RED", "spawn3")
+    spawnBackL = Find_Hint("MARKER_GENERIC_RED", "spawn4")
+    spawnBackR = Find_Hint("MARKER_GENERIC_RED", "spawn5")
+    spawnFrontR = Find_Hint("MARKER_GENERIC_RED", "spawn6")
+
+	FogOfWar.Reveal(aliens, spawnFront, 600, 600)
+	FogOfWar.Reveal(aliens, spawnBack, 600, 600)
+	FogOfWar.Reveal(aliens, spawnFrontR, 600, 600)
+	FogOfWar.Reveal(aliens, spawnFrontL, 600, 600)
+
 	Point_Camera_At(startloc)
 	Lock_Controls(1)
 	Fade_Screen_Out(0)
@@ -85,11 +133,20 @@ function Thread_Mission_Start(message)
 	Lock_Controls(0)
 	End_Cinematic_Camera()
 
-    Sleep(10)
 
-    Create_Thread("Thread_Mission_Complete")
+    Sleep(3)
+
+    Create_Thread("Spawn_Wave")
+
+    -- Create_Thread("Thread_Mission_Complete")
 end
 
+
+function Spawn_Wave()
+    Hunt(SpawnList(H_I_1, spawnFrontL.Get_Position(), H), "PrioritiesLikeOneWouldExpectThemToBe", true, false)
+    Hunt(SpawnList(N_V_1, spawnFrontR.Get_Position(), N), "PrioritiesLikeOneWouldExpectThemToBe", true, false)
+    Hunt(SpawnList(TableConcat(H_I_1, N_V_2), spawnFront.Get_Position(), M), "PrioritiesLikeOneWouldExpectThemToBe", true, false)
+end
 
 function Story_On_Construction_Complete(obj)
 	local obj_type
@@ -121,7 +178,7 @@ function Thread_Mission_Failed(mission_failed_text)
    Fade_Screen_Out(2)
    Sleep(2)
    Lock_Controls(0)
-	Force_Victory(novus)
+	Force_Victory(N)
 end
 
 function Thread_Mission_Complete()

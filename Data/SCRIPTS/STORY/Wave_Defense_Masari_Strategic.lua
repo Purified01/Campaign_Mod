@@ -31,9 +31,9 @@ function Definitions()
 	PGFactions_Init()
 	PGColors_Init_Constants()
 
-	aliens.Enable_Colorization(true, COLOR_BLUE)
-	masari.Enable_Colorization(true, COLOR_RED)
-    ZM01_successful = false
+	masari.Enable_Colorization(true, COLOR_BLUE)
+	aliens.Enable_Colorization(true, COLOR_RED)
+    MM01_successful = false
     
 	bool_user_chose_mission = false
 	global_story_dialogue_done=false
@@ -56,7 +56,7 @@ function State_Init(message)
 			GameScoringManager.Set_Game_Script_Data_Table(data_table)
 		end
 		
-		hero = Find_First_Object("Alien_Hero_Orlok")
+		hero = Find_First_Object("Masari_Hero_Charos")
 		hero.Set_Selectable(false)
 		globe = Find_First_Object("Global_Core_Art_Model")
 		old_yaw_transition, old_pitch_transition = Point_Camera_At.Set_Transition_Time(1, 1)
@@ -117,7 +117,7 @@ function Global_Story_Dialogue()
 	Point_Camera_At(Find_First_Object("Region23")) --start
 	Fade_Screen_In(1)
 	
-    local hero = Find_First_Object("Alien_Hero_Orlok")
+    local hero = Find_First_Object("Masari_Hero_Charos")
     local fleet = hero.Get_Parent_Object()
     fleet.Move_Fleet_To_Region(Find_First_Object("Region23"), true) --start
     global_story_dialogue_setup = true
@@ -143,10 +143,10 @@ function State_Start_Defense(message)
 		
 	elseif message == OnUpdate then
 		if bool_user_chose_mission ~= true then
-			UI_Set_Loading_Screen_Faction_ID(PG_FACTION_ALIEN)
-			UI_Set_Loading_Screen_Background("splash_alien.tga")
+			UI_Set_Loading_Screen_Faction_ID(PG_FACTION_MASARI)
+			UI_Set_Loading_Screen_Background("splash_masari.tga")
 			UI_Set_Loading_Screen_Mission_Text("TEXT_WAVE_DEFENSE_LOAD_SCREEN_TEXT")
-			Force_Land_Invasion(Find_First_Object("Region1"), novus, aliens, false) --goto
+			Force_Land_Invasion(Find_First_Object("Region1"), aliens, masari, false) --goto
 		end
 		
 	end
@@ -157,18 +157,18 @@ function On_Land_Invasion()
 
     if CurrentState == "State_Start_Defense" then
         InvasionInfo.OverrideMapName = "./Data/Art/Maps/WaveDefenseM1.ted"
-        InvasionInfo.TacticalScript = "Wave_Defense_Hierarchy"
+        InvasionInfo.TacticalScript = "Wave_Defense_Masari"
         InvasionInfo.UseStrategicPersistence = false
         InvasionInfo.UseStrategicProductionRules = false
-        InvasionInfo.StartingContext = "WaveDefenseH"
+        InvasionInfo.StartingContext = "WaveDefenseM"
         InvasionInfo.NightMission = false
     end
 end
 
-function Hierarchy_Tactical_Mission_Over(victorious)
+function Masari_Tactical_Mission_Over(victorious)
     if CurrentState == "State_Start_Defense" then 
 		if victorious then
-			ZM01_successful = true
+			MM01_successful = true
 			Set_Next_State("State_Campaign_Over")
 		end
     end

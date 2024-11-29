@@ -212,22 +212,22 @@ end
 function State_Init(message)
 	if message == OnEnter then
 		N.Allow_Autonomous_AI_Goal_Activation(false)
-		M.Allow_Autonomous_AI_Goal_Activation(false)		
+		H.Allow_Autonomous_AI_Goal_Activation(false)		
 	
         military.Allow_AI_Unit_Behavior(false)
         N.Allow_AI_Unit_Behavior(false)
-        M.Allow_AI_Unit_Behavior(false)
+        H.Allow_AI_Unit_Behavior(false)
 	
 		Stop_All_Speech()
 		Flush_PIP_Queue()
 		Allow_Speech_Events(true)
 		
 		-- Construction Locks/Unlocks
-		aliens.Lock_Unit_Ability("Alien_Hero_Orlok", "Alien_Orlok_Retreat_From_Tactical_Ability", true,STORY)
-		aliens.Lock_Unit_Ability("Alien_Hero_Nufai", "Alien_Nufai_Retreat_From_Tactical_Ability", true,STORY)
-		aliens.Lock_Unit_Ability("Alien_Hero_Kamal", "Alien_Kamal_Retreat_From_Tactical_Ability", true,STORY)
+		M.Lock_Unit_Ability("Masari_Hero_Charos", "Masari_Charos_Retreat_From_Tactical_Ability", true,STORY)
+		M.Lock_Unit_Ability("Masari_Hero_Alatea", "Masari_Alatea_Retreat_From_Tactical_Ability", true,STORY)
+		M.Lock_Unit_Ability("Masari_Hero_Zessus", "Masari_Zessus_Retreat_From_Tactical_Ability", true,STORY)
 
-        aliens.Give_Money(10000)
+        M.Give_Money(1000)
 		
 		Create_Thread("Thread_Mission_Start")
 
@@ -236,18 +236,12 @@ function State_Init(message)
 end
 
 function Thread_Mission_Start(message) 
-	N.Make_Ally(M)
-	N.Make_Ally(H)
-	M.Make_Ally(N)
-	M.Make_Ally(H)
-	H.Make_Ally(M)
-	H.Make_Ally(M)
 
 	wavesCompleted = 0
 	currentWave = 0
-	startloc = Find_Hint("ALIEN_HIERARCHY_CORE", "start") 
+	startloc = Find_Hint("MASARI_ATLATEA", "start") 
 	Register_Death_Event(startloc, Death_Objective)
-	Add_Objective("The Origin Core must not be destroyed")
+	Add_Objective("Atlatea must not be destroyed")
 
     spawnFrontL = Find_Hint("MARKER_GENERIC_RED", "spawn1")
     spawnBack = Find_Hint("MARKER_GENERIC_RED", "spawn2")
@@ -258,10 +252,10 @@ function Thread_Mission_Start(message)
 
 	spawnLocs = {spawnFront, spawnFrontR, spawnFrontL, spawnBack, spawnBackR, spawnBackL}
 
-	FogOfWar.Reveal(aliens, spawnFront, 600, 600)
-	FogOfWar.Reveal(aliens, spawnBack, 600, 600)
-	FogOfWar.Reveal(aliens, spawnFrontR, 600, 600)
-	FogOfWar.Reveal(aliens, spawnFrontL, 600, 600)
+	FogOfWar.Reveal(M, spawnFront, 600, 600)
+	FogOfWar.Reveal(M, spawnBack, 600, 600)
+	FogOfWar.Reveal(M, spawnFrontR, 600, 600)
+	FogOfWar.Reveal(M, spawnFrontL, 600, 600)
 
 	Point_Camera_At(startloc)
 	Lock_Controls(1)
@@ -316,7 +310,7 @@ function Spawn_Wave(spawns)
 	for l = 1, #spawnGroups do
 		if spawnGroups[l] ~= nil then
 			locIdx = (locIdx + l) % 6 + 1
-			spawnsList[spawnIdx] = SpawnList(spawnGroups[l], spawnLocs[locIdx].Get_Position(), M)
+			spawnsList[spawnIdx] = SpawnList(spawnGroups[l], spawnLocs[locIdx].Get_Position(), H)
 			Hunt(spawnsList[spawnIdx], "AntiDefault", true, false)
 			spawnIdx = spawnIdx + 1
 		end
@@ -370,7 +364,7 @@ function Story_On_Construction_Complete(obj)
 end
 
 function Death_Objective()
-	Create_Thread("Thread_Mission_Failed", "Origin Core was destroyed!")
+	Create_Thread("Thread_Mission_Failed", "Atlatea was destroyed!")
 end
 
 function Thread_Mission_Failed(mission_failed_text)
@@ -395,7 +389,7 @@ function Thread_Mission_Failed(mission_failed_text)
    Fade_Screen_Out(2)
    Sleep(2)
    Lock_Controls(0)
-	Force_Victory(N)
+	Force_Victory(H)
 end
 
 function Thread_Mission_Complete()
@@ -413,7 +407,7 @@ function Thread_Mission_Complete()
    Lock_Controls(1)
    Suspend_AI(1)
    Disable_Automatic_Tactical_Mode_Music()
-   Play_Music("Alien_Win_Tactical_Event")
+   Play_Music("Masari_Win_Tactical_Event")
    Zoom_Camera.Set_Transition_Time(10)
    Zoom_Camera(.3)
    Rotate_Camera_By(180,90)
@@ -425,15 +419,15 @@ function Thread_Mission_Complete()
 	Lock_Controls(0)
 
    Fade_Out_Music()
-	Force_Victory(aliens)
+	Force_Victory(M)
 end
 
 function Force_Victory(player)
    Fade_Out_Music()
-	if player == aliens then
+	if player == M then
 	   
 		-- Inform the campaign script of our victory.
-		global_script.Call_Function("Hierarchy_Tactical_Mission_Over", true) -- true == player wins/false == player loses
+		global_script.Call_Function("Masari_Tactical_Mission_Over", true) -- true == player wins/false == player loses
 		--Quit_Game_Now( winning_player, quit_to_main_menu, destroy_loser_forces, build_temp_command_center, VerticalSliceTriggerVictorySplashFlag)
 		Quit_Game_Now(player, false, true, false)
 	else

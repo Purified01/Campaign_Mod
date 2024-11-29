@@ -31,7 +31,9 @@ function Definitions()
 	-- Variables
 	mission_success = false
 	mission_failure = false
-    
+	wave_timer = 5
+    total_waves = 2
+
 	--this allows a win here to be reported to the strategic level lua script
 	global_script = Get_Game_Mode_Script("Strategic")
 
@@ -48,6 +50,11 @@ function Definitions()
     N_V_F = genUnits({var}, {3})
     M_V_F = genUnits({senty}, {3})
 
+	waves = {
+		{N_V_F, N_V_F},
+		{N_V_F, M_V_F, N_V_F},
+		{N_V_F, N_V_F}
+	}
 end
 
 function TableConcat(t1,t2)
@@ -107,6 +114,7 @@ function Thread_Mission_Start(message)
 	H.Make_Ally(M)
 
 	wavesCompleted = 0
+	currentWave = 0
 	startloc = Find_Hint("ALIEN_HIERARCHY_CORE", "start") 
 
     spawnFrontL = Find_Hint("MARKER_GENERIC_RED", "spawn1")
@@ -138,24 +146,32 @@ function Thread_Mission_Start(message)
 	Lock_Controls(0)
 	End_Cinematic_Camera()
 
-
-    Sleep(3)
-
-    Create_Thread("Spawn_Wave", {N_V_F, N_V_F})
-
-	while (wavesCompleted < 1) do 
-		Sleep(1) 
+	nextText = string.format("Beginning wave: %d", wave_timer)
+	nextWave = Add_Objective(nextText)
+	counter = wave_timer
+	while counter > 0 do
+		Sleep(1)
+		counter = counter - 1
+		waveText = string.format("Beginning wave: %d", counter)
+		Set_Objective_Text(nextWave, waveText)
+	end
+	Objective_Complete(nextWave)
+    
+	while wavesCompleted < total_waves do
+		Create_Thread("Spawn_Wave", waves[currentWave + 1])
+		Sleep(1)
+		while (wavesCompleted < currentWave) do 
+			Sleep(1) 
+		end
 	end
 
-    Create_Thread("Spawn_Wave", {N_V_F, M_V_F, N_V_F})
-
-    Sleep(2)
-
-    -- Create_Thread("Thread_Mission_Complete")
+    Create_Thread("Thread_Mission_Complete")
 end
 
 
 function Spawn_Wave(spawns)
+	currentWave = currentWave + 1
+
 	spawnGroups = {spawns[1], spawns[2], spawns[3], spawns[4], spawns[5], spawns[6]}
 	locIdx = GameRandom(1,6)
 	spawnIdx = 0
@@ -195,6 +211,22 @@ function Spawn_Wave(spawns)
 	
 	Objective_Complete(unitCounter)
 	Objective_Complete(defeatWave)
+
+	if wavesCompleted + 1 < total_waves then
+		nextText = string.format("Next wave: %d", wave_timer)
+		nextWave = Add_Objective(nextText)
+		counter = wave_timer
+		while counter > 0 do
+			Sleep(1)
+			counter = counter - 1
+			waveText = string.format("Next wave: %d", counter)
+			Set_Objective_Text(nextWave, waveText)
+		end
+		Objective_Complete(nextWave)
+	else
+		Sleep(5)
+	end
+
 	wavesCompleted = wavesCompleted + 1
 end
 

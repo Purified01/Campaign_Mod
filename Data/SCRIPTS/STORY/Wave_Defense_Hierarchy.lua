@@ -31,7 +31,7 @@ function Definitions()
 	-- Variables
 	mission_success = false
 	mission_failure = false
-	wave_timer = 60
+	wave_timer = 1 --60
     total_waves = 30
 
 	--this allows a win here to be reported to the strategic level lua script
@@ -183,7 +183,7 @@ function Definitions()
 		{H_V_5, H_A_5, N_V_2, M_V_2, W_H_S},
 		{H_V_3, N_V_4, N_A_3, M_A_4, W_H_W, W_H_W},
 		{H_I_4, M_A_4, M_V_4, W_H_S, W_A_S},
-		{H_V_5, H_I_5, H_A_5, W_S_S, W_A_S_3, W_H_S_2},
+		{H_V_5, H_I_5, H_A_5, W_S_S, W_A_S_3, W_H_S_2}
 	}
 end
 
@@ -276,7 +276,7 @@ function Thread_Mission_Start(message)
 	Lock_Controls(0)
 	End_Cinematic_Camera()
 
-	nextText = string.format("Beginning wave: %d", wave_timer)
+	nextText = string.format("Beginning wave: %d", wave_timer * 3)
 	nextWave = Add_Objective(nextText)
 	counter = wave_timer * 3
 	while counter > 0 do

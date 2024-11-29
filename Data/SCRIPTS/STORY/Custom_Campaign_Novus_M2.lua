@@ -69,6 +69,7 @@ function State_Init(message)
 		novus.Lock_Unit_Ability("Novus_Hero_Vertigo", "Novus_Vertigo_Retreat_From_Tactical_Ability", true, STORY)
 		novus.Lock_Unit_Ability("Novus_Hero_Mech", "Novus_Mech_Retreat_From_Tactical_Ability", true, STORY)
 		novus.Lock_Object_Type(Find_Object_Type("NM04_NOVUS_PORTAL"),true,STORY)
+		novus.Lock_Object_Type(Find_Object_Type("NOVUS_SUPERWEAPON_GRAVITY_BOMB"),true,STORY)
 
 		Stop_All_Speech()
 		Flush_PIP_Queue()
@@ -167,10 +168,10 @@ function Aliens_Attack_Base()
 	Sleep(15)
 	alien_forces = { "ALIEN_GRUNT", "ALIEN_GRUNT", "ALIEN_GRUNT", "ALIEN_GRUNT", "Alien_RECON_TANK", "Alien_RECON_TANK" }
 	alien_forces_attack = SpawnList(alien_forces, walkerspawn.Get_Position(), aliens)
-	walker=Create_Generic_Object(Find_Object_Type("HM06_ORLOK_HABITAT_WALKER"), walkerspawn.Get_Position(), aliens)
+	walker=Create_Generic_Object(Find_Object_Type("MM07_ALIEN_HABITAT_WALKER_LOSTONES"), walkerspawn.Get_Position(), aliens)
 	Hunt(alien_forces_attack, "PrioritiesLikeOneWouldExpectThemToBe", false, false, walkerattack, 350)
 	walker.Move_To(walkerattack)
-	Create_Thread("Thread_Assembly_Walker_Produce",{walker,3})
+	Create_Thread("Thread_Habitat_Walker_Produce",{walker,3})
 
 	local walker_distance = walker.Get_Distance(walkerattack)
 	
@@ -203,9 +204,9 @@ function Aliens_Attack_Base()
 	end
 end
 
-function Thread_Assembly_Walker_Produced_Hunt()
+function Thread_Habitat_Walker_Produced_Hunt()
 	while true do
-		local saucers=Find_All_Objects_Of_Type("ALIEN_FOO_CORE")
+		local saucers=Find_All_Objects_Of_Type("ALIEN_LOST_ONE")
 		for i, unit in pairs(saucers) do
 			Hunt(unit, "PrioritiesLikeOneWouldExpectThemToBe", false, true, unit, 300)
 			--unit.Guard_Target(novusbase7)
@@ -214,9 +215,9 @@ function Thread_Assembly_Walker_Produced_Hunt()
 	end
 end
 
-function Thread_Assembly_Walker_Produce(params)
+function Thread_Habitat_Walker_Produce(params)
 	local walker_obj,number = params[1],params[2]
-	local prod_unit=Find_Object_Type("ALIEN_FOO_CORE")
+	local prod_unit=Find_Object_Type("ALIEN_LOST_ONE")
 	local prod_num=6
 	local built={}
 	local inqueue={}

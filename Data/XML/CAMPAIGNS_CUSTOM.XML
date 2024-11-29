@@ -31,20 +31,13 @@
 		<Locations> Global_Core_Art_Model_Stars </Locations>
 
 		<Trade_Routes> 
-			Region26_Region27, 
-			Region27_Region24, 
-			Region27_Region23, 
-			Region27_Region22, 
-			Region27_Region34, 
-			Region27_Region11, 
-			Region24_Region22, 
-			Region22_Region15, 
-			Region15_Region1, 
-			Region1_Region8, 
-			Region8_Region7, 
-			Region7_Region21, 
-			Region21_Region30, 
-			Region30_Region15
+			Region23_Region1, 
+			Region1_Region3, 
+			Region3_Region4, 
+			Region4_Region15, 
+			Region15_Region16, 
+			Region16_Region17, 
+			Region17_Region18, 
         </Trade_Routes>
 
 		<Starting_Active_Player> Novus </Starting_Active_Player>
@@ -60,13 +53,13 @@
 
 		<Starting_Forces> Novus, Region23, Novus_Hero_Mech</Starting_Forces>
 
-		<Starting_Forces> Alien, Region15, Alien_Hierarchy_Core </Starting_Forces>
 		<Starting_Forces> Alien, Region1, Alien_Hierarchy_Core </Starting_Forces>
-		<Starting_Forces> Alien, Region8, Alien_Hierarchy_Core </Starting_Forces>
-		<Starting_Forces> Alien, Region7, Alien_Hierarchy_Core </Starting_Forces>
-		<Starting_Forces> Alien, Region21, Alien_Hierarchy_Core </Starting_Forces>
-		<Starting_Forces> Alien, Region30, Alien_Hierarchy_Core </Starting_Forces>
-		<Starting_Forces> Alien, Region24, Alien_Hierarchy_Core </Starting_Forces>
+		<Starting_Forces> Alien, Region3, Alien_Hierarchy_Core </Starting_Forces>
+		<Starting_Forces> Alien, Region4, Alien_Hierarchy_Core </Starting_Forces>
+		<Starting_Forces> Alien, Region15, Alien_Hierarchy_Core </Starting_Forces>
+		<Starting_Forces> Alien, Region16, Alien_Hierarchy_Core </Starting_Forces>
+		<Starting_Forces> Alien, Region17, Alien_Hierarchy_Core </Starting_Forces>
+		<Starting_Forces> Alien, Region18, Alien_Hierarchy_Core </Starting_Forces>
 			
    </Campaign>
 
@@ -252,4 +245,131 @@
 
 	</Campaign>
 	
+	<!-- Wave Defense Campaigns -->
+
+	<Campaign Name="Wave_Defense_Campaign_Hierarchy_Strategic">
+
+		<Campaign_Set> Custom_Global_Campaign_Wave_Defense </Campaign_Set>
+		<Script_Name>Wave_Defense_Hierarchy_Strategic</Script_Name>
+
+		<Text_ID> TEXT_CAMPAIGN_WAVE_DEFENSE </Text_ID>
+		<Description_Text> TEXT_CAMPAIGN_WAVE_DEFENSE_DESCRIPTION </Description_Text>
+
+		<Starting_Credits>Novus,10000</Starting_Credits>
+		<Starting_Credits>Alien,10000</Starting_Credits>
+		<Starting_Credits>Military,20000</Starting_Credits>
+		<Starting_Credits>Masari,2000</Starting_Credits>
+
+		<Camera_Shift_X> 0.0 </Camera_Shift_X>
+		<Camera_Shift_Y> 0.0 </Camera_Shift_Y>
+		<Camera_Distance> 500.0  </Camera_Distance>
+
+		<Locations> Global_Core_Art_Model </Locations>
+		<Locations> Global_Core_Art_Model_Stars </Locations>
+
+		<Trade_Routes> 
+			Region23_Region1, 
+			Region1_Region3, 
+        </Trade_Routes>
+
+		<Starting_Active_Player> Alien </Starting_Active_Player>
+		<AI_Player_Control> Novus, DefaultAIPlayer </AI_Player_Control>
+		
+		<Starting_Forces> Alien, Region22, Alien_Theory_Core </Starting_Forces>
+		<Starting_Forces> Alien, Region23, Alien_Theory_Core </Starting_Forces>
+		<Starting_Forces> Alien, Region24, Alien_Theory_Core </Starting_Forces>
+		<Starting_Forces> Alien, Region26, Alien_Theory_Core </Starting_Forces>
+		<Starting_Forces> Alien, Region27, Alien_Theory_Core </Starting_Forces>
+		<Starting_Forces> Alien, Region34, Alien_Theory_Core </Starting_Forces>
+		<Starting_Forces> Alien, Region35, Alien_Theory_Core </Starting_Forces>
+
+		<Starting_Forces> Alien, Region23, Alien_Hero_Orlok</Starting_Forces>
+
+		<Starting_Forces> Novus, Region1, Novus_Central_Processor </Starting_Forces>
+			
+   </Campaign>
+
+	<Campaign Name="Wave_Defense_Campaign_Novus_Strategic">
+
+		<Campaign_Set> Custom_Global_Campaign_Wave_Defense </Campaign_Set>
+		<Script_Name>Wave_Defense_Novus_Strategic</Script_Name>
+
+		<Text_ID> TEXT_CAMPAIGN_WAVE_DEFENSE </Text_ID>
+		<Description_Text> TEXT_CAMPAIGN_WAVE_DEFENSE_DESCRIPTION </Description_Text>
+
+		<Starting_Credits>Novus,10000</Starting_Credits>
+		<Starting_Credits>Alien,10000</Starting_Credits>
+		<Starting_Credits>Military,20000</Starting_Credits>
+		<Starting_Credits>Masari,2000</Starting_Credits>
+
+		<Camera_Shift_X> 0.0 </Camera_Shift_X>
+		<Camera_Shift_Y> 0.0 </Camera_Shift_Y>
+		<Camera_Distance> 500.0  </Camera_Distance>
+
+		<Locations> Global_Core_Art_Model </Locations>
+		<Locations> Global_Core_Art_Model_Stars </Locations>
+
+		<Trade_Routes> 
+			Region23_Region1, 
+			Region1_Region3, 
+        </Trade_Routes>
+
+		<Starting_Active_Player> Novus </Starting_Active_Player>
+		<AI_Player_Control> Alien, DefaultAIPlayer </AI_Player_Control>
+		
+		<Starting_Forces> Novus, Region22, Novus_Research_Center </Starting_Forces>
+		<Starting_Forces> Novus, Region23, Novus_Research_Center </Starting_Forces>
+		<Starting_Forces> Novus, Region24, Novus_Research_Center </Starting_Forces>
+		<Starting_Forces> Novus, Region26, Novus_Research_Center </Starting_Forces>
+		<Starting_Forces> Novus, Region27, Novus_Research_Center </Starting_Forces>
+		<Starting_Forces> Novus, Region34, Novus_Research_Center </Starting_Forces>
+		<Starting_Forces> Novus, Region35, Novus_Research_Center </Starting_Forces>
+
+		<Starting_Forces> Novus, Region23, Novus_Hero_Mech</Starting_Forces>
+
+		<Starting_Forces> Alien, Region1, Alien_Hierarchy_Core </Starting_Forces>
+			
+   </Campaign>
+
+	<Campaign Name="Wave_Defense_Campaign_Masari_Strategic">
+
+		<Campaign_Set> Custom_Global_Campaign_Wave_Defense </Campaign_Set>
+		<Script_Name>Wave_Defense_Masari_Strategic</Script_Name>
+
+		<Text_ID> TEXT_CAMPAIGN_WAVE_DEFENSE </Text_ID>
+		<Description_Text> TEXT_CAMPAIGN_WAVE_DEFENSE_DESCRIPTION </Description_Text>
+
+		<Starting_Credits>Novus,10000</Starting_Credits>
+		<Starting_Credits>Alien,10000</Starting_Credits>
+		<Starting_Credits>Military,20000</Starting_Credits>
+		<Starting_Credits>Masari,2000</Starting_Credits>
+
+		<Camera_Shift_X> 0.0 </Camera_Shift_X>
+		<Camera_Shift_Y> 0.0 </Camera_Shift_Y>
+		<Camera_Distance> 500.0  </Camera_Distance>
+
+		<Locations> Global_Core_Art_Model </Locations>
+		<Locations> Global_Core_Art_Model_Stars </Locations>
+
+		<Trade_Routes> 
+			Region23_Region1, 
+			Region1_Region3, 
+        </Trade_Routes>
+
+		<Starting_Active_Player> Masari </Starting_Active_Player>
+		<AI_Player_Control> Novus, DefaultAIPlayer </AI_Player_Control>
+		
+		<Starting_Forces> Masari, Region22, Masari_Will_Processor </Starting_Forces>
+		<Starting_Forces> Masari, Region23, Masari_Will_Processor </Starting_Forces>
+		<Starting_Forces> Masari, Region24, Masari_Will_Processor </Starting_Forces>
+		<Starting_Forces> Masari, Region26, Masari_Will_Processor </Starting_Forces>
+		<Starting_Forces> Masari, Region27, Masari_Will_Processor </Starting_Forces>
+		<Starting_Forces> Masari, Region34, Masari_Will_Processor </Starting_Forces>
+		<Starting_Forces> Masari, Region35, Masari_Will_Processor </Starting_Forces>
+
+		<Starting_Forces> Masari, Region23, Masari_Hero_Charos</Starting_Forces>
+
+		<Starting_Forces> Novus, Region1, Novus_Central_Processor </Starting_Forces>
+			
+   </Campaign>
 </Campaigns>

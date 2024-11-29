@@ -31,7 +31,7 @@ function Definitions()
 	-- Variables
 	mission_success = false
 	mission_failure = false
-	wave_timer = 60
+	wave_timer = 30
     total_waves = 30
 
 	--this allows a win here to be reported to the strategic level lua script

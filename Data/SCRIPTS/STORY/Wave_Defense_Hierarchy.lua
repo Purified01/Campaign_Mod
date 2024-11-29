@@ -31,29 +31,159 @@ function Definitions()
 	-- Variables
 	mission_success = false
 	mission_failure = false
-	wave_timer = 5
-    total_waves = 2
+	wave_timer = 60
+    total_waves = 30
 
 	--this allows a win here to be reported to the strategic level lua script
 	global_script = Get_Game_Mode_Script("Strategic")
 
+	-- infantry
+	ohm = "NOVUS_ROBOTIC_INFANTRY"
+	blade = "NOVUS_REFLEX_TROOPER"
+	hacker = "NOVUS_HACKER"
+	disc = "MASARI_DISCIPLE"
+	seer = "MASARI_SEER"
     grunt = "ALIEN_GRUNT"
     lost = "ALIEN_LOST_ONE"
+	brute = "ALIEN_BRUTE"
+	-- vehicles
     var = "NOVUS_VARIANT"
     amtank = "NOVUS_ANTIMATTER_TANK"
+	amp = "NOVUS_AMPLIFIER"
+	fi = "NOVUS_FIELD_INVERTER"
+	fig = "MASARI_FIGMENT"
     senty = "MASARI_SENTRY"
-
+	conq = "MASARI_ENFORCER"
+	pb = "MASARI_PEACEBRINGER"
+	tank = "ALIEN_RECON_TANK"
+	def = "ALIEN_DEFILER"
+	-- air
+	corr = "NOVUS_CORRUPTOR"
+	dervish = "NOVUS_DERVISH_JET"
+	inqui = "MASARI_SEEKER"
+	sl = "MASARI_SKYLORD"
+	mono = "ALIEN_CYLINDER"
+	saucer = "ALIEN_FOO_CORE"
+	transport = "ALIEN_AIR_INVASION_TRANSPORT_ORLOK"
+	-- heroes
+	mira = "NOVUS_HERO_MECH"
+	founder = "NOVUS_HERO_FOUNDER"
+	vertigo = "NOVUS_HERO_VERTIGO"
+	orlok = "ALIEN_HERO_ORLOK"
+	kamal = "ALIEN_HERO_KAMAL_REX"
+	nufai = "ALIEN_HERO_NUFAI"
+	charos = "MASARI_HERO_CHAROS"
+	alatea = "MASARI_HERO_ALATEA"
+	zessus = "MASARI_HERO_ZESSUS"
+	-- walkers
+	weak_hab = "MM07_ALIEN_HABITAT_WALKER_LOSTONES"
+	med_hab = "NM07_CUSTOM_HABITAT_WALKER"
+	strong_hab = "HM06_KAMAL_HABITAT_WALKER"
+	weak_asmb = "MM07_ALIEN_ASSEMBLY_WALKER_PHASETANKS"
+	med_asmb = "NM07_CUSTOM_ASSEMBLY_WALKER"
+	strong_asmb = "HM06_KAMAL_ASSEMBLY_WALKER"
+	weak_sci = "MM07_ALIEN_WALKER_SCIENCE_MAGNETEER"
+	med_sci = "MM07_ALIEN_WALKER_SCIENCE_RADIATIONWAKER"
+	strong_sci = "HM06_KAMAL_SCIENCE_WALKER"
+	-- hierarchy infantry platoons
     H_I_1 = genUnits({grunt, lost}, {8, 6})
+    H_I_2 = genUnits({grunt, lost, brute}, {12, 8, 2})
+    H_I_3 = genUnits({grunt, lost, brute, kamal}, {12, 8, 4, 1})
+    H_I_4 = genUnits({grunt, brute, nufai}, {20, 6, 2})
+    H_I_5 = genUnits({grunt, lost, brute, nufai, kamal}, {20, 20, 8, 2, 2})
+	-- hierarchy vehicle platoons
+	H_V_1 = genUnits({def, tank}, {4, 2})
+	H_V_2 = genUnits({def, tank}, {6, 4})
+	H_V_3 = genUnits({def, tank}, {8, 6})
+	H_V_4 = genUnits({def, tank, orlok}, {8, 10, 2})
+	H_V_5 = genUnits({def, tank, orlok}, {10, 14, 4})
+	-- hierarchy air platoons
+	H_A_1 = genUnits({mono, saucer}, {2, 6})
+	H_A_2 = genUnits({saucer, transport}, {10, 2})
+	H_A_3 = genUnits({saucer, transport}, {15, 3})
+	H_A_4 = genUnits({saucer, transport}, {25, 5})
+	H_A_5 = genUnits({saucer, transport}, {30, 10})
+	-- novus infantry platoons
+    N_I_1 = genUnits({ohm}, {12})
+    N_I_2 = genUnits({ohm, blade}, {6, 4})
+    N_I_3 = genUnits({blade, hacker}, {4, 2})
+    N_I_4 = genUnits({blade, hacker, founder}, {6, 6, 2})
+    N_I_5 = genUnits({blade, hacker, mira}, {8, 4, 4})
+	-- novus vehicle platoons
     N_V_1 = genUnits({var}, {8})
     N_V_2 = genUnits({var, amtank}, {6, 4})
-
-    N_V_F = genUnits({var}, {3})
-    M_V_F = genUnits({senty}, {3})
+    N_V_3 = genUnits({var, amtank, fi}, {4, 8, 2})
+    N_V_4 = genUnits({var, amtank, fi, amp}, {19, 8, 4, 2})
+    N_V_5 = genUnits({amtank, fi, amp, mira}, {10, 6, 4, 2})
+	-- novus air platoons
+    N_A_1 = genUnits({corr}, {4})
+    N_A_2 = genUnits({corr, dervish}, {4, 4})
+    N_A_3 = genUnits({corr, dervish}, {6, 8})
+    N_A_4 = genUnits({corr, dervish, vertigo}, {8, 10, 2})
+    N_A_5 = genUnits({corr, dervish, vertigo}, {4, 10, 4})
+	-- masari infantry platoons
+    M_I_1 = genUnits({disc}, {6})
+    M_I_2 = genUnits({disc, seer}, {10, 2})
+    M_I_3 = genUnits({disc, seer, charos}, {14, 2, 1})
+    M_I_4 = genUnits({disc, zessus}, {20, 2})
+    M_I_5 = genUnits({disc, charos, zessus}, {24, 6, 2})
+	-- masari vehicle platoons
+    M_V_1 = genUnits({senty, fig}, {4, 2})
+    M_V_2 = genUnits({senty, fig, conq}, {6, 4, 4})
+    M_V_3 = genUnits({fig, conq, pb}, {6})
+    M_V_4 = genUnits({conq, pb, alatea}, {10, 6, 1})
+    M_V_5 = genUnits({conq, pb, alatea}, {16, 8, 2})
+	-- masari air platoons
+    M_A_1 = genUnits({inqui}, {6})
+    M_A_2 = genUnits({inqui, sl}, {8, 1})
+    M_A_3 = genUnits({inqui, sl}, {12, 2})
+    M_A_4 = genUnits({inqui, sl}, {18, 3})
+    M_A_5 = genUnits({inqui, sl}, {20, 5})
+	-- walker platoons
+	W_H_W = genUnits({weak_hab}, {1})
+	W_H_M = genUnits({med_hab}, {1})
+	W_H_S = genUnits({strong_hab}, {1})
+	W_A_W = genUnits({weak_asmb}, {1})
+	W_A_M = genUnits({med_asmb}, {1})
+	W_A_S = genUnits({strong_asmb}, {1})
+	W_S_W = genUnits({weak_sci}, {1})
+	W_S_M = genUnits({med_sci}, {1})
+	W_S_S = genUnits({strong_sci}, {1})
+	--walker hordes
+	W_A_S_3 = genUnits({strong_asmb}, {3})
+	W_H_S_2 = genUnits({strong_hab}, {2})
 
 	waves = {
-		{N_V_F, N_V_F},
-		{N_V_F, M_V_F, N_V_F},
-		{N_V_F, N_V_F}
+		{N_I_1},
+		{N_I_2, N_V_1},
+		{N_I_2, N_V_1, H_I_1},
+		{N_I_3, N_V_1, H_A_1},
+		{N_I_4, N_V_1, N_A_1, W_H_S},
+		{N_I_4, N_V_3, N_A_2},
+		{N_I_5, N_V_4, N_A_3},
+		{N_V_3, N_V_2, M_A_2},
+		{N_V_3, N_V_2, H_A_2},
+		{N_A_5, N_V_5, W_A_S},
+		{M_I_2, M_V_2},
+		{M_I_3, M_V_2, M_A_2, H_A_2},
+		{M_I_4, M_V_3, M_V_3, M_V_2},
+		{M_I_4, M_V_4, H_I_3},
+		{M_I_5, M_V_3, M_A_4, W_A_S, W_A_S},
+		{M_V_4, M_A_4, H_V_3},
+		{M_V_4, M_A_5, N_A_5},
+		{M_V_5, N_I_5, H_V_3},
+		{M_V_5, N_A_2, M_V_2, M_V_2},
+		{M_V_4, N_A_5, M_I_5, W_S_S, W_S_S},
+		{H_I_2, H_V_2, W_H_W},
+		{H_I_3, H_V_4, W_A_W, W_A_W},
+		{H_I_4, H_V_4, W_A_S, W_H_S, W_S_S},
+		{H_I_3, H_V_3, H_A_4, W_A_M, W_A_M},
+		{H_V_5, W_A_M, W_A_M, W_H_S, W_H_S},
+		{H_V_4, H_A_4, N_V_3, M_I_3, W_S_W, W_S_W},
+		{H_V_5, H_A_5, N_V_2, M_V_2, W_H_S},
+		{H_V_3, N_V_4, N_A_3, M_A_4, W_H_W, W_H_W},
+		{H_I_4, M_A_4, M_V_4, W_H_S, W_A_S},
+		{H_V_5, H_I_5, H_A_5, W_S_S, W_A_S_3, W_H_S_2},
 	}
 end
 
@@ -148,7 +278,7 @@ function Thread_Mission_Start(message)
 
 	nextText = string.format("Beginning wave: %d", wave_timer)
 	nextWave = Add_Objective(nextText)
-	counter = wave_timer
+	counter = wave_timer * 3
 	while counter > 0 do
 		Sleep(1)
 		counter = counter - 1

@@ -31,7 +31,7 @@ function Definitions()
 	-- Variables
 	mission_success = false
 	mission_failure = false
-	wave_timer = 1 --60
+	wave_timer = 60
     total_waves = 30
 
 	--this allows a win here to be reported to the strategic level lua script
@@ -130,7 +130,7 @@ function Definitions()
 	-- masari vehicle platoons
     M_V_1 = genUnits({senty, fig}, {4, 2})
     M_V_2 = genUnits({senty, fig, conq}, {6, 4, 4})
-    M_V_3 = genUnits({fig, conq, pb}, {6})
+    M_V_3 = genUnits({fig, conq, pb}, {4, 6, 2})
     M_V_4 = genUnits({conq, pb, alatea}, {10, 6, 1})
     M_V_5 = genUnits({conq, pb, alatea}, {16, 8, 2})
 	-- masari air platoons

@@ -225,7 +225,7 @@ function State_Init(message)
 		-- Construction Locks/Unlocks
 		aliens.Lock_Unit_Ability("Alien_Hero_Orlok", "Alien_Orlok_Retreat_From_Tactical_Ability", true,STORY)
 		aliens.Lock_Unit_Ability("Alien_Hero_Nufai", "Alien_Nufai_Retreat_From_Tactical_Ability", true,STORY)
-		aliens.Lock_Unit_Ability("Alien_Hero_Kamal", "Alien_Kamal_Retreat_From_Tactical_Ability", true,STORY)
+		aliens.Lock_Unit_Ability("Alien_Hero_Kamal", "Alien_Kamal_Rex_Retreat_From_Tactical_Ability", true,STORY)
 
         aliens.Give_Money(10000)
 		
@@ -322,11 +322,15 @@ function Spawn_Wave(spawns)
 		end
 	end
 
+	huntReset=0
 	invaders_left=1
 	while invaders_left>0 do
 		invaders_left=0
 		for i = 0, #spawnsList do
 			if spawnsList[i] ~= nil then
+				if huntReset > 30 then
+					Hunt(spawnsList[i], "AntiDefault", true, false)
+				end
 				for j, unit in pairs(spawnsList[i]) do
 					if TestValid(unit) then
 						invaders_left=invaders_left+1
@@ -336,7 +340,10 @@ function Spawn_Wave(spawns)
 				end
 			end
 		end
-
+		if huntReset > 30 then
+			huntReset = 0
+		end
+		huntReset = huntReset + 1
 		Sleep(1)
 	end
 	Set_Objective_Text(unitCounter, "Units Left: 0")

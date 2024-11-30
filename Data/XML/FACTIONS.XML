@@ -1,0 +1,1472 @@
+<?xml version="1.0"?>
+<Factions>
+
+	<!-- SUPER IMPORTANT!!!!!  ONLY EVER ADD FACTIONS TO THE END OF THIS FILE!!!! NEVER IN BETWEEN OR AT THE TOP OR STRANGE ERROS WILL OCCUR -->
+
+	<Faction Name="Military">
+
+
+		<!-- MARIA 10.18.2006 
+			 This field is to determine how "tactical money" (raw materials) will be converted into
+			 "strategic money" (credits) once the tactical battle is over -->
+		<Raw_Materials_To_Credits_Conversion_Rate> 0.0 </Raw_Materials_To_Credits_Conversion_Rate>
+		
+		<Is_Debug_Switchable_To> Yes </Is_Debug_Switchable_To>
+		<Text_ID> TEXT_FACTION_MILITARY </Text_ID>
+		<Is_Human_Playable> No </Is_Human_Playable>
+		<Is_AI_Playable> Yes </Is_AI_Playable>
+		<Primary_Enemy />
+		<Is_Neutral> No </Is_Neutral>
+		<Basic_AI>DefaultAIPlayer</Basic_AI>
+		<Radar_Color> 10, 180, 80, 255 </Radar_Color>
+		<No_Colorization_Color> 109, 124, 55, 255 </No_Colorization_Color>
+		<Fleet_Icon_Name>i_button_uea_fleettag.tga</Fleet_Icon_Name>
+		<Create_Player_In_Multiplayer_Games> true </Create_Player_In_Multiplayer_Games>
+		<!-- Military do not feature in global; since, however, it's possible to switch to them by sneaky means, we had better -->
+		<!-- give them some UI.  They can share Novus's for now. -->
+		<Strategic_GUI_Scene_Name> Novus_Global_Command_Bar </Strategic_GUI_Scene_Name>
+		<Tactical_GUI_Scene_Name> MILITARY_Tactical_Command_Bar </Tactical_GUI_Scene_Name>
+		<GUI_Mega_Texture_Name> MT_CommandBar_Military_Megatexture </GUI_Mega_Texture_Name>
+      <AssetBank> BANK_MILITARY </AssetBank>
+
+		<!-- MULTIPLAYER DATA BEGIN	-->
+		<Land_Skirmish_Unit_Cap_By_Player_Count>
+			0,10,
+			1,10,
+			8,5,
+		</Land_Skirmish_Unit_Cap_By_Player_Count>
+		<Pop_Cap_For_Multiplayer_Games> 50 </Pop_Cap_For_Multiplayer_Games>
+		<!-- MULTIPLAYER DATA END	-->
+
+
+
+
+		<!-- Maria 05.01.2006 - Adding new field to support limiting the pop cap of a region based on the owning faction -->
+		<Regional_Pop_Cap> 90 </Regional_Pop_Cap>
+
+
+		<!-- ============================================= -->
+		<!-- MILITARY WIN/LOSE MUSIC EVENTS                -->
+		<!-- ============================================= -->
+
+		<!-- Specific vs. Factions -->
+		<Music_Event_Tactical_Win_Vs_Faction> Alien,  		Military_Win_Tactical_Event </Music_Event_Tactical_Win_Vs_Faction>
+		<Music_Event_Tactical_Win_Vs_Faction> Novus,    	Military_Win_Tactical_Event </Music_Event_Tactical_Win_Vs_Faction>
+		<Music_Event_Tactical_Win_Vs_Faction> Masari, 		Military_Win_Tactical_Event </Music_Event_Tactical_Win_Vs_Faction>
+		<Music_Event_Tactical_Win_Vs_Faction> Military, 	Military_Win_Tactical_Event </Music_Event_Tactical_Win_Vs_Faction>
+
+		<Music_Event_Tactical_Lose_Vs_Faction> Alien,		Lose_To_Alien_Event </Music_Event_Tactical_Lose_Vs_Faction>
+		<Music_Event_Tactical_Lose_Vs_Faction> Novus, 		Lose_To_Novus_Event </Music_Event_Tactical_Lose_Vs_Faction>
+		<Music_Event_Tactical_Lose_Vs_Faction> Masari,		Lose_To_Masari_Event</Music_Event_Tactical_Lose_Vs_Faction>
+		<Music_Event_Tactical_Lose_Vs_Faction> Military,	Lose_To_Military_Event</Music_Event_Tactical_Lose_Vs_Faction>
+
+		<Music_Event_Strategic_Win_Vs_Faction> Alien,     	Military_Win_Strategic_Event </Music_Event_Strategic_Win_Vs_Faction>
+		<Music_Event_Strategic_Win_Vs_Faction> Novus,    	Military_Win_Strategic_Event </Music_Event_Strategic_Win_Vs_Faction>
+		<Music_Event_Strategic_Win_Vs_Faction> Masari, 		Military_Win_Strategic_Event </Music_Event_Strategic_Win_Vs_Faction>
+		<Music_Event_Strategic_Win_Vs_Faction> Military, 	Military_Win_Strategic_Event </Music_Event_Strategic_Win_Vs_Faction>
+
+		<Music_Event_Strategic_Lose_Vs_Faction> Alien,     Lose_To_Alien_Event</Music_Event_Strategic_Lose_Vs_Faction>
+		<Music_Event_Strategic_Lose_Vs_Faction> Novus,    	Lose_To_Novus_Event</Music_Event_Strategic_Lose_Vs_Faction>
+		<Music_Event_Strategic_Lose_Vs_Faction> Masari, 	Lose_To_Masari_Event</Music_Event_Strategic_Lose_Vs_Faction>
+		<Music_Event_Strategic_Lose_Vs_Faction> Military, 	Lose_To_Military_Event</Music_Event_Strategic_Lose_Vs_Faction>
+
+
+		<!-- Generic -->
+		<Music_Event_Tactical_Win> Military_Win_Tactical_Event </Music_Event_Tactical_Win>
+		<Music_Event_Tactical_Lose>  </Music_Event_Tactical_Lose>
+		<Music_Event_Strategic_Win> Military_Win_Strategic_Event </Music_Event_Strategic_Win>
+		<Music_Event_Strategic_Lose>  </Music_Event_Strategic_Lose>
+
+
+
+		<!-- ============================================= -->
+		<!-- MILITARY MUSIC EVENTS                -->
+		<!-- ============================================= -->
+
+		<Strategic_Map_Music_Event> Military_Strategic_Map_Music_Event </Strategic_Map_Music_Event>
+
+		<Music_Event_List_Ambient> Temperate, 	Temperate_Land_Military_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> Arctic, 		Ice_Land_Military_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> Desert, 		Desert_Land_Military_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> Forest, 		Temperate_Land_Military_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> Swamp, 		Swamp_Land_Military_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> Volcanic, 	Volcanic_Land_Military_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> Urban, 		Urban_Land_Military_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> WARZONE_A, 					WARZONE_A_Land_Military_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> WARZONE_B, 					WARZONE_A_Land_Military_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> HIERARCHY_INTERIOR, 		HIERARCHY_INTERIOR_Land_Military_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> MASARI_INTERIOR, 			MASARI_INTERIOR_Land_Military_Ambient_Music_Event </Music_Event_List_Ambient>
+
+
+		<Music_Event_List_Battle> Temperate, 	Temperate_Land_Military_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> Arctic, 		Ice_Land_Military_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> Desert, 		Desert_Land_Military_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> Forest, 		Temperate_Land_Military_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> Swamp, 		Swamp_Land_Military_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> Volcanic, 	Volcanic_Land_Military_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> Urban, 		Urban_Land_Military_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> WARZONE_A, 					WARZONE_A_Land_Military_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> HIERARCHY_INTERIOR, 		HIERARCHY_INTERIOR_Land_Military_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> MASARI_INTERIOR, 			MASARI_INTERIOR_Land_Military_Battle_Music_Event </Music_Event_List_Battle>
+
+		<SFXEvent_Tactical_Object_Building_Started> SFX_Structure_Buildable_Start </SFXEvent_Tactical_Object_Building_Started> <!-- An object is just starting construction in the world -->
+		<SFXEvent_Tactical_Object_Building_Loop> SFX_Structure_Buildable_Loop </SFXEvent_Tactical_Object_Building_Loop> <!-- An object is currently under construction (loop) in the world -->
+		<SFXEvent_Tactical_Object_Building_Complete> SFX_Structure_Buildable_End </SFXEvent_Tactical_Object_Building_Complete> <!-- An object has just completed construction in the world -->
+		<SFXEvent_Tactical_Object_Sold> SFX_Structure_Buildable_Sold </SFXEvent_Tactical_Object_Sold> <!-- An object is sold in the world -->
+
+		<!-- ============================================== -->
+		<!-- SFX OBJECT SPOTTED ANNOUNCEMENTS	                -->
+		<!-- ============================================== -->
+
+		<SFXEvent_Unit_Type_Spotted>ALIEN_WALKER_Habitat, Unit_Afraid_Marine</SFXEvent_Unit_Type_Spotted>
+
+
+		<!-- Military SFXEvents for playing in tactical mode with the Game Controller -->
+		<!-- NOTE: All GUI_Common_Dialog_Button_Press are purely placeholder and need to be properly replaced by Frank! -->
+		<SFXEvent_GC_Tactical_Create_Control_Group> GUI_Create_Control_Group </SFXEvent_GC_Tactical_Create_Control_Group>
+		<SFXEvent_GC_Tactical_Auto_Assign_Control_Groups> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Auto_Assign_Control_Groups>
+		<SFXEvent_GC_Tactical_Switch_To_Next_Control_Group> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Switch_To_Next_Control_Group>
+		<SFXEvent_GC_Tactical_Switch_To_Previous_Control_Group> GUI_Previous_Control_Group </SFXEvent_GC_Tactical_Switch_To_Previous_Control_Group>
+		<SFXEvent_GC_Tactical_Select_All_Units> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Select_All_Units>
+		<SFXEvent_GC_Tactical_Deselect_Units> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Deselect_Units>
+		<SFXEvent_GC_Tactical_Start_Sub_Select_Mode> GUI_Main_Menu_Options_Select </SFXEvent_GC_Tactical_Start_Sub_Select_Mode>
+		<SFXEvent_GC_Tactical_End_Sub_Select_Mode> GUI_Main_Menu_Options_Select </SFXEvent_GC_Tactical_End_Sub_Select_Mode>
+		<SFXEvent_GC_Tactical_Start_Cinematic_Mode> GUI_Main_Menu_Back_Select </SFXEvent_GC_Tactical_Start_Cinematic_Mode>
+		<SFXEvent_GC_Tactical_End_Cinematic_Mode> GUI_Main_Menu_Back_Select </SFXEvent_GC_Tactical_End_Cinematic_Mode>
+		<SFXEvent_GC_Tactical_Start_Building_Placement_Mode> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Start_Building_Placement_Mode>
+		<SFXEvent_GC_Tactical_End_Building_Placement_Mode> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_End_Building_Placement_Mode>
+		<SFXEvent_GC_Tactical_Rotate_Structure> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Rotate_Structure>
+		<SFXEvent_GC_Tactical_Reset_Camera> GUI_Reset_Camera </SFXEvent_GC_Tactical_Reset_Camera>
+		<SFXEvent_GC_Tactical_Jump_Camera_Back_To_Unit> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Jump_Camera_Back_To_Unit>
+		<SFXEvent_GC_Tactical_Switch_To_Next_Game_Event> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Switch_To_Next_Game_Event>
+		<SFXEvent_GC_Tactical_Traverse_GUI_Option> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Traverse_GUI_Option>
+		<SFXEvent_GC_Tactical_Sub_Select_Next_Unit> GUI_Main_Menu_Options_Select </SFXEvent_GC_Tactical_Sub_Select_Next_Unit>
+		<SFXEvent_GC_Tactical_Clear_GUI_Key_Focus> GUI_Main_Menu_Button_Select </SFXEvent_GC_Tactical_Clear_GUI_Key_Focus>
+		<!-- End SFXEvents for playing in tactical mode with the Game Controller -->
+
+
+
+		<Lua_Script>Military_Player</Lua_Script>
+
+		<Allies />
+		<Enemies>Alien, Hostile, Novus, Masari</Enemies>
+
+		<Selection_Blob_Material_Name>Selection_Military_Land</Selection_Blob_Material_Name>
+
+		<Targeting_Range_Material_Name>	Reinforcement_Overlay_Human </Targeting_Range_Material_Name>
+
+		<Reinforcements_Shadow_Blob_Material_Name> Reinforcement_Overlay_Human </Reinforcements_Shadow_Blob_Material_Name>
+
+		<!-- Used by, e.g., dragoons scan ability -->
+		<Land_Area_Effect_Range_Overlay_Material_Name> Military_Land_Ability_Targeting_Range_Overlay </Land_Area_Effect_Range_Overlay_Material_Name>
+		<!-- In ShadowBlobMaterials.xml -->
+		<Land_Area_Effect_Range_Overlay_RGBA> 196, 196, 255, 128 </Land_Area_Effect_Range_Overlay_RGBA>
+		<Land_Area_Effect_Range_Overlay_Scale_Factor> 1.0</Land_Area_Effect_Range_Overlay_Scale_Factor>
+
+		<Radar_Map_Background_Tint>220, 255, 220, 255</Radar_Map_Background_Tint>
+		<Radar_Map_Filter>Military_Radar_Map_Filter</Radar_Map_Filter>
+		<Campaign_Radar_Map_Filter>Military_Radar_Map_Filter</Campaign_Radar_Map_Filter>
+
+		<Disregard_Strategic_Fleet> true </Disregard_Strategic_Fleet>
+		<Strategic_Hero_Pad_Model_Name> region_pad_military.alo </Strategic_Hero_Pad_Model_Name>
+
+		<Tactical_Production_Num_Units_Per_Batch>1</Tactical_Production_Num_Units_Per_Batch>
+		<Tactical_Production_Num_Batches_Per_UI_Slot>1</Tactical_Production_Num_Batches_Per_UI_Slot>
+		<Region_Texture> wt_earth_neutral.tga </Region_Texture>
+		<Region_Texture_Solid> wt_earth_neutral_solid.tga </Region_Texture_Solid>
+      <Structure_Rally_Point_Type> Military_Structure_Rally_Flag </Structure_Rally_Point_Type>
+		<Waypoint_Flag_Model_Name> W_flag_rally_military.alo </Waypoint_Flag_Model_Name>
+		<Loading_Texture_Name> splash_military.dds </Loading_Texture_Name>
+   </Faction>
+
+
+	<Faction Name="Alien">
+
+      <Multiplayer_Beacon_Type> Multiplayer_Beacon </Multiplayer_Beacon_Type>
+      <Structure_Rally_Point_Type> Alien_Structure_Rally_Flag </Structure_Rally_Point_Type>
+      
+		<!-- MARIA 10.18.2006 
+			This field is to determine how "tactical money" (raw materials) will be converted into
+			"strategic money" (credits) once the tactical battle is over -->
+		<Raw_Materials_To_Credits_Conversion_Rate> 0.0 </Raw_Materials_To_Credits_Conversion_Rate>
+
+		<Strategic_Hero_Pad_Model_Name> region_pad_alien.alo </Strategic_Hero_Pad_Model_Name>
+		<Is_Debug_Switchable_To> Yes </Is_Debug_Switchable_To>
+		<Strategic_GUI_Scene_Name> Alien_Global_Command_Bar </Strategic_GUI_Scene_Name>
+		<Tactical_GUI_Scene_Name> ALIEN_Tactical_Command_Bar </Tactical_GUI_Scene_Name>
+		<GUI_Mega_Texture_Name> MT_CommandBar_Alien_Megatexture </GUI_Mega_Texture_Name>
+		
+		<Text_ID> TEXT_FACTION_ALIEN </Text_ID>
+		<Is_Human_Playable> Yes </Is_Human_Playable>
+		<Is_AI_Playable> Yes </Is_AI_Playable>
+		<Primary_Enemy />
+		<Is_Neutral> No </Is_Neutral>
+		<Basic_AI>DefaultAIPlayer</Basic_AI>
+		<Radar_Color> 255, 50, 0, 255 </Radar_Color>
+		<No_Colorization_Color> 156, 43, 17, 255 </No_Colorization_Color>
+		<Fleet_Icon_Name>i_button_alien_fleettag.tga</Fleet_Icon_Name>
+		<Create_Player_In_Multiplayer_Games> false </Create_Player_In_Multiplayer_Games>
+      <AssetBank> BANK_ALIEN </AssetBank>
+
+
+		<!-- MULTIPLAYER DATA BEGIN	-->
+		<Land_Skirmish_Unit_Cap_By_Player_Count>
+			0,10,
+			1,10,
+			8,5,
+		</Land_Skirmish_Unit_Cap_By_Player_Count>
+		<Multiplayer_Starting_Credits> 10000 </Multiplayer_Starting_Credits>
+        <Multiplayer_Starting_Credit_Level_Values> 4000,7000,20000 </Multiplayer_Starting_Credit_Level_Values>
+		<Pop_Cap_For_Multiplayer_Games> 90 </Pop_Cap_For_Multiplayer_Games>
+		<!-- MULTIPLAYER DATA END	-->
+
+
+
+
+		<!-- Maria 05.01.2006 - Adding new field to support limiting the pop cap of a region based on the owning faction -->
+		<Regional_Pop_Cap> 90 </Regional_Pop_Cap>
+
+		<!-- ============================================= -->
+		<!-- ALIEN WIN/LOSE MUSIC EVENTS                -->
+		<!-- ============================================= -->
+
+		<!-- Specific vs. Factions -->
+		<Music_Event_Tactical_Win_Vs_Faction> Alien,  		Alien_Win_Tactical_Event </Music_Event_Tactical_Win_Vs_Faction>
+		<Music_Event_Tactical_Win_Vs_Faction> Novus,    	Alien_Win_Tactical_Event </Music_Event_Tactical_Win_Vs_Faction>
+		<Music_Event_Tactical_Win_Vs_Faction> Masari, 		Alien_Win_Tactical_Event </Music_Event_Tactical_Win_Vs_Faction>
+		<Music_Event_Tactical_Win_Vs_Faction> Military, 	Alien_Win_Tactical_Event </Music_Event_Tactical_Win_Vs_Faction>
+
+		<Music_Event_Tactical_Lose_Vs_Faction> Alien,		Lose_To_Alien_Event </Music_Event_Tactical_Lose_Vs_Faction>
+		<Music_Event_Tactical_Lose_Vs_Faction> Novus, 		Lose_To_Novus_Event </Music_Event_Tactical_Lose_Vs_Faction>
+		<Music_Event_Tactical_Lose_Vs_Faction> Masari,		Lose_To_Masari_Event</Music_Event_Tactical_Lose_Vs_Faction>
+		<Music_Event_Tactical_Lose_Vs_Faction> Military,	Lose_To_Military_Event</Music_Event_Tactical_Lose_Vs_Faction>
+
+		<Music_Event_Strategic_Win_Vs_Faction> Alien,     	Alien_Win_Strategic_Event </Music_Event_Strategic_Win_Vs_Faction>
+		<Music_Event_Strategic_Win_Vs_Faction> Novus,    	Alien_Win_Strategic_Event </Music_Event_Strategic_Win_Vs_Faction>
+		<Music_Event_Strategic_Win_Vs_Faction> Masari, 		Alien_Win_Strategic_Event </Music_Event_Strategic_Win_Vs_Faction>
+		<Music_Event_Strategic_Win_Vs_Faction> Military, 	Alien_Win_Strategic_Event </Music_Event_Strategic_Win_Vs_Faction>
+
+		<Music_Event_Strategic_Lose_Vs_Faction> Alien,     Lose_To_Alien_Event</Music_Event_Strategic_Lose_Vs_Faction>
+		<Music_Event_Strategic_Lose_Vs_Faction> Novus,    	Lose_To_Novus_Event</Music_Event_Strategic_Lose_Vs_Faction>
+		<Music_Event_Strategic_Lose_Vs_Faction> Masari, 	Lose_To_Masari_Event</Music_Event_Strategic_Lose_Vs_Faction>
+		<Music_Event_Strategic_Lose_Vs_Faction> Military, 	Lose_To_Military_Event</Music_Event_Strategic_Lose_Vs_Faction>
+
+
+		<!-- Generic -->
+		<Music_Event_Tactical_Win> Alien_Win_Tactical_Event </Music_Event_Tactical_Win>
+		<Music_Event_Tactical_Lose>  </Music_Event_Tactical_Lose>
+		<Music_Event_Strategic_Win> Alien_Win_Strategic_Event </Music_Event_Strategic_Win>
+		<Music_Event_Strategic_Lose>  </Music_Event_Strategic_Lose>
+
+
+
+		<!-- ============================================= -->
+		<!-- ALIEN MUSIC EVENTS                -->
+		<!-- ============================================= -->
+
+		<Strategic_Map_Music_Event> Alien_Strategic_Map_Music_Event </Strategic_Map_Music_Event>
+
+		<Music_Event_List_Ambient> Temperate, 	Temperate_Land_Alien_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> Arctic, 		Ice_Land_Alien_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> Desert, 		Desert_Land_Alien_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> Forest, 		Temperate_Land_Alien_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> Swamp, 		Swamp_Land_Alien_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> Volcanic, 	Volcanic_Land_Alien_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> Urban, 		Urban_Land_Alien_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> WARZONE_A, 					WARZONE_A_Land_Alien_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> HIERARCHY_INTERIOR, 		HIERARCHY_INTERIOR_Land_Alien_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> MASARI_INTERIOR, 			MASARI_INTERIOR_Land_Alien_Ambient_Music_Event </Music_Event_List_Ambient>
+
+		<Music_Event_List_Battle> Temperate, 	Temperate_Land_Alien_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> Arctic, 		Ice_Land_Alien_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> Desert, 		Desert_Land_Alien_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> Forest, 		Temperate_Land_Alien_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> Swamp, 		Swamp_Land_Alien_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> Volcanic, 	Volcanic_Land_Alien_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> Urban, 		Urban_Land_Alien_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> WARZONE_A, 					WARZONE_A_Land_Alien_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> HIERARCHY_INTERIOR, 		HIERARCHY_INTERIOR_Land_Alien_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> MASARI_INTERIOR, 			MASARI_INTERIOR_Land_Alien_Battle_Music_Event </Music_Event_List_Battle>		
+
+		<SFXEvent_Tactical_Object_Building_Started> SFX_Structure_Buildable_Start </SFXEvent_Tactical_Object_Building_Started>	<!-- An object is just starting construction in the world -->
+  		<SFXEvent_Tactical_Object_Building_Loop> SFX_Structure_Buildable_Loop </SFXEvent_Tactical_Object_Building_Loop>				<!-- An object is currently under construction (loop) in the world -->
+		<SFXEvent_Tactical_Object_Building_Complete> SFX_Structure_Buildable_End </SFXEvent_Tactical_Object_Building_Complete>	<!-- An object has just completed construction in the world -->
+  		<SFXEvent_Tactical_Object_Sold> SFX_Structure_Buildable_Sold </SFXEvent_Tactical_Object_Sold>										<!-- An object is sold in the world -->
+
+		<!-- ============================================== -->
+		<!-- SFX OBJECT SPOTTED ANNOUNCEMENTS	                -->
+		<!-- ============================================== -->
+
+		<SFXEvent_Unit_Type_Spotted> </SFXEvent_Unit_Type_Spotted>
+
+		<!-- ============================================== -->
+		<!-- SFX FACTION TAUNTS (ASSIGNED TO NUMERIC KEYS 1, 2, 3) -->
+		<!-- ============================================== -->
+
+		<SFXEvent_Player_Taunt> Unit_Taunt_Alien_Kamal </SFXEvent_Player_Taunt>
+		<SFXEvent_Player_Taunt> Unit_Taunt_Alien_Orlok   </SFXEvent_Player_Taunt>
+		<SFXEvent_Player_Taunt> Unit_Taunt_Alien_Nufai </SFXEvent_Player_Taunt>
+
+
+		<!-- Alien SFXEvents for playing in tactical mode with the Game Controller -->
+		<!-- NOTE: All GUI_Common_Dialog_Button_Press are purely placeholder and need to be properly replaced by Frank! -->
+		<SFXEvent_GC_Tactical_Create_Control_Group> GUI_Create_Control_Group </SFXEvent_GC_Tactical_Create_Control_Group>
+		<SFXEvent_GC_Tactical_Auto_Assign_Control_Groups> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Auto_Assign_Control_Groups>
+		<SFXEvent_GC_Tactical_Switch_To_Next_Control_Group> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Switch_To_Next_Control_Group>
+		<SFXEvent_GC_Tactical_Switch_To_Previous_Control_Group> GUI_Previous_Control_Group </SFXEvent_GC_Tactical_Switch_To_Previous_Control_Group>
+		<SFXEvent_GC_Tactical_Select_All_Units> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Select_All_Units>
+		<SFXEvent_GC_Tactical_Deselect_Units> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Deselect_Units>
+		<SFXEvent_GC_Tactical_Start_Sub_Select_Mode> GUI_Main_Menu_Options_Select </SFXEvent_GC_Tactical_Start_Sub_Select_Mode>
+		<SFXEvent_GC_Tactical_End_Sub_Select_Mode> GUI_Main_Menu_Options_Select </SFXEvent_GC_Tactical_End_Sub_Select_Mode>
+		<SFXEvent_GC_Tactical_Start_Cinematic_Mode> GUI_Main_Menu_Back_Select </SFXEvent_GC_Tactical_Start_Cinematic_Mode>
+		<SFXEvent_GC_Tactical_End_Cinematic_Mode> GUI_Main_Menu_Back_Select </SFXEvent_GC_Tactical_End_Cinematic_Mode>
+		<SFXEvent_GC_Tactical_Start_Building_Placement_Mode> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Start_Building_Placement_Mode>
+		<SFXEvent_GC_Tactical_End_Building_Placement_Mode> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_End_Building_Placement_Mode>
+		<SFXEvent_GC_Tactical_Rotate_Structure> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Rotate_Structure>
+		<SFXEvent_GC_Tactical_Reset_Camera> GUI_Reset_Camera </SFXEvent_GC_Tactical_Reset_Camera>
+		<SFXEvent_GC_Tactical_Jump_Camera_Back_To_Unit> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Jump_Camera_Back_To_Unit>
+		<SFXEvent_GC_Tactical_Switch_To_Next_Game_Event> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Switch_To_Next_Game_Event>
+		<SFXEvent_GC_Tactical_Traverse_GUI_Option> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Traverse_GUI_Option>
+		<SFXEvent_GC_Tactical_Sub_Select_Next_Unit> GUI_Main_Menu_Options_Select </SFXEvent_GC_Tactical_Sub_Select_Next_Unit>
+		<SFXEvent_GC_Tactical_Clear_GUI_Key_Focus> GUI_Main_Menu_Button_Select </SFXEvent_GC_Tactical_Clear_GUI_Key_Focus>
+		<!-- End SFXEvents for playing in tactical mode with the Game Controller -->
+
+
+
+		<Lua_Script>Alien_Player</Lua_Script>
+		<Allies />
+		<Enemies>Alien_ZM06_KamalRex, Military, Hostile, Novus, Masari, Civilian</Enemies>
+
+		<Selection_Blob_Material_Name>Selection_Alien_Land</Selection_Blob_Material_Name>
+		
+		<Targeting_Range_Material_Name>	Reinforcement_Overlay_Human </Targeting_Range_Material_Name>
+		
+		<Reinforcements_Shadow_Blob_Material_Name> Reinforcement_Overlay_Alien </Reinforcements_Shadow_Blob_Material_Name>
+
+		<Invasion_Transport> ALIEN_Air_Invasion_Transport </Invasion_Transport>
+		
+		<!-- Replace with alien versions -->
+		<Land_Area_Effect_Range_Overlay_Material_Name> Alien_Land_Ability_Targeting_Range_Overlay </Land_Area_Effect_Range_Overlay_Material_Name> <!-- In ShadowBlobMaterials.xml -->
+		<Land_Area_Effect_Range_Overlay_RGBA> 196, 196, 255, 128 </Land_Area_Effect_Range_Overlay_RGBA>
+		<Land_Area_Effect_Range_Overlay_Scale_Factor> 1.0</Land_Area_Effect_Range_Overlay_Scale_Factor>
+
+		<Radar_Map_Background_Tint>255, 220, 220, 255</Radar_Map_Background_Tint>
+		<Radar_Map_Filter>Alien_Radar_Map_Filter</Radar_Map_Filter>
+		<Campaign_Radar_Map_Filter>Alien_Radar_Map_Filter</Campaign_Radar_Map_Filter>
+
+		<Tactical_Production_Num_Units_Per_Batch>3</Tactical_Production_Num_Units_Per_Batch>
+		<Tactical_Production_Num_Batches_Per_UI_Slot>1</Tactical_Production_Num_Batches_Per_UI_Slot>
+
+		<Headquarters_Type> Alien_Hierarchy_Core </Headquarters_Type>
+		<Region_Texture> wt_earth_aliens.tga </Region_Texture>
+		<Region_Texture_Solid> wt_earth_aliens_solid.tga </Region_Texture_Solid>
+
+		<Global_Transport_Blip_Type> Alien_Global_Transport_Blip </Global_Transport_Blip_Type>
+
+		<Waypoint_Flag_Model_Name> W_flag_rally_alien.alo </Waypoint_Flag_Model_Name>
+
+      <!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+      <!--                                 PRODUCTION TOOLTIP CATEGORIES BEGIN                               -->
+      <!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+      <!-- 
+            REMEMBER: THE FIRST ENTRY IS THE ProductionTooltipCategory WHICH IS DEFINED IN ProductionTooltipCategory.xml
+            SHOULD YOU NEED TO ADD A NEW CATEGORY DO NOT FORGET TO ADD IT FIRST TO THE AFOREMENTIONED FILE.
+            IF YOU HAVE ANY QUESTIONS PLEASE CONTACT MARIA.  THANKS =D
+       -->  
+      <Production_Tooltip_Category_Text> Command_Center,             TEXT_ALIEN_PRODUCTION_TOOLTIP_CATEGORY_COMMAND_CENTER </Production_Tooltip_Category_Text>
+
+      <!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+      <!--                                 PRODUCTION TOOLTIP CATEGORIES END                                 -->
+      <!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+     
+      <!-- Maria 07.19.2007
+             These categories are used to create 'pop cap buckets'.  Right now this only works with the Alien Walkers (Assembly, Habitat and Science) and it 
+         won't work with any other unit that has a regular pop cap setting.  If you have any questions please let me know.  Thanks.
+         NOTE: the fields are as follows:
+         <Pop_Cap_Categories_Build_Count_Limits> CATEGORY TYPE, CURR_BUILD_LIMIT, LIFETIME_BUILD_LIMIT </Pop_Cap_Categories_Build_Count_Limits>
+         The category type is defined in PopCapCategoryType.xml.
+      -->
+      
+      <Pop_Cap_Categories_Build_Count_Limits> Walker, 3, -1 </Pop_Cap_Categories_Build_Count_Limits>      
+		<Loading_Texture_Name> splash_alien.dds </Loading_Texture_Name>
+      
+   </Faction>
+
+	<Faction Name="Novus">
+
+      <Multiplayer_Beacon_Type> Multiplayer_Beacon </Multiplayer_Beacon_Type>
+      <Structure_Rally_Point_Type> Novus_Structure_Rally_Flag </Structure_Rally_Point_Type>
+
+      <!-- MARIA 06.02.2007   - DO NOT REMOVE THIS ENTRY!!!!! THIS IS USED BY THE PATCHES SYSTEM FOR NOVUS!!!!! -->
+      <Patch_Queueing_Cooldown_Seconds> 36.0 </Patch_Queueing_Cooldown_Seconds>
+
+      <!-- MARIA 10.18.2006 
+			This field is to determine how "tactical money" (raw materials) will be converted into
+			"strategic money" (credits) once the tactical battle is over -->
+      <Raw_Materials_To_Credits_Conversion_Rate> 0.0 </Raw_Materials_To_Credits_Conversion_Rate>
+
+      <Strategic_GUI_Scene_Name> NOVUS_global_Command_Bar </Strategic_GUI_Scene_Name>
+      <Tactical_GUI_Scene_Name> NOVUS_Tactical_Command_Bar </Tactical_GUI_Scene_Name>
+      <GUI_Mega_Texture_Name> MT_CommandBar_Novus_Megatexture </GUI_Mega_Texture_Name>
+
+      <Is_Debug_Switchable_To> Yes </Is_Debug_Switchable_To>
+      <Text_ID> TEXT_FACTION_NOVUS </Text_ID>
+      <Is_Human_Playable> Yes </Is_Human_Playable>
+      <Is_AI_Playable> Yes </Is_AI_Playable>
+      <Primary_Enemy />
+      <Is_Neutral> No </Is_Neutral>
+      <Basic_AI>DefaultAIPlayer</Basic_AI>
+		<Radar_Color> 0, 120, 255, 255 </Radar_Color>
+		<No_Colorization_Color> 142, 174, 185, 255 </No_Colorization_Color>
+      <Fleet_Icon_Name>i_button_novus_fleettag.tga</Fleet_Icon_Name>
+      <Create_Player_In_Multiplayer_Games> false </Create_Player_In_Multiplayer_Games>
+      <AssetBank> BANK_NOVUS </AssetBank>
+
+      <Strategic_Hero_Pad_Model_Name> region_pad_novus.alo </Strategic_Hero_Pad_Model_Name>
+
+      <!-- MULTIPLAYER DATA BEGIN	-->
+      <Land_Skirmish_Unit_Cap_By_Player_Count>
+         0,10,
+         1,10,
+         8,5,
+      </Land_Skirmish_Unit_Cap_By_Player_Count>
+      <Multiplayer_Starting_Credits> 10000 </Multiplayer_Starting_Credits>
+      <Multiplayer_Starting_Credit_Level_Values> 4000,7000,20000 </Multiplayer_Starting_Credit_Level_Values>
+      <Pop_Cap_For_Multiplayer_Games> 90 </Pop_Cap_For_Multiplayer_Games>
+      <!-- MULTIPLAYER DATA END	-->
+
+
+      <!-- Maria 05.01.2006 - Adding new field to support limiting the pop cap of a region based on the owning faction -->
+      <Regional_Pop_Cap> 90 </Regional_Pop_Cap>
+
+      <!-- ============================================= -->
+      <!-- NOVUS WIN/LOSE MUSIC EVENTS                -->
+      <!-- ============================================= -->
+
+      <!-- Specific vs. Factions -->
+      <Music_Event_Tactical_Win_Vs_Faction> Alien,  		Novus_Win_Tactical_Event </Music_Event_Tactical_Win_Vs_Faction>
+      <Music_Event_Tactical_Win_Vs_Faction> Novus,    	Novus_Win_Tactical_Event </Music_Event_Tactical_Win_Vs_Faction>
+      <Music_Event_Tactical_Win_Vs_Faction> Masari, 		Novus_Win_Tactical_Event </Music_Event_Tactical_Win_Vs_Faction>
+      <Music_Event_Tactical_Win_Vs_Faction> Military, 	Novus_Win_Tactical_Event </Music_Event_Tactical_Win_Vs_Faction>
+
+      <Music_Event_Tactical_Lose_Vs_Faction> Alien,		Lose_To_Alien_Event </Music_Event_Tactical_Lose_Vs_Faction>
+      <Music_Event_Tactical_Lose_Vs_Faction> Novus, 		Lose_To_Novus_Event </Music_Event_Tactical_Lose_Vs_Faction>
+      <Music_Event_Tactical_Lose_Vs_Faction> Masari,		Lose_To_Masari_Event</Music_Event_Tactical_Lose_Vs_Faction>
+      <Music_Event_Tactical_Lose_Vs_Faction> Military,	Lose_To_Military_Event</Music_Event_Tactical_Lose_Vs_Faction>
+
+      <Music_Event_Strategic_Win_Vs_Faction> Alien,     	Novus_Win_Strategic_Event </Music_Event_Strategic_Win_Vs_Faction>
+      <Music_Event_Strategic_Win_Vs_Faction> Novus,    	Novus_Win_Strategic_Event </Music_Event_Strategic_Win_Vs_Faction>
+      <Music_Event_Strategic_Win_Vs_Faction> Masari, 		Novus_Win_Strategic_Event </Music_Event_Strategic_Win_Vs_Faction>
+      <Music_Event_Strategic_Win_Vs_Faction> Military, 	Novus_Win_Strategic_Event </Music_Event_Strategic_Win_Vs_Faction>
+
+      <Music_Event_Strategic_Lose_Vs_Faction> Alien,     Lose_To_Alien_Event</Music_Event_Strategic_Lose_Vs_Faction>
+      <Music_Event_Strategic_Lose_Vs_Faction> Novus,    	Lose_To_Novus_Event</Music_Event_Strategic_Lose_Vs_Faction>
+      <Music_Event_Strategic_Lose_Vs_Faction> Masari, 	Lose_To_Masari_Event</Music_Event_Strategic_Lose_Vs_Faction>
+      <Music_Event_Strategic_Lose_Vs_Faction> Military, 	Lose_To_Military_Event</Music_Event_Strategic_Lose_Vs_Faction>
+
+
+      <!-- Generic -->
+      <Music_Event_Tactical_Win> Novus_Win_Tactical_Event </Music_Event_Tactical_Win>
+      <Music_Event_Tactical_Lose>  </Music_Event_Tactical_Lose>
+      <Music_Event_Strategic_Win> Novus_Win_Strategic_Event </Music_Event_Strategic_Win>
+      <Music_Event_Strategic_Lose>  </Music_Event_Strategic_Lose>
+
+
+
+      <!-- ============================================= -->
+      <!-- NOVUS MUSIC EVENTS                -->
+      <!-- ============================================= -->
+
+      <Strategic_Map_Music_Event> Novus_Strategic_Map_Music_Event </Strategic_Map_Music_Event>
+
+      <Music_Event_List_Ambient> Temperate, 	Temperate_Land_Novus_Ambient_Music_Event </Music_Event_List_Ambient>
+      <Music_Event_List_Ambient> Arctic, 		Ice_Land_Novus_Ambient_Music_Event </Music_Event_List_Ambient>
+      <Music_Event_List_Ambient> Desert, 		Desert_Land_Novus_Ambient_Music_Event </Music_Event_List_Ambient>
+      <Music_Event_List_Ambient> Forest, 		Temperate_Land_Novus_Ambient_Music_Event </Music_Event_List_Ambient>
+      <Music_Event_List_Ambient> Swamp, 		Swamp_Land_Novus_Ambient_Music_Event </Music_Event_List_Ambient>
+      <Music_Event_List_Ambient> Volcanic, 	Volcanic_Land_Novus_Ambient_Music_Event </Music_Event_List_Ambient>
+      <Music_Event_List_Ambient> Urban, 		Urban_Land_Novus_Ambient_Music_Event </Music_Event_List_Ambient>
+      <Music_Event_List_Ambient> WARZONE_A, 					WARZONE_A_Land_Novus_Ambient_Music_Event </Music_Event_List_Ambient>
+      <Music_Event_List_Ambient> HIERARCHY_INTERIOR, 		HIERARCHY_INTERIOR_Land_Novus_Ambient_Music_Event </Music_Event_List_Ambient>
+      <Music_Event_List_Ambient> MASARI_INTERIOR, 			MASARI_INTERIOR_Land_Novus_Ambient_Music_Event </Music_Event_List_Ambient>
+
+      <Music_Event_List_Battle> Temperate, 	Temperate_Land_Novus_Battle_Music_Event </Music_Event_List_Battle>
+      <Music_Event_List_Battle> Arctic, 		Ice_Land_Novus_Battle_Music_Event </Music_Event_List_Battle>
+      <Music_Event_List_Battle> Desert, 		Desert_Land_Novus_Battle_Music_Event </Music_Event_List_Battle>
+      <Music_Event_List_Battle> Forest, 		Temperate_Land_Novus_Battle_Music_Event </Music_Event_List_Battle>
+      <Music_Event_List_Battle> Swamp, 		Swamp_Land_Novus_Battle_Music_Event </Music_Event_List_Battle>
+      <Music_Event_List_Battle> Volcanic, 	Volcanic_Land_Novus_Battle_Music_Event </Music_Event_List_Battle>
+      <Music_Event_List_Battle> Urban, 		Urban_Land_Novus_Battle_Music_Event </Music_Event_List_Battle>
+      <Music_Event_List_Battle> WARZONE_A, 					WARZONE_A_Land_Novus_Battle_Music_Event </Music_Event_List_Battle>
+      <Music_Event_List_Battle> HIERARCHY_INTERIOR, 		HIERARCHY_INTERIOR_Land_Novus_Battle_Music_Event </Music_Event_List_Battle>
+      <Music_Event_List_Battle> MASARI_INTERIOR, 			MASARI_INTERIOR_Land_Novus_Battle_Music_Event </Music_Event_List_Battle>
+
+      <SFXEvent_Tactical_Object_Building_Started> SFX_Structure_Buildable_Start </SFXEvent_Tactical_Object_Building_Started>
+      <!-- An object is just starting construction in the world -->
+      <SFXEvent_Tactical_Object_Building_Loop> SFX_Structure_Buildable_Loop </SFXEvent_Tactical_Object_Building_Loop>
+      <!-- An object is currently under construction (loop) in the world -->
+      <SFXEvent_Tactical_Object_Building_Complete> SFX_Structure_Buildable_End </SFXEvent_Tactical_Object_Building_Complete>
+      <!-- An object has just completed construction in the world -->
+      <SFXEvent_Tactical_Object_Sold> SFX_Structure_Buildable_Sold </SFXEvent_Tactical_Object_Sold>
+      <!-- An object is sold in the world -->
+
+      <!-- ============================================== -->
+      <!-- SFX OBJECT SPOTTED ANNOUNCEMENTS	                -->
+      <!-- ============================================== -->
+
+      <SFXEvent_Unit_Type_Spotted> </SFXEvent_Unit_Type_Spotted>
+
+		<!-- ============================================== -->
+		<!-- SFX FACTION TAUNTS (ASSIGNED TO NUMERIC KEYS 1, 2, 3) -->
+		<!-- ============================================== -->
+
+		<SFXEvent_Player_Taunt> Unit_Taunt_Novus_Mirabel </SFXEvent_Player_Taunt>
+		<SFXEvent_Player_Taunt> Unit_Taunt_Novus_Founder   </SFXEvent_Player_Taunt>
+		<SFXEvent_Player_Taunt> Unit_Taunt_Novus_Vertigo </SFXEvent_Player_Taunt>
+
+
+      <!-- Novus SFXEvents for playing in tactical mode with the Game Controller -->
+      <!-- NOTE: All GUI_Common_Dialog_Button_Press are purely placeholder and need to be properly replaced by Frank! -->
+      <SFXEvent_GC_Tactical_Create_Control_Group> GUI_Create_Control_Group </SFXEvent_GC_Tactical_Create_Control_Group>
+      <SFXEvent_GC_Tactical_Auto_Assign_Control_Groups> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Auto_Assign_Control_Groups>
+      <SFXEvent_GC_Tactical_Switch_To_Next_Control_Group> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Switch_To_Next_Control_Group>
+      <SFXEvent_GC_Tactical_Switch_To_Previous_Control_Group> GUI_Previous_Control_Group </SFXEvent_GC_Tactical_Switch_To_Previous_Control_Group>
+      <SFXEvent_GC_Tactical_Select_All_Units> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Select_All_Units>
+      <SFXEvent_GC_Tactical_Deselect_Units> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Deselect_Units>
+      <SFXEvent_GC_Tactical_Start_Sub_Select_Mode> GUI_Main_Menu_Options_Select </SFXEvent_GC_Tactical_Start_Sub_Select_Mode>
+      <SFXEvent_GC_Tactical_End_Sub_Select_Mode> GUI_Main_Menu_Options_Select </SFXEvent_GC_Tactical_End_Sub_Select_Mode>
+      <SFXEvent_GC_Tactical_Start_Cinematic_Mode> GUI_Main_Menu_Back_Select </SFXEvent_GC_Tactical_Start_Cinematic_Mode>
+      <SFXEvent_GC_Tactical_End_Cinematic_Mode> GUI_Main_Menu_Back_Select </SFXEvent_GC_Tactical_End_Cinematic_Mode>
+      <SFXEvent_GC_Tactical_Start_Building_Placement_Mode> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Start_Building_Placement_Mode>
+      <SFXEvent_GC_Tactical_End_Building_Placement_Mode> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_End_Building_Placement_Mode>
+      <SFXEvent_GC_Tactical_Rotate_Structure> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Rotate_Structure>
+      <SFXEvent_GC_Tactical_Reset_Camera> GUI_Reset_Camera </SFXEvent_GC_Tactical_Reset_Camera>
+      <SFXEvent_GC_Tactical_Jump_Camera_Back_To_Unit> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Jump_Camera_Back_To_Unit>
+      <SFXEvent_GC_Tactical_Switch_To_Next_Game_Event> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Switch_To_Next_Game_Event>
+      <SFXEvent_GC_Tactical_Traverse_GUI_Option> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Traverse_GUI_Option>
+      <SFXEvent_GC_Tactical_Sub_Select_Next_Unit> GUI_Main_Menu_Options_Select </SFXEvent_GC_Tactical_Sub_Select_Next_Unit>
+      <SFXEvent_GC_Tactical_Clear_GUI_Key_Focus> GUI_Main_Menu_Button_Select </SFXEvent_GC_Tactical_Clear_GUI_Key_Focus>
+      <!-- End SFXEvents for playing in tactical mode with the Game Controller -->
+
+
+      <!-- ============================================== -->
+      <!-- SFX Ability button toggle activate / deactivate -->
+      <!-- ============================================== -->
+
+      <!-- EXAMPLE-->
+
+		<SFXEvent_GUI_Toggle_Non_Hero_Ability_On> </SFXEvent_GUI_Toggle_Non_Hero_Ability_On>
+      <SFXEvent_GUI_Toggle_Non_Hero_Ability_Off> </SFXEvent_GUI_Toggle_Non_Hero_Ability_Off>
+
+      <SFXEvent_GUI_Enemy_Toggle_Non_Hero_Ability_On> </SFXEvent_GUI_Enemy_Toggle_Non_Hero_Ability_On>
+      <SFXEvent_GUI_Enemy_Toggle_Non_Hero_Ability_Off> </SFXEvent_GUI_Enemy_Toggle_Non_Hero_Ability_Off>
+
+
+
+
+
+      <Reinforcements_Shadow_Blob_Material_Name> Reinforcement_Overlay_Novus </Reinforcements_Shadow_Blob_Material_Name>
+
+      <Lua_Script>Novus_Player</Lua_Script>
+      <Allies />
+      <Enemies>Hostile, Alien, Military, Masari</Enemies>
+
+      <Selection_Blob_Material_Name>Selection_Novus_Land</Selection_Blob_Material_Name>
+
+      <Targeting_Range_Material_Name>	Reinforcement_Overlay_Human </Targeting_Range_Material_Name>
+
+      <Invasion_Transport> NOVUS_Air_Invasion_Transport </Invasion_Transport>
+
+      <!-- Used by, e.g., dragoons scan ability -->
+      <Land_Area_Effect_Range_Overlay_Material_Name> Novus_Land_Ability_Targeting_Range_Overlay </Land_Area_Effect_Range_Overlay_Material_Name>
+      <!-- In ShadowBlobMaterials.xml -->
+      <Land_Area_Effect_Range_Overlay_RGBA> 196, 196, 255, 128 </Land_Area_Effect_Range_Overlay_RGBA>
+      <Land_Area_Effect_Range_Overlay_Scale_Factor> 1.0</Land_Area_Effect_Range_Overlay_Scale_Factor>
+
+      <Radar_Map_Background_Tint>220, 255, 255, 255</Radar_Map_Background_Tint>
+      <Radar_Map_Filter>Novus_Radar_Map_Filter</Radar_Map_Filter>
+      <Campaign_Radar_Map_Filter>Novus_Radar_Map_Filter</Campaign_Radar_Map_Filter>
+
+      <!-- Now a unified flow speed for all units of this faction, instead of a multiplier on the unit's max speed. -->
+      <Flow_Speed> 10.0 </Flow_Speed>
+
+      <Tactical_Production_Num_Units_Per_Batch>1</Tactical_Production_Num_Units_Per_Batch>
+      <Tactical_Production_Num_Batches_Per_UI_Slot>1</Tactical_Production_Num_Batches_Per_UI_Slot>
+
+      <Headquarters_Type> Novus_Central_Processor </Headquarters_Type>
+      <Region_Texture> wt_earth_novus.tga </Region_Texture>
+      <Region_Texture_Solid> wt_earth_novus_solid.tga </Region_Texture_Solid>
+
+      <Global_Transport_Blip_Type> Novus_Global_Transport_Blip </Global_Transport_Blip_Type>
+
+		<Waypoint_Flag_Model_Name> W_flag_rally_novus.alo </Waypoint_Flag_Model_Name>
+		
+      <!-- ************************************************************************************************* -->
+      <!--                                 PRODUCTION TOOLTIP CATEGORIES BEGIN                               -->
+      <!-- ************************************************************************************************* -->
+      <!-- 
+            REMEMBER: THE FIRST ENTRY IS THE ProductionTooltipCategory WHICH IS DEFINED IN ProductionTooltipCategory.xml
+            SHOULD YOU NEED TO ADD A NEW CATEGORY DO NOT FORGET TO ADD IT FIRST TO THE AFOREMENTIONED FILE.
+            IF YOU HAVE ANY QUESTIONS PLEASE CONTACT MARIA.  THANKS =D
+       -->
+      <Production_Tooltip_Category_Text> Command_Center,             TEXT_NOVUS_PRODUCTION_TOOLTIP_CATEGORY_COMMAND_CENTER </Production_Tooltip_Category_Text>
+
+      <!-- ************************************************************************************************* -->
+      <!--                                 PRODUCTION TOOLTIP CATEGORIES END                                 -->
+      <!-- ************************************************************************************************* -->
+		<Loading_Texture_Name> splash_novus.dds </Loading_Texture_Name>
+
+   </Faction>
+
+   <Faction Name="Neutral">
+
+      <Is_Debug_Switchable_To> No </Is_Debug_Switchable_To>
+      <Text_ID> TEXT_FACTION_NEUTRAL </Text_ID>
+      <Is_Human_Playable> No </Is_Human_Playable>
+      <Is_AI_Playable> No </Is_AI_Playable>
+      <Primary_Enemy> </Primary_Enemy>
+      <Is_Neutral> Yes </Is_Neutral>
+      <Create_Player_In_Multiplayer_Games> true </Create_Player_In_Multiplayer_Games>
+
+
+      <!-- Maria 05.01.2006 - Adding new field to support limiting the pop cap of a region based on the owning faction -->
+      <!-- Maria 11.15.2006 - For the tutorials we may need to trigger a mission on a neutral region so we need to be able
+		     to create a fleet on it, so for now I'm setting this up as a default capacity value for a fleet in such a case -->
+      <Regional_Pop_Cap> 90 </Regional_Pop_Cap>
+      <Region_Texture> wt_earth_neutral.tga </Region_Texture>
+      <Region_Texture_Solid> wt_earth_neutral_solid.tga </Region_Texture_Solid>
+   </Faction>
+
+   <Faction Name="Civilian">
+
+      <Is_Debug_Switchable_To> No </Is_Debug_Switchable_To>
+      <Text_ID> TEXT_FACTION_CIVILIAN </Text_ID>
+      <Is_Human_Playable> No </Is_Human_Playable>
+      <Is_AI_Playable> No </Is_AI_Playable>
+      <Primary_Enemy> Alien </Primary_Enemy>
+      <Is_Neutral> No </Is_Neutral>
+      <Create_Player_In_Multiplayer_Games> true </Create_Player_In_Multiplayer_Games>
+      <Scatters_From_Crushers> true </Scatters_From_Crushers>
+
+   </Faction>
+
+   <Faction Name="Hostile">
+
+      <Is_Debug_Switchable_To> No </Is_Debug_Switchable_To>
+      <Text_ID> TEXT_FACTION_HOSTILE </Text_ID>
+      <Is_Human_Playable> No </Is_Human_Playable>
+      <Is_AI_Playable> No </Is_AI_Playable>
+      <Primary_Enemy> </Primary_Enemy>
+      <Is_Neutral> No </Is_Neutral>
+      <Create_Player_In_Multiplayer_Games> true </Create_Player_In_Multiplayer_Games>
+      <Enable_Unit_Colorization>false</Enable_Unit_Colorization>
+
+      <Allies> Neutral </Allies>
+      <Enemies> Novus, Alien, Military, Civilian, Masari </Enemies>
+
+   </Faction>
+
+   <Faction Name="Masari">
+
+
+      <Multiplayer_Beacon_Type> Multiplayer_Beacon </Multiplayer_Beacon_Type>
+      <Structure_Rally_Point_Type> Masari_Structure_Rally_Flag </Structure_Rally_Point_Type>
+      
+		<!-- MARIA 10.18.2006 
+			This field is to determine how "tactical money" (raw materials) will be converted into
+			"strategic money" (credits) once the tactical battle is over -->
+		<Raw_Materials_To_Credits_Conversion_Rate> 0.0 </Raw_Materials_To_Credits_Conversion_Rate>
+
+		<Strategic_GUI_Scene_Name> Masari_Global_Command_Bar </Strategic_GUI_Scene_Name>
+		<Tactical_GUI_Scene_Name> MASARI_Tactical_Command_Bar </Tactical_GUI_Scene_Name>
+		<GUI_Mega_Texture_Name> MT_CommandBar_Masari_Megatexture </GUI_Mega_Texture_Name>
+
+		<Is_Debug_Switchable_To> Yes </Is_Debug_Switchable_To>
+		<Text_ID> TEXT_FACTION_MASARI </Text_ID>
+		<Is_Human_Playable> Yes </Is_Human_Playable>
+		<Is_AI_Playable> Yes </Is_AI_Playable>
+		<Primary_Enemy />
+		<Is_Neutral> No </Is_Neutral>
+		<Basic_AI>DefaultAIPlayer</Basic_AI>
+		<Radar_Color> 137, 200, 91, 255 </Radar_Color>
+		<No_Colorization_Color> 36, 46, 31, 255 </No_Colorization_Color>
+		<Fleet_Icon_Name>i_button_masari_fleettag.tga</Fleet_Icon_Name>
+		<Create_Player_In_Multiplayer_Games> false </Create_Player_In_Multiplayer_Games>
+		<Is_Elemental_Influenced> true </Is_Elemental_Influenced>
+      <AssetBank> BANK_MASARI </AssetBank>
+
+		<!-- MULTIPLAYER DATA BEGIN	-->
+		<Land_Skirmish_Unit_Cap_By_Player_Count>
+			0,10,
+			1,10,
+			8,5,
+		</Land_Skirmish_Unit_Cap_By_Player_Count>
+		<Multiplayer_Starting_Credits> 1000 </Multiplayer_Starting_Credits>
+        <Multiplayer_Starting_Credit_Level_Values> 400,700,2000 </Multiplayer_Starting_Credit_Level_Values>
+		<Pop_Cap_For_Multiplayer_Games> 90 </Pop_Cap_For_Multiplayer_Games>
+		<!-- MULTIPLAYER DATA END	-->
+
+		<Strategic_Hero_Pad_Model_Name> region_pad_masari.alo </Strategic_Hero_Pad_Model_Name>
+		
+
+
+		<!-- Maria 05.01.2006 - Adding new field to support limiting the pop cap of a region based on the owning faction -->
+		<Regional_Pop_Cap> 90 </Regional_Pop_Cap>
+
+
+		<!-- ============================================= -->
+		<!-- MASARI WIN/LOSE MUSIC EVENTS                -->
+		<!-- ============================================= -->
+
+		<!-- Specific vs. Factions -->
+		<Music_Event_Tactical_Win_Vs_Faction> Alien,  		Masari_Win_Tactical_Event </Music_Event_Tactical_Win_Vs_Faction>
+		<Music_Event_Tactical_Win_Vs_Faction> Novus,    	Masari_Win_Tactical_Event </Music_Event_Tactical_Win_Vs_Faction>
+		<Music_Event_Tactical_Win_Vs_Faction> Masari, 		Masari_Win_Tactical_Event </Music_Event_Tactical_Win_Vs_Faction>
+		<Music_Event_Tactical_Win_Vs_Faction> Military, 	Masari_Win_Tactical_Event </Music_Event_Tactical_Win_Vs_Faction>
+
+		<Music_Event_Tactical_Lose_Vs_Faction> Alien,		Lose_To_Alien_Event </Music_Event_Tactical_Lose_Vs_Faction>
+		<Music_Event_Tactical_Lose_Vs_Faction> Novus, 		Lose_To_Novus_Event </Music_Event_Tactical_Lose_Vs_Faction>
+		<Music_Event_Tactical_Lose_Vs_Faction> Masari,		Lose_To_Masari_Event</Music_Event_Tactical_Lose_Vs_Faction>
+		<Music_Event_Tactical_Lose_Vs_Faction> Military,	Lose_To_Military_Event</Music_Event_Tactical_Lose_Vs_Faction>
+
+		<Music_Event_Strategic_Win_Vs_Faction> Alien,     	Masari_Win_Strategic_Event </Music_Event_Strategic_Win_Vs_Faction>
+		<Music_Event_Strategic_Win_Vs_Faction> Novus,    	Masari_Win_Strategic_Event </Music_Event_Strategic_Win_Vs_Faction>
+		<Music_Event_Strategic_Win_Vs_Faction> Masari, 		Masari_Win_Strategic_Event </Music_Event_Strategic_Win_Vs_Faction>
+		<Music_Event_Strategic_Win_Vs_Faction> Military, 	Masari_Win_Strategic_Event </Music_Event_Strategic_Win_Vs_Faction>
+
+		<Music_Event_Strategic_Lose_Vs_Faction> Alien,     Lose_To_Alien_Event</Music_Event_Strategic_Lose_Vs_Faction>
+		<Music_Event_Strategic_Lose_Vs_Faction> Novus,    	Lose_To_Novus_Event</Music_Event_Strategic_Lose_Vs_Faction>
+		<Music_Event_Strategic_Lose_Vs_Faction> Masari, 	Lose_To_Masari_Event</Music_Event_Strategic_Lose_Vs_Faction>
+		<Music_Event_Strategic_Lose_Vs_Faction> Military, 	Lose_To_Military_Event</Music_Event_Strategic_Lose_Vs_Faction>
+
+
+		<!-- Generic -->
+		<Music_Event_Tactical_Win> Masari_Win_Tactical_Event </Music_Event_Tactical_Win>
+		<Music_Event_Tactical_Lose>  </Music_Event_Tactical_Lose>
+		<Music_Event_Strategic_Win> Masari_Win_Strategic_Event </Music_Event_Strategic_Win>
+		<Music_Event_Strategic_Lose>  </Music_Event_Strategic_Lose>
+
+
+
+		<!-- ============================================= -->
+		<!-- MASARI MUSIC EVENTS                -->
+		<!-- ============================================= -->
+
+		<Strategic_Map_Music_Event> Masari_Strategic_Map_Music_Event </Strategic_Map_Music_Event>
+
+		<Music_Event_List_Ambient> Temperate, 	Temperate_Land_Masari_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> Arctic, 		Ice_Land_Masari_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> Desert, 		Desert_Land_Masari_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> Forest, 		Temperate_Land_Masari_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> Swamp, 		Swamp_Land_Masari_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> Volcanic, 	Volcanic_Land_Masari_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> Urban, 		Urban_Land_Masari_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> WARZONE_A, 					WARZONE_A_Land_Masari_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> HIERARCHY_INTERIOR, 		HIERARCHY_INTERIOR_Land_Masari_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> MASARI_INTERIOR, 			MASARI_INTERIOR_Land_Masari_Ambient_Music_Event </Music_Event_List_Ambient>
+
+		<Music_Event_List_Battle> Temperate, 	Temperate_Land_Masari_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> Arctic, 		Ice_Land_Masari_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> Desert, 		Desert_Land_Masari_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> Forest, 		Temperate_Land_Masari_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> Swamp, 		Swamp_Land_Masari_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> Volcanic, 	Volcanic_Land_Masari_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> Urban, 		Urban_Land_Masari_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> WARZONE_A, 					WARZONE_A_Land_Masari_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> HIERARCHY_INTERIOR, 		HIERARCHY_INTERIOR_Land_Masari_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> MASARI_INTERIOR, 			MASARI_INTERIOR_Land_Masari_Battle_Music_Event </Music_Event_List_Battle>
+
+		<SFXEvent_Tactical_Object_Building_Started> SFX_Structure_Buildable_Start </SFXEvent_Tactical_Object_Building_Started>	<!-- An object is just starting construction in the world -->
+  		<SFXEvent_Tactical_Object_Building_Loop> SFX_Structure_Buildable_Loop </SFXEvent_Tactical_Object_Building_Loop>				<!-- An object is currently under construction (loop) in the world -->
+		<SFXEvent_Tactical_Object_Building_Complete> SFX_Structure_Buildable_End </SFXEvent_Tactical_Object_Building_Complete>	<!-- An object has just completed construction in the world -->
+  		<SFXEvent_Tactical_Object_Sold> SFX_Structure_Buildable_Sold </SFXEvent_Tactical_Object_Sold>										<!-- An object is sold in the world -->
+
+		<SFXEvent_Mode_Switch_Light> SFX_Masari_Switch_Light_Mode </SFXEvent_Mode_Switch_Light>
+		<SFXEvent_Mode_Switch_Dark> SFX_Masari_Switch_Dark_Mode </SFXEvent_Mode_Switch_Dark>
+
+		<!-- ============================================== -->
+		<!-- SFX OBJECT SPOTTED ANNOUNCEMENTS	                -->
+		<!-- ============================================== -->
+
+		<SFXEvent_Unit_Type_Spotted> </SFXEvent_Unit_Type_Spotted>
+
+		<!-- ============================================== -->
+		<!-- SFX FACTION TAUNTS (ASSIGNED TO NUMERIC KEYS 1, 2, 3) -->
+		<!-- ============================================== -->
+
+		<SFXEvent_Player_Taunt> Unit_Taunt_Masari_Altea </SFXEvent_Player_Taunt>
+		<SFXEvent_Player_Taunt> Unit_Taunt_Masari_Charos   </SFXEvent_Player_Taunt>
+		<SFXEvent_Player_Taunt> Unit_Taunt_Masari_Zessus </SFXEvent_Player_Taunt>
+
+		<!-- Masari SFXEvents for playing in tactical mode with the Game Controller -->
+		<!-- NOTE: All GUI_Common_Dialog_Button_Press are purely placeholder and need to be properly replaced by Frank! -->
+		<SFXEvent_GC_Tactical_Create_Control_Group> GUI_Create_Control_Group </SFXEvent_GC_Tactical_Create_Control_Group>
+		<SFXEvent_GC_Tactical_Auto_Assign_Control_Groups> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Auto_Assign_Control_Groups>
+		<SFXEvent_GC_Tactical_Switch_To_Next_Control_Group> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Switch_To_Next_Control_Group>
+		<SFXEvent_GC_Tactical_Switch_To_Previous_Control_Group> GUI_Previous_Control_Group </SFXEvent_GC_Tactical_Switch_To_Previous_Control_Group>
+		<SFXEvent_GC_Tactical_Select_All_Units> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Select_All_Units>
+		<SFXEvent_GC_Tactical_Deselect_Units> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Deselect_Units>
+		<SFXEvent_GC_Tactical_Start_Sub_Select_Mode> GUI_Main_Menu_Options_Select </SFXEvent_GC_Tactical_Start_Sub_Select_Mode>
+		<SFXEvent_GC_Tactical_End_Sub_Select_Mode> GUI_Main_Menu_Options_Select </SFXEvent_GC_Tactical_End_Sub_Select_Mode>
+		<SFXEvent_GC_Tactical_Start_Cinematic_Mode> GUI_Main_Menu_Back_Select </SFXEvent_GC_Tactical_Start_Cinematic_Mode>
+		<SFXEvent_GC_Tactical_End_Cinematic_Mode> GUI_Main_Menu_Back_Select </SFXEvent_GC_Tactical_End_Cinematic_Mode>
+		<SFXEvent_GC_Tactical_Start_Building_Placement_Mode> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Start_Building_Placement_Mode>
+		<SFXEvent_GC_Tactical_End_Building_Placement_Mode> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_End_Building_Placement_Mode>
+		<SFXEvent_GC_Tactical_Rotate_Structure> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Rotate_Structure>
+		<SFXEvent_GC_Tactical_Reset_Camera> GUI_Reset_Camera </SFXEvent_GC_Tactical_Reset_Camera>
+		<SFXEvent_GC_Tactical_Jump_Camera_Back_To_Unit> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Jump_Camera_Back_To_Unit>
+		<SFXEvent_GC_Tactical_Switch_To_Next_Game_Event> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Switch_To_Next_Game_Event>
+		<SFXEvent_GC_Tactical_Traverse_GUI_Option> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Traverse_GUI_Option>
+		<SFXEvent_GC_Tactical_Sub_Select_Next_Unit> GUI_Main_Menu_Options_Select </SFXEvent_GC_Tactical_Sub_Select_Next_Unit>
+		<SFXEvent_GC_Tactical_Clear_GUI_Key_Focus> GUI_Main_Menu_Button_Select </SFXEvent_GC_Tactical_Clear_GUI_Key_Focus>
+		<!-- End SFXEvents for playing in tactical mode with the Game Controller -->
+
+
+		<!-- ============================================== -->
+		<!-- SFX Ability button toggle activate / deactivate -->
+		<!-- ============================================== -->
+
+		<SFXEvent_GUI_Toggle_Non_Hero_Ability_On> </SFXEvent_GUI_Toggle_Non_Hero_Ability_On>
+      <SFXEvent_GUI_Toggle_Non_Hero_Ability_Off> </SFXEvent_GUI_Toggle_Non_Hero_Ability_Off>
+
+      <SFXEvent_GUI_Enemy_Toggle_Non_Hero_Ability_On> </SFXEvent_GUI_Enemy_Toggle_Non_Hero_Ability_On>
+      <SFXEvent_GUI_Enemy_Toggle_Non_Hero_Ability_Off> </SFXEvent_GUI_Enemy_Toggle_Non_Hero_Ability_Off>
+
+
+
+		<Reinforcements_Shadow_Blob_Material_Name> Reinforcement_Overlay_Novus </Reinforcements_Shadow_Blob_Material_Name>
+
+		<Lua_Script>Masari_Player</Lua_Script>
+		<Allies />
+		<Enemies>Hostile, Alien, Military, Novus, Masari2</Enemies>
+
+		<Selection_Blob_Material_Name>Selection_Masari_Land</Selection_Blob_Material_Name>
+
+		<Targeting_Range_Material_Name>	Reinforcement_Overlay_Human </Targeting_Range_Material_Name>
+
+		<Invasion_Transport> MASARI_Air_Invasion_Transport </Invasion_Transport>
+
+		<!-- Used by, e.g., dragoons scan ability -->
+		<Land_Area_Effect_Range_Overlay_Material_Name> Masari_Land_Ability_Targeting_Range_Overlay </Land_Area_Effect_Range_Overlay_Material_Name> <!-- In ShadowBlobMaterials.xml -->
+		<Land_Area_Effect_Range_Overlay_RGBA> 196, 196, 255, 128 </Land_Area_Effect_Range_Overlay_RGBA>
+		<Land_Area_Effect_Range_Overlay_Scale_Factor> 1.0</Land_Area_Effect_Range_Overlay_Scale_Factor>
+
+		<Radar_Map_Background_Tint>220, 255, 220, 255</Radar_Map_Background_Tint>
+		<Radar_Map_Filter>Masari_Radar_Map_Filter</Radar_Map_Filter>
+		<Campaign_Radar_Map_Filter>Masari_Radar_Map_Filter</Campaign_Radar_Map_Filter>
+
+		<Tactical_Production_Num_Units_Per_Batch>1</Tactical_Production_Num_Units_Per_Batch>
+		<Tactical_Production_Num_Batches_Per_UI_Slot>1</Tactical_Production_Num_Batches_Per_UI_Slot>
+
+		<Headquarters_Type> Masari_Atlatea </Headquarters_Type>
+		<Region_Texture> wt_earth_masari.tga </Region_Texture>
+		<Region_Texture_Solid> wt_earth_masari_solid.tga </Region_Texture_Solid>
+
+		<Global_Transport_Blip_Type> Masari_Global_Transport_Blip </Global_Transport_Blip_Type>
+
+		<Waypoint_Flag_Model_Name> W_flag_rally_masari.alo </Waypoint_Flag_Model_Name>
+		
+      <!-- ************************************************************************************************* -->
+      <!--                                 PRODUCTION TOOLTIP CATEGORIES BEGIN                               -->
+      <!-- ************************************************************************************************* -->
+      <!-- 
+            REMEMBER: THE FIRST ENTRY IS THE ProductionTooltipCategory WHICH IS DEFINED IN ProductionTooltipCategory.xml
+            SHOULD YOU NEED TO ADD A NEW CATEGORY DO NOT FORGET TO ADD IT FIRST TO THE AFOREMENTIONED FILE.
+            IF YOU HAVE ANY QUESTIONS PLEASE CONTACT MARIA.  THANKS =D
+            
+            NOTE: for the Masari, the Tooltip category should only be set in the GENERIC TYPE!!!! (ie not in the versions for light and dark modes).
+       -->
+      <Production_Tooltip_Category_Text> Command_Center,             TEXT_MASARI_PRODUCTION_TOOLTIP_CATEGORY_COMMAND_CENTER </Production_Tooltip_Category_Text>
+
+      <!-- ************************************************************************************************* -->
+      <!--                                 PRODUCTION TOOLTIP CATEGORIES END                                 -->
+      <!-- ************************************************************************************************* -->
+
+		<!-- This is the capacity of the Masari bank without any Matter Engines -->
+		<Baseline_Bank_Capacity> 400 </Baseline_Bank_Capacity>
+		<Loading_Texture_Name> splash_masari.dds </Loading_Texture_Name>
+	
+</Faction>
+
+   <Faction Name="Masari2">
+
+
+      <Multiplayer_Beacon_Type> Multiplayer_Beacon </Multiplayer_Beacon_Type>
+      <Structure_Rally_Point_Type> Masari_Structure_Rally_Flag </Structure_Rally_Point_Type>
+      
+		<!-- MARIA 10.18.2006 
+			This field is to determine how "tactical money" (raw materials) will be converted into
+			"strategic money" (credits) once the tactical battle is over -->
+		<Raw_Materials_To_Credits_Conversion_Rate> 0.0 </Raw_Materials_To_Credits_Conversion_Rate>
+
+		<Strategic_GUI_Scene_Name> Masari_Global_Command_Bar </Strategic_GUI_Scene_Name>
+		<Tactical_GUI_Scene_Name> MASARI_Tactical_Command_Bar </Tactical_GUI_Scene_Name>
+		<GUI_Mega_Texture_Name> MT_CommandBar_Masari_Megatexture </GUI_Mega_Texture_Name>
+
+		<Is_Debug_Switchable_To> Yes </Is_Debug_Switchable_To>
+		<Text_ID> TEXT_FACTION_MASARI </Text_ID>
+		<Is_Human_Playable> No </Is_Human_Playable>
+		<Is_AI_Playable> Yes </Is_AI_Playable>
+		<Primary_Enemy />
+		<Is_Neutral> No </Is_Neutral>
+		<Basic_AI>DefaultAIPlayer</Basic_AI>
+		<Radar_Color> 137, 200, 91, 255 </Radar_Color>
+		<No_Colorization_Color> 36, 46, 31, 255 </No_Colorization_Color>
+		<Fleet_Icon_Name>i_button_masari_fleettag.tga</Fleet_Icon_Name>
+		<Create_Player_In_Multiplayer_Games> false </Create_Player_In_Multiplayer_Games>
+		<Is_Elemental_Influenced> true </Is_Elemental_Influenced>
+      <AssetBank> BANK_MASARI </AssetBank>
+
+		<!-- MULTIPLAYER DATA BEGIN	-->
+		<Land_Skirmish_Unit_Cap_By_Player_Count>
+			0,10,
+			1,10,
+			8,5,
+		</Land_Skirmish_Unit_Cap_By_Player_Count>
+		<Multiplayer_Starting_Credits> 1000 </Multiplayer_Starting_Credits>
+        <Multiplayer_Starting_Credit_Level_Values> 400,700,2000 </Multiplayer_Starting_Credit_Level_Values>
+		<Pop_Cap_For_Multiplayer_Games> 90 </Pop_Cap_For_Multiplayer_Games>
+		<!-- MULTIPLAYER DATA END	-->
+
+		<Strategic_Hero_Pad_Model_Name> region_pad_masari.alo </Strategic_Hero_Pad_Model_Name>
+		
+
+
+		<!-- Maria 05.01.2006 - Adding new field to support limiting the pop cap of a region based on the owning faction -->
+		<Regional_Pop_Cap> 90 </Regional_Pop_Cap>
+
+
+		<!-- ============================================= -->
+		<!-- MASARI WIN/LOSE MUSIC EVENTS                -->
+		<!-- ============================================= -->
+
+		<!-- Specific vs. Factions -->
+		<Music_Event_Tactical_Win_Vs_Faction> Alien,  		Masari_Win_Tactical_Event </Music_Event_Tactical_Win_Vs_Faction>
+		<Music_Event_Tactical_Win_Vs_Faction> Novus,    	Masari_Win_Tactical_Event </Music_Event_Tactical_Win_Vs_Faction>
+		<Music_Event_Tactical_Win_Vs_Faction> Masari, 		Masari_Win_Tactical_Event </Music_Event_Tactical_Win_Vs_Faction>
+		<Music_Event_Tactical_Win_Vs_Faction> Military, 	Masari_Win_Tactical_Event </Music_Event_Tactical_Win_Vs_Faction>
+
+		<Music_Event_Tactical_Lose_Vs_Faction> Alien,		Lose_To_Alien_Event </Music_Event_Tactical_Lose_Vs_Faction>
+		<Music_Event_Tactical_Lose_Vs_Faction> Novus, 		Lose_To_Novus_Event </Music_Event_Tactical_Lose_Vs_Faction>
+		<Music_Event_Tactical_Lose_Vs_Faction> Masari,		Lose_To_Masari_Event</Music_Event_Tactical_Lose_Vs_Faction>
+		<Music_Event_Tactical_Lose_Vs_Faction> Military,	Lose_To_Military_Event</Music_Event_Tactical_Lose_Vs_Faction>
+
+		<Music_Event_Strategic_Win_Vs_Faction> Alien,     	Masari_Win_Strategic_Event </Music_Event_Strategic_Win_Vs_Faction>
+		<Music_Event_Strategic_Win_Vs_Faction> Novus,    	Masari_Win_Strategic_Event </Music_Event_Strategic_Win_Vs_Faction>
+		<Music_Event_Strategic_Win_Vs_Faction> Masari, 		Masari_Win_Strategic_Event </Music_Event_Strategic_Win_Vs_Faction>
+		<Music_Event_Strategic_Win_Vs_Faction> Military, 	Masari_Win_Strategic_Event </Music_Event_Strategic_Win_Vs_Faction>
+
+		<Music_Event_Strategic_Lose_Vs_Faction> Alien,     Lose_To_Alien_Event</Music_Event_Strategic_Lose_Vs_Faction>
+		<Music_Event_Strategic_Lose_Vs_Faction> Novus,    	Lose_To_Novus_Event</Music_Event_Strategic_Lose_Vs_Faction>
+		<Music_Event_Strategic_Lose_Vs_Faction> Masari, 	Lose_To_Masari_Event</Music_Event_Strategic_Lose_Vs_Faction>
+		<Music_Event_Strategic_Lose_Vs_Faction> Military, 	Lose_To_Military_Event</Music_Event_Strategic_Lose_Vs_Faction>
+
+
+		<!-- Generic -->
+		<Music_Event_Tactical_Win> Masari_Win_Tactical_Event </Music_Event_Tactical_Win>
+		<Music_Event_Tactical_Lose>  </Music_Event_Tactical_Lose>
+		<Music_Event_Strategic_Win> Masari_Win_Strategic_Event </Music_Event_Strategic_Win>
+		<Music_Event_Strategic_Lose>  </Music_Event_Strategic_Lose>
+
+
+
+		<!-- ============================================= -->
+		<!-- MASARI MUSIC EVENTS                -->
+		<!-- ============================================= -->
+
+		<Strategic_Map_Music_Event> Masari_Strategic_Map_Music_Event </Strategic_Map_Music_Event>
+
+		<Music_Event_List_Ambient> Temperate, 	Temperate_Land_Masari_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> Arctic, 		Ice_Land_Masari_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> Desert, 		Desert_Land_Masari_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> Forest, 		Temperate_Land_Masari_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> Swamp, 		Swamp_Land_Masari_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> Volcanic, 	Volcanic_Land_Masari_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> Urban, 		Urban_Land_Masari_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> WARZONE_A, 					WARZONE_A_Land_Masari_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> HIERARCHY_INTERIOR, 		HIERARCHY_INTERIOR_Land_Masari_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> MASARI_INTERIOR, 			MASARI_INTERIOR_Land_Masari_Ambient_Music_Event </Music_Event_List_Ambient>
+
+		<Music_Event_List_Battle> Temperate, 	Temperate_Land_Masari_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> Arctic, 		Ice_Land_Masari_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> Desert, 		Desert_Land_Masari_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> Forest, 		Temperate_Land_Masari_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> Swamp, 		Swamp_Land_Masari_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> Volcanic, 	Volcanic_Land_Masari_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> Urban, 		Urban_Land_Masari_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> WARZONE_A, 					WARZONE_A_Land_Masari_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> HIERARCHY_INTERIOR, 		HIERARCHY_INTERIOR_Land_Masari_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> MASARI_INTERIOR, 			MASARI_INTERIOR_Land_Masari_Battle_Music_Event </Music_Event_List_Battle>
+
+		<SFXEvent_Tactical_Object_Building_Started> SFX_Structure_Buildable_Start </SFXEvent_Tactical_Object_Building_Started>	<!-- An object is just starting construction in the world -->
+  		<SFXEvent_Tactical_Object_Building_Loop> SFX_Structure_Buildable_Loop </SFXEvent_Tactical_Object_Building_Loop>				<!-- An object is currently under construction (loop) in the world -->
+		<SFXEvent_Tactical_Object_Building_Complete> SFX_Structure_Buildable_End </SFXEvent_Tactical_Object_Building_Complete>	<!-- An object has just completed construction in the world -->
+  		<SFXEvent_Tactical_Object_Sold> SFX_Structure_Buildable_Sold </SFXEvent_Tactical_Object_Sold>										<!-- An object is sold in the world -->
+
+		<SFXEvent_Mode_Switch_Light> SFX_Masari_Switch_Light_Mode </SFXEvent_Mode_Switch_Light>
+		<SFXEvent_Mode_Switch_Dark> SFX_Masari_Switch_Dark_Mode </SFXEvent_Mode_Switch_Dark>
+
+		<!-- ============================================== -->
+		<!-- SFX OBJECT SPOTTED ANNOUNCEMENTS	                -->
+		<!-- ============================================== -->
+
+		<SFXEvent_Unit_Type_Spotted> </SFXEvent_Unit_Type_Spotted>
+
+		<!-- ============================================== -->
+		<!-- SFX FACTION TAUNTS (ASSIGNED TO NUMERIC KEYS 1, 2, 3) -->
+		<!-- ============================================== -->
+
+		<SFXEvent_Player_Taunt> Unit_Taunt_Masari_Altea </SFXEvent_Player_Taunt>
+		<SFXEvent_Player_Taunt> Unit_Taunt_Masari_Charos   </SFXEvent_Player_Taunt>
+		<SFXEvent_Player_Taunt> Unit_Taunt_Masari_Zessus </SFXEvent_Player_Taunt>
+
+		<!-- Masari SFXEvents for playing in tactical mode with the Game Controller -->
+		<!-- NOTE: All GUI_Common_Dialog_Button_Press are purely placeholder and need to be properly replaced by Frank! -->
+		<SFXEvent_GC_Tactical_Create_Control_Group> GUI_Create_Control_Group </SFXEvent_GC_Tactical_Create_Control_Group>
+		<SFXEvent_GC_Tactical_Auto_Assign_Control_Groups> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Auto_Assign_Control_Groups>
+		<SFXEvent_GC_Tactical_Switch_To_Next_Control_Group> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Switch_To_Next_Control_Group>
+		<SFXEvent_GC_Tactical_Switch_To_Previous_Control_Group> GUI_Previous_Control_Group </SFXEvent_GC_Tactical_Switch_To_Previous_Control_Group>
+		<SFXEvent_GC_Tactical_Select_All_Units> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Select_All_Units>
+		<SFXEvent_GC_Tactical_Deselect_Units> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Deselect_Units>
+		<SFXEvent_GC_Tactical_Start_Sub_Select_Mode> GUI_Main_Menu_Options_Select </SFXEvent_GC_Tactical_Start_Sub_Select_Mode>
+		<SFXEvent_GC_Tactical_End_Sub_Select_Mode> GUI_Main_Menu_Options_Select </SFXEvent_GC_Tactical_End_Sub_Select_Mode>
+		<SFXEvent_GC_Tactical_Start_Cinematic_Mode> GUI_Main_Menu_Back_Select </SFXEvent_GC_Tactical_Start_Cinematic_Mode>
+		<SFXEvent_GC_Tactical_End_Cinematic_Mode> GUI_Main_Menu_Back_Select </SFXEvent_GC_Tactical_End_Cinematic_Mode>
+		<SFXEvent_GC_Tactical_Start_Building_Placement_Mode> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Start_Building_Placement_Mode>
+		<SFXEvent_GC_Tactical_End_Building_Placement_Mode> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_End_Building_Placement_Mode>
+		<SFXEvent_GC_Tactical_Rotate_Structure> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Rotate_Structure>
+		<SFXEvent_GC_Tactical_Reset_Camera> GUI_Reset_Camera </SFXEvent_GC_Tactical_Reset_Camera>
+		<SFXEvent_GC_Tactical_Jump_Camera_Back_To_Unit> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Jump_Camera_Back_To_Unit>
+		<SFXEvent_GC_Tactical_Switch_To_Next_Game_Event> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Switch_To_Next_Game_Event>
+		<SFXEvent_GC_Tactical_Traverse_GUI_Option> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Traverse_GUI_Option>
+		<SFXEvent_GC_Tactical_Sub_Select_Next_Unit> GUI_Main_Menu_Options_Select </SFXEvent_GC_Tactical_Sub_Select_Next_Unit>
+		<SFXEvent_GC_Tactical_Clear_GUI_Key_Focus> GUI_Main_Menu_Button_Select </SFXEvent_GC_Tactical_Clear_GUI_Key_Focus>
+		<!-- End SFXEvents for playing in tactical mode with the Game Controller -->
+
+
+		<!-- ============================================== -->
+		<!-- SFX Ability button toggle activate / deactivate -->
+		<!-- ============================================== -->
+
+		<SFXEvent_GUI_Toggle_Non_Hero_Ability_On> </SFXEvent_GUI_Toggle_Non_Hero_Ability_On>
+      <SFXEvent_GUI_Toggle_Non_Hero_Ability_Off> </SFXEvent_GUI_Toggle_Non_Hero_Ability_Off>
+
+      <SFXEvent_GUI_Enemy_Toggle_Non_Hero_Ability_On> </SFXEvent_GUI_Enemy_Toggle_Non_Hero_Ability_On>
+      <SFXEvent_GUI_Enemy_Toggle_Non_Hero_Ability_Off> </SFXEvent_GUI_Enemy_Toggle_Non_Hero_Ability_Off>
+
+
+
+		<Reinforcements_Shadow_Blob_Material_Name> Reinforcement_Overlay_Novus </Reinforcements_Shadow_Blob_Material_Name>
+
+		<Lua_Script>Masari_Player</Lua_Script>
+		<Allies />
+		<Enemies>Hostile, Alien, Military, Novus, Masari</Enemies>
+
+		<Selection_Blob_Material_Name>Selection_Masari_Land</Selection_Blob_Material_Name>
+
+		<Targeting_Range_Material_Name>	Reinforcement_Overlay_Human </Targeting_Range_Material_Name>
+
+		<Invasion_Transport> MASARI_Air_Invasion_Transport </Invasion_Transport>
+
+		<!-- Used by, e.g., dragoons scan ability -->
+		<Land_Area_Effect_Range_Overlay_Material_Name> Masari_Land_Ability_Targeting_Range_Overlay </Land_Area_Effect_Range_Overlay_Material_Name> <!-- In ShadowBlobMaterials.xml -->
+		<Land_Area_Effect_Range_Overlay_RGBA> 196, 196, 255, 128 </Land_Area_Effect_Range_Overlay_RGBA>
+		<Land_Area_Effect_Range_Overlay_Scale_Factor> 1.0</Land_Area_Effect_Range_Overlay_Scale_Factor>
+
+		<Radar_Map_Background_Tint>220, 255, 220, 255</Radar_Map_Background_Tint>
+		<Radar_Map_Filter>Masari_Radar_Map_Filter</Radar_Map_Filter>
+		<Campaign_Radar_Map_Filter>Masari_Radar_Map_Filter</Campaign_Radar_Map_Filter>
+
+		<Tactical_Production_Num_Units_Per_Batch>1</Tactical_Production_Num_Units_Per_Batch>
+		<Tactical_Production_Num_Batches_Per_UI_Slot>1</Tactical_Production_Num_Batches_Per_UI_Slot>
+
+		<Headquarters_Type> Masari_Atlatea </Headquarters_Type>
+		<Region_Texture> wt_earth_masari.tga </Region_Texture>
+		<Region_Texture_Solid> wt_earth_masari_solid.tga </Region_Texture_Solid>
+
+		<Global_Transport_Blip_Type> Masari_Global_Transport_Blip </Global_Transport_Blip_Type>
+
+		<Waypoint_Flag_Model_Name> W_flag_rally_masari.alo </Waypoint_Flag_Model_Name>
+		
+      <!-- ************************************************************************************************* -->
+      <!--                                 PRODUCTION TOOLTIP CATEGORIES BEGIN                               -->
+      <!-- ************************************************************************************************* -->
+      <!-- 
+            REMEMBER: THE FIRST ENTRY IS THE ProductionTooltipCategory WHICH IS DEFINED IN ProductionTooltipCategory.xml
+            SHOULD YOU NEED TO ADD A NEW CATEGORY DO NOT FORGET TO ADD IT FIRST TO THE AFOREMENTIONED FILE.
+            IF YOU HAVE ANY QUESTIONS PLEASE CONTACT MARIA.  THANKS =D
+            
+            NOTE: for the Masari, the Tooltip category should only be set in the GENERIC TYPE!!!! (ie not in the versions for light and dark modes).
+       -->
+      <Production_Tooltip_Category_Text> Command_Center,             TEXT_MASARI_PRODUCTION_TOOLTIP_CATEGORY_COMMAND_CENTER </Production_Tooltip_Category_Text>
+
+      <!-- ************************************************************************************************* -->
+      <!--                                 PRODUCTION TOOLTIP CATEGORIES END                                 -->
+      <!-- ************************************************************************************************* -->
+
+		<!-- This is the capacity of the Masari bank without any Matter Engines -->
+		<Baseline_Bank_Capacity> 400 </Baseline_Bank_Capacity>
+		<Loading_Texture_Name> splash_masari.dds </Loading_Texture_Name>
+	
+</Faction>
+
+	<Faction Name="MilitaryTwo">
+
+
+		<!-- MARIA 10.18.2006 
+			 This field is to determine how "tactical money" (raw materials) will be converted into
+			 "strategic money" (credits) once the tactical battle is over -->
+		<Raw_Materials_To_Credits_Conversion_Rate> 0.0 </Raw_Materials_To_Credits_Conversion_Rate>
+
+		<Is_Debug_Switchable_To> No </Is_Debug_Switchable_To>
+		<Text_ID> TEXT_FACTION_MILITARYTWO </Text_ID>
+		<Is_Human_Playable> No </Is_Human_Playable>
+		<Is_AI_Playable> Yes </Is_AI_Playable>
+		<Primary_Enemy />
+		<Is_Neutral> No </Is_Neutral>
+		<Basic_AI>DefaultAIPlayer</Basic_AI>
+		<Radar_Color> 109, 124, 55, 255 </Radar_Color>
+		<No_Colorization_Color> 109, 124, 55, 255 </No_Colorization_Color>
+		<Fleet_Icon_Name>i_button_uea_fleettag.tga</Fleet_Icon_Name>
+		<Create_Player_In_Multiplayer_Games> true </Create_Player_In_Multiplayer_Games>
+		<Tactical_GUI_Scene_Name> MILITARY_Tactical_Command_Bar </Tactical_GUI_Scene_Name>
+		<GUI_Mega_Texture_Name> MT_CommandBar_Military_Megatexture </GUI_Mega_Texture_Name>
+
+		<!-- MULTIPLAYER DATA BEGIN	-->
+		<Land_Skirmish_Unit_Cap_By_Player_Count>
+			0,10,
+			1,10,
+			8,5,
+		</Land_Skirmish_Unit_Cap_By_Player_Count>
+		<Pop_Cap_For_Multiplayer_Games> 50 </Pop_Cap_For_Multiplayer_Games>
+		<!-- MULTIPLAYER DATA END	-->
+
+		<Strategic_Map_Music_Event> Military_Strategic_Map_Music_Event </Strategic_Map_Music_Event>
+
+
+		<!-- Maria 05.01.2006 - Adding new field to support limiting the pop cap of a region based on the owning faction -->
+		<Regional_Pop_Cap> 90 </Regional_Pop_Cap>
+
+
+
+
+		<!-- Specific vs. Factions -->
+		<Music_Event_Tactical_Win_Vs_Faction> Alien, Military_Strategic_Map_Music_Event </Music_Event_Tactical_Win_Vs_Faction>
+		<Music_Event_Tactical_Lose_Vs_Faction> Alien, Military_Strategic_Map_Music_Event </Music_Event_Tactical_Lose_Vs_Faction>
+		<Music_Event_Strategic_Win_Vs_Faction>  Alien, Military_Strategic_Map_Music_Event </Music_Event_Strategic_Win_Vs_Faction>
+		<Music_Event_Strategic_Lose_Vs_Faction> Alien, Military_Strategic_Map_Music_Event </Music_Event_Strategic_Lose_Vs_Faction>
+
+		<!-- Generic -->
+		<Music_Event_Tactical_Win> Military_Strategic_Map_Music_Event </Music_Event_Tactical_Win>
+		<!-- STUB -->
+		<Music_Event_Tactical_Lose> Military_Strategic_Map_Music_Event </Music_Event_Tactical_Lose>
+		<!-- STUB -->
+		<Music_Event_Strategic_Win> Military_Strategic_Map_Music_Event </Music_Event_Strategic_Win>
+		<!-- STUB -->
+		<Music_Event_Strategic_Lose> Military_Strategic_Map_Music_Event </Music_Event_Strategic_Lose>
+		<!-- STUB -->
+
+		<Music_Event_List_Ambient> Temperate, Temperate_Land_Military_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> Arctic, Ice_Land_Military_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> Desert, Desert_Land_Military_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> Forest, Temperate_Land_Military_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> Swamp, Swamp_Land_Military_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> Volcanic, Volcanic_Land_Military_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> Urban, Urban_Land_Military_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> WARZONE_A, 					WARZONE_A_Land_Military_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> HIERARCHY_INTERIOR, 		HIERARCHY_INTERIOR_Land_Military_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> MASARI_INTERIOR, 			MASARI_INTERIOR_Land_Military_Ambient_Music_Event </Music_Event_List_Ambient>
+
+		<Music_Event_List_Battle> Temperate, Temperate_Land_Military_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> Arctic, Ice_Land_Military_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> Desert, Desert_Land_Military_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> Forest, Temperate_Land_Military_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> Swamp, Swamp_Land_Military_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> Volcanic, Volcanic_Land_Military_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> Urban, Urban_Land_Military_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> WARZONE_A, 					WARZONE_A_Land_Military_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> HIERARCHY_INTERIOR, 		HIERARCHY_INTERIOR_Land_Military_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> MASARI_INTERIOR, 			MASARI_INTERIOR_Land_Military_Battle_Music_Event </Music_Event_List_Battle>
+
+		<SFXEvent_Tactical_Object_Building_Started> SFX_Structure_Buildable_Start </SFXEvent_Tactical_Object_Building_Started>
+		<!-- An object is just starting construction in the world -->
+		<SFXEvent_Tactical_Object_Building_Loop> SFX_Structure_Buildable_Loop </SFXEvent_Tactical_Object_Building_Loop>
+		<!-- An object is currently under construction (loop) in the world -->
+		<SFXEvent_Tactical_Object_Building_Complete> SFX_Structure_Buildable_End </SFXEvent_Tactical_Object_Building_Complete>
+		<!-- An object has just completed construction in the world -->
+		<SFXEvent_Tactical_Object_Sold> SFX_Structure_Buildable_Sold </SFXEvent_Tactical_Object_Sold>
+		<!-- An object is sold in the world -->
+
+		<!-- ============================================== -->
+		<!-- OBJECT SPOTTED ANNOUNCEMENTS	                -->
+		<!-- ============================================== -->
+
+		<SFXEvent_Unit_Type_Spotted>ALIEN_WALKER_Habitat, Unit_Afraid_Marine</SFXEvent_Unit_Type_Spotted>
+
+
+		<!-- Military 2 SFXEvents for playing in tactical mode with the Game Controller -->
+		<!-- NOTE: All GUI_Common_Dialog_Button_Press are purely placeholder and need to be properly replaced by Frank! -->
+		<SFXEvent_GC_Tactical_Create_Control_Group> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Create_Control_Group>
+		<SFXEvent_GC_Tactical_Auto_Assign_Control_Groups> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Auto_Assign_Control_Groups>
+		<SFXEvent_GC_Tactical_Switch_To_Next_Control_Group> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Switch_To_Next_Control_Group>
+		<SFXEvent_GC_Tactical_Switch_To_Previous_Control_Group> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Switch_To_Previous_Control_Group>
+		<SFXEvent_GC_Tactical_Select_All_Units> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Select_All_Units>
+		<SFXEvent_GC_Tactical_Deselect_Units> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Deselect_Units>
+		<SFXEvent_GC_Tactical_Start_Sub_Select_Mode> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Start_Sub_Select_Mode>
+		<SFXEvent_GC_Tactical_End_Sub_Select_Mode> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_End_Sub_Select_Mode>
+		<SFXEvent_GC_Tactical_Start_Cinematic_Mode> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Start_Cinematic_Mode>
+		<SFXEvent_GC_Tactical_End_Cinematic_Mode> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_End_Cinematic_Mode>
+		<SFXEvent_GC_Tactical_Start_Building_Placement_Mode> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Start_Building_Placement_Mode>
+		<SFXEvent_GC_Tactical_End_Building_Placement_Mode> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_End_Building_Placement_Mode>
+		<SFXEvent_GC_Tactical_Rotate_Structure> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Rotate_Structure>
+		<SFXEvent_GC_Tactical_Reset_Camera> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Reset_Camera>
+		<SFXEvent_GC_Tactical_Jump_Camera_Back_To_Unit> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Jump_Camera_Back_To_Unit>
+		<SFXEvent_GC_Tactical_Switch_To_Next_Game_Event> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Switch_To_Next_Game_Event>
+		<SFXEvent_GC_Tactical_Traverse_GUI_Option> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Traverse_GUI_Option>
+		<SFXEvent_GC_Tactical_Sub_Select_Next_Unit> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Sub_Select_Next_Unit>
+		<SFXEvent_GC_Tactical_Clear_GUI_Key_Focus> GUI_Common_Dialog_Button_Press </SFXEvent_GC_Tactical_Clear_GUI_Key_Focus>
+		<!-- End SFXEvents for playing in tactical mode with the Game Controller -->
+
+
+
+		<Lua_Script>Military_Player</Lua_Script>
+
+		<Allies />
+		<Enemies>Alien, Hostile, Novus, Masari</Enemies>
+
+		<Selection_Blob_Material_Name>Selection_Military_Land</Selection_Blob_Material_Name>
+
+		<Targeting_Range_Material_Name>	Reinforcement_Overlay_Human </Targeting_Range_Material_Name>
+
+		<Reinforcements_Shadow_Blob_Material_Name> Reinforcement_Overlay_Human </Reinforcements_Shadow_Blob_Material_Name>
+
+		<!-- Used by, e.g., dragoons scan ability -->
+		<Land_Area_Effect_Range_Overlay_Material_Name> Military_Land_Ability_Targeting_Range_Overlay </Land_Area_Effect_Range_Overlay_Material_Name>
+		<!-- In ShadowBlobMaterials.xml -->
+		<Land_Area_Effect_Range_Overlay_RGBA> 196, 196, 255, 128 </Land_Area_Effect_Range_Overlay_RGBA>
+		<Land_Area_Effect_Range_Overlay_Scale_Factor> 1.0</Land_Area_Effect_Range_Overlay_Scale_Factor>
+
+		<Radar_Map_Background_Tint>255, 255, 255, 255</Radar_Map_Background_Tint>
+		<Radar_Map_Filter>Military_Radar_Map_Filter</Radar_Map_Filter>
+		<Campaign_Radar_Map_Filter>Military_Radar_Map_Filter</Campaign_Radar_Map_Filter>
+
+		<Disregard_Strategic_Fleet> true </Disregard_Strategic_Fleet>
+
+		<Tactical_Production_Num_Units_Per_Batch>1</Tactical_Production_Num_Units_Per_Batch>
+		<Tactical_Production_Num_Batches_Per_UI_Slot>1</Tactical_Production_Num_Batches_Per_UI_Slot>
+
+		<Loading_Texture_Name> splash_military.dds </Loading_Texture_Name>
+	</Faction>
+	
+	<Faction Name="Alien_ZM06_KamalRex">
+
+		<!-- MARIA 10.18.2006 
+			This field is to determine how "tactical money" (raw materials) will be converted into
+			"strategic money" (credits) once the tactical battle is over -->
+		<Raw_Materials_To_Credits_Conversion_Rate> 0.0 </Raw_Materials_To_Credits_Conversion_Rate>
+
+		<Strategic_Hero_Pad_Model_Name> region_pad_alien.alo </Strategic_Hero_Pad_Model_Name>
+		<Is_Debug_Switchable_To> No </Is_Debug_Switchable_To>
+		<Tactical_GUI_Scene_Name> ALIEN_Tactical_Command_Bar </Tactical_GUI_Scene_Name>
+		<GUI_Mega_Texture_Name> MT_CommandBar_Alien_Megatexture </GUI_Mega_Texture_Name>
+		
+		<Text_ID> TEXT_FACTION_ALIEN_KAMAL_REX </Text_ID>
+		<Is_Human_Playable> No </Is_Human_Playable>
+		<Is_AI_Playable> Yes </Is_AI_Playable>
+		<Primary_Enemy>Alien</Primary_Enemy>
+		<Is_Neutral> No </Is_Neutral>
+		<Basic_AI>DefaultAIPlayer</Basic_AI>
+		<Radar_Color> 156, 43, 17, 255 </Radar_Color>
+		<No_Colorization_Color> 156, 43, 17, 255 </No_Colorization_Color>
+		<Fleet_Icon_Name>i_button_alien_fleettag.tga</Fleet_Icon_Name>
+		<Create_Player_In_Multiplayer_Games> false </Create_Player_In_Multiplayer_Games>
+
+		<!-- MULTIPLAYER DATA BEGIN	-->
+		<Land_Skirmish_Unit_Cap_By_Player_Count>
+			0,10,
+			1,10,
+			8,5,
+		</Land_Skirmish_Unit_Cap_By_Player_Count>
+		<Multiplayer_Starting_Credits> 10000 </Multiplayer_Starting_Credits>
+        <Multiplayer_Starting_Credit_Level_Values> 5000,10000,15000 </Multiplayer_Starting_Credit_Level_Values>
+		<Pop_Cap_For_Multiplayer_Games> 90 </Pop_Cap_For_Multiplayer_Games>
+		<!-- MULTIPLAYER DATA END	-->
+
+		<Strategic_Map_Music_Event> Alien_Strategic_Map_Music_Event </Strategic_Map_Music_Event>
+
+		<!-- Maria 05.01.2006 - Adding new field to support limiting the pop cap of a region based on the owning faction -->
+		<Regional_Pop_Cap> 90 </Regional_Pop_Cap>
+
+		<Music_Event_List_Ambient> Temperate, Temperate_Land_Alien_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> Arctic, Ice_Land_Alien_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> Desert, Desert_Land_Alien_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> Forest, Temperate_Land_Alien_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> Swamp, Swamp_Land_Alien_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> Volcanic, Volcanic_Land_Alien_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> Urban, Urban_Land_Alien_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> WARZONE_A, 					WARZONE_A_Land_Alien_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> HIERARCHY_INTERIOR, 		HIERARCHY_INTERIOR_Land_Alien_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> MASARI_INTERIOR, 			MASARI_INTERIOR_Land_Alien_Ambient_Music_Event </Music_Event_List_Ambient>
+
+
+		<Music_Event_List_Battle> Temperate, Temperate_Land_Alien_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> Arctic, Ice_Land_Alien_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> Desert, Desert_Land_Alien_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> Forest, Temperate_Land_Alien_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> Swamp, Swamp_Land_Alien_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> Volcanic, Volcanic_Land_Alien_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> Urban, Urban_Land_Alien_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> WARZONE_A, 					WARZONE_A_Land_Alien_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> HIERARCHY_INTERIOR, 		HIERARCHY_INTERIOR_Land_Alien_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> MASARI_INTERIOR, 			MASARI_INTERIOR_Land_Alien_Battle_Music_Event </Music_Event_List_Battle>
+
+		<SFXEvent_Tactical_Object_Building_Started> SFX_Structure_Buildable_Start </SFXEvent_Tactical_Object_Building_Started>	<!-- An object is just starting construction in the world -->
+  		<SFXEvent_Tactical_Object_Building_Loop> SFX_Structure_Buildable_Loop </SFXEvent_Tactical_Object_Building_Loop>				<!-- An object is currently under construction (loop) in the world -->
+		<SFXEvent_Tactical_Object_Building_Complete> SFX_Structure_Buildable_End </SFXEvent_Tactical_Object_Building_Complete>	<!-- An object has just completed construction in the world -->
+  		<SFXEvent_Tactical_Object_Sold> SFX_Structure_Buildable_Sold </SFXEvent_Tactical_Object_Sold>										<!-- An object is sold in the world -->
+
+		<Lua_Script>Alien_Player</Lua_Script>
+		<Allies />
+		<Enemies>Alien, Military, Hostile, Novus, Masari, Civilian</Enemies>
+
+		<Selection_Blob_Material_Name>Selection_Alien_Land</Selection_Blob_Material_Name>
+		
+		<Targeting_Range_Material_Name>	Reinforcement_Overlay_Human </Targeting_Range_Material_Name>
+		
+		<Reinforcements_Shadow_Blob_Material_Name> Reinforcement_Overlay_Alien </Reinforcements_Shadow_Blob_Material_Name>
+
+		<Invasion_Transport> ALIEN_Air_Invasion_Transport </Invasion_Transport>
+		
+		<!-- Replace with alien versions -->
+		<Land_Area_Effect_Range_Overlay_Material_Name> Alien_Land_Ability_Targeting_Range_Overlay </Land_Area_Effect_Range_Overlay_Material_Name> <!-- In ShadowBlobMaterials.xml -->
+		<Land_Area_Effect_Range_Overlay_RGBA> 196, 196, 255, 128 </Land_Area_Effect_Range_Overlay_RGBA>
+		<Land_Area_Effect_Range_Overlay_Scale_Factor> 1.0</Land_Area_Effect_Range_Overlay_Scale_Factor>
+
+		<Radar_Map_Background_Tint>255, 255, 255, 255</Radar_Map_Background_Tint>
+		<Radar_Map_Filter>Alien_Radar_Map_Filter</Radar_Map_Filter>
+		<Campaign_Radar_Map_Filter>Alien_Radar_Map_Filter</Campaign_Radar_Map_Filter>
+
+		<Tactical_Production_Num_Units_Per_Batch>3</Tactical_Production_Num_Units_Per_Batch>
+		<Tactical_Production_Num_Batches_Per_UI_Slot>1</Tactical_Production_Num_Batches_Per_UI_Slot>
+
+		<Loading_Texture_Name> splash_alien.dds </Loading_Texture_Name>
+	</Faction>
+
+	<Faction Name="NovusTwo">
+
+
+		<!-- MARIA 10.18.2006 
+			This field is to determine how "tactical money" (raw materials) will be converted into
+			"strategic money" (credits) once the tactical battle is over -->
+		<Raw_Materials_To_Credits_Conversion_Rate> 0.0 </Raw_Materials_To_Credits_Conversion_Rate>
+
+		<Tactical_GUI_Scene_Name> NOVUS_Tactical_Command_Bar </Tactical_GUI_Scene_Name>
+		<GUI_Mega_Texture_Name> MT_CommandBar_Novus_Megatexture </GUI_Mega_Texture_Name>
+
+		<Is_Debug_Switchable_To> No </Is_Debug_Switchable_To>
+		<Text_ID> TEXT_FACTION_NOVUS_TWO </Text_ID>
+		<Is_Human_Playable> No </Is_Human_Playable>
+		<Is_AI_Playable> Yes </Is_AI_Playable>
+		<Primary_Enemy />
+		<Is_Neutral> No </Is_Neutral>
+		<Basic_AI>DefaultAIPlayer</Basic_AI>
+		<Radar_Color> 142, 174, 185, 255 </Radar_Color>
+		<No_Colorization_Color> 142, 174, 185, 255  </No_Colorization_Color>
+		<Fleet_Icon_Name>i_button_novus_fleettag.tga</Fleet_Icon_Name>
+		<Create_Player_In_Multiplayer_Games> false </Create_Player_In_Multiplayer_Games>
+
+		<Strategic_Hero_Pad_Model_Name> region_pad_novus.alo </Strategic_Hero_Pad_Model_Name>
+
+		<!-- MULTIPLAYER DATA BEGIN	-->
+		<Land_Skirmish_Unit_Cap_By_Player_Count>
+			0,10,
+			1,10,
+			8,5,
+		</Land_Skirmish_Unit_Cap_By_Player_Count>
+		<Multiplayer_Starting_Credits> 6800 </Multiplayer_Starting_Credits>
+        <Multiplayer_Starting_Credit_Level_Values> 5000,10000,15000 </Multiplayer_Starting_Credit_Level_Values>
+		<Pop_Cap_For_Multiplayer_Games> 90 </Pop_Cap_For_Multiplayer_Games>
+		<!-- MULTIPLAYER DATA END	-->
+
+		<Strategic_Map_Music_Event> Novus_Strategic_Map_Music_Event </Strategic_Map_Music_Event>
+
+		<!-- Maria 05.01.2006 - Adding new field to support limiting the pop cap of a region based on the owning faction -->
+		<Regional_Pop_Cap> 90 </Regional_Pop_Cap>
+
+		<Music_Event_List_Ambient> Temperate, Temperate_Land_Alien_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> Arctic, Ice_Land_Alien_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> Desert, Desert_Land_Alien_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> Forest, Temperate_Land_Alien_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> Swamp, Swamp_Land_Alien_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> Volcanic, Volcanic_Land_Alien_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> Urban, Urban_Land_Alien_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> WARZONE_A, 					WARZONE_A_Land_Alien_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> HIERARCHY_INTERIOR, 		HIERARCHY_INTERIOR_Land_Alien_Ambient_Music_Event </Music_Event_List_Ambient>
+		<Music_Event_List_Ambient> MASARI_INTERIOR, 			MASARI_INTERIOR_Land_Alien_Ambient_Music_Event </Music_Event_List_Ambient>
+
+		<Music_Event_List_Battle> Temperate, Temperate_Land_Alien_Ambient_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> Arctic, Ice_Land_Alien_Ambient_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> Desert, Desert_Land_Alien_Ambient_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> Forest, Temperate_Land_Alien_Ambient_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> Swamp, Swamp_Land_Alien_Ambient_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> Volcanic, Volcanic_Land_Alien_Ambient_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> Urban, Urban_Land_Alien_Ambient_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> WARZONE_A, 					WARZONE_A_Land_Alien_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> HIERARCHY_INTERIOR, 		HIERARCHY_INTERIOR_Land_Alien_Battle_Music_Event </Music_Event_List_Battle>
+		<Music_Event_List_Battle> MASARI_INTERIOR, 			MASARI_INTERIOR_Land_Alien_Battle_Music_Event </Music_Event_List_Battle>
+
+		<SFXEvent_Tactical_Object_Building_Started> SFX_Structure_Buildable_Start </SFXEvent_Tactical_Object_Building_Started>
+		<!-- An object is just starting construction in the world -->
+		<SFXEvent_Tactical_Object_Building_Loop> SFX_Structure_Buildable_Loop </SFXEvent_Tactical_Object_Building_Loop>
+		<!-- An object is currently under construction (loop) in the world -->
+		<SFXEvent_Tactical_Object_Building_Complete> SFX_Structure_Buildable_End </SFXEvent_Tactical_Object_Building_Complete>
+		<!-- An object has just completed construction in the world -->
+		<SFXEvent_Tactical_Object_Sold> SFX_Structure_Buildable_Sold </SFXEvent_Tactical_Object_Sold>
+		<!-- An object is sold in the world -->
+
+
+
+		<!-- ============================================== -->
+		<!-- SFX Ability button toggle activate / deactivate -->
+		<!-- ============================================== -->
+
+		<SFXEvent_GUI_Toggle_Non_Hero_Ability_On> </SFXEvent_GUI_Toggle_Non_Hero_Ability_On>
+      <SFXEvent_GUI_Toggle_Non_Hero_Ability_Off> </SFXEvent_GUI_Toggle_Non_Hero_Ability_Off>
+
+      <SFXEvent_GUI_Enemy_Toggle_Non_Hero_Ability_On> </SFXEvent_GUI_Enemy_Toggle_Non_Hero_Ability_On>
+      <SFXEvent_GUI_Enemy_Toggle_Non_Hero_Ability_Off> </SFXEvent_GUI_Enemy_Toggle_Non_Hero_Ability_Off>
+
+
+
+		<Reinforcements_Shadow_Blob_Material_Name> Reinforcement_Overlay_Novus </Reinforcements_Shadow_Blob_Material_Name>
+
+		<Lua_Script>Novus_Player</Lua_Script>
+		<Allies />
+		<Enemies>Hostile, Alien, Military, Masari</Enemies>
+
+		<Selection_Blob_Material_Name>Selection_Novus_Land</Selection_Blob_Material_Name>
+
+		<Targeting_Range_Material_Name>	Reinforcement_Overlay_Human </Targeting_Range_Material_Name>
+
+		<Invasion_Transport> NOVUS_Air_Invasion_Transport </Invasion_Transport>
+
+		<!-- Used by, e.g., dragoons scan ability -->
+		<Land_Area_Effect_Range_Overlay_Material_Name> Novus_Land_Ability_Targeting_Range_Overlay </Land_Area_Effect_Range_Overlay_Material_Name>
+		<!-- In ShadowBlobMaterials.xml -->
+		<Land_Area_Effect_Range_Overlay_RGBA> 196, 196, 255, 128 </Land_Area_Effect_Range_Overlay_RGBA>
+		<Land_Area_Effect_Range_Overlay_Scale_Factor> 1.0</Land_Area_Effect_Range_Overlay_Scale_Factor>
+
+		<Radar_Map_Background_Tint>255, 255, 255, 255</Radar_Map_Background_Tint>
+		<Radar_Map_Filter>Novus_Radar_Map_Filter</Radar_Map_Filter>
+		<Campaign_Radar_Map_Filter>Novus_Radar_Map_Filter</Campaign_Radar_Map_Filter>
+
+		<!-- Now a unified flow speed for all units of this faction, instead of a multiplier on the unit's max speed. -->
+		<Flow_Speed> 10.0 </Flow_Speed>
+
+		<Tactical_Production_Num_Units_Per_Batch>1</Tactical_Production_Num_Units_Per_Batch>
+		<Tactical_Production_Num_Batches_Per_UI_Slot>1</Tactical_Production_Num_Batches_Per_UI_Slot>
+
+		<Loading_Texture_Name> splash_novus.dds </Loading_Texture_Name>
+	</Faction>
+	
+</Factions>

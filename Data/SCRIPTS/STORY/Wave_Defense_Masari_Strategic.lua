@@ -27,12 +27,13 @@ function Definitions()
 	novus = Find_Player("Novus")
 	aliens = Find_Player("Alien")
 	masari = Find_Player("Masari")
+	masari2 = Find_Player("Masari2")
 
 	PGFactions_Init()
 	PGColors_Init_Constants()
 
 	masari.Enable_Colorization(true, COLOR_BLUE)
-	novus.Enable_Colorization(true, COLOR_RED)
+	masari2.Enable_Colorization(true, COLOR_RED)
     MM01_successful = false
     
 	bool_user_chose_mission = false

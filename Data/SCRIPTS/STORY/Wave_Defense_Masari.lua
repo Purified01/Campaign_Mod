@@ -28,11 +28,12 @@ function Definitions()
 	aliens = Find_Player("Alien")
 	H = Find_Player("Alien_ZM06_KamalRex")
 	M = Find_Player("Masari")
+	Menemy = Find_Player("Masari2")
 
 	-- Variables
 	mission_success = false
 	mission_failure = false
-	wave_timer = 3
+	wave_timer = 30
     total_waves = 30
 
 	--this allows a win here to be reported to the strategic level lua script
@@ -215,9 +216,10 @@ function State_Init(message)
 		N.Allow_Autonomous_AI_Goal_Activation(false)
 		H.Allow_Autonomous_AI_Goal_Activation(false)		
 	
-        military.Allow_AI_Unit_Behavior(false)
+        Menemy.Allow_AI_Unit_Behavior(false)
         N.Allow_AI_Unit_Behavior(false)
         H.Allow_AI_Unit_Behavior(false)
+
 	
 		Stop_All_Speech()
 		Flush_PIP_Queue()
@@ -311,7 +313,7 @@ function Spawn_Wave(spawns)
 	for l = 1, #spawnGroups do
 		if spawnGroups[l] ~= nil then
 			locIdx = (locIdx + l) % 6 + 1
-			spawnsList[spawnIdx] = SpawnList(spawnGroups[l], spawnLocs[locIdx].Get_Position(), novus)
+			spawnsList[spawnIdx] = SpawnList(spawnGroups[l], spawnLocs[locIdx].Get_Position(), Menemy)
 			Hunt(spawnsList[spawnIdx], "AntiDefault", true, false)
 			spawnIdx = spawnIdx + 1
 		end

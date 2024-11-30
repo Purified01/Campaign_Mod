@@ -449,8 +449,8 @@ function Force_Victory(player)
 end
 
 function Post_Load_Callback()
-	FogOfWar.Reveal(H, spawnFront, 600, 600)
-	FogOfWar.Reveal(H, spawnBack, 600, 600)
-	FogOfWar.Reveal(H, spawnFrontR, 600, 600)
-	FogOfWar.Reveal(H, spawnFrontL, 600, 600)
+	FogOfWar.Reveal(aliens, spawnFront, 600, 600)
+	FogOfWar.Reveal(aliens, spawnBack, 600, 600)
+	FogOfWar.Reveal(aliens, spawnFrontR, 600, 600)
+	FogOfWar.Reveal(aliens, spawnFrontL, 600, 600)
 end

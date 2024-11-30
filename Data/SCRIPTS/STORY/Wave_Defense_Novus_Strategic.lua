@@ -181,6 +181,6 @@ end
 function State_Campaign_Over(message)
 	if message == OnEnter then
 		Register_Campaign_Commands()
-		Quit_Game_Now(aliens, true, true, false)
+		Quit_Game_Now(novus, true, true, false)
 	end
 end

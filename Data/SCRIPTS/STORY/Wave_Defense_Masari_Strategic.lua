@@ -32,7 +32,7 @@ function Definitions()
 	PGColors_Init_Constants()
 
 	masari.Enable_Colorization(true, COLOR_BLUE)
-	aliens.Enable_Colorization(true, COLOR_RED)
+	novus.Enable_Colorization(true, COLOR_RED)
     MM01_successful = false
     
 	bool_user_chose_mission = false
@@ -181,6 +181,6 @@ end
 function State_Campaign_Over(message)
 	if message == OnEnter then
 		Register_Campaign_Commands()
-		Quit_Game_Now(aliens, true, true, false)
+		Quit_Game_Now(masari, true, true, false)
 	end
 end

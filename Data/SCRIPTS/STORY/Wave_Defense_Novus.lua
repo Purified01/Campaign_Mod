@@ -444,4 +444,8 @@ function Force_Victory(player)
 end
 
 function Post_Load_Callback()
+	FogOfWar.Reveal(N, spawnFront, 600, 600)
+	FogOfWar.Reveal(N, spawnBack, 600, 600)
+	FogOfWar.Reveal(N, spawnFrontR, 600, 600)
+	FogOfWar.Reveal(N, spawnFrontL, 600, 600)
 end

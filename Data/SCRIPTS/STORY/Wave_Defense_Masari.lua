@@ -310,7 +310,7 @@ function Spawn_Wave(spawns)
 	for l = 1, #spawnGroups do
 		if spawnGroups[l] ~= nil then
 			locIdx = (locIdx + l) % 6 + 1
-			spawnsList[spawnIdx] = SpawnList(spawnGroups[l], spawnLocs[locIdx].Get_Position(), H)
+			spawnsList[spawnIdx] = SpawnList(spawnGroups[l], spawnLocs[locIdx].Get_Position(), aliens)
 			Hunt(spawnsList[spawnIdx], "AntiDefault", true, false)
 			spawnIdx = spawnIdx + 1
 		end

@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<GENERIC_Novus_Structure_Beacon_XML>
+
+	<!-- **************************************************************************************** -->
+	<!-- ***  BEACON **************************************************************************** -->
+	<!-- **************************************************************************************** -->
+	<X90_Other_Objects Name="Novus_Generic_Structure_Beacon">
+
+		<!-- ART -->
+		<Land_Model_Name>NB_Beacon.alo</Land_Model_Name>
+		<!-- Please notify Jeff P if this value is changed (scale), will effect the point the constuctor will aim at -->
+		<Scale_Factor>0.75</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+      <AssetBank> BANK_NOVUS </AssetBank>
+
+		<!-- INTERFACE -->
+		<Is_Placed_By_Editor> false </Is_Placed_By_Editor>
+		<Select_Box_Scale>15</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+
+		<!-- ATTRIBUTES -->
+		<Attributes SubObjectList="Yes">
+			<!-- This MODIFIER determines what portion of the whole price we must reduce.  Hence, a modifier
+			of value 0 means that we refund 100%, a modifier of -0.2 means we refund 80%, etc. -->
+			<Tactical_Sell_Percent_Modifier> 0.0 </Tactical_Sell_Percent_Modifier>
+			<Tactical_Sell_Time_Seconds>0.5</Tactical_Sell_Time_Seconds>
+			<Is_Immune_To_Mind_Control> true </Is_Immune_To_Mind_Control>
+			<Is_Immune_To_Virus> true </Is_Immune_To_Virus>
+		</Attributes>
+
+		<CategoryMask> TacticalBuildableStructure </CategoryMask>
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+
+		<!-- CONFLICT -->
+		<Is_Attackable>Yes</Is_Attackable>
+		<Collidable_By_Projectile_Living> Yes </Collidable_By_Projectile_Living>
+		<Ranged_Target_Z_Adjust> 0.0 </Ranged_Target_Z_Adjust>
+		<Tactical_Health>1</Tactical_Health>
+
+		<!-- BEHAVIORS -->
+		<Behavior>
+			TACTICAL_BUILDABLE_BEACON,
+			ATTRIBUTE_DIRECTORY,
+			SELECTABLE,
+			TACTICAL_SELL,
+			INVULNERABLE,
+			CLOAKED,
+			HIDE_WHEN_FOGGED,
+			EFFECT_GENERATOR,
+			EFFECT_REGISTRY
+		</Behavior>
+
+		<BehaviorType Name="GameEventSourceBehaviorType">
+			<Game_Event_Source_Category> TacticalBuildBeacon </Game_Event_Source_Category>
+		</BehaviorType>
+
+		<BehaviorType Name="SFXBehaviorType">
+			<SFXEvent_Fire> SFX_Alien_Radiation_Detonation_1 </SFXEvent_Fire>
+		</BehaviorType>
+
+		<BehaviorType Name="TacticalBuildableBeaconBehaviorType">
+		</BehaviorType>
+
+		<BehaviorType Name="BuildableObjectBehaviorType">
+			<Tactical_Buildable_Constructed> Novus_Power_Router_Construction </Tactical_Buildable_Constructed>
+		</BehaviorType>
+
+		<BehaviorType Name="TacticalSellBehaviorType">
+			<Sell_Effect_Generator_Name>NovusSellGenerator</Sell_Effect_Generator_Name>
+		</BehaviorType>
+
+		<BehaviorType Name="CrushBehaviorType">
+			<Crush_Defense>90</Crush_Defense>
+		</BehaviorType>
+
+		<Effect_Generator_Data SubObjectList="Yes">
+			<Effect_Generator Name="DissolveNovusBeaconGenerator">
+				<Starts_Active> true </Starts_Active>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> DissolveNovusBeaconSpawnEffect </Effect_Name>
+					<Duration> 1.0 </Duration>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+				</Effect_Generator_Entry>
+			</Effect_Generator>
+
+			<!-- Standard Sell generator  - 06/28/2007 -->
+			<!--INCLUDE ".\Data\XML\Includes\Sell_Effect_Generators\NOVUS_Sell_Generators.xml" -->
+			
+		</Effect_Generator_Data>
+		
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Death_Clone> Damage_Default, Novus_Generic_Structure_Beacon_Death_Clone </Death_Clone>
+			<Death_Fade_Time> 0.25 </Death_Fade_Time>
+			<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+			<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+			<Death_Clone_Keep_Behaviors> EFFECT_REGISTRY </Death_Clone_Keep_Behaviors>
+		</BehaviorType>
+
+	</X90_Other_Objects>
+
+
+	<!-- **************************************************************************************** -->
+	<!-- ***  BEACON DEATH CLONE    ************************************************************* -->
+	<!-- **************************************************************************************** -->
+	<X90_Other_Objects Name="Novus_Generic_Structure_Beacon_Death_Clone">
+
+		<!-- ART -->
+		<Land_Model_Name>NB_Beacon.alo</Land_Model_Name>
+		<!-- Please notify Jeff P if this value is changed (scale), will effect the point the constuctor will aim at -->
+		<Scale_Factor>0.75</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+      <AssetBank> BANK_NOVUS </AssetBank>
+
+		<!-- INTERFACE -->
+		<Is_Placed_By_Editor> false </Is_Placed_By_Editor>
+	
+		<!-- ATTRIBUTES -->
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+
+		<!-- CONFLICT -->
+		<Collidable_By_Projectile_Living> Yes </Collidable_By_Projectile_Living>
+		<Ranged_Target_Z_Adjust> 0.0 </Ranged_Target_Z_Adjust>
+
+		<!-- BEHAVIORS -->
+		<Behavior>
+			EFFECT_REGISTRY,
+			ATTRIBUTE_DIRECTORY,
+			EFFECT_GENERATOR,
+         HIDE_WHEN_FOGGED,
+		</Behavior>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Death_Fade_Time>0.5</Death_Fade_Time>
+			<Death_Persistence_Duration>0.0</Death_Persistence_Duration>
+		</BehaviorType>
+
+		<Effect_Generator_Data SubObjectList="Yes">
+			<Effect_Generator Name="DissolveNovusBeaconDeGenerator">
+				<Starts_Active> true </Starts_Active>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> DissolveNovusBeaconDieEffect </Effect_Name>
+					<Duration> 1.2 </Duration>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+					<Can_Target_Dead_Objects>Yes</Can_Target_Dead_Objects>
+				</Effect_Generator_Entry>
+			</Effect_Generator>
+		</Effect_Generator_Data>
+	</X90_Other_Objects>
+	
+	
+
+</GENERIC_Novus_Structure_Beacon_XML>

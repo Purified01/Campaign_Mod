@@ -1,0 +1,1018 @@
+<?xml version="1.0"?>
+
+<MusicEvents>
+
+	<MusicEvent Name="Main_Menu_Music_Event">
+		<Files> Surrounding_Part_2.mp3</Files>
+		<Volume_Percent>70</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Options_Screen_Music_Event">
+		<Files> Surrounding_Part_2.mp3</Files>
+		<Volume_Percent>80</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+
+
+
+
+	<!-- ======================================= -->
+	<!-- STRATEGIC MAP MUSIC EVENTS -->
+	<!-- ======================================= -->
+
+	<MusicEvent Name="Military_Strategic_Map_Music_Event">
+		<Files>On_Edge.MP3, Schematic.MP3</Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Alien_Strategic_Map_Music_Event">
+		<Files>On_Edge.MP3, Schematic.MP3</Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Novus_Strategic_Map_Music_Event">
+		<Files>Technical_Data.MP3, Calculations.MP3</Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Masari_Strategic_Map_Music_Event">
+		<Files> Suspended.MP3, Surveying_The_Land.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+
+	<!-- ======================================= -->
+	<!-- CINEMATIC MUSIC EVENTS -->
+	<!-- ======================================= -->
+
+
+	<MusicEvent Name="Cinematic_Alien_Intro_Music_Event">
+		<Files> Doom_Of_The_Aliens.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>0.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+
+	<MusicEvent Name="Cinematic_UEA_Intro_Music_Event_1">	  
+		<Files> Act_On_Invasion.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>0.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+
+	<MusicEvent Name="Cinematic_Novus_Intro_Music_Event_1">	  
+		<Files> Electrode.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>0.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Cinematic_Masari_Intro_Music_Event_1">	  
+		<Files> Act_On_Invasion.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>0.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+
+	<!-- ======================================= -->
+	<!-- Military LAND MAPS MUSIC EVENTS - AMBIENT  -->
+	<!-- ======================================= -->
+
+	<MusicEvent Name="Desert_Land_Military_Ambient_Music_Event">
+		<Files> Prepare_For_Oblivion_Part_1.MP3, Anticipating.MP3, Resources_Part_1.MP3, Surrounding_Part_1.MP3, Slithering_Part_2.MP3, Surrounding_Part_2.MP3, Damage_King_Part_1.MP3, Surrounding_Part_3.MP3, Slithering_Part_1.MP3, Impending_Doom.MP3, Moving_Forces.MP3, Composite.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+	
+	<MusicEvent Name="Ice_Land_Military_Ambient_Music_Event">
+		<Files>Prepare_For_Oblivion_Part_1.MP3, Anticipating.MP3, Resources_Part_1.MP3, Surrounding_Part_1.MP3, Slithering_Part_2.MP3, Surrounding_Part_2.MP3, Damage_King_Part_1.MP3, Surrounding_Part_3.MP3, Slithering_Part_1.MP3, Impending_Doom.MP3, Moving_Forces.MP3, Composite.MP3  </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Swamp_Land_Military_Ambient_Music_Event">
+		<Files> Prepare_For_Oblivion_Part_1.MP3, Anticipating.MP3, Resources_Part_1.MP3, Surrounding_Part_1.MP3, Slithering_Part_2.MP3, Surrounding_Part_2.MP3, Damage_King_Part_1.MP3, Surrounding_Part_3.MP3, Slithering_Part_1.MP3, Impending_Doom.MP3, Moving_Forces.MP3, Composite.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Volcanic_Land_Military_Ambient_Music_Event">
+		<Files> Prepare_For_Oblivion_Part_1.MP3, Anticipating.MP3, Resources_Part_1.MP3, Surrounding_Part_1.MP3, Slithering_Part_2.MP3, Surrounding_Part_2.MP3, Damage_King_Part_1.MP3, Surrounding_Part_3.MP3, Slithering_Part_1.MP3, Impending_Doom.MP3, Moving_Forces.MP3, Composite.MP3  </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Temperate_Land_Military_Ambient_Music_Event">
+		<Files> Prepare_For_Oblivion_Part_1.MP3, Anticipating.MP3, Resources_Part_1.MP3, Surrounding_Part_1.MP3, Slithering_Part_2.MP3, Surrounding_Part_2.MP3, Damage_King_Part_1.MP3, Surrounding_Part_3.MP3, Slithering_Part_1.MP3, Impending_Doom.MP3, Moving_Forces.MP3, Composite.MP3  </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Urban_Land_Military_Ambient_Music_Event">
+		<Files> Prepare_For_Oblivion_Part_1.MP3, Anticipating.MP3, Resources_Part_1.MP3, Surrounding_Part_1.MP3, Slithering_Part_2.MP3, Surrounding_Part_2.MP3, Damage_King_Part_1.MP3, Surrounding_Part_3.MP3, Slithering_Part_1.MP3, Impending_Doom.MP3, Moving_Forces.MP3, Composite.MP3  </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="WARZONE_A_Land_Military_Ambient_Music_Event">
+		<Files> Prepare_For_Oblivion_Part_1.MP3, Anticipating.MP3, Resources_Part_1.MP3, Surrounding_Part_1.MP3, Slithering_Part_2.MP3, Surrounding_Part_2.MP3, Damage_King_Part_1.MP3, Surrounding_Part_3.MP3, Slithering_Part_1.MP3, Impending_Doom.MP3, Moving_Forces.MP3, Composite.MP3  </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="HIERARCHY_INTERIOR_Land_Military_Ambient_Music_Event">
+		<Files> Prepare_For_Oblivion_Part_1.MP3, Anticipating.MP3, Resources_Part_1.MP3, Surrounding_Part_1.MP3, Slithering_Part_2.MP3, Surrounding_Part_2.MP3, Damage_King_Part_1.MP3, Surrounding_Part_3.MP3, Slithering_Part_1.MP3, Impending_Doom.MP3, Moving_Forces.MP3, Composite.MP3  </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="MASARI_INTERIOR_Land_Military_Ambient_Music_Event">
+		<Files> Prepare_For_Oblivion_Part_1.MP3, Anticipating.MP3, Resources_Part_1.MP3, Surrounding_Part_1.MP3, Slithering_Part_2.MP3, Surrounding_Part_2.MP3, Damage_King_Part_1.MP3, Surrounding_Part_3.MP3, Slithering_Part_1.MP3, Impending_Doom.MP3, Moving_Forces.MP3, Composite.MP3  </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+
+
+
+	<!-- ======================================= -->
+	<!-- Alien LAND MAPS MUSIC EVENTS - AMBIENT -->
+	<!-- ======================================= -->
+
+	<MusicEvent Name="Desert_Land_Alien_Ambient_Music_Event">
+		<Files> On_Edge.MP3, Schematic.MP3, Surrounding_Part_1.MP3, Surrounding_Part_2.MP3, Surrounding_Part_3.MP3, Slithering_Part_2.MP3, Damage_King_Part_1.MP3, Slithering_Part_1.MP3, Impending_Doom.MP3, Prepare_For_Oblivion_Part_1.MP3, Anticipating.MP3</Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+	
+	<MusicEvent Name="Ice_Land_Alien_Ambient_Music_Event">
+		<Files> On_Edge.MP3, Schematic.MP3, Surrounding_Part_1.MP3, Surrounding_Part_2.MP3, Surrounding_Part_3.MP3, Slithering_Part_2.MP3, Damage_King_Part_1.MP3, Slithering_Part_1.MP3, Impending_Doom.MP3, Prepare_For_Oblivion_Part_1.MP3, Anticipating.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Swamp_Land_Alien_Ambient_Music_Event">
+		<Files> On_Edge.MP3, Schematic.MP3, Surrounding_Part_1.MP3, Surrounding_Part_2.MP3, Surrounding_Part_3.MP3, Slithering_Part_2.MP3, Damage_King_Part_1.MP3, Slithering_Part_1.MP3, Impending_Doom.MP3, Prepare_For_Oblivion_Part_1.MP3, Anticipating.MP3</Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Volcanic_Land_Alien_Ambient_Music_Event">
+		<Files> On_Edge.MP3, Schematic.MP3, Surrounding_Part_1.MP3, Surrounding_Part_2.MP3, Surrounding_Part_3.MP3, Slithering_Part_2.MP3, Damage_King_Part_1.MP3, Slithering_Part_1.MP3, Impending_Doom.MP3, Prepare_For_Oblivion_Part_1.MP3, Anticipating.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Temperate_Land_Alien_Ambient_Music_Event">
+		<Files> On_Edge.MP3, Schematic.MP3, Surrounding_Part_1.MP3, Surrounding_Part_2.MP3, Surrounding_Part_3.MP3, Slithering_Part_2.MP3, Damage_King_Part_1.MP3, Slithering_Part_1.MP3, Impending_Doom.MP3, Prepare_For_Oblivion_Part_1.MP3, Anticipating.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Urban_Land_Alien_Ambient_Music_Event">
+		<Files> On_Edge.MP3, Schematic.MP3, Surrounding_Part_1.MP3, Surrounding_Part_2.MP3, Surrounding_Part_3.MP3, Slithering_Part_2.MP3, Damage_King_Part_1.MP3, Slithering_Part_1.MP3, Impending_Doom.MP3, Prepare_For_Oblivion_Part_1.MP3, Anticipating.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="WARZONE_A_Land_Alien_Ambient_Music_Event">
+		<Files> On_Edge.MP3, Schematic.MP3, Surrounding_Part_1.MP3, Surrounding_Part_2.MP3, Surrounding_Part_3.MP3, Slithering_Part_2.MP3, Damage_King_Part_1.MP3, Slithering_Part_1.MP3, Impending_Doom.MP3, Prepare_For_Oblivion_Part_1.MP3, Anticipating.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="HIERARCHY_INTERIOR_Land_Alien_Ambient_Music_Event">
+		<Files> On_Edge.MP3, Schematic.MP3, Surrounding_Part_1.MP3, Surrounding_Part_2.MP3, Surrounding_Part_3.MP3, Slithering_Part_2.MP3, Damage_King_Part_1.MP3, Slithering_Part_1.MP3, Impending_Doom.MP3, Prepare_For_Oblivion_Part_1.MP3, Anticipating.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="MASARI_INTERIOR_Land_Alien_Ambient_Music_Event">
+		<Files> On_Edge.MP3, Schematic.MP3, Surrounding_Part_1.MP3, Surrounding_Part_2.MP3, Surrounding_Part_3.MP3, Slithering_Part_2.MP3, Damage_King_Part_1.MP3, Slithering_Part_1.MP3, Impending_Doom.MP3, Prepare_For_Oblivion_Part_1.MP3, Anticipating.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+
+
+
+	<!-- ======================================= -->
+	<!-- Novus LAND MAPS MUSIC EVENTS - AMBIENT -->
+	<!-- ======================================= -->
+
+	<MusicEvent Name="Desert_Land_Novus_Ambient_Music_Event">
+		<Files> Fog_Of_War.MP3, Moving_Forces.MP3, Resources_Part_1.MP3, Composite.MP3, Electrode.MP3</Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+	
+	<MusicEvent Name="Ice_Land_Novus_Ambient_Music_Event">
+		<Files> Fog_Of_War.MP3, Moving_Forces.MP3, Resources_Part_1.MP3, Composite.MP3, Electrode.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Swamp_Land_Novus_Ambient_Music_Event">
+		<Files> Fog_Of_War.MP3, Moving_Forces.MP3, Resources_Part_1.MP3, Composite.MP3, Electrode.MP3  </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Volcanic_Land_Novus_Ambient_Music_Event">
+		<Files> Fog_Of_War.MP3, Moving_Forces.MP3, Resources_Part_1.MP3, Composite.MP3, Electrode.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Temperate_Land_Novus_Ambient_Music_Event">
+		<Files> Fog_Of_War.MP3, Moving_Forces.MP3, Resources_Part_1.MP3, Composite.MP3, Electrode.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Urban_Land_Novus_Ambient_Music_Event">
+		<Files> Fog_Of_War.MP3, Moving_Forces.MP3, Resources_Part_1.MP3, Composite.MP3, Electrode.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="WARZONE_A_Land_Novus_Ambient_Music_Event">
+		<Files> Fog_Of_War.MP3, Moving_Forces.MP3, Resources_Part_1.MP3, Composite.MP3, Electrode.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="HIERARCHY_INTERIOR_Land_Novus_Ambient_Music_Event">
+		<Files> Fog_Of_War.MP3, Moving_Forces.MP3, Resources_Part_1.MP3, Composite.MP3, Electrode.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="MASARI_INTERIOR_Land_Novus_Ambient_Music_Event">
+		<Files> Fog_Of_War.MP3, Moving_Forces.MP3, Resources_Part_1.MP3, Composite.MP3, Electrode.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+
+
+	<!-- ======================================= -->
+	<!-- Masari LAND MAPS MUSIC EVENTS - AMBIENT -->
+	<!-- ======================================= -->
+
+	<MusicEvent Name="Desert_Land_Masari_Ambient_Music_Event">
+		<Files> Mind_In_Motion.MP3, Architecture.MP3, Ancient_Presence.MP3, The_Gathering.MP3, Resurfaced_Part_1.MP3, Resurfaced_Part_2.MP3, Resurfaced_Part_3.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+	
+	<MusicEvent Name="Ice_Land_Masari_Ambient_Music_Event">
+		<Files> Mind_In_Motion.MP3, Architecture.MP3, Ancient_Presence.MP3, The_Gathering.MP3, Resurfaced_Part_1.MP3, Resurfaced_Part_2.MP3, Resurfaced_Part_3.MP3  </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Swamp_Land_Masari_Ambient_Music_Event">
+		<Files> Mind_In_Motion.MP3, Architecture.MP3, Ancient_Presence.MP3, The_Gathering.MP3, Resurfaced_Part_1.MP3, Resurfaced_Part_2.MP3, Resurfaced_Part_3.MP3  </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Volcanic_Land_Masari_Ambient_Music_Event">
+		<Files> Mind_In_Motion.MP3, Architecture.MP3, Ancient_Presence.MP3, The_Gathering.MP3, Resurfaced_Part_1.MP3, Resurfaced_Part_2.MP3, Resurfaced_Part_3.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Temperate_Land_Masari_Ambient_Music_Event">
+		<Files> Mind_In_Motion.MP3, Architecture.MP3, Ancient_Presence.MP3, The_Gathering.MP3, Resurfaced_Part_1.MP3, Resurfaced_Part_2.MP3, Resurfaced_Part_3.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Urban_Land_Masari_Ambient_Music_Event">
+		<Files> Mind_In_Motion.MP3, Architecture.MP3, Ancient_Presence.MP3, The_Gathering.MP3, Resurfaced_Part_1.MP3, Resurfaced_Part_2.MP3, Resurfaced_Part_3.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="WARZONE_A_Land_Masari_Ambient_Music_Event">
+		<Files> Mind_In_Motion.MP3, Architecture.MP3, Ancient_Presence.MP3, The_Gathering.MP3, Resurfaced_Part_1.MP3, Resurfaced_Part_2.MP3, Resurfaced_Part_3.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="HIERARCHY_INTERIOR_Land_Masari_Ambient_Music_Event">
+		<Files> Mind_In_Motion.MP3, Architecture.MP3, Ancient_Presence.MP3, The_Gathering.MP3, Resurfaced_Part_1.MP3, Resurfaced_Part_2.MP3, Resurfaced_Part_3.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="MASARI_INTERIOR_Land_Masari_Ambient_Music_Event">
+		<Files> Mind_In_Motion.MP3, Architecture.MP3, Ancient_Presence.MP3, The_Gathering.MP3, Resurfaced_Part_1.MP3, Resurfaced_Part_2.MP3, Resurfaced_Part_3.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+
+
+
+
+
+
+	<!-- ====================================== -->
+	<!-- Military LAND MAPS MUSIC EVENTS - BATTLE  -->
+	<!-- ===================================== -->
+
+	<MusicEvent Name="Desert_Land_Military_Battle_Music_Event">
+		<Files> Mechanical_Brain.MP3, Resources_Part_2.MP3, Act_On_Invasion.MP3, Doom_Of_The_Aliens.MP3, Damage_King_Part_2.MP3, Bass_Case.MP3</Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+	
+	<MusicEvent Name="Ice_Land_Military_Battle_Music_Event">
+		<Files> Mechanical_Brain.MP3, Resources_Part_2.MP3, Act_On_Invasion.MP3, Doom_Of_The_Aliens.MP3, Damage_King_Part_2.MP3, Bass_Case.MP3</Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Swamp_Land_Military_Battle_Music_Event">
+		<Files> Mechanical_Brain.MP3, Resources_Part_2.MP3, Act_On_Invasion.MP3, Doom_Of_The_Aliens.MP3, Damage_King_Part_2.MP3, Bass_Case.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Volcanic_Land_Military_Battle_Music_Event">
+		<Files> Mechanical_Brain.MP3, Resources_Part_2.MP3, Act_On_Invasion.MP3, Doom_Of_The_Aliens.MP3, Damage_King_Part_2.MP3, Bass_Case.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Temperate_Land_Military_Battle_Music_Event">
+		<Files> Mechanical_Brain.MP3, Resources_Part_2.MP3, Act_On_Invasion.MP3, Doom_Of_The_Aliens.MP3, Damage_King_Part_2.MP3, Bass_Case.MP3</Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Urban_Land_Military_Battle_Music_Event">
+		<Files> Mechanical_Brain.MP3, Resources_Part_2.MP3, Act_On_Invasion.MP3, Doom_Of_The_Aliens.MP3, Damage_King_Part_2.MP3, Bass_Case.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="WARZONE_A_Land_Military_Battle_Music_Event">
+		<Files> Mechanical_Brain.MP3, Resources_Part_2.MP3, Act_On_Invasion.MP3, Doom_Of_The_Aliens.MP3, Damage_King_Part_2.MP3, Bass_Case.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="HIERARCHY_INTERIOR_Land_Military_Battle_Music_Event">
+		<Files> Mechanical_Brain.MP3, Resources_Part_2.MP3, Act_On_Invasion.MP3, Doom_Of_The_Aliens.MP3, Damage_King_Part_2.MP3, Bass_Case.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="MASARI_INTERIOR_Land_Military_Battle_Music_Event">
+		<Files> Mechanical_Brain.MP3, Resources_Part_2.MP3, Act_On_Invasion.MP3, Doom_Of_The_Aliens.MP3, Damage_King_Part_2.MP3, Bass_Case.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+
+
+
+	<!-- ======================================= -->
+	<!-- Alien LAND MAPS MUSIC EVENTS - BATTLE  -->
+	<!-- ======================================= -->
+
+	<MusicEvent Name="Desert_Land_Alien_Battle_Music_Event">
+		<Files> Doom_Of_The_Aliens.MP3, Strangers_Attack.MP3, Prepare_For_Oblivion_Part_2.MP3, Haunt.MP3, Mechanical_Brain.MP3, Damage_King_Part_2.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+	
+	<MusicEvent Name="Ice_Land_Alien_Battle_Music_Event">
+		<Files> Doom_Of_The_Aliens.MP3, Strangers_Attack.MP3, Prepare_For_Oblivion_Part_2.MP3, Haunt.MP3, Mechanical_Brain.MP3, Damage_King_Part_2.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>0.5</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Swamp_Land_Alien_Battle_Music_Event">
+		<Files> Doom_Of_The_Aliens.MP3, Strangers_Attack.MP3, Prepare_For_Oblivion_Part_2.MP3, Haunt.MP3, Mechanical_Brain.MP3, Damage_King_Part_2.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Volcanic_Land_Alien_Battle_Music_Event">
+		<Files> Doom_Of_The_Aliens.MP3, Strangers_Attack.MP3, Prepare_For_Oblivion_Part_2.MP3, Haunt.MP3, Mechanical_Brain.MP3, Damage_King_Part_2.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Temperate_Land_Alien_Battle_Music_Event">
+		<Files> Doom_Of_The_Aliens.MP3, Strangers_Attack.MP3, Prepare_For_Oblivion_Part_2.MP3, Haunt.MP3, Mechanical_Brain.MP3, Damage_King_Part_2.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Urban_Land_Alien_Battle_Music_Event">
+		<Files> Doom_Of_The_Aliens.MP3, Strangers_Attack.MP3, Prepare_For_Oblivion_Part_2.MP3, Haunt.MP3, Mechanical_Brain.MP3, Damage_King_Part_2.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="WARZONE_A_Land_Alien_Battle_Music_Event">
+		<Files> Doom_Of_The_Aliens.MP3, Strangers_Attack.MP3, Prepare_For_Oblivion_Part_2.MP3, Haunt.MP3, Mechanical_Brain.MP3, Damage_King_Part_2.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="HIERARCHY_INTERIOR_Land_Alien_Battle_Music_Event">
+		<Files> Doom_Of_The_Aliens.MP3, Strangers_Attack.MP3, Prepare_For_Oblivion_Part_2.MP3, Haunt.MP3, Mechanical_Brain.MP3, Damage_King_Part_2.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="MASARI_INTERIOR_Land_Alien_Battle_Music_Event">
+		<Files> Doom_Of_The_Aliens.MP3, Strangers_Attack.MP3, Prepare_For_Oblivion_Part_2.MP3, Haunt.MP3, Mechanical_Brain.MP3, Damage_King_Part_2.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+
+
+
+
+	<!-- ======================================= -->
+	<!-- Novus LAND MAPS MUSIC EVENTS - BATTLE  -->
+	<!-- ======================================= -->
+
+	<MusicEvent Name="Desert_Land_Novus_Battle_Music_Event">
+		<Files> Hit_And_Run.MP3, Roots.MP3, Modern_Design.MP3, Resources_Part_2.MP3, Act_On_Invasion.MP3, Bass_Case.MP3</Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+	
+	<MusicEvent Name="Ice_Land_Novus_Battle_Music_Event">
+		<Files> Hit_And_Run.MP3, Roots.MP3, Modern_Design.MP3, Resources_Part_2.MP3, Act_On_Invasion.MP3, Bass_Case.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>0.5</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Swamp_Land_Novus_Battle_Music_Event">
+		<Files> Hit_And_Run.MP3, Roots.MP3, Modern_Design.MP3, Resources_Part_2.MP3, Act_On_Invasion.MP3, Bass_Case.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Volcanic_Land_Novus_Battle_Music_Event">
+		<Files> Hit_And_Run.MP3, Roots.MP3, Modern_Design.MP3, Resources_Part_2.MP3, Act_On_Invasion.MP3, Bass_Case.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Temperate_Land_Novus_Battle_Music_Event">
+		<Files> Hit_And_Run.MP3, Roots.MP3, Modern_Design.MP3, Resources_Part_2.MP3, Act_On_Invasion.MP3, Bass_Case.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Urban_Land_Novus_Battle_Music_Event">
+		<Files> Hit_And_Run.MP3, Roots.MP3, Modern_Design.MP3, Resources_Part_2.MP3, Act_On_Invasion.MP3, Bass_Case.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="WARZONE_A_Land_Novus_Battle_Music_Event">
+		<Files> Hit_And_Run.MP3, Roots.MP3, Modern_Design.MP3, Resources_Part_2.MP3, Act_On_Invasion.MP3, Bass_Case.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="HIERARCHY_INTERIOR_Land_Novus_Battle_Music_Event">
+		<Files> Hit_And_Run.MP3, Roots.MP3, Modern_Design.MP3, Resources_Part_2.MP3, Act_On_Invasion.MP3, Bass_Case.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="MASARI_INTERIOR_Land_Novus_Battle_Music_Event">
+		<Files> Hit_And_Run.MP3, Roots.MP3, Modern_Design.MP3, Resources_Part_2.MP3, Act_On_Invasion.MP3, Bass_Case.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+
+
+	<!-- ======================================= -->
+	<!-- Masari LAND MAPS MUSIC EVENTS - BATTLE  -->
+	<!-- ======================================= -->
+
+	<MusicEvent Name="Desert_Land_Masari_Battle_Music_Event">
+		<Files> Divine_Intervention.MP3, Display_of_Power.MP3, Reanimation.MP3, Dark_Intrusion.MP3, Disturbance.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+	
+	<MusicEvent Name="Ice_Land_Masari_Battle_Music_Event">
+		<Files> Divine_Intervention.MP3, Display_of_Power.MP3, Reanimation.MP3, Dark_Intrusion.MP3, Disturbance.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>0.5</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Swamp_Land_Masari_Battle_Music_Event">
+		<Files> Divine_Intervention.MP3, Display_of_Power.MP3, Reanimation.MP3, Dark_Intrusion.MP3, Disturbance.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Volcanic_Land_Masari_Battle_Music_Event">
+		<Files> Divine_Intervention.MP3, Display_of_Power.MP3, Reanimation.MP3, Dark_Intrusion.MP3, Disturbance.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Temperate_Land_Masari_Battle_Music_Event">
+		<Files>  Divine_Intervention.MP3, Display_of_Power.MP3, Reanimation.MP3, Dark_Intrusion.MP3, Disturbance.MP3</Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Urban_Land_Masari_Battle_Music_Event">
+		<Files> Divine_Intervention.MP3, Display_of_Power.MP3, Reanimation.MP3, Dark_Intrusion.MP3, Disturbance.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="WARZONE_A_Land_Masari_Battle_Music_Event">
+		<Files> Divine_Intervention.MP3, Display_of_Power.MP3, Reanimation.MP3, Dark_Intrusion.MP3, Disturbance.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="HIERARCHY_INTERIOR_Land_Masari_Battle_Music_Event">
+		<Files> Divine_Intervention.MP3, Display_of_Power.MP3, Reanimation.MP3, Dark_Intrusion.MP3, Disturbance.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="MASARI_INTERIOR_Land_Masari_Battle_Music_Event">
+		<Files> Divine_Intervention.MP3, Display_of_Power.MP3, Reanimation.MP3, Dark_Intrusion.MP3, Disturbance.MP3 </Files>
+		<Volume_Percent>60</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+
+
+
+
+
+
+
+	<!-- ======================================= -->
+	<!-- WIN / LOSE MUSIC EVENTS -->
+	<!-- ======================================= -->
+
+
+	<MusicEvent Name="Military_Win_Tactical_Event">
+		<Files> Zap.MP3 </Files>
+		<Volume_Percent>75</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Military_Win_Strategic_Event">
+		<Files> Zap.MP3 </Files>
+		<Volume_Percent>75</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Military_Lose_Tactical_Event">
+		<Files> Doom_Of_The_Aliens.MP3 </Files>
+		<Volume_Percent>75</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Military_Lose_Strategic_Event">
+		<Files> Doom_Of_The_Aliens.MP3 </Files>
+		<Volume_Percent>75</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Lose_To_Military_Event">
+		<Files> Zap.MP3 </Files>
+		<Volume_Percent>75</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+
+
+
+
+	<MusicEvent Name="Alien_Win_Tactical_Event">
+		<Files> Damage_King_Edit.mp3</Files>
+		<Volume_Percent>75</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Alien_Win_Strategic_Event">
+		<Files> Damage_King_Edit.mp3 </Files>
+		<Volume_Percent>75</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Lose_To_Alien_Event">
+		<Files> Lose_To_Hierarchy.mp3 </Files>
+		<Volume_Percent>75</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+
+
+
+
+
+	<MusicEvent Name="Novus_Win_Tactical_Event">
+		<Files> Zap.MP3 </Files>
+		<Volume_Percent>75</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Novus_Win_Strategic_Event">
+		<Files> Zap.MP3 </Files>
+		<Volume_Percent>75</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Lose_To_Novus_Event">
+		<Files> Lose_To_Novus.MP3 </Files>
+		<Volume_Percent>75</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+
+
+
+
+
+	<MusicEvent Name="Masari_Win_Tactical_Event">
+		<Files> Masari_Victory.MP3 </Files>
+		<Volume_Percent>75</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Masari_Win_Strategic_Event">
+		<Files> Masari_Victory.MP3 </Files>
+		<Volume_Percent>75</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+	<MusicEvent Name="Lose_To_Masari_Event">
+		<Files> Lose_To_Masari.MP3 </Files>
+		<Volume_Percent>75</Volume_Percent>
+		<Fade_In_Seconds>0.0</Fade_In_Seconds>
+		<Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		<Loop>Yes</Loop>
+	</MusicEvent>
+
+
+
+
+
+
+	 <!-- ======================================= -->
+	 <!-- CREDITS MUSIC EVENTS -->
+	 <!-- ======================================= -->
+
+	 <MusicEvent Name="Game_Credits_Music_Event">
+		<Files> Moving_Forces.MP3, Doom_Of_The_Aliens.MP3, Act_On_Invasion.MP3, Bass_Case.MP3, Slithering.MP3 </Files>
+		  <Volume_Percent> 75 </Volume_Percent>
+		  <Fade_In_Seconds> 0.0 </Fade_In_Seconds>
+		  <Fade_Out_Previous_Seconds> 0.0 </Fade_Out_Previous_Seconds>
+		  <Loop> No </Loop>
+	 </MusicEvent>
+
+
+
+
+	 <!-- ======================================= -->
+	 <!-- JUKEBOX MUSIC EVENTS -->
+	 <!-- ======================================= -->
+
+	 <MusicEvent Name="Jukebox_Music_Event">
+		 <Files> Masari_Suite.MP3, Mind_In_Motion.MP3, Resurfaced.MP3, Surveying_The_Land.MP3, Disturbance.MP3, Hit_And_Run.MP3, Roots.MP3, Dark_Intrusion.MP3, Fog_Of_War.MP3, The_Gathering.MP3, Reanimation.MP3, Display_Of_Power.MP3, Technical_Data.MP3, Calculations.MP3, Ancient_Presence.MP3, Divine_Intervention.MP3, Modern_Design.MP3, Haunt.MP3, Electrode.MP3, Prepare_For_Oblivion.MP3, Anticipating.MP3, Resources.MP3, Surrounding.MP3, Slithering.MP3, Damage_King.MP3, Impending_Doom.MP3, Moving_Forces.MP3, Composite.MP3, Mechanical_Brain.MP3, Act_On_Invasion.MP3, Bass_Case.MP3, Doom_Of_The_Aliens.MP3, Schematic.MP3, On_Edge.MP3, Zap.MP3 </Files>
+		 <Volume_Percent>60</Volume_Percent>
+		 <Fade_In_Seconds>0.0</Fade_In_Seconds>
+		 <Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		 <Loop> Yes </Loop>
+		 <Shuffle> Yes </Shuffle>  <!-- Note: Shuffle should only be used for MusicEvents that will continue to play for a very long time. It really only applies to this ongoing Jukebox mode music. -->
+	 </MusicEvent>
+
+	 
+	 
+	 <!-- ======================================= -->
+	 <!-- SINGLE SEGMENT MUSIC EVENTS -->
+	 <!-- ======================================= -->
+
+	 <MusicEvent Name="Music_Impending_Doom">
+		 <Files> Impending_Doom.mp3 </Files>
+		 <Volume_Percent>60</Volume_Percent>
+		 <Fade_In_Seconds>0.0</Fade_In_Seconds>
+		 <Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		 <Loop>Yes</Loop>
+	 </MusicEvent>
+
+	 <MusicEvent Name="Music_Prepare_For_Oblivion">
+		 <Files> Prepare_For_Oblivion.mp3, Prepare_For_Oblivion_Part_1.mp3, Prepare_For_Oblivion_Part_2.mp3 </Files>
+		 <Volume_Percent>60</Volume_Percent>
+		 <Fade_In_Seconds>0.0</Fade_In_Seconds>
+		 <Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		 <Loop>Yes</Loop>
+	 </MusicEvent>
+	 
+	 <MusicEvent Name="Music_On_Edge">
+		 <Files> On_Edge.mp3 </Files>
+		 <Volume_Percent>60</Volume_Percent>
+		 <Fade_In_Seconds>0.0</Fade_In_Seconds>
+		 <Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		 <Loop>Yes</Loop>
+	 </MusicEvent>
+
+	 <MusicEvent Name="Music_Schematic">
+		 <Files> Schematic.mp3 </Files>
+		 <Volume_Percent>60</Volume_Percent>
+		 <Fade_In_Seconds>0.0</Fade_In_Seconds>
+		 <Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		 <Loop>Yes</Loop>
+	 </MusicEvent>
+
+	 <MusicEvent Name="Music_Surrounding">
+		 <Files> Surrounding_Part_1.mp3, Surrounding_Part_2.mp3, Surrounding_Part_3.mp3 </Files>
+		 <Volume_Percent>60</Volume_Percent>
+		 <Fade_In_Seconds>0.0</Fade_In_Seconds>
+		 <Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		 <Loop>Yes</Loop>
+	 </MusicEvent>
+	 
+	 <MusicEvent Name="Music_Modern_Design">
+		 <Files> Modern_Design.mp3 </Files>
+		 <Volume_Percent>60</Volume_Percent>
+		 <Fade_In_Seconds>0.0</Fade_In_Seconds>
+		 <Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		 <Loop>Yes</Loop>
+	 </MusicEvent>
+	 
+	 <MusicEvent Name="Music_Technical_Data">
+		 <Files> Technical_Data.mp3 </Files>
+		 <Volume_Percent>60</Volume_Percent>
+		 <Fade_In_Seconds>0.0</Fade_In_Seconds>
+		 <Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		 <Loop>Yes</Loop>
+	 </MusicEvent>
+
+  <MusicEvent Name="Music_Doom_Of_The_Aliens">
+    <Files> Doom_Of_The_Aliens.mp3 </Files>
+    <Volume_Percent>60</Volume_Percent>
+    <Fade_In_Seconds>0.0</Fade_In_Seconds>
+    <Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+    <Loop>Yes</Loop>
+  </MusicEvent>
+  
+  <!-- ======================================= -->
+	 <!-- Tut01 MUSIC EVENTS -->
+	 <!-- ======================================= -->
+	 
+	 <MusicEvent Name="Music_Tut01_Act01">
+		<!--  <Files> Slithering_Part_2.mp3 </Files> -->
+		 <Files> Surrounding_Part_1.mp3, Surrounding_Part_2.mp3 , Surrounding_Part_3.mp3  </Files>
+		 <Volume_Percent>60</Volume_Percent>
+		 <Fade_In_Seconds>0.0</Fade_In_Seconds>
+		 <Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		 <Loop>Yes</Loop>
+	 </MusicEvent>
+	 
+	 <MusicEvent Name="Music_Tut01_Act02">
+		<!-- <Files> Prepare_For_Oblivion.mp3</Files>-->
+		<Files> Slithering.mp3</Files>
+		 <Volume_Percent>60</Volume_Percent>
+		 <Fade_In_Seconds>2.0</Fade_In_Seconds>
+		 <Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		 <Loop>Yes</Loop>
+	 </MusicEvent>
+	 
+	 <MusicEvent Name="Music_Tut01_Act03">
+		 <Files> Strangers_Attack.mp3 </Files>
+		 <Volume_Percent>60</Volume_Percent>
+		 <Fade_In_Seconds>2.0</Fade_In_Seconds>
+		 <Fade_Out_Previous_Seconds>2.0</Fade_Out_Previous_Seconds>
+		 <Loop>Yes</Loop>
+	 </MusicEvent>
+
+	<!-- ======================================= -->
+	<!-- Rolling Credits Music -->
+	<!-- ======================================= -->
+
+	 <MusicEvent Name="Rolling_Credits">
+		<Files> Credits_UAW_Remix_Suite.mp3, Display_Of_Power.mp3, Damage_King.mp3, Modern_Design.mp3, Electrode.mp3, Composite.mp3, Resources.mp3, Slithering.mp3, Bass_Case.mp3,</Files>
+		  <Volume_Percent> 85 </Volume_Percent>
+		  <Fade_In_Seconds> 0.0 </Fade_In_Seconds>
+		  <Fade_Out_Previous_Seconds> 1.0 </Fade_Out_Previous_Seconds>
+		  <Loop> Yes </Loop>
+	 </MusicEvent>
+
+
+</MusicEvents>
+

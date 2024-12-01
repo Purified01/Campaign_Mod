@@ -1,0 +1,243 @@
+<?xml version="1.0"?>
+<SpecialEffects>
+
+    <X80_Special_Effects Name="_Cloud_01">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>cloud_test.alo</Land_Model_Name>
+		<LandBehavior>CLOUD</LandBehavior>
+		<Scale_Factor>1</Scale_Factor>
+		<Is_Decoration>Yes</Is_Decoration>
+        <Layer_Z_Adjust>250</Layer_Z_Adjust>
+	</X80_Special_Effects>
+
+	<X80_Special_Effects Name="_Fire_Small">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>wf_fire_small00.alo</Land_Model_Name>
+		<LandBehavior> </LandBehavior>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>Yes</Is_Decoration>
+
+		<BehaviorType Name="SFXBehaviorType">
+         <SFXEvent_Engine_Idle_Loop />
+      </BehaviorType>
+
+	</X80_Special_Effects>
+
+	<X80_Special_Effects Name="_Fire_Medium">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>wf_fire_med00.alo</Land_Model_Name>
+		<LandBehavior> </LandBehavior>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>Yes</Is_Decoration>
+
+		<BehaviorType Name="SFXBehaviorType">
+         <SFXEvent_Engine_Idle_Loop> SFX_Generic_Fire_Loop </SFXEvent_Engine_Idle_Loop>
+      </BehaviorType>
+
+	</X80_Special_Effects>
+
+	<X80_Special_Effects Name="_Fire_Large">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>wf_fire_large00.alo</Land_Model_Name>
+		<LandBehavior> </LandBehavior>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>Yes</Is_Decoration>
+
+		<BehaviorType Name="SFXBehaviorType">
+         <SFXEvent_Engine_Idle_Loop> SFX_Generic_Fire_Loop </SFXEvent_Engine_Idle_Loop>
+      </BehaviorType>
+
+	</X80_Special_Effects>
+
+	<X80_Special_Effects Name="Object_Highlight">
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+		<Land_Model_Name>i_highlite_fx_small.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>Yes</Is_Decoration>
+		<Is_Discardable>No</Is_Discardable>
+		<Behavior>IDLE</Behavior>
+	</X80_Special_Effects>
+
+	 <X80_Special_Effects Name="Object_Highlight_Small">
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+		  <Land_Model_Name>i_highlite_fx_small.alo</Land_Model_Name>
+		  <Scale_Factor>0.25</Scale_Factor>
+		  <Is_Decoration>Yes</Is_Decoration>
+		  <Is_Discardable>No</Is_Discardable>
+		  <Behavior>IDLE</Behavior>
+	 </X80_Special_Effects>
+	 
+	 <X80_Special_Effects Name="Volume_Smoke">
+		<Text_ID>Volume_Smoke_FX</Text_ID>
+		<Land_Model_Name />
+		<LandBehavior> </LandBehavior>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>Yes</Is_Decoration>
+	</X80_Special_Effects>
+	
+	 <X80_Special_Effects Name="Fire_Sparks">
+		<Text_ID>Fire_Sparks</Text_ID>
+		<Land_Model_Name>p_Fire_Sparks.alo</Land_Model_Name>
+		<LandBehavior> </LandBehavior>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>Yes</Is_Decoration>
+	</X80_Special_Effects>
+	
+	<X80_Special_Effects Name="Volume_Dust_ground">
+		<Text_ID>Volume_Dust_ground</Text_ID>
+		<Land_Model_Name />
+		<LandBehavior> </LandBehavior>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>Yes</Is_Decoration>
+	</X80_Special_Effects>
+
+	<X80_Special_Effects Name="Masari_Test_building">
+		<Text_ID>Volume_Dust_ground</Text_ID>
+		<Land_Model_Name />
+		<LandBehavior> </LandBehavior>
+		<Behavior>IDLE</Behavior>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>Yes</Is_Decoration>
+	</X80_Special_Effects>
+
+
+	<X80_Special_Effects Name="Novus_portal">
+		<Text_ID>Volume_Dust_ground</Text_ID>
+		<Land_Model_Name>CIN_NB_Portal_alone.alo</Land_Model_Name>
+		<Behavior>IDLE </Behavior>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>Yes</Is_Decoration>
+	</X80_Special_Effects>
+	
+	<X80_Special_Effects Name="Alien_Radiation_Sm_Square">
+		<Text_ID> TEXT_NONE </Text_ID>
+		<Land_Model_Name>fx_radiation_sm_square.alo</Land_Model_Name>
+		<Behavior>
+			SELECTABLE
+		</Behavior>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+
+		<BehaviorType Name="SFXBehaviorType">
+         <SFXEvent_Engine_Idle_Loop> SFX_Generic_Radiation_Loop </SFXEvent_Engine_Idle_Loop>
+      </BehaviorType>
+
+	</X80_Special_Effects>
+	
+	<X80_Special_Effects Name="Alien_Radiation_Med_Square">
+		<Text_ID> TEXT_NONE </Text_ID>
+		<Land_Model_Name>fx_radiation_med_square.alo</Land_Model_Name>
+		<Behavior>
+			SELECTABLE
+		</Behavior>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+
+		<BehaviorType Name="SFXBehaviorType">
+         <SFXEvent_Engine_Idle_Loop> SFX_Generic_Radiation_Loop </SFXEvent_Engine_Idle_Loop>
+      </BehaviorType>
+
+	</X80_Special_Effects>
+
+	<X80_Special_Effects Name="Alien_Radiation_Lrg_Square">
+		<Text_ID> TEXT_NONE </Text_ID>
+		<Land_Model_Name>fx_radiation_lrg_square.alo</Land_Model_Name>
+		<Behavior>
+			SELECTABLE
+		</Behavior>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+
+		<BehaviorType Name="SFXBehaviorType">
+         <SFXEvent_Engine_Idle_Loop> SFX_Generic_Radiation_Loop </SFXEvent_Engine_Idle_Loop>
+      </BehaviorType>
+
+	</X80_Special_Effects>
+
+	<X80_Special_Effects Name="Alien_Radiation_Sm_Rectangle">
+		<Text_ID> TEXT_NONE </Text_ID>
+		<Land_Model_Name>fx_radiation_sm_Rectangle.alo</Land_Model_Name>
+		<Behavior>
+			SELECTABLE
+		</Behavior>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+
+		<BehaviorType Name="SFXBehaviorType">
+         <SFXEvent_Engine_Idle_Loop> SFX_Generic_Radiation_Loop </SFXEvent_Engine_Idle_Loop>
+      </BehaviorType>
+
+	</X80_Special_Effects>
+
+	<X80_Special_Effects Name="Alien_Radiation_Med_Rectangle">
+		<Text_ID> TEXT_NONE </Text_ID>
+		<Land_Model_Name>fx_radiation_med_Rectangle.alo</Land_Model_Name>
+		<Behavior>
+			SELECTABLE
+		</Behavior>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+
+		<BehaviorType Name="SFXBehaviorType">
+         <SFXEvent_Engine_Idle_Loop> SFX_Generic_Radiation_Loop </SFXEvent_Engine_Idle_Loop>
+      </BehaviorType>
+
+	</X80_Special_Effects>
+
+	<X80_Special_Effects Name="Alien_Radiation_Lrg_Rectangle">
+		<Text_ID> TEXT_NONE </Text_ID>
+		<Land_Model_Name>fx_radiation_lrg_Rectangle.alo</Land_Model_Name>
+		<Behavior>
+			SELECTABLE
+		</Behavior>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+
+		<BehaviorType Name="SFXBehaviorType">
+         <SFXEvent_Engine_Idle_Loop> SFX_Generic_Radiation_Loop </SFXEvent_Engine_Idle_Loop>
+      </BehaviorType>
+
+	</X80_Special_Effects>
+
+	<X80_Special_Effects Name="Light_Rays_Sml">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>WF_Light_rays_Sml.alo</Land_Model_Name>
+		<LandBehavior> IDLE</LandBehavior>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>Yes</Is_Decoration>
+
+		<BehaviorType Name="SFXBehaviorType">
+			<SFXEvent_Engine_Idle_Loop />
+		</BehaviorType>
+
+	</X80_Special_Effects>
+	
+	<X80_Special_Effects Name="Light_Rays_Med">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>WF_Light_rays_med.alo</Land_Model_Name>
+		<LandBehavior> IDLE</LandBehavior>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>Yes</Is_Decoration>
+
+		<BehaviorType Name="SFXBehaviorType">
+			<SFXEvent_Engine_Idle_Loop />
+		</BehaviorType>
+
+	</X80_Special_Effects>
+
+	<X80_Special_Effects Name="Light_Rays_Lrg">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>WF_Light_rays_Lrg.alo</Land_Model_Name>
+		<LandBehavior> IDLE</LandBehavior>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>Yes</Is_Decoration>
+
+		<BehaviorType Name="SFXBehaviorType">
+			<SFXEvent_Engine_Idle_Loop />
+		</BehaviorType>
+
+	</X80_Special_Effects>
+	
+	
+
+</SpecialEffects>

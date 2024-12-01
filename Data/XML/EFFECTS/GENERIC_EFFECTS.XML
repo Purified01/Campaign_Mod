@@ -1,0 +1,719 @@
+<?xml version="1.0"?>
+<Effects>
+
+	<Effect Name="Repair_Bridge_Effect">
+		<Duration> .1 </Duration>
+		<Effect_Class> Healing </Effect_Class>
+		
+		<Effect_Component Type="AddBehavior">
+			<Behavior_Name> BRIDGE_REPAIR </Behavior_Name>
+		</Effect_Component>
+	</Effect>	
+	
+	<Effect Name="PerfectMindControlEffect">
+		<Effect_Class> MindControl </Effect_Class>
+		<Duration> -1.0 </Duration>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+		<CategoryMask> CanBeRemovedByAbility</CategoryMask>
+		<Extends_Same_Source_Duration_Only>yes</Extends_Same_Source_Duration_Only>
+
+		<Effect_Component Type="SwitchFaction">
+			<Use_Source_Faction> true </Use_Source_Faction>
+		</Effect_Component>
+
+		<Effect_Component Type="AddBehavior">
+			<Behavior_Name> FORMATION </Behavior_Name>
+		</Effect_Component>
+
+		<Effect_Component Type="AddBehavior">
+			<Behavior_Name> TARGETING </Behavior_Name>
+		</Effect_Component>
+
+		<Effect_Component Type="DisableBehavior">
+			<Behaviors> CIVILIAN </Behaviors>
+		</Effect_Component>
+
+		<!--
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Singularity_Lightning_Bolt_Strike </Particle_System_Type>
+		</Effect_Component>
+		-->
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Is_Mind_Controlled </Attribute>
+			<Modifier_Value> 1.0 </Modifier_Value>
+		</Effect_Component>
+
+      <Effect_Component Type="Lightning">
+         <Lightning_Effect_Name> Mind_Control_Lightning </Lightning_Effect_Name>
+         <Source_Target_Type> SourceToTarget </Source_Target_Type>
+         <Source_Bone_Name> MuzzleB_00 </Source_Bone_Name>
+      </Effect_Component>
+
+	</Effect>
+
+	<Effect Name="ClearMindControlEffect">
+		<Effect_Class> Transparent </Effect_Class>
+		<Duration> 1.0 </Duration>
+		<Extends_Existing_Duration> false </Extends_Existing_Duration>
+
+		<Effect_Component Type="RemoveEffect">
+			<Remove_Effect_Class> MindControl </Remove_Effect_Class>
+		</Effect_Component>
+
+      <Effect_Component Type="RemoveEffect">
+         <Remove_Effect_Class> MindControlVisual </Remove_Effect_Class>
+      </Effect_Component>
+     
+	</Effect>
+
+	<Effect Name="SpeedBoostEffect">
+		
+		<Duration> 5.0 </Duration>
+		<Effect_Class> SpeedBoost </Effect_Class>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+		<CategoryMask> CanBeRemovedByAbility</CategoryMask>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Max_Speed_Mult_Coeff </Attribute>
+			<Modifier_Value> 1.0 </Modifier_Value>
+		</Effect_Component>
+
+		<Effect_Component Type="ParticleSystem">
+			<Application_Probability> .25 </Application_Probability>
+			<Particle_System_Type> Combustive_Fire </Particle_System_Type>
+		</Effect_Component>
+
+		<Effect_Component Type="Lightning">
+			<Lightning_Effect_Name> Effect_Test_Lightning </Lightning_Effect_Name>
+			<Source_Target_Type> SourceToTarget </Source_Target_Type>
+		</Effect_Component>
+
+		<Effect_Component Type="Sound">
+			<Apply_Effect> SFX_Alien_Lightning_Fire </Apply_Effect>
+			<SFX_Loop_Type>SpeedBoostEffectSFX</SFX_Loop_Type>
+			<Stop_On_Remove>yes</Stop_On_Remove>
+		</Effect_Component>
+
+	</Effect>
+	
+	
+	<Effect Name="CatchFireEffect">
+		<Duration> 3.0 </Duration>
+		<Effect_Class> Fire </Effect_Class>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+
+		<Effect_Component Type="DamageOverTime">
+			<Damage_Type> Damage_Fire </Damage_Type>
+			<Amount_Per_Second> 2.0 </Amount_Per_Second>
+		</Effect_Component>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Combustive_Fire </Particle_System_Type>
+		</Effect_Component>
+	</Effect>
+
+	
+	<Effect Name="RevealCloakingEffect">
+		<Duration> 3.0 </Duration>
+		<Effect_Class> RevealCloaking </Effect_Class>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+		<Priority> 10.0 </Priority>
+
+		<Effect_Component Type="RemoveEffect">
+			<Remove_Effect_Class> Cloaking </Remove_Effect_Class>
+		</Effect_Component>
+
+        <Effect_Component Type="RemoveEffect">
+            <Remove_Effect_Class> Mirage </Remove_Effect_Class>
+        </Effect_Component>
+
+		<Effect_Component Type="BlockEffect">
+			<Block_Effect_Class> Cloaking </Block_Effect_Class>
+		</Effect_Component>
+
+        <Effect_Component Type="BlockEffect">
+            <Block_Effect_Class> Mirage </Block_Effect_Class>
+        </Effect_Component>
+
+	</Effect>
+
+	<Effect Name="NegateRevealCloakingEffect">
+		<Duration> 2.0 </Duration>
+		<Effect_Class> NegateRevealCloaking </Effect_Class>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+		<Priority> 10.0 </Priority>
+
+		<Effect_Component Type="RemoveEffect">
+			<Remove_Effect_Class> RevealCloaking </Remove_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="BlockEffect">
+			<Block_Effect_Class> RevealCloaking </Block_Effect_Class>
+		</Effect_Component>
+	</Effect>
+
+		
+	<Effect Name="RemoveAndBlockSpeedEffect">
+		<Duration> 30.0 </Duration>
+		<Effect_Class> Transparent </Effect_Class>
+
+		<Effect_Component Type="RemoveEffect">
+			<Remove_Effect_Class> SpeedBoost </Remove_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="BlockEffect">
+			<Block_Effect_Class> SpeedBoost </Block_Effect_Class>
+		</Effect_Component>
+	</Effect>
+
+	
+	
+	<Effect Name="DisableSpeedAbility">
+		<Duration> 15.0 </Duration>
+		<Effect_Class> Transparent </Effect_Class>
+		<Effect_Component Type="DisableAbility">
+			<Abilities/>
+		</Effect_Component>
+	</Effect>
+
+	
+	<Effect Name="FireRateBoostEffect">
+		<Duration> 5.0 </Duration>
+		<Effect_Class> FireRateEffectClass </Effect_Class>
+		<CategoryMask> CanBeRemovedByAbility</CategoryMask>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Weapon_Rate_Multiplier </Attribute>
+			<Modifier_Value> 2.0 </Modifier_Value>
+		</Effect_Component>
+
+	</Effect>
+
+
+
+
+
+	<!-- ************************************************************** -->
+	<!-- * NoDeathCloneDestroyObject												  -->
+	<!-- * OKSANA																		  -->
+	<!-- ************************************************************** -->
+	<Effect Name="NoDeathCloneDestroyObject">
+		<Duration> -1.0 </Duration>
+		<Effect_Class> InstantDeath </Effect_Class>
+		<Priority>1000000000000</Priority>
+
+		<!-- Oksana: we use Damage instead of Destroy here to get the proper death effects etc -->
+		<Effect_Component Type="Damage">
+			<Damage_Type>Damage_No_Death_Clone</Damage_Type>
+			<Damage_Amount>100000000000</Damage_Amount>
+			<Damage_Percentage>1.0f</Damage_Percentage>
+			<!-- instant kill -->
+		</Effect_Component>
+	</Effect>
+
+
+
+	<!-- ************************************************************** -->
+	<!-- * DestroyObject effect													  -->
+	<!-- * OKSANA																		  -->
+	<!-- ************************************************************** -->
+	<Effect Name="DestroyObject">
+		<Duration> -1.0 </Duration>
+		<Effect_Class> InstantDeath </Effect_Class>
+		<Priority>1000000000000</Priority>
+
+		<!-- Oksana: we use Damage instead of Destroy here to get the proper death effects etc -->
+		<Effect_Component Type="Damage">
+			<Damage_Type>Damage_Default</Damage_Type>
+			<Damage_Amount>100000000000</Damage_Amount>
+			<Damage_Percentage>1.0f</Damage_Percentage>
+			<!-- instant kill -->
+		</Effect_Component>
+	</Effect>
+
+
+
+   <!-- ************************************************************** -->
+   <!-- * DestroyNonGameObject effect													  -->
+   <!-- * OKSANA																		  -->
+   <!-- ************************************************************** -->
+   <Effect Name="DestroyNonGameObject">
+      <Duration> -1.0 </Duration>
+      <Effect_Class> InstantDeath </Effect_Class>
+
+      <Effect_Component Type="Destroy"/>
+   </Effect>
+
+	<!-- ************************************************************** -->
+	<!-- * DestroyWhenEffectRemoved effect										  -->
+	<!-- *       																		  -->
+	<!-- ************************************************************** -->
+	<Effect Name="DestroyWhenEffectRemoved">
+		<Effect_Class> Transparent </Effect_Class>
+
+		<!-- destroy when the effect is over -->
+		<Effect_Component Type="ApplyEffectOnRemove">
+			<Effect_Name> DestroyObject </Effect_Name>
+		</Effect_Component>
+
+	</Effect>
+
+
+
+
+	<!--=================================================================================================
+	== [10/26/2007] Invulnerable for a moment - KDB
+	================================================================================================== -->
+	<Effect Name="MineInvulnerabilityEffect">
+		<Duration> 1.0 </Duration>
+		<Effect_Class> MineInvulnerability </Effect_Class>
+		<Extends_Existing_Duration> false </Extends_Existing_Duration>
+
+		<Effect_Component Type="AddBehavior">
+			<Behavior_Name> INVULNERABLE </Behavior_Name>
+		</Effect_Component>
+	</Effect>
+
+
+	<!--=================================================================================================
+	== [10/19/2006] will fall down to the ground- Oksana Kubushyna
+	================================================================================================== -->
+	<Effect Name="LaunchBallisticBehaviorEffect">
+		<Duration> -1 </Duration>
+		<Effect_Class> Transparent </Effect_Class>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+
+		<!-- Fall to the ground -->
+		<Effect_Component Type="ActivateBehavior">
+			<Behavior_Name> BALLISTIC </Behavior_Name>
+		</Effect_Component>
+	</Effect>
+
+
+	
+	<!--=================================================================================================
+    == [10/18/2006] Change whether a unit can be seen on enemy radar - MLL
+    ================================================================================================== -->
+	<Effect Name="Disable_On_Enemy_Radar">
+		<Effect_Class> DisableOnEnemyRadar </Effect_Class>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+		<Duration> 5 </Duration>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Dont_Show_On_Enemy_Radar </Attribute>
+			<Modifier_Value> 1.0 </Modifier_Value>
+		</Effect_Component>
+	</Effect>
+
+	
+
+
+	<!--=================================================================================================
+    == [10/24/2006] Insignificant effect for Masari seer- MLL
+    ================================================================================================== -->
+	<Effect Name="Insignificant_Effect">
+		<Effect_Class> Insignificant </Effect_Class>
+		<Duration> -1 </Duration>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Category_Mask </Attribute>
+			<Modifier_Integer_Value Converter="GameObjectCategoryType"> Insignificant </Modifier_Integer_Value>
+			<Modifier_Type> Bitwise_Or </Modifier_Type>
+		</Effect_Component>
+
+	</Effect>
+
+	<!--=================================================================================================
+	 == [12/12/2006] Reveal map effect for Col. Randal Moore - MLL
+	 ================================================================================================== -->
+	<Effect Name="Reveal_Map_Effect">
+		<Effect_Class> RevealMap </Effect_Class>
+		<Duration> 9 </Duration>
+		<Effect_Component Type="RevealMap">
+		</Effect_Component>
+	</Effect>
+
+	<!--=================================================================================================
+	== [10/23/2006] Hero Perks = Can't be mind controlled, zombified, collected, virus infected, pulled
+	== from air, or crushed. Regenerates health. All heroes should have this. See Nufai for example.
+	== Note: update perks as designers define them in more details. Adam promised it'll be same for all heroes.
+	==																				- Oksana Kubushyna
+	================================================================================================== -->
+	<Effect Name="HeroPerksEffect">
+		<Duration> -1.0 </Duration>
+		<Effect_Class> HeroPerks </Effect_Class>
+
+		<Priority> 10000.0 </Priority>
+
+		<Effect_Component Type="BlockEffect">
+			<Block_Effect_Class> MindControl </Block_Effect_Class>
+		</Effect_Component>
+
+      <Effect_Component Type="BlockEffect">
+			<Block_Effect_Class> MindControlVisual </Block_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="BlockEffect">
+			<Block_Effect_Class> NovusVirus </Block_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="BlockEffect">
+			<Block_Effect_Class> NovusVirusAuraGenerators </Block_Effect_Class>
+		</Effect_Component>
+		
+		<Effect_Component Type="BlockEffect">
+			<Block_Effect_Class> Beckon </Block_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="HealOverTime">
+			<Amount_Per_Second> 0.0 </Amount_Per_Second>
+			<Percentage_Per_Second>0.006</Percentage_Per_Second>
+		</Effect_Component>
+
+		<!-- add more perks here! -->
+		<!-- Note: block effects based on CategoryMask rather than class when it's implemented -->
+	</Effect>
+
+	
+	
+	<!-- jdg col moore tut01 balance stuff -->
+	<Effect Name="Col_Moore_HeroPerksEffect">
+		<Duration> -1.0 </Duration>
+		<Effect_Class> HeroPerks </Effect_Class>
+
+		<Priority> 10000.0 </Priority>
+
+		<Effect_Component Type="BlockEffect">
+			<Block_Effect_Class> MindControl </Block_Effect_Class>
+		</Effect_Component>
+
+      <Effect_Component Type="BlockEffect">
+			<Block_Effect_Class> MindControlVisual </Block_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="BlockEffect">
+			<Block_Effect_Class> NovusVirus </Block_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="BlockEffect">
+			<Block_Effect_Class> NovusVirusAuraGenerators </Block_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="BlockEffect">
+			<Block_Effect_Class> Beckon </Block_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="HealOverTime">
+			<Amount_Per_Second> 5.0 </Amount_Per_Second>
+			<Percentage_Per_Second>0.0</Percentage_Per_Second>
+		</Effect_Component>
+
+		<!-- add more perks here! -->
+		<!-- Note: block effects based on CategoryMask rather than class when it's implemented -->
+	</Effect>
+
+
+
+	<Effect Name="WoolardHeroPerksEffect">
+		<Duration> -1.0 </Duration>
+		<Effect_Class> HeroPerks </Effect_Class>
+
+		<Priority> 10000.0 </Priority>
+
+		<Effect_Component Type="BlockEffect">
+			<Block_Effect_Class> MindControl </Block_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="BlockEffect">
+			<Block_Effect_Class> MindControlVisual </Block_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="BlockEffect">
+			<Block_Effect_Class> NovusVirus </Block_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="BlockEffect">
+			<Block_Effect_Class> NovusVirusAuraGenerators </Block_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="BlockEffect">
+			<Block_Effect_Class> Beckon </Block_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="HealOverTime">
+			<Amount_Per_Second> 5.0 </Amount_Per_Second>
+			<Percentage_Per_Second>0.0</Percentage_Per_Second>
+		</Effect_Component>
+
+	</Effect>
+	
+	
+	
+
+	<!-- JAC - This is used by research centers for upgrades.  The upgrades are created by
+               hardpoints that destroy themselves after adding an effect to the parent -->
+	<Effect Name="UpgradeFakeHardpointDestroy">
+		<Effect_Class> UpgradeFakeHardpoint </Effect_Class>
+		<Duration> 1.0 </Duration>
+
+		<Effect_Component Type="ApplyEffectOnRemove">
+			<Apply_On_Expiration_Only> false </Apply_On_Expiration_Only>
+			<Effect_Name> DestroyObject </Effect_Name>
+		</Effect_Component>
+
+	</Effect>
+
+	<Effect Name="GenericLandedEffect">
+		<Duration> 1.0 </Duration>
+		<Effect_Class> LandedEffect </Effect_Class>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Category_Mask </Attribute>
+			<Modifier_Integer_Value Converter="GameObjectCategoryType"> Flying </Modifier_Integer_Value>
+			<Modifier_Type> Bitwise_And_Not </Modifier_Type>
+		</Effect_Component>
+
+	</Effect>
+
+	<!-- JSY: This is the effect that slowly repairs units while they're stationed in a friendly region -->
+	<!-- If necessary we could split it off so that each command center type provides a different heal rate -->
+	<Effect Name="GenericFriendlyRegionHOTEffect">
+		<Duration> 0.2 </Duration>
+		<Effect_Class> FriendlyRegionHOT </Effect_Class>
+
+		<Effect_Component Type="Heal">
+			<Amount> 2.0 </Amount>
+		</Effect_Component>
+	</Effect>
+
+	<Effect Name="HQFriendlyRegionHOTEffect">
+		<Duration> 0.2 </Duration>
+		<Effect_Class> FriendlyRegionHOT </Effect_Class>
+
+		<Effect_Component Type="Heal">
+			<Amount> 15.0 </Amount>
+		</Effect_Component>
+	</Effect>
+	
+	<!-- This effect increases the damage that regions deal to enemy units passing over them (default is 0) -->
+	<Effect Name="GenericGlobalRegionDefenseEffect">
+		<Duration> 3.2 </Duration>
+		<Effect_Class> RegionDefense </Effect_Class>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Flyover_Damage </Attribute>
+			<Modifier_Value> 260.0 </Modifier_Value>
+		</Effect_Component>
+	</Effect>
+
+	<!-- This effect reveals stealth heroes that fly over, to or from a region -->
+	<Effect Name="GenericGlobalRegionBlockSpyingEffect">
+		<Duration> 3.2 </Duration>
+		<Effect_Class> GlobalStealth </Effect_Class>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Is_Blocking_Global_Stealth </Attribute>
+			<Modifier_Value> 1.0 </Modifier_Value>
+		</Effect_Component>
+	</Effect>	
+
+
+	
+	
+	<!--=================================================================================================
+	== 01/04/07 OKSANA - Novus Gravity Bomb Effect
+	================================================================================================== -->
+	<Effect Name="NovusGravityBombDotEffect">
+		<Duration> 5.0 </Duration>
+		<Effect_Class> GravityBomb </Effect_Class>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+		<Extends_Same_Source_Duration_Only>yes</Extends_Same_Source_Duration_Only>
+
+		<Effect_Component Type="DamageOverTime">
+			<Damage_Type> Damage_Novus_Black_Hole_Bomb </Damage_Type>
+			<Amount_Per_Second> 200.0 </Amount_Per_Second>
+			<Percentage_Per_Second>0</Percentage_Per_Second>
+		</Effect_Component>
+	</Effect>
+
+	
+	
+	
+	
+	
+	
+	<Effect Name="MooreMedpacEffect">
+		<Effect_Class> Healing </Effect_Class>
+		<Duration> 0.2 </Duration>
+		<CategoryMask> CanBeRemovedByAbility </CategoryMask>
+
+		<Effect_Component Type="ParticleSystem">
+			<Application_Probability> 1.0 </Application_Probability>
+			<Particle_System_Type> Unit_Healed_Particles </Particle_System_Type>
+		</Effect_Component>
+
+		<Effect_Component Type="Heal">
+			<!-- heal to full -->
+			<Percent_Heal> 1.0 </Percent_Heal>
+		</Effect_Component>
+
+    <Effect_Component Type="Sound">
+      <Apply_Effect> SFX_Col_Moore_Health </Apply_Effect>
+      <SFX_Loop_Type>SpeedBoostEffectSFX</SFX_Loop_Type>
+      <Stop_On_Remove>yes</Stop_On_Remove>
+    </Effect_Component>
+
+	</Effect>
+
+
+	
+	
+	
+
+	<!-- PMP - Test effect for purifier story object -->
+	<Effect Name="PurifierObjectDotEffect">
+
+		<Duration> 3.0 </Duration>
+		<Effect_Class> DefilerRadiation </Effect_Class>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+		<Extends_Same_Source_Duration_Only>yes</Extends_Same_Source_Duration_Only>
+
+		<Effect_Component Type="DamageOverTime">
+			<Damage_Type> Damage_Alien_Purifier_Effect </Damage_Type>
+			<Amount_Per_Second> 10.0 </Amount_Per_Second>
+			<Percentage_Per_Second>0</Percentage_Per_Second>
+		</Effect_Component>
+
+		<!-- Spawn DOT terrain object -->
+		<Effect_Component Type="CreateObject">
+			<Create_Object_Type> Proj_Purifier_Object_Blast </Create_Object_Type>
+			<Destroy_On_Remove> true </Destroy_On_Remove>
+			<Position_Type> AtSource </Position_Type>
+			<Use_Source_Player_ID> true </Use_Source_Player_ID>
+		</Effect_Component>
+
+	</Effect>
+
+
+
+	
+
+	<!-- ============================================================================= -->
+	<!-- =====       RADAR MAP EFFECTS															==== -->
+	<!-- ============================================================================= -->
+	<Effect Name="Structure_Enable_Radar_Effect">
+		<Duration> -1.0 </Duration>
+		<Effect_Class> Transparent </Effect_Class>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Radar_Map_Show_Enemy </Attribute>
+			<Modifier_Integer_Value> 1 </Modifier_Integer_Value>
+			<Modifier_Type> Bitwise_Or </Modifier_Type>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Radar_Map_Show_Allied </Attribute>
+			<Modifier_Integer_Value> 1 </Modifier_Integer_Value>
+			<Modifier_Type> Bitwise_Or </Modifier_Type>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Radar_Map_Show_Owned </Attribute>
+			<Modifier_Integer_Value> 1 </Modifier_Integer_Value>
+			<Modifier_Type> Bitwise_Or </Modifier_Type>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Radar_Map_Allow_Mouse_Input </Attribute>
+			<Modifier_Integer_Value> 1 </Modifier_Integer_Value>
+			<Modifier_Type> Bitwise_Or </Modifier_Type>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Radar_Map_Show_Terrain </Attribute>
+			<Modifier_Integer_Value> 1 </Modifier_Integer_Value>
+			<Modifier_Type> Bitwise_Or </Modifier_Type>
+		</Effect_Component>
+		
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Radar_Map_Show_FOW </Attribute>
+			<Modifier_Integer_Value> 1 </Modifier_Integer_Value>
+			<Modifier_Type> Bitwise_Or </Modifier_Type>
+		</Effect_Component>
+	
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Radar_Map_Enable </Attribute>
+			<Modifier_Integer_Value> 1 </Modifier_Integer_Value>
+			<Modifier_Type> Bitwise_Or </Modifier_Type>
+		</Effect_Component>
+		
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Radar_Map_Is_Grayscale </Attribute>
+			<Modifier_Integer_Value> 0 </Modifier_Integer_Value>
+			<Modifier_Type> Bitwise_And </Modifier_Type>
+		</Effect_Component>
+		
+		
+	</Effect>
+	<!-- ============================================================================= -->
+	<!-- =====       END RADAR MAP EFFECTS														==== -->
+	<!-- ============================================================================= -->
+
+
+   <!-- ************************************************************** -->
+   <!-- DissolveDeathCloneEffect effect -->
+   <!-- ************************************************************** -->
+   <Effect Name="DissolveDeathCloneEffect">
+      <Duration> -1.0 </Duration>
+      <Effect_Class> Transparent </Effect_Class>
+
+		<Effect_Component Type="Dissolve">
+			<Dissolve_Effect_Name>Alien_death_small</Dissolve_Effect_Name>
+			<Based_On>InverseTimer</Based_On>
+			<Duration>2.0</Duration>
+		</Effect_Component>
+	</Effect>
+
+
+   <!-- ************************************************************** -->
+   <!-- *****  Upgrading Structure Effect 							  ***** -->
+   <!-- *****  This effect takes care of shutting down certain	  ***** -->
+   <!-- *****  functions such as autonomous turret attacks,      ***** -->
+   <!-- *****  production, income generation, etc. for structures***** -->
+   <!-- *****  that are being upgraded                           ***** -->
+   <!-- ************************************************************** -->
+   <Effect Name="UpgradingStructureEffect">
+      <Duration> 5.0 </Duration>
+      <Effect_Class> UpgradingStructure </Effect_Class>
+      <Extends_Existing_Duration> yes </Extends_Existing_Duration>
+
+      <Effect_Component Type="DisableBehavior">
+         <Behaviors> TURRET, WEAPON, TACTICAL_ENABLER, TARGETING, RADIATION_WEAPON </Behaviors>
+      </Effect_Component>
+
+      <!-- Matter collection for Masari - BEGIN -->
+      <Effect_Component Type="BlockEffect">
+         <Block_Effect_Class> MatterEngineHarvestResearched </Block_Effect_Class>
+      </Effect_Component>
+
+      <Effect_Component Type="BlockEffect">
+         <Block_Effect_Class> MatterEngineHarvest </Block_Effect_Class>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Harvest_Material_Add </Attribute>
+         <!-- stop collection -->
+         <Modifier_Value> -1000.0 </Modifier_Value>
+      </Effect_Component>
+      <!-- Matter collection for Masari - END -->
+      
+   </Effect>
+
+</Effects>
+
+
+

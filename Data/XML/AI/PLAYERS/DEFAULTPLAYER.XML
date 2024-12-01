@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<AIPlayerType>
+
+	<Name>DefaultAIPlayer</Name>
+
+	<Personality>
+		<Focus>1.0</Focus>
+		<Aggressiveness>1.0</Aggressiveness>
+	</Personality>
+	
+	<Difficulty_Adjustments>
+		<Difficulty_Easy>Easy_Default</Difficulty_Easy>
+		<Difficulty_Normal>Normal_Default</Difficulty_Normal>
+		<Difficulty_Hard>Hard_Default</Difficulty_Hard>
+		<Difficulty_Hard_Scripted_Mission> Hard_Scripted_Mission_Default </Difficulty_Hard_Scripted_Mission>
+	</Difficulty_Adjustments>
+	
+</AIPlayerType>
+

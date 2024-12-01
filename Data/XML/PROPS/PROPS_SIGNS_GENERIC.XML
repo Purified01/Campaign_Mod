@@ -1,0 +1,376 @@
+<?xml version="1.0"?>
+
+<Props_Signs_Generic_XML>
+
+<!-- **************************************************************************************** -->	
+<!-- *** OBJECT(S) *********************************************************************** -->	
+<!-- **************************************************************************************** -->	
+
+	<X30_Props_Signs_Generic Name="Abstract_Sign">
+		<!-- ART -->
+		<Scale_Factor>1.0</Scale_Factor>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Prevents_Structure_Placement> No </Prevents_Structure_Placement>
+		<Is_Placed_By_Editor> false </Is_Placed_By_Editor>
+		<Is_Decoration>No</Is_Decoration>
+		<Is_UI_Relevant> false </Is_UI_Relevant>
+
+		<!-- ATTRIBUTES -->
+		<CategoryMask> Medium, Insignificant, Resource_INST </CategoryMask>
+		<Affiliation>CIVILIAN</Affiliation>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> LandStatic </Space_Layer>
+		<UnitCollisionClass> Medium Obstacle </UnitCollisionClass>
+		<Custom_Hard_XExtent_Offset> 4.0 </Custom_Hard_XExtent_Offset>
+
+		<!-- CONFLICT -->
+		<Ranged_Target_Z_Adjust>15.0</Ranged_Target_Z_Adjust>
+		<Is_Valid_Target>True</Is_Valid_Target>
+		<Is_Attackable>true</Is_Attackable>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+
+		<!-- BEHAVIORS -->
+		<LandBehavior> RESOURCE, EFFECT_REGISTRY, ATTRIBUTE_DIRECTORY, TOPPLE </LandBehavior>
+
+		<BehaviorType Name="CrushBehaviorType">
+			<Crush_Defense>3</Crush_Defense>
+		</BehaviorType>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 80 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X30_Props_Signs_Generic>
+
+	
+	
+	<X30_Props_Signs_Generic Name="American_Sign_Fast_Food_01">
+		<Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+		<Land_Model_Name>WB_NA_FastFood_Sign.alo</Land_Model_Name>
+	</X30_Props_Signs_Generic>
+
+	<X30_Props_Signs_Generic Name="American_Sign_Do_Not_Enter">
+		<Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+		<Land_Model_Name>WO_SignNoEnter.alo</Land_Model_Name>
+	</X30_Props_Signs_Generic>
+
+	<X30_Props_Signs_Generic Name="American_Sign_Crosswalk">
+		<Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+		<Land_Model_Name>WO_SignCrosswalk.alo</Land_Model_Name>
+	</X30_Props_Signs_Generic>
+
+	<X30_Props_Signs_Generic Name="American_Sign_School_Zone">
+		<Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+		<Land_Model_Name>WO_SignSchoolZone.alo</Land_Model_Name>
+	</X30_Props_Signs_Generic>
+
+	<X30_Props_Signs_Generic Name="American_Sign_Stop_Sign">
+		<Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+		<Land_Model_Name>WO_SignStop.alo</Land_Model_Name>
+	</X30_Props_Signs_Generic>
+
+   <X30_Props_Signs_Generic Name="European_Road_Sign_01">
+      <Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+      <Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+      <Land_Model_Name>WO_EU_RoadSign00.alo</Land_Model_Name>
+   </X30_Props_Signs_Generic>
+
+   <X30_Props_Signs_Generic Name="European_Road_Sign_02">
+      <Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+      <Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+      <Land_Model_Name>WO_EU_RoadSign01.alo</Land_Model_Name>
+   </X30_Props_Signs_Generic>
+
+   <X30_Props_Signs_Generic Name="European_Road_Sign_03">
+      <Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+      <Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+      <Land_Model_Name>WO_EU_RoadSign02.alo</Land_Model_Name>
+   </X30_Props_Signs_Generic>
+
+   <X30_Props_Signs_Generic Name="European_Road_Sign_04">
+      <Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+      <Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+      <Land_Model_Name>WO_EU_RoadSign03.alo</Land_Model_Name>
+   </X30_Props_Signs_Generic>
+
+   <X30_Props_Signs_Generic Name="European_Road_Sign_05">
+      <Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+      <Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+      <Land_Model_Name>WO_EU_RoadSign04.alo</Land_Model_Name>
+   </X30_Props_Signs_Generic>
+
+   <X30_Props_Signs_Generic Name="European_Road_Sign_06">
+      <Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+      <Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+      <Land_Model_Name>WO_EU_RoadSign05.alo</Land_Model_Name>
+   </X30_Props_Signs_Generic>
+
+   <X30_Props_Signs_Generic Name="European_Road_Sign_07">
+      <Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+      <Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+      <Land_Model_Name>WO_EU_RoadSign06.alo</Land_Model_Name>
+   </X30_Props_Signs_Generic>
+
+   <X30_Props_Signs_Generic Name="American_Sign_Traffic_Light">
+		<Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+		<Land_Model_Name>WO_SignTrafficLight.alo</Land_Model_Name>
+
+		<BehaviorType Name="ToppleBehaviorType">
+			<Switch_To_Alt>1</Switch_To_Alt>
+		</BehaviorType>
+	</X30_Props_Signs_Generic>
+
+	<X30_Props_Signs_Generic Name="American_Sign_Yield">
+		<Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+		<Land_Model_Name>WO_SignYield.alo</Land_Model_Name>
+	</X30_Props_Signs_Generic>
+	
+	<X30_Props_Signs_Generic Name="_Sign_Gas_Station_Prices">
+		<Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+		<Land_Model_Name>WB_NA_GasStation_Sign.alo</Land_Model_Name>
+		<Can_Be_Miraged>Yes</Can_Be_Miraged>
+	</X30_Props_Signs_Generic>
+
+	<X30_Props_Signs_Generic Name="American_Sign_Generic_A">
+		<Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+		<Land_Model_Name>WO_Billboard_01.alo</Land_Model_Name>
+		<Custom_Hard_YExtent> 11.0 </Custom_Hard_YExtent>
+	</X30_Props_Signs_Generic>
+
+	<X30_Props_Signs_Generic Name="American_Sign_Generic_B">
+		<Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+		<Land_Model_Name>WO_Billboard_02.alo</Land_Model_Name>
+		<Custom_Hard_YExtent> 7.0 </Custom_Hard_YExtent>
+	</X30_Props_Signs_Generic>
+
+	<X30_Props_Signs_Generic Name="American_Sign_Generic_C">
+		<Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+		<Land_Model_Name>WO_Billboard_03.alo</Land_Model_Name>
+		<Custom_Hard_YExtent> 7.0 </Custom_Hard_YExtent>
+	</X30_Props_Signs_Generic>
+
+	<X30_Props_Signs_Generic Name="American_Sign_Generic_D">
+		<Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+		<Land_Model_Name>WO_Billboard_04.alo</Land_Model_Name>
+		<Custom_Hard_YExtent> 15.0 </Custom_Hard_YExtent>
+	</X30_Props_Signs_Generic>
+
+	<X30_Props_Signs_Generic Name="American_Sign_Generic_E">
+		<Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+		<Land_Model_Name>WO_Billboard_05.alo</Land_Model_Name>
+		<Custom_Hard_YExtent> 20.0 </Custom_Hard_YExtent>
+	</X30_Props_Signs_Generic>
+	  			
+	<X30_Props_Signs_Generic Name="American_Road_Sign_00">
+		<Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+		<Land_Model_Name>WO_NA_Roadsign00.alo</Land_Model_Name>
+	</X30_Props_Signs_Generic>
+
+	<X30_Props_Signs_Generic Name="American_Road_Sign_01">
+		<Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+		<Land_Model_Name>WO_NA_Roadsign01.alo</Land_Model_Name>
+	</X30_Props_Signs_Generic>
+
+	<X30_Props_Signs_Generic Name="American_Road_Sign_02">
+		<Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+		<Land_Model_Name>WO_NA_Roadsign02.alo</Land_Model_Name>
+	</X30_Props_Signs_Generic>
+	
+	<X30_Props_Signs_Generic Name="American_Road_Sign_04">
+		<Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+		<Land_Model_Name>WO_NA_Roadsign04.alo</Land_Model_Name>
+	</X30_Props_Signs_Generic>
+
+	<X30_Props_Signs_Generic Name="American_Road_Sign_05">
+		<Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+		<Land_Model_Name>WO_NA_Roadsign05.alo</Land_Model_Name>
+	</X30_Props_Signs_Generic>
+
+	<X30_Props_Signs_Generic Name="American_Road_Sign_06">
+		<Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+		<Land_Model_Name>WO_NA_Roadsign06.alo</Land_Model_Name>
+		<Custom_Hard_XExtent> 1.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 6.0 </Custom_Hard_YExtent>
+	</X30_Props_Signs_Generic>
+
+	<X30_Props_Signs_Generic Name="American_Road_Sign_07">
+		<Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+		<Land_Model_Name>WO_NA_Roadsign07.alo</Land_Model_Name>
+	</X30_Props_Signs_Generic>
+
+	<X30_Props_Signs_Generic Name="American_Road_Sign_08">
+		<Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+		<Land_Model_Name>WO_NA_Roadsign08.alo</Land_Model_Name>
+	</X30_Props_Signs_Generic>
+
+	<X30_Props_Signs_Generic Name="American_Road_Sign_09">
+		<Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+		<Land_Model_Name>WO_NA_Roadsign09.alo</Land_Model_Name>
+	</X30_Props_Signs_Generic>
+
+	<X30_Props_Signs_Generic Name="American_Road_Sign_10">
+		<Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+		<Land_Model_Name>WO_NA_Roadsign10.alo</Land_Model_Name>
+	</X30_Props_Signs_Generic>
+
+	<X30_Props_Signs_Generic Name="American_Road_Sign_11">
+		<Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+		<Land_Model_Name>WO_NA_Roadsign11.alo</Land_Model_Name>
+	</X30_Props_Signs_Generic>
+
+	<X30_Props_Signs_Generic Name="American_Road_Sign_13">
+		<Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+		<Land_Model_Name>WO_NA_Roadsign13.alo</Land_Model_Name>
+	</X30_Props_Signs_Generic>
+
+	<X30_Props_Signs_Generic Name="American_Road_Sign_14">
+		<Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+		<Land_Model_Name>WO_NA_Roadsign14.alo</Land_Model_Name>
+	</X30_Props_Signs_Generic>
+
+	<X30_Props_Signs_Generic Name="American_Road_Sign_15">
+		<Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+		<Land_Model_Name>WO_NA_Roadsign15.alo</Land_Model_Name>
+	</X30_Props_Signs_Generic>
+
+	<X30_Props_Signs_Generic Name="American_Road_Sign_16">
+		<Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+		<Land_Model_Name>WO_NA_Roadsign16.alo</Land_Model_Name>
+	</X30_Props_Signs_Generic>
+
+	<X30_Props_Signs_Generic Name="American_Road_Sign_17">
+		<Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+		<Land_Model_Name>WO_NA_Roadsign17.alo</Land_Model_Name>
+		<Custom_Hard_XExtent> 1.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 6.0 </Custom_Hard_YExtent>
+	</X30_Props_Signs_Generic>
+
+	<X30_Props_Signs_Generic Name="American_Road_Sign_18">
+		<Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+		<Land_Model_Name>WO_NA_Roadsign18.alo</Land_Model_Name>
+	</X30_Props_Signs_Generic>
+
+	<X30_Props_Signs_Generic Name="American_Road_Sign_19">
+		<Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+		<Land_Model_Name>WO_NA_Roadsign19.alo</Land_Model_Name>
+	</X30_Props_Signs_Generic>
+
+	<X30_Props_Signs_Generic Name="American_Road_Sign_20">
+		<Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+		<Land_Model_Name>WO_NA_Roadsign20.alo</Land_Model_Name>
+		<Custom_Hard_XExtent> 4.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 4.0 </Custom_Hard_YExtent>
+		<Custom_Hard_YExtent_Offset> 21.0 </Custom_Hard_YExtent_Offset>
+		<Custom_Hard_XExtent_Offset> 0.0 </Custom_Hard_XExtent_Offset>
+	</X30_Props_Signs_Generic>
+
+	<X30_Props_Signs_Generic Name="American_Road_Sign_21">
+		<Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+		<Land_Model_Name>WO_NA_Roadsign21.alo</Land_Model_Name>
+		<Custom_Hard_XExtent> 4.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 4.0 </Custom_Hard_YExtent>
+		<Custom_Hard_YExtent_Offset> 27.0 </Custom_Hard_YExtent_Offset>
+		<Custom_Hard_XExtent_Offset> 0.0 </Custom_Hard_XExtent_Offset>
+	</X30_Props_Signs_Generic>
+
+	<X30_Props_Signs_Generic Name="American_Road_Sign_22">
+		<Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+		<Land_Model_Name>WO_NA_Roadsign22.alo</Land_Model_Name>
+		<Custom_Hard_XExtent> 4.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 4.0 </Custom_Hard_YExtent>
+		<Custom_Hard_YExtent_Offset> 27.0 </Custom_Hard_YExtent_Offset>
+		<Custom_Hard_XExtent_Offset> 0.0 </Custom_Hard_XExtent_Offset>
+	</X30_Props_Signs_Generic>
+
+	<X30_Props_Signs_Generic Name="American_Road_Sign_23">
+		<Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+		<Land_Model_Name>WO_NA_Roadsign23.alo</Land_Model_Name>
+		<Custom_Hard_XExtent> 4.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 4.0 </Custom_Hard_YExtent>
+		<Custom_Hard_YExtent_Offset> 27.0 </Custom_Hard_YExtent_Offset>
+		<Custom_Hard_XExtent_Offset> 0.0 </Custom_Hard_XExtent_Offset>
+	</X30_Props_Signs_Generic>
+
+	<X30_Props_Signs_Generic Name="American_Road_Sign_24">
+		<Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+		<Land_Model_Name>WO_NA_Roadsign24.alo</Land_Model_Name>
+		<Custom_Hard_XExtent> 4.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 4.0 </Custom_Hard_YExtent>
+		<Custom_Hard_YExtent_Offset> 35.0 </Custom_Hard_YExtent_Offset>
+		<Custom_Hard_XExtent_Offset> 0.0 </Custom_Hard_XExtent_Offset>
+	</X30_Props_Signs_Generic>
+
+	<X30_Props_Signs_Generic Name="American_Road_Sign_25">
+		<Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+		<Land_Model_Name>WO_NA_Roadsign25.alo</Land_Model_Name>
+		<Custom_Hard_XExtent> 4.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 4.0 </Custom_Hard_YExtent>
+		<Custom_Hard_YExtent_Offset> 36.0 </Custom_Hard_YExtent_Offset>
+		<Custom_Hard_XExtent_Offset> 0.0 </Custom_Hard_XExtent_Offset>
+	</X30_Props_Signs_Generic>
+
+	<X30_Props_Signs_Generic Name="American_Road_Sign_26">
+		<Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+		<Land_Model_Name>WO_NA_Roadsign26.alo</Land_Model_Name>
+		<Custom_Hard_YExtent> 16.0 </Custom_Hard_YExtent>
+	</X30_Props_Signs_Generic>
+
+	<X30_Props_Signs_Generic Name="American_Road_Sign_27">
+		<Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+		<Land_Model_Name>WO_NA_Roadsign27.alo</Land_Model_Name>
+		<Custom_Hard_YExtent> 16.0 </Custom_Hard_YExtent>
+	</X30_Props_Signs_Generic>
+
+	<X30_Props_Signs_Generic Name="American_Sign_Train_Crossing">
+		<Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+		<Land_Model_Name>WO_Train_SignCrossing.alo</Land_Model_Name>
+	</X30_Props_Signs_Generic>
+
+</Props_Signs_Generic_XML>

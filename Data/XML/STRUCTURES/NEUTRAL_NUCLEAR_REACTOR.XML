@@ -1,0 +1,349 @@
+<?xml version="1.0"?>
+<Neutral_Nuclear_Reactor_XML>
+
+	
+	<!-- **************************************************************************************** -->
+	<!-- *** UNIT(S) **************************************************************************** -->
+	<!-- **************************************************************************************** -->
+
+
+	<X65_Neutral_Multiplayer_Structures Name="Neutral_Nuclear_Reactor">
+
+		<!-- ART -->
+		<Land_Model_Name>WB_Nuclear_Reactor.ALO</Land_Model_Name>
+		<Scale_Factor>0.8</Scale_Factor>
+		<Loop_Idle_Anim_00> Yes </Loop_Idle_Anim_00>
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+    <Last_State_Visible_Under_FOW> True </Last_State_Visible_Under_FOW>
+    <Initial_State_Visible_Under_FOW>True</Initial_State_Visible_Under_FOW>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_ID_NEUTRAL_STRUCTURE_NUCLEAR_REACTOR</Text_ID>
+		<Icon_Name>i_icon_mb_turret.tga</Icon_Name>
+		<GUI_Scene_Name> HealthBar_Scene_Large </GUI_Scene_Name>
+		<GUI_Receives_Input> false </GUI_Receives_Input>
+		<GUI_Min_Scale> 0.3 </GUI_Min_Scale>
+		<GUI_Max_Scale> 2.5 </GUI_Max_Scale>
+		<GUI_Default_Scale> 0.5 </GUI_Default_Scale>
+		<GUI_World_Offset> 0.0, 0.0, -40 </GUI_World_Offset>
+		<Select_Box_Scale>45</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+
+		<!-- ATTRIBUTES -->
+		<Affiliation> Neutral, Masari, Novus, Alien, Military </Affiliation>
+		<CategoryMask> Large, Stationary, Insignificant</CategoryMask>
+		<Victory_Relevant>no</Victory_Relevant>
+		<Should_Always_Colorize> true </Should_Always_Colorize>
+
+		<Attributes SubObjectList="Yes">
+			<Can_Be_Captured> true </Can_Be_Captured>
+			<Novus_Power_Transmission_Radius> 550 </Novus_Power_Transmission_Radius>
+			<Novus_Power_Powerup_Radius> 500 </Novus_Power_Powerup_Radius>
+			<Novus_Flow_Radius> 200.0 </Novus_Flow_Radius>
+			<Max_Structure_Build_Rate>4.0</Max_Structure_Build_Rate>
+		</Attributes>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> LandStatic </Space_Layer>
+		<MovementClass>Building</MovementClass>
+		<UnitCollisionClass> High Obstacle </UnitCollisionClass>
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+
+		<Custom_Hard_XExtent> 115.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 115.0 </Custom_Hard_YExtent>
+		<Custom_Hard_XExtent_Offset> 0.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_YExtent_Offset> 0.0 </Custom_Hard_YExtent_Offset>
+
+		<!-- CONFLICT -->
+		<Is_Attackable> true </Is_Attackable>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Ranged_Target_Z_Adjust>6.0</Ranged_Target_Z_Adjust>
+
+		<Tactical_Health> 1200 </Tactical_Health>
+		<Land_FOW_Reveal_Range>275.0</Land_FOW_Reveal_Range>
+
+		<Land_Damage_Thresholds>1, 0.66, 0.33</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_GENERIC_DETONATION, null</Land_Damage_SFX>
+
+		<!-- BEHAVIORS -->
+		<Behavior>
+			GROUND_STRUCTURE,
+			SELECTABLE
+		</Behavior>
+
+		<LandBehavior>
+			EFFECT_GENERATOR,
+			EFFECT_REGISTRY,
+			ATTRIBUTE_DIRECTORY,
+			GUI,
+			RADAR_MAP_VISIBLE,
+			IDLE,
+			UNIT_AI,
+			REVEAL,
+			HIDE_WHEN_FOGGED,
+			STUNNABLE,
+			EARTHQUAKE_TARGET,
+			AI_TARGET
+		</LandBehavior>
+
+		<BehaviorType Name="AIBehaviorType">
+			<AI_Combat_Power> 1 </AI_Combat_Power>
+			<AI_Target_Level>Individual</AI_Target_Level>
+		</BehaviorType>
+
+		<BehaviorType Name="PoweredBehaviorType">
+			<Role> Generator </Role>
+			<Flow_Visual_Name> Novus_Signal_tower_Flow </Flow_Visual_Name>
+			<Power_Visual_Name> Novus_Signal_tower </Power_Visual_Name>
+			<Radius_Attribute> Novus_Power_Powerup_Radius </Radius_Attribute>
+			<Transmit_Radius_Attribute> Novus_Power_Transmission_Radius </Transmit_Radius_Attribute>
+			<Visual_Attachment_Bone_Name> MuzzleA_00 </Visual_Attachment_Bone_Name>
+			<Flow_Radius_Attribute> Novus_Flow_Radius </Flow_Radius_Attribute>
+		</BehaviorType>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Armor_Type> Armor_Civilian_Structure_Heavy </Armor_Type>
+		</BehaviorType>
+
+    <BehaviorType Name="BuildableObjectBehaviorType">
+      <Tactical_Under_Construction_Object_Type> Novus_Power_Router_Construction </Tactical_Under_Construction_Object_Type>
+      <Tactical_Buildable_Beacon_Type> Novus_Power_Router_Beacon </Tactical_Buildable_Beacon_Type>
+      <!-- used to show the radius of the power transmission -->
+      <Buildable_Placement_Power_Blob_Material_Name>Novus_Power_Radius</Buildable_Placement_Power_Blob_Material_Name>
+      <Buildable_Placement_Transmit_Blob_Material_Name> </Buildable_Placement_Transmit_Blob_Material_Name>
+    </BehaviorType>
+
+		<BehaviorType Name="GameEventSourceBehaviorType">
+			<Game_Event_Source_Category> NeutralStructure </Game_Event_Source_Category>
+		</BehaviorType>
+
+		<BehaviorType Name="ProductionBehaviorType">
+			<Is_Research_Tech_Tree_Lockable> No </Is_Research_Tech_Tree_Lockable>
+		</BehaviorType>
+
+		<BehaviorType Name="GroundStructureBehaviorType">
+			<Is_Command_Center> No </Is_Command_Center>
+		</BehaviorType>
+
+		<BehaviorType Name="EncyclopediaBehaviorType">
+			<Icon_Name />
+		</BehaviorType>
+
+		<BehaviorType Name="TooltipBehaviorType">
+			<Tooltip_Description_Text_ID>TEXT_NEUTRAL_STRUCTURE_NUCLEAR_REACTOR</Tooltip_Description_Text_ID>
+		</BehaviorType>
+
+		<BehaviorType Name="BlobShadowBehaviorType">
+			<Blob_Shadow_Scale>25.0, 25.0</Blob_Shadow_Scale>
+			<Blob_Shadow_Material_Name>Square_Shadow</Blob_Shadow_Material_Name>
+			<Blob_Shadow_Below_Detail_Level>2</Blob_Shadow_Below_Detail_Level>
+			<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+			<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+		</BehaviorType>
+
+		<BehaviorType Name="SFXBehaviorType">
+			<SFXEvent_Select />
+			<Death_SFXEvent_Start_Die>SFX_Structure_Large_Building_Death</Death_SFXEvent_Start_Die>
+		</BehaviorType>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Death_Clone>Damage_Default, Neutral_Nuclear_Reactor_Death_Clone</Death_Clone>
+			<Death_Explosions>Novus_Large_Explosion_Tower</Death_Explosions>
+			<Death_Clone_Keep_Behaviors> EFFECT_REGISTRY </Death_Clone_Keep_Behaviors>
+			<Death_Fade_Time> 0.25 </Death_Fade_Time>
+			<Death_Persistence_Duration> 5 </Death_Persistence_Duration>
+			<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+		</BehaviorType>
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.05 0.05</Radar_Icon_Size>
+		</BehaviorType>
+
+		<BehaviorType Name="GUIBehaviorType">
+			<GUI_Bracket_Size>0</GUI_Bracket_Size>
+		</BehaviorType>
+
+		<BehaviorType Name="CrushBehaviorType">
+			<Crush_Defense>60</Crush_Defense>
+		</BehaviorType>
+
+		<BehaviorType Name="CaptureBehaviorType">
+			<Seconds_To_Capture> 8.0 </Seconds_To_Capture>
+		</BehaviorType>
+
+		<BehaviorType Name="LuaScriptBehaviorType">
+			<Lua_Land_Behaviors> MasariMatterEngine </Lua_Land_Behaviors>
+			<!-- need to set all data as pooled scripts won't clear old data -->
+			<Lua_Script_Data>
+				MatterEngine = {}
+				MatterEngine.ResourcesPerTimeBlock = 2.0
+				MatterEngine.ResourcesTimeSeconds = 2.0
+				MatterEngine.ResourcesStorage = 100.0
+				MatterEngine.MustBeOfFaction = "Masari"
+			</Lua_Script_Data>
+		</BehaviorType>
+
+		<!-- EFFECT GENERATORS -->
+		<Effect_Generator_Data SubObjectList="Yes">
+
+			<Effect_Generator Name="NuclearReactorNovusGenerator">
+				<Is_Independent_Generator> true </Is_Independent_Generator>
+				<Should_Deactivate_Manually> false </Should_Deactivate_Manually>
+				<Starts_Active> true </Starts_Active>
+				<Modal_Refresh_Frequency> 5.0 </Modal_Refresh_Frequency>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> NuclearReactorNovusEffect </Effect_Name>
+					<Duration> 5.1 </Duration>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+					<Target_Filter> Is_Player_Of_Faction(source.Get_Owner(), "Novus") </Target_Filter>
+				</Effect_Generator_Entry>
+
+			</Effect_Generator>
+
+			<Effect_Generator Name="NuclearReactorRadiationBleedGenerator">
+				<Is_Independent_Generator> true </Is_Independent_Generator>
+				<Should_Deactivate_Manually> false </Should_Deactivate_Manually>
+				<Starts_Active> true </Starts_Active>
+
+				<Modal_Refresh_Frequency> 10.0 </Modal_Refresh_Frequency>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> RadiationBleedVisualEffect </Effect_Name>
+					<Duration> -1.0 </Duration>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+					<Deactivate_Parent_If_Idle> true </Deactivate_Parent_If_Idle>
+					<Frames_Between_Remove_Invalid_Targets> 1 </Frames_Between_Remove_Invalid_Targets>
+					<Target_Filter> Is_Player_Of_Faction(source.Get_Owner(), "Alien") </Target_Filter>
+				</Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry2">
+					<Effect_Name> RadiationBleedVisualExpandOneEffect </Effect_Name>
+					<Duration> 20.0 </Duration>
+					<Base_Delay> 5.0 </Base_Delay>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+					<Target_Filter> Is_Player_Of_Faction(source.Get_Owner(), "Alien") </Target_Filter>
+				</Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry3">
+					<Effect_Name> RadiationBleedVisualExpandTwoEffect </Effect_Name>
+					<Duration> -1.0 </Duration>
+					<Base_Delay> 10.0 </Base_Delay>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+					<Target_Filter> Is_Player_Of_Faction(source.Get_Owner(), "Alien") </Target_Filter>
+				</Effect_Generator_Entry>
+
+			</Effect_Generator>
+
+		</Effect_Generator_Data>
+
+	</X65_Neutral_Multiplayer_Structures>
+
+	<!-- **************************************************************************************** -->
+	<!-- ***     DEATH CLONE 	   *************************************************************** -->
+	<!-- **************************************************************************************** -->
+
+
+	<X65_Neutral_Multiplayer_Structures Name="Neutral_Nuclear_Reactor_Death_Clone">
+
+		<!-- ART -->
+		<Land_Model_Name>WB_Nuclear_Reactor_DC.ALO</Land_Model_Name>
+		<Scale_Factor>0.8</Scale_Factor>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+		<!-- ATTRIBUTES -->
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+
+		<!-- CONFLICT -->
+		<Ranged_Target_Z_Adjust>0.1</Ranged_Target_Z_Adjust>
+
+		<LandBehavior>
+			EFFECT_REGISTRY,
+			EFFECT_GENERATOR,
+			ATTRIBUTE_DIRECTORY,
+			PARTICLE
+		</LandBehavior>
+
+		<BehaviorType Name="SFXBehaviorType">
+			<Death_SFXEvent_End_Die />
+			<Death_SFXEvent_Start_Die> SFX_Structure_Large_Building_Death </Death_SFXEvent_Start_Die>
+		</BehaviorType>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Specific_Death_Anim_Type> DIE </Specific_Death_Anim_Type>
+			<Death_Fade_Time> 0.25 </Death_Fade_Time>
+			<Death_Persistence_Duration> 0.0 </Death_Persistence_Duration>
+			<Rubble_Core>Destroyed_Nuclear_Reactor</Rubble_Core>
+		</BehaviorType>
+
+	</X65_Neutral_Multiplayer_Structures>
+
+
+
+
+
+	<X65_Neutral_Multiplayer_Structures Name="Destroyed_Nuclear_Reactor">
+
+		<!-- ART -->
+		<Land_Model_Name>WB_Nuclear_Reactor_hulk.alo</Land_Model_Name>
+		<Scale_Factor>0.8</Scale_Factor>
+		<Is_Decoration>Yes</Is_Decoration>
+
+		<!-- INTERFACE -->
+
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+		<!-- ATTRIBUTES -->
+		<Affiliation>Neutral</Affiliation>
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+
+		<!-- BEHAVIORS -->
+		<LandBehavior>COMBINABLE</LandBehavior>
+
+	</X65_Neutral_Multiplayer_Structures>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</Neutral_Nuclear_Reactor_XML>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+

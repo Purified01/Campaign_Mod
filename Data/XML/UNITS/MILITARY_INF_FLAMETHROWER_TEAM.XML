@@ -1,0 +1,570 @@
+<?xml version="1.0"?>
+<Military_Inf_Flamethrower_Team_XML>
+
+<!-- **************************************************************************************** -->	
+<!-- *** TEAMS ****************************************************************************** -->	
+<!-- **************************************************************************************** -->	
+
+	<X11_Military_Units Name="Military_Team_Flamethrower">
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_UNIT_MILITARY_FLAMETHROWER_TEAM</Text_ID>
+		<Select_Box_Scale>0</Select_Box_Scale>
+		<Show_Name>No</Show_Name>
+		<GUI_Scene_Name> HealthBar_Scene_Small </GUI_Scene_Name> 
+		<GUI_Receives_Input> false </GUI_Receives_Input>
+		<GUI_Min_Scale> 0.3 </GUI_Min_Scale>
+		<GUI_Max_Scale> 2.5 </GUI_Max_Scale>
+		<GUI_Default_Scale> 0.5 </GUI_Default_Scale>
+		<GUI_World_Offset> 0.0, 0.0, -10 </GUI_World_Offset>
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+		
+		<!-- ATTRIBUTES -->
+        <LOD_Bias>14</LOD_Bias>
+		<Create_Team_Type> Military_Team_Flamethrower </Create_Team_Type>
+		<Affiliation> Military </Affiliation>
+		<CategoryMask> TeamContainer, Small, Organic, CanAttack, RadiationHurts </CategoryMask>
+		<Max_Squad_Size> 5 </Max_Squad_Size>
+		<Company_Units>Military_Flamethrower,Military_Flamethrower, Military_Flamethrower</Company_Units><!-- jdg flamethrower teams reduced to 3 members per Adam -->
+		<Build_Limit_Lifetime_Per_Player> -1 </Build_Limit_Lifetime_Per_Player>
+		<Importance> 0.4 </Importance>
+		<Shot_Type> Infantry </Shot_Type>
+
+      <Attributes SubObjectList="Yes">
+         <Can_Ride_In_Vehicles> true </Can_Ride_In_Vehicles>
+         <Can_Garrison_Buildings> true </Can_Garrison_Buildings>
+		</Attributes>
+
+		<!-- MOVEMENT -->
+		<MovementClass>Infantry</MovementClass>
+		<OccupationStyle>1x1</OccupationStyle>
+		<UnitCollisionClass> Infantry </UnitCollisionClass>
+		<Space_Layer> LandDynamic </Space_Layer>
+		<Max_Speed> 1.2 </Max_Speed>
+		<Max_Rate_Of_Turn>180.0</Max_Rate_Of_Turn>
+		<MovementPredictionInterval> 2.5 </MovementPredictionInterval>
+		<ContainerArrangement> Dartboard </ContainerArrangement>
+		<FormationOrder> 2 </FormationOrder>
+		<FormationSpacing> .5 </FormationSpacing>
+		<OverrideAcceleration> .1 </OverrideAcceleration>
+		<OverrideDeceleration> .1 </OverrideDeceleration>
+		<Verlet_Coefficient> 0.01 </Verlet_Coefficient>
+		<Custom_Hard_XExtent> 12.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+
+		<!-- CONFLICT -->
+		<Is_Attackable>true</Is_Attackable>
+		<Land_FOW_Reveal_Range>200.0</Land_FOW_Reveal_Range>
+		<Ranged_Target_Z_Adjust> 7.0 </Ranged_Target_Z_Adjust>
+		<Attack_Category_Restrictions> Flying | Resource | Resource_INST </Attack_Category_Restrictions>
+		
+		<!-- BEHAVIORS -->
+
+		<LandBehavior>
+			TEAM,
+			SELECTABLE,
+			GUI,
+			UNIT_AI,
+			EFFECT_REGISTRY,
+			REVEAL,
+			LAND_TEAM_CONTAINER_LOCOMOTOR,
+			TEAM_TARGETING,
+			FORMATION,
+			AI_RECRUITABLE,
+			AI_TARGET
+		</LandBehavior>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Armor_Type> Armor_Military_Infantry_Heavy </Armor_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="ProductionBehaviorType">
+			<Size_Value> 10 </Size_Value>
+			<Is_Research_Tech_Tree_Lockable> Yes </Is_Research_Tech_Tree_Lockable>
+		</BehaviorType>
+
+		<BehaviorType Name="BuildableObjectBehaviorType">
+			<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+			<Tactical_Build_Cost_Campaign> 400 </Tactical_Build_Cost_Campaign>
+			<Tactical_Build_Cost_Multiplayer> 400 </Tactical_Build_Cost_Multiplayer>
+			<Tactical_Build_Time_Seconds> 10 </Tactical_Build_Time_Seconds>
+			<Tactical_UI_Build_Queue_Order> 2 </Tactical_UI_Build_Queue_Order>
+		</BehaviorType>
+
+    <BehaviorType name="AIBehaviorType">
+      <AI_Combat_Power> 1 </AI_Combat_Power>
+      <Idle_Chase_Range> 20.0 </Idle_Chase_Range> <!-- Double click guard area Keep very small-->
+      <Guard_Chase_Range> 130.0 </Guard_Chase_Range>  <!-- Guard radius for unit-->
+      <Autonomous_Move_Extension_Vs_Attacker> 20.0 </Autonomous_Move_Extension_Vs_Attacker>  <!--Range outside of guard area unit will move-->
+      <Attack_Move_Response_Range> 50.0 </Attack_Move_Response_Range>   <!-- When given a attack move command unit will travel this distance from path to attack-->
+      <AI_Target_Level>Group_Member</AI_Target_Level>
+    </BehaviorType>
+
+    <BehaviorType Name="WeaponBehaviorType">
+      <Targeting_Priority_Set> Military_Flame_Marine_Target_Priority </Targeting_Priority_Set>
+      <Targeting_Fire_Inaccuracy> 1.0 </Targeting_Fire_Inaccuracy>
+      <Targeting_Min_Attack_Distance> 0.0 </Targeting_Min_Attack_Distance>
+      <Targeting_Max_Attack_Distance> 70.0 </Targeting_Max_Attack_Distance>
+      <!-- jdg ... was 70 -->
+    </BehaviorType>
+
+		<BehaviorType Name="LuaScriptBehaviorType">
+			<Lua_Only_Service_If_AI>True</Lua_Only_Service_If_AI>
+			<Lua_Land_Behaviors> ScienceTeam </Lua_Land_Behaviors>
+			<Lua_Script_Data> 
+				<!-- Time that it takes for the science team to retrieve the object in tactical mode -->
+				SCIENCE_TEAM_ANALYZE_TIME = { }
+				SCIENCE_TEAM_ANALYZE_TIME.ALIEN_TECH_DROP_1 = 20 -- 20 seconds to analyze/retrieve
+				<!-- Time that it takes to research the object in strategic mode -->
+				SCIENCE_TEAM_RESEARCH_TIME = { }
+				SCIENCE_TEAM_RESEARCH_TIME.ALIEN_TECH_DROP_1 = 30 -- 30 seconds to research
+			</Lua_Script_Data>
+		</BehaviorType>
+
+		<BehaviorType Name="EncyclopediaBehaviorType">
+			<Icon_Name> i_icon_flamethrower.tga </Icon_Name>
+		</BehaviorType>
+		
+		<BehaviorType Name="TooltipBehaviorType">
+			<Tooltip_Description_Text_ID> TEXT_TOOLTIP_DESCRIPTION_MILITARY_FLAMETHROWER_SQUAD </Tooltip_Description_Text_ID>
+			<Tooltip_Category> TEXT_TOOLTIP_CATEGORY_INFANTRY </Tooltip_Category>
+			<Tooltip_Good_Against> </Tooltip_Good_Against>
+			<Tooltip_Vulnerable_To> </Tooltip_Vulnerable_To>
+		</BehaviorType>
+		
+		<BehaviorType Name="SFXBehaviorType">
+			<SFXEvent_Fire />
+			<SFXEvent_Weapon_Firing_Loop> SFX_Military_Flamethrower_Loop </SFXEvent_Weapon_Firing_Loop>
+			<SFXEvent_Select>Unit_Select_Military_Flamethrower</SFXEvent_Select>
+			<SFXEvent_Move>Unit_Move_A_Military_Flamethrower</SFXEvent_Move>
+			<SFXEvent_Move_At_Top_Speed>Unit_Move_B_Military_Flamethrower</SFXEvent_Move_At_Top_Speed>
+			<SFXEvent_Attack>Unit_Attack_A_Military_Flamethrower</SFXEvent_Attack>
+			<SFXEvent_Attack_At_Top_Speed>Unit_Attack_B_Military_Flamethrower</SFXEvent_Attack_At_Top_Speed>
+         <SFXEvent_Guard />
+			<Death_SFXEvent_Start_Die>Unit_Death_Military_Flamethrower</Death_SFXEvent_Start_Die>
+			<SFXEvent_Unit_Lost />
+			<SFXEvent_Tactical_Build_Started>GUI_BUILD_Infantry</SFXEvent_Tactical_Build_Started>
+			<SFXEvent_Tactical_Build_Complete>Unit_Select_Military_Flamethrower</SFXEvent_Tactical_Build_Complete>
+			<SFXEvent_Tactical_Build_Cancelled>GUI_BUILD_Infantry_Canceled</SFXEvent_Tactical_Build_Cancelled>
+			
+			<!-- Maria 05.01.2006 - Adding build sounds for Global production -->
+			<SFXEvent_Build_Started>GUI_BUILD_Infantry</SFXEvent_Build_Started>
+			<SFXEvent_Build_Complete>Unit_Select_Military_Flamethrower</SFXEvent_Build_Complete>
+			<SFXEvent_Build_Cancelled>GUI_BUILD_Infantry_Canceled</SFXEvent_Build_Cancelled>
+		</BehaviorType>
+
+		<BehaviorType Name="CrushBehaviorType">
+			 <Crush_Defense>10</Crush_Defense>
+		</BehaviorType>
+		
+		<BehaviorType Name="FleetBehaviorType">
+			<!-- Maria 05.24.2006 - How much space does the unit take up -->
+			<Unit_Pop_Cap> 1 </Unit_Pop_Cap>
+		</BehaviorType>
+
+	</X11_Military_Units>
+	
+
+<!-- **************************************************************************************** -->	
+<!-- *** UNIT(S) **************************************************************************** -->	
+<!-- **************************************************************************************** -->	
+
+	<X11_Military_Units Name="Military_Flamethrower">
+
+		<!-- ART -->
+		<Land_Model_Name> MI_Flamethrower.ALO </Land_Model_Name> 
+		<!-- <SurfaceFX_Name> Generic_Footprint </SurfaceFX_Name> -->
+		<Scale_Factor> 1.2 </Scale_Factor>
+		<Target_Bones> B_PELVIS </Target_Bones>
+		<Loop_Idle_Anim_00> No </Loop_Idle_Anim_00>
+		<Occlusion_Silhouette_Enabled> 1 </Occlusion_Silhouette_Enabled>
+		<Death_Fade_Time> 0.25 </Death_Fade_Time>
+		<Death_Persistence_Duration> 10 </Death_Persistence_Duration>
+		<No_Colorization_Color> 255, 200, 0, 255 </No_Colorization_Color>
+      <AssetBank> BANK_MILITARY </AssetBank>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_UNIT_MILITARY_FLAMETHROWER_TEAM</Text_ID>
+		<GUI_Receives_Input> false </GUI_Receives_Input>
+		<GUI_Min_Scale> 0.3 </GUI_Min_Scale>
+		<GUI_Max_Scale> 2.5 </GUI_Max_Scale>
+		<GUI_Default_Scale> 0.4 </GUI_Default_Scale>
+		<GUI_World_Offset> 0.0, 0.0, -10 </GUI_World_Offset>
+		<Mouse_Collide_Override_Sphere_Radius> 10.0 </Mouse_Collide_Override_Sphere_Radius>
+		<Select_Box_Scale> 15 </Select_Box_Scale>
+		<Select_Box_Z_Adjust> 3.0f </Select_Box_Z_Adjust>
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+		<!-- ATTRIBUTES -->
+        <LOD_Bias>14</LOD_Bias>
+		<CategoryMask> Male, Small, Organic, CanAttack, RadiationHurts </CategoryMask>
+		<Affiliation>Military</Affiliation>
+		<Is_Attackable>true</Is_Attackable>
+		<Victory_Relevant>no</Victory_Relevant>
+		<Weather_Category>Infantry</Weather_Category>
+		<Create_Team>Yes</Create_Team>
+		<Can_Fall_From_Bridge> true </Can_Fall_From_Bridge>
+
+		<Attributes SubObjectList="Yes">
+			<Can_Ride_In_Vehicles> true </Can_Ride_In_Vehicles>
+			<Can_Garrison_Buildings> true </Can_Garrison_Buildings>
+			<Is_Immune_To_Virus> true </Is_Immune_To_Virus>
+			<Is_Immune_To_Amplifier_Lockdown> true </Is_Immune_To_Amplifier_Lockdown>
+			<Can_Garrison_Buildings> true </Can_Garrison_Buildings>
+		</Attributes>
+
+		<!-- MOVEMENT -->
+		<MovementClass>Infantry</MovementClass>
+		<UnitCollisionClass> Infantry </UnitCollisionClass>
+		<OccupationStyle>1x1</OccupationStyle>
+		<Space_Layer> None </Space_Layer>
+		<Max_Speed> 1.4 </Max_Speed>
+		<Max_Rate_Of_Turn> 8.0 </Max_Rate_Of_Turn>
+		<Stopped_Rate_Of_Turn> 12.0 </Stopped_Rate_Of_Turn>
+		<Strafe_Max_Speed_Coefficient> .66 </Strafe_Max_Speed_Coefficient>
+		<Backpedal_Max_Speed_Coefficient> .5 </Backpedal_Max_Speed_Coefficient>
+		<OverrideAcceleration> .125 </OverrideAcceleration>
+		<OverrideDeceleration> .125 </OverrideDeceleration>
+		<Movement_Animation_Speed> 0.8 </Movement_Animation_Speed>
+		<Rotation_Animation_Speed> 20.0 </Rotation_Animation_Speed>
+		<Walk_Animation_Speed> .366 </Walk_Animation_Speed>
+		<Crouch_Animation_Speed> .537 </Crouch_Animation_Speed>
+		<Strafe_Animation_Speed> .625 </Strafe_Animation_Speed>
+		<Backpedal_Animation_Speed> .5 </Backpedal_Animation_Speed>
+		<Custom_Soft_Footprint_Radius> 5.0 </Custom_Soft_Footprint_Radius>
+		<Custom_Hard_XExtent> 3.5 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 3.5 </Custom_Hard_YExtent>
+		<Should_Move_Anim_Lockout_Attack_Anim> true </Should_Move_Anim_Lockout_Attack_Anim>
+		<FormationRaggedness> 1.6 </FormationRaggedness>
+		<MaxJiggleDistance> 3.5 </MaxJiggleDistance>
+		<FormationSpacing> .5 </FormationSpacing>
+
+		<!-- CONFLICT -->
+		<Ranged_Target_Z_Adjust> 7.0 </Ranged_Target_Z_Adjust>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Land_FOW_Reveal_Range>200.0</Land_FOW_Reveal_Range>
+		<Surface_Type_Cover_Damage_Shield>.5</Surface_Type_Cover_Damage_Shield>
+
+		<Tactical_Health> 80 </Tactical_Health>
+
+		<Attack_Category_Restrictions> Flying | Resource | Resource_INST </Attack_Category_Restrictions>
+
+		<!-- BEHAVIORS-->
+		<LandBehavior>
+			EFFECT_REGISTRY,
+			ATTRIBUTE_DIRECTORY,
+			SELECTABLE,
+			SURFACE_FX,
+			RADAR_MAP_VISIBLE,
+			LAND_TEAM_INFANTRY_LOCOMOTOR,
+			FORMATION,
+			IDLE,
+			WEAPON,
+			TURRET,
+			REVEAL,
+			HIDE_WHEN_FOGGED,
+			DAMAGE_TRACKING,
+			BALLISTIC
+		</LandBehavior>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Armor_Type> Armor_Military_Infantry_Heavy </Armor_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="ProductionBehaviorType">
+			<Size_Value> 10 </Size_Value>
+			<Is_Research_Tech_Tree_Lockable> Yes </Is_Research_Tech_Tree_Lockable>
+		</BehaviorType>
+
+		<BehaviorType Name="BuildableObjectBehaviorType">
+			<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+			<Tactical_Build_Cost_Campaign> 10 </Tactical_Build_Cost_Campaign>
+			<Tactical_Build_Cost_Multiplayer> 10 </Tactical_Build_Cost_Multiplayer>
+			<Tactical_Build_Time_Seconds> 5 </Tactical_Build_Time_Seconds>
+		</BehaviorType>
+
+		<BehaviorType name="AIBehaviorType">
+			<AI_Combat_Power> 1 </AI_Combat_Power>
+			<Idle_Chase_Range> 1.0 </Idle_Chase_Range>
+			<Guard_Chase_Range> 1.0 </Guard_Chase_Range>
+			<Attack_Move_Response_Range> 1.0 </Attack_Move_Response_Range>
+			<Autonomous_Move_Extension_Vs_Attacker> 1.0 </Autonomous_Move_Extension_Vs_Attacker>
+			<AI_Target_Level>Individual_Or_Group</AI_Target_Level>
+		</BehaviorType>
+
+		<BehaviorType Name="WeaponBehaviorType">
+			<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
+			<Targeting_Priority_Set> Military_Flame_Marine_Target_Priority </Targeting_Priority_Set>
+			<Targeting_Fire_Inaccuracy> 1.0 </Targeting_Fire_Inaccuracy>		
+			<Targeting_Min_Attack_Distance> 0.0 </Targeting_Min_Attack_Distance>
+			<Targeting_Max_Attack_Distance> 70.0 </Targeting_Max_Attack_Distance> 
+			<Projectile_Types>Proj_Military_Flamethrower</Projectile_Types>
+			<Projectile_Fire_Recharge_Seconds>0.05</Projectile_Fire_Recharge_Seconds>
+			<Projectile_Fire_Recharge_Max_Random_Frames> 0 </Projectile_Fire_Recharge_Max_Random_Frames>
+			<Projectile_Fire_Pulse_Count>20</Projectile_Fire_Pulse_Count>
+			<Projectile_Fire_Pulse_Delay_Seconds>0.1</Projectile_Fire_Pulse_Delay_Seconds>
+
+			<Looping_Attack_Particle_System>  </Looping_Attack_Particle_System>
+			<Is_Attack_Anim_Looped> true </Is_Attack_Anim_Looped>
+			<Looped_Attack_Anim_Timeout> 8 </Looped_Attack_Anim_Timeout>
+			<Delay_Looped_Attack_Sound_Termination>0.1</Delay_Looped_Attack_Sound_Termination>
+            <Blend_After_Attack>false </Blend_After_Attack>
+
+		</BehaviorType>
+
+		<BehaviorType Name="EncyclopediaBehaviorType">
+			<Icon_Name> i_button_uea_science.tga </Icon_Name>
+		</BehaviorType>
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.02 0.02</Radar_Icon_Size>
+		</BehaviorType>
+
+		<BehaviorType Name="TurretBehaviorType">
+			<Barrel_Bone_Name> Barrel </Barrel_Bone_Name>
+			<Turret_Bone_Name> Turret </Turret_Bone_Name>
+			<Turret_Rotate_Speed> 20.0 </Turret_Rotate_Speed>
+			<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+			<Apply_Y_Turret_Rotate_To_Axis>1</Apply_Y_Turret_Rotate_To_Axis>
+			<Turret_Rotate_Extent_Degrees> 45.0 </Turret_Rotate_Extent_Degrees>
+			<Turret_Elevate_Extent_Degrees> 10.0 </Turret_Elevate_Extent_Degrees>
+			<Ground_Vehicle_Turret_Target> Yes </Ground_Vehicle_Turret_Target>
+			<Ground_Infantry_Turret_Target> Yes </Ground_Infantry_Turret_Target>
+			<Turret_XY_Only> true </Turret_XY_Only>					
+		</BehaviorType>
+				
+		<BehaviorType Name="BallisticBehaviorType">
+			<Ballistic_Weight> 1.0 </Ballistic_Weight>
+			<Should_Face_Into_Knockback> true </Should_Face_Into_Knockback>
+		</BehaviorType>
+		
+		<BehaviorType Name="BlobShadowBehaviorType">
+			<Blob_Shadow_Below_Detail_Level>1</Blob_Shadow_Below_Detail_Level>
+			<Blob_Shadow_Scale>10.0, 10.0</Blob_Shadow_Scale>
+			<Blob_Shadow_Bone_Name>B_Chest</Blob_Shadow_Bone_Name>
+			<Blob_Shadow_Material_Name>Generic_Shadow</Blob_Shadow_Material_Name>
+			<Blob_Shadow_Bone_Name>B_Chest</Blob_Shadow_Bone_Name>
+			<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+			<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+		</BehaviorType>
+
+		<BehaviorType Name="CrushBehaviorType">
+			 <Crush_Defense>10</Crush_Defense>
+		</BehaviorType>
+
+		<BehaviorType Name="SFXBehaviorType">
+			<SFXEvent_Fire />
+			<SFXEvent_Weapon_Firing_Loop> SFX_Military_Flamethrower_Loop </SFXEvent_Weapon_Firing_Loop>
+			<SFXEvent_Select>Unit_Select_Military_Flamethrower</SFXEvent_Select>
+			<SFXEvent_Move>Unit_Move_A_Military_Flamethrower</SFXEvent_Move>
+			<SFXEvent_Move_At_Top_Speed>Unit_Move_B_Military_Flamethrower</SFXEvent_Move_At_Top_Speed>
+			<SFXEvent_Attack>Unit_Attack_A_Military_Flamethrower</SFXEvent_Attack>
+			<SFXEvent_Attack_At_Top_Speed>Unit_Attack_B_Military_Flamethrower</SFXEvent_Attack_At_Top_Speed>
+         <SFXEvent_Guard />
+			<Death_SFXEvent_Start_Die>Unit_Death_Military_Flamethrower</Death_SFXEvent_Start_Die>
+			<SFXEvent_Unit_Lost />
+			<SFXEvent_Tactical_Build_Started>GUI_BUILD_Infantry</SFXEvent_Tactical_Build_Started>
+			<SFXEvent_Tactical_Build_Complete>Unit_Select_Military_Flamethrower</SFXEvent_Tactical_Build_Complete>
+			<SFXEvent_Tactical_Build_Cancelled>GUI_BUILD_Infantry_Canceled</SFXEvent_Tactical_Build_Cancelled>
+			
+			<!-- Maria 05.01.2006 - Adding build sounds for Global production -->
+			<SFXEvent_Build_Started>GUI_BUILD_Infantry</SFXEvent_Build_Started>
+			<SFXEvent_Build_Complete>Unit_Select_Military_Flamethrower</SFXEvent_Build_Complete>
+			<SFXEvent_Build_Cancelled>GUI_BUILD_Infantry_Canceled</SFXEvent_Build_Cancelled>
+		</BehaviorType>
+		
+		<BehaviorType Name="DeathFXBehaviorType">
+         <Death_Clone> Damage_Default, Military_Flamethrower_Death_Clone_Resource </Death_Clone>
+			<Death_Clone> Damage_Alien_HP_Lightning, Military_Flamethrower_Death_Clone_Skeleton </Death_Clone>
+			<Death_Clone> Damage_Alien_HP_Plasma, Military_Flamethrower_Death_Clone_Skeleton </Death_Clone>
+			<Death_Clone> Damage_Alien_Gray_Plasma_Rifle, Military_Flamethrower_Death_Clone_Skeleton </Death_Clone>
+			<Death_Clone> Damage_Alien_Grunt_Shotgun, Military_Flamethrower_Death_Clone_Skeleton </Death_Clone>
+			<Death_Clone> Damage_Melee_Knockback, Military_Flamethrower_Death_Clone_Melee_Knockback </Death_Clone>
+			<Death_Clone> Damage_Falling, Military_Flamethrower_Death_Clone_Falling </Death_Clone>
+			<Death_Spawn> Damage_Alien_AE_Radiation, Alien_Mutant_Slave </Death_Spawn>
+			<Death_Spawn>SFXEvent_Build_Cancelled Damage_Alien_AE_Radiation, Alien_Mutant_Slave_02 </Death_Spawn>
+			<Death_Spawn> Damage_Alien_AE_Radiation, Alien_Mutant_Slave_03 </Death_Spawn>
+			<Death_Clone_Keep_Behaviors> EFFECT_REGISTRY </Death_Clone_Keep_Behaviors>
+			<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+			<Death_Speed_Min>1.0</Death_Speed_Min>
+			<Death_Speed_Max>2.0</Death_Speed_Max>
+		</BehaviorType>
+		
+		<BehaviorType Name="GUIBehaviorType">
+			<!-- Maria 05.18.2006 - Data needed for the models attached to the mouse in Global -->
+			<GUI_Is_Top_View> No </GUI_Is_Top_View>
+			<GUI_Rotate_Angle_Degrees> 0.0 </GUI_Rotate_Angle_Degrees>
+			<GUI_Is_Model_Shifted_Down> Yes </GUI_Is_Model_Shifted_Down>
+			<GUI_Shift_Factor> 4.7 </GUI_Shift_Factor>
+			<GUI_Strategic_Mode_Scale> 0.15 </GUI_Strategic_Mode_Scale>
+		</BehaviorType>
+
+	</X11_Military_Units>
+	
+	
+<!-- **************************************************************************************** -->	
+<!-- *** DEATH CLONE(S)********************************************************************** -->	
+<!-- **************************************************************************************** -->	
+	
+	<X11_Military_Units Name="Military_Flamethrower_Death_Clone_Skeleton">
+	
+		<Variant_Of_Existing_Type>Military_Flamethrower</Variant_Of_Existing_Type>
+		<Land_Model_Name>MI_MARINE_DEATH.ALO</Land_Model_Name>
+      <AssetBank> BANK_MILITARY </AssetBank>
+		
+		<BehaviorType Name="SFXBehaviorType">
+			<Death_SFXEvent_End_Die />
+			<Death_SFXEvent_Start_Die />
+		</BehaviorType>
+		
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+		
+	</X11_Military_Units>
+
+	<X11_Military_Units Name="Military_Flamethrower_Death_Clone_Melee_Knockback">
+	
+		<Variant_Of_Existing_Type>Military_Flamethrower</Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+   	
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Specific_Death_Anim_Type> Anim_Force_Whirlwind_Die </Specific_Death_Anim_Type>
+		</BehaviorType>
+		
+		<BehaviorType Name="SFXBehaviorType">
+			<Death_SFXEvent_End_Die />
+			<Death_SFXEvent_Start_Die />
+		</BehaviorType>
+		
+	</X11_Military_Units>
+
+	<X11_Military_Units Name="Military_Flamethrower_Death_Clone_Falling">
+	
+		<Variant_Of_Existing_Type>Military_Flamethrower</Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+   	
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Specific_Death_Anim_Type> FALL_DIE </Specific_Death_Anim_Type>
+		</BehaviorType>
+		
+		<BehaviorType Name="SFXBehaviorType">
+			<Death_SFXEvent_End_Die />
+			<Death_SFXEvent_Start_Die />
+		</BehaviorType>
+		
+	</X11_Military_Units>
+
+
+
+   <X11_Military_Units Name="Military_Flamethrower_Death_Clone_Resource">
+      <Variant_Of_Existing_Type>Military_Flamethrower</Variant_Of_Existing_Type>
+      <Use_Base_Type_By_Default> false </Use_Base_Type_By_Default>
+
+      <CategoryMask> Small, Organic, RadiationHurts, Resource_INST </CategoryMask>
+
+      <LandBehavior>
+         HIDE_WHEN_FOGGED,
+         BALLISTIC,
+         RESOURCE,
+         EFFECT_REGISTRY,
+         ATTRIBUTE_DIRECTORY
+      </LandBehavior>
+
+      <BehaviorType Name="ResourceBehaviorType">
+         <Resource_Units> 5 </Resource_Units>
+         <Resource_For_Faction> Alien </Resource_For_Faction>
+         <Is_Single_Resource> true </Is_Single_Resource>
+         <Use_Death_Behavior> true </Use_Death_Behavior>
+      </BehaviorType>
+
+      <Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+   </X11_Military_Units>
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+<!-- **************************************************************************************** -->	
+<!-- *** PROJECTILES ************************************************************************ -->	
+<!-- **************************************************************************************** -->
+
+	<Projectile Name="Proj_Military_Flamethrower">
+
+		<!-- ART -->
+		<Scale_Factor>1.0</Scale_Factor>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+		<!-- MOVEMENT -->
+		<Max_Speed>4.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
+		
+		<!-- CONFLICT -->
+		<AI_Combat_Power> 1 </AI_Combat_Power>
+
+		<!-- BEHAVIORS-->
+		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
+		
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Damage_Type> Damage_Military_Flamethrower </Damage_Type>
+		</BehaviorType>
+		
+		<BehaviorType Name="ProjectileBehaviorType">
+			<Can_Projectile_Collide_With_Objects> false </Can_Projectile_Collide_With_Objects>
+			<Is_Projectile_Conical_AE> true </Is_Projectile_Conical_AE>
+			<Projectile_Conical_XY_Angle> 15 </Projectile_Conical_XY_Angle>
+			<Projectile_Damages_Random_Hard_Points>No</Projectile_Damages_Random_Hard_Points>
+			<Projectile_Category>DEFAULT</Projectile_Category>
+			<Projectile_Max_Flight_Distance>75.0</Projectile_Max_Flight_Distance>
+			<Projectile_Damage>4.0</Projectile_Damage>
+			<Projectile_Does_Shield_Damage>No</Projectile_Does_Shield_Damage>
+			<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+			<Projectile_Object_Detonation_Particle />
+			<Projectile_Object_Armor_Reduced_Detonation_Particle />
+			<Projectile_Ground_Detonation_Particle />
+			<Projectile_Lifetime_Detonation_Particle />
+			<Projectile_Absorbed_By_Shields_Particle />
+			<Projectile_SFXEvent_Detonate />
+			<Projectile_SFXEvent_Detonate_Reduced_By_Armor> </Projectile_SFXEvent_Detonate_Reduced_By_Armor>		
+			<Projectile_Causes_Terrain_Damage>false</Projectile_Causes_Terrain_Damage>
+			<Projectile_Causes_Blackening>false</Projectile_Causes_Blackening>
+			<Terrain_Damage_Radius>15.0</Terrain_Damage_Radius>
+         <Can_Be_Redirected>False</Can_Be_Redirected>
+		</BehaviorType>
+		
+	</Projectile>
+	
+	
+<!-- **************************************************************************************** -->	
+<!-- *** EDITOR SPAWNER MARKER ************************************************************** -->	
+<!-- **************************************************************************************** -->
+
+	<X11_Military_Units Name="Military_Team_Flamethrower_Spawner">
+		<Text_ID> TEXT_STORY_TRIGGER_ZONE </Text_ID>
+		<Land_Model_Name>MI_Flamethrower.ALO</Land_Model_Name>	
+		<Scale_Factor> 5.0 </Scale_Factor>	
+		<Is_Marker>Yes</Is_Marker>
+		<Is_Decoration>No</Is_Decoration>
+		<Affiliation>Military</Affiliation>
+		<Behavior>MARKER, HINT</Behavior>
+      <AssetBank> BANK_MILITARY </AssetBank>
+		
+		<BehaviorType Name="LuaScriptBehaviorType">
+			<Lua_Land_Behaviors> MarkerSpawner </Lua_Land_Behaviors>
+			<Lua_Script_Data> 
+				MARKER_SPAWNER_TYPE = "Military_Team_Flamethrower"
+			</Lua_Script_Data>
+		</BehaviorType>
+
+	</X11_Military_Units>
+
+</Military_Inf_Flamethrower_Team_XML>

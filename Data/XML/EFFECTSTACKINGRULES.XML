@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<EffectClassStackingRules>
+
+	<Transparent> All </Transparent>
+	<SFX1>All</SFX1>
+	<SFX2>All</SFX2>
+	<SFX3>All</SFX3>
+	<MatterConversion> All </MatterConversion>
+	<MatterConversionBlock> HighestPriority </MatterConversionBlock>
+	<Fire> HighestPriority </Fire>
+	<NovusSignal> HighestPriority </NovusSignal>
+	<NovusSingalConnectionVisual>All</NovusSingalConnectionVisual>
+	<Radiation> HighestPriority </Radiation>
+	<RadiatedWeapon> ALL, 1 </RadiatedWeapon>
+	<GammaRadiatedWeapon> ALL, 1 </GammaRadiatedWeapon>
+	<RadiatedWeaponVisual> ALL </RadiatedWeaponVisual>
+	<HealTerrain> HighestPriority </HealTerrain>
+	<SpeedBoost> All </SpeedBoost>
+	<FireRateEffectClass> All </FireRateEffectClass>
+	<MindControl> Earliest </MindControl>
+   <MindControlVisual>All</MindControlVisual>
+	<Burden> All </Burden>
+	<Phased> Earliest </Phased>
+	<ResonanceBeam> All </ResonanceBeam>
+	<ResonanceLockdown> All </ResonanceLockdown>
+	<ConsumptionSpray> All </ConsumptionSpray>
+	<InverterResonance>HighestPriority</InverterResonance>
+	<Disintegrate> Earliest </Disintegrate>
+   <DisintegrateVisual> All </DisintegrateVisual>
+	<ToyDamage> Earliest </ToyDamage>
+	<TractorBeam> All, 3 </TractorBeam>
+	<GenericAttribute> All </GenericAttribute>
+	<InstantDeath>HighestPriority</InstantDeath>
+	<NovusSignalTower> Earliest </NovusSignalTower>
+	<DervishSpin>All</DervishSpin>
+	<Scale>Earliest</Scale>
+	<Cloaking> Earliest </Cloaking>
+	<Mirage> Earliest </Mirage>
+	<BlockMirage> Earliest </BlockMirage>
+   <RemoveMirage>Earliest</RemoveMirage>
+	<BlackOut> Earliest </BlackOut>
+	<BlackOutTarget> Earliest </BlackOutTarget>
+	<NegateRevealCloaking> HighestPriority </NegateRevealCloaking>
+	<RevealCloaking> HighestPriority </RevealCloaking>
+	<DefilerRadiation> All, 1 </DefilerRadiation>
+	<GruntShotgunRadiation> All </GruntShotgunRadiation>
+	<NovusVirus> HighestPriority </NovusVirus>
+   <NovusVirusBomb> HighestPriority </NovusVirusBomb>
+   <NovusVirusBombSplash> HighestPriority </NovusVirusBombSplash>
+	<TacticalBuild> All </TacticalBuild>   
+   <TacticalUpgradedBuild>All</TacticalUpgradedBuild>
+   <TacticalBuildSingleBuilder>Earliest</TacticalBuildSingleBuilder>
+   <Healing> All </Healing>
+	<EffectCleanse> All </EffectCleanse>
+	<MutantDeath> All </MutantDeath>
+	<MutantNoHeal> All </MutantNoHeal>	
+	<MutantCreation> All </MutantCreation>
+	<MutantClaws> All </MutantClaws>
+	<MutantGlob> All </MutantGlob>
+	<DefilerRadiationReveal> All </DefilerRadiationReveal>
+	<DefilerRadiationVisualAttack> All </DefilerRadiationVisualAttack>
+	<DefilerRadiationDefile> All </DefilerRadiationDefile>
+	<MutantSlowDeath> All </MutantSlowDeath>
+	<Beckon> Earliest </Beckon>
+	<BeckonDamage> All </BeckonDamage>
+	<DefilerExpandBleedRadius> HighestPriority </DefilerExpandBleedRadius>
+	<DisableAutoTargeting> All </DisableAutoTargeting>
+	<DefilerBleedVisual> HighestPriority </DefilerBleedVisual>
+   <DefilerBleedVisualGamma> HighestPriority </DefilerBleedVisualGamma>
+   <BleedMoved> All </BleedMoved>
+   <BleedMovedGamma> All </BleedMovedGamma>
+	<AutoEnableAbilityFlag> All </AutoEnableAbilityFlag>
+	<PropagateEffect>All</PropagateEffect>
+	<GatheringBlock> HighestPriority </GatheringBlock>
+	<Destabilize>All</Destabilize>
+	<IceDamage> All </IceDamage>
+	<IceSnare> Earliest </IceSnare>
+   <DMAVisual>  Earliest </DMAVisual>
+ 	<DMARegen> All </DMARegen>
+	<DMARemove> All </DMARemove>
+	<BlockDMARegen> All </BlockDMARegen>
+	<ElementalModeVisual> All </ElementalModeVisual>
+	<Resource> All </Resource>
+	<Stun> All </Stun>
+	<StunVisual> All </StunVisual>
+	<Screech> All, 1 </Screech>
+	<AvengerShield> Earliest </AvengerShield>
+	<MasariAvenger> All </MasariAvenger>
+   <MasariPhoenix>All</MasariPhoenix>
+   <MasariRegenerateAvenger>All</MasariRegenerateAvenger>
+	<NovusSignalVehicle> Earliest </NovusSignalVehicle>
+	<EMField> All </EMField>
+	<SightLink> All </SightLink>
+   <SightLinkVisual>All</SightLinkVisual>
+	<BurningSight>All</BurningSight>
+	<FireDamage> All </FireDamage>
+	<AreaEffectMod1> Earliest </AreaEffectMod1>
+	<AreaEffectMod2> Earliest </AreaEffectMod2>
+	<ElectroPulse> Earliest </ElectroPulse>
+	<ElectroPulseSparkles> Earliest </ElectroPulseSparkles>
+	<ShiftField> Earliest </ShiftField>
+	<SpyRadiated> Earliest </SpyRadiated>
+	<Deconstruct> All </Deconstruct>
+	<SpyRangeMod1> Earliest </SpyRangeMod1>
+	<SpyRangeMod2> Earliest </SpyRangeMod2>
+	<StructuralDisruption> Earliest </StructuralDisruption>
+	<LandedEffect> Earliest </LandedEffect>
+	<DisableOnEnemyRadar> Earliest </DisableOnEnemyRadar>
+	<PreAvengerRebuild> Earliest </PreAvengerRebuild>
+	<AvengerRebuild> Earliest </AvengerRebuild>
+	<Upload> Earliest </Upload>
+   <UploadTarget> Earliest </UploadTarget>
+   <UploadSparkles> Earliest </UploadSparkles>
+	<Download> Earliest </Download>
+	<DownloadSparkles> Earliest </DownloadSparkles>
+	<UploadSelf> Earliest </UploadSelf>
+	<RevealMap> Earliest </RevealMap>
+	<Blizzard> Earliest </Blizzard>
+   <BlizzardDMAUpgrade> All </BlizzardDMAUpgrade>
+   <Teleportation_Start> Earliest </Teleportation_Start>
+	<Teleportation_Finish> Earliest </Teleportation_Finish>
+	<PatchBackupSystems> HighestPriority </PatchBackupSystems>
+	<PatchEmergencyPower>All</PatchEmergencyPower>
+	<PatchExtrapolation> HighestPriority </PatchExtrapolation>
+	<PatchOptimizedAssembly> HighestPriority </PatchOptimizedAssembly>
+	<PatchOverclock> HighestPriority </PatchOverclock>
+	<PatchRadiationCasing> HighestPriority </PatchRadiationCasing>
+	<PatchCoolantBoost> HighestPriority </PatchCoolantBoost>
+	<PatchViralCascadeAura>HighestPriority</PatchViralCascadeAura>
+	<PatchViralReboot> All </PatchViralReboot>
+	<PatchSpectrumCycle>HighestPriority</PatchSpectrumCycle>
+	<PatchBlock> All </PatchBlock>
+	<DestroyPatch>	All </DestroyPatch>
+	<FounderRebuild> HighestPriority </FounderRebuild>
+	<ClearMindControl> All </ClearMindControl>
+	<NovusVirusAuraGenerators>HighestPriority</NovusVirusAuraGenerators>
+	<DeactivateNovusVirusAuraGenerators>All</DeactivateNovusVirusAuraGenerators>
+	<PatchRapidPatching> All </PatchRapidPatching>
+	<ResearchRapidRebuildBlock> HighestPriority </ResearchRapidRebuildBlock>
+	<ResearchAdvancedFlow> All </ResearchAdvancedFlow>
+	<FlowSpeed> All </FlowSpeed>
+	<PowerTransmissionRadius> All </PowerTransmissionRadius>
+	<Powered> All </Powered>
+	<ResearchNaniteRefinement> HighestPriority </ResearchNaniteRefinement>
+	<ResearchCollectionEfficiency> HighestPriority </ResearchCollectionEfficiency>
+	<ResearchNanitePurification> All </ResearchNanitePurification>
+	<AchievementEffect> All </AchievementEffect>
+	<LockUnlockAchievementEffect> Earliest </LockUnlockAchievementEffect>
+   <AchievementLeadership>All</AchievementLeadership>
+   <AchievementProtector>All</AchievementProtector>
+   <AchievementResearcher>All</AchievementResearcher>
+   <AchievementAlliance>All</AchievementAlliance>
+   <AchievementRawPower>All</AchievementRawPower>
+   <AchievementNaniteMastery>All</AchievementNaniteMastery>
+   <AchievementHeroMastery>All</AchievementHeroMastery>
+   <AchievementWeaponMastery>All</AchievementWeaponMastery>
+   <AchievementFlightMastery>All</AchievementFlightMastery>
+   <AchievementSignalMastery>All</AchievementSignalMastery>
+   <AchievementRoboticMastery>All</AchievementRoboticMastery>
+   <AchievementScienceMastery>All</AchievementScienceMastery>
+   <AchievementKineticSeer>All</AchievementKineticSeer>
+   <AchievementTimeManipulator>All</AchievementTimeManipulator>
+   <AchievementDarkStrategist>All</AchievementDarkStrategist>
+   <AchievementLightbringer>All</AchievementLightbringer>
+   <AchievementModularProficiency>All</AchievementModularProficiency>
+   <AchievementMasariProtectus>All</AchievementMasariProtectus>
+   <AchievementGiftOfTheArchitect>All</AchievementGiftOfTheArchitect>
+   <AchievementBovineDefender>All</AchievementBovineDefender>
+   <AchievementAssaultSpecialist>All</AchievementAssaultSpecialist>
+   <AchievementMutagenSpecialist>All</AchievementMutagenSpecialist>
+   <AchievementQuantumSpecialist>All</AchievementQuantumSpecialist>
+   <AchievementSocketEmblem>All</AchievementSocketEmblem>
+   <AchievementInsigniaOfCorruption>All</AchievementInsigniaOfCorruption>
+   <AchievementKamalsBlessing>All</AchievementKamalsBlessing>
+   
+   
+   
+   
+	<ViralControl> Earliest </ViralControl>
+	<Insignificant> Earliest </Insignificant>
+	<HeatSink> All </HeatSink>
+	<WalkerVision> All </WalkerVision>
+	<WalkerPrediction> All </WalkerPrediction>
+	<HeroPerks>HighestPriority</HeroPerks>
+	<Transfer>All</Transfer>
+	<AlienConsumption>All</AlienConsumption>
+	<AlienPhaseClaw>All</AlienPhaseClaw>
+	<Paranoia> Earliest </Paranoia>
+	<ParanoiaUpgrade> All </ParanoiaUpgrade>
+	<MasariVortex>Earliest</MasariVortex>
+	<ResearchFieryFury>All</ResearchFieryFury>
+	<PurifyingLight> ALL, 1 </PurifyingLight>
+   <PurifyingLightVisual> All </PurifyingLightVisual>
+   <CripplingShots> All, 6 </CripplingShots>
+	<CripplingShotsVisual> All </CripplingShotsVisual>
+   <UpgradingStructure> All </UpgradingStructure>
+   <MasariCleanse> All </MasariCleanse>
+	<SightRange> All </SightRange>
+	<DissolveVisual> Earliest </DissolveVisual>
+	<RadiationCascade> All </RadiationCascade>
+	<ScanDronePresent> All </ScanDronePresent>
+
+   <RadiationCascadeReadyVisual>All</RadiationCascadeReadyVisual>
+   <RadiationCascadeNotReadyVisual>All</RadiationCascadeNotReadyVisual>
+
+
+   <SelfDestructCountdown> All </SelfDestructCountdown>
+	<SelfDestruct> All </SelfDestruct>
+
+	<ScarnBeam> All </ScarnBeam>
+	<ScarnBeamVisual> All </ScarnBeamVisual>
+
+	<OrlokSiegeGun> All </OrlokSiegeGun>
+	<OrlokEndureAttack> All </OrlokEndureAttack>
+	<OrlokPreSwitch> All </OrlokPreSwitch>
+	<OrlokFreezeAutofire> All </OrlokFreezeAutofire>
+	<OrlokCrushAttack> All </OrlokCrushAttack>
+	
+	<WalkerConsumptionBoost> All </WalkerConsumptionBoost>
+	<WalkerConsumptionDestroy> Earliest </WalkerConsumptionDestroy>
+	<WalkerTerrainConditioner> All </WalkerTerrainConditioner>
+   <WalkerTerrainConditionerGamma> All </WalkerTerrainConditionerGamma>
+   <WalkerTerrainConditionerSelf> All </WalkerTerrainConditionerSelf>
+   <WalkerTerrainConditionerSelfGamma> All </WalkerTerrainConditionerSelfGamma>
+	<WalkerTerrainConditionerDestruct> Earliest </WalkerTerrainConditionerDestruct>
+	<WalkerMMLSelf> All </WalkerMMLSelf>
+	<WalkerMMLClearPhase> All </WalkerMMLClearPhase>
+	<CascadeMuzzle> All </CascadeMuzzle>
+	<CascadeWave> All </CascadeWave>
+	<CylinderVision> HighestPriority </CylinderVision>
+	<AlienRelocatorBeam> All </AlienRelocatorBeam>
+	<UpgradeFakeHardpoint> All </UpgradeFakeHardpoint>
+	<UpgradeStructureSpeed> All </UpgradeStructureSpeed>
+	<UpgradeStructureFireRate> All </UpgradeStructureFireRate>
+	<CylinderTeleport> HighestPriority </CylinderTeleport>
+	<VisualOne> All </VisualOne>
+	<WalkerWarmingPod> All </WalkerWarmingPod>
+	<GroundingConduit> All </GroundingConduit>
+	<WalkerOnLanding> All </WalkerOnLanding>
+	<WalkerOnLandingVisual> All </WalkerOnLandingVisual>
+	<WalkerJumpEnable> Earliest </WalkerJumpEnable>
+	<WalkerJumpSpeedUp> All </WalkerJumpSpeedUp>
+	<DarkMatterBlind> All </DarkMatterBlind>
+	<ElectricityDamage> All </ElectricityDamage>
+	<IncreaseBuildSpeed> All </IncreaseBuildSpeed>
+	<UpgradeBuilding> All </UpgradeBuilding>
+	<UpgradeSpeedIncrease> All </UpgradeSpeedIncrease>
+   <ImproveAttack>All</ImproveAttack>
+   
+	<Peace>Earliest</Peace>
+   <StormGate> All </StormGate>
+   <SnowBlind> All </SnowBlind>
+   <Reformat> All </Reformat>
+
+	<AlateaBeneficialField> All </AlateaBeneficialField>
+   <AlateaBeneficialFieldVisual>All</AlateaBeneficialFieldVisual>
+
+   <Stage1PostConstruction>All</Stage1PostConstruction>
+   <Stage2PostConstruction>All</Stage2PostConstruction>
+
+
+   <DeployMine>All</DeployMine>
+	
+	<Unmake>Earliest</Unmake>
+	<Tednrils> Earliest </Tednrils>
+
+   <WindDamage> All </WindDamage>
+   <WindShake> Earliest </WindShake>
+   <EarthquakeDamage> All </EarthquakeDamage>
+   <EarthquakeShake> Earliest </EarthquakeShake>
+	
+	<AttachBoltMine1>Earliest</AttachBoltMine1>
+	<AttachBoltMine2>Earliest</AttachBoltMine2>
+	<AttachBoltMine3>Earliest</AttachBoltMine3>
+	
+	<Volatile>All</Volatile>
+	<IceSlow> All </IceSlow>
+	
+	<Scythe>All</Scythe>
+	<SwitchToAltModel>Earliest</SwitchToAltModel>
+
+	<IceCrystals>All</IceCrystals>
+	<BlazeOfGlory>All</BlazeOfGlory>
+	<LockIceCrystals>All</LockIceCrystals>
+	<LockBlazeOfGlory>All</LockBlazeOfGlory>
+
+	<KnockBack> All </KnockBack>
+	<MagmaChannel> All </MagmaChannel>
+   <MagmaChannelUpgraded>All</MagmaChannelUpgraded>
+   <MagmaChannelSpawn> All </MagmaChannelSpawn>
+	<DarkWeapon> All </DarkWeapon>
+
+	<AlienHarvest> All </AlienHarvest>
+	<AlienHarvestVisual>All</AlienHarvestVisual>
+	<AlienHarvestSFX>Earliest</AlienHarvestSFX>
+	<AlienHarvestFinalize>All</AlienHarvestFinalize>
+	<EnableRadiationCascade> All </EnableRadiationCascade>
+
+	<FleetSpeedBoost> All </FleetSpeedBoost>
+	<ProductionIncrease> All </ProductionIncrease>
+
+	<GravityBomb>All</GravityBomb>
+
+	<LightningAttack>All</LightningAttack>
+	<Garrison> Earliest </Garrison>
+	<CaptureObject> All </CaptureObject>
+
+	<PsiBlast> All </PsiBlast>
+	<PsiBlastExplosion> All </PsiBlastExplosion>
+
+	<MoveSpeed> All </MoveSpeed>
+	<AbilityRecharge> All </AbilityRecharge>
+   <PlayerProduction> All </PlayerProduction>
+
+	<WalkerArmor> HighestPriority </WalkerArmor>
+	<WalkerSpeed> All </WalkerSpeed>
+	<WalkerNoCrush> All </WalkerNoCrush>
+	<PlasmaDamage> All </PlasmaDamage>
+	<RadiateResource> All </RadiateResource>
+	<RadiateResourceVisual> All </RadiateResourceVisual>
+	<MatterEngineHarvest> All </MatterEngineHarvest>
+	<MatterEngineHarvestResearched> All </MatterEngineHarvestResearched>
+	<MatterEngineExplosion> ALL </MatterEngineExplosion>
+	<MatterEngineExplosionVisual> All </MatterEngineExplosionVisual>
+	<GlobalStealth> HighestPriority </GlobalStealth>
+	
+	<HarmonicPulseOwnerLock>Earliest</HarmonicPulseOwnerLock>
+	<FriendlyRegionHOT> All </FriendlyRegionHOT>
+	<RegionDefense> All </RegionDefense>
+
+   <MeleeAttack>All</MeleeAttack>
+   <ScanPulse>All</ScanPulse>
+   <ScanPulseEnemyUpgrade>All</ScanPulseEnemyUpgrade>
+   <ScanPulseFriendly>All</ScanPulseFriendly>
+      
+   <CheckAmmo>All</CheckAmmo>
+
+   <FireMineDetonation>All</FireMineDetonation>
+   <IceMineDetonation>All</IceMineDetonation>
+   <MineEffectDuration>All</MineEffectDuration>
+   <DebugCategory1>All</DebugCategory1>
+   <DebugCategory2>All</DebugCategory2>
+   <DebugCategory3>All</DebugCategory3>
+
+   <PassengerOnboardBonus>Earliest</PassengerOnboardBonus>
+   
+   <RevealToEnemyRadar>All</RevealToEnemyRadar>
+
+   <LightBeam>All</LightBeam>
+   <UpgradedLightBeam>All</UpgradedLightBeam>
+
+   <Incignificance>Earliest</Incignificance>
+
+   <MatterEngineLeech>All</MatterEngineLeech>
+
+   <FireVortex>All</FireVortex>
+   <FireVortexVisual>Earliest</FireVortexVisual>
+
+   <MineDetonation> Earliest </MineDetonation>
+
+   <MasariLightModeVisual>All</MasariLightModeVisual>
+   <MasariDarkModeVisual>All</MasariDarkModeVisual>
+
+
+   <!-- Architect's assist structure effects -->
+   <AssistStructure>All</AssistStructure>
+   <AssistStructureIncreaseBuildSpeed>       All, 2   </AssistStructureIncreaseBuildSpeed>
+   <AssistStructureIncreaseBuildSpeedVisual> All, 2   </AssistStructureIncreaseBuildSpeedVisual>
+   <AssistStructureIncreaseHarvestSpeed>     All, 2   </AssistStructureIncreaseHarvestSpeed>
+   <AssistStructureImproveAttack>            All, 2   </AssistStructureImproveAttack>
+   <AssistStructureImproveAttackVisual>      All, 2   </AssistStructureImproveAttackVisual>  
+   <AssistStructureHeal>                     All, 2   </AssistStructureHeal>
+   <AssistStructureHealVisual>               All, 2   </AssistStructureHealVisual>
+	<AssistStructureIncreaseUpgradeSpeed>		All, 2	</AssistStructureIncreaseUpgradeSpeed>
+
+	<Abduction> All </Abduction>
+	<AbductionVisual> All </AbductionVisual>
+
+	<AlienHarvestFinalizeVisual> Earliest </AlienHarvestFinalizeVisual>
+	<MineInvulnerability> All </MineInvulnerability>
+	<WalkerHasControl> All </WalkerHasControl>
+
+	<InverterShieldUp> All </InverterShieldUp>
+	<InverterShieldDown> All </InverterShieldDown>
+	
+</EffectClassStackingRules>

@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<Civ_Buildings_XML>
+	
+	<!-- **************************************************************************************** -->	
+	<!-- *** HARDPOINT(S)************************************************************************ -->	
+	<!-- **************************************************************************************** -->	
+			
+	<HardPoint Name="Building_Destroyable_HP">
+
+		<!-- ART -->
+        <Land_Model_Name> WB_Building_HP_Null.alo </Land_Model_Name> 
+        <Scale_Factor> 1.0 </Scale_Factor> 
+
+		<!-- INTERFACE -->
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+		<!-- ATTRIBUTES -->
+        <Affiliation> Civilian </Affiliation>
+        <CategoryMask> Large, Stationary, Insignificant </CategoryMask>
+        <Tactical_Health> 50 </Tactical_Health>
+
+		<!-- MOVEMENT -->
+		<!-- CONFLICT -->
+        <Is_Attackable> true </Is_Attackable>
+        <Collidable_By_Projectile_Living> Yes </Collidable_By_Projectile_Living>
+        <Collidable_By_Projectile_Dead> No </Collidable_By_Projectile_Dead>
+
+		<!-- BEHAVIORS -->
+        <!-- Any unit that has hard points requires a Behavior entry with HARD_POINT_MANAGER, and an <Attached_Hard_Points> list  -->
+        <!-- Any object that is a hard point requires a Behavior entry with HARD_POINT -->
+        <Behavior> HARD_POINT </Behavior>
+        <LandBehavior> </LandBehavior>
+
+        <BehaviorType Name="HardPointBehaviorType">
+            <HP_Type> HARD_POINT_STRUCTURAL_SUPPORT </HP_Type>
+            <HP_Prevents_Parent_Targeting> False </HP_Prevents_Parent_Targeting>		
+            <HP_Prevents_Parent_Selection> False </HP_Prevents_Parent_Selection>
+            <HP_Prevents_Parent_Damage> False </HP_Prevents_Parent_Damage>
+        </BehaviorType>
+
+        <BehaviorType Name="DeathFXBehaviorType">
+            <Remove_Upon_Death> Yes </Remove_Upon_Death> <!-- Yes: Instantly destroy death clone when effects are started -->
+            <Death_Explosions> Small_Explosion_Land </Death_Explosions>
+        </BehaviorType>
+
+        <BehaviorType Name="ArmorAndDamageBehaviorType">
+            <Armor_Type> Armor_Default </Armor_Type>
+            <Damage_Type> Damage_Default </Damage_Type>
+        </BehaviorType>
+		<BehaviorType Name="BurningBehaviorType">
+			<Is_Combustible>No</Is_Combustible>
+		</BehaviorType>
+
+    </HardPoint>
+  			
+</Civ_Buildings_XML>
+
+
+

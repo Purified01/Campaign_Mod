@@ -1,0 +1,758 @@
+<?xml version="1.0"?>
+<Novus_Signal_Tower_XML>
+
+	<!-- **************************************************************************************** -->
+	<!-- *** STRUCTURE ************************************************************************** -->
+	<!-- **************************************************************************************** -->
+
+	<X12_Novus_Structures Name="Novus_Redirection_Turret">
+
+		<!-- ART -->
+		<Land_Model_Name> NB_Turret.alo </Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+      <AssetBank> BANK_NOVUS </AssetBank>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NOVUS_STRUCTURE_REDIRECTION_TURRET</Text_ID>
+
+
+		<!-- ATTRIBUTES -->
+		<CategoryMask> Large, Stationary, CanAttack, TacticalBuildableStructure </CategoryMask>
+		<Affiliation>Novus</Affiliation>
+		<Victory_Relevant> False </Victory_Relevant>
+		<Importance> 0.1 </Importance>
+		<Shot_Type> Circle </Shot_Type>
+
+		<Attributes SubObjectList="Yes">
+			<Novus_Power_Transmission_Radius> 0.0 </Novus_Power_Transmission_Radius>
+			<Novus_Power_Powerup_Radius> 0 </Novus_Power_Powerup_Radius>
+			<Novus_Flow_Radius> 0.0 </Novus_Flow_Radius>
+			<Max_Structure_Build_Rate>4.0</Max_Structure_Build_Rate>
+
+         <!-- MARIA 07.06.2007: Removing this because NOVUS structures that get affected by the NovusResearchMatterConversionEffect get their
+               tactical sell percent modifier from the effect!!!. -->
+         <!--<Tactical_Sell_Percent_Modifier> -0.5 </Tactical_Sell_Percent_Modifier>-->
+			<Tactical_Sell_Time_Seconds>3.0</Tactical_Sell_Time_Seconds>
+		</Attributes>
+
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+		<Tornado_Movement_Factor>0.00001</Tornado_Movement_Factor>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> LandDynamic </Space_Layer>
+		<MovementClass>Building</MovementClass>
+		<UnitCollisionClass> High Obstacle </UnitCollisionClass>
+		<Custom_Hard_XExtent> 5.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 5.0 </Custom_Hard_YExtent>
+
+		<!-- CONFLICT -->
+		<Is_Attackable>Yes</Is_Attackable>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Ranged_Target_Z_Adjust> 35.0 </Ranged_Target_Z_Adjust>
+		<Tactical_Health> 500 </Tactical_Health>
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_GENERIC_DETONATION, SFX_GENERIC_DETONATION,null</Land_Damage_SFX>
+
+		<!-- BEHAVIORS -->
+		<Behavior>
+			GROUND_STRUCTURE,
+			SELECTABLE
+		</Behavior>
+
+		<LandBehavior>
+			GUI,
+			RADAR_MAP_VISIBLE,
+			REVEAL,
+			HIDE_WHEN_FOGGED,
+			UNIT_AI,
+			EFFECT_GENERATOR,
+			EFFECT_REGISTRY,
+			ATTRIBUTE_DIRECTORY,
+			AI_TARGET,
+			IDLE,
+			TARGETING,
+			TURRET,
+			WEAPON,
+			CREATE_CHILDREN,
+			POWERED,
+			TACTICAL_SELL,
+			TERRAFORM
+		</LandBehavior>
+
+		<BehaviorType Name="TerraformBehaviorType">
+			<Bib_X_Extent> 20 </Bib_X_Extent>
+			<Bib_Y_Extent> 20 </Bib_Y_Extent>
+		</BehaviorType>
+
+		<BehaviorType Name="GameEventSourceBehaviorType">
+			<Game_Event_Source_Category> Structure </Game_Event_Source_Category>
+		</BehaviorType>
+
+		<BehaviorType Name="PoweredBehaviorType">
+			<Role> Receiver </Role>
+			<Flow_Visual_Name> Novus_Signal_tower_Flow </Flow_Visual_Name>
+			<Power_Visual_Name> Novus_Signal_tower </Power_Visual_Name>
+			<Visual_Attachment_Bone_Name> MuzzleA_00 </Visual_Attachment_Bone_Name>
+			<Radius_Attribute> Novus_Power_Powerup_Radius </Radius_Attribute>
+			<Transmit_Radius_Attribute> Novus_Power_Transmission_Radius </Transmit_Radius_Attribute>
+			<Flow_Radius_Attribute> Novus_Flow_Radius </Flow_Radius_Attribute>
+		</BehaviorType>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Armor_Type> Armor_Novus_Structure_Turret </Armor_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="CrushBehaviorType">
+			<Crush_Defense>60</Crush_Defense>
+			<Crush_Power>55</Crush_Power>
+		</BehaviorType>
+
+		<BehaviorType Name="ProductionBehaviorType">
+			<Is_Research_Tech_Tree_Lockable> Yes </Is_Research_Tech_Tree_Lockable>
+      <Build_Limit_Current_Per_Player>25</Build_Limit_Current_Per_Player>
+		</BehaviorType>
+
+		<BehaviorType Name="BuildableObjectBehaviorType">
+			<!-- Maria 06.28.2006 - What is the 'object under construction' that is placed in lieu of this object -->
+			<Tactical_Under_Construction_Object_Type> Novus_Redirection_Turret_Construction </Tactical_Under_Construction_Object_Type>
+			<Tactical_Buildable_Beacon_Type> Novus_Redirection_Turret_Beacon </Tactical_Buildable_Beacon_Type>
+			<!-- used to show the radius of the power transmission -->
+			<Buildable_Placement_Power_Blob_Material_Name>Novus_Radius</Buildable_Placement_Power_Blob_Material_Name>
+		</BehaviorType>
+
+		<BehaviorType Name="WeaponBehaviorType">
+			<Targeting_Priority_Set> Novus_Redirection_Turret_Target_Priority </Targeting_Priority_Set>
+			<Targeting_Fire_Inaccuracy> 1.0 </Targeting_Fire_Inaccuracy>
+			<Targeting_Min_Attack_Distance> 50.0 </Targeting_Min_Attack_Distance>
+			<Targeting_Max_Attack_Distance> 260.0 </Targeting_Max_Attack_Distance>
+			<Targeting_Stickiness_Time_Threshold> 5.0 </Targeting_Stickiness_Time_Threshold>
+			<Attack_Category_Restrictions> Resource | Resource_INST </Attack_Category_Restrictions>
+			<Projectile_Types>Proj_Novus_Antimatter_Cannon_Tower</Projectile_Types>
+			<Projectile_Fire_Recharge_Seconds>2.2</Projectile_Fire_Recharge_Seconds>
+			<Projectile_Fire_Pulse_Count>3</Projectile_Fire_Pulse_Count>
+			<Projectile_Fire_Pulse_Delay_Seconds>0.3</Projectile_Fire_Pulse_Delay_Seconds>
+		</BehaviorType>
+
+		<BehaviorType Name="TurretBehaviorType">
+			<Is_Turret_Entire_Body> false </Is_Turret_Entire_Body>
+			<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+			<Turret_Elevate_Extent_Degrees>60</Turret_Elevate_Extent_Degrees>
+			<Turret_Bone_Name>Turret_00</Turret_Bone_Name>
+			<Barrel_Bone_Name>Barrel_00</Barrel_Bone_Name>
+			<Turret_Rotate_Speed>4.5</Turret_Rotate_Speed>
+			<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+			<Apply_Y_Turret_Rotate_To_Axis>1</Apply_Y_Turret_Rotate_To_Axis>
+			<Turret_Targets_Ground_Vehicles> 1 </Turret_Targets_Ground_Vehicles>
+			<Turret_Targets_Ground_Infantry> 2 </Turret_Targets_Ground_Infantry>
+			<Turret_Targets_Air_Vehicles> 9999 </Turret_Targets_Air_Vehicles>
+			<Turret_Targets_Anything_Else> 3 </Turret_Targets_Anything_Else>
+			<Turret_Rotate_To_Rest_Delay_Sec> 0 </Turret_Rotate_To_Rest_Delay_Sec>
+		</BehaviorType>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Death_Clone>Damage_Default,Novus_Redirection_Turret_Default_Death_Clone</Death_Clone>
+			<Death_Explosions>Novus_Large_Explosion_Tower</Death_Explosions>
+			<Death_Clone_Keep_Behaviors> EFFECT_REGISTRY </Death_Clone_Keep_Behaviors>
+			<Death_Fade_Time> 0.25 </Death_Fade_Time>
+			<Death_Persistence_Duration> 5 </Death_Persistence_Duration>
+			<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+		</BehaviorType>
+
+		<BehaviorType Name="SFXBehaviorType">
+			<SFXEvent_Fire>SFX_Novus_Antimatter_Fire</SFXEvent_Fire>
+			<SFXEvent_Select>SFX_Structure_Select_Novus_Turret</SFXEvent_Select>
+			<SFXEvent_Ambient_Loop> SFX_Structure_EGL_Novus_Redirection_Turret </SFXEvent_Ambient_Loop>
+			<Death_SFXEvent_Start_Die> SFX_Novus_Small_Structure_Death </Death_SFXEvent_Start_Die>
+			<SFXEvent_Unit_Lost />
+			<SFXEvent_Tactical_Build_Started>GUI_BUILD_Structure</SFXEvent_Tactical_Build_Started>
+			<SFXEvent_Tactical_Build_Complete>SFX_Structure_Select_Novus_Turret</SFXEvent_Tactical_Build_Complete>
+			<SFXEvent_Tactical_Build_Cancelled>GUI_BUILD_Structure_Canceled</SFXEvent_Tactical_Build_Cancelled>
+		</BehaviorType>
+
+		<BehaviorType Name="TacticalSellBehaviorType">
+			<Sell_Effect_Generator_Name>NovusSellGenerator</Sell_Effect_Generator_Name>
+		</BehaviorType>
+
+		<BehaviorType Name="GroundStructureBehaviorType">
+			<Is_Buildable_By_Constructor> Yes </Is_Buildable_By_Constructor>
+			<!-- Maria 01.31.2007 - This value is used to determine the facing of the ghost structure when in 
+				  building placement mode.  It must be a value between 0.0 - 359.0	-->
+			<Default_Building_Placement_Rotation>225</Default_Building_Placement_Rotation>
+		</BehaviorType>
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.03  0.03</Radar_Icon_Size>
+		</BehaviorType>
+
+		<BehaviorType Name="AIBehaviorType">
+			<AI_Target_Level>Individual</AI_Target_Level>
+			<AI_Combat_Power> 1 </AI_Combat_Power>
+		</BehaviorType>
+
+		<BehaviorType Name="BlobShadowBehaviorType">
+			<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+			<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+		</BehaviorType>
+
+		<BehaviorType Name="EncyclopediaBehaviorType">
+			<Icon_Name> i_icon_nb_redirection_turret.tga</Icon_Name>
+		</BehaviorType>
+
+		<BehaviorType Name="GUIBehaviorType">
+			<GUI_Scene_Name> NOVUS_Tactical_Upgrades_Menu </GUI_Scene_Name>
+			<!-- Maria: this structure needs this scene to properly display its health bar and nopower icon.
+            However, since it cannot be upgraded it will never display its upgrades menu.  Hence, we 
+            don't need the scene to be checking for input. -->
+			<GUI_Receives_Input> no </GUI_Receives_Input>
+			<GUI_Min_Scale> 0.8 </GUI_Min_Scale>
+			<GUI_Max_Scale> 3.0 </GUI_Max_Scale>
+			<GUI_Default_Scale> 1.0 </GUI_Default_Scale>
+		</BehaviorType>
+
+		<BehaviorType Name="SelectableBehaviorType">
+			<Select_Box_Scale>55</Select_Box_Scale>
+			<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+      <Select_As_Non_Structure>True</Select_As_Non_Structure> <!-- Please see SCC before adjusting-->
+		</BehaviorType>
+
+		<BehaviorType Name="RevealBehaviorType">
+			<Land_FOW_Reveal_Range>270.0</Land_FOW_Reveal_Range>
+		</BehaviorType>
+
+		<BehaviorType Name="TooltipBehaviorType">
+			<Tooltip_Description_Text_ID> TEXT_TOOLTIP_DESCRIPTION_NOVUS_REDIRECTION_TURRET </Tooltip_Description_Text_ID>
+			<Tooltip_Category> TEXT_TOOLTIP_CATEGORY_STRUCTURE </Tooltip_Category>
+      <Tooltip_Good_Against> TEXT_TYPE_VERSUS_AIR_UNITS TEXT_TYPE_VERSUS_VEHICLES TEXT_TYPE_VERSUS_DARKMATTER </Tooltip_Good_Against>
+      <Tooltip_Vulnerable_To> TEXT_TYPE_VERSUS_HEROES </Tooltip_Vulnerable_To>
+
+         <Researched_Upgrades>
+            TEXT_NOVUS_RESEARCH_TITLE_MATTER_CONVERSION_ABILITY
+            TEXT_NOVUS_RESEARCH_TITLE_RAPID_REBUILD_EFFECT
+         </Researched_Upgrades>
+
+      </BehaviorType>
+
+	
+		<!-- CHILD OBJECTS -->
+		<Create_Children_Data SubObjectList="Yes">
+
+			<Create_Child_Data>
+				<Type> Invisible_Redirection_Field </Type>
+				<Creation_Trigger> OnParentBehaviorFirstService </Creation_Trigger>
+				<Destruction_Trigger> OnParentBehaviorRemove </Destruction_Trigger>
+			</Create_Child_Data>
+
+		</Create_Children_Data>
+
+
+		<!-- ABILITIES -->
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability Name="Gravity_Overload">
+				<Type>GRAVITY_OVERLOAD</Type>
+				<Expiration_Seconds> 20.1 </Expiration_Seconds>
+				<Recharge_Seconds>10.0</Recharge_Seconds>
+				<Is_Modal>No</Is_Modal>
+				<SFXEvent_GUI_Unit_Ability_Activated>SFX_Alien_Tank_Take_Off</SFXEvent_GUI_Unit_Ability_Activated>
+				<Effect_Generator_Name> Gravity_Overload_Generator </Effect_Generator_Name>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+
+
+		<Effect_Generator_Data SubObjectList="Yes">
+
+			<Effect_Generator Name="Reveal_Enemy_Cloaking_Generator">
+				<Should_Deactivate_Manually> false </Should_Deactivate_Manually>
+				<Modal_Refresh_Frequency> 2.0 </Modal_Refresh_Frequency>
+				<Starts_Active> true </Starts_Active>
+				<Is_Independent_Generator> true </Is_Independent_Generator>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> RevealCloakingEffect </Effect_Name>
+					<Duration> 3.0 </Duration>
+					<Target_Gathering_Mask> SelfAE </Target_Gathering_Mask>
+					<Target_Filter_C> Is_Enemy </Target_Filter_C>
+					<Area_Effect_Radius_Attribute> 270 </Area_Effect_Radius_Attribute>
+				</Effect_Generator_Entry>
+			</Effect_Generator>
+
+			<Effect_Generator Name="Gravity_Overload_Generator">
+				<Is_Independent_Generator> true </Is_Independent_Generator>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> GravityOverloadEffect </Effect_Name>
+					<Duration> 20.0 </Duration>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+				</Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry2">
+					<Effect_Name> GravityOverloadDestructionEffect </Effect_Name>
+					<Duration> .1 </Duration>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+					<Base_Delay> 20.0 </Base_Delay>
+				</Effect_Generator_Entry>
+
+			</Effect_Generator>
+
+			<!-- This effect generator adds the Rapid Rebuild healing effect to the structure if it is damaged and has power. -->
+			<Effect_Generator Name="NovusResearchRapidRebuildEffectGenerator">
+				<Is_Independent_Generator> true </Is_Independent_Generator>
+				<Starts_Active> true </Starts_Active>
+				<Should_Deactivate_Manually> false </Should_Deactivate_Manually>
+				<Modal_Refresh_Frequency> 1.0 </Modal_Refresh_Frequency>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> NovusResearchRapidRebuildEffect </Effect_Name>
+					<Duration> 0.1 </Duration>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+					<Target_Filter_C> Is_Damaged_And_Powered </Target_Filter_C>
+				</Effect_Generator_Entry>
+			</Effect_Generator>
+
+			<!-- This effect generator blocks the Rapid Rebuild healing pulses for a few seconds when the structure takes damage. -->
+			<Effect_Generator Name="NovusResearchRapidRebuildBlockEffectGenerator">
+				<Is_Independent_Generator> true </Is_Independent_Generator>
+				<Application_Signals> OBJECT_DAMAGED </Application_Signals>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> NovusResearchRapidRebuildBlockEffect </Effect_Name>
+					<Duration> 5.0 </Duration>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+				</Effect_Generator_Entry>
+			</Effect_Generator>
+
+			<!-- This effect generator doubles the flow speed of all objects flowing through this structure. It is enabled through the research tree. -->
+			<Effect_Generator Name="NovusResearchRapidFlowEffectGenerator">
+				<Starts_Active> true </Starts_Active>
+				<Should_Deactivate_Manually> false </Should_Deactivate_Manually>
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> NovusResearchRapidFlowEffect </Effect_Name>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+				</Effect_Generator_Entry>
+			</Effect_Generator>
+
+			<!-- This effect generator sets the tactical sell percentage for this structure to be 100% (note, the structure
+				  will be sold for a 100% of its build cost only if it has full health). -->
+			<Effect_Generator Name="NovusResearchMatterConversionEffectGenerator">
+				<Is_Independent_Generator> true </Is_Independent_Generator>
+				<Starts_Active> true </Starts_Active>
+				<Should_Deactivate_Manually> false </Should_Deactivate_Manually>
+				<Modal_Refresh_Frequency> 1.0 </Modal_Refresh_Frequency>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> NovusResearchMatterConversionEffect </Effect_Name>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+					<Duration> 1.5 </Duration>
+				</Effect_Generator_Entry>
+			</Effect_Generator>
+
+			<!-- This effect generator blocks NovusResearchMatterConversionEffectGenerator (it gets unlocked by research and causes the tactical
+					sell percentage to increase). -->
+			<Effect_Generator Name="NovusResearchMatterConversionBlockEffectGenerator">
+				<Is_Independent_Generator> true </Is_Independent_Generator>
+				<Starts_Active> true </Starts_Active>
+				<Should_Deactivate_Manually> false </Should_Deactivate_Manually>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> NovusResearchMatterConversionBlockEffect </Effect_Name>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+				</Effect_Generator_Entry>
+			</Effect_Generator>
+
+			<!-- Standard Sell generator  - 06/28/2007 -->
+			<!--INCLUDE ".\Data\XML\Includes\Sell_Effect_Generators\NOVUS_Sell_Generators.xml" -->
+
+		</Effect_Generator_Data>
+
+	</X12_Novus_Structures>
+
+
+	<!-- **************************************************************************************** -->
+	<!-- *** CONSTRUCTION VERSION *************************************************************** -->
+	<!-- **************************************************************************************** -->
+
+	<X12_Novus_Structures Name="Novus_Redirection_Turret_Construction">
+
+		<!-- ART -->
+		<Land_Model_Name>NB_Turret.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+		<AssetBank> BANK_NOVUS </AssetBank>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NOVUS_STRUCTURE_REDIRECTION_TURRET</Text_ID>
+
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+		<!-- ATTRIBUTES -->
+		<CategoryMask> Large, Stationary, TacticalBuildableStructure </CategoryMask>
+		<Affiliation>Novus</Affiliation>
+		<Victory_Relevant> No </Victory_Relevant>
+
+		<Attributes SubObjectList="Yes">
+			<Novus_Power_Transmission_Radius> 0 </Novus_Power_Transmission_Radius>
+			<Novus_Power_Powerup_Radius> 0 </Novus_Power_Powerup_Radius>
+			<Tactical_Sell_Percent_Modifier> 0.0 </Tactical_Sell_Percent_Modifier>
+			<Tactical_Sell_Time_Seconds>0.5</Tactical_Sell_Time_Seconds>
+		</Attributes>
+
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+		<Tornado_Movement_Factor>0.00001</Tornado_Movement_Factor>
+		
+		<!-- CONFLICT -->
+		<Is_Attackable>Yes</Is_Attackable>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Ranged_Target_Z_Adjust> 20.0 </Ranged_Target_Z_Adjust>
+
+		<Tactical_Health> 500 </Tactical_Health>
+
+		<Dense_FOW_Reveal_Range_Multiplier> 0.0 </Dense_FOW_Reveal_Range_Multiplier>
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_GENERIC_DETONATION, SFX_GENERIC_DETONATION,null</Land_Damage_SFX>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> LandDynamic </Space_Layer>
+		<MovementClass>Building</MovementClass>
+		<UnitCollisionClass> HighObstacle </UnitCollisionClass>
+		<Custom_Hard_XExtent> 5.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 5.0 </Custom_Hard_YExtent>
+
+		<!-- BEHAVIORS -->
+		<!-- NOTE: TACTICAL_UNDER_CONSTRUCTION does not work as a Land_Behavior, since the type - > Behaves_Like() fails for some reason when it should not - need to fix -->
+		<Behavior>
+			ATTRIBUTE_DIRECTORY,
+			EFFECT_REGISTRY,
+			TACTICAL_UNDER_CONSTRUCTION,
+			SELECTABLE,
+			REVEAL,
+			HIDE_WHEN_FOGGED,
+			RADAR_MAP_VISIBLE,
+			POWERED,
+			TACTICAL_SELL,
+			GUI,
+			TERRAFORM
+		</Behavior>
+
+		<BehaviorType Name="CrushBehaviorType">
+			<Crush_Defense>60</Crush_Defense>
+			<Crush_Power>55</Crush_Power>
+		</BehaviorType>
+		
+		<BehaviorType Name="TerraformBehaviorType">
+			<Bib_X_Extent> 20 </Bib_X_Extent>
+			<Bib_Y_Extent> 20 </Bib_Y_Extent>
+		</BehaviorType>
+
+		<BehaviorType Name="PoweredBehaviorType">
+			<Flow_Visual_Name> Novus_Signal_tower_Flow </Flow_Visual_Name>
+			<Power_Visual_Name> Novus_Signal_tower </Power_Visual_Name>
+			<Visual_Attachment_Bone_Name> MuzzleA_00 </Visual_Attachment_Bone_Name>
+			<Radius_Attribute> Novus_Power_Powerup_Radius </Radius_Attribute>
+			<Transmit_Radius_Attribute> Novus_Power_Transmission_Radius </Transmit_Radius_Attribute>
+		</BehaviorType>
+
+		<BehaviorType Name="GameEventSourceBehaviorType">
+			<Game_Event_Source_Category> StructureUnderConstruction </Game_Event_Source_Category>
+		</BehaviorType>
+
+		<BehaviorType Name="SFXBehaviorType">
+			<SFXEvent_Select />
+			<SFXEvent_Unit_Lost />
+			<SFXEvent_Tactical_Build_Started />
+			<SFXEvent_Tactical_Build_Complete />
+			<SFXEvent_Tactical_Build_Cancelled />
+			<Death_SFXEvent_Start_Die />
+		</BehaviorType>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Armor_Type> Armor_Novus_Structure_Light </Armor_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="ProductionBehaviorType">
+			<Is_Research_Tech_Tree_Lockable> Yes </Is_Research_Tech_Tree_Lockable>
+		</BehaviorType>
+
+		<BehaviorType Name="BuildableObjectBehaviorType">
+			<Tactical_Buildable_Beacon_Type>Novus_Redirection_Turret_Beacon</Tactical_Buildable_Beacon_Type>
+			<Tactical_Buildable_Constructed> Novus_Redirection_Turret </Tactical_Buildable_Constructed>
+			<Tactical_Build_Cost_Multiplayer> 700 </Tactical_Build_Cost_Multiplayer>
+			<Tactical_Build_Cost_Campaign> 700 </Tactical_Build_Cost_Campaign>
+			<Tactical_Build_Time_Seconds> 20 </Tactical_Build_Time_Seconds>
+			<Tactical_UI_Build_Queue_Order> 8 </Tactical_UI_Build_Queue_Order>
+			<Tactical_Build_Requires_Builder> true </Tactical_Build_Requires_Builder>
+		</BehaviorType>
+
+		<BehaviorType Name="TacticalSellBehaviorType">
+			<Sell_Effect_Generator_Name>NovusSellGenerator</Sell_Effect_Generator_Name>
+		</BehaviorType>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Remove_Upon_Death>true</Remove_Upon_Death>
+			<Death_Clone_Is_Obstacle> false </Death_Clone_Is_Obstacle>
+			<Death_Explosions>Novus_Large_Explosion_Tower</Death_Explosions>
+		</BehaviorType>
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.05  0.05</Radar_Icon_Size>
+		</BehaviorType>
+
+		<BehaviorType Name="BlobShadowBehaviorType">
+			<No_Reflection_Below_Detail_Level> 1 </No_Reflection_Below_Detail_Level>
+			<No_Refraction_Below_Detail_Level> 1 </No_Refraction_Below_Detail_Level>
+			<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		</BehaviorType>
+
+		<BehaviorType Name="GUIBehaviorType">
+			<GUI_Scene_Name> HealthBar_Scene_Medium </GUI_Scene_Name>
+			<GUI_Receives_Input> no </GUI_Receives_Input>
+			<GUI_Min_Scale> 0.8 </GUI_Min_Scale>
+			<GUI_Max_Scale> 3.0 </GUI_Max_Scale>
+			<GUI_Default_Scale> 1.0 </GUI_Default_Scale>
+		</BehaviorType>
+
+		<BehaviorType Name="TacticalUnderConstructionBehaviorType">
+			<Dissolve_Effect_Name>Novus_Construction_Dissolve</Dissolve_Effect_Name>
+			<Construction_Effect_Model_Name>NB_Signal_Tower_b.alo</Construction_Effect_Model_Name>
+			<Construction_Effect_Animation_Name>NB_Signal_Tower_b_Build_00.ala</Construction_Effect_Animation_Name>
+		</BehaviorType>
+		
+		<BehaviorType Name="EncyclopediaBehaviorType">
+			<Icon_Name>i_button_research_tech.tga</Icon_Name>
+		</BehaviorType>
+		
+		<BehaviorType Name="TooltipBehaviorType">
+			<Tooltip_Description_Text_ID> TEXT_TOOLTIP_DESCRIPTION_NOVUS_REDIRECTION_TURRET </Tooltip_Description_Text_ID>
+			<Tooltip_Category> TEXT_TOOLTIP_CATEGORY_STRUCTURE </Tooltip_Category>
+			<Tooltip_Good_Against> TEXT_TYPE_VERSUS_VEHICLES </Tooltip_Good_Against>
+		</BehaviorType>
+		
+		<BehaviorType Name="SelectableBehaviorType">
+			<Select_Box_Scale>15</Select_Box_Scale>
+			<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+		</BehaviorType>
+		
+		<BehaviorType Name="RevealBehaviorType">
+			<Land_FOW_Reveal_Range>30.0</Land_FOW_Reveal_Range>
+		</BehaviorType>
+
+      <Effect_Generator_Data SubObjectList="Yes">
+
+			<!-- Standard Sell generator  - 06/28/2007 -->
+			<!--INCLUDE ".\Data\XML\Includes\Sell_Effect_Generators\NOVUS_Sell_Generators.xml" -->
+
+		</Effect_Generator_Data>
+				
+	</X12_Novus_Structures>
+
+	
+	
+	
+	<X12_Novus_Structures Name="Invisible_Redirection_Field">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>WF_Gravity_Dome.alo</Land_Model_Name>
+		<Scale_Factor>1.2</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<Collidable_By_Projectile_Living> Yes </Collidable_By_Projectile_Living>
+		<Is_UI_Relevant> false </Is_UI_Relevant>
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+		<Prevents_Structure_Placement> false </Prevents_Structure_Placement>
+      <AssetBank> BANK_NOVUS </AssetBank>
+		<CategoryMask> Untargetable </CategoryMask>
+		
+		<Attributes SubObjectList="Yes">
+			<!-- Novus_Power_Transmission_Radius is for flowing objects that are receivers i.e. if they are within this range they will run to this object -->
+			<Novus_Power_Transmission_Radius> 0.0 </Novus_Power_Transmission_Radius>
+			<Novus_Power_Powerup_Radius> 0 </Novus_Power_Powerup_Radius>
+		</Attributes>
+
+		<LandBehavior>
+			REDIRECT_PROJECTILE,
+			POWERED,
+			ATTRIBUTE_DIRECTORY,
+			EFFECT_REGISTRY
+		</LandBehavior>
+
+		<Attributes SubObjectList="Yes">
+			<Is_Immune_To_Virus> false </Is_Immune_To_Virus>
+			<Is_Immune_To_Mind_Control> true </Is_Immune_To_Mind_Control>
+		</Attributes>
+
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+		<Tornado_Movement_Factor>0.00001</Tornado_Movement_Factor>
+
+		<BehaviorType Name="PoweredBehaviorType">
+			<Role> Receiver </Role>
+			<Radius_Attribute> Novus_Power_Powerup_Radius </Radius_Attribute>
+			<Transmit_Radius_Attribute> Novus_Power_Transmission_Radius </Transmit_Radius_Attribute>
+		</BehaviorType>
+
+		<BehaviorType Name="RedirectProjectileBehaviorType">
+			<Starting_Mode> Redirection </Starting_Mode>
+			<Absorption_Gravitational_Constant> 25000 </Absorption_Gravitational_Constant>
+			<Absorption_Terminal_Velocity> 10.0 </Absorption_Terminal_Velocity>
+			<Absorption_Dampening_Coefficient> .9 </Absorption_Dampening_Coefficient>
+			<Max_Redirected_Projectiles> 3 </Max_Redirected_Projectiles>
+			<Redirection_Velocity> 15.0 </Redirection_Velocity>
+		</BehaviorType>
+
+	</X12_Novus_Structures>
+
+
+
+
+	<!-- **************************************************************************************** -->
+	<!-- ****DEATH CLONE(S)********************************************************************** -->
+	<!-- **************************************************************************************** -->
+
+	<X12_Novus_Structures Name="Novus_Redirection_Turret_Default_Death_Clone">
+
+		<!-- ART -->
+		<Land_Model_Name>NB_Turret_DC.ALO</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<AssetBank> BANK_NOVUS </AssetBank>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+		<!-- ATTRIBUTES -->
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+
+		<!-- CONFLICT -->
+		<Ranged_Target_Z_Adjust>0.1</Ranged_Target_Z_Adjust>
+
+		<LandBehavior>
+			EFFECT_REGISTRY,
+			EFFECT_GENERATOR,
+			ATTRIBUTE_DIRECTORY,
+			PARTICLE
+		</LandBehavior>
+
+		<BehaviorType Name="SFXBehaviorType">
+			<Death_SFXEvent_End_Die />
+			<Death_SFXEvent_Start_Die> SFX_Novus_Small_Structure_Death </Death_SFXEvent_Start_Die>
+		</BehaviorType>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Specific_Death_Anim_Type> Die </Specific_Death_Anim_Type>
+			<Death_Fade_Time> 0.25 </Death_Fade_Time>
+			<Death_Persistence_Duration> 0.0 </Death_Persistence_Duration>
+		</BehaviorType>
+
+
+	</X12_Novus_Structures>
+
+	<!-- **************************************************************************************** -->
+	<!-- ***  BEACON **************************************************************************** -->
+	<!-- **************************************************************************************** -->
+
+	<!-- Oksana: beacon for building the glyph. You'll need a builder unit to build from beacon -->
+	<X12_Novus_Structures Name="Novus_Redirection_Turret_Beacon">
+
+		<Variant_Of_Existing_Type>Novus_Generic_Structure_Beacon</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_NOVUS_STRUCTURE_REDIRECTION_TURRET_BEACON</Text_ID>
+
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+		<Tornado_Movement_Factor>0.00001</Tornado_Movement_Factor>
+		
+		<BehaviorType Name="TacticalBuildableBeaconBehaviorType">
+		</BehaviorType>
+
+		<BehaviorType Name="BuildableObjectBehaviorType">
+			<Tactical_Buildable_Constructed> Novus_Redirection_Turret_Construction </Tactical_Buildable_Constructed>
+		</BehaviorType>
+
+		<BehaviorType Name="TacticalSellBehaviorType">
+			<Sell_Effect_Generator_Name>NovusSellGenerator</Sell_Effect_Generator_Name>
+		</BehaviorType>
+
+		<BehaviorType Name="TooltipBehaviorType">
+			<Tooltip_Description_Text_ID> TEXT_TOOLTIP_DESCRIPTION_NOVUS_REDIRECTION_TURRET </Tooltip_Description_Text_ID>
+			<Tooltip_Category> TEXT_TOOLTIP_CATEGORY_STRUCTURE </Tooltip_Category>
+			<Tooltip_Good_Against> TEXT_TYPE_VERSUS_VEHICLES </Tooltip_Good_Against>
+		</BehaviorType>
+		
+	</X12_Novus_Structures>
+
+
+
+
+	<!-- **************************************************************************************** -->
+	<!-- *** PROJECTILES ************************************************************************ -->
+	<!-- **************************************************************************************** -->
+
+	<Projectile Name="Proj_Novus_Antimatter_Cannon_Tower">
+
+		<!-- ART -->
+		<Land_Model_Name>pp_antimatter_projectile_turret.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+      <AssetBank> BANK_NOVUS </AssetBank>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+		<!-- MOVEMENT -->
+		<Max_Speed>14.0</Max_Speed>
+		<Max_Rate_Of_Turn>0</Max_Rate_Of_Turn>
+
+		<!-- CONFLICT -->
+
+		<!-- this grenade must explode on the spot, not high above the ground-->
+		<Ranged_Target_Z_Adjust> 0.0 </Ranged_Target_Z_Adjust>
+
+
+		<!-- BEHAVIORS -->
+		<Behavior>PROJECTILE, BOMB, HIDE_WHEN_FOGGED</Behavior>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Damage_Type> Damage_Novus_Redirection_Turret </Damage_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Remove_Upon_Death> Yes </Remove_Upon_Death>
+			<!-- Yes: Instantly destroy death clone when effects are started -->
+			<Death_Explosions>large_explosion_land</Death_Explosions>
+		</BehaviorType>
+
+		<BehaviorType Name="ProjectileBehaviorType">
+			<Projectile_Category>DEFAULT</Projectile_Category>
+
+			<Projectile_Grenade_Sticks_On_Collision>true</Projectile_Grenade_Sticks_On_Collision>
+
+			<Projectile_Max_Flight_Distance>500.0</Projectile_Max_Flight_Distance>
+			<Projectile_Max_Scan_Range>600.0</Projectile_Max_Scan_Range>
+			<!-- DEBUG: Projectile_Damage seems to have no effect, all damage is being derived from blast area damage -->
+			<Projectile_Damage>0</Projectile_Damage>
+			<Projectile_Blast_Area_Damage> 20 </Projectile_Blast_Area_Damage>
+			<Projectile_Blast_Area_Range> 25 </Projectile_Blast_Area_Range>
+			<Projectile_Does_Shield_Damage>No</Projectile_Does_Shield_Damage>
+			<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+			<Projectile_Object_Detonation_Particle>Novus_Large_Explosion_Air</Projectile_Object_Detonation_Particle>
+			<Projectile_Ground_Detonation_Particle>Novus_Large_Explosion_Land</Projectile_Ground_Detonation_Particle>
+			<Projectile_Lifetime_Detonation_Particle>Tiny_Dud</Projectile_Lifetime_Detonation_Particle>
+			<Projectile_Absorbed_By_Shields_Particle>Tiny_Dud</Projectile_Absorbed_By_Shields_Particle>
+			<Projectile_Explosion_Causes_Chaining>true</Projectile_Explosion_Causes_Chaining>
+			<Projectile_Chaining_Damage_Increase_Percent>50.0</Projectile_Chaining_Damage_Increase_Percent>
+			<Projectile_Chaining_Distance_Increase>0.0</Projectile_Chaining_Distance_Increase>
+			<Projectile_Bomb_Timer_In_Secs>2.5</Projectile_Bomb_Timer_In_Secs>
+		</BehaviorType>
+		
+		<BehaviorType Name="AIBehaviorType">
+			<AI_Combat_Power> 1 </AI_Combat_Power>
+		</BehaviorType>
+		
+		<BehaviorType Name="SFXBehaviorType">
+			<Death_SFXEvent_Start_Die>SFX_Novus_Medium_Vehicle_Death</Death_SFXEvent_Start_Die>
+			<Projectile_SFXEvent_Detonate>SFX_Novus_Detonation_1</Projectile_SFXEvent_Detonate>
+			<Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Novus_Small_Damage_Detonation </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
+		</BehaviorType>
+
+	</Projectile>
+
+</Novus_Signal_Tower_XML>

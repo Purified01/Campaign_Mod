@@ -1,0 +1,1715 @@
+<?xml version="1.0"?>
+<Movies>
+
+	<Movie Name="Credits">
+		<Movie_File>Data\Art\Movies\Binked\Credits_Loop.bik</Movie_File>
+		<Has_Credits>Yes</Has_Credits>
+		<Overlay>True</Overlay>
+		<Movie_Start_Frame>1</Movie_Start_Frame>	
+	</Movie>
+
+	<Movie Name="Logo1">
+		<Movie_File>Data\Art\Movies\Binked\Sega_Logo.bik</Movie_File>
+      <Cannot_Skip> Yes </Cannot_Skip>
+   </Movie>
+
+	<Movie Name="Logo2">
+		<Movie_File>Data\Art\Movies\Binked\PetroglyphLogo.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="Logo3">
+		<Movie_File> </Movie_File>
+	</Movie>
+
+   <Movie Name="Tutorial_1.bik">
+      <Movie_File>Data\Art\Movies\Binked\Tutorial_1.bik</Movie_File>
+      <Pause_Game_While_Playing>Yes</Pause_Game_While_Playing>
+   </Movie>
+
+   <Movie Name="Tutorial_2.bik">
+      <Movie_File>Data\Art\Movies\Binked\Tutorial_2.bik</Movie_File>
+      <Pause_Game_While_Playing>Yes</Pause_Game_While_Playing>
+   </Movie>
+
+   <Movie Name="Tutorial_3.bik">
+    <Movie_File>Data\Art\Movies\Binked\Tutorial_3.bik</Movie_File>
+    <Pause_Game_While_Playing>Yes</Pause_Game_While_Playing>
+  </Movie>
+
+   <Movie Name="Tutorial_4.bik">
+      <Movie_File>Data\Art\Movies\Binked\Tutorial_4.bik</Movie_File>
+      <Pause_Game_While_Playing>Yes</Pause_Game_While_Playing>
+   </Movie>
+
+   <Movie Name="Tutorial_5.bik">
+      <Movie_File>Data\Art\Movies\Binked\Tutorial_5.bik</Movie_File>
+      <Pause_Game_While_Playing>Yes</Pause_Game_While_Playing>
+     <SpeechEvent_Frame> TUT_VID05_SCENE01_01, 19 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID05_SCENE01_01, 19 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID05_SCENE01_01, 275 </Caption_Duration>
+
+     <SpeechEvent_Frame> TUT_VID05_SCENE01_02, 317 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID05_SCENE01_02, 317 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID05_SCENE01_02, 199 </Caption_Duration>
+
+     <SpeechEvent_Frame> TUT_VID05_SCENE01_03, 545 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID05_SCENE01_03, 545 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID05_SCENE01_03, 119 </Caption_Duration>
+
+     <SpeechEvent_Frame> TUT_VID05_SCENE01_04, 687 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID05_SCENE01_04, 687 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID05_SCENE01_04, 229 </Caption_Duration>
+
+     <SpeechEvent_Frame> TUT_VID05_SCENE01_05, 979 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID05_SCENE01_05, 979 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID05_SCENE01_05, 224 </Caption_Duration>
+
+     <SpeechEvent_Frame> TUT_VID05_SCENE01_06, 1256 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID05_SCENE01_06, 1256 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID05_SCENE01_06, 201 </Caption_Duration>
+
+     <SpeechEvent_Frame> TUT_VID05_SCENE01_07, 1474 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID05_SCENE01_07, 1474 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID05_SCENE01_07, 242 </Caption_Duration>
+   </Movie>
+
+   <Movie Name="Tutorial_6.bik">
+      <Movie_File>Data\Art\Movies\Binked\Tutorial_6.bik</Movie_File>
+      <Pause_Game_While_Playing>Yes</Pause_Game_While_Playing>
+     <SpeechEvent_Frame> TUT_VID06_SCENE01_01, 19 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID06_SCENE01_01, 19 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID06_SCENE01_01, 251 </Caption_Duration>
+
+     <SpeechEvent_Frame> TUT_VID06_SCENE01_02, 284 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID06_SCENE01_02, 284 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID06_SCENE01_02, 188 </Caption_Duration>
+
+     <SpeechEvent_Frame> TUT_VID06_SCENE01_03, 482 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID06_SCENE01_03, 482 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID06_SCENE01_03, 260 </Caption_Duration>
+
+     <SpeechEvent_Frame> TUT_VID06_SCENE01_04, 771 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID06_SCENE01_04, 771 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID06_SCENE01_04, 254 </Caption_Duration>
+
+     <SpeechEvent_Frame> TUT_VID06_SCENE01_05, 1050 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID06_SCENE01_05, 1050 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID06_SCENE01_05, 262 </Caption_Duration>
+
+     <SpeechEvent_Frame> TUT_VID06_SCENE01_06, 1326 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID06_SCENE01_06, 1326 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID06_SCENE01_06, 285 </Caption_Duration>
+
+     <SpeechEvent_Frame> TUT_VID06_SCENE01_07, 1641 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID06_SCENE01_07, 1641 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID06_SCENE01_07, 155 </Caption_Duration>
+
+     <SpeechEvent_Frame> TUT_VID06_SCENE01_08, 1814 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID06_SCENE01_08, 1814 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID06_SCENE01_08, 269 </Caption_Duration>
+   </Movie>
+
+   <Movie Name="Tutorial_7.bik">
+      <Movie_File>Data\Art\Movies\Binked\Tutorial_7.bik</Movie_File>
+      <Pause_Game_While_Playing>Yes</Pause_Game_While_Playing>
+     <SpeechEvent_Frame> TUT_VID07_SCENE01_01, 17 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID07_SCENE01_01, 17 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID07_SCENE01_01, 226 </Caption_Duration>
+
+     <SpeechEvent_Frame> TUT_VID07_SCENE01_02, 255 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID07_SCENE01_02, 255 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID07_SCENE01_02, 146 </Caption_Duration>
+
+     <SpeechEvent_Frame> TUT_VID07_SCENE01_03, 408 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID07_SCENE01_03, 408 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID07_SCENE01_03, 341 </Caption_Duration>
+
+     <SpeechEvent_Frame> TUT_VID07_SCENE01_04, 754 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID07_SCENE01_04, 754 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID07_SCENE01_04, 257 </Caption_Duration>
+
+     <SpeechEvent_Frame> TUT_VID07_SCENE01_05, 1020 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID07_SCENE01_05, 1020 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID07_SCENE01_05, 297 </Caption_Duration>
+
+     <SpeechEvent_Frame> TUT_VID07_SCENE01_06, 1329 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID07_SCENE01_06, 1329 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID07_SCENE01_06, 83 </Caption_Duration>
+
+     <SpeechEvent_Frame> TUT_VID07_SCENE01_07, 1436 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID07_SCENE01_07, 1436 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID07_SCENE01_07, 229 </Caption_Duration>
+
+     <SpeechEvent_Frame> TUT_VID07_SCENE01_08, 1694 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID07_SCENE01_08, 1694 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID07_SCENE01_08, 398 </Caption_Duration>
+   </Movie>
+
+   <Movie Name="Tutorial_8.bik">
+      <Movie_File>Data\Art\Movies\Binked\Tutorial_8.bik</Movie_File>
+      <Pause_Game_While_Playing>Yes</Pause_Game_While_Playing>
+     <SpeechEvent_Frame> TUT_VID08_SCENE01_01, 20 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID08_SCENE01_01, 20 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID08_SCENE01_01, 298 </Caption_Duration>
+
+     <SpeechEvent_Frame> TUT_VID08_SCENE01_02, 324 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID08_SCENE01_02, 324 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID08_SCENE01_02, 234 </Caption_Duration>
+
+     <SpeechEvent_Frame> TUT_VID08_SCENE01_03, 562 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID08_SCENE01_03, 562 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID08_SCENE01_03, 187 </Caption_Duration>
+
+     <SpeechEvent_Frame> TUT_VID08_SCENE01_04, 760 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID08_SCENE01_04, 760 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID08_SCENE01_04, 242 </Caption_Duration>
+
+     <SpeechEvent_Frame> TUT_VID08_SCENE01_05, 1016 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID08_SCENE01_05, 1016 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID08_SCENE01_05, 113 </Caption_Duration>
+
+     <SpeechEvent_Frame> TUT_VID08_SCENE01_06, 1188 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID08_SCENE01_06, 1188 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID08_SCENE01_06, 200 </Caption_Duration>
+
+     <SpeechEvent_Frame> TUT_VID08_SCENE01_07, 1438 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID08_SCENE01_07, 1438 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID08_SCENE01_07, 157 </Caption_Duration>
+
+     <SpeechEvent_Frame> TUT_VID08_SCENE01_08, 1628 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID08_SCENE01_08, 1628 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID08_SCENE01_08, 260 </Caption_Duration>
+
+     <SpeechEvent_Frame> TUT_VID08_SCENE01_09, 1907 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID08_SCENE01_09, 1907 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID08_SCENE01_09, 262 </Caption_Duration>
+   </Movie>
+
+   <Movie Name="Tutorial_9.bik">
+      <Movie_File>Data\Art\Movies\Binked\Tutorial_9.bik</Movie_File>
+      <Pause_Game_While_Playing>Yes</Pause_Game_While_Playing>
+     <SpeechEvent_Frame> TUT_VID09_SCENE01_01, 31 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID09_SCENE01_01, 31 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID09_SCENE01_01, 149 </Caption_Duration>
+
+     <SpeechEvent_Frame> TUT_VID09_SCENE01_02, 193 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID09_SCENE01_02, 193 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID09_SCENE01_02, 142 </Caption_Duration>
+
+     <SpeechEvent_Frame> TUT_VID09_SCENE01_03, 377 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID09_SCENE01_03, 377 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID09_SCENE01_03, 158 </Caption_Duration>
+
+     <SpeechEvent_Frame> TUT_VID09_SCENE01_04, 563 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID09_SCENE01_04, 563 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID09_SCENE01_04, 157 </Caption_Duration>
+
+     <SpeechEvent_Frame> TUT_VID09_SCENE01_05, 749 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID09_SCENE01_05, 749 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID09_SCENE01_05, 211 </Caption_Duration>
+
+     <SpeechEvent_Frame> TUT_VID09_SCENE01_06, 972 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID09_SCENE01_06, 972 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID09_SCENE01_06, 196 </Caption_Duration>
+
+     <SpeechEvent_Frame> TUT_VID09_SCENE01_07, 1196 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID09_SCENE01_07, 1196 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID09_SCENE01_07, 221 </Caption_Duration>
+
+     <SpeechEvent_Frame> TUT_VID09_SCENE01_08, 1436 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID09_SCENE01_08, 1436 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID09_SCENE01_08, 134 </Caption_Duration>
+
+     <SpeechEvent_Frame> TUT_VID09_SCENE01_09, 1606 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID09_SCENE01_09, 1606 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID09_SCENE01_09, 188 </Caption_Duration>
+
+     <SpeechEvent_Frame> TUT_VID09_SCENE01_10, 1811 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID09_SCENE01_10, 1811 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID09_SCENE01_10, 401 </Caption_Duration>
+   </Movie>
+
+   <Movie Name="Tutorial_10.bik">
+      <Movie_File>Data\Art\Movies\Binked\Tutorial_10.bik</Movie_File>
+      <Pause_Game_While_Playing>Yes</Pause_Game_While_Playing>
+     <SpeechEvent_Frame> TUT_VID10_SCENE01_01, 21 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID10_SCENE01_01, 21 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID10_SCENE01_01, 272 </Caption_Duration>
+
+     <SpeechEvent_Frame> TUT_VID10_SCENE01_02, 312 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID10_SCENE01_02, 312 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID10_SCENE01_02, 155 </Caption_Duration>
+
+     <SpeechEvent_Frame> TUT_VID10_SCENE01_03, 481 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID10_SCENE01_03, 481 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID10_SCENE01_03, 173 </Caption_Duration>
+
+     <SpeechEvent_Frame> TUT_VID10_SCENE01_04, 675 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID10_SCENE01_04, 675 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID10_SCENE01_04, 175 </Caption_Duration>
+
+     <SpeechEvent_Frame> TUT_VID10_SCENE01_05, 866 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID10_SCENE01_05, 866 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID10_SCENE01_05, 185 </Caption_Duration>
+
+     <SpeechEvent_Frame> TUT_VID10_SCENE01_06, 1079 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID10_SCENE01_06, 1079 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID10_SCENE01_06, 170 </Caption_Duration>
+
+     <SpeechEvent_Frame> TUT_VID10_SCENE01_07, 1262 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID10_SCENE01_07, 1262 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID10_SCENE01_07, 133 </Caption_Duration>
+
+     <SpeechEvent_Frame> TUT_VID10_SCENE01_08, 1404 </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_TUT_VID10_SCENE01_08, 1404 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_TUT_VID10_SCENE01_08, 247 </Caption_Duration>
+   </Movie>
+
+  <Movie Name="Tutorial_11.bik">
+    <Movie_File>Data\Art\Movies\Binked\Tutorial_11.bik</Movie_File>
+    <Pause_Game_While_Playing>Yes</Pause_Game_While_Playing>
+    <SpeechEvent_Frame> TUT_VID11_SCENE01_01, 23 </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_TUT_VID11_SCENE01_01, 23 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_TUT_VID11_SCENE01_01, 188 </Caption_Duration>
+
+    <SpeechEvent_Frame> TUT_VID11_SCENE01_02, 228 </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_TUT_VID11_SCENE01_02, 228 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_TUT_VID11_SCENE01_02, 278 </Caption_Duration>
+
+    <SpeechEvent_Frame> TUT_VID11_SCENE01_03, 528 </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_TUT_VID11_SCENE01_03, 528 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_TUT_VID11_SCENE01_03, 157 </Caption_Duration>
+
+    <SpeechEvent_Frame> TUT_VID11_SCENE01_04, 715 </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_TUT_VID11_SCENE01_04, 715 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_TUT_VID11_SCENE01_04, 323 </Caption_Duration>
+
+    <SpeechEvent_Frame> TUT_VID11_SCENE01_05, 1070 </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_TUT_VID11_SCENE01_05, 1070 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_TUT_VID11_SCENE01_05, 124 </Caption_Duration>
+
+    <SpeechEvent_Frame> TUT_VID11_SCENE01_06, 1213 </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_TUT_VID11_SCENE01_06, 1213 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_TUT_VID11_SCENE01_06, 167 </Caption_Duration>
+
+    <SpeechEvent_Frame> TUT_VID11_SCENE01_07, 1409 </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_TUT_VID11_SCENE0107, 1409 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_TUT_VID11_SCENE0107, 70 </Caption_Duration>
+
+    <SpeechEvent_Frame> TUT_VID11_SCENE01_08, 1492 </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_TUT_VID11_SCENE01_08, 1492 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_TUT_VID11_SCENE01_08, 206 </Caption_Duration>
+
+    <SpeechEvent_Frame> TUT_VID11_SCENE01_09, 1747 </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_TUT_VID11_SCENE01_09, 1747 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_TUT_VID11_SCENE01_09, 206 </Caption_Duration>
+
+    <SpeechEvent_Frame> TUT_VID11_SCENE01_10, 1973 </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_TUT_VID11_SCENE01_10, 1973 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_TUT_VID11_SCENE01_10, 370 </Caption_Duration>
+  </Movie>
+
+  <Movie Name="Tutorial_12.bik">
+    <Movie_File>Data\Art\Movies\Binked\Tutorial_12.bik</Movie_File>
+    <Pause_Game_While_Playing>Yes</Pause_Game_While_Playing>
+    <SpeechEvent_Frame> TUT_VID12_SCENE01_01, 9 </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_TUT_VID12_SCENE01_01, 9 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_TUT_VID12_SCENE01_01, 232 </Caption_Duration>
+
+    <SpeechEvent_Frame> TUT_VID12_SCENE01_02, 263 </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_TUT_VID12_SCENE01_02, 263 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_TUT_VID12_SCENE01_02, 305 </Caption_Duration>
+
+    <SpeechEvent_Frame> TUT_VID12_SCENE01_03, 601 </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_TUT_VID12_SCENE01_03, 601 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_TUT_VID12_SCENE01_03, 119 </Caption_Duration>
+
+    <SpeechEvent_Frame> TUT_VID12_SCENE01_04, 747 </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_TUT_VID12_SCENE01_04, 747 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_TUT_VID12_SCENE01_04, 299 </Caption_Duration>
+
+    <SpeechEvent_Frame> TUT_VID12_SCENE01_05, 1100 </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_TUT_VID12_SCENE01_05, 1100 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_TUT_VID12_SCENE01_05, 244 </Caption_Duration>
+
+    <SpeechEvent_Frame> TUT_VID12_SCENE01_06, 1369 </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_TUT_VID12_SCENE01_06, 1369 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_TUT_VID12_SCENE01_06, 197 </Caption_Duration>
+
+    <SpeechEvent_Frame> TUT_VID12_SCENE01_07, 1582 </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_TUT_VID12_SCENE01_07, 1582 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_TUT_VID12_SCENE01_07, 242 </Caption_Duration>
+
+    <SpeechEvent_Frame> TUT_VID12_SCENE01_08, 1847 </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_TUT_VID12_SCENE01_08, 1847 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_TUT_VID12_SCENE01_08, 334 </Caption_Duration>
+  </Movie>
+
+  <Movie Name="Tutorial_13.bik">
+    <Movie_File>Data\Art\Movies\Binked\Tutorial_13.bik</Movie_File>
+    <Pause_Game_While_Playing>Yes</Pause_Game_While_Playing>
+    <SpeechEvent_Frame> TUT_VID13_SCENE01_01, 30 </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_TUT_VID13_SCENE01_01, 30 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_TUT_VID13_SCENE01_01, 294 </Caption_Duration>
+
+    <SpeechEvent_Frame> TUT_VID13_SCENE01_02, 340 </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_TUT_VID13_SCENE01_02, 340 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_TUT_VID13_SCENE01_02, 337 </Caption_Duration>
+
+    <SpeechEvent_Frame> TUT_VID13_SCENE01_03, 692 </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_TUT_VID13_SCENE01_03, 692 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_TUT_VID13_SCENE01_03, 347 </Caption_Duration>
+
+    <SpeechEvent_Frame> TUT_VID13_SCENE01_04, 1137 </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_TUT_VID13_SCENE01_04, 1137 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_TUT_VID13_SCENE01_04, 352 </Caption_Duration>
+
+    <SpeechEvent_Frame> TUT_VID13_SCENE01_05, 1608 </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_TUT_VID13_SCENE01_05, 1608 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_TUT_VID13_SCENE01_05, 359 </Caption_Duration>
+
+    <SpeechEvent_Frame> TUT_VID13_SCENE01_06, 1986 </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_TUT_VID13_SCENE01_06, 1986 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_TUT_VID13_SCENE01_06, 191 </Caption_Duration>
+  </Movie>
+
+  <Movie Name="Tutorial_14.bik">
+    <Movie_File>Data\Art\Movies\Binked\Tutorial_14.bik</Movie_File>
+    <Pause_Game_While_Playing>Yes</Pause_Game_While_Playing>
+    <SpeechEvent_Frame> TUT_VID14_SCENE01_01, 30 </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_TUT_VID14_SCENE01_01, 30 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_TUT_VID14_SCENE01_01, 298 </Caption_Duration>
+
+    <SpeechEvent_Frame> TUT_VID14_SCENE01_02, 343 </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_TUT_VID14_SCENE01_02, 343 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_TUT_VID14_SCENE01_02, 349 </Caption_Duration>
+
+    <SpeechEvent_Frame> TUT_VID14_SCENE01_03, 714 </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_TUT_VID14_SCENE01_03, 714 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_TUT_VID14_SCENE01_03, 242 </Caption_Duration>
+
+    <SpeechEvent_Frame> TUT_VID14_SCENE01_04, 972 </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_TUT_VID14_SCENE01_04, 972 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_TUT_VID14_SCENE01_04, 167 </Caption_Duration>
+
+    <SpeechEvent_Frame> TUT_VID14_SCENE01_05, 1159 </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_TUT_VID14_SCENE01_05, 1159 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_TUT_VID14_SCENE01_05, 275 </Caption_Duration>
+
+    <SpeechEvent_Frame> TUT_VID14_SCENE01_06, 1450 </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_TUT_VID14_SCENE01_06, 1450 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_TUT_VID14_SCENE01_06, 250 </Caption_Duration>
+
+    <SpeechEvent_Frame> TUT_VID14_SCENE01_07, 1718 </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_TUT_VID14_SCENE01_07, 1718 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_TUT_VID14_SCENE01_07, 209 </Caption_Duration>
+
+    <SpeechEvent_Frame> TUT_VID14_SCENE01_08, 1946 </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_TUT_VID14_SCENE01_08, 1946 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_TUT_VID14_SCENE01_08, 265 </Caption_Duration>
+
+    <SpeechEvent_Frame> TUT_VID14_SCENE01_09, 2235 </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_TUT_VID14_SCENE01_09, 2235 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_TUT_VID14_SCENE01_09, 251 </Caption_Duration>
+
+    <SpeechEvent_Frame> TUT_VID14_SCENE01_10, 2506 </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_TUT_VID14_SCENE01_10, 2506 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_TUT_VID14_SCENE01_10, 385 </Caption_Duration>
+  </Movie>
+
+  <Movie Name="Tutorial_15.bik">
+    <Movie_File>Data\Art\Movies\Binked\Tutorial_15.bik</Movie_File>
+    <Pause_Game_While_Playing>Yes</Pause_Game_While_Playing>
+  </Movie>
+
+  <Movie Name="Tutorial_16.bik">
+    <Movie_File>Data\Art\Movies\Binked\Tutorial_16.bik</Movie_File>
+    <Pause_Game_While_Playing>Yes</Pause_Game_While_Playing>
+  </Movie>
+
+   <Movie Name="Mission_1_Intro">
+		<Movie_File>Data\Art\Movies\Binked\Tutorial_00_Intro_audio_mix.bik</Movie_File>
+		<Pause_Game_While_Playing>Yes</Pause_Game_While_Playing>
+
+		<SpeechEvent_Frame> MIL_TUT01_SCENE01_01, 640  </SpeechEvent_Frame>
+		<Caption_Frame> TEXT_SPEECH_MIL_TUT01_SCENE01_01, 640 </Caption_Frame>
+		<Caption_Duration> TEXT_SPEECH_MIL_TUT01_SCENE01_01, 360 </Caption_Duration>
+
+		<SpeechEvent_Frame> MIL_TUT01_SCENE01_02, 700  </SpeechEvent_Frame>
+		<Caption_Frame> TEXT_SPEECH_MIL_TUT01_SCENE01_02, 700 </Caption_Frame>
+		<Caption_Duration> TEXT_SPEECH_MIL_TUT01_SCENE01_02, 360 </Caption_Duration>
+
+		<SpeechEvent_Frame> MIL_TUT01_SCENE01_03, 725  </SpeechEvent_Frame>
+		<Caption_Frame> TEXT_SPEECH_MIL_TUT01_SCENE01_03, 725 </Caption_Frame>
+		<Caption_Duration> TEXT_SPEECH_MIL_TUT01_SCENE01_03, 360 </Caption_Duration>
+
+		<SpeechEvent_Frame> MIL_TUT01_SCENE01_04, 830  </SpeechEvent_Frame>
+		<Caption_Frame> TEXT_SPEECH_MIL_TUT01_SCENE01_04, 830 </Caption_Frame>
+		<Caption_Duration> TEXT_SPEECH_MIL_TUT01_SCENE01_04, 360 </Caption_Duration>
+
+		<SpeechEvent_Frame> MIL_TUT01_SCENE01_05, 905  </SpeechEvent_Frame>
+		<Caption_Frame> TEXT_SPEECH_MIL_TUT01_SCENE01_05, 905 </Caption_Frame>
+		<Caption_Duration> TEXT_SPEECH_MIL_TUT01_SCENE01_05, 360 </Caption_Duration>
+
+       <SpeechEvent_Frame> MIL_TUT01_SCENE01_06, 964  </SpeechEvent_Frame>
+       <Caption_Frame> TEXT_SPEECH_MIL_TUT01_SCENE01_06, 964 </Caption_Frame>
+       <Caption_Duration> TEXT_SPEECH_MIL_TUT01_SCENE01_06, 360 </Caption_Duration>
+
+		<SpeechEvent_Frame> MIL_TUT01_SCENE01_08, 1059 </SpeechEvent_Frame>
+		<Caption_Frame> TEXT_SPEECH_MIL_TUT01_SCENE01_08, 1059 </Caption_Frame>
+		<Caption_Duration> TEXT_SPEECH_MIL_TUT01_SCENE01_08, 360 </Caption_Duration>
+
+		<SpeechEvent_Frame> MIL_TUT01_SCENE01_09, 1170  </SpeechEvent_Frame>
+		<Caption_Frame> TEXT_SPEECH_MIL_TUT01_SCENE01_09, 1170 </Caption_Frame>
+		<Caption_Duration> TEXT_SPEECH_MIL_TUT01_SCENE01_09, 360 </Caption_Duration>
+
+		<SpeechEvent_Frame> MIL_TUT01_SCENE01_10, 1309  </SpeechEvent_Frame>
+		<Caption_Frame> TEXT_SPEECH_MIL_TUT01_SCENE01_10, 1309 </Caption_Frame>
+		<Caption_Duration> TEXT_SPEECH_MIL_TUT01_SCENE01_10, 360 </Caption_Duration>
+
+		<SpeechEvent_Frame> MIL_TUT01_SCENE01_11, 1367  </SpeechEvent_Frame>
+		<Caption_Frame> TEXT_SPEECH_MIL_TUT01_SCENE01_11, 1367 </Caption_Frame>
+		<Caption_Duration> TEXT_SPEECH_MIL_TUT01_SCENE01_11, 360 </Caption_Duration>
+
+		<SpeechEvent_Frame> MIL_TUT01_SCENE17_05, 1570  </SpeechEvent_Frame>
+		<Caption_Frame> TEXT_SPEECH_MIL_TUT01_SCENE17_05, 1570 </Caption_Frame>
+		<Caption_Duration> TEXT_SPEECH_MIL_TUT01_SCENE17_05, 110 </Caption_Duration>
+
+		<SpeechEvent_Frame> MIL_TUT01_SCENE01_12, 1620  </SpeechEvent_Frame>
+		<Caption_Frame> TEXT_SPEECH_MIL_TUT01_SCENE01_12, 1620 </Caption_Frame>
+		<Caption_Duration> TEXT_SPEECH_MIL_TUT01_SCENE01_12, 360 </Caption_Duration>
+
+	</Movie>
+	
+	<Movie Name="Mission_1_Outro">
+		<Movie_File>Data\Art\Movies\Binked\Tutorial_00_Finale_Audio_mix.bik</Movie_File>
+    <Pause_Game_While_Playing>Yes</Pause_Game_While_Playing>
+
+    <SpeechEvent_Frame> MIL_TUT01_SCENE03_01, 215  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_MIL_TUT01_SCENE03_01, 215 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_MIL_TUT01_SCENE03_01, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> MIL_TUT01_SCENE03_02, 289  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_MIL_TUT01_SCENE03_02, 289 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_MIL_TUT01_SCENE03_02, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> MIL_TUT01_SCENE03_03, 343  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_MIL_TUT01_SCENE03_03, 343 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_MIL_TUT01_SCENE03_03, 360 </Caption_Duration>
+    
+    <SpeechEvent_Frame> MIL_TUT01_SCENE03_04, 455  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_MIL_TUT01_SCENE03_04, 455 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_MIL_TUT01_SCENE03_04, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> MIL_TUT01_SCENE03_05, 564  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_MIL_TUT01_SCENE03_05, 564 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_MIL_TUT01_SCENE03_05, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> MIL_TUT01_SCENE03_06, 620  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_MIL_TUT01_SCENE03_06, 620 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_MIL_TUT01_SCENE03_06, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> MIL_TUT01_SCENE03_07, 786  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_MIL_TUT01_SCENE03_07, 786 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_MIL_TUT01_SCENE03_07, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> MIL_TUT01_SCENE03_08, 1570  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_MIL_TUT01_SCENE03_08, 1570 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_MIL_TUT01_SCENE03_08, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> MIL_TUT01_SCENE03_09, 1620  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_MIL_TUT01_SCENE03_09, 1620 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_MIL_TUT01_SCENE03_09, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> MIL_TUT01_SCENE10_09, 1690  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_MIL_TUT01_SCENE10_09, 1690 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_MIL_TUT01_SCENE10_09, 360 </Caption_Duration>
+
+    
+	</Movie>
+
+	<Movie Name="Mission_2_Midtro">
+		<Movie_File>Data\Art\Movies\Binked\Tutorial_01_Midtro_Audio_Mix.bik</Movie_File>
+    <Pause_Game_While_Playing>Yes</Pause_Game_While_Playing>
+
+    <SpeechEvent_Frame> MIL_TUT02_SCENE03_01, 440  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_MIL_TUT02_SCENE03_01, 440 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_MIL_TUT02_SCENE03_01, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> MIL_TUT01_SCENE17_05, 1261  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_MIL_TUT01_SCENE17_05, 1261 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_MIL_TUT01_SCENE17_05, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> MIL_TUT02_SCENE09_01, 1305  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_MIL_TUT02_SCENE09_01, 1305 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_MIL_TUT02_SCENE09_01, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> MIL_TUT02_SCENE09_02, 1461  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_MIL_TUT02_SCENE09_02, 1461 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_MIL_TUT02_SCENE09_02, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> MIL_TUT02_SCENE09_10, 1540  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_MIL_TUT02_SCENE09_10, 1540 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_MIL_TUT02_SCENE09_10, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> MIL_TUT02_SCENE09_03, 1610  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_MIL_TUT02_SCENE09_03, 1610 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_MIL_TUT02_SCENE09_03, 360 </Caption_Duration>
+    
+    <SpeechEvent_Frame> MIL_TUT02_SCENE09_08, 1764  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_MIL_TUT02_SCENE09_08, 1764 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_MIL_TUT02_SCENE09_08, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> MIL_TUT02_SCENE09_09, 1774  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_MIL_TUT02_SCENE09_09, 1774 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_MIL_TUT02_SCENE09_09, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> MIL_TUT02_SCENE09_04, 2003  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_MIL_TUT02_SCENE09_04, 2003 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_MIL_TUT02_SCENE09_04, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> MIL_TUT02_SCENE09_05, 2051  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_MIL_TUT02_SCENE09_05, 2051 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_MIL_TUT02_SCENE09_05, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> MIL_TUT02_SCENE07_26, 2182  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_MIL_TUT02_SCENE07_26, 2182 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_MIL_TUT02_SCENE07_26, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> MIL_TUT02_SCENE07_27, 2309  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_MIL_TUT02_SCENE07_27, 2309 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_MIL_TUT02_SCENE07_27, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> MIL_TUT02_SCENE07_28, 2420  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_MIL_TUT02_SCENE07_28, 2420 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_MIL_TUT02_SCENE07_28, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> MIL_TUT02_SCENE07_29, 2565  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_MIL_TUT02_SCENE07_29, 2565 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_MIL_TUT02_SCENE07_29, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> MIL_TUT02_SCENE07_30, 2653  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_MIL_TUT02_SCENE07_30, 2653 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_MIL_TUT02_SCENE07_30, 360 </Caption_Duration>
+   
+	</Movie>
+
+	<Movie Name="Novus_M2_S3">
+		<Movie_File>Data\Art\Movies\Binked\Novus_M2_S3_Audio_Mix.bik</Movie_File>
+    <Pause_Game_While_Playing>Yes</Pause_Game_While_Playing>
+
+    <SpeechEvent_Frame> NVS02_SCENE09_01, 58  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_NVS02_SCENE09_01, 58 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_NVS02_SCENE09_01, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> NVS02_SCENE09_02, 87  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_NVS02_SCENE09_02, 87 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_NVS02_SCENE09_02, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> NVS02_SCENE09_03, 113  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_NVS02_SCENE09_03, 113 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_NVS02_SCENE09_03, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> NVS02_SCENE09_04, 184  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_NVS02_SCENE09_04, 184 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_NVS02_SCENE09_04, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> NVS02_SCENE09_05, 333  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_NVS02_SCENE09_05, 333 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_NVS02_SCENE09_05, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> NVS02_SCENE09_06, 512  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_NVS02_SCENE09_06, 512 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_NVS02_SCENE09_06, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> NVS02_SCENE09_07, 669  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_NVS02_SCENE09_07, 669 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_NVS02_SCENE09_07, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> NVS02_SCENE09_08, 820  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_NVS02_SCENE09_08, 820 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_NVS02_SCENE09_08, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> NVS02_SCENE09_09, 917  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_NVS02_SCENE09_09, 917 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_NVS02_SCENE09_09, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> NVS02_SCENE09_10, 1080  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_NVS02_SCENE09_10, 1080 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_NVS02_SCENE09_10, 2653 </Caption_Duration>
+
+    <SpeechEvent_Frame> NVS02_SCENE09_11, 1170  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_NVS02_SCENE09_11, 1170 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_NVS02_SCENE09_11, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> NVS02_SCENE09_12, 1350  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_NVS02_SCENE09_12, 1350 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_NVS02_SCENE09_12, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> NVS02_SCENE09_13, 1410  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_NVS02_SCENE09_13, 1410 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_NVS02_SCENE09_13, 360 </Caption_Duration>
+    
+	</Movie>
+
+	<Movie Name="Novus_M3_S1">
+		<Movie_File>Data\Art\Movies\Binked\Novus_M3_S1_Audio_Mix.bik</Movie_File>
+    <Pause_Game_While_Playing>Yes</Pause_Game_While_Playing>
+
+    <SpeechEvent_Frame> NVS03_SCENE11_01, 276  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_NVS03_SCENE11_01, 276 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_NVS03_SCENE11_01, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> NVS03_SCENE11_02, 463  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_NVS03_SCENE11_02, 463 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_NVS03_SCENE11_02, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> NVS03_SCENE11_03, 594  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_NVS03_SCENE11_03, 594 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_NVS03_SCENE11_03, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> NVS03_SCENE11_04, 648  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_NVS03_SCENE11_04, 648 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_NVS03_SCENE11_04, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> NVS03_SCENE11_05, 780  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_NVS03_SCENE11_05, 780 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_NVS03_SCENE11_05, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> NVS03_SCENE11_07, 890  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_NVS03_SCENE11_07, 890 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_NVS03_SCENE11_07, 360 </Caption_Duration>
+    
+	</Movie>
+
+	<Movie Name="Novus_M7_S1">
+		<Movie_File>Data\Art\Movies\Binked\Novus_M7_S1_Audio_Mix.bik</Movie_File>
+    <Pause_Game_While_Playing>Yes</Pause_Game_While_Playing>
+
+    <SpeechEvent_Frame> NVS07_SCENE01_01, 227  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_NVS07_SCENE01_01, 227 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_NVS07_SCENE01_01, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> NVS07_SCENE01_02, 350  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_NVS07_SCENE01_02, 350 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_NVS07_SCENE01_02, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> NVS07_SCENE01_03, 430  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_NVS07_SCENE01_03, 430 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_NVS07_SCENE01_03, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> NVS07_SCENE01_05, 640  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_NVS07_SCENE01_05, 640 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_NVS07_SCENE01_05, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> NVS07_SCENE01_08, 930  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_NVS07_SCENE01_08, 930 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_NVS07_SCENE01_08, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> NVS07_SCENE01_11, 1140  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_NVS07_SCENE01_11, 1140 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_NVS07_SCENE01_11, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> NVS07_SCENE01_13, 1300  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_NVS07_SCENE01_13, 1300 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_NVS07_SCENE01_13, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> NVS07_SCENE01_14, 1460  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_NVS07_SCENE01_14, 1460 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_NVS07_SCENE01_14, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> NVS07_SCENE01_15, 1495  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_NVS07_SCENE01_15, 1495 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_NVS07_SCENE01_15, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> NVS07_SCENE01_16, 1802  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_NVS07_SCENE01_16, 1802 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_NVS07_SCENE01_16, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> NVS07_SCENE01_12, 2207  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_NVS07_SCENE01_12, 2207 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_NVS07_SCENE01_12, 360 </Caption_Duration>
+    
+    
+	</Movie>
+
+	<Movie Name="Novus_M7_S3">
+		<Movie_File>Data\Art\Movies\Binked\Novus_M7_S3_Audio_Mix.bik</Movie_File>
+    <Pause_Game_While_Playing>Yes</Pause_Game_While_Playing>
+
+    <SpeechEvent_Frame> NVS07_SCENE03_01, 195  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_NVS07_SCENE03_01, 195 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_NVS07_SCENE03_01, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> NVS07_SCENE03_02, 273  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_NVS07_SCENE03_02, 273 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_NVS07_SCENE03_02, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> NVS07_SCENE03_03, 362  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_NVS07_SCENE03_03, 362 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_NVS07_SCENE03_03, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> NVS07_SCENE03_04, 430  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_NVS07_SCENE03_04, 430 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_NVS07_SCENE03_04, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> NVS07_SCENE03_05, 530  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_NVS07_SCENE03_05, 530 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_NVS07_SCENE03_05, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> NVS07_SCENE03_06, 635  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_NVS07_SCENE03_06, 635 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_NVS07_SCENE03_06, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> NVS07_SCENE03_07, 750  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_NVS07_SCENE03_07, 750 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_NVS07_SCENE03_07, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> NVS07_SCENE03_08, 900  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_NVS07_SCENE03_08, 900 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_NVS07_SCENE03_08, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> NVS07_SCENE03_09, 970  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_NVS07_SCENE03_09, 970 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_NVS07_SCENE03_09, 360 </Caption_Duration>
+    
+	</Movie>
+ 
+  <Movie Name="Hierarchy_Intro">
+    <Movie_File>Data\Art\Movies\Binked\Hier_Campaign_Intro_Audio_Mix.bik</Movie_File>
+    <Pause_Game_While_Playing>Yes</Pause_Game_While_Playing>
+
+    <SpeechEvent_Frame> HIE01_SCENE01_01, 471  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_HIE01_SCENE01_01, 471 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_HIE01_SCENE01_01, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> HIE01_SCENE01_02, 634  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_HIE01_SCENE01_02, 634 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_HIE01_SCENE01_02, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> HIE01_SCENE01_03, 796  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_HIE01_SCENE01_03, 796 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_HIE01_SCENE01_03, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> HIE01_SCENE01_04, 875  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_HIE01_SCENE01_04, 875 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_HIE01_SCENE01_04, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> HIE01_SCENE01_05, 1208  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_HIE01_SCENE01_05, 1208 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_HIE01_SCENE01_05, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> HIE01_SCENE01_06, 1365  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_HIE01_SCENE01_06, 1365 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_HIE01_SCENE01_06, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> HIE01_SCENE01_07, 1428  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_HIE01_SCENE01_07, 1428 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_HIE01_SCENE01_07, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> HIE01_SCENE01_08, 1577  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_HIE01_SCENE01_08, 1577 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_HIE01_SCENE01_08, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> HIE01_SCENE01_09, 1802  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_HIE01_SCENE01_09, 1802 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_HIE01_SCENE01_09, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> HIE01_SCENE01_10, 1909  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_HIE01_SCENE01_10, 1909 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_HIE01_SCENE01_10, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> HIE01_SCENE01_11, 2072  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_HIE01_SCENE01_11, 2072 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_HIE01_SCENE01_11, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> HIE01_SCENE01_12, 2150  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_HIE01_SCENE01_12, 2150 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_HIE01_SCENE01_12, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> HIE01_SCENE01_13, 2200  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_HIE01_SCENE01_13, 2200 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_HIE01_SCENE01_13, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> HIE01_SCENE01_14, 2352  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_HIE01_SCENE01_14, 2352 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_HIE01_SCENE01_14, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> HIE01_SCENE01_15, 2429  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_HIE01_SCENE01_15, 2429 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_HIE01_SCENE01_15, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> HIE01_SCENE01_16, 2621  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_HIE01_SCENE01_16, 2621 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_HIE01_SCENE01_16, 360 </Caption_Duration>
+    
+  </Movie>
+    
+  <Movie Name="Hierarchy_M1_S3">
+    <Movie_File>Data\Art\Movies\Binked\Hier_M1_S3_Audio_Mix.bik</Movie_File>
+    <Pause_Game_While_Playing>Yes</Pause_Game_While_Playing>
+
+    <SpeechEvent_Frame> HIE01_SCENE06_01, 810  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_HIE01_SCENE06_01, 810 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_HIE01_SCENE06_01, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> HIE01_SCENE06_02, 860  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_HIE01_SCENE06_02, 860 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_HIE01_SCENE06_02, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> HIE01_SCENE06_03, 961  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_HIE01_SCENE06_03, 961 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_HIE01_SCENE06_03, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> HIE01_SCENE06_04, 1050  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_HIE01_SCENE06_04, 1050 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_HIE01_SCENE06_04, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> HIE01_SCENE06_05, 1120  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_HIE01_SCENE06_05, 1120 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_HIE01_SCENE06_05, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> HIE01_SCENE06_06, 1305  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_HIE01_SCENE06_06, 1305 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_HIE01_SCENE06_06, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> HIE01_SCENE06_07, 1430  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_HIE01_SCENE06_07, 1430 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_HIE01_SCENE06_07, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> HIE01_SCENE06_08, 1590  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_HIE01_SCENE06_08, 1590 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_HIE01_SCENE06_08, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> HIE01_SCENE06_09, 1660  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_HIE01_SCENE06_09, 1660 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_HIE01_SCENE06_09, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> HIE01_SCENE06_10, 1815  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_HIE01_SCENE06_10, 1815 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_HIE01_SCENE06_10, 360 </Caption_Duration>
+    
+  </Movie>
+
+  <Movie Name="Hierarchy_M1_S4">
+    <Movie_File>Data\Art\Movies\Binked\Hier_M1_S4.bik</Movie_File>
+    <Pause_Game_While_Playing>Yes</Pause_Game_While_Playing>
+
+  </Movie>   
+  
+    <Movie Name="Hierarchy_M2_S4">
+    <Movie_File>Data\Art\Movies\Binked\Hier_M2_S4_Audio_Mix.bik</Movie_File>
+    <Pause_Game_While_Playing>Yes</Pause_Game_While_Playing>
+        
+    <SpeechEvent_Frame> HIE02_SCENE07_01, 330  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_HIE02_SCENE07_01, 330 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_HIE02_SCENE07_01, 360 </Caption_Duration>
+
+        <SpeechEvent_Frame> HIE02_SCENE07_02, 507  </SpeechEvent_Frame>
+        <Caption_Frame> TEXT_SPEECH_HIE02_SCENE07_02, 507 </Caption_Frame>
+        <Caption_Duration> TEXT_SPEECH_HIE02_SCENE07_02, 360 </Caption_Duration>
+
+        <SpeechEvent_Frame> HIE02_SCENE07_03, 630  </SpeechEvent_Frame>
+        <Caption_Frame> TEXT_SPEECH_HIE02_SCENE07_03, 630 </Caption_Frame>
+        <Caption_Duration> TEXT_SPEECH_HIE02_SCENE07_03, 360 </Caption_Duration>
+
+        <SpeechEvent_Frame> HIE02_SCENE07_04, 750  </SpeechEvent_Frame>
+        <Caption_Frame> TEXT_SPEECH_HIE02_SCENE07_04, 750 </Caption_Frame>
+        <Caption_Duration> TEXT_SPEECH_HIE02_SCENE07_04, 360 </Caption_Duration>
+
+        <SpeechEvent_Frame> HIE02_SCENE07_05, 870  </SpeechEvent_Frame>
+        <Caption_Frame> TEXT_SPEECH_HIE02_SCENE07_05, 870 </Caption_Frame>
+        <Caption_Duration> TEXT_SPEECH_HIE02_SCENE07_05, 360 </Caption_Duration>
+
+        <SpeechEvent_Frame> HIE02_SCENE07_06, 970  </SpeechEvent_Frame>
+        <Caption_Frame> TEXT_SPEECH_HIE02_SCENE07_06, 970 </Caption_Frame>
+        <Caption_Duration> TEXT_SPEECH_HIE02_SCENE07_06, 360 </Caption_Duration>
+
+        <SpeechEvent_Frame> HIE02_SCENE07_07, 1050  </SpeechEvent_Frame>
+        <Caption_Frame> TEXT_SPEECH_HIE02_SCENE07_07, 1050 </Caption_Frame>
+        <Caption_Duration> TEXT_SPEECH_HIE02_SCENE07_07, 360 </Caption_Duration>
+
+        <SpeechEvent_Frame> HIE02_SCENE07_08, 1250  </SpeechEvent_Frame>
+        <Caption_Frame> TEXT_SPEECH_HIE02_SCENE07_08, 1250 </Caption_Frame>
+        <Caption_Duration> TEXT_SPEECH_HIE02_SCENE07_08, 360 </Caption_Duration>
+
+        <SpeechEvent_Frame> HIE02_SCENE07_09, 1310  </SpeechEvent_Frame>
+        <Caption_Frame> TEXT_SPEECH_HIE02_SCENE07_09, 1310 </Caption_Frame>
+        <Caption_Duration> TEXT_SPEECH_HIE02_SCENE07_09, 360 </Caption_Duration>
+
+        <SpeechEvent_Frame> HIE02_SCENE07_10, 1470  </SpeechEvent_Frame>
+        <Caption_Frame> TEXT_SPEECH_HIE02_SCENE07_10, 1470 </Caption_Frame>
+        <Caption_Duration> TEXT_SPEECH_HIE02_SCENE07_10, 360 </Caption_Duration>
+
+        <SpeechEvent_Frame> HIE02_SCENE07_11, 1590  </SpeechEvent_Frame>
+        <Caption_Frame> TEXT_SPEECH_HIE02_SCENE07_11, 1590 </Caption_Frame>
+        <Caption_Duration> TEXT_SPEECH_HIE02_SCENE07_11, 360 </Caption_Duration>
+
+        <SpeechEvent_Frame> HIE02_SCENE07_12, 1720  </SpeechEvent_Frame>
+        <Caption_Frame> TEXT_SPEECH_HIE02_SCENE07_12, 1720 </Caption_Frame>
+        <Caption_Duration> TEXT_SPEECH_HIE02_SCENE07_12, 360 </Caption_Duration>
+
+        <SpeechEvent_Frame> HIE02_SCENE07_13, 1840  </SpeechEvent_Frame>
+        <Caption_Frame> TEXT_SPEECH_HIE02_SCENE07_13, 1840 </Caption_Frame>
+        <Caption_Duration> TEXT_SPEECH_HIE02_SCENE07_13, 360 </Caption_Duration>
+
+        <SpeechEvent_Frame> HIE02_SCENE07_14, 2258  </SpeechEvent_Frame>
+        <Caption_Frame> TEXT_SPEECH_HIE02_SCENE07_14, 2258 </Caption_Frame>
+        <Caption_Duration> TEXT_SPEECH_HIE02_SCENE07_14, 360 </Caption_Duration>
+
+        <SpeechEvent_Frame> HIE02_SCENE08_01, 2432  </SpeechEvent_Frame>
+        <Caption_Frame> TEXT_SPEECH_HIE02_SCENE08_01, 2432 </Caption_Frame>
+        <Caption_Duration> TEXT_SPEECH_HIE02_SCENE08_01, 360 </Caption_Duration>
+
+        <SpeechEvent_Frame> HIE02_SCENE08_02, 2473  </SpeechEvent_Frame>
+        <Caption_Frame> TEXT_SPEECH_HIE02_SCENE08_02, 2473 </Caption_Frame>
+        <Caption_Duration> TEXT_SPEECH_HIE02_SCENE08_02, 360 </Caption_Duration>
+
+        <SpeechEvent_Frame> HIE02_SCENE08_03, 2748  </SpeechEvent_Frame>
+        <Caption_Frame> TEXT_SPEECH_HIE02_SCENE08_03, 2748 </Caption_Frame>
+        <Caption_Duration> TEXT_SPEECH_HIE02_SCENE08_03, 360 </Caption_Duration>
+
+        <SpeechEvent_Frame> HIE02_SCENE08_04, 2885  </SpeechEvent_Frame>
+        <Caption_Frame> TEXT_SPEECH_HIE02_SCENE08_04, 2885 </Caption_Frame>
+        <Caption_Duration> TEXT_SPEECH_HIE02_SCENE08_04, 360 </Caption_Duration>
+
+        <SpeechEvent_Frame> HIE02_SCENE08_05, 2951  </SpeechEvent_Frame>
+        <Caption_Frame> TEXT_SPEECH_HIE02_SCENE08_05, 2951 </Caption_Frame>
+        <Caption_Duration> TEXT_SPEECH_HIE02_SCENE08_05, 360 </Caption_Duration>
+
+        <SpeechEvent_Frame> HIE02_SCENE08_06, 3088  </SpeechEvent_Frame>
+        <Caption_Frame> TEXT_SPEECH_HIE02_SCENE08_06, 3088 </Caption_Frame>
+        <Caption_Duration> TEXT_SPEECH_HIE02_SCENE08_06, 360 </Caption_Duration>
+
+        <SpeechEvent_Frame> HIE02_SCENE08_07, 3294  </SpeechEvent_Frame>
+        <Caption_Frame> TEXT_SPEECH_HIE02_SCENE08_07, 3294 </Caption_Frame>
+        <Caption_Duration> TEXT_SPEECH_HIE02_SCENE08_07, 360 </Caption_Duration>
+
+        <SpeechEvent_Frame> HIE02_SCENE08_08, 3374  </SpeechEvent_Frame>
+        <Caption_Frame> TEXT_SPEECH_HIE02_SCENE08_08, 3374 </Caption_Frame>
+        <Caption_Duration> TEXT_SPEECH_HIE02_SCENE08_08, 360 </Caption_Duration>
+
+        <SpeechEvent_Frame> HIE02_SCENE08_09, 3446  </SpeechEvent_Frame>
+        <Caption_Frame> TEXT_SPEECH_HIE02_SCENE08_09, 3446 </Caption_Frame>
+        <Caption_Duration> TEXT_SPEECH_HIE02_SCENE08_09, 360 </Caption_Duration>
+        
+  </Movie>
+
+  <Movie Name="Hierarchy_M4_S1">
+    <Movie_File>Data\Art\Movies\Binked\Hier_M4_S1_Audio_Mix.bik</Movie_File>
+    <Pause_Game_While_Playing>Yes</Pause_Game_While_Playing>
+
+    <SpeechEvent_Frame> HIE04_SCENE02_01, 115  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_HIE04_SCENE02_01, 115 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_HIE04_SCENE02_01, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> HIE04_SCENE02_02, 256  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_HIE04_SCENE02_02, 256 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_HIE04_SCENE02_02, 360 </Caption_Duration>
+
+
+    <SpeechEvent_Frame> HIE04_SCENE02_03, 475  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_HIE04_SCENE02_03, 475 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_HIE04_SCENE02_03, 360 </Caption_Duration>
+
+
+    <SpeechEvent_Frame> HIE04_SCENE02_04, 565  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_HIE04_SCENE02_04, 565 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_HIE04_SCENE02_04, 360 </Caption_Duration>
+
+
+    <SpeechEvent_Frame> HIE04_SCENE02_05, 685  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_HIE04_SCENE02_05, 685 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_HIE04_SCENE02_05, 360 </Caption_Duration>
+
+
+    <SpeechEvent_Frame> HIE04_SCENE02_06, 850  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_HIE04_SCENE02_06, 850 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_HIE04_SCENE02_06, 360 </Caption_Duration>    
+
+
+  </Movie>
+
+  <Movie Name="Hierarchy_M4_S3">
+    <Movie_File>Data\Art\Movies\Binked\Hier_M4_S3_Audio_Mix.bik</Movie_File>
+    <Pause_Game_While_Playing>Yes</Pause_Game_While_Playing>
+
+      <SpeechEvent_Frame> HIE04_SCENE06_01, 502  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_HIE04_SCENE06_01, 502 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_HIE04_SCENE06_01, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> HIE04_SCENE06_02, 780  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_HIE04_SCENE06_02, 780 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_HIE04_SCENE06_02, 360 </Caption_Duration>
+      
+  </Movie>
+    
+
+  <Movie Name="Hierarchy_M5_S4">
+    <Movie_File>Data\Art\Movies\Binked\Hier_M5_S4_Audio_Mix.bik</Movie_File>
+    <Pause_Game_While_Playing>Yes</Pause_Game_While_Playing>
+
+    <SpeechEvent_Frame> HIE05_SCENE05_01, 155  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_HIE05_SCENE05_01, 155 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_HIE05_SCENE05_01, 360 </Caption_Duration>    
+
+    <SpeechEvent_Frame> HIE05_SCENE05_02, 290  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_HIE05_SCENE05_02, 290 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_HIE05_SCENE05_02, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> HIE05_SCENE05_03, 615  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_HIE05_SCENE05_03, 615 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_HIE05_SCENE05_03, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> HIE05_SCENE05_04, 710  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_HIE05_SCENE05_04, 710 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_HIE05_SCENE05_04, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> HIE05_SCENE05_05, 840  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_HIE05_SCENE05_05, 840 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_HIE05_SCENE05_05, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> HIE05_SCENE05_06, 995  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_HIE05_SCENE05_06, 995 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_HIE05_SCENE05_06, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> HIE05_SCENE05_07, 1265  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_HIE05_SCENE05_07, 1265 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_HIE05_SCENE05_07, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> HIE05_SCENE05_08, 1340  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_HIE05_SCENE05_08, 1340 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_HIE05_SCENE05_08, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> HIE05_SCENE05_09, 1740  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_HIE05_SCENE05_09, 1740 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_HIE05_SCENE05_09, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> HIE05_SCENE05_10, 1830  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_HIE05_SCENE05_10, 1830 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_HIE05_SCENE05_10, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> HIE05_SCENE05_11, 1950  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_HIE05_SCENE05_11, 1950 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_HIE05_SCENE05_11, 360 </Caption_Duration>
+    
+  </Movie>
+
+  <Movie Name="Hierarchy_M6_S1">
+    <Movie_File>Data\Art\Movies\Binked\Hier_M6_S1_Audio_Mix.bik</Movie_File>
+    <Pause_Game_While_Playing>Yes</Pause_Game_While_Playing>
+
+     <SpeechEvent_Frame> HIE06_SCENE01_01, 145  </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_HIE06_SCENE01_01, 145 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_HIE06_SCENE01_01, 360 </Caption_Duration>
+
+     <SpeechEvent_Frame> HIE06_SCENE01_02, 870  </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_HIE06_SCENE02_01, 870 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_HIE06_SCENE02_01, 360 </Caption_Duration>
+
+     <SpeechEvent_Frame> HIE06_SCENE01_03, 1240  </SpeechEvent_Frame>
+     <Caption_Frame> TEXT_SPEECH_HIE06_SCENE01_03, 1240 </Caption_Frame>
+     <Caption_Duration> TEXT_SPEECH_HIE06_SCENE01_03, 360 </Caption_Duration>
+     
+  </Movie>
+
+  <Movie Name="Hierarchy_M6_S3">
+    <Movie_File>Data\Art\Movies\Binked\Hier_M6_S3_Audio_Mix.bik</Movie_File>
+    <Pause_Game_While_Playing>Yes</Pause_Game_While_Playing>
+
+      <SpeechEvent_Frame> HIE06_SCENE04_01, 874  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_HIE06_SCENE04_01, 874 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_HIE06_SCENE04_01, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> HIE06_SCENE04_02, 925  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_HIE06_SCENE04_02, 925 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_HIE06_SCENE04_02, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> HIE06_SCENE04_03, 1340  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_HIE06_SCENE04_03, 1340 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_HIE06_SCENE04_03, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> HIE06_SCENE04_04, 1453  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_HIE06_SCENE04_04, 1453 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_HIE06_SCENE04_04, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> HIE06_SCENE04_05, 1598  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_HIE06_SCENE04_05, 1598 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_HIE06_SCENE04_05, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> HIE06_SCENE04_06, 1668  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_HIE06_SCENE04_06, 1668 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_HIE06_SCENE04_06, 360 </Caption_Duration>
+      
+  </Movie>
+
+  <Movie Name="Hierarchy_Campaign_Finale">
+    <Movie_File>Data\Art\Movies\Binked\Hier_Campaign_Finale_Audio_Mix.bik</Movie_File>
+    <Pause_Game_While_Playing>Yes</Pause_Game_While_Playing>
+
+      <SpeechEvent_Frame> HIE06_SCENE06_01, 899  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_HIE06_SCENE06_01, 899 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_HIE06_SCENE06_01, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> HIE06_SCENE06_02, 949  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_HIE06_SCENE06_02, 949 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_HIE06_SCENE06_02, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> HIE06_SCENE06_03, 1144  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_HIE06_SCENE06_03, 1144 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_HIE06_SCENE06_03, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> HIE06_SCENE06_04, 1353  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_HIE06_SCENE06_04, 1353 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_HIE06_SCENE06_04, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> HIE06_SCENE06_05, 1485  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_HIE06_SCENE06_05, 1485 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_HIE06_SCENE06_05, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> HIE06_SCENE06_06, 1574  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_HIE06_SCENE06_06, 1574 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_HIE06_SCENE06_06, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> HIE06_SCENE06_07, 1740  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_HIE06_SCENE06_07, 1740 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_HIE06_SCENE06_07, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> HIE06_SCENE06_08, 1955  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_HIE06_SCENE06_08, 1955 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_HIE06_SCENE06_08, 360 </Caption_Duration>
+      
+  </Movie>
+    
+  
+  <Movie Name="Masari_Campaign_Intro">
+    <Movie_File>Data\Art\Movies\Binked\Masari_Campaign_Intro_Audio_Mix.bik</Movie_File>
+    <Pause_Game_While_Playing>Yes</Pause_Game_While_Playing>
+
+    <SpeechEvent_Frame> MAS01_SCENE01_01, 80  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_MAS01_SCENE01_01, 80 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_MAS01_SCENE01_01, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> MAS01_SCENE01_02, 426  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_MAS01_SCENE01_02, 426 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_MAS01_SCENE01_02, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> MAS01_SCENE01_03, 689  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_MAS01_SCENE01_03, 689 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_MAS01_SCENE01_03, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> MAS01_SCENE01_04, 810  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_MAS01_SCENE01_04, 810 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_MAS01_SCENE01_04, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> MAS01_SCENE01_05, 910  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_MAS01_SCENE01_05, 910 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_MAS01_SCENE01_05, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> MAS01_SCENE01_06, 1155  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_MAS01_SCENE01_06, 1155 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_MAS01_SCENE01_06, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> MAS01_SCENE01_07, 1310  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_MAS01_SCENE01_07, 1310 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_MAS01_SCENE01_07, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> MAS01_SCENE01_08, 1410  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_MAS01_SCENE01_08, 1410 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_MAS01_SCENE01_08, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> MAS01_SCENE01_09, 1600  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_MAS01_SCENE01_09, 1600 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_MAS01_SCENE01_09, 360 </Caption_Duration>
+
+    <SpeechEvent_Frame> MAS01_SCENE01_10, 2121  </SpeechEvent_Frame>
+    <Caption_Frame> TEXT_SPEECH_MAS01_SCENE01_10, 2121 </Caption_Frame>
+    <Caption_Duration> TEXT_SPEECH_MAS01_SCENE01_10, 360 </Caption_Duration>
+    
+  </Movie>
+
+  <Movie Name="Masari_M1_S4">
+    <Movie_File>Data\Art\Movies\Binked\Masari_M1_S4_Audio_Mix.bik</Movie_File>
+    <Pause_Game_While_Playing>Yes</Pause_Game_While_Playing>
+
+      <SpeechEvent_Frame> MAS02_SCENE01_01, 270  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_MAS02_SCENE01_01, 270 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_MAS02_SCENE01_01, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> MAS02_SCENE01_02, 380  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_MAS02_SCENE01_02, 380 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_MAS02_SCENE01_02, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> MAS02_SCENE01_03, 470  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_MAS02_SCENE01_03, 470 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_MAS02_SCENE01_03, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> MAS02_SCENE01_04, 595  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_MAS02_SCENE01_04, 595 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_MAS02_SCENE01_04, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> MAS02_SCENE01_05, 750  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_MAS02_SCENE01_05, 750 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_MAS02_SCENE01_05, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> MAS02_SCENE01_06, 920  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_MAS02_SCENE01_06, 920 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_MAS02_SCENE01_06, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> MAS02_SCENE01_07, 1055  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_MAS02_SCENE01_07, 1055 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_MAS02_SCENE01_07, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> MAS02_SCENE01_08, 1155  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_MAS02_SCENE01_08, 1155 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_MAS02_SCENE01_08, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> MAS02_SCENE01_09, 1290  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_MAS02_SCENE09_01, 1290 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_MAS02_SCENE09_01, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> MAS02_SCENE01_10, 1440  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_MAS02_SCENE01_10, 1440 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_MAS02_SCENE01_10, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> MAS02_SCENE01_11, 1571  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_MAS02_SCENE01_11, 1571 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_MAS02_SCENE01_11, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> MAS02_SCENE01_12, 1710  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_MAS02_SCENE01_12, 1710 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_MAS02_SCENE01_12, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> MAS02_SCENE01_13, 1770  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_MAS02_SCENE01_13, 1770 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_MAS02_SCENE01_13, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> MAS02_SCENE01_14, 2210  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_MAS02_SCENE01_14, 2210 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_MAS02_SCENE01_14, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> MAS02_SCENE01_15, 2370  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_MAS02_SCENE01_15, 2370 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_MAS02_SCENE01_15, 360 </Caption_Duration>
+
+      
+  </Movie>
+
+  <Movie Name="Masari_Campaign_Finale">
+    <Movie_File>Data\Art\Movies\Binked\Masari_Campaign_Finale_Audio_Mix.bik</Movie_File>
+    <Pause_Game_While_Playing>Yes</Pause_Game_While_Playing>
+
+      <SpeechEvent_Frame> MAS06_SCENE02_01, 70  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_MAS06_SCENE02_01, 70 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_MAS06_SCENE02_01, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> MAS06_SCENE02_02, 350  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_MAS06_SCENE02_01, 350 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_MAS06_SCENE02_02, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> MAS06_SCENE02_03, 440  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_MAS06_SCENE02_03, 440 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_MAS06_SCENE02_03, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> MAS06_SCENE02_04, 750  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_MAS06_SCENE02_04, 750 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_MAS06_SCENE02_04, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> MAS06_SCENE02_05, 865  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_MAS06_SCENE02_05, 865 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_MAS06_SCENE02_05, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> MAS06_SCENE02_06, 990  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_MAS06_SCENE02_06, 990 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_MAS06_SCENE02_06, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> MAS06_SCENE02_07, 1020  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_MAS06_SCENE02_07, 1020 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_MAS06_SCENE02_07, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> MAS06_SCENE02_08, 1095  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_MAS06_SCENE02_08, 1095 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_MAS06_SCENE02_08, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> MAS06_SCENE02_09, 1205  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_MAS06_SCENE02_09, 1205 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_MAS06_SCENE02_09, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> MAS06_SCENE02_10, 1295  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_MAS06_SCENE02_10, 1295 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_MAS06_SCENE02_10, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> MAS06_SCENE02_11, 1445  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_MAS06_SCENE02_11, 1445 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_MAS06_SCENE02_11, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> MAS06_SCENE02_12, 1510  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_MAS06_SCENE02_12, 1510 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_MAS06_SCENE02_12, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> MAS06_SCENE02_13, 1625  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_MAS06_SCENE02_13, 1625 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_MAS06_SCENE02_13, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> MAS06_SCENE02_14, 1775  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_MAS06_SCENE02_14, 1775 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_MAS06_SCENE02_14, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> MAS06_SCENE02_15, 1870  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_MAS06_SCENE02_15, 1870 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_MAS06_SCENE02_15, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> MAS06_SCENE02_16, 1980  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_MAS06_SCENE02_16, 1980 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_MAS06_SCENE02_16, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> MAS06_SCENE02_17, 2040  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_MAS06_SCENE02_17, 2040 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_MAS06_SCENE02_17, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> MAS06_SCENE02_18, 2100  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_MAS06_SCENE02_18, 2100 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_MAS06_SCENE02_18, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> MAS06_SCENE02_16, 2445  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_MAS06_SCENE02_16, 2445 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_MAS06_SCENE02_16, 360 </Caption_Duration>
+
+      <SpeechEvent_Frame> MAS06_SCENE02_17, 2498  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_MAS06_SCENE02_17, 2498 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_MAS06_SCENE02_17, 360 </Caption_Duration>
+
+
+      <SpeechEvent_Frame> MAS06_SCENE02_19, 2579  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_MAS06_SCENE02_19, 2579 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_MAS06_SCENE02_19, 360 </Caption_Duration>
+      
+
+      <SpeechEvent_Frame> MAS06_SCENE02_20, 2943  </SpeechEvent_Frame>
+      <Caption_Frame> TEXT_SPEECH_MAS06_SCENE02_20, 2943 </Caption_Frame>
+      <Caption_Duration> TEXT_SPEECH_MAS06_SCENE02_20, 360 </Caption_Duration>
+
+      
+  </Movie>
+
+  <Movie Name="CREDITS">
+		<Movie_File>Data\Art\Movies\Binked\credits_loop.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="COM0100">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_COM0100_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="COM0105">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_COM0105_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="COM0110">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_COM0110_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="COM0127">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_COM0127_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="COM0128">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_COM0128_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="COM0130">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_COM0130_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="COM0132">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_COM0132_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="COM0144">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_COM0144_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="COM0150">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_COM0150_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="COM0154">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_COM0154_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="COM0156">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_COM0156_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="COM0166">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_COM0166_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="COM0169">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_COM0169_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="COM0178">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_COM0178_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="COM0187">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_COM0187_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="CSI0102">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_CSI0102_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="CSI0103">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_CSI0103_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="CSI0113">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_CSI0113_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="CSI0121">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_CSI0121_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="CSI0133">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_CSI0133_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="CSI0135">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_CSI0135_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="CSI0139">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_CSI0139_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="CSI0141">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_CSI0141_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="CSI0143">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_CSI0143_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="CSI0147">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_CSI0147_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="CSI0149">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_CSI0149_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="CSI0152">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_CSI0152_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="CSI0158">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_CSI0158_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="CSI0160">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_CSI0160_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="CSI0162">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_CSI0162_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="CSI0164">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_CSI0164_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="CSI0172">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_CSI0172_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="CSI0175">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_CSI0175_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="CSI0182">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_CSI0182_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="CSI0184">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_CSI0184_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="CSI0188">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_CSI0188_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="CSI0190">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_CSI0190_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="SCT0120">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_SCT0120_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="WMN0107">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_WMN0107_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="ZEN0101">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_ZEN0101_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="ZEN0104">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_ZEN0104_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="ZEN0108">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_ZEN0108_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="ZEN0111">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_ZEN0111_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="ZEN0112">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_ZEN0112_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="ZEN0115">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_ZEN0115_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="ZEN0116">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_ZEN0116_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="ZEN0119">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_ZEN0119_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="ZEN0122">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_ZEN0122_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="ZEN0123">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_ZEN0123_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="ZEN0125">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_ZEN0125_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="ZEN0126">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_ZEN0126_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="ZEN0129">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_ZEN0129_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="ZEN0131">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_ZEN0131_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="ZEN0134">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_ZEN0134_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="ZEN0136">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_ZEN0136_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="ZEN0138">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_ZEN0138_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="ZEN0140">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_ZEN0140_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="ZEN0142">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_ZEN0142_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="ZEN0146">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_ZEN0146_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="ZEN0148">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_ZEN0148_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="ZEN0151">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_ZEN0151_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="ZEN0153">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_ZEN0153_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="ZEN0157">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_ZEN0157_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="ZEN0159">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_ZEN0159_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="ZEN0161">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_ZEN0161_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="ZEN0163">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_ZEN0163_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="ZEN0165">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_ZEN0165_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="ZEN0167">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_ZEN0167_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="ZEN0N70">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_ZEN0170_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="ZEN0173">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_ZEN0173_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="ZEN0174">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_ZEN0174_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="ZEN0177">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_ZEN0177_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="ZEN0179">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_ZEN0179_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="ZEN0180">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_ZEN0180_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="ZEN0181">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_ZEN0181_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="ZEN0183">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_ZEN0183_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="ZEN0186">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_ZEN0186_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="ZEN0189">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_ZEN0189_ENG.bik</Movie_File>
+	</Movie>
+
+	<Movie Name="ZEN0191">
+		<Movie_File>Data\Art\Movies\Binked\UIVS_ZEN0191_ENG.bik</Movie_File>
+	</Movie>
+
+</Movies>

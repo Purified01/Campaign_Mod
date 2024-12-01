@@ -1,0 +1,1141 @@
+<?xml version="1.0"?>
+<Alien_Veh_Defiler_XML>
+
+	<!-- **************************************************************************************** -->
+	<!-- *** UNIT(S) **************************************************************************** -->
+	<!-- **************************************************************************************** -->
+
+	<X10_Alien_Units Name="Alien_Defiler">
+
+		<!-- ART -->
+		<Land_Model_Name>AV_Defiler.ALO</Land_Model_Name>
+		<Scale_Factor>2.0</Scale_Factor>
+		<Loop_Idle_Anim_00>No</Loop_Idle_Anim_00>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+		<Occlusion_Silhouette_Enabled>1</Occlusion_Silhouette_Enabled>
+		<Is_Attack_Anim_Looped> true </Is_Attack_Anim_Looped>
+		<Looped_Attack_Anim_Timeout> 2 </Looped_Attack_Anim_Timeout>
+      <AssetBank> BANK_ALIEN </AssetBank>
+
+		<!-- INTERFACE -->
+		<Icon_Name>i_icon_av_defiler.tga</Icon_Name>
+		<Text_ID>TEXT_ALIEN_DEFILER</Text_ID>
+		<GUI_Scene_Name> HealthBar_Scene_Medium </GUI_Scene_Name>
+		<GUI_Receives_Input> false </GUI_Receives_Input>
+		<GUI_Min_Scale> 0.3 </GUI_Min_Scale>
+		<GUI_Max_Scale> 2.5 </GUI_Max_Scale>
+		<GUI_Default_Scale> 0.5 </GUI_Default_Scale>
+		<GUI_World_Offset> 0.0, 0.0, -10 </GUI_World_Offset>
+		<Select_Box_Scale>30</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+
+		<!-- ATTRIBUTES -->
+        <LOD_Bias>6.0</LOD_Bias>
+		<Affiliation> Alien, Alien_ZM06_KamalRex </Affiliation>
+		<Victory_Relevant> No </Victory_Relevant>
+		<Weather_Category>Infantry</Weather_Category>
+		<CategoryMask> Large, Piloted, CanAttack, RadiationHelps </CategoryMask>
+		<Can_Fall_From_Bridge> true </Can_Fall_From_Bridge>
+		<Importance> 0.5 </Importance>
+		<Shot_Type> Vehicle </Shot_Type>
+
+		<Attributes SubObjectList="Yes">
+			<Is_Phasable> true </Is_Phasable>
+			<Tactical_Sell_Percent_Modifier> -0.5 </Tactical_Sell_Percent_Modifier>
+			<Tactical_Sell_Time_Seconds> 2.0 </Tactical_Sell_Time_Seconds>
+			<Generator_Area_Effect_Radius_1> 50 </Generator_Area_Effect_Radius_1>
+		</Attributes>
+
+		<!-- MOVEMENT -->
+		<MovementClass> Walker </MovementClass>
+		<Max_Speed>1.7</Max_Speed>
+		<Max_Rate_Of_Turn>10.0</Max_Rate_Of_Turn>
+		<Stopped_Rate_Of_Turn> 6.0 </Stopped_Rate_Of_Turn>
+		<Custom_Hard_XExtent> 11.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		<Custom_Hard_XExtent_Offset> 3.0 </Custom_Hard_XExtent_Offset>
+		<Space_Layer> LandDynamic </Space_Layer>
+		<UnitCollisionClass> Vehicle </UnitCollisionClass>
+		<Cannot_Collide_With_Infantry> true </Cannot_Collide_With_Infantry>
+		<FormationSpacing> 1.0 </FormationSpacing>
+		<FormationRaggedness> 1 </FormationRaggedness>
+		<MaxJiggleDistance> 2.0 </MaxJiggleDistance>
+		<Movement_Animation_Speed> 1.5 </Movement_Animation_Speed>
+		<Rotation_Animation_Speed> 2.5 </Rotation_Animation_Speed>
+		<OccupationStyle>1x1</OccupationStyle>
+		<FormationOrder> 9 </FormationOrder>
+		<FormationGrouping> SameOrder </FormationGrouping>
+		<!-- DEBUG: Make a new formation for these. -->
+		<Has_Looping_Turn_Animations> true </Has_Looping_Turn_Animations>
+		<Walk_Transition> true </Walk_Transition>
+		<Planted_Foot_Height_Minimum> 0.0 </Planted_Foot_Height_Minimum>
+		<Planted_Foot_Height_Maximum> 50.0 </Planted_Foot_Height_Maximum>
+		<Terrain_Conformity_Position_Elasticity> 20.0 </Terrain_Conformity_Position_Elasticity>
+		<Terrain_Conformity_Velocity> 1 </Terrain_Conformity_Velocity>
+
+		<Spin_Away_On_Death>Yes</Spin_Away_On_Death>
+		<Spin_Away_On_Death_Chance>1</Spin_Away_On_Death_Chance>
+		<Spin_Away_On_Death_Time>1</Spin_Away_On_Death_Time>
+		<Spin_Away_On_Death_Explosion />
+
+		<!-- CONFLICT -->
+		<Is_Attackable> true </Is_Attackable>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+		<Ranged_Target_Z_Adjust>40.0</Ranged_Target_Z_Adjust>
+		<Land_FOW_Reveal_Range> 220.0</Land_FOW_Reveal_Range>
+
+		<Attack_Category_Restrictions> Flying | Resource | Resource_INST+~Organic | Resource_INST+Organic+Medium </Attack_Category_Restrictions>
+
+		<Tactical_Health> 500 </Tactical_Health>
+		<Land_Damage_Thresholds>1, 0.66, 0.33</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2</Land_Damage_Alternates>
+		<Land_Damage_SFX />
+
+
+		<!-- BEHAVIORS -->
+		<Behavior>
+			SELECTABLE,
+			RADAR_MAP_VISIBLE,
+			PERSISTENT_UNIT,
+			EFFECT_REGISTRY
+		</Behavior>
+
+		<LandBehavior>
+			TURRET,
+			RADIATION_WEAPON,
+			ATTRIBUTE_DIRECTORY,
+			EFFECT_GENERATOR,
+			ABILITY_COUNTDOWN,
+			STUNNABLE,
+			GUI,
+			RADAR_MAP_VISIBLE,
+			WALK_LOCOMOTOR,
+			FORMATION,
+			IDLE,
+      SQUASH,
+			REVEAL,
+			HIDE_WHEN_FOGGED,
+			UNIT_AI,
+			TARGETING,
+			CREATE_CHILDREN,
+			DAMAGE_TRACKING,
+			AI_RECRUITABLE,
+			AI_TARGET,
+			TACTICAL_SELL,
+			TELEPORT_PAD
+		</LandBehavior>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Armor_Type> Armor_Alien_Vehicle_Heavy </Armor_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="TacticalSellBehaviorType">
+			<Sell_Effect_Generator_Name>AlienSellGenerator</Sell_Effect_Generator_Name>
+		</BehaviorType>
+
+		<BehaviorType Name="ProjectileBehaviorType">
+			<Can_Be_Redirected>False</Can_Be_Redirected>
+		</BehaviorType>
+
+		<BehaviorType Name="ProductionBehaviorType">
+			<Size_Value> 10 </Size_Value>
+			<Build_Cost_Credits> 350 </Build_Cost_Credits>
+			<Build_Time_Seconds> 15 </Build_Time_Seconds>
+			<Is_Research_Tech_Tree_Lockable> Yes </Is_Research_Tech_Tree_Lockable>
+			<Extra_Enablers_Increase_Build_Rate> 1.0 </Extra_Enablers_Increase_Build_Rate>
+
+			<!-- 
+				Maria 11.07.2006 
+				This flag determines which types are used to populate the
+				build menu in global mode.
+			-->
+			<Is_Strategic_Buildable_Type> Yes </Is_Strategic_Buildable_Type>
+			<Strategic_UI_Build_Menu_Order>4</Strategic_UI_Build_Menu_Order>
+         <Build_Limit_Current_Per_Player>20</Build_Limit_Current_Per_Player>
+		</BehaviorType>
+
+
+		<BehaviorType Name="BuildableObjectBehaviorType">
+			<Tactical_Production_Queue> Tactical_Units </Tactical_Production_Queue>
+			<Tactical_Build_Cost_Campaign> 700 </Tactical_Build_Cost_Campaign>
+			<Tactical_Build_Cost_Multiplayer> 700 </Tactical_Build_Cost_Multiplayer>
+			<Tactical_Build_Time_Seconds> 26 </Tactical_Build_Time_Seconds>
+			<Tactical_UI_Build_Queue_Order> 3 </Tactical_UI_Build_Queue_Order>
+		</BehaviorType>
+
+
+    <BehaviorType name="AIBehaviorType">
+      <AI_Combat_Power> 1 </AI_Combat_Power>
+      <Idle_Chase_Range> 20.0 </Idle_Chase_Range> <!-- Double click guard area Keep very small-->
+      <Guard_Chase_Range> 160.0 </Guard_Chase_Range> <!-- Guard radius for unit-->
+      <Autonomous_Move_Extension_Vs_Attacker> 25.0 </Autonomous_Move_Extension_Vs_Attacker> <!--Range outside of guard area unit will move-->
+      <Attack_Move_Response_Range> 50.0 </Attack_Move_Response_Range>   <!-- When given a attack move command unit will travel this distance from path to attack-->
+      <AI_Target_Level>Individual_Or_Group</AI_Target_Level>
+		 <Attack_Score_Rating> 0.8 </Attack_Score_Rating>
+		 <Scout_Score_Rating> 0.0 </Scout_Score_Rating>
+		 <Guerilla_Score_Rating> 0.0 </Guerilla_Score_Rating>
+	 </BehaviorType>
+
+		<BehaviorType NAme="LuaScriptBehaviorType">
+			<Lua_Only_Service_If_AI>True</Lua_Only_Service_If_AI>
+			<Lua_Land_Behaviors>Generic_Vehicle_Unit_Behavior,Defensive_AI_Unit_Behavior</Lua_Land_Behaviors>
+			<Lua_Script_Data>
+				GenericVehicle = {}
+				GenericVehicle.SearchRange = 125.0
+				GenericVehicle.KiteRange = 50.0
+				GenericVehicle.CrushRange = 0.0
+				DefensiveAI = {}
+				DefensiveAI.KillTurret = false
+			</Lua_Script_Data>
+		</BehaviorType>
+
+		<BehaviorType Name="WeaponBehaviorType">
+			<Can_Attack_Without_Weapon_Behavior>Yes</Can_Attack_Without_Weapon_Behavior>
+			<Targeting_Priority_Set> Alien_Defiler_Target_Priority </Targeting_Priority_Set>
+			<Targeting_Fire_Inaccuracy> 1.0 </Targeting_Fire_Inaccuracy>
+			<Targeting_Min_Attack_Distance> 0.0 </Targeting_Min_Attack_Distance>
+			<Targeting_Max_Attack_Distance> 200.0 </Targeting_Max_Attack_Distance>
+			<Targeting_Stickiness_Time_Threshold> 2.0 </Targeting_Stickiness_Time_Threshold>
+			<Stop_Targeting_Cooldown_Seconds> 4.0 </Stop_Targeting_Cooldown_Seconds>
+		</BehaviorType>
+
+		<BehaviorType Name="EncyclopediaBehaviorType">
+			<Icon_Name>i_icon_av_defiler.tga </Icon_Name>
+		</BehaviorType>
+
+		<BehaviorType Name="TooltipBehaviorType">
+			<Tooltip_Description_Text_ID> TEXT_TOOLTIP_DESCRIPTION_ALIEN_DEFILER </Tooltip_Description_Text_ID>
+			<Tooltip_Category> TEXT_TOOLTIP_CATEGORY_VEHICLE </Tooltip_Category>
+			<Tooltip_Good_Against> TEXT_TYPE_VERSUS_INFANTRY TEXT_TYPE_VERSUS_STRUCTURES </Tooltip_Good_Against>
+			<Tooltip_Vulnerable_To> TEXT_TYPE_VERSUS_AIR_UNITS TEXT_TYPE_VERSUS_TURRETS </Tooltip_Vulnerable_To>
+         <Researched_Upgrades>
+            TEXT_ALIEN_RESEARCH_TITLE_VOLATILE_REACTORS
+            TEXT_ALIEN_RESEARCH_TITLE_GAMMA_RADIATION
+            TEXT_ALIEN_RESEARCH_TITLE_ADVANCED_MUTAGENS
+         </Researched_Upgrades>
+		</BehaviorType>
+		
+         
+		<BehaviorType Name="TurretBehaviorType">
+			<Turret_Bone_Name> Turret_00 </Turret_Bone_Name>
+			<Turret_Rotate_Speed> 2.0 </Turret_Rotate_Speed>
+			<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+			<Apply_Y_Turret_Rotate_To_Axis>1</Apply_Y_Turret_Rotate_To_Axis>
+			<Turret_Rotate_Extent_Degrees> 360.0 </Turret_Rotate_Extent_Degrees>
+			<Turret_Elevate_Extent_Degrees> 40.0 </Turret_Elevate_Extent_Degrees>
+			<Ground_Vehicle_Turret_Target> Yes </Ground_Vehicle_Turret_Target>
+			<Turret_Rotate_To_Rest_Delay_Sec> 1.0 </Turret_Rotate_To_Rest_Delay_Sec>
+		</BehaviorType>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Death_Explosions>alien_large_explosion</Death_Explosions>
+			<Death_Clone> Damage_Default, Alien_Defiler_Death_Clone </Death_Clone>
+			<On_Death_Spawn_Object_Type> Defiler_On_Death_Explosion </On_Death_Spawn_Object_Type>
+			<Disable_Death_Spawn_Object_Attribute> Is_Mind_Controlled </Disable_Death_Spawn_Object_Attribute>
+			<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+		</BehaviorType>
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.03  0.03</Radar_Icon_Size>
+		</BehaviorType>
+
+		<BehaviorType Name="CrushBehaviorType">
+			<Crush_Defense>30</Crush_Defense>
+      <Crush_Power>9</Crush_Power>
+		</BehaviorType>
+
+      <BehaviorType Name="SFXBehaviorType">
+			<SFXEvent_Fire> </SFXEvent_Fire>
+			<SFXEvent_Weapon_Firing_Loop> SFX_Alien_Energy_Fire </SFXEvent_Weapon_Firing_Loop>
+			<SFXEvent_Select>Unit_Select_Alien_Defiler</SFXEvent_Select>
+			<SFXEvent_Move>Unit_Move_Alien_Defiler</SFXEvent_Move>
+			<SFXEvent_Move_At_Top_Speed>Unit_Move_Alien_Defiler</SFXEvent_Move_At_Top_Speed>
+			<SFXEvent_Attack>Unit_Attack_Alien_Defiler</SFXEvent_Attack>
+			<SFXEvent_Attack_At_Top_Speed>Unit_Attack_Alien_Defiler</SFXEvent_Attack_At_Top_Speed>
+			<SFXEvent_Guard />
+			<SFXEvent_Health_Low_Warning> </SFXEvent_Health_Low_Warning>
+			<SFXEvent_Health_Critical_Warning> </SFXEvent_Health_Critical_Warning>
+			<SFXEvent_Enemy_Damaged_Health_Low_Warning> </SFXEvent_Enemy_Damaged_Health_Low_Warning>
+			<SFXEvent_Enemy_Damaged_Health_Critical_Warning> </SFXEvent_Enemy_Damaged_Health_Critical_Warning>
+			<SFXEvent_Ambient_Moving> </SFXEvent_Ambient_Moving>
+			<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 3 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+			<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+			<Death_SFXEvent_Start_Die>SFX_Alien_Small_Vehicle_Death</Death_SFXEvent_Start_Die>
+			<SFXEvent_Engine_Idle_Loop> SFX_Alien_Defiler_Idle_Engine_Loop </SFXEvent_Engine_Idle_Loop>
+			<SFXEvent_Engine_Moving_Loop> SFX_Alien_Defiler_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
+			<SFXEvent_Unit_Lost />
+			<SFXEvent_Tactical_Build_Started>GUI_BUILD_Vehicle</SFXEvent_Tactical_Build_Started>
+			<SFXEvent_Tactical_Build_Complete>Unit_Select_Alien_Defiler</SFXEvent_Tactical_Build_Complete>
+			<SFXEvent_Tactical_Build_Cancelled>GUI_BUILD_Vehicle_Canceled</SFXEvent_Tactical_Build_Cancelled>
+	
+			<!-- Maria 05.01.2006 - Adding build sounds for Global production -->
+			<SFXEvent_Build_Started>GUI_BUILD_Vehicle</SFXEvent_Build_Started>
+			<SFXEvent_Build_Complete>Unit_Select_Alien_Defiler</SFXEvent_Build_Complete>
+			<SFXEvent_Build_Cancelled>GUI_BUILD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
+		</BehaviorType>
+
+		<BehaviorType Name="GUIBehaviorType">
+			<!-- Maria 05.18.2006 - Data needed for the models attached to the mouse in Global -->
+			<GUI_Is_Top_View> No </GUI_Is_Top_View>
+			<GUI_Rotate_Angle_Degrees> -45.0 </GUI_Rotate_Angle_Degrees>
+			<GUI_Is_Model_Shifted_Down> Yes </GUI_Is_Model_Shifted_Down>
+			<GUI_Strategic_Mode_Scale> 0.08 </GUI_Strategic_Mode_Scale>
+			<GUI_Shift_Factor> 15.0 </GUI_Shift_Factor>
+		</BehaviorType>
+
+		<BehaviorType Name="FleetBehaviorType">
+			<!-- Maria 05.24.2006 - How much space does the unit take up -->
+			<Unit_Pop_Cap> 3 </Unit_Pop_Cap>
+		</BehaviorType>
+
+        <BehaviorType Name="RadiationManagerBehaviorType">
+            <Radiation_Manager_Type> Unit_Alien_Corruptor_Radiation_Manager </Radiation_Manager_Type>
+
+            <!-- particles that follow the beam source -->
+            <Radiation_Particle_Effect_Bone_Name> MuzzleA_00  </Radiation_Particle_Effect_Bone_Name>
+            <Radiation_Lightning_Effect_Name> Radiation_Beam </Radiation_Lightning_Effect_Name>
+            <Radiation_Sweep_Duration_In_Secs> 0.8 </Radiation_Sweep_Duration_In_Secs>
+            <Radiation_Arc_Degrees> 20 </Radiation_Arc_Degrees>
+            <Radiation_Arc_Noise_Amp> 0.2 </Radiation_Arc_Noise_Amp>
+            <Radiation_Cooldown_In_Secs> 2.0 </Radiation_Cooldown_In_Secs>
+            <Radiation_SFXEvent_Fire> SFX_Alien_Radiation_2_Fire </Radiation_SFXEvent_Fire>
+            <Radiation_Direct_Damage> 5.0 </Radiation_Direct_Damage> <!-- direct damage type use for balance-->
+            <Radiation_Damage_Type> Damage_Alien_Defiler_Beam </Radiation_Damage_Type> 
+            <!-- Particles that stay in place after a hit, these must decay over time -->
+            <Radiation_Direct_Hit_Particle_Effect> Radiation_Decal_Particle_Effect </Radiation_Direct_Hit_Particle_Effect>
+            <Radiation_Direct_Hit_SFXEvent> SFX_Alien_Radiation_Detonation_1 </Radiation_Direct_Hit_SFXEvent>
+            <Radiation_Beam_Step_Amount> 1.8 </Radiation_Beam_Step_Amount>
+            <Radiation_Beam_Max_Length> 325.0 </Radiation_Beam_Max_Length>
+        </BehaviorType>
+
+
+		<!-- ABILITIES -->
+		<Abilities SubObjectList="Yes">
+
+			<Effect_Generator_Ability Name="Alien_Defiler_Radiation_Bleed_Ability">
+             <Activation_Style> User_Input </Activation_Style>
+             <Activation_Min_Range> 0 </Activation_Min_Range>
+             <Activation_Max_Range> 500 </Activation_Max_Range>
+             <Effect_Generator_Name> RadiationBleedGenerator </Effect_Generator_Name>
+             <Is_Self_Targeted> true </Is_Self_Targeted>
+             <Can_Target_Allies>Yes</Can_Target_Allies>
+             <Excluded_Unit_Categories> Flying </Excluded_Unit_Categories>
+             <Block_Other_Abilities_When_Active>True</Block_Other_Abilities_When_Active>
+             <Deactivate_On_User_Attack_Order> False </Deactivate_On_User_Attack_Order>
+			</Effect_Generator_Ability>
+
+         <Effect_Generator_Ability Name="Alien_Defiler_Radiation_Charge_Ability">
+            <Activation_Min_Range>0</Activation_Min_Range>
+            <Activation_Max_Range>200.0</Activation_Max_Range>
+            <Effect_Generator_Name>RadiationChargeGenerator</Effect_Generator_Name>
+            <Activation_Style>User_Input</Activation_Style>
+            <Excluded_Unit_Categories>Flying, TeamContainer</Excluded_Unit_Categories>
+            <Block_Other_Abilities_When_Active>True</Block_Other_Abilities_When_Active>
+				<Point_Turret_At_Target> true </Point_Turret_At_Target>
+			</Effect_Generator_Ability>
+
+         <Radiation_Weapon_Ability Name="Alien_Defiler_Radiation_Beam_Abilityr">
+             <Activation_Style> Special_Attack </Activation_Style>
+             <Activation_Chance> 1 </Activation_Chance>
+             <Activation_Min_Range> 0.0 </Activation_Min_Range>
+             <Activation_Max_Range> 200.0 </Activation_Max_Range>
+             <Excluded_Unit_Categories>Flying, Resource + !Organic </Excluded_Unit_Categories>
+             <Ability_Source_Bone> MuzzleA_00 </Ability_Source_Bone>
+             <Reveal_Range> 75 </Reveal_Range>
+             <Block_Other_Abilities_When_Active>true</Block_Other_Abilities_When_Active>
+				<!-- Must deactivate on attack because this ability locks out targeting -->
+				<Deactivate_On_User_Attack_Order> true </Deactivate_On_User_Attack_Order>
+			</Radiation_Weapon_Ability>
+         
+
+      </Abilities>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability Name="Defiler_Radiation_Bleed">
+				<Type>EFFECT_GENERATOR</Type>
+            <Is_Modal>Yes</Is_Modal>
+				<Recharge_Seconds>10.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> Alien_Defiler_Radiation_Bleed_Ability </GUI_Activated_Ability_Name>
+				<Effect_Generator_Name> RadiationBleedGenerator </Effect_Generator_Name>
+			</Unit_Ability>
+
+         <Unit_Ability Name="Defiler_Radiation_Charge">
+            <Type>EFFECT_GENERATOR</Type>
+            <Expiration_Seconds>12.0</Expiration_Seconds>
+            <Recharge_Seconds>28.0</Recharge_Seconds>
+            <GUI_Activated_Ability_Name>Alien_Defiler_Radiation_Charge_Ability</GUI_Activated_Ability_Name>
+            <Effect_Generator_Name>RadiationChargeGenerator</Effect_Generator_Name>
+            <Area_Effect_Decal_Distance>75.0</Area_Effect_Decal_Distance>
+            <Turn_Off_Other_Effect_Generators>true</Turn_Off_Other_Effect_Generators>
+            <Should_Targeting_Ignore_Objects>true</Should_Targeting_Ignore_Objects>
+            <Targeting_Type>LAND_ANY_LOCATION</Targeting_Type>
+				<Check_Self_For_AOE> true </Check_Self_For_AOE>
+         </Unit_Ability>
+
+      </Unit_Abilities_Data>
+
+		<!-- EFFECT GENERATORS -->
+		<Effect_Generator_Data SubObjectList="Yes">
+
+			<Effect_Generator Name="RadiationBleedGenerator">
+				<Should_Deactivate_Manually> true </Should_Deactivate_Manually>
+				<Is_Independent_Generator> true </Is_Independent_Generator>
+				<Modal_Refresh_Frequency> 1.5 </Modal_Refresh_Frequency>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> AlienDefilerDisableTargetingEffect </Effect_Name>
+					<Duration> -1.0 </Duration>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+				</Effect_Generator_Entry>
+				
+				<!-- Standard version effects for bleed -->
+
+				<Effect_Generator_Entry Name="Entry2">
+					<Effect_Name> RadiationBleedVisualEffect </Effect_Name>
+					<Duration> 1.6 </Duration>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+					<Frames_Between_Remove_Invalid_Targets> 1 </Frames_Between_Remove_Invalid_Targets>
+					<Source_SFX_Event> SFX_Alien_Bleed_Effect_Loop </Source_SFX_Event>
+					<Source_SFX_Loop_Type>ResonanceBeamWeaponEffectSFX</Source_SFX_Loop_Type>
+					<Stop_Source_SFX_On_Deactivate> true </Stop_Source_SFX_On_Deactivate>
+					<Target_Filter_C> Radiation_Weapon_Not_Fired </Target_Filter_C>
+				</Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry3">
+					<Effect_Name> RadiationBleedMovedEffect </Effect_Name>
+					<Duration> 0.1 </Duration>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+					<Activate_Only_When_Moving> True </Activate_Only_When_Moving>
+				</Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry4">
+					<Effect_Name> RadiationBleedVisualExpandOneEffect </Effect_Name>
+					<Duration> 1.6 </Duration>
+					<Base_Delay> 8.0 </Base_Delay>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+				</Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry5">
+					<Effect_Name> RadiationBleedVisualExpandTwoEffect </Effect_Name>
+					<Duration> 1.6 </Duration>
+					<Base_Delay> 20.0 </Base_Delay>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+				</Effect_Generator_Entry>
+
+				<!-- Gamma version effects for bleed -->
+
+				<Effect_Generator_Entry Name="Entry6">
+					<Effect_Name> GammaRadiationBleedVisualEffect </Effect_Name>
+					<Duration> 1.6 </Duration>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+					<Frames_Between_Remove_Invalid_Targets> 1 </Frames_Between_Remove_Invalid_Targets>
+					<Source_SFX_Event> SFX_Alien_Bleed_Effect_Loop </Source_SFX_Event>
+					<Source_SFX_Loop_Type>ResonanceBeamWeaponEffectSFX</Source_SFX_Loop_Type>
+					<Stop_Source_SFX_On_Deactivate> true </Stop_Source_SFX_On_Deactivate>
+					<Target_Filter_C> Radiation_Weapon_Not_Fired </Target_Filter_C>
+				</Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry7">
+					<Effect_Name> GammaRadiationBleedMovedEffect </Effect_Name>
+					<Duration> 0.1 </Duration>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+					<Activate_Only_When_Moving> True </Activate_Only_When_Moving>
+				</Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry8">
+					<Effect_Name> GammaRadiationBleedVisualExpandOneEffect </Effect_Name>
+					<Duration> 1.6 </Duration>
+					<Base_Delay> 6.0 </Base_Delay>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+				</Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry9">
+					<Effect_Name> GammaRadiationBleedVisualExpandTwoEffect </Effect_Name>
+					<Duration> 1.6 </Duration>
+					<Base_Delay> 16.0 </Base_Delay>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+				</Effect_Generator_Entry>
+
+			</Effect_Generator>
+
+			<Effect_Generator Name="RadiationChargeGenerator">
+				<Should_Deactivate_Manually> false </Should_Deactivate_Manually>
+            <Is_Independent_Generator>Yes</Is_Independent_Generator>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> RadiationChargeDotSelfVisualEffect </Effect_Name>
+					<Remove_On_Death> false </Remove_On_Death>
+					<Duration> 2.0 </Duration>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+               <Source_SFX_Event> SFX_Alien_Radiation_2_Fire </Source_SFX_Event>
+					<Deactivate_Parent_If_Idle> true</Deactivate_Parent_If_Idle>
+					<Target_Filter_C> Source_Loco_Active </Target_Filter_C>
+				</Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry2">
+					<Effect_Name>RadiationChargeVisualAttackEffect</Effect_Name>
+					<Remove_On_Death> false </Remove_On_Death>
+					<Duration>0.3</Duration>
+					<Target_Gathering_Mask>Target</Target_Gathering_Mask>
+				</Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry3">
+					<Effect_Name> RadiationChargeCreateRadiatingObjectEffect </Effect_Name>
+					<Remove_On_Death> false </Remove_On_Death>
+					<Duration> 2.0 </Duration>
+					<Target_Gathering_Mask> Target </Target_Gathering_Mask>
+				</Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry4">
+					<Effect_Name> GammaRadiationChargeCreateRadiatingObjectEffect </Effect_Name>
+					<Remove_On_Death> false </Remove_On_Death>
+					<Duration> 2.0 </Duration>
+					<Target_Gathering_Mask> Target </Target_Gathering_Mask>
+				</Effect_Generator_Entry>
+
+			</Effect_Generator>
+
+			<!-- Standard Sell generator  - 06/28/2007 -->
+			<!--INCLUDE ".\Data\XML\Includes\Sell_Effect_Generators\ALIEN_Sell_Generators.xml" -->
+			
+		</Effect_Generator_Data>
+
+		<!-- CHILD OBJECTS -->
+		<Create_Children_Data SubObjectList="Yes">
+
+			<Create_Child_Data>
+				<Type> Alien_Veh_Defiler_Foot_Proxy </Type>
+				<Creation_Trigger> OnParentBehaviorFirstService </Creation_Trigger>
+				<Destruction_Trigger> OnParentBehaviorRemove </Destruction_Trigger>
+				<Argument> WhichFoot, 0 </Argument>
+			</Create_Child_Data>
+
+			<Create_Child_Data>
+				<Type> Alien_Veh_Defiler_Foot_Proxy </Type>
+				<Creation_Trigger> OnParentBehaviorFirstService </Creation_Trigger>
+				<Destruction_Trigger> OnParentBehaviorRemove </Destruction_Trigger>
+				<Argument> WhichFoot, 1 </Argument>
+			</Create_Child_Data>
+
+			<Create_Child_Data>
+				<Type> Alien_Veh_Defiler_Foot_Proxy </Type>
+				<Creation_Trigger> OnParentBehaviorFirstService </Creation_Trigger>
+				<Destruction_Trigger> OnParentBehaviorRemove </Destruction_Trigger>
+				<Argument> WhichFoot, 2 </Argument>
+			</Create_Child_Data>
+
+		</Create_Children_Data>
+
+	</X10_Alien_Units>
+
+	<X10_Alien_Units Name="Alien_Veh_Defiler_Foot_Proxy">
+
+		<!-- ART -->
+		<Scale_Factor> 2 </Scale_Factor>
+		<Is_Decoration> No </Is_Decoration>
+		<Exclude_From_Distance_Fade> true </Exclude_From_Distance_Fade>
+
+		<!-- INTERFACE -->
+		<Text_ID> TEXT_NONE </Text_ID>
+		<Is_Placed_By_Editor> false </Is_Placed_By_Editor>
+
+		<!-- ATTRIBUTES -->
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+
+		<Planted_Foot_Proximity> 10.0 </Planted_Foot_Proximity>
+
+		<!-- BEHAVIORS -->
+		<LandBehavior> FOOT_IK, FOOT_OBSTACLE </LandBehavior>
+
+	</X10_Alien_Units>
+
+
+	<!-- **************************************************************************************** -->
+	<!-- **** HELPER OBJECTS ********************************************************************** -->
+	<!-- **************************************************************************************** -->
+
+	<!--=================================================================================================
+	== [03/08/2007] - KDB
+	================================================================================================== -->
+	<X10_Alien_Units Name="Defiler_On_Death_Explosion">
+
+		<!-- ART -->
+		<Is_Decoration>No</Is_Decoration>
+		<!-- place holder -->
+		<Land_Model_Name> AV_Defiler_hulk.alo </Land_Model_Name>
+		<Scale_Factor>0.1</Scale_Factor>
+      <AssetBank> BANK_ALIEN </AssetBank>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_OBJECT_BOMB</Text_ID>
+		<Is_Placed_By_Editor> false </Is_Placed_By_Editor>
+
+		<!-- ATTRIBUTES -->
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+
+		<!-- CONFLICT -->
+		<Tactical_Health> 0 </Tactical_Health>
+
+		<!-- BEHAVIORS -->
+		<LandBehavior>
+			EFFECT_REGISTRY,
+			EFFECT_GENERATOR,
+			ATTRIBUTE_DIRECTORY,
+			PARTICLE			<!-- to self-destruct -->
+		</LandBehavior>
+
+		<Particle_Lifetime_Frames> 540 </Particle_Lifetime_Frames>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Armor_Type> Armor_Default </Armor_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Remove_Upon_Death> Yes </Remove_Upon_Death>
+		</BehaviorType>
+
+      <BehaviorType Name="SFXBehaviorType">
+         <Death_SFXEvent_Start_Die>SFX_Alien_Small_Vehicle_Death</Death_SFXEvent_Start_Die>
+         <SFXEvent_Unit_Lost />
+      </BehaviorType>
+
+		<Attributes SubObjectList="Yes">
+			<Is_Immune_To_Mind_Control> true </Is_Immune_To_Mind_Control>
+			<Is_Immune_To_Virus> true </Is_Immune_To_Virus>
+		</Attributes>
+
+		<!-- EFFECT GENERATORS -->
+		<Effect_Generator_Data SubObjectList="Yes">
+
+			<Effect_Generator Name="DefilerOnDeathExplosionGenerator">
+				<Should_Deactivate_Manually> false </Should_Deactivate_Manually>
+				<Starts_Active> true </Starts_Active>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> VehicleVolatileReactorExplosionVisualEffect </Effect_Name>
+					<Remove_On_Death> false </Remove_On_Death>
+					<Duration> 8.0 </Duration>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+				</Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry2">
+					<Effect_Name> VehicleVolatileReactorGammaExplosionVisualEffect </Effect_Name>
+					<Remove_On_Death> false </Remove_On_Death>
+					<Duration> 8.0 </Duration>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+				</Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry3">
+					<Effect_Name> VehicleVolatileReactorDamageEffect </Effect_Name>
+					<Remove_On_Death> false </Remove_On_Death>
+					<Duration> 8.0 </Duration>
+					<Target_Gathering_Mask> SelfAE </Target_Gathering_Mask>
+					<Target_Filter_C> Radiation_Field_Damage </Target_Filter_C>
+					<Area_Effect_Radius> 125.0 </Area_Effect_Radius>
+					<Should_Add_All_Team_Members_As_Targets> false </Should_Add_All_Team_Members_As_Targets>
+					<Should_Add_Team_Container_As_Target> false </Should_Add_Team_Container_As_Target>
+				</Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry4">
+					<Effect_Name> VehicleVolatileReactorGammaDamageEffect </Effect_Name>
+					<Remove_On_Death> false </Remove_On_Death>
+					<Duration> 8.0 </Duration>
+					<Target_Gathering_Mask> SelfAE </Target_Gathering_Mask>
+					<Target_Filter_C> Radiation_Field_Damage </Target_Filter_C>
+					<Area_Effect_Radius> 125.0 </Area_Effect_Radius>
+					<Should_Add_All_Team_Members_As_Targets> false </Should_Add_All_Team_Members_As_Targets>
+					<Should_Add_Team_Container_As_Target> false </Should_Add_Team_Container_As_Target>
+				</Effect_Generator_Entry>
+				
+			</Effect_Generator>
+
+		</Effect_Generator_Data>
+
+
+	</X10_Alien_Units>
+
+	<!--=================================================================================================
+	== [02/22/2007] - Oksana Kubushyna
+	================================================================================================== -->
+	
+	<X10_Alien_Units Name="ALIEN_DEFILER_RADIATION_OBJECT">
+
+		<!-- ART -->
+		<Scale_Factor>2.0</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<Land_Model_Name>P_AV_Defiler_Bleed_ground.alo</Land_Model_Name>
+		<Particle_Lifetime_Frames>370</Particle_Lifetime_Frames>
+		<AssetBank> BANK_ALIEN </AssetBank>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_OBJECT_BOMB</Text_ID>
+		<Is_Placed_By_Editor> false </Is_Placed_By_Editor>
+
+		<!-- ATTRIBUTES -->
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+
+		<Attributes SubObjectList="Yes">
+			<Generator_Area_Effect_Radius_1> 75 </Generator_Area_Effect_Radius_1>
+		</Attributes>
+
+		<!-- CONFLICT -->
+		<Tactical_Health> 0 </Tactical_Health>
+
+		<!-- BEHAVIORS -->
+		<LandBehavior>
+			EFFECT_REGISTRY,
+			EFFECT_GENERATOR,
+			ATTRIBUTE_DIRECTORY,
+			PARTICLE			<!-- to self-destruct -->
+		</LandBehavior>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Armor_Type> Armor_Default </Armor_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Remove_Upon_Death> Yes </Remove_Upon_Death>
+		</BehaviorType>
+
+		<BehaviorType Name="SFXBehaviorType">
+			<SFXEvent_Ambient_Loop> SFX_Generic_Radiation_Loop </SFXEvent_Ambient_Loop>   <!-- For radiation left behind -->
+		</BehaviorType>
+
+		<Effect_Generator_Data SubObjectList="Yes">
+
+			<Effect_Generator Name="RadiationBleedGenerator">
+				<Should_Deactivate_Manually> true </Should_Deactivate_Manually>
+				<Is_Independent_Generator> true </Is_Independent_Generator>
+				<Starts_Active> true </Starts_Active>
+				<Modal_Refresh_Frequency> 3.0 </Modal_Refresh_Frequency>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> RadiationBleedDotEffect </Effect_Name>
+					<Duration> 12 </Duration>
+					<Target_Gathering_Mask> SelfAE </Target_Gathering_Mask>
+					<Area_Effect_Radius> 75 </Area_Effect_Radius>
+	<!--				<Source_SFX_Event> SFX_Alien_Bleed_Effect_Loop </Source_SFX_Event>  
+					<Source_SFX_Loop_Type>ResonanceBeamWeaponEffectSFX</Source_SFX_Loop_Type>
+					<Stop_Source_SFX_On_Deactivate> true </Stop_Source_SFX_On_Deactivate>   -->
+					<Should_Add_All_Team_Members_As_Targets> false </Should_Add_All_Team_Members_As_Targets>
+					<Should_Add_Team_Container_As_Target> false </Should_Add_Team_Container_As_Target>
+					<Target_Filter_Categories> ~RadiationHelps + ~Flying </Target_Filter_Categories>
+					<Target_Filter_C> Is_Not_Ally </Target_Filter_C>
+				</Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry2">
+					<Effect_Name> RadiationBleedInfantryEffect </Effect_Name>
+					<Duration> 12.0 </Duration>
+					<Target_Gathering_Mask> SelfAE </Target_Gathering_Mask>
+					<Area_Effect_Radius> 75 </Area_Effect_Radius>
+
+					<Should_Add_All_Team_Members_As_Targets> false </Should_Add_All_Team_Members_As_Targets>
+					<Should_Add_Team_Container_As_Target> false </Should_Add_Team_Container_As_Target>
+					<Can_Target_Allies>No</Can_Target_Allies>
+					<Target_Filter_Categories> Small + Organic + ~RadiationHelps </Target_Filter_Categories>
+					<Target_Filter_C> Is_Mutant_Slave</Target_Filter_C>
+				</Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry3">
+					<Effect_Name> DefilerFieldHealEffect </Effect_Name>
+					<Duration> 12 </Duration>
+					<Target_Gathering_Mask> SelfAE </Target_Gathering_Mask>
+					<Area_Effect_Radius> 75 </Area_Effect_Radius>
+					<Target_SFX_Event> SFX_Alien_Heal </Target_SFX_Event>
+					<Should_Add_All_Team_Members_As_Targets> false </Should_Add_All_Team_Members_As_Targets>
+					<Should_Add_Team_Container_As_Target> false </Should_Add_Team_Container_As_Target>
+					<Target_Filter_Categories> Organic </Target_Filter_Categories>
+					<Target_Filter_C> Is_Ally </Target_Filter_C>
+				</Effect_Generator_Entry>
+
+				<!--  resource units are not marked as death clones -->
+				<Effect_Generator_Entry Name="Entry4">
+					<Effect_Name>RadiationChargeRaiseDeadEffect</Effect_Name>
+					<Duration>0.1</Duration>
+					<Target_Gathering_Mask>SelfAE</Target_Gathering_Mask>
+					<Area_Effect_Radius>75</Area_Effect_Radius>
+					<Can_Target_Alive_Objects>true</Can_Target_Alive_Objects>
+					<Can_Target_Dead_Objects>false</Can_Target_Dead_Objects>
+					<Target_Filter_Categories> DeathCloneResource + Organic </Target_Filter_Categories>
+					<Should_Add_All_Team_Members_As_Targets>false</Should_Add_All_Team_Members_As_Targets>
+					<Should_Add_Team_Container_As_Target>false</Should_Add_Team_Container_As_Target>
+				</Effect_Generator_Entry>
+
+				<!-- non-resource units are marked as death clones -->
+				<Effect_Generator_Entry Name="Entry5">
+					<Effect_Name> RadiationChargeRaiseDeadEffect </Effect_Name>
+					<Duration> 0.1 </Duration>
+					<Target_Gathering_Mask> SelfAE </Target_Gathering_Mask>
+					<Area_Effect_Radius> 75 </Area_Effect_Radius>
+					<Can_Target_Alive_Objects> false </Can_Target_Alive_Objects>
+					<Can_Target_Dead_Objects> true </Can_Target_Dead_Objects>
+					<Target_Filter_Categories> Organic </Target_Filter_Categories>
+					<Should_Add_All_Team_Members_As_Targets> false </Should_Add_All_Team_Members_As_Targets>
+					<Should_Add_Team_Container_As_Target> false </Should_Add_Team_Container_As_Target>
+				</Effect_Generator_Entry>
+
+			</Effect_Generator>
+
+		</Effect_Generator_Data>
+
+	</X10_Alien_Units>
+
+
+
+	<X10_Alien_Units Name="ALIEN_DEFILER_GAMMA_RADIATION_OBJECT">
+
+		<!-- ART -->
+		<Scale_Factor>2.0</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<Land_Model_Name>P_AV_Defiler_Bleed_ground_gamma.alo</Land_Model_Name>
+		<Particle_Lifetime_Frames>370</Particle_Lifetime_Frames>
+		<AssetBank> BANK_ALIEN </AssetBank>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_OBJECT_BOMB</Text_ID>
+		<Is_Placed_By_Editor> false </Is_Placed_By_Editor>
+
+		<!-- ATTRIBUTES -->
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+
+		<Attributes SubObjectList="Yes">
+			<Generator_Area_Effect_Radius_1> 50 </Generator_Area_Effect_Radius_1>
+		</Attributes>
+
+		<!-- CONFLICT -->
+		<Tactical_Health> 0 </Tactical_Health>
+
+		<!-- BEHAVIORS -->
+		<LandBehavior>
+			EFFECT_REGISTRY,
+			EFFECT_GENERATOR,
+			ATTRIBUTE_DIRECTORY,
+			PARTICLE			<!-- to self-destruct -->
+		</LandBehavior>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Armor_Type> Armor_Default </Armor_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="SFXBehaviorType">
+			<SFXEvent_Ambient_Loop> SFX_Generic_Radiation_Loop </SFXEvent_Ambient_Loop>  <!-- For radiation left behind -->
+		</BehaviorType>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Remove_Upon_Death> Yes </Remove_Upon_Death>
+		</BehaviorType>
+		<Effect_Generator_Data SubObjectList="Yes">
+
+			<Effect_Generator Name="GammaRadiationBleedGenerator">
+				<Should_Deactivate_Manually> true </Should_Deactivate_Manually>
+				<Is_Independent_Generator> true </Is_Independent_Generator>
+				<Starts_Active> true </Starts_Active>
+				<Modal_Refresh_Frequency> 3.0 </Modal_Refresh_Frequency>
+
+				<!-- Researched Increased Damage Upgrade -->
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> GamaRadiationBleedDotEffect </Effect_Name>
+					<Duration> 12 </Duration>
+					<Target_Gathering_Mask> SelfAE </Target_Gathering_Mask>
+					<Area_Effect_Radius> 75 </Area_Effect_Radius>
+					<Should_Add_All_Team_Members_As_Targets> false </Should_Add_All_Team_Members_As_Targets>
+					<Should_Add_Team_Container_As_Target> false </Should_Add_Team_Container_As_Target>
+					<Target_Filter_Categories> ~RadiationHelps + ~Flying </Target_Filter_Categories>
+					<Target_Filter_C> Is_Not_Ally </Target_Filter_C>
+				</Effect_Generator_Entry>
+
+				<!-- Researched increased likelihood of making mutants -->
+				<Effect_Generator_Entry Name="Entry2">
+					<Effect_Name> GamaRadiationBleedInfantryEffect </Effect_Name>
+					<Duration> 12.0 </Duration>
+					<Target_Gathering_Mask> SelfAE </Target_Gathering_Mask>
+					<Area_Effect_Radius> 75 </Area_Effect_Radius>
+					<Should_Add_All_Team_Members_As_Targets> false </Should_Add_All_Team_Members_As_Targets>
+					<Should_Add_Team_Container_As_Target> false </Should_Add_Team_Container_As_Target>
+					<Can_Target_Allies>No</Can_Target_Allies>
+					<Target_Filter_Categories> Small + Organic + ~RadiationHelps </Target_Filter_Categories>
+					<Target_Filter_C> Is_Mutant_Slave</Target_Filter_C>
+				</Effect_Generator_Entry>
+
+				<!-- Researched increase to healing power -->
+				<Effect_Generator_Entry Name="Entry3">
+					<Effect_Name> GamaDefilerFieldHealEffect </Effect_Name>
+					<Duration> 12 </Duration>
+					<Target_Gathering_Mask> SelfAE </Target_Gathering_Mask>
+					<Area_Effect_Radius> 75 </Area_Effect_Radius>
+					<Target_SFX_Event> SFX_Alien_Heal </Target_SFX_Event>
+					<Should_Add_All_Team_Members_As_Targets> false </Should_Add_All_Team_Members_As_Targets>
+					<Should_Add_Team_Container_As_Target> false </Should_Add_Team_Container_As_Target>
+					<Target_Filter_Categories> Organic </Target_Filter_Categories>
+					<Target_Filter_C> Is_Ally </Target_Filter_C>
+				</Effect_Generator_Entry>
+
+				<!--  resource units are not marked as death clones -->
+				<Effect_Generator_Entry Name="Entry4">
+					<Effect_Name>RadiationChargeRaiseDeadEffect</Effect_Name>
+					<Duration>0.1</Duration>
+					<Target_Gathering_Mask>SelfAE</Target_Gathering_Mask>
+					<Area_Effect_Radius>75</Area_Effect_Radius>
+					<Can_Target_Alive_Objects>true</Can_Target_Alive_Objects>
+					<Can_Target_Dead_Objects>false</Can_Target_Dead_Objects>
+					<Target_Filter_Categories> DeathCloneResource + Organic </Target_Filter_Categories>
+					<Should_Add_All_Team_Members_As_Targets>false</Should_Add_All_Team_Members_As_Targets>
+					<Should_Add_Team_Container_As_Target>false</Should_Add_Team_Container_As_Target>
+				</Effect_Generator_Entry>
+
+				<!-- non-resource units are marked as death clones -->
+				<Effect_Generator_Entry Name="Entry5">
+					<Effect_Name> RadiationChargeRaiseDeadEffect </Effect_Name>
+					<Duration> 0.1 </Duration>
+					<Target_Gathering_Mask> SelfAE </Target_Gathering_Mask>
+					<Area_Effect_Radius> 75 </Area_Effect_Radius>
+					<Can_Target_Alive_Objects> false </Can_Target_Alive_Objects>
+					<Can_Target_Dead_Objects> true </Can_Target_Dead_Objects>
+					<Target_Filter_Categories> Organic </Target_Filter_Categories>
+					<Should_Add_All_Team_Members_As_Targets> false </Should_Add_All_Team_Members_As_Targets>
+					<Should_Add_Team_Container_As_Target> false </Should_Add_Team_Container_As_Target>
+				</Effect_Generator_Entry>
+
+			</Effect_Generator>
+
+		</Effect_Generator_Data>
+
+	</X10_Alien_Units>
+
+
+
+
+
+
+
+
+
+
+
+	<!-- **************************************************************************************** -->
+   <!-- **** DEATH CLONES ********************************************************************** -->
+   <!-- **************************************************************************************** -->
+
+   <X10_Alien_Units Name="Alien_Defiler_Death_Clone">
+
+      <!-- ART -->
+      <Land_Model_Name> AV_Defiler_hulk.alo </Land_Model_Name>
+      <Scale_Factor>2.0</Scale_Factor>
+      <AssetBank> BANK_ALIEN </AssetBank>
+
+      <!-- INTERFACE -->
+      <Text_ID> TEXT_NONE </Text_ID>
+      <Is_Placed_By_Editor> false </Is_Placed_By_Editor>
+
+      <!-- ATTRIBUTES -->
+      <CategoryMask> Resource </CategoryMask>
+      <Affiliation>CIVILIAN</Affiliation>
+
+		<Space_Layer> LandDynamic </Space_Layer>
+		<UnitCollisionClass> Vehicle </UnitCollisionClass>
+		<Custom_Hard_XExtent> 4.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 4.0 </Custom_Hard_YExtent>
+
+		<!-- CONFLICT -->
+      <Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+      <Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+      <Ranged_Target_Z_Adjust>0.0</Ranged_Target_Z_Adjust>
+      <Is_Attackable>Yes</Is_Attackable>
+
+      <!-- BEHAVIORS -->
+      <Behavior>SELECTABLE</Behavior>
+      <LandBehavior>
+         GUI,
+         BALLISTIC,
+         RESOURCE,
+         EFFECT_REGISTRY,
+         AI_TARGET,
+         SPAWN_DEBRIS,
+         ATTRIBUTE_DIRECTORY,
+         BALLISTIC,
+         HIDE_WHEN_FOGGED
+      </LandBehavior>
+
+      <BehaviorType Name="SFXBehaviorType">
+         <Death_SFXEvent_Start_Die>SFX_Alien_Small_Vehicle_Death</Death_SFXEvent_Start_Die>
+         <SFXEvent_Unit_Lost />
+      </BehaviorType>
+
+		<BehaviorType Name="BallisticBehaviorType">
+			<Ballistic_Weight>6.0</Ballistic_Weight>
+			<Ballistic_Bounce>0.3</Ballistic_Bounce>
+		</BehaviorType>
+		
+      <BehaviorType Name="SpawnDebrisBehaviorType">
+
+         <Creation_Debris_Types>
+            Defiler_Death_Debris_A,
+            Defiler_Death_Debris_B,
+            Defiler_Death_Debris_C,
+            Defiler_Death_Debris_D,
+            Defiler_Death_Debris_E,
+            Defiler_Death_Debris_F,
+            Defiler_Death_Debris_G
+         </Creation_Debris_Types>
+
+         <Debris_Speed_Min> 100.0 </Debris_Speed_Min>
+         <Debris_Speed_Max> 100.0 </Debris_Speed_Max>
+         <Debris_Outward_Speed_Min> 50.0 </Debris_Outward_Speed_Min>
+         <Debris_Outward_Speed_Max> 100.0 </Debris_Outward_Speed_Max>
+         <Debris_Ang_Min> 20.0 </Debris_Ang_Min>
+         <Debris_Ang_Max> 30.0 </Debris_Ang_Max>
+      </BehaviorType>
+
+	<BehaviorType Name="BallisticBehaviorType">
+		<Ballistic_Weight>6.0</Ballistic_Weight>
+		<Ballistic_Bounce>0.3</Ballistic_Bounce>
+	</BehaviorType>
+
+      <BehaviorType Name="ArmorAndDamageBehaviorType">
+         <Damage_Type> Damage_Fire </Damage_Type>
+      </BehaviorType>
+
+	<Effect_Generator_Data SubObjectList="Yes" Replace="false">
+		<!-- Fall down on the ground -->
+		<Effect_Generator Name="ResourceFallDownEffectGenerator">
+			<Should_Deactivate_Manually> true </Should_Deactivate_Manually>
+			<Starts_Active> true </Starts_Active>
+			<Effect_Generator_Entry Name="Entry1">
+				<Effect_Name> LaunchBallisticBehaviorEffect </Effect_Name>
+				<Duration>-1</Duration>
+				<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+			</Effect_Generator_Entry>
+		</Effect_Generator>
+	</Effect_Generator_Data>
+
+	<BehaviorType Name="DeathFXBehaviorType">
+		<Death_Explosions>alien_large_explosion</Death_Explosions>
+		<Death_Speed_Min> 100.0 </Death_Speed_Min>
+		<Death_Speed_Max> 120.0 </Death_Speed_Max>
+		<Death_Ang_Min> 1.0 </Death_Ang_Min>
+		<Death_Ang_Max> 2.0 </Death_Ang_Max>
+		<Death_Horizontal_Speed>10.0</Death_Horizontal_Speed>
+		<Death_SFXEvent_Start_Die>SFX_Alien_Small_Vehicle_Death</Death_SFXEvent_Start_Die>
+		<Death_Fade_Time>120</Death_Fade_Time>
+		<Death_Persistence_Duration>125</Death_Persistence_Duration>
+	</BehaviorType>
+
+      <BehaviorType Name="ResourceBehaviorType">
+         <Resource_Units> 325 </Resource_Units>
+         <Resource_For_Faction> Military, Novus, Alien, Masari, Alien_ZM06_KamalRex </Resource_For_Faction>
+         <Is_Single_Resource> false </Is_Single_Resource>
+      </BehaviorType>
+
+   </X10_Alien_Units>
+
+   <X10_Alien_Units Name="Defiler_Death_Debris_A">
+
+      <!-- ART -->
+      <Land_Model_Name> AV_Defiler_debri_A.alo </Land_Model_Name>
+      <Scale_Factor> 2.0 </Scale_Factor>
+      <AssetBank> BANK_ALIEN </AssetBank>
+
+      <!-- INTERFACE -->
+      <Text_ID> TEXT_NONE </Text_ID>
+      <Is_Placed_By_Editor> false </Is_Placed_By_Editor>
+
+      <!-- Non-decoration debris will have to have HIDE_WHEN_FOGGED behavior to properly hide.-->
+      <!-- Decoration debris will not be created if spawned under FOW. -Oksana -->
+      <Is_Decoration>Yes</Is_Decoration>
+
+
+      <!-- ATTRIBUTES -->
+      <Remove_Upon_Death>true</Remove_Upon_Death>
+		<CategoryMask> Untargetable </CategoryMask>
+		
+      <!-- CONFLICT -->
+      <Tactical_Health> 9999 </Tactical_Health>
+      <Ranged_Target_Z_Adjust>3.0</Ranged_Target_Z_Adjust>
+      
+      <!-- BEHAVIORS -->
+      <LandBehavior>
+         BALLISTIC, 
+         DEBRIS
+      </LandBehavior>
+
+      <BehaviorType Name="BallisticBehaviorType">
+         <Ballistic_Weight> 2.7 </Ballistic_Weight>
+         <Ballistic_Bounce> 0.2 </Ballistic_Bounce>
+      </BehaviorType>
+
+      <BehaviorType Name="DebrisBehaviorType">
+         <Debris_Min_Lifetime_Seconds> 1.0 </Debris_Min_Lifetime_Seconds>
+         <Debris_Max_Lifetime_Seconds> 3.0 </Debris_Max_Lifetime_Seconds>
+      </BehaviorType>
+
+      <BehaviorType Name="ArmorAndDamageBehaviorType">
+         <Damage_Type> Damage_Default </Damage_Type>
+      </BehaviorType>
+
+   </X10_Alien_Units>
+
+   <X10_Alien_Units Name="Defiler_Death_Debris_B">
+      <Variant_Of_Existing_Type> Defiler_Death_Debris_A </Variant_Of_Existing_Type>
+      <Land_Model_Name> AV_Defiler_debri_B.alo </Land_Model_Name>
+      <AssetBank> BANK_ALIEN </AssetBank>
+   </X10_Alien_Units>
+
+   <X10_Alien_Units Name="Defiler_Death_Debris_C">
+      <Variant_Of_Existing_Type> Defiler_Death_Debris_A </Variant_Of_Existing_Type>
+      <Land_Model_Name> AV_Defiler_debri_C.alo </Land_Model_Name>
+      <AssetBank> BANK_ALIEN </AssetBank>
+   </X10_Alien_Units>
+
+   <X10_Alien_Units Name="Defiler_Death_Debris_D">
+      <Variant_Of_Existing_Type> Defiler_Death_Debris_A </Variant_Of_Existing_Type>
+      <Land_Model_Name> AV_Defiler_debri_D.alo </Land_Model_Name>
+      <AssetBank> BANK_ALIEN </AssetBank>
+   </X10_Alien_Units>
+
+   <X10_Alien_Units Name="Defiler_Death_Debris_E">
+      <Variant_Of_Existing_Type> Defiler_Death_Debris_A </Variant_Of_Existing_Type>
+      <Land_Model_Name> AV_Defiler_debri_E.alo </Land_Model_Name>
+      <AssetBank> BANK_ALIEN </AssetBank>
+   </X10_Alien_Units>
+
+   <X10_Alien_Units Name="Defiler_Death_Debris_F">
+      <Variant_Of_Existing_Type> Defiler_Death_Debris_A </Variant_Of_Existing_Type>
+      <Land_Model_Name> AV_Defiler_debri_F.alo </Land_Model_Name>
+      <AssetBank> BANK_ALIEN </AssetBank>
+   </X10_Alien_Units>
+
+   <X10_Alien_Units Name="Defiler_Death_Debris_G">
+      <Variant_Of_Existing_Type> Defiler_Death_Debris_A </Variant_Of_Existing_Type>
+      <Land_Model_Name> AV_Defiler_debri_G.alo </Land_Model_Name>
+      <AssetBank> BANK_ALIEN </AssetBank>
+   </X10_Alien_Units>
+
+   <X10_Alien_Units Name="Unit_Alien_Corruptor_Radiation_Manager">
+
+       <!-- INTERFACE -->
+       <Is_Placed_By_Editor> false </Is_Placed_By_Editor>
+       <Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+
+       <!-- BEHAVIORS -->
+       <Behavior> RADIATION_MANAGER </Behavior>
+
+       <Radiation_Damage_Type> Damage_Alien_AE_Radiation </Radiation_Damage_Type>
+       <Radiation_Damage_Amount> .35 </Radiation_Damage_Amount>
+       <Radiation_Damage_Percentage> 0.0 </Radiation_Damage_Percentage>
+       <Radiation_Damage_Interval_In_Secs> 2.5 </Radiation_Damage_Interval_In_Secs>
+       <Radiation_Target_Categories> ~Flying </Radiation_Target_Categories>
+       <Radiation_Decal_Particle_Effect> Radiation_Decal_Particle_Effect </Radiation_Decal_Particle_Effect>
+       <Radiation_Decal_Name> Alien_Walker_Radiation_Splat </Radiation_Decal_Name>
+       <Radiation_Decal_Duration_In_Secs> 8.0 </Radiation_Decal_Duration_In_Secs>
+       
+       <BehaviorType Name="SFXBehaviorType">
+           <SFXEvent_Fire> SFX_Alien_Radiation_Detonation_1 </SFXEvent_Fire>
+       </BehaviorType>
+
+   </X10_Alien_Units>
+
+
+</Alien_Veh_Defiler_XML>

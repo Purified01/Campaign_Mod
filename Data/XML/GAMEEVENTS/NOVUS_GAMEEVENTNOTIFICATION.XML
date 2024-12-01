@@ -1,0 +1,1182 @@
+<?xml version="1.0"?>
+
+<NovusGameEventNotification>
+
+
+   <!-- ======================================================================= -->
+   <!-- MP BEACON PLACED                                                        	  -->
+   <!-- ======================================================================= -->
+   <GameEvent Name="MP_Beacon_Placed" ReceivedFrom="Novus">
+      <GameEventNotification Category="All">
+         <Stacks>No</Stacks>
+         <Expiration_Time>1.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <SFX_Notification> GUI_BEACON_PLACED </SFX_Notification>
+             </Notification_Description>
+
+            <!-- The enemy notifications are the same throughout the factions and are defined in the file 
+                  specified below.  (Maria) -->
+            <!--INCLUDE ".\Data\XML\Includes\EnemyAndAllyGameEventNotifications\Beacon_Placed_Notifications.xml" -->
+
+         </Notifications>
+      </GameEventNotification>
+   </GameEvent>
+   
+   
+   
+   <!-- ======================================================================= -->
+   <!-- UPGRADE COMPLETE                                                    	  -->
+   <!-- ======================================================================= -->
+   <GameEvent Name="Tactical_Structure_Build_Start" ReceivedFrom="Novus">
+      
+      <GameEventNotification Category="All">
+         <Stacks>No</Stacks>
+         <Expiration_Time>2.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <Broadcast_Only_If_In_Frustum> false </Broadcast_Only_If_In_Frustum>
+               <SFX_Notification> NCO_START_TACTICAL_STRUCTURE_BUILD </SFX_Notification>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+   </GameEvent>
+
+
+   <!-- ======================================================================= -->
+   <!-- UPGRADE COMPLETE                                                    	  -->
+   <!-- ======================================================================= -->
+   <GameEvent Name="Tactical_Structure_Build_Fail" ReceivedFrom="Novus">
+
+      <GameEventNotification Category="All">
+         <Stacks>No</Stacks>
+         <Expiration_Time>2.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <Broadcast_Only_If_In_Frustum> false </Broadcast_Only_If_In_Frustum>
+               <SFX_Notification> NCO_FAIL_TACTICAL_STRUCTURE_BUILD </SFX_Notification>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+   </GameEvent>
+   
+   <!-- ======================================================================= -->
+   <!-- ALLIANCE BROKEN                                                         -->
+   <!-- ======================================================================= -->
+   <GameEvent Name="MP_Alliance_Broken" ReceivedFrom="Novus">
+      <GameEventNotification Category="All">
+         <Stacks>No</Stacks>
+         <Expiration_Time>15.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <SFX_Notification> NCO_ALLIANCE_2 </SFX_Notification>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+   </GameEvent>
+
+
+   <!-- ======================================================================= -->
+   <!-- ALLIANCE FORMED                                                         -->
+   <!-- ======================================================================= -->
+   <GameEvent Name="MP_Alliance_Formed" ReceivedFrom="Novus">
+      <GameEventNotification Category="All">
+         <Stacks>No</Stacks>
+         <Expiration_Time>15.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <SFX_Notification> NCO_ALLIANCE_1 </SFX_Notification>
+            </Notification_Description>
+
+            <!-- The enemy notifications are the same throughout the factions and are defined in the file 
+                  specified below.  (Maria) -->
+            <!--INCLUDE ".\Data\XML\Includes\EnemyAndAllyGameEventNotifications\Alliance_Formed_Notifications.xml" -->
+         </Notifications>
+      </GameEventNotification>
+   </GameEvent>
+   
+
+   <!-- ======================================================================= -->
+   <!-- INSUFFICIENT RESEARCH FUNDS                                             -->
+   <!-- ======================================================================= -->
+   <GameEvent Name="Research_Funds" ReceivedFrom="Novus">
+      <GameEventNotification Category="All">
+         <Stacks>No</Stacks>
+         <Expiration_Time>1.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <SFX_Notification> NSC_RESEARCH_INSUF_1 </SFX_Notification>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+   </GameEvent>
+
+   
+   <!-- ======================================================================= -->
+   <!-- RESEARCH UNDONE                                                         -->
+   <!-- ======================================================================= -->
+   <GameEvent Name="Research_Undo" ReceivedFrom="Novus">
+      <GameEventNotification Category="All">
+         <Stacks>No</Stacks>
+         <Expiration_Time>1.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <SFX_Notification> NSC_RESEARCH_UNDO_1 </SFX_Notification>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+   </GameEvent>
+   
+   
+   <!-- ======================================================================= -->
+   <!-- RESEARCH CANCELED                                                       -->
+   <!-- ======================================================================= -->
+   <GameEvent Name="Research_Cancel" ReceivedFrom="Novus">
+      <GameEventNotification Category="All">
+         <Stacks>No</Stacks>
+         <Expiration_Time>1.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <SFX_Notification> NSC_RESEARCH_CANCEL_1 </SFX_Notification>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+   </GameEvent>
+   
+   <!-- ======================================================================= -->
+   <!-- RESEARCH LOCKOUT     - DEFCON Mode -                                    -->
+   <!-- ======================================================================= -->
+   <GameEvent Name="Research_Lockout" ReceivedFrom="Novus">
+      <GameEventNotification Category="All">
+         <Stacks>No</Stacks>
+         <Expiration_Time>1.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <SFX_Notification> NSC_RESEARCH_LOCKOUT_1 </SFX_Notification>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+   </GameEvent>
+
+   
+   <!-- ======================================================================= -->
+   <!-- START RESEARCH                                                          -->
+   <!-- ======================================================================= -->
+   <GameEvent Name="Research_Start" ReceivedFrom="Novus">
+      <GameEventNotification Category="All">
+         <Stacks>No</Stacks>
+         <Expiration_Time>1.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <SFX_Notification> NSC_RESEARCH_START_2 </SFX_Notification>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+   </GameEvent>
+
+   
+   <!-- ======================================================================= -->
+   <!-- START DEFCON MODE                                                       -->
+   <!-- ======================================================================= -->
+   <GameEvent Name="MP_Defcon_Start" ReceivedFrom="Novus">
+      <GameEventNotification Category="All">
+         <Stacks>No</Stacks>
+         <Expiration_Time>8.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <SFX_Notification> NCO_DEFCON_START_1 </SFX_Notification>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+   </GameEvent>
+
+   <!-- ======================================================================= -->
+   <!-- DEFCON LEVEL 4 STARTS                                                	  -->
+   <!-- ======================================================================= -->
+   <GameEvent Name="MP_Defcon_4" ReceivedFrom="Novus">
+      <GameEventNotification Category="All">
+         <Stacks>No</Stacks>
+         <Expiration_Time>8.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <SFX_Notification> NCO_DEFCON_LVL_4 </SFX_Notification>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+   </GameEvent>
+
+   <!-- ======================================================================= -->
+   <!-- DEFCON LEVEL 3 STARTS                                                	  -->
+   <!-- ======================================================================= -->
+   <GameEvent Name="MP_Defcon_3" ReceivedFrom="Novus">
+      <GameEventNotification Category="All">
+         <Stacks>No</Stacks>
+         <Expiration_Time>8.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <SFX_Notification> NCO_DEFCON_LVL_3 </SFX_Notification>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+   </GameEvent>
+
+   <!-- ======================================================================= -->
+   <!-- DEFCON LEVEL 2 STARTS                                                	  -->
+   <!-- ======================================================================= -->
+   <GameEvent Name="MP_Defcon_2" ReceivedFrom="Novus">
+      <GameEventNotification Category="All">
+         <Stacks>No</Stacks>
+         <Expiration_Time>8.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <SFX_Notification> NCO_DEFCON_LVL_2 </SFX_Notification>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+   </GameEvent>
+   
+   <!-- ======================================================================= -->
+   <!-- DEFCON LEVEL 1 STARTS                                                	  -->
+   <!-- ======================================================================= -->
+   <GameEvent Name="MP_Defcon_1" ReceivedFrom="Novus">
+      <GameEventNotification Category="All">
+         <Stacks>No</Stacks>
+         <Expiration_Time>8.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <SFX_Notification> NCO_DEFCON_LVL_1 </SFX_Notification>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+   </GameEvent>
+
+   <!-- ======================================================================= -->
+   <!-- UPGRADE COMPLETE                                                    	  -->
+   <!-- ======================================================================= -->
+   <GameEvent Name="Upgrade_Completed" ReceivedFrom="Novus">
+      <GameEventNotification Category="Structure">
+         <Stacks>No</Stacks>
+         <Expiration_Time>8.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <Broadcast_Only_If_In_Frustum> false </Broadcast_Only_If_In_Frustum>
+               <Radar_Map_Event>Game_Event_Info_Medium_Importance</Radar_Map_Event>
+               <SFX_Notification> NCO_BUILD_UPGRADE_COMPLETE </SFX_Notification>
+            </Notification_Description>
+         </Notifications>         
+      </GameEventNotification>
+   </GameEvent>
+
+   <!-- ======================================================================= -->
+   <!-- POP CAP HAS BEEN REACHED                                           	  -->
+   <!-- ======================================================================= -->
+
+   <GameEvent Name="Pop_Cap_Reached" ReceivedFrom="Novus">
+      <GameEventNotification Category="All">
+         <Stacks>No</Stacks>
+         <Expiration_Time>15.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <SFX_Notification> NCO_POPCAP_1 </SFX_Notification>
+            </Notification_Description>
+         </Notifications>
+         
+      </GameEventNotification>
+   </GameEvent>
+
+
+   <!-- ======================================================================= -->
+   <!-- A PLAYER HAS BEEN DEFEATED                                           	  -->
+   <!-- ======================================================================= -->
+
+   <GameEvent Name="Player_Defeated" ReceivedFrom="Novus">
+      <GameEventNotification Category="All">
+         <Stacks>No</Stacks>
+         <Expiration_Time>8.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <!-- The enemy notifications are the same throughout the factions and are defined in the file 
+                  specified below.  (Maria) -->
+            <!--INCLUDE ".\Data\XML\Includes\EnemyAndAllyGameEventNotifications\Player_Defeated_Notifications.xml" -->
+         </Notifications>
+      </GameEventNotification>
+   </GameEvent>
+
+   
+   <!-- ======================================================================= -->
+	<!-- OBJECT DESTROYED EVENTS                             						  -->
+	<!-- ======================================================================= -->
+   
+   <GameEvent Name="Unit_Killed" ReceivedFrom="Novus">
+
+      <!-- LOST NORMAL UNIT -->
+		<GameEventNotification Category="All">
+         <Stacks>Yes</Stacks>
+         <Stack_If_Within_Radius>500</Stack_If_Within_Radius>
+         <Quiet_Time>5.0</Quiet_Time>
+         <Expiration_Time>3.0</Expiration_Time>
+         <Service_Delay_Time>1.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <!-- Notification @ Magnitude below 5-->
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <Min_Magnitude>0</Min_Magnitude>
+               <Max_Magnitude>5</Max_Magnitude>
+               <Radar_Map_Event>Game_Event_Combat_Low_Importance</Radar_Map_Event>
+               <SFX_Notification>NCO_LOST_UNIT</SFX_Notification>
+            </Notification_Description>
+
+            <!-- Notification @ Magnitude greater than 5-->
+            <Notification_Description>
+               <Min_Magnitude>5</Min_Magnitude>
+               <Broadcast_To>Owner</Broadcast_To>
+               <Radar_Map_Event>Game_Event_Combat_High_Importance</Radar_Map_Event>
+               <SFX_Notification>NCO_HEAVY_LOSS_1</SFX_Notification>
+            </Notification_Description>
+         </Notifications>
+
+		</GameEventNotification>
+
+      
+      <!-- LOST HERO UNIT -->
+		<GameEventNotification Category="Hero">
+         <Stacks>No</Stacks>
+         <Expiration_Time>5.0</Expiration_Time>
+         <Service_Delay_Time>0.5</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To> Owner </Broadcast_To>
+               <Expiration_Time>3</Expiration_Time>
+               <Radar_Map_Event>Game_Event_Combat_High_Importance</Radar_Map_Event>
+               <SFX_Notification>NCO_LOST_HERO</SFX_Notification>
+            </Notification_Description>
+            
+            <Notification_Description>
+					<Broadcast_To> Allies </Broadcast_To>
+					<Expiration_Time>3</Expiration_Time>
+					<Radar_Map_Event>Game_Event_Combat_High_Importance</Radar_Map_Event>
+					<SFX_Notification>NCO_LOST_HERO</SFX_Notification>
+				</Notification_Description>
+
+            <!-- The enemy notifications are the same throughout the factions and are defined in the file 
+                  specified below.  (Maria) -->
+            <!--INCLUDE ".\Data\XML\Includes\EnemyAndAllyGameEventNotifications\Hero_Killed_Notifications.xml" -->            
+            
+			</Notifications> 
+			
+		</GameEventNotification>
+
+          
+      <!-- LOST STRUCTURE-->
+      <GameEventNotification Category="Structure">
+         <Stacks>Yes</Stacks>
+         <Stack_If_Within_Radius>400</Stack_If_Within_Radius>
+         <Quiet_Time>5.0</Quiet_Time>
+         <Expiration_Time>5.0</Expiration_Time>
+         <Service_Delay_Time>0.5</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <Radar_Map_Event>Game_Event_Combat_High_Importance</Radar_Map_Event>
+               <SFX_Notification>NCO_LOST_STRUCTURE</SFX_Notification>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+
+      <!-- LOST CAPTURED STRUCTURE-->
+      <GameEventNotification Category="NeutralStructure">
+         <Stacks>Yes</Stacks>
+         <Stack_If_Within_Radius>400</Stack_If_Within_Radius>
+         <Quiet_Time>5.0</Quiet_Time>
+         <Expiration_Time>15.0</Expiration_Time>
+         <Service_Delay_Time>0.5</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <Radar_Map_Event>Game_Event_Combat_Medium_Importance</Radar_Map_Event>
+               <SFX_Notification> NCO_NEUT_LOST_2 </SFX_Notification>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+
+   </GameEvent>
+
+
+
+
+   <!-- ======================================================================= -->
+   <!-- OBJECT ATTACKED EVENTS                                          		  -->
+   <!-- ======================================================================= -->
+
+   <!-- NORMAL UNIT UNDER ATTACK -->
+   <GameEvent Name="Unit_Under_Attack" ReceivedFrom="Novus">
+
+      <GameEventNotification Category="All">
+         <Stacks>Yes</Stacks>
+         <Stack_If_Within_Radius>500</Stack_If_Within_Radius>
+         <Quiet_Time>12.0</Quiet_Time>   <!-- previously set to 6.0 -->
+         <Expiration_Time>3.0</Expiration_Time>
+         <Service_Delay_Time>3.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <Radar_Map_Event>Game_Event_Combat_Low_Importance</Radar_Map_Event>
+               <SFX_Notification>NCO_UNDER_ATTACK_UNIT</SFX_Notification>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+
+      <!-- STRUCTURE UNDER ATTACK -->
+      <GameEventNotification Category="Structure">
+         <Stacks>Yes</Stacks>
+         <Stack_If_Within_Radius>400</Stack_If_Within_Radius>
+         <Quiet_Time>12.0</Quiet_Time>  <!-- previously set to 6.0 -->
+         <Expiration_Time>10.0</Expiration_Time>
+         <Service_Delay_Time>3.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <Radar_Map_Event>Game_Event_Combat_High_Importance</Radar_Map_Event>
+               <SFX_Notification>NCO_UNDER_ATTACK_STRUCTURE</SFX_Notification>
+            </Notification_Description>
+         </Notifications>
+
+         <!-- The enemy notifications are the same throughout the factions and are defined in the file 
+                  specified below.  (Maria) -->
+         <!--INCLUDE ".\Data\XML\Includes\EnemyAndAllyGameEventNotifications\Base_Under_Attack_Notifications.xml" -->
+         
+      </GameEventNotification>
+
+      <!-- CAPTURED STRUCTURE UNDER ATTACK -->
+      <GameEventNotification Category="NeutralStructure">
+         <Stacks>Yes</Stacks>
+         <Stack_If_Within_Radius>400</Stack_If_Within_Radius>
+         <Quiet_Time>12.0</Quiet_Time>
+         <!-- previously set to 6.0 -->
+         <Expiration_Time>10.0</Expiration_Time>
+         <Service_Delay_Time>3.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <Radar_Map_Event>Game_Event_Combat_High_Importance</Radar_Map_Event>
+               <SFX_Notification>NCO_UNDER_ATTACK_CAPTURED_STRUCTURE</SFX_Notification>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+      
+
+      <!-- HERO UNDER ATTACK -->
+      <GameEventNotification Category="Hero">
+         <Stacks>No</Stacks>
+			<Quiet_Time>12.0</Quiet_Time>   <!-- previously set to 6.0 -->
+         <Expiration_Time>10.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <Radar_Map_Event>Game_Event_Combat_Medium_Importance</Radar_Map_Event>
+               <SFX_Notification>NCO_UNDER_ATTACK_HERO</SFX_Notification>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+
+    </GameEvent>
+
+  
+   <!-- ======================================================================= -->
+   <!-- OBJECT SOLD EVENT                                         			  	  -->
+   <!-- ======================================================================= -->
+        
+   <GameEvent Name="Tactical_Object_Sold" ReceivedFrom="Novus">
+
+      <!-- UNIT SOLD -->
+      <GameEventNotification Category="All">
+         <Stacks>No</Stacks>
+         <Expiration_Time>5.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <Radar_Map_Event>Game_Event_Info_Low_Importance</Radar_Map_Event>
+               <SFX_Notification>GUI_SOLD_UNIT</SFX_Notification>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+
+      <!-- STRUCTURE SOLD -->
+      <GameEventNotification Category="Structure">
+         <Stacks>No</Stacks>
+         <Expiration_Time>5.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <Radar_Map_Event>Game_Event_Info_Low_Importance</Radar_Map_Event>
+               <SFX_Notification>GUI_SOLD_UNIT</SFX_Notification>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+
+   </GameEvent>
+
+
+
+   <!-- ======================================================================= -->
+   <!-- CONSTRUCTION COMPLETE                                           		  -->
+   <!-- ======================================================================= -->
+   
+   <GameEvent Name="Tactical_Construction_Completed" ReceivedFrom="Novus">
+
+      <!-- UNIT CONSTRUCTION COMPLETE -->
+      <GameEventNotification Category="All">
+         <Stacks>No</Stacks>
+         <Expiration_Time>8.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <Radar_Map_Event>Game_Event_Info_Low_Importance</Radar_Map_Event>
+               <SFX_Notification></SFX_Notification>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+
+      <!-- STRUCTURE COMPLETE -->
+      <GameEventNotification Category="Structure">
+         <Stacks>No</Stacks>
+         <Expiration_Time>8.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <Radar_Map_Event>Game_Event_Info_Medium_Importance</Radar_Map_Event>
+               <SFX_Notification></SFX_Notification>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+
+   </GameEvent>
+
+
+
+   <!-- ======================================================================= -->
+   <!-- STRUCTURE UNDER CONSTRUCTION IS KILLED                             	  -->
+   <!-- ======================================================================= -->
+   
+   <GameEvent Name="Tactical_Construction_Killed" ReceivedFrom="Novus">
+
+      <GameEventNotification Category="All">
+         <Stacks>No</Stacks>
+         <Expiration_Time>5.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <Radar_Map_Event>Game_Event_Combat_Medium_Importance</Radar_Map_Event>
+               <SFX_Notification>NCO_LOST_STRUCTURE</SFX_Notification>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+      
+   </GameEvent>
+
+
+   <!-- ======================================================================= -->
+   <!-- SUPER WEAPON BUILT                            			  	  -->
+   <!-- ======================================================================= -->
+   <GameEvent Name="Super_Weapon_Built" ReceivedFrom="Novus">
+
+      <!-- EMP CONSTRUCTION COMPLETE -->
+      <GameEventNotification Category="Super_Weapon_1">
+         <Stacks>No</Stacks>
+         <Expiration_Time>15.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>All</Broadcast_To>
+               <Broadcast_Only_If_In_Frustum> false </Broadcast_Only_If_In_Frustum>
+               <Radar_Map_Event>Game_Event_Info_High_Importance</Radar_Map_Event>
+               <SFX_Notification> SFX_Structure_Select_Novus_SuperWeapon_EMP </SFX_Notification>
+            </Notification_Description>
+
+         </Notifications>
+      </GameEventNotification>
+
+
+      <!-- GRAVITY BOMB CONSTRUCTION COMPLETE -->
+      <GameEventNotification Category="Super_Weapon_2">
+         <Stacks>No</Stacks>
+         <Expiration_Time>15.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>All</Broadcast_To>
+               <Broadcast_Only_If_In_Frustum> false </Broadcast_Only_If_In_Frustum>
+               <Radar_Map_Event>Game_Event_Info_High_Importance</Radar_Map_Event>
+               <SFX_Notification> SFX_Structure_Select_Novus_Gravity_Bomb </SFX_Notification>
+            </Notification_Description>
+
+         </Notifications>
+      </GameEventNotification>
+      
+   </GameEvent>
+
+
+   <!-- ======================================================================= -->
+   <!-- SUPER WEAPON READY                            			  	  -->
+   <!-- ======================================================================= -->
+   <GameEvent Name="Super_Weapon_Ready" ReceivedFrom="Novus">
+
+      <GameEventNotification Category="Super_Weapon_1"> <!-- EMP CANNON -->
+         <Stacks>No</Stacks>
+         <Expiration_Time>8.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <Broadcast_Only_If_In_Frustum> false </Broadcast_Only_If_In_Frustum>
+               <Radar_Map_Event>Game_Event_Info_High_Importance</Radar_Map_Event>
+               <SFX_Notification>NCO_SUPER_WEAPON_1_READY</SFX_Notification>
+            </Notification_Description>
+
+            <!-- The enemy and ally notifications are the same throughout the factions and are defined in the file 
+                  specified below.  (Maria) -->
+            <!--INCLUDE ".\Data\XML\Includes\EnemyAndAllyGameEventNotifications\Super_Weapon_Ready_Notifications.xml" -->
+
+         </Notifications>
+         
+      </GameEventNotification>
+
+      <GameEventNotification Category="Super_Weapon_2">  <!-- GRAVITY BOMB -->
+         <Stacks>No</Stacks>
+         <Expiration_Time>8.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <Broadcast_Only_If_In_Frustum> false </Broadcast_Only_If_In_Frustum>
+               <Radar_Map_Event>Game_Event_Info_High_Importance</Radar_Map_Event>
+               <SFX_Notification> NCO_SUPER_WEAPON_2_READY </SFX_Notification>
+            </Notification_Description>
+
+            <!-- The enemy and ally notifications are the same throughout the factions and are defined in the file 
+                  specified below.  (Maria) -->
+            <!--INCLUDE ".\Data\XML\Includes\EnemyAndAllyGameEventNotifications\Super_Weapon_Ready_Notifications.xml" -->
+         </Notifications>
+
+      </GameEventNotification>
+      
+   </GameEvent>
+
+   <!-- ======================================================================= -->
+   <!-- SUPER WEAPON  LAUNCHED                               					  	  -->
+   <!-- ======================================================================= -->
+   
+   <GameEvent Name="Super_Weapon_Launched" ReceivedFrom="Novus">
+
+      <GameEventNotification Category="Super_Weapon_1">
+         <Stacks>No</Stacks>
+         <Expiration_Time>5.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <Broadcast_Only_If_In_Frustum> false </Broadcast_Only_If_In_Frustum>
+               <Radar_Map_Event>Game_Event_Info_High_Importance</Radar_Map_Event>
+               <SFX_Notification> GUI_Novus_EMP_Launched </SFX_Notification>
+            </Notification_Description>
+
+            <!-- The enemy and ally notifications are the same throughout the factions and are defined in the file 
+                  specified below.  (Maria) -->
+            <!--INCLUDE ".\Data\XML\Includes\EnemyAndAllyGameEventNotifications\Super_Weapon_Launched_Notifications.xml" -->
+            
+         </Notifications>
+      </GameEventNotification>
+
+      <GameEventNotification Category="Super_Weapon_2">
+         <Stacks>No</Stacks>
+         <Expiration_Time>5.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <Broadcast_Only_If_In_Frustum> false </Broadcast_Only_If_In_Frustum>
+               <Radar_Map_Event>Game_Event_Info_High_Importance</Radar_Map_Event>
+               <SFX_Notification> GUI_Novus_Gravity_Bomb_Launched </SFX_Notification>
+            </Notification_Description>
+
+            <!-- The enemy and ally notifications are the same throughout the factions and are defined in the file 
+                  specified below.  (Maria) -->
+            <!--INCLUDE ".\Data\XML\Includes\EnemyAndAllyGameEventNotifications\Super_Weapon_Launched_Notifications.xml" -->
+         </Notifications>
+      </GameEventNotification>
+      
+   </GameEvent>
+
+   <!-- ======================================================================= -->
+   <!-- MEGA WEAPON BUILT                                         			  	  -->
+   <!-- ======================================================================= -->
+
+   <GameEvent Name="Mega_Weapon_Built" ReceivedFrom="Novus">
+
+      <GameEventNotification Category="All">
+         <Stacks>No</Stacks>
+         <Expiration_Time>15.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <Broadcast_Only_If_In_Frustum> false </Broadcast_Only_If_In_Frustum>
+               <Radar_Map_Event>Game_Event_Info_High_Importance</Radar_Map_Event>
+               <SFX_Notification>GUI_MegaWeapon_Built</SFX_Notification>
+            </Notification_Description>
+
+            <Notification_Description>
+               <Broadcast_To>Allies</Broadcast_To>
+               <Broadcast_Only_If_In_Frustum> false </Broadcast_Only_If_In_Frustum>
+               <Radar_Map_Event>Game_Event_Info_High_Importance</Radar_Map_Event>
+               <SFX_Notification>GUI_MegaWeapon_Built</SFX_Notification>
+            </Notification_Description>
+
+            <Notification_Description>
+               <Broadcast_To>Enemies</Broadcast_To>
+               <Broadcast_Only_If_In_Frustum> false </Broadcast_Only_If_In_Frustum>
+               <Radar_Map_Event>Game_Event_Info_High_Importance</Radar_Map_Event>
+               <SFX_Notification>GUI_MegaWeapon_Built</SFX_Notification>
+            </Notification_Description>
+
+         </Notifications>
+      </GameEventNotification>
+
+   </GameEvent>
+   
+
+   <!-- ======================================================================= -->
+   <!-- MEGA WEAPON READY (GREY MASS CANNON)                      			  	  -->
+   <!-- ======================================================================= -->
+
+   <GameEvent Name="Mega_Weapon_Ready" ReceivedFrom="Novus">
+
+      <GameEventNotification Category="All">
+         <Stacks>No</Stacks>
+         <Expiration_Time>8.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <Broadcast_Only_If_In_Frustum> false </Broadcast_Only_If_In_Frustum>
+               <Radar_Map_Event>Game_Event_Info_High_Importance</Radar_Map_Event>
+               <SFX_Notification>GUI_Novus_Mass_Cannon_Ready</SFX_Notification>
+            </Notification_Description>
+
+            <Notification_Description>
+               <Broadcast_To>Allies</Broadcast_To>
+               <Broadcast_Only_If_In_Frustum> false </Broadcast_Only_If_In_Frustum>
+               <Radar_Map_Event>Game_Event_Info_High_Importance</Radar_Map_Event>
+               <SFX_Notification>GUI_Novus_Mass_Cannon_Ready</SFX_Notification>
+            </Notification_Description>
+
+            <Notification_Description>
+               <Broadcast_To>Enemies</Broadcast_To>
+               <Broadcast_Only_If_In_Frustum> false </Broadcast_Only_If_In_Frustum>
+               <Radar_Map_Event>Game_Event_Info_High_Importance</Radar_Map_Event>
+               <SFX_Notification>GUI_Novus_Mass_Cannon_Ready</SFX_Notification>
+            </Notification_Description>
+
+         </Notifications>
+      </GameEventNotification>
+
+   </GameEvent>
+
+   <!-- ======================================================================= -->
+   <!-- MEGA WEAPON LAUNCHED (SINGULARITY CANNON)            					  	  -->
+   <!-- ======================================================================= -->
+
+   <GameEvent Name="Mega_Weapon_Launched" ReceivedFrom="Novus">
+
+      <GameEventNotification Category="All">
+         <Stacks>No</Stacks>
+         <Expiration_Time>5.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <Broadcast_Only_If_In_Frustum> false </Broadcast_Only_If_In_Frustum>
+               <Radar_Map_Event>Game_Event_Info_High_Importance</Radar_Map_Event>
+               <SFX_Notification>GUI_Novus_Mass_Cannon_Launched</SFX_Notification>
+            </Notification_Description>
+
+            <Notification_Description>
+               <Broadcast_To>Allies</Broadcast_To>
+               <Broadcast_Only_If_In_Frustum> false </Broadcast_Only_If_In_Frustum>
+               <Radar_Map_Event>Game_Event_Info_High_Importance</Radar_Map_Event>
+               <SFX_Notification>GUI_Novus_Mass_Cannon_Launched</SFX_Notification>
+            </Notification_Description>
+
+            <Notification_Description>
+               <Broadcast_To>Enemies</Broadcast_To>
+               <Broadcast_Only_If_In_Frustum> false </Broadcast_Only_If_In_Frustum>
+               <Radar_Map_Event>Game_Event_Info_High_Importance</Radar_Map_Event>
+               <SFX_Notification>GUI_Novus_Mass_Cannon_Launched</SFX_Notification>
+            </Notification_Description>
+            
+         </Notifications>
+      </GameEventNotification>
+
+   </GameEvent>
+
+	<!-- ======================================================================= -->
+	<!-- MEGA WEAPON COUNTERED                     					  					  -->
+	<!-- ======================================================================= -->
+	<GameEvent Name="Mega_Weapon_Countered" ReceivedFrom="Novus">
+
+		<GameEventNotification Category="All">
+			<Stacks>No</Stacks>
+			<Expiration_Time>15.0</Expiration_Time>
+			<Service_Delay_Time>0.0</Service_Delay_Time>
+
+			<Notifications SubObjectList="Yes">
+				<Notification_Description>
+					<Broadcast_To>Owner</Broadcast_To>
+					<Broadcast_Only_If_In_Frustum> false </Broadcast_Only_If_In_Frustum>
+					<Radar_Map_Event>Game_Event_Info_High_Importance</Radar_Map_Event>
+					<SFX_Notification> GUI_Megaweapon_Blocked </SFX_Notification>
+				</Notification_Description>
+
+				<Notification_Description>
+					<Broadcast_To>Allies</Broadcast_To>
+					<Broadcast_Only_If_In_Frustum> false </Broadcast_Only_If_In_Frustum>
+					<Radar_Map_Event>Game_Event_Info_High_Importance</Radar_Map_Event>
+					<SFX_Notification> GUI_Megaweapon_Blocked </SFX_Notification>
+				</Notification_Description>
+
+				<Notification_Description>
+					<Broadcast_To>Enemies</Broadcast_To>
+					<Broadcast_Only_If_In_Frustum> false </Broadcast_Only_If_In_Frustum>
+					<Radar_Map_Event>Game_Event_Info_High_Importance</Radar_Map_Event>
+					<SFX_Notification> GUI_Megaweapon_Blocked </SFX_Notification>
+				</Notification_Description>
+
+			</Notifications>
+		</GameEventNotification>
+
+	</GameEvent>
+
+
+	<!-- ======================================================================= -->
+   <!-- CURRENT RESEACH COMPLETED                                 				  -->
+   <!-- ======================================================================= -->
+   
+   <GameEvent Name="Research_Completed" ReceivedFrom="Novus">
+
+      <GameEventNotification Category="All">
+         <Stacks>No</Stacks>
+         <Expiration_Time>8.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <SFX_Notification>NSC_RESEARCH_COMPLETE_1</SFX_Notification>
+            </Notification_Description>
+
+            <!-- The enemy and ally notifications are the same throughout the factions and are defined in the file 
+                  specified below.  (Maria) -->
+            <!--INCLUDE ".\Data\XML\Includes\EnemyAndAllyGameEventNotifications\Research_Complete_Notifications.xml" -->
+            
+         </Notifications>
+      </GameEventNotification>
+   </GameEvent>
+
+
+
+   <!-- ======================================================================= -->
+   <!-- MISSION OBJECTIVE COMPLETED                         						  -->
+   <!-- ======================================================================= -->
+   <GameEvent Name="Objective_Completed" ReceivedFrom="Novus">
+
+      <GameEventNotification Category="All">
+         <Stacks>No</Stacks>
+         <Expiration_Time>8.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <SFX_Notification>NCO_OBJECTIVE_COMPLETED</SFX_Notification>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+   </GameEvent>
+
+
+
+   <!-- ======================================================================= -->
+   <!-- INSUFFICIENT FUNDS 																	  -->
+   <!-- ======================================================================= -->
+
+   <GameEvent Name="Not_Enough_Resources" ReceivedFrom="Novus">
+
+      <GameEventNotification Category="All">
+         <Stacks>No</Stacks>
+         <Expiration_Time>8.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <SFX_Notification></SFX_Notification>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+      
+   </GameEvent>
+
+
+    <!-- =======================================================================     -->
+   <!-- Tactical Construction object can't start the build.                         -->
+   <!-- The beacon is destroyed in this case. This typically happens when player    -->
+   <!-- placed beacon into FOW and when constructor got there, the beacon was in    -->
+   <!-- a bad spot (say, inside a building). 	                                    -->
+   <!-- =======================================================================     -->
+   <GameEvent Name="Tactical_Construction_Not_Feasible" ReceivedFrom="Novus">
+
+      <GameEventNotification Category="All">
+         <Stacks>No</Stacks>
+         <Expiration_Time>5.0</Expiration_Time>
+         <Service_Delay_Time>0.0</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <Radar_Map_Event>Game_Event_Info_High_Importance</Radar_Map_Event>
+               <SFX_Notification> Unit_ABILITY_B_Novus_Constructor </SFX_Notification>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+
+   </GameEvent>
+
+
+   <!-- ======================================================================= -->
+   <!-- Neutral structure has been lost (to another player)							  -->
+   <!-- ======================================================================= -->
+   <GameEvent Name="Captured_Structure_Lost" ReceivedFrom="Novus">
+
+      <GameEventNotification Category="All">
+         <Stacks>Yes</Stacks>
+         <Stack_If_Within_Radius>500</Stack_If_Within_Radius>
+         <Quiet_Time>5.0</Quiet_Time>
+         <Expiration_Time>15.0</Expiration_Time>
+         <Service_Delay_Time>0.5</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <Broadcast_Only_If_In_Frustum> false </Broadcast_Only_If_In_Frustum>
+               <Radar_Map_Event>Game_Event_Combat_Medium_Importance</Radar_Map_Event>
+               <SFX_Notification>NCO_NEUT_LOST_1</SFX_Notification>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+
+   </GameEvent>
+
+   <!-- ======================================================================= -->
+   <!-- Neutral structure has been destroyed                   					  -->
+   <!-- ======================================================================= -->
+   <GameEvent Name="Captured_Structure_Destroyed" ReceivedFrom="Novus">
+
+      <GameEventNotification Category="All">
+         <Stacks>Yes</Stacks>
+         <Stack_If_Within_Radius>500</Stack_If_Within_Radius>
+         <Quiet_Time>5.0</Quiet_Time>
+         <Expiration_Time>15.0</Expiration_Time>
+         <Service_Delay_Time>0.5</Service_Delay_Time>
+
+         <Notifications SubObjectList="Yes">
+            <Notification_Description>
+               <Broadcast_To>Owner</Broadcast_To>
+               <Broadcast_Only_If_In_Frustum> false </Broadcast_Only_If_In_Frustum>
+               <Radar_Map_Event>Game_Event_Combat_Medium_Importance</Radar_Map_Event>
+               <SFX_Notification>NCO_NEUT_LOST_2 </SFX_Notification>
+            </Notification_Description>
+         </Notifications>
+      </GameEventNotification>
+
+   </GameEvent>
+
+	<!-- ======================================================================= -->
+	<!-- REINFORCEMENTS ENROUTE																  -->
+	<!-- ======================================================================= -->
+	<GameEvent Name="Reinforcements_Enroute" ReceivedFrom="Novus">
+
+		<GameEventNotification Category="All">
+			<Stacks>No</Stacks>
+			<Expiration_Time>8.0</Expiration_Time>
+			<Service_Delay_Time>0.0</Service_Delay_Time>
+
+			<Notifications SubObjectList="Yes">
+				<Notification_Description>
+					<Broadcast_To>Owner</Broadcast_To>
+					<SFX_Notification></SFX_Notification>
+				</Notification_Description>
+			</Notifications>
+		</GameEventNotification>
+
+	</GameEvent>
+
+	<!-- ======================================================================= -->
+	<!-- This event is manually raised from script when a player is given reinforcements	  -->
+	<!-- ======================================================================= -->
+	<GameEvent Name="Reinforcements_Arrived" ReceivedFrom="Novus">
+
+		<GameEventNotification Category="All">
+			<Stacks>No</Stacks>
+			<Expiration_Time>15.0</Expiration_Time>
+			<Service_Delay_Time>0.0</Service_Delay_Time>
+
+			<Notifications SubObjectList="Yes">
+				<Notification_Description>
+					<Broadcast_To>Owner</Broadcast_To>
+					<Radar_Map_Event>Game_Event_Info_High_Importance</Radar_Map_Event>
+					<SFX_Notification> NCO_REINFORCEMENTS_1 </SFX_Notification>
+				</Notification_Description>
+			</Notifications>
+		</GameEventNotification>
+
+	</GameEvent>
+
+	<!-- ======================================================================= -->
+	<!-- This event is sent in global to the owner of a region that an enemy fleet is moving to	  -->
+	<!-- ======================================================================= -->
+	<GameEvent Name="Enemy_Attack_Incoming" ReceivedFrom="Novus">
+		<GameEventNotification Category="All">
+			<Stacks>No</Stacks>
+			<Expiration_Time>15.0</Expiration_Time>
+			<Service_Delay_Time>0.0</Service_Delay_Time>
+
+			<Notifications SubObjectList="Yes">
+				<Notification_Description>
+					<Broadcast_To>Owner</Broadcast_To>
+					<Radar_Map_Event/>
+					<SFX_Notification> GUI_Alarm </SFX_Notification>
+				</Notification_Description>
+			</Notifications>
+		</GameEventNotification>
+	</GameEvent>
+
+	<!-- ======================================================================= -->
+	<!-- This event is sent in global when successfully activating a spy system	  -->
+	<!-- ======================================================================= -->
+	<GameEvent Name="Global_Spy_Activated" ReceivedFrom="Novus">
+		<GameEventNotification Category="All">
+			<Stacks>No</Stacks>
+			<Expiration_Time>15.0</Expiration_Time>
+			<Service_Delay_Time>0.0</Service_Delay_Time>
+
+			<Notifications SubObjectList="Yes">
+				<Notification_Description>
+					<Broadcast_To>Owner</Broadcast_To>
+					<Radar_Map_Event/>
+					<SFX_Notification> GUI_Spying_Activated </SFX_Notification>
+				</Notification_Description>
+			</Notifications>
+		</GameEventNotification>
+	</GameEvent>
+
+	<!-- ======================================================================= -->
+	<!-- This event is sent in global when an attempt to activate a spy is blocked	  -->
+	<!-- ======================================================================= -->
+	<GameEvent Name="Global_Spy_Activated" ReceivedFrom="Novus">
+		<GameEventNotification Category="All">
+			<Stacks>No</Stacks>
+			<Expiration_Time>15.0</Expiration_Time>
+			<Service_Delay_Time>0.0</Service_Delay_Time>
+
+			<Notifications SubObjectList="Yes">
+				<Notification_Description>
+					<Broadcast_To>Owner</Broadcast_To>
+					<Radar_Map_Event/>
+					<SFX_Notification> GUI_Spying_Blocked </SFX_Notification>
+				</Notification_Description>
+			</Notifications>
+		</GameEventNotification>
+	</GameEvent>	
+
+
+
+</NovusGameEventNotification>
+

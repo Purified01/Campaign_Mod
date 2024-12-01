@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+
+
+<GameEventSystemNotificationsFiles>
+
+	<File>Generic_GameEventNotification.xml</File>
+	<File>NOVUS_GameEventNotification.xml</File>
+   <File>HIERARCHY_GameEventNotification.xml</File>
+   <File>MASARI_GameEventNotification.xml</File>
+   <File>MILITARY_GameEventNotification.xml</File>
+   
+</GameEventSystemNotificationsFiles>
+

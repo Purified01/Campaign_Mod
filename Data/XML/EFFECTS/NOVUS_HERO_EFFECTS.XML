@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Effects>
+	<!--*************************************************************************************************
+	************************************************************************************************** 
+	************************************************************************************************** 
+	**	
+	**												Founder
+	**	
+	************************************************************************************************** 
+	************************************************************************************************** 
+	************************************************************************************************** -->
+	<Effect Name="Novus_Founder_Regenerate_Effect">
+		<Duration> -1.0 </Duration>
+		<Effect_Class> Healing </Effect_Class>
+
+		<Effect_Component Type="HealOverTime">
+			<Amount_Per_Second> 2.0 </Amount_Per_Second>
+      <Percentage_Per_Second>.01</Percentage_Per_Second>
+		</Effect_Component>
+	</Effect>
+
+	<Effect Name="NovusFounderScaleUpEffect">
+		<Effect_Class> Scale </Effect_Class>
+
+		<Effect_Component Type="ScaleOverTime">
+			<Start_Scale>1</Start_Scale>
+			<End_Scale>1.8</End_Scale>
+		</Effect_Component>
+	</Effect>
+
+	<Effect Name="NovusFounderScaleDownEffect">
+		<Effect_Class> Scale </Effect_Class>
+
+		<Effect_Component Type="ScaleOverTime">
+			<Start_Scale>1</Start_Scale>
+			<End_Scale>.6</End_Scale>
+		</Effect_Component>
+
+	</Effect>
+
+    <Effect Name="NovusFounderStunEffect">
+        <Effect_Class> Stun </Effect_Class>
+
+        <Effect_Component Type="DisableAbility">
+            <Abilities/>
+        </Effect_Component>
+
+        <Effect_Component Type="DisableBehavior">
+            <Behaviors> UNIT_ABILITY, WALK_LOCOMOTOR, TARGETING </Behaviors>
+        </Effect_Component>
+
+        <Effect_Component Type="ParticleSystem">
+            <Particle_System_Type> Novus_Glow_Aura </Particle_System_Type>
+        </Effect_Component>
+
+    </Effect>
+
+	<Effect Name="Novus_Founder_Rebuild_Target_Effect">
+		<Duration> 0.1 </Duration>
+		<Effect_Class> FounderRebuild </Effect_Class>
+		<Priority> 10 </Priority>
+
+		<Effect_Component Type="SpawnFrom">
+         <!-- Oksana: if you change this type, please also change the target filter function in associated effect generator. -->
+			<Spawn_Type> Novus_Robotic_Infantry </Spawn_Type>
+			<Destroy_Source_Object> true </Destroy_Source_Object>
+			<Add_To_Spawn_Effect_Name> RadiationChargeRaiseDeadVisualEffect </Add_To_Spawn_Effect_Name>
+			<Add_To_Pop_Cap> true </Add_To_Pop_Cap>
+		</Effect_Component>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Founder_Rebuild_Target_Particle </Particle_System_Type>
+		</Effect_Component>
+		
+	</Effect>
+	
+	
+	<Effect Name="Novus_Founder_Rebuild_Source_Effect">
+		<Duration> 2.5 </Duration>
+		<Effect_Class> FounderRebuild </Effect_Class>
+		<Priority> 1 </Priority>
+
+		<Effect_Component Type="Damage">
+			<Damage_Type>Damage_Default</Damage_Type>
+			<Damage_Amount>0.0</Damage_Amount>
+			<Damage_Percentage>0.2</Damage_Percentage>
+		</Effect_Component>
+
+		<Effect_Component Type="Animate">
+			<Animation_Type> SPECIAL_ACTION_A </Animation_Type>
+			<Blend_Time> .2 </Blend_Time>
+			<Play_If_Already_Playing> false </Play_If_Already_Playing>
+			<Play_After_Current_Finishes> false </Play_After_Current_Finishes>
+			<Adjust_Rate_To_Fit_Duration> true </Adjust_Rate_To_Fit_Duration>
+		</Effect_Component>
+
+		<Effect_Component Type="ApplyEffectOnRemove">
+			<Effect_Name> Novus_Founder_Rebuild_Stop_Anim </Effect_Name>
+			<Apply_On_Expiration_Only> false </Apply_On_Expiration_Only>
+		</Effect_Component>
+
+	</Effect>
+
+	<Effect Name="Novus_Founder_Rebuild_Stop_Anim">
+		<Duration> 0.1 </Duration>
+		<Effect_Class> FounderRebuild </Effect_Class>
+		<Priority> 2 </Priority>
+
+		<Effect_Component Type="Animate">
+			<Animation_Type> Anim_Idle </Animation_Type>
+			<Blend_Time> 0.05 </Blend_Time>
+			<Play_If_Already_Playing> false </Play_If_Already_Playing>
+			<Play_After_Current_Finishes> false </Play_After_Current_Finishes>
+		</Effect_Component>
+
+	</Effect>
+
+	<Effect Name="FounderProwessPunchDamage">
+		<Duration> .10 </Duration>
+		<Effect_Class> ElectricityDamage </Effect_Class>
+
+		<Effect_Component Type="Damage">
+			<Damage_Type> Damage_Novus_Founder_Prowess_Punch </Damage_Type>
+			<Damage_Amount> 45.0 </Damage_Amount>
+		</Effect_Component>
+
+		<Effect_Component Type="Sound">
+			<Apply_Effect>  </Apply_Effect>
+			<!-- FRANK TO REPLACE -->
+		</Effect_Component>
+
+	</Effect>
+
+	
+	<Effect Name="FounderPerformancePunchDamage">
+		<Duration> .10 </Duration>
+		<Effect_Class> ElectricityDamage </Effect_Class>
+
+		<Effect_Component Type="Damage">
+			<Damage_Type> Damage_Novus_Founder_Performance_Punch </Damage_Type>
+			<Damage_Amount> 30.0 </Damage_Amount>
+		</Effect_Component>
+
+		<Effect_Component Type="Sound">
+			<Apply_Effect> SFX_Novus_Agent_Fire </Apply_Effect> <!-- FRANK TO REPLACE -->
+		</Effect_Component>
+		
+	</Effect>
+
+	
+	
+	
+	
+	<Effect Name="FounderSignalTapEffect">
+		<Effect_Class> Powered </Effect_Class>
+
+		<Effect_Component Type="ParticleSystem">
+			 <Particle_System_Type> Novus_Glow_Aura </Particle_System_Type>
+		</Effect_Component>
+
+     
+      <Effect_Component Type="DisableBehavior">
+         <Behaviors> WALK_LOCOMOTOR, TARGETING, WEAPON, TURRET </Behaviors>
+      </Effect_Component>
+      
+		<Effect_Component Type="AddBehavior">
+			<Behavior_Name> POWERED </Behavior_Name>
+		</Effect_Component>
+
+	</Effect>
+
+
+  <Effect Name="FounderBoostEffect">
+    <Duration> -1 </Duration>
+    <Effect_Class> SpeedBoost </Effect_Class>
+
+    <Effect_Component Type="AttributeModifier">
+      <Attribute> Max_Speed_Mult_Coeff </Attribute>
+      <Modifier_Value> 0.75 </Modifier_Value>
+    </Effect_Component>
+
+    <Effect_Component Type="AttributeModifier">
+      <Attribute> Animation_Subindex_Override </Attribute>
+      <Modifier_Integer_Value> 1 </Modifier_Integer_Value>
+      <Modifier_Type> Replacement </Modifier_Type>
+    </Effect_Component>
+
+  </Effect>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!--*************************************************************************************************
+	************************************************************************************************** 
+	************************************************************************************************** 
+	**	
+	**												Mirabell
+	**	
+	************************************************************************************************** 
+	************************************************************************************************** 
+	************************************************************************************************** -->
+	<!-- ************************************************************** -->
+	<!-- NovusMechBarrageEffect effect -->
+	<!-- ************************************************************** -->
+	<Effect Name="NovusMechBarrageEffect">
+		<Duration> -1 </Duration>
+		<Effect_Class> Transparent </Effect_Class>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Weapon_Accuracy_Decrease_Multiplier </Attribute>
+			<Modifier_Value> 30.0 </Modifier_Value>
+		</Effect_Component>
+
+	</Effect>
+
+	<Effect Name="FlyingMechEffect">
+		<Duration> -1 </Duration>
+		<Effect_Class> SpeedBoost </Effect_Class>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Max_Speed_Mult_Coeff </Attribute>
+			<Modifier_Value> 1.6 </Modifier_Value>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Animation_Subindex_Override </Attribute>
+			<Modifier_Integer_Value> 1 </Modifier_Integer_Value>
+			<Modifier_Type> Replacement </Modifier_Type>
+		</Effect_Component>
+
+    <Effect_Component Type="Sound">
+      <Apply_Effect> SFX_Novus_Mech_Moving_Engine_Loop </Apply_Effect>
+      <SFX_Loop_Type>ResonanceBeamWeaponEffectSFX</SFX_Loop_Type>
+      <Stop_On_Remove>yes</Stop_On_Remove>
+    </Effect_Component>
+
+  </Effect>
+
+	<!--*************************************************************************************************
+	************************************************************************************************** 
+	************************************************************************************************** 
+	**	
+	**												Vertigo
+	**	
+	************************************************************************************************** 
+	************************************************************************************************** 
+	************************************************************************************************** -->
+
+	<!--=================================================================================================
+	== VertigoGlobalStealthEffect : Added to fleet in global
+	================================================================================================== -->
+	<Effect Name="VertigoGlobalStealthEffect">
+		<Duration> 2.0 </Duration>
+		<Effect_Class> GlobalStealth </Effect_Class>
+		<Priority> 1.0 </Priority>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Is_Global_Stealthed </Attribute>
+			<Modifier_Value> 1.0 </Modifier_Value>
+		</Effect_Component>
+
+	</Effect>
+
+	<!--=================================================================================================
+    == [10/19/2006] Upload a unit - MLL
+    ================================================================================================== -->
+	<Effect Name="Upload_Effect">
+		
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Regenerate_Type </Attribute>
+			<Modifier_Value> None </Modifier_Value>
+			<Modifier_Type>String_Replacement</Modifier_Type>
+		</Effect_Component>
+
+		<Effect_Class> Upload </Effect_Class>
+			<Effect_Component Type="Upload">
+		</Effect_Component>
+
+	</Effect>
+
+	<Effect Name="Upload_Sparkles_Effect">
+		<Effect_Class> UploadSparkles </Effect_Class>
+
+		<Effect_Component Type="Lightning">
+			<Lightning_Effect_Name> Vertigo_upload_Beam </Lightning_Effect_Name>
+			<Source_Target_Type> SourceToTarget </Source_Target_Type>
+		</Effect_Component>
+
+	</Effect>
+
+	<!--=================================================================================================
+    == [10/19/2006] Download a unit - MLL
+    ================================================================================================== -->
+	<Effect Name="Download_Effect">
+		<Effect_Class> Download </Effect_Class>
+		<Effect_Component Type="Download">
+		</Effect_Component>
+	</Effect>
+
+	<Effect Name="Download_Sparkles_Effect">
+		<Effect_Class> DownloadSparkles </Effect_Class>
+
+		<Effect_Component Type="Lightning">
+			<Lightning_Effect_Name> Vertigo_upload_Beam </Lightning_Effect_Name>
+			<Source_Target_Type> SourceToTarget </Source_Target_Type>
+		</Effect_Component>
+
+	</Effect>
+
+
+	<!--=================================================================================================
+    == [10/23/2006] Whisper mode for Vertigo - MLL
+    ================================================================================================== -->
+	<Effect Name="Novus_Vertigo_Cloak_Effect">
+		<Duration> 10.2 </Duration>
+		<Effect_Class> Cloaking </Effect_Class>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+
+		<Effect_Component Type="Cloak">
+         <Break_Mask> Attack | Ability | Damage | Grounded </Break_Mask>
+		</Effect_Component>
+
+	</Effect>
+
+	<!--=================================================================================================
+    == [10/23/2006] Viral Control for Vertigo - MLL
+    ================================================================================================== -->
+	<Effect Name="Disable_Targeting_Effect">
+		<Effect_Class> ViralControl </Effect_Class>
+		<Duration> 1 </Duration>
+
+		<Effect_Component Type="DisableBehavior">
+			 <Behaviors> TARGETING </Behaviors>
+		</Effect_Component>
+
+	</Effect>
+
+	<Effect Name="Viral_Control_Effect">
+		<Effect_Class> ViralControl </Effect_Class>
+		<Duration> 30 </Duration>
+
+		<Effect_Component Type="RemoveEffect">
+			<Remove_Effect_Class> NovusVirus </Remove_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="SwitchFaction">
+			<Use_Source_Faction> true </Use_Source_Faction>
+		</Effect_Component>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Novus_Hacker_Turret_Hack_Particle </Particle_System_Type>
+		</Effect_Component>
+
+		<Effect_Component Type="ApplyGenerator">
+			<Effect_Generator_Name> VirusInfectAuraGenerator </Effect_Generator_Name>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Is_Untargetable_Until_Attacks </Attribute>
+			<Modifier_Value> 1.0 </Modifier_Value>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Is_Mind_Controlled </Attribute>
+			<Modifier_Value> 1.0 </Modifier_Value>
+		</Effect_Component>
+      
+     	<Effect_Component Type="VoiceBehavior">
+		</Effect_Component>
+
+      <Effect_Component Type="Lightning">
+         <Lightning_Effect_Name> Vertigo_Viral_Control_Lightning </Lightning_Effect_Name>
+         <Source_Target_Type> SourceToTarget </Source_Target_Type>
+         <Source_Bone_Name> MuzzleB_00 </Source_Bone_Name>
+      </Effect_Component>
+	</Effect>
+
+
+</Effects>

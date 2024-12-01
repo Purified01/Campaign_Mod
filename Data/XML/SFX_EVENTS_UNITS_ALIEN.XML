@@ -1,0 +1,926 @@
+<?xml version="1.0"?>
+
+<SFXEvents>
+
+<!--   -->
+
+	<SFXEvent Name="Unit_Select_Alien_Kamal">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_KAM0101_ENG.wav U000_KAM0102_ENG.wav U000_KAM0103_ENG.wav U000_KAM0104_ENG.wav U000_KAM0105_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_KAM_SELECT_1, TEXT_SFX_KAM_SELECT_2, TEXT_SFX_KAM_SELECT_3, TEXT_SFX_KAM_SELECT_4, TEXT_SFX_KAM_SELECT_5</Text_ID>       
+		<Overlap_Test> Unit_Alien_Kamal </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_A_Alien_Kamal">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_KAM0201_ENG.wav U000_KAM0202_ENG.wav U000_KAM0203_ENG.wav U000_KAM0204_ENG.wav U000_KAM0205_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_KAM_ATTACK_A_1, TEXT_SFX_KAM_ATTACK_A_2, TEXT_SFX_KAM_ATTACK_A_3, TEXT_SFX_KAM_ATTACK_A_4, TEXT_SFX_KAM_ATTACK_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Alien_Kamal </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_B_Alien_Kamal">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_KAM0301_ENG.wav U000_KAM0302_ENG.wav U000_KAM0303_ENG.wav U000_KAM0304_ENG.wav U000_KAM0305_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_KAM_ATTACK_B_1, TEXT_SFX_KAM_ATTACK_B_2, TEXT_SFX_KAM_ATTACK_B_3, TEXT_SFX_KAM_ATTACK_B_4, TEXT_SFX_KAM_ATTACK_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Alien_Kamal </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_A_Alien_Kamal">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_KAM0401_ENG.wav U000_KAM0402_ENG.wav U000_KAM0403_ENG.wav U000_KAM0404_ENG.wav U000_KAM0405_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_KAM_MOVE_A_1, TEXT_SFX_KAM_MOVE_A_2, TEXT_SFX_KAM_MOVE_A_3, TEXT_SFX_KAM_MOVE_A_4, TEXT_SFX_KAM_MOVE_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Alien_Kamal </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_B_Alien_Kamal">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_KAM0501_ENG.wav U000_KAM0502_ENG.wav U000_KAM0503_ENG.wav U000_KAM0504_ENG.wav U000_KAM0505_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_KAM_MOVE_B_1, TEXT_SFX_KAM_MOVE_B_2, TEXT_SFX_KAM_MOVE_B_3, TEXT_SFX_KAM_MOVE_B_4, TEXT_SFX_KAM_MOVE_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Alien_Kamal </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_ABILITY_A_Alien_Kamal">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_KAM0601_ENG.wav U000_KAM0602_ENG.wav U000_KAM0603_ENG.wav U000_KAM0604_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_KAM_ABILITY_A_1, TEXT_SFX_KAM_ABILITY_A_2, TEXT_SFX_KAM_ABILITY_A_3, TEXT_SFX_KAM_ABILITY_A_4</Text_ID>			     
+		<Overlap_Test> Unit_Alien_Kamal </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_ABILITY_B_Alien_Kamal">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_KAM0701_ENG.wav U000_KAM0702_ENG.wav U000_KAM0703_ENG.wav U000_KAM0704_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_KAM_ABILITY_B_1, TEXT_SFX_KAM_ABILITY_B_2, TEXT_SFX_KAM_ABILITY_B_3, TEXT_SFX_KAM_ABILITY_B_4</Text_ID>			     
+		<Overlap_Test> Unit_Alien_Kamal </Overlap_Test>
+	</SFXEvent>
+<!--
+	<SFXEvent Name="Unit_Ability_C_Alien_Kamal">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_KAM0801_ENG.wav U000_KAM0802_ENG.wav U000_KAM0803_ENG.wav U000_KAM0804_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID />
+		<Overlap_Test> Unit_Alien_Kamal </Overlap_Test>
+	</SFXEvent>
+-->  
+	<SFXEvent Name="Unit_RETREAT_CALL_Alien_Kamal">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_KAM1503_ENG.wav </Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_KAM_HEALTH_LOW_3</Text_ID>
+		<Overlap_Test> Unit_Alien_Kamal </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_TAUNT_Alien_Kamal">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_KAM1101_ENG.wav U000_KAM1102_ENG.wav U000_KAM1103_ENG.wav U000_KAM1104_ENG.wav U000_KAM1105_ENG.wav </Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_KAM_TAUNT_1, TEXT_SFX_KAM_TAUNT_2, TEXT_SFX_KAM_TAUNT_3, TEXT_SFX_KAM_TAUNT_4, TEXT_SFX_KAM_TAUNT_5</Text_ID>
+		<Overlap_Test> Unit_Alien_Kamal </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_TAUNT_UNLOCKABLE_Alien_Kamal">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_KAM1201_ENG.wav U000_KAM1202_ENG.wav U000_KAM1203_ENG.wav U000_KAM1204_ENG.wav U000_KAM1205_ENG.wav </Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_KAM_TAUNT_UNLOCKABLE_1, TEXT_SFX_KAM_TAUNT_UNLOCKABLE_2, TEXT_SFX_KAM_TAUNT_UNLOCKABLE_3, TEXT_SFX_KAM_TAUNT_UNLOCKABLE_4, TEXT_SFX_KAM_TAUNT_UNLOCKABLE_5</Text_ID>
+		<Overlap_Test> Unit_Alien_Kamal </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_HEALTH_LOW_Alien_Kamal">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_KAM1501_ENG.wav U000_KAM1502_ENG.wav U000_KAM1504_ENG.wav </Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_KAM_HEALTH_LOW_1, TEXT_SFX_KAM_HEALTH_LOW_2, TEXT_SFX_KAM_HEALTH_LOW_4</Text_ID>
+		<Overlap_Test> Unit_Alien_Kamal </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_HEALTH_CRITICAL_Alien_Kamal">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_KAM1601_ENG.wav U000_KAM1602_ENG.wav U000_KAM1603_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_KAM_HEALTH_CRITICAL_1, TEXT_SFX_KAM_HEALTH_CRITICAL_2, TEXT_SFX_KAM_HEALTH_CRITICAL_3</Text_ID>
+		<Overlap_Test> Unit_Alien_Kamal </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Death_Alien_Kamal">
+			<Use_Preset>Preset_UR_3D</Use_Preset>
+			<Samples>DTH_Kamal_2.wav </Samples>
+    </SFXEvent>
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Alien_Nufai">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_NUF0101_ENG.wav U000_NUF0102_ENG.wav U000_NUF0103_ENG.wav U000_NUF0104_ENG.wav U000_NUF0105_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_NUF_SELECT_1, TEXT_SFX_NUF_SELECT_2, TEXT_SFX_NUF_SELECT_3, TEXT_SFX_NUF_SELECT_4, TEXT_SFX_NUF_SELECT_5</Text_ID>       
+		<Overlap_Test> Unit_Alien_Nufai </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_A_Alien_Nufai">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_NUF0201_ENG.wav U000_NUF0202_ENG.wav U000_NUF0203_ENG.wav U000_NUF0204_ENG.wav U000_NUF0205_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_NUF_ATTACK_A_1, TEXT_SFX_NUF_ATTACK_A_2, TEXT_SFX_NUF_ATTACK_A_3, TEXT_SFX_NUF_ATTACK_A_4, TEXT_SFX_NUF_ATTACK_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Alien_Nufai </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_B_Alien_Nufai">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_NUF0301_ENG.wav U000_NUF0302_ENG.wav U000_NUF0303_ENG.wav U000_NUF0304_ENG.wav U000_NUF0305_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_NUF_ATTACK_B_1, TEXT_SFX_NUF_ATTACK_B_2, TEXT_SFX_NUF_ATTACK_B_3, TEXT_SFX_NUF_ATTACK_B_4, TEXT_SFX_NUF_ATTACK_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Alien_Nufai </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_A_Alien_Nufai">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_NUF0401_ENG.wav U000_NUF0402_ENG.wav U000_NUF0403_ENG.wav U000_NUF0404_ENG.wav U000_NUF0405_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_NUF_MOVE_A_1, TEXT_SFX_NUF_MOVE_A_2, TEXT_SFX_NUF_MOVE_A_3, TEXT_SFX_NUF_MOVE_A_4, TEXT_SFX_NUF_MOVE_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Alien_Nufai </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_B_Alien_Nufai">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_NUF0501_ENG.wav U000_NUF0502_ENG.wav U000_NUF0503_ENG.wav U000_NUF0504_ENG.wav U000_NUF0505_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_NUF_MOVE_B_1, TEXT_SFX_NUF_MOVE_B_2, TEXT_SFX_NUF_MOVE_B_3, TEXT_SFX_NUF_MOVE_B_4, TEXT_SFX_NUF_MOVE_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Alien_Nufai </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_ABILITY_A_Alien_Nufai">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_NUF0601_ENG.wav U000_NUF0602_ENG.wav U000_NUF0603_ENG.wav U000_NUF0604_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_NUF_ABILITY_A_1, TEXT_SFX_NUF_ABILITY_A_2, TEXT_SFX_NUF_ABILITY_A_3, TEXT_SFX_NUF_ABILITY_A_4</Text_ID>			     
+		<Overlap_Test> Unit_Alien_Nufai </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_ABILITY_B_Alien_Nufai">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_NUF0701_ENG.wav U000_NUF0702_ENG.wav U000_NUF0703_ENG.wav U000_NUF0704_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_NUF_ABILITY_B_1, TEXT_SFX_NUF_ABILITY_B_2, TEXT_SFX_NUF_ABILITY_B_3, TEXT_SFX_NUF_ABILITY_B_4</Text_ID>			     
+		<Overlap_Test> Unit_Alien_Nufai </Overlap_Test>
+	</SFXEvent>
+<!-- 
+	<SFXEvent Name="Unit_Ability_C_Alien_Nufai">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_NUF0801_ENG.wav U000_NUF0802_ENG.wav U000_NUF0803_ENG.wav U000_NUF0804_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NUF_ABILITY_C_1, TEXT_SFX_NUF_ABILITY_C_2, TEXT_SFX_NUF_ABILITY_C_3, TEXT_SFX_NUF_ABILITY_C_4</Text_ID>
+		<Overlap_Test> Unit_Alien_Nufai </Overlap_Test>
+	</SFXEvent>
+
+-->  
+	<SFXEvent Name="Unit_RETREAT_CALL_Alien_Nufai">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_NUF1602_ENG.wav </Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NUF_HEALTH_CRITICAL_2</Text_ID>
+		<Overlap_Test> Unit_Alien_Nufai </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_TAUNT_Alien_Nufai">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_NUF1101_ENG.wav U000_NUF1102_ENG.wav U000_NUF1103_ENG.wav U000_NUF1104_ENG.wav U000_NUF1105_ENG.wav </Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NUF_TAUNT_1, TEXT_SFX_NUF_TAUNT_2, TEXT_SFX_NUF_TAUNT_3, TEXT_SFX_NUF_TAUNT_4, TEXT_SFX_NUF_TAUNT_5</Text_ID>
+		<Overlap_Test> Unit_Alien_Nufai </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_TAUNT_UNLOCKABLE_Alien_Nufai">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_NUF1201_ENG.wav U000_NUF1202_ENG.wav U000_NUF1203_ENG.wav U000_NUF1204_ENG.wav U000_NUF1205_ENG.wav </Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NUF_TAUNT_UNLOCKABLE_1, TEXT_SFX_NUF_TAUNT_UNLOCKABLE_2, TEXT_SFX_NUF_TAUNT_UNLOCKABLE_3, TEXT_SFX_NUF_TAUNT_UNLOCKABLE_4, TEXT_SFX_NUF_TAUNT_UNLOCKABLE_5</Text_ID>
+		<Overlap_Test> Unit_Alien_Nufai </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_HEALTH_LOW_Alien_Nufai">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_NUF1501_ENG.wav U000_NUF1502_ENG.wav U000_NUF1503_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NUF_HEALTH_LOW_1, TEXT_SFX_NUF_HEALTH_LOW_2, TEXT_SFX_NUF_HEALTH_LOW_3</Text_ID>
+		<Overlap_Test> Unit_Alien_Nufai </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_HEALTH_CRITICAL_Alien_Nufai">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_NUF1601_ENG.wav U000_NUF1603_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NUF_HEALTH_CRITICAL_1, TEXT_SFX_NUF_HEALTH_CRITICAL_3</Text_ID>
+		<Overlap_Test> Unit_Alien_Nufai </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Death_Alien_Nufai">
+			<Use_Preset>Preset_UR_3D</Use_Preset>
+			<Samples>DTH_Nufai_2.wav </Samples>
+    </SFXEvent>
+
+
+
+
+
+
+  
+	<SFXEvent Name="Unit_Select_Alien_Orlok">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_ORL0101_ENG.wav U000_ORL0102_ENG.wav U000_ORL0103_ENG.wav U000_ORL0104_ENG.wav U000_ORL0105_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_ORL_SELECT_1, TEXT_SFX_ORL_SELECT_2, TEXT_SFX_ORL_SELECT_3, TEXT_SFX_ORL_SELECT_4, TEXT_SFX_ORL_SELECT_5</Text_ID>       
+		<Overlap_Test> Unit_Alien_Orlok </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_A_Alien_Orlok">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_ORL0201_ENG.wav U000_ORL0202_ENG.wav U000_ORL0203_ENG.wav U000_ORL0204_ENG.wav U000_ORL0205_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_ORL_ATTACK_A_1, TEXT_SFX_ORL_ATTACK_A_2, TEXT_SFX_ORL_ATTACK_A_3, TEXT_SFX_ORL_ATTACK_A_4, TEXT_SFX_ORL_ATTACK_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Alien_Orlok </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_B_Alien_Orlok">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_ORL0301_ENG.wav U000_ORL0302_ENG.wav U000_ORL0303_ENG.wav U000_ORL0304_ENG.wav U000_ORL0305_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_ORL_ATTACK_B_1, TEXT_SFX_ORL_ATTACK_B_2, TEXT_SFX_ORL_ATTACK_B_3, TEXT_SFX_ORL_ATTACK_B_4, TEXT_SFX_ORL_ATTACK_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Alien_Orlok </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_A_Alien_Orlok">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_ORL0401_ENG.wav U000_ORL0402_ENG.wav U000_ORL0403_ENG.wav U000_ORL0404_ENG.wav U000_ORL0405_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_ORL_MOVE_A_1, TEXT_SFX_ORL_MOVE_A_2, TEXT_SFX_ORL_MOVE_A_3, TEXT_SFX_ORL_MOVE_A_4, TEXT_SFX_ORL_MOVE_A_5</Text_ID>			     
+		<Overlap_Test> Unit_Alien_Orlok </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_MOVE_B_Alien_Orlok">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_ORL0501_ENG.wav U000_ORL0502_ENG.wav U000_ORL0503_ENG.wav U000_ORL0504_ENG.wav U000_ORL0505_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_ORL_MOVE_B_1, TEXT_SFX_ORL_MOVE_B_2, TEXT_SFX_ORL_MOVE_B_3, TEXT_SFX_ORL_MOVE_B_4, TEXT_SFX_ORL_MOVE_B_5</Text_ID>			    
+		<Overlap_Test> Unit_Alien_Orlok </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_ABILITY_A_Alien_Orlok">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_ORL0601_ENG.wav U000_ORL0602_ENG.wav U000_ORL0603_ENG.wav U000_ORL0604_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_ORL_ABILITY_A_1, TEXT_SFX_ORL_ABILITY_A_2, TEXT_SFX_ORL_ABILITY_A_3, TEXT_SFX_ORL_ABILITY_A_4</Text_ID>			     
+		<Overlap_Test> Unit_Alien_Orlok </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_ABILITY_B_Alien_Orlok">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>U000_ORL0701_ENG.wav U000_ORL0702_ENG.wav U000_ORL0703_ENG.wav U000_ORL0704_ENG.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Localize> Yes </Localize>
+		<Text_ID>TEXT_SFX_ORL_ABILITY_B_1, TEXT_SFX_ORL_ABILITY_B_2, TEXT_SFX_ORL_ABILITY_B_3, TEXT_SFX_ORL_ABILITY_B_4</Text_ID>			     
+		<Overlap_Test> Unit_Alien_Orlok </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Ability_C_Alien_Orlok">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_ORL0801_ENG.wav U000_ORL0802_ENG.wav U000_ORL0803_ENG.wav U000_ORL0804_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_ORL_ABILITY_C_1, TEXT_SFX_ORL_ABILITY_C_2, TEXT_SFX_ORL_ABILITY_C_3, TEXT_SFX_ORL_ABILITY_C_4</Text_ID>
+		<Overlap_Test> Unit_Alien_Orlok </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_RETREAT_CALL_Alien_Orlok">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_ORL1601_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_ORL_HEALTH_CRITICAL_1</Text_ID>
+		<Overlap_Test> Unit_Alien_Orlok </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_TAUNT_Alien_Orlok">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_ORL1101_ENG.wav U000_ORL1102_ENG.wav U000_ORL1103_ENG.wav U000_ORL1104_ENG.wav U000_ORL1105_ENG.wav </Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_ORL_TAUNT_1, TEXT_SFX_ORL_TAUNT_2, TEXT_SFX_ORL_TAUNT_3, TEXT_SFX_ORL_TAUNT_4, TEXT_SFX_ORL_TAUNT_5</Text_ID>
+		<Overlap_Test> Unit_Alien_Orlok </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_TAUNT_UNLOCKABLE_Alien_Orlok">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_ORL1201_ENG.wav U000_ORL1202_ENG.wav U000_ORL1203_ENG.wav U000_ORL1204_ENG.wav U000_ORL1205_ENG.wav </Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_ORL_TAUNT_UNLOCKABLE_1, TEXT_SFX_ORL_TAUNT_UNLOCKABLE_2, TEXT_SFX_ORL_TAUNT_UNLOCKABLE_3, TEXT_SFX_ORL_TAUNT_UNLOCKABLE_4, TEXT_SFX_ORL_TAUNT_UNLOCKABLE_5</Text_ID>
+		<Overlap_Test> Unit_Alien_Orlok </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_HEALTH_LOW_Alien_Orlok">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_ORL1501_ENG.wav U000_ORL1502_ENG.wav U000_ORL1503_ENG.wav U000_ORL1504_ENG.wav </Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_ORL_HEALTH_LOW_1, TEXT_SFX_ORL_HEALTH_LOW_2, TEXT_SFX_ORL_HEALTH_LOW_3, TEXT_SFX_ORL_HEALTH_LOW_4</Text_ID>
+		<Overlap_Test> Unit_Alien_Orlok </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_HEALTH_CRITICAL_Alien_Orlok">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples> U000_ORL1602_ENG.wav U000_ORL1603_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_ORL_HEALTH_CRITICAL_2, TEXT_SFX_ORL_HEALTH_CRITICAL_3</Text_ID>
+		<Overlap_Test> Unit_Alien_Orlok </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Death_Alien_Orlok">
+			<Use_Preset>Preset_UR_3D</Use_Preset>
+			<Samples>DTH_Orlok_1.wav </Samples>
+    </SFXEvent>
+
+
+
+
+<!-- 
+
+	<SFXEvent Name="Unit_Select_Alien_Orlok">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>Alien_Orlok_Select_01.wav Alien_Orlok_Select_02.wav Alien_Orlok_Select_03.wav Alien_Orlok_Select_04.wav Alien_Orlok_Select_05.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Orlok </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Move_Alien_Orlok">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>Alien_Orlok_Move_01.wav Alien_Orlok_Move_02.wav Alien_Orlok_Move_03.wav Alien_Orlok_Move_04.wav Alien_Orlok_Move_05.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Orlok </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_Alien_Orlok">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>Alien_Orlok_Attack_01.wav Alien_Orlok_Attack_02.wav Alien_Orlok_Attack_03.wav Alien_Orlok_Attack_04.wav Alien_Orlok_Attack_05.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Orlok </Overlap_Test>
+	</SFXEvent>	
+
+-->
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Alien_Grey">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>Alien_Lost_Ones_Select_01.wav Alien_Lost_Ones_Select_02.wav Alien_Lost_Ones_Select_03.wav Alien_Lost_Ones_Select_04.wav Alien_Lost_Ones_Select_05.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Grey </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Move_Alien_Grey">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>Alien_Lost_Ones_Move_01.wav Alien_Lost_Ones_Move_02.wav Alien_Lost_Ones_Move_03.wav Alien_Lost_Ones_Move_04.wav Alien_Lost_Ones_Move_05.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Grey </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_Alien_Grey">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>Alien_Lost_Ones_Attack_01.wav Alien_Lost_Ones_Attack_02.wav Alien_Lost_Ones_Attack_03.wav Alien_Lost_Ones_Attack_04.wav Alien_Lost_Ones_Attack_05.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Grey </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Death_Alien_Grey">
+		<Use_Preset>Preset_UR_3D</Use_Preset>
+		<Samples>GRY_Death_1.wav GRY_Death_2.wav GRY_Death_3.wav GRY_Death_4.wav GRY_Death_5.wav GRY_Death_6.wav GRY_Death_7.wav GRY_Death_8.wav GRY_Death_9.wav GRY_Death_10.wav</Samples>
+   </SFXEvent>
+
+
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Alien_Mutant">
+		<Use_Preset>Preset_UR_3D</Use_Preset>
+		<Samples>Mutant_Select_01.wav Mutant_Select_02.wav Mutant_Select_03.wav Mutant_Select_04.wav Mutant_Select_05.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Mutant </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Move_Alien_Mutant">
+		<Use_Preset>Preset_UR_3D</Use_Preset>
+		<Samples>Mutant_Move_01.wav Mutant_Move_02.wav Mutant_Move_03.wav Mutant_Move_04.wav Mutant_Move_05.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Mutant </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_Alien_Mutant">
+		<Use_Preset>Preset_UR_3D</Use_Preset>
+		<Samples>Mutant_Attack_01.wav Mutant_Attack_02.wav Mutant_Attack_03.wav Mutant_Attack_04.wav Mutant_Attack_05.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Mutant </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Random_Alien_Mutant">
+		<Use_Preset>Preset_UR_3D</Use_Preset>
+		<Samples>Mutant_Growl_01.wav Mutant_Growl_02.wav Mutant_Growl_03.wav Mutant_Growl_04.wav Mutant_Growl_05.wav Mutant_Growl_06.wav Mutant_Growl_07.wav Mutant_Growl_08.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Mutant </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Vomit_Alien_Mutant">
+		<Use_Preset>Preset_UR_3D</Use_Preset>
+		<Samples>Mutant_Vomit_01.wav Mutant_Vomit_02.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Mutant </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Death_Alien_Mutant">
+		<Use_Preset>Preset_UR_3D</Use_Preset>
+		<Samples>Mutant_Death_01.wav Mutant_Death_02.wav Mutant_Death_03.wav Mutant_Death_04.wav Mutant_Death_05.wav Mutant_Death_06.wav Mutant_Death_07.wav Mutant_Death_08.wav Mutant_Death_09.wav Mutant_Death_10.wav Mutant_Death_11.wav</Samples>
+   </SFXEvent>
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Alien_Mutant_Cow">
+		<Use_Preset>Preset_AMB_3D</Use_Preset>
+		<Samples> Alien_Mutant_Cow_3.wav </Samples>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Move_Alien_Mutant_Cow">
+		<Use_Preset>Preset_AMB_3D</Use_Preset>
+		<Samples>Alien_Mutant_Cow_1.wav Alien_Mutant_Cow_4.wav </Samples>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_Alien_Mutant_Cow">
+		<Use_Preset>Preset_AMB_3D</Use_Preset>
+		<Samples>Alien_Mutant_Cow_2.wav Alien_Mutant_Cow_5.wav</Samples>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Death_Alien_Mutant_Cow">
+		<Use_Preset>Preset_AMB_3D</Use_Preset>
+		<Samples>Alien_Mutant_Cow_Death_1.wav </Samples>
+	</SFXEvent>
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Alien_Lost_One">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>Alien_Lost_Ones_Select_01.wav Alien_Lost_Ones_Select_02.wav Alien_Lost_Ones_Select_03.wav Alien_Lost_Ones_Select_04.wav Alien_Lost_Ones_Select_05.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Lost_One </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Move_Alien_Lost_One">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>Alien_Lost_Ones_Move_01.wav Alien_Lost_Ones_Move_02.wav Alien_Lost_Ones_Move_03.wav Alien_Lost_Ones_Move_04.wav Alien_Lost_Ones_Move_05.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Lost_One </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_Alien_Lost_One">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>Alien_Lost_Ones_Attack_01.wav Alien_Lost_Ones_Attack_02.wav Alien_Lost_Ones_Attack_03.wav Alien_Lost_Ones_Attack_04.wav Alien_Lost_Ones_Attack_05.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Lost_One </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Death_Alien_Lost_One">
+		<Use_Preset>Preset_UR_3D</Use_Preset>
+		<Samples>Alien_Lost_One_Death_01.wav Alien_Lost_One_Death_02.wav Alien_Lost_One_Death_03.wav Alien_Lost_One_Death_04.wav Alien_Lost_One_Death_05.wav Alien_Lost_One_Death_06.wav Alien_Lost_One_Death_07.wav Alien_Lost_One_Death_08.wav Alien_Lost_One_Death_09.wav Alien_Lost_One_Death_10.wav</Samples>
+   </SFXEvent>  
+
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Alien_Grunt">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>Alien_Grunt_Select_01.wav Alien_Grunt_Select_02.wav Alien_Grunt_Select_03.wav Alien_Grunt_Select_04.wav Alien_Grunt_Select_05.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Grunt </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Move_Alien_Grunt">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>Alien_Grunt_Move_01.wav Alien_Grunt_Move_02.wav Alien_Grunt_Move_03.wav Alien_Grunt_Move_04.wav Alien_Grunt_Move_05.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Grunt </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_Alien_Grunt">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>Alien_Grunt_Attack_01.wav Alien_Grunt_Attack_02.wav Alien_Grunt_Attack_03.wav Alien_Grunt_Attack_04.wav Alien_Grunt_Attack_05.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Grunt </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Death_Alien_Grunt">
+		<Use_Preset>Preset_UR_3D</Use_Preset>
+		<Samples>Alien_Grunt_Death_01.wav Alien_Grunt_Death_02.wav Alien_Grunt_Death_03.wav Alien_Grunt_Death_04.wav Alien_Grunt_Death_05.wav Alien_Grunt_Death_06.wav Alien_Grunt_Death_07.wav Alien_Grunt_Death_08.wav </Samples>
+   </SFXEvent>   
+
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Alien_Habitat">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>Alien_Habitat_Select_01.wav Alien_Habitat_Select_02.wav Alien_Habitat_Select_03.wav Alien_Habitat_Select_04.wav Alien_Habitat_Select_05.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Habitat </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Move_Alien_Habitat">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>Alien_Habitat_Move_01.wav Alien_Habitat_Move_02.wav Alien_Habitat_Move_03.wav Alien_Habitat_Move_04.wav Alien_Habitat_Move_05.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Habitat </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_Alien_Habitat">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>Alien_Habitat_Attack_01.wav Alien_Habitat_Attack_02.wav Alien_Habitat_Attack_03.wav Alien_Habitat_Attack_04.wav Alien_Habitat_Attack_05.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Habitat </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Alien_Assembly">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>Alien_Habitat_Select_01.wav Alien_Habitat_Select_02.wav Alien_Habitat_Select_03.wav Alien_Habitat_Select_04.wav Alien_Habitat_Select_05.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Assembly </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Move_Alien_Assembly">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>Alien_Habitat_Move_01.wav Alien_Habitat_Move_02.wav Alien_Habitat_Move_03.wav Alien_Habitat_Move_04.wav Alien_Habitat_Move_05.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Assembly </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_Alien_Assembly">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>Alien_Habitat_Attack_01.wav Alien_Habitat_Attack_02.wav Alien_Habitat_Attack_03.wav Alien_Habitat_Attack_04.wav Alien_Habitat_Attack_05.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Assembly </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Alien_Brute">
+		<Use_Preset>Preset_UR_3D</Use_Preset>
+		<Samples>Alien_Brute_Select_01.wav Alien_Brute_Select_02.wav Alien_Brute_Select_03.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Brute </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Move_Alien_Brute">
+		<Use_Preset>Preset_UR_3D</Use_Preset>
+		<Samples>Alien_Brute_Move_01.wav Alien_Brute_Move_02.wav Alien_Brute_Move_03.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Brute </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_Alien_Brute">
+		<Use_Preset>Preset_UR_3D</Use_Preset>
+		<Samples>Alien_Brute_Attack_01.wav Alien_Brute_Attack_02.wav Alien_Brute_Attack_03.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Brute </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="SFX_Anim_Alien_Brute_Attack">
+		<Use_Preset>Preset_UR_3D</Use_Preset>
+		<Samples>Alien_Brute_Attack_04.wav Alien_Brute_Attack_05.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+	</SFXEvent>
+
+	<SFXEvent Name="SFX_Anim_Alien_Brute_Growl">
+		<Use_Preset>Preset_UR_3D</Use_Preset>
+		<Samples>Alien_Brute_Growl_01.wav Alien_Brute_Growl_02.wav Alien_Brute_Growl_03.wav Alien_Brute_Growl_04.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Min_Volume>70</Min_Volume>
+		<Max_Volume>70</Max_Volume>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Charge_Alien_Brute">
+		<Use_Preset>Preset_UR_3D</Use_Preset>
+		<Samples>Alien_Brute_Attack_04.wav</Samples>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Charge_Impact_Alien_Brute">
+		<Use_Preset>Preset_UR_3D</Use_Preset>
+		<Samples>Alien_Brute_Attack_05.wav</Samples>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Death_Alien_Brute">
+		<Use_Preset>Preset_UR_3D</Use_Preset>
+		<Samples>Alien_Brute_Die_01.wav Alien_Brute_Die_02.wav Alien_Brute_Die_03.wav Alien_Brute_Die_04.wav Alien_Brute_Die_05.wav</Samples>
+	</SFXEvent>
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Alien_Tank">
+		<Use_Preset>Preset_UR</Use_Preset>
+ 		<Samples>Alien_Hunter_Select_01.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Tank </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Move_Alien_Tank">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>Alien_Hunter_Move_01.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Tank </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_Alien_Tank">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>Alien_Hunter_Attack_01.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Tank </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Guard_Alien_Tank">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>Alien_Hunter_Move_01.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Tank </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Alien_Defiler">
+		<Use_Preset>Preset_UR</Use_Preset>
+ 		<Samples>Alien_Defiler_Select_01.wav Alien_Defiler_Select_02.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Defiler </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Move_Alien_Defiler">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>Alien_Defiler_Move_01.wav Alien_Defiler_Move_02.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Defiler </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_Alien_Defiler">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>Alien_Defiler_Attack_01.wav Alien_Defiler_Attack_02.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Defiler </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Alien_Monolith">
+		<Use_Preset>Preset_UR</Use_Preset>
+ 		<Samples>Alien_Monolith_Select_01.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Monolith </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Move_Alien_Monolith">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>Alien_Monolith_Move_01.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Monolith </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_Alien_Monolith">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>Alien_Monolith_Attack_01.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Monolith </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Alien_Reaper">
+		<Use_Preset>Preset_UR</Use_Preset>
+ 		<Samples>Alien_Reaper_Select_01.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Reaper </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Move_Alien_Reaper">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>Alien_Reaper_Move_01.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Reaper </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_Alien_Reaper">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>Alien_Reaper_Attack_01.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Reaper</Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Alien_Saucer">
+		<Use_Preset>Preset_UR</Use_Preset>
+ 		<Samples>Alien_Saucer_Select_01.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Saucer </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Move_Alien_Saucer">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>Alien_Saucer_Move_01.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Saucer </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_Alien_Saucer">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>Alien_Saucer_Attack_01.wav</Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Saucer</Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Alien_Glyph_Carver">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>Alien_Glyph_Carver_Select_01.wav Alien_Glyph_Carver_Select_02.wav Alien_Glyph_Carver_Select_03.wav Alien_Glyph_Carver_Select_04.wav </Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Glyph_Carver </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Move_Alien_Glyph_Carver">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>Alien_Glyph_Carver_Move_01.wav Alien_Glyph_Carver_Move_02.wav Alien_Glyph_Carver_Move_03.wav Alien_Glyph_Carver_Move_04.wav </Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Glyph_Carver </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_Alien_Glyph_Carver">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>Alien_Glyph_Carver_Attack_01.wav Alien_Glyph_Carver_Attack_02.wav Alien_Glyph_Carver_Attack_03.wav Alien_Glyph_Carver_Attack_04.wav </Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Glyph_Carver </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Blocked_Alien_Glyph_Carver">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>Alien_Glyph_Carver_Attack_01.wav Alien_Glyph_Carver_Attack_02.wav Alien_Glyph_Carver_Attack_03.wav Alien_Glyph_Carver_Attack_04.wav </Samples>
+      <Min_Pitch>60</Min_Pitch>
+      <Max_Pitch>60</Max_Pitch>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Glyph_Carver </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Alien_Scan">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>Alien_Scan_Select_01.wav Alien_Scan_Select_02.wav Alien_Scan_Select_03.wav Alien_Scan_Select_04.wav </Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Scan </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Move_Alien_Scan">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>Alien_Scan_Move_01.wav Alien_Scan_Move_02.wav Alien_Scan_Move_03.wav Alien_Scan_Move_04.wav </Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Scan </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_Alien_Scan">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>Alien_Scan_Attack_01.wav Alien_Scan_Attack_02.wav Alien_Scan_Attack_03.wav Alien_Scan_Attack_04.wav </Samples>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Overlap_Test> Unit_Alien_Scan </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+
+	<SFXEvent Name="Unit_Select_Alien_Retreat_Transport">
+		<Use_Preset>Preset_UR_3D</Use_Preset>
+		<Samples> Alien_Retreat_Transport_Select_1.wav </Samples>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Move_Alien_Retreat_Transport">
+		<Use_Preset>Preset_UR_3D</Use_Preset>
+		<Samples>Alien_Retreat_Transport_Move_1.wav </Samples>
+	</SFXEvent>
+
+	<SFXEvent Name="Unit_Attack_Alien_Retreat_Transport">
+		<Use_Preset>Preset_UR_3D</Use_Preset>
+		<Samples>Alien_Retreat_Transport_Move_1.wav </Samples>
+	</SFXEvent>
+
+
+
+
+
+
+
+
+</SFXEvents> 

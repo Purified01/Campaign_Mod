@@ -1,0 +1,615 @@
+<?xml version="1.0"?>
+<Military_Veh_hummer_XML>
+
+   <!-- **************************************************************************************** -->
+   <!-- *** UNIT(S) **************************************************************************** -->
+   <!-- **************************************************************************************** -->
+
+   <X11_Military_Units Name="Military_Hummer">
+
+      <!-- ART -->
+      <Land_Model_Name>mv_hummer.ALO</Land_Model_Name>
+      <Scale_Factor>.85</Scale_Factor>
+      <SurfaceFX_Name>Generic_Tire_Half</SurfaceFX_Name>
+      <Tread_Scroll_Rate>0.167</Tread_Scroll_Rate>
+      <Occlusion_Silhouette_Enabled>1</Occlusion_Silhouette_Enabled>
+      <AssetBank> BANK_MILITARY </AssetBank>
+
+      <!-- INTERFACE -->
+      <Text_ID>TEXT_UNIT_MILITARY_HUMVEE</Text_ID>
+      <GUI_Scene_Name> HealthBar_Scene_Medium </GUI_Scene_Name>
+      <GUI_Receives_Input> false </GUI_Receives_Input>
+      <GUI_Min_Scale> 0.3 </GUI_Min_Scale>
+      <GUI_Max_Scale> 2.5 </GUI_Max_Scale>
+      <GUI_Default_Scale> 0.5 </GUI_Default_Scale>
+      <GUI_World_Offset> 0.0, 0.0, -10 </GUI_World_Offset>
+      <Select_Box_Scale>50</Select_Box_Scale>
+      <Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+
+      <!-- ATTRIBUTES -->
+      <LOD_Bias> 6.0 </LOD_Bias>
+      <Affiliation>Military</Affiliation>
+      <CategoryMask> Medium, Piloted, CanAttack, RadiationHurts </CategoryMask>
+      <Victory_Relevant> No </Victory_Relevant>
+      <Weather_Category>Tracked</Weather_Category>
+      <Can_Fall_From_Bridge> true </Can_Fall_From_Bridge>
+      <Shot_Type>Vehicle</Shot_Type>
+      <Importance> 0.5 </Importance>
+
+      <!-- MOVEMENT -->
+      <MovementClass>Tracked</MovementClass>
+      <OccupationStyle>1x1</OccupationStyle>
+      <Max_Speed>2.5</Max_Speed><!-- jdg was 1.6 -->
+      <Max_Rate_Of_Turn>3.0</Max_Rate_Of_Turn>
+      <Space_Layer> LandDynamic </Space_Layer>
+      <UnitCollisionClass> Vehicle </UnitCollisionClass>
+      <OverrideAcceleration> .05 </OverrideAcceleration>
+      <OverrideDeceleration> .05 </OverrideDeceleration>
+      <FormationSpacing> .75 </FormationSpacing>
+      <FormationOrder> 8 </FormationOrder>
+      <FormationGrouping> Standard </FormationGrouping>
+      <FormationRaggedness> .1 </FormationRaggedness>
+      <MaxJiggleDistance> 1 </MaxJiggleDistance>
+      <Custom_Hard_XExtent> 16.0 </Custom_Hard_XExtent>
+      <Custom_Hard_YExtent> 8.0 </Custom_Hard_YExtent>
+		<Should_Keep_Tangent_To_Terrain> true </Should_Keep_Tangent_To_Terrain>
+ 
+      <!-- CONFLICT -->
+      <Is_Attackable> true </Is_Attackable>
+      <Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+      <Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+      <Land_FOW_Reveal_Range>200.0</Land_FOW_Reveal_Range>
+      <Ranged_Target_Z_Adjust>3.0</Ranged_Target_Z_Adjust>
+
+      <Attack_Category_Restrictions> Flying | Resource | Resource_INST </Attack_Category_Restrictions>
+
+      <Tactical_Health> 350 </Tactical_Health>
+
+      <Land_Damage_Thresholds>1, 0.66, 0.33</Land_Damage_Thresholds>
+      <Land_Damage_Alternates>0, 1, 2</Land_Damage_Alternates>
+      <Land_Damage_SFX />
+
+      <!-- BEHAVIORS -->
+      <!-- Any unit that has hard points requires a Behavior entry with HARD_POINT_MANAGER -->
+      <!-- Any object that is a hard point requires a Behavior entry with HARD_POINT -->
+      <!-- MBL TEMP DISABLE <Behavior> SELECTABLE, HARD_POINT_MANAGER </Behavior> -->
+      <Behavior> SELECTABLE </Behavior>
+
+      <LandBehavior>
+         GUI,
+         RADAR_MAP_VISIBLE,
+         TREAD_SCROLL,
+         WALK_LOCOMOTOR,
+         STUNNABLE,
+         FORMATION,
+         IDLE,
+         TARGETING,
+         WEAPON,
+         TURRET,
+         REVEAL,
+         HIDE_WHEN_FOGGED,
+         SQUASH,
+         SURFACE_FX,
+         UNIT_AI,
+         DAMAGE_TRACKING,
+         BALLISTIC,
+         EFFECT_REGISTRY,
+         ATTRIBUTE_DIRECTORY,
+         WHEEL,
+         AI_RECRUITABLE,
+         AI_TARGET
+      </LandBehavior>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+         <Armor_Type> Armor_Military_Vehicle_Light </Armor_Type>
+      </BehaviorType>
+
+      <BehaviorType Name="ProductionBehaviorType">
+         <Size_Value> 10 </Size_Value>
+         <Is_Research_Tech_Tree_Lockable> Yes </Is_Research_Tech_Tree_Lockable>
+      </BehaviorType>
+
+      <BehaviorType Name="BuildableObjectBehaviorType">
+         <Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+         <Tactical_Build_Cost_Campaign> 600 </Tactical_Build_Cost_Campaign>
+         <Tactical_Build_Cost_Multiplayer> 600 </Tactical_Build_Cost_Multiplayer>
+         <Tactical_Build_Time_Seconds> 8 </Tactical_Build_Time_Seconds>
+			<Tactical_UI_Build_Queue_Order> 1 </Tactical_UI_Build_Queue_Order>
+      </BehaviorType>
+
+     <BehaviorType name="AIBehaviorType">
+       <AI_Combat_Power> 1 </AI_Combat_Power>
+       <Idle_Chase_Range> 20.0 </Idle_Chase_Range>  <!-- Double click guard area Keep very small-->
+       <Guard_Chase_Range> 150.0 </Guard_Chase_Range>  <!-- Guard radius for unit-->
+       <Autonomous_Move_Extension_Vs_Attacker> 25.0 </Autonomous_Move_Extension_Vs_Attacker> <!--Range outside of guard area unit will move-->
+       <Attack_Move_Response_Range> 50.0 </Attack_Move_Response_Range>  <!-- When given a attack move command unit will travel this distance from path to attack-->
+       <AI_Target_Level>Individual_Or_Group</AI_Target_Level>
+     </BehaviorType>
+
+     <BehaviorType Name="WeaponBehaviorType">
+         <Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
+         <Targeting_Priority_Set> Military_Hummer_Target_Priority </Targeting_Priority_Set>
+         <Targeting_Fire_Inaccuracy> 12.0 </Targeting_Fire_Inaccuracy>
+         <Targeting_Min_Attack_Distance> 0.0 </Targeting_Min_Attack_Distance>
+         <Targeting_Max_Attack_Distance> 200.0 </Targeting_Max_Attack_Distance>
+         <Projectile_Types>Proj_Military_Veh_hummer</Projectile_Types>
+         <Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>
+         <Projectile_Fire_Pulse_Count>5</Projectile_Fire_Pulse_Count>
+         <Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+      </BehaviorType>
+
+      <BehaviorType Name="EncyclopediaBehaviorType">
+         <Icon_Name>i_icon_hv_humvee.tga</Icon_Name>
+			<!-- For automated control groups by object type (playing with Game Controller), we typically use -->
+			<!-- the Icon_Name. If there is a defined Control_Group_Icon_Name in XML, it will be used as an override. -->
+			<Control_Group_Icon_Name> I_CG_M_Hummer.tga </Control_Group_Icon_Name>
+      </BehaviorType>
+
+	<BehaviorType Name="TooltipBehaviorType">
+		<Tooltip_Description_Text_ID> TEXT_TOOLTIP_DESCRIPTION_MILITARY_HUMVEE </Tooltip_Description_Text_ID>
+		<Tooltip_Category> TEXT_TOOLTIP_CATEGORY_VEHICLE </Tooltip_Category>
+		<Tooltip_Good_Against> </Tooltip_Good_Against>
+		<Tooltip_Vulnerable_To> </Tooltip_Vulnerable_To>
+	</BehaviorType>
+		
+      <BehaviorType Name="WheelBehaviorType">
+         <Max_Distance_From_Axle>2.0</Max_Distance_From_Axle>
+      </BehaviorType>
+
+      <BehaviorType Name="TurretBehaviorType">
+         <Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+         <Turret_Elevate_Extent_Degrees>40</Turret_Elevate_Extent_Degrees>
+         <Turret_Bone_Name>B_Turret</Turret_Bone_Name>
+         <Barrel_Bone_Name>B_Barrel</Barrel_Bone_Name>
+         <Muzzle_Bone_Name> muzzleA </Muzzle_Bone_Name>
+         <Turret_Rotate_Speed>2.0</Turret_Rotate_Speed>
+         <Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+         <Apply_Y_Turret_Rotate_To_Axis>1</Apply_Y_Turret_Rotate_To_Axis>
+         <Turret_Targets_Ground_Vehicles> 1 </Turret_Targets_Ground_Vehicles>
+         <Turret_Targets_Ground_Infantry> 2 </Turret_Targets_Ground_Infantry>
+         <Turret_Targets_Air_Vehicles> 9999 </Turret_Targets_Air_Vehicles>
+         <Turret_Targets_Anything_Else> 3 </Turret_Targets_Anything_Else>
+         <Ground_Vehicle_Turret_Target> Yes </Ground_Vehicle_Turret_Target>
+      </BehaviorType>
+
+      <BehaviorType Name="DeathFXBehaviorType">
+         <Death_Clone>Damage_Default, Military_Veh_hummer_Death_Clone</Death_Clone>
+         <Death_Explosions>Large_Explosion_Land</Death_Explosions>
+         <!-- <Death_Speed_Min> 100.0 </Death_Speed_Min>
+         <Death_Speed_Max> 120.0 </Death_Speed_Max>
+         <Death_Ang_Min> 1.0 </Death_Ang_Min>
+         <Death_Ang_Max> 2.0 </Death_Ang_Max>
+         <Death_Horizontal_Speed>10.0</Death_Horizontal_Speed> -->
+      </BehaviorType>
+
+      <BehaviorType Name="BallisticBehaviorType">
+         <Ballistic_Weight>2.5</Ballistic_Weight>
+         <Ballistic_Bounce>0.5</Ballistic_Bounce>
+      </BehaviorType>
+
+      <BehaviorType Name="CrushBehaviorType">
+         <Crush_Defense>20</Crush_Defense>
+         <Crush_Power>15</Crush_Power>
+      </BehaviorType>
+
+      <BehaviorType Name="SFXBehaviorType">
+         <SFXEvent_Fire>SFX_Military_Hummer_Fire</SFXEvent_Fire>
+			<SFXEvent_Select>Unit_Select_Military_Humvee</SFXEvent_Select>
+			<SFXEvent_Move>Unit_Move_A_Military_Humvee</SFXEvent_Move>
+			<SFXEvent_Move_At_Top_Speed>Unit_Move_B_Military_Humvee</SFXEvent_Move_At_Top_Speed>
+			<SFXEvent_Attack>Unit_Attack_A_Military_Humvee</SFXEvent_Attack>
+			<SFXEvent_Attack_At_Top_Speed>Unit_Attack_B_Military_Humvee</SFXEvent_Attack_At_Top_Speed>
+         <SFXEvent_Guard />
+         <SFXEvent_Health_Low_Warning> </SFXEvent_Health_Low_Warning>
+         <SFXEvent_Health_Critical_Warning> </SFXEvent_Health_Critical_Warning>
+         <SFXEvent_Enemy_Damaged_Health_Low_Warning> </SFXEvent_Enemy_Damaged_Health_Low_Warning>
+         <SFXEvent_Enemy_Damaged_Health_Critical_Warning> </SFXEvent_Enemy_Damaged_Health_Critical_Warning>
+         <SFXEvent_Turret_Rotating_Loop> SFX_Military_Small_Turret_Loop </SFXEvent_Turret_Rotating_Loop>
+         <Death_SFXEvent_Start_Die>SFX_Military_Small_Vehicle_Death</Death_SFXEvent_Start_Die>
+         <SFXEvent_Engine_Idle_Loop> SFX_Military_Hummer_Idle_Engine_Loop </SFXEvent_Engine_Idle_Loop>
+         <SFXEvent_Engine_Moving_Loop> SFX_Military_Hummer_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
+         <SFXEvent_Unit_Lost />
+         <SFXEvent_Tactical_Build_Started>GUI_BUILD_Vehicle</SFXEvent_Tactical_Build_Started>
+         <SFXEvent_Tactical_Build_Complete>Unit_Select_Military_Humvee</SFXEvent_Tactical_Build_Complete>
+         <SFXEvent_Tactical_Build_Cancelled>GUI_BUILD_Vehicle_Canceled</SFXEvent_Tactical_Build_Cancelled>
+
+         <!-- Maria 05.01.2006 - Adding build sounds for Global production -->
+         <SFXEvent_Build_Started>GUI_BUILD_Vehicle</SFXEvent_Build_Started>
+         <SFXEvent_Build_Complete>Unit_Select_Military_Humvee</SFXEvent_Build_Complete>
+         <SFXEvent_Build_Cancelled>GUI_BUILD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
+
+      </BehaviorType>
+
+      <BehaviorType Name="BlobShadowBehaviorType">
+         <No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+         <No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+      </BehaviorType>
+
+      <BehaviorType Name="GUIBehaviorType">
+         <GUI_Bracket_Size>1</GUI_Bracket_Size>
+
+         <!-- Maria 05.18.2006  Data needed for the models attached to the mouse in Global -->
+         <GUI_Is_Top_View> Yes </GUI_Is_Top_View>
+         <GUI_Rotate_Angle_Degrees> -45.0 </GUI_Rotate_Angle_Degrees>
+         <GUI_Is_Model_Shifted_Down> No </GUI_Is_Model_Shifted_Down>
+         <GUI_Strategic_Mode_Scale> 0.025 </GUI_Strategic_Mode_Scale>
+      </BehaviorType>
+
+      <BehaviorType Name="RadarMapBehaviorType">
+         <Radar_Icon_Size>0.03  0.03</Radar_Icon_Size>
+      </BehaviorType>
+
+      <BehaviorType Name="FleetBehaviorType">
+         <!-- Maria 05.24.2006 - How much space does the unit take up -->
+         <Unit_Pop_Cap> 1 </Unit_Pop_Cap>
+      </BehaviorType>
+
+   </X11_Military_Units>
+
+
+   <!-- **************************************************************************************** -->
+   <!-- *** DEATH CLONE(S)********************************************************************** -->
+   <!-- **************************************************************************************** -->
+
+   <X11_Military_Units Name="Military_Veh_hummer_Death_Clone">
+
+      <!-- ART -->
+      <Land_Model_Name>MV_tank_debri_A.ALO</Land_Model_Name>
+      <Scale_Factor>0.85</Scale_Factor>
+      <AssetBank> BANK_MILITARY </AssetBank>
+
+      <!-- INTERFACE -->
+      <Text_ID>TEXT_NONE</Text_ID>
+      <Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+      <!-- ATTRIBUTES -->
+      <CategoryMask> Medium, Piloted, Resource </CategoryMask>
+
+      <!-- CONFLICT -->
+      <Ranged_Target_Z_Adjust>0.1</Ranged_Target_Z_Adjust>
+
+      <!-- BEHAVIORS -->
+      <LandBehavior>
+         BALLISTIC,
+         SPAWN_DEBRIS,
+         DEBRIS,
+         RESOURCE,
+         EFFECT_REGISTRY,
+         ATTRIBUTE_DIRECTORY,
+         HIDE_WHEN_FOGGED
+      </LandBehavior>
+
+      <BehaviorType Name="DebrisBehaviorType">
+         <Debris_Min_Lifetime_Seconds> 3.0 </Debris_Min_Lifetime_Seconds>
+         <Debris_Max_Lifetime_Seconds> 7.0 </Debris_Max_Lifetime_Seconds>
+      </BehaviorType>
+
+      <BehaviorType Name="SpawnDebrisBehaviorType">
+         <Creation_Debris_Types>Military_Veh_hummer_Debris_01, Military_Veh_hummer_Debris_02, Military_Veh_hummer_Debris_05, Military_Veh_hummer_Debris_03, Military_Veh_hummer_Debris_04, Military_Veh_hummer_Debris_05, Military_Veh_hummer_Debris_04, Military_Veh_hummer_Debris_05, Military_Veh_hummer_Debris_03, Military_Veh_hummer_Debris_04, Military_Veh_hummer_Debris_05, Military_Veh_hummer_Debris_03, Military_Veh_hummer_Debris_04, Military_Veh_hummer_Debris_05, Military_Veh_hummer_Debris_04, Military_Veh_hummer_Debris_05, Military_Veh_hummer_Debris_03, Military_Veh_hummer_Debris_04, Military_Veh_hummer_Debris_05, Military_Veh_hummer_Debris_03, Military_Veh_hummer_Debris_04, Military_Veh_hummer_Debris_05, Military_Veh_hummer_Debris_03, Military_Veh_hummer_Debris_05, Military_Veh_hummer_Debris_04, Military_Veh_hummer_Debris_05 </Creation_Debris_Types>
+         <Debris_Speed_Min> 50.0 </Debris_Speed_Min>
+         <Debris_Speed_Max> 100.0 </Debris_Speed_Max>
+         <Debris_Outward_Speed_Min> 50.0 </Debris_Outward_Speed_Min>
+         <Debris_Outward_Speed_Max> 100.0 </Debris_Outward_Speed_Max>
+         <Debris_Ang_Min> 1.0 </Debris_Ang_Min>
+         <Debris_Ang_Max> 30.0 </Debris_Ang_Max>
+      </BehaviorType>
+
+      <BehaviorType Name="BallisticBehaviorType">
+         <Ballistic_Weight>9.0</Ballistic_Weight>
+         <Ballistic_Bounce>0.3</Ballistic_Bounce>
+      </BehaviorType>
+
+      <BehaviorType Name="DeathFXBehaviorType">
+         <Death_Explosions>Large_Explosion_Land</Death_Explosions>
+         <Death_Speed_Min> 100.0 </Death_Speed_Min>
+         <Death_Speed_Max> 120.0 </Death_Speed_Max>
+         <Death_Ang_Min> 1.0 </Death_Ang_Min>
+         <Death_Ang_Max> 2.0 </Death_Ang_Max>
+         <Death_Horizontal_Speed>10.0</Death_Horizontal_Speed>
+         <Death_SFXEvent_Start_Die>SFX_Military_Small_Vehicle_Death</Death_SFXEvent_Start_Die>
+      </BehaviorType>
+
+      <BehaviorType Name="ArmorAndDamageBehaviorType">
+         <Damage_Type> Damage_Default </Damage_Type>
+      </BehaviorType>
+
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 15 </Resource_Units>
+			<Resource_For_Faction> Military, Novus, Alien, Masari </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>	
+
+   </X11_Military_Units>
+
+   <X11_Military_Units Name="Military_Veh_hummer_Debris_01">
+
+      <!-- ART -->
+      <Land_Model_Name>MV_tank_debri_B.ALO</Land_Model_Name>
+      <Scale_Factor>0.85</Scale_Factor>
+      <AssetBank> BANK_MILITARY </AssetBank>
+
+      <!-- INTERFACE -->
+      <Text_ID>TEXT_NONE</Text_ID>
+      <Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+      <!-- ATTRIBUTES -->
+      <Remove_Upon_Death>true</Remove_Upon_Death>
+
+      <!-- Non-decoration debris will have to have HIDE_WHEN_FOGGED behavior to properly hide.-->
+      <!-- Decoration debris will not be created if spawned under FOW. -Oksana -->
+      <Is_Decoration>Yes</Is_Decoration>
+      
+      <!-- CONFLICT -->
+      <Tactical_Health>9999</Tactical_Health>
+
+      <!-- BEHAVIORS -->
+      <LandBehavior>
+         BALLISTIC,
+         DEBRIS
+      </LandBehavior>
+
+      <BehaviorType Name="BallisticBehaviorType">
+         <Ballistic_Weight>6.0</Ballistic_Weight>
+         <Ballistic_Bounce>0.2</Ballistic_Bounce>
+      </BehaviorType>
+
+      <BehaviorType Name="DebrisBehaviorType">
+         <Debris_Min_Lifetime_Seconds> 3.0 </Debris_Min_Lifetime_Seconds>
+         <Debris_Max_Lifetime_Seconds> 7.0 </Debris_Max_Lifetime_Seconds>
+      </BehaviorType>
+
+      <BehaviorType Name="ArmorAndDamageBehaviorType">
+         <Damage_Type> Damage_Default </Damage_Type>
+      </BehaviorType>
+
+   </X11_Military_Units>
+
+   <X11_Military_Units Name="Military_Veh_hummer_Debris_02">
+
+      <!-- ART -->
+      <Land_Model_Name>MV_tank_debri_C.ALO</Land_Model_Name>
+      <Scale_Factor>0.85</Scale_Factor>
+      <AssetBank> BANK_MILITARY </AssetBank>
+
+      <!-- INTERFACE -->
+      <Text_ID>TEXT_NONE</Text_ID>
+      <Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+      <!-- ATTRIBUTES -->
+      <Remove_Upon_Death>true</Remove_Upon_Death>
+
+      <!-- Non-decoration debris will have to have HIDE_WHEN_FOGGED behavior to properly hide.-->
+      <!-- Decoration debris will not be created if spawned under FOW. -Oksana -->
+      <Is_Decoration>Yes</Is_Decoration>
+      
+      <!-- CONFLICT -->
+      <Tactical_Health>9999</Tactical_Health>
+
+      <!-- BEHAVIORS -->
+      <LandBehavior>
+         BALLISTIC,
+         DEBRIS
+      </LandBehavior>
+
+      <BehaviorType Name="BallisticBehaviorType">
+         <Ballistic_Weight>4.0</Ballistic_Weight>
+         <Ballistic_Bounce>0.2</Ballistic_Bounce>
+      </BehaviorType>
+
+      <BehaviorType Name="DebrisBehaviorType">
+         <Debris_Min_Lifetime_Seconds> 3.0 </Debris_Min_Lifetime_Seconds>
+         <Debris_Max_Lifetime_Seconds> 7.0 </Debris_Max_Lifetime_Seconds>
+      </BehaviorType>
+
+      <BehaviorType Name="ArmorAndDamageBehaviorType">
+         <Damage_Type> Damage_Default </Damage_Type>
+      </BehaviorType>
+
+   </X11_Military_Units>
+
+   <X11_Military_Units Name="Military_Veh_hummer_Debris_03">
+
+      <!-- ART -->
+      <Land_Model_Name>MV_tank_debri_D.ALO</Land_Model_Name>
+      <Scale_Factor>0.85</Scale_Factor>
+      <AssetBank> BANK_MILITARY </AssetBank>
+
+      <!-- INTERFACE -->
+      <Text_ID>TEXT_NONE</Text_ID>
+      <Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+      <!-- ATTRIBUTES -->
+      <Remove_Upon_Death>true</Remove_Upon_Death>
+
+      <!-- Non-decoration debris will have to have HIDE_WHEN_FOGGED behavior to properly hide.-->
+      <!-- Decoration debris will not be created if spawned under FOW. -Oksana -->
+      <Is_Decoration>Yes</Is_Decoration>
+      
+      <!-- CONFLICT -->
+      <Tactical_Health>9999</Tactical_Health>
+
+      <!-- BEHAVIORS -->
+      <LandBehavior>
+         BALLISTIC,
+         DEBRIS
+      </LandBehavior>
+
+      <BehaviorType Name="BallisticBehaviorType">
+         <Ballistic_Weight>3.0</Ballistic_Weight>
+         <Ballistic_Bounce>0.25</Ballistic_Bounce>
+      </BehaviorType>
+
+      <BehaviorType Name="DebrisBehaviorType">
+         <Debris_Min_Lifetime_Seconds> 3.0 </Debris_Min_Lifetime_Seconds>
+         <Debris_Max_Lifetime_Seconds> 7.0 </Debris_Max_Lifetime_Seconds>
+      </BehaviorType>
+
+      <BehaviorType Name="ArmorAndDamageBehaviorType">
+         <Damage_Type> Damage_Default </Damage_Type>
+      </BehaviorType>
+
+   </X11_Military_Units>
+
+   <X11_Military_Units Name="Military_Veh_hummer_Debris_04">
+
+      <!-- ART -->
+      <Land_Model_Name>MV_tank_debri_E.ALO</Land_Model_Name>
+      <Scale_Factor>0.85</Scale_Factor>
+      <AssetBank> BANK_MILITARY </AssetBank>
+
+      <!-- INTERFACE -->
+      <Text_ID>TEXT_NONE</Text_ID>
+      <Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+      <!-- ATTRIBUTES -->
+      <Remove_Upon_Death>true</Remove_Upon_Death>
+
+      <!-- Non-decoration debris will have to have HIDE_WHEN_FOGGED behavior to properly hide.-->
+      <!-- Decoration debris will not be created if spawned under FOW. -Oksana -->
+      <Is_Decoration>Yes</Is_Decoration>
+      
+      <!-- CONFLICT -->
+      <Tactical_Health>9999</Tactical_Health>
+
+      <!-- BEHAVIORS -->
+      <LandBehavior>
+         BALLISTIC,
+         DEBRIS
+      </LandBehavior>
+
+      <BehaviorType Name="BallisticBehaviorType">
+         <Ballistic_Weight>1.6</Ballistic_Weight>
+         <Ballistic_Bounce>0.25</Ballistic_Bounce>
+      </BehaviorType>
+
+      <BehaviorType Name="DebrisBehaviorType">
+         <Debris_Min_Lifetime_Seconds> 3.0 </Debris_Min_Lifetime_Seconds>
+         <Debris_Max_Lifetime_Seconds> 7.0 </Debris_Max_Lifetime_Seconds>
+      </BehaviorType>
+
+      <BehaviorType Name="ArmorAndDamageBehaviorType">
+         <Damage_Type> Damage_Default </Damage_Type>
+      </BehaviorType>
+
+   </X11_Military_Units>
+
+   <X11_Military_Units Name="Military_Veh_hummer_Debris_05">
+
+      <!-- ART -->
+      <Land_Model_Name>MV_tank_debri_F.ALO</Land_Model_Name>
+      <Scale_Factor>0.85</Scale_Factor>
+      <AssetBank> BANK_MILITARY </AssetBank>
+
+      <!-- INTERFACE -->
+      <Text_ID>TEXT_NONE</Text_ID>
+      <Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+      <!-- ATTRIBUTES -->
+      <Remove_Upon_Death>true</Remove_Upon_Death>
+
+      <!-- Non-decoration debris will have to have HIDE_WHEN_FOGGED behavior to properly hide.-->
+      <!-- Decoration debris will not be created if spawned under FOW. -Oksana -->
+      <Is_Decoration>Yes</Is_Decoration>
+
+      <!-- CONFLICT -->
+      <Tactical_Health>9999</Tactical_Health>
+
+      <!-- BEHAVIORS -->
+      <LandBehavior>
+         BALLISTIC,
+         DEBRIS
+      </LandBehavior>
+
+      <BehaviorType Name="BallisticBehaviorType">
+         <Ballistic_Weight>1.5</Ballistic_Weight>
+         <Ballistic_Bounce>0.25</Ballistic_Bounce>
+      </BehaviorType>
+
+      <BehaviorType Name="DebrisBehaviorType">
+         <Debris_Min_Lifetime_Seconds> 3.0 </Debris_Min_Lifetime_Seconds>
+         <Debris_Max_Lifetime_Seconds> 7.0 </Debris_Max_Lifetime_Seconds>
+      </BehaviorType>
+
+      <BehaviorType Name="ArmorAndDamageBehaviorType">
+         <Damage_Type> Damage_Default </Damage_Type>
+      </BehaviorType>
+
+   </X11_Military_Units>
+
+
+   <!-- **************************************************************************************** -->
+   <!-- *** PROJECTILES ************************************************************************ -->
+   <!-- **************************************************************************************** -->
+
+   <Projectile Name="Proj_Military_Veh_hummer">
+
+      <!-- ART -->
+
+      <Land_Model_Name>Laser_Military_Hummer_Machine_Gun</Land_Model_Name>
+	  <Scale_Factor>1.0</Scale_Factor>
+
+      <!-- <Land_Model_Name>p_concussion.alo</Land_Model_Name> -->
+      <!-- AI Removed the tank projectile on purpose - plese don't change back w/o talking to me -->
+      <!--Scale_Factor>5.0</Scale_Factor-->
+
+      <!-- INTERFACE -->
+      <Text_ID>TEXT_NONE</Text_ID>
+      <Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+      <!-- MOVEMENT -->
+      <Max_Speed>20</Max_Speed>
+      <Max_Rate_Of_Turn>0</Max_Rate_Of_Turn>
+
+      <!-- CONFLICT -->
+      <AI_Combat_Power> 1 </AI_Combat_Power>
+
+      <!-- BEHAVIORS -->
+      <Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
+
+      <BehaviorType Name="ArmorAndDamageBehaviorType">
+         <Damage_Type> Damage_Military_Hummer </Damage_Type>
+      </BehaviorType>
+
+      <BehaviorType Name="ProjectileBehaviorType">
+         <Projectile_Category>laser</Projectile_Category>
+         <!-- feaking-Lasers code -->
+         <Projectile_Rocket_Straight_Distance>500</Projectile_Rocket_Straight_Distance>
+         <Projectile_Max_Flight_Distance>500.0</Projectile_Max_Flight_Distance>
+         <Projectile_Max_Scan_Range>600.0</Projectile_Max_Scan_Range>
+         <Projectile_Damage>7.0</Projectile_Damage>
+         <Projectile_SFXEvent_Detonate>SFX_Military_Detonation_1</Projectile_SFXEvent_Detonate>
+         <Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Military_Small_Damage_Detonation </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
+         <Projectile_Does_Shield_Damage>No</Projectile_Does_Shield_Damage>
+         <Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+         <Projectile_Object_Detonation_Particle>Bullets_hit</Projectile_Object_Detonation_Particle>
+         <Projectile_Ground_Detonation_Particle>Military_Rifle_Dirt_Collide</Projectile_Ground_Detonation_Particle>
+			<Projectile_Lifetime_Detonation_Particle />
+         <Projectile_Absorbed_By_Shields_Particle>Bullets_hit</Projectile_Absorbed_By_Shields_Particle>
+         <Projectile_Causes_Knockback_To_Enemy_Units> false </Projectile_Causes_Knockback_To_Enemy_Units>
+         <Projectile_Ballistic_Knockback_Radius>60.0</Projectile_Ballistic_Knockback_Radius>
+         <Ballistic_Knockback_Probability>1.0</Ballistic_Knockback_Probability>
+         <Ballistic_Knockback_Strength>3.0</Ballistic_Knockback_Strength>
+         <Projectile_Causes_Blackening>false</Projectile_Causes_Blackening>
+         <Terrain_Damage_Radius>10.0</Terrain_Damage_Radius>
+      </BehaviorType>
+
+   </Projectile>
+
+   <!-- jdg 2/21/07 cutting...commenting out for now in case it causes issues
+   
+   JDG Hummer variant for use in Novus Tutorials 
+   <X11_Military_Units Name="Military_Hummer_Novus">
+      <Variant_Of_Existing_Type> Military_Hummer </Variant_Of_Existing_Type>
+      <Affiliation>Novus</Affiliation>
+   </X11_Military_Units>-->
+
+
+   <!-- **************************************************************************************** -->
+   <!-- *** OBSOLETE NAMES ********************************************************************* -->
+   <!-- **************************************************************************************** -->
+
+   <X99_Test_Objects Name="Military_Veh_hummer">
+      <Variant_Of_Existing_Type>Military_Hummer</Variant_Of_Existing_Type>
+   </X99_Test_Objects>
+
+</Military_Veh_hummer_XML>

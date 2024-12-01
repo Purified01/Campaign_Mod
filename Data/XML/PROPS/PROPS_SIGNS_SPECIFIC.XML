@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<Props_Signs_Specific_XML>
+
+<!-- **************************************************************************************** -->	
+<!-- *** OBJECT(S) ************************************************************************** -->	
+<!-- **************************************************************************************** -->	
+
+	<X30_Props_Signs_Specific Name="American_Sign_Pollywood">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>WO_NA_HOLLYWOOD_SIGN.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>Yes</Is_Decoration>
+		<Is_UI_Relevant> false </Is_UI_Relevant>
+	</X30_Props_Signs_Specific>
+  			
+</Props_Signs_Specific_XML>
+
+
+

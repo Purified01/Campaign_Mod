@@ -1,0 +1,211 @@
+<?xml version="1.0" ?>
+
+<Game_Object_Files>
+
+	<File> GlobeRegions.xml </File>
+	<File> HardPoints_Testing.xml </File>
+	<File> CIV_Buildings.xml </File>
+	<File> Props_Generic.xml </File>
+	<File> Particles.xml </File>
+	<File> Markers.xml </File>
+	<File> LandPrimarySkydomes.xml </File>
+	<File> LandSecondarySkydomes.xml </File>
+	<File> Bridges.xml </File>
+	<File> SpecialStructures_Military.xml </File>
+	<File> GlobalTransportBlips.xml </File>
+
+	
+	<File> Units/ALIEN_AIR_Retreat_Transport.xml </File>
+
+	<File> Units/ALIEN_VEH_Tank.xml </File>
+	<File> Units/ALIEN_VEH_Cylinder.xml </File>
+	<File> Units/ALIEN_VEH_Foo_Fighter.xml </File>
+	<File> Units/ALIEN_VEH_Defiler.xml </File>
+	<File> Units/ALIEN_VEH_Reaper_Turret.xml </File>
+	<File> Units/ALIEN_VEH_Scan_Drone.xml </File>
+
+	<File> Units/ALIEN_INF_Science_Team.xml </File>
+	<File> Units/ALIEN_INF_Grunt.xml </File>
+	<File> Units/ALIEN_INF_Brute.xml </File>
+	<File> Units/ALIEN_INF_Glyph_Carver.xml </File>
+	<File> Units/ALIEN_INF_Mutant_Slave.xml </File>
+	<File> Units/ALIEN_INF_Lost_One.xml </File>
+
+	<File> Units/ALIEN_WALKER_Habitat.xml </File>
+	<File> Units/ALIEN_WALKER_Assembly.xml </File>
+	<File> Units/ALIEN_WALKER_Science.xml </File>
+
+	<File> Units/ALIEN_HERO_Kamal_Rex.xml </File>
+	<File> Units/ALIEN_HERO_Orlok.xml </File>
+	<File> Units/ALIEN_HERO_Nufai.xml </File>
+	<File> Units/ALIEN_HERO_Chief_Scientist.xml </File>
+
+	<File> Units/Neutral_Fauna.xml </File>
+	<File> Units/CIVILIAN_INF_Civilians.xml</File>
+	<File> Units/CIVILIAN_VEH_Vehicles.xml</File>
+
+	<File> Units/GENERIC_Fleet_In_Transit.xml </File>
+	<File> Units/GENERIC_Fleet_Unit_In_Transit.xml </File>
+	<File> Units/GENERIC_Fleet_Unit_In_Production.xml </File>
+	<File> Units/GENERIC_Debris.xml </File>
+
+	<File> Units/Radar_Map_Filters.xml </File>
+	<File> Units/Neutral_Purifier_Damage_Object.xml </File>
+
+	<File> Units/Military_Air_Apache.xml </File>
+	<File> Units/Military_Air_Dragonfly.xml </File>
+	<File> Units/Military_Air_Maverick_Jet.xml </File>
+	<File> Units/Military_Air_Supply_Drone.xml </File>
+	<File> Units/Military_Hero_Tank.xml </File>
+	<File> Units/Military_Hero_Randal_Moore.xml </File>
+	<File> Units/Military_Hero_Comm_Officer.xml </File>
+	<File> Units/Military_Inf_Marine.xml </File>
+	<File> Units/Military_Inf_Science_Team.xml </File>
+	<File> Units/Military_Inf_Flamethrower_Team.xml </File>
+	<File> Units/Military_Inf_Rocketlauncher.xml </File>
+	<File> Units/Military_Inf_Medic.xml </File>
+	<File> Units/Military_Veh_AbramsM2_Tank.xml </File>
+	<File> Units/Military_Veh_Builder_Rig.xml </File>
+	<File> Units/Military_Veh_Defender_APC.xml </File>
+	<File> Units/Military_Veh_Dragoon.xml </File>
+	<File> Units/Military_Veh_Hummer.xml </File>
+	<File> Units/Military_Veh_Artillery.xml </File>
+
+	<File> Units/Novus_Air_Retreat_Transport.xml </File>
+	<File> Units/Novus_Air_Collector.xml </File>
+	<File> Units/Novus_Veh_Amplifier.xml </File>
+	<File> Units/NOVUS_VEH_Constructor.xml </File>
+	<File> Units/Novus_Veh_Antimatter_Tank.xml </File>
+	<File> Units/Novus_Inf_Robots.xml </File>
+	<File> Units/Novus_Veh_Dervish_Jet.xml </File>
+	<File> Units/Novus_Hero_Mech.xml </File>
+	<File> Units/NOVUS_VEH_Corruptor.xml </File>
+	<File> Units/NOVUS_VEH_Field_Inverter.xml </File>
+	<File> Units/NOVUS_INF_Variant.xml </File>
+	<File> Units/NOVUS_INF_Hacker.xml </File>
+	<File> Units/NOVUS_HERO_Chief_Scientist.xml </File>
+	<File> Units/NOVUS_HERO_Vertigo.xml </File>
+	<File> Units/NOVUS_HERO_Founder.xml </File>
+	<File> Units/NOVUS_INF_Reflex.xml </File>
+
+	<File> Units/MASARI_INF_Disciple.xml </File>
+	<File> Units/MASARI_AIR_Seeker.xml </File>
+	<File> Units/MASARI_AIR_Skylord.xml </File>
+	<File> Units/MASARI_AIR_Figment.xml </File>
+	<File> Units/MASARI_VEH_Enforcer.xml </File>
+	<File> Units/MASARI_VEH_Peacebringer.xml </File>
+	<File> Units/MASARI_INF_Architect.xml </File>
+	<File> Units/MASARI_INF_Avenger.xml </File>
+	<File> Units/MASARI_INF_Seer.xml </File>
+	<File> Units/MASARI_HERO_Alatea.xml </File>
+	<File> Units/MASARI_HERO_Zessus.xml </File>
+	<File> Units/MASARI_HERO_Charos.xml </File>
+	<File> Units/MASARI_HERO_Chief_Scientist.xml </File>
+	<File> Units/MASARI_VEH_Sentry.xml </File>
+	<File> Units/MASARI_AIR_Retreat_Transport.xml </File>
+
+
+	<File> ALIEN_Base_Global_Icon.xml </File>
+	<File> NOVUS_Base_Global_Icon.xml </File>
+	<File> MASARI_Base_Global_Icon.xml </File>
+
+
+	<File> Props/Props_Signs_Generic.xml </File>
+	<File> Props/Props_Signs_Specific.xml </File>
+	<File> Props/Props__Industrial.xml </File>
+	<File> Props/Props__Rural.xml </File>
+	<File> Props/Props__Suburban.xml </File>
+	<File> Props/Props__Urban.xml </File>
+	<File> Props/Props_Specific.xml </File>
+	<File> Props/Props_Nature.xml </File>
+	<File> Props/Props_Travel.xml </File>
+	<File> Props/Props_Cinematic_Units.xml </File>
+	<File> Props/Props_Cinematic_Objects.xml </File>
+	<File> Props/Props_Cinematic_FX.xml </File>
+	<File> Props/Props_Cinematic_Walkers.xml </File>
+
+	<File> Objects/Achievement_Effects.xml</File>
+	<File> Objects/Game_Objects.xml</File>
+	<File> Objects/Novus_Patches.xml</File>
+	<File> Objects/Resource_Objects.xml</File>
+	<File> SpecialEffects.xml </File>
+	<File> Units/GENERIC_AIR_Unit.xml </File>
+
+
+	<File> Structures/Structures_Generic.xml </File>
+	<File> Structures/Structures_Specific.xml </File>
+	<File> Structures/GENERIC_Novus_Structure_Beacon.xml </File>
+
+
+	<File> Structures/Military_Barracks.xml </File>
+	<File> Structures/Military_Motor_Pool.xml </File>
+	<File> Structures/Military_Aircraft_Pad.xml </File>
+	<File> Structures/Military_Drop_Zone.xml </File>
+	<File> Structures/Military_Defense_Turret.xml </File>
+	<File> Structures/Military_Supply_Depot.xml </File>
+
+	<File> Structures/Novus_Input_Station.xml </File>
+	<File> Structures/Novus_Signal_Tower.xml </File>
+	<File> Structures/Novus_Aircraft_Assembly.xml </File>
+	<File> Structures/Novus_Robotic_Assembly.xml </File>
+	<File> Structures/Novus_Vehicle_Assembly.xml </File>
+	<File> Structures/Novus_Power_Router.xml </File>
+	<File> Structures/Novus_Science.xml </File>
+	<File> Structures/Novus_Remote_Terminal.xml </File>
+	<File> Structures/Novus_Research_Center.xml </File>
+	<File> Structures/Novus_R_and_D_Center.xml </File>
+	<File> Structures/Novus_Material_Center.xml </File>
+	<File> Structures/Novus_Nanocenter.xml </File>
+	<File> Structures/Novus_Superweapon_EMP.xml </File>
+	<File> Structures/Novus_Consumption_Superturret.xml </File>
+	<File> Structures/Novus_Megaweapon.xml </File>
+	<File> Structures/Novus_Gravity_Bomb.xml </File>
+	<File> Structures/Novus_Redirection_Turret.xml </File>
+	<File> Structures/Novus_Megacorp_Center.xml </File>
+
+
+	<File> Structures/Alien_Material_Uplink.xml </File>
+	<File> Structures/Alien_Force_Wall.xml </File>
+	<File> Structures/Alien_Arrival_Site.xml </File>
+	<File> Structures/Alien_Information_Conduit.xml </File>
+	<File> Structures/Alien_Foundation.xml </File>
+	<File> Structures/Alien_Creation_Core.xml </File>
+	<File> Structures/Alien_Theory_Core.xml </File>
+	<File> Structures/Alien_Abduction_Core.xml </File>
+	<File> Structures/Alien_Relocator.xml </File>
+	<File> Structures/Alien_Radiation_Spitter.xml </File>
+	<File> Structures/Alien_Gravitic_Manipulator.xml </File>
+	<File> Structures/Alien_Megaweapon_Purifier.xml </File>
+	<File> Structures/Alien_Superweapon_Mass_Drop.xml </File>
+	<File> Structures/Alien_Phase_Generator.xml </File>
+
+
+	<File> Structures/Masari_Atlatea.xml </File>
+	<File> Structures/Masari_Will_Processor.xml </File>
+	<File> Structures/Masari_Key_Inspiration.xml </File>
+	<File> Structures/Masari_Element_Magnet.xml </File>
+	<File> Structures/Masari_Elemental_Collector.xml </File>
+	<File> Structures/Masari_Guardian.xml </File>
+	<File> Structures/Masari_Natural_Interpreter.xml </File>
+	<File> Structures/Masari_Inventors_Lab.xml </File>
+	<File> Structures/Masari_Infantry_Inspiration.xml </File>
+	<File> Structures/Masari_Ground_Inspiration.xml </File>
+	<File> Structures/Masari_Air_Inspiration.xml </File>
+	<File> Structures/Masari_Foundation.xml </File>
+	<File> Structures/Masari_Sky_Guardian.xml </File>
+	<File> Structures/Masari_Fire_Wall.xml </File>
+	<File> Structures/Masari_Elemental_Controller.xml </File>
+	<File> Structures/Masari_Megaweapon.xml </File>
+
+	<!-- Capturable Neutral Structures -->
+	<File> Structures/Neutral_Refinery.xml </File>
+	<File> Structures/Neutral_Nuclear_Reactor.xml </File>
+	<File> Structures/Neutral_Detection_Array.xml </File>
+	<File> Structures/Neutral_Repair_Bay.xml </File>
+	<File> Structures/Neutral_Laser_Turret.xml </File>
+	<File> Structures/Neutral_Machine_Factory.xml </File>
+
+
+
+
+</Game_Object_Files>

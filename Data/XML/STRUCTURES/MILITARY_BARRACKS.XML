@@ -1,0 +1,214 @@
+<?xml version="1.0"?>
+<Military_Barracks_XML>
+
+<!-- **************************************************************************************** -->	
+<!-- *** STRUCTURE ************************************************************************** -->	
+<!-- **************************************************************************************** -->	
+
+	<X11_Military_Structures Name="Military_Barracks">
+
+		<!-- ART -->
+		<Land_Model_Name>MB_barracks.alo</Land_Model_Name>
+		<Scale_Factor>1.5</Scale_Factor>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+    <Last_State_Visible_Under_FOW> True </Last_State_Visible_Under_FOW>
+    <Initial_State_Visible_Under_FOW>True</Initial_State_Visible_Under_FOW>
+      <AssetBank> BANK_MILITARY </AssetBank>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_STRUCTURE_MILITARY_BARRACKS</Text_ID>
+		<Icon_Name>i_icon_barracks.tga</Icon_Name>
+		<Selection_Blob_Material_Name> Selection_Military_Land </Selection_Blob_Material_Name>
+		<Select_Box_Scale>160</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+
+		<!-- ATTRIBUTES -->
+		<CategoryMask> Large, Stationary </CategoryMask>
+		<Affiliation>Military</Affiliation>
+		<Victory_Relevant> No </Victory_Relevant>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> LandDynamic </Space_Layer>	
+		<MovementClass>Building</MovementClass>
+		<UnitCollisionClass> High Obstacle </UnitCollisionClass>	
+		<Custom_Hard_XExtent> 33.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 45.0 </Custom_Hard_YExtent>
+      <Custom_Hard_XExtent_Offset> -7.0 </Custom_Hard_XExtent_Offset>
+      <Custom_Hard_YExtent_Offset> -5.0 </Custom_Hard_YExtent_Offset>
+      <Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+      <Tornado_Movement_Factor>0.00001</Tornado_Movement_Factor>
+      
+		<!-- CONFLICT -->
+		<Is_Attackable> true </Is_Attackable>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Ranged_Target_Z_Adjust>10.0</Ranged_Target_Z_Adjust>
+
+		<AI_Combat_Power> 1 </AI_Combat_Power>
+		<Tactical_Health> 1900 </Tactical_Health>
+		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+		<Land_Damage_Thresholds>1, .5, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2 </Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_GENERIC_DETONATION, null</Land_Damage_SFX>
+		
+		<!-- BEHAVIORS -->
+
+		<LandBehavior>
+			TACTICAL_ENABLER,
+			GROUND_STRUCTURE,
+			SELECTABLE,
+			EFFECT_REGISTRY,
+			EFFECT_GENERATOR,
+			ATTRIBUTE_DIRECTORY,
+			EMITTER_CONTROLLER,
+			GUI,
+			RADAR_MAP_VISIBLE,
+			REVEAL,
+			HIDE_WHEN_FOGGED,
+			UNIT_AI,
+			AI_TARGET,
+			IDLE,
+			TACTICAL_PRODUCTION_GARAGE_VISUAL
+		</LandBehavior>
+
+		<BehaviorType name="AIBehaviorType">
+			<AI_Target_Level>Individual</AI_Target_Level>
+		</BehaviorType>
+
+		<BehaviorType Name="GameEventSourceBehaviorType">
+			<Game_Event_Source_Category> Structure </Game_Event_Source_Category>
+		</BehaviorType>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Armor_Type> Armor_Military_Structure_Light </Armor_Type>
+		</BehaviorType>
+		
+		<BehaviorType Name="ProductionBehaviorType">
+			<Is_Research_Tech_Tree_Lockable> No </Is_Research_Tech_Tree_Lockable>
+			<Build_Limit_Current_Per_Player>5</Build_Limit_Current_Per_Player>
+		</BehaviorType>
+
+		<BehaviorType Name="GroundStructureBehaviorType">
+			<Is_Command_Center> No </Is_Command_Center>
+		</BehaviorType>
+
+		<BehaviorType Name="EncyclopediaBehaviorType">
+			<Icon_Name>i_icon_barracks.tga</Icon_Name>
+			
+			<!-- Maria 07.07.2006 - what type is this building? air, infantry, vehicle, or nil. This is used
+				 to update the queue UI in tactical mode! -->
+			<Building_Queue_Type>Infantry</Building_Queue_Type>
+		</BehaviorType>
+				
+		<BehaviorType Name="TooltipBehaviorType">
+			<Tooltip_Description_Text_ID> TEXT_TOOLTIP_DESCRIPTION_MILITARY_BARRACKS </Tooltip_Description_Text_ID>
+			<Tooltip_Category> TEXT_TOOLTIP_CATEGORY_STRUCTURE </Tooltip_Category>
+		</BehaviorType>
+		
+		<BehaviorType Name="TacticalEnablerBehaviorType">
+			<Tactical_Enabler_Bones>SPAWN_00</Tactical_Enabler_Bones>
+			<Tactical_Enabler_Flyout_Distances>70.0</Tactical_Enabler_Flyout_Distances>
+		</BehaviorType>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Death_Clone>Damage_Default, Military_Barracks_Death_Clone</Death_Clone>
+			<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+			<Death_Clone_Keep_Behaviors> EFFECT_REGISTRY </Death_Clone_Keep_Behaviors>
+			<Death_Fade_Time> 0.25 </Death_Fade_Time>
+			<Death_Persistence_Duration> 5 </Death_Persistence_Duration>
+			<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+		</BehaviorType>
+		
+		<BehaviorType Name="SFXBehaviorType">
+			<SFXEvent_Select>SFX_Structure_Select_Military_Barracks</SFXEvent_Select>
+ 			<SFXEvent_Unit_Lost />
+			<SFXEvent_Tactical_Build_Started>GUI_BUILD_Structure</SFXEvent_Tactical_Build_Started>
+			<SFXEvent_Tactical_Build_Complete>SFX_Structure_Select_Military_Barracks</SFXEvent_Tactical_Build_Complete>
+			<SFXEvent_Tactical_Build_Cancelled>GUI_BUILD_Structure_Canceled</SFXEvent_Tactical_Build_Cancelled>
+			
+			<SFXEvent_On_Fire_Loop>SFX_Structure_Fire_Loop</SFXEvent_On_Fire_Loop>
+		</BehaviorType>
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.05  0.05</Radar_Icon_Size>
+		</BehaviorType>
+		
+		<BehaviorType Name="BurningBehaviorType">
+			<Is_Combustible>yes</Is_Combustible>
+			<On_Fire_Speed_Modifier>1.0f</On_Fire_Speed_Modifier>
+			<Targeting_Allowed_When_Burning>False</Targeting_Allowed_When_Burning>
+			<Burning_Damage_Per_Second>0.5f</Burning_Damage_Per_Second>
+			<Catch_Fire_Probability_Per_Second>0.5</Catch_Fire_Probability_Per_Second>
+			<Spread_Fire_Radius>200</Spread_Fire_Radius>
+			<Fire_Particle>Combustive_Fire</Fire_Particle>
+			<Fire_Particle_Attachement_Bone>SPAWN_00</Fire_Particle_Attachement_Bone>
+		</BehaviorType>
+
+		<BehaviorType Name="CrushBehaviorType">
+			<Crush_Defense>60</Crush_Defense>
+		</BehaviorType>
+
+		<BehaviorType Name="GUIBehaviorType">
+			<GUI_Scene_Name> HealthBar_Scene_Medium </GUI_Scene_Name>
+			<GUI_Receives_Input> false </GUI_Receives_Input>
+			<GUI_Min_Scale> 0.8 </GUI_Min_Scale>
+			<GUI_Max_Scale> 3.0 </GUI_Max_Scale>
+			<GUI_Default_Scale> 1.0 </GUI_Default_Scale>
+		</BehaviorType>
+		
+	</X11_Military_Structures>
+
+
+
+
+
+	<!-- **************************************************************************************** -->
+	<!-- ****DEATH CLONE(S)********************************************************************** -->
+	<!-- **************************************************************************************** -->
+
+	<X11_Military_Structures Name="Military_Barracks_Death_Clone">
+
+		<!-- ART -->
+		<Land_Model_Name>MB_barracks_DC.ALO</Land_Model_Name>
+		<Scale_Factor>1.5</Scale_Factor>
+		<AssetBank> BANK_MILITARY </AssetBank>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+		<!-- ATTRIBUTES -->
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+
+		<!-- CONFLICT -->
+		<Ranged_Target_Z_Adjust>0.1</Ranged_Target_Z_Adjust>
+
+		<LandBehavior>
+			EFFECT_REGISTRY,
+			EFFECT_GENERATOR,
+			ATTRIBUTE_DIRECTORY,
+			PARTICLE
+		</LandBehavior>
+
+		<BehaviorType Name="SFXBehaviorType">
+			<Death_SFXEvent_End_Die />
+			<Death_SFXEvent_Start_Die> SFX_Novus_Large_Structure_Death </Death_SFXEvent_Start_Die>
+		</BehaviorType>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Specific_Death_Anim_Type> Die </Specific_Death_Anim_Type>
+			<Death_Fade_Time> 0.25 </Death_Fade_Time>
+			<Death_Persistence_Duration> 0.0 </Death_Persistence_Duration>
+		</BehaviorType>
+
+	</X11_Military_Structures>
+	
+	
+	
+	
+	
+	
+
+			
+</Military_Barracks_XML>

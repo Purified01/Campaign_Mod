@@ -1,0 +1,749 @@
+<?xml version="1.0"?>
+<Masari_INF_Disciple_XML>
+
+	<!-- **************************************************************************************** -->
+	<!-- *** UNIT(S) **************************************************************************** -->
+	<!-- **************************************************************************************** -->
+
+	<X13_Masari_Units Name="Masari_Disciple">
+
+		<!-- ART -->
+		<Land_Model_Name> ZI_Disciple.ALO </Land_Model_Name>
+		<!-- DEBUG: STUB SCALE AND MODEL -->
+		<Scale_Factor>1.0</Scale_Factor>
+		<Loop_Idle_Anim_00>No</Loop_Idle_Anim_00>
+		<SurfaceFX_Name>Masari_Disciple_Footprint</SurfaceFX_Name>
+		<Occlusion_Silhouette_Enabled>1</Occlusion_Silhouette_Enabled>
+		<Mouse_Collide_Override_Sphere_Radius> 10.0 </Mouse_Collide_Override_Sphere_Radius>
+      <AssetBank> BANK_MASARI </AssetBank>
+
+		<!-- INTERFACE -->
+		<Icon_Name> i_icon_mi_disciple.tga  </Icon_Name>
+		<Text_ID>TEXT_UNIT_MASARI_DISCIPLE</Text_ID>
+		<GUI_Scene_Name> HealthBar_Scene_Small </GUI_Scene_Name>
+		<GUI_Receives_Input> false </GUI_Receives_Input>
+		<GUI_Min_Scale> 0.3 </GUI_Min_Scale>
+		<GUI_Max_Scale> 2.5 </GUI_Max_Scale>
+		<GUI_Default_Scale> 0.5 </GUI_Default_Scale>
+		<GUI_World_Offset> 0.0, 0.0, -10 </GUI_World_Offset>
+		<Select_Box_Scale>25</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+
+		<!-- ATTRIBUTES -->
+        <LOD_Bias>15</LOD_Bias>
+		<Affiliation> Masari </Affiliation>
+		<Victory_Relevant> No </Victory_Relevant>
+		<CategoryMask> Small, Organic, CanAttack, RadiationHurts </CategoryMask>
+		<Weather_Category>Infantry</Weather_Category>
+		<Can_Fall_From_Bridge> true </Can_Fall_From_Bridge>
+		<Importance> 0.2 </Importance>
+		<Shot_Type> Infantry </Shot_Type>
+
+		<Attributes SubObjectList="Yes">
+			<Can_Ride_In_Vehicles> true </Can_Ride_In_Vehicles>
+			<Is_Masari_Infantry> true </Is_Masari_Infantry>
+			<Is_Immune_To_Virus> true </Is_Immune_To_Virus>
+			<Is_Immune_To_Amplifier_Lockdown> true </Is_Immune_To_Amplifier_Lockdown>
+			<Can_Garrison_Buildings> true </Can_Garrison_Buildings>
+			<Tactical_Sell_Percent_Modifier> -0.5 </Tactical_Sell_Percent_Modifier>
+			<Tactical_Sell_Time_Seconds> 2.0 </Tactical_Sell_Time_Seconds>
+		</Attributes>
+
+		<!-- MOVEMENT -->
+		<MovementClass> Infantry </MovementClass>
+		<Max_Speed>1.4</Max_Speed>
+		<Max_Rate_Of_Turn>30.0</Max_Rate_Of_Turn>
+		<Stopped_Rate_Of_Turn> 12.0 </Stopped_Rate_Of_Turn>
+		<Custom_Soft_Footprint_Radius> 3.5 </Custom_Soft_Footprint_Radius>
+		<Custom_Hard_XExtent> 2.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 2.0 </Custom_Hard_YExtent>
+		<Space_Layer> LandDynamic </Space_Layer>
+		<UnitCollisionClass> Infantry </UnitCollisionClass>
+		<FormationSpacing> .5 </FormationSpacing>
+		<FormationRaggedness> 1 </FormationRaggedness>
+		<MaxJiggleDistance> 1.0 </MaxJiggleDistance>
+		<OverrideAcceleration> .05 </OverrideAcceleration>
+		<OverrideDeceleration> .05 </OverrideDeceleration>
+		<FormationOrder> 2 </FormationOrder>
+		<Movement_Animation_Speed> 1.25 </Movement_Animation_Speed>
+		<Rotation_Animation_Speed> 20.0 </Rotation_Animation_Speed>
+		<OccupationStyle>1x1</OccupationStyle>
+		<Strafe_Max_Speed_Coefficient> 0.8 </Strafe_Max_Speed_Coefficient>
+		<Backpedal_Max_Speed_Coefficient> 0.8 </Backpedal_Max_Speed_Coefficient>
+		<Walk_Animation_Speed> .3755 </Walk_Animation_Speed>
+		<Strafe_Animation_Speed> 1.0 </Strafe_Animation_Speed>
+		<Backpedal_Animation_Speed> 1.0 </Backpedal_Animation_Speed>
+		<Should_Move_Anim_Lockout_Attack_Anim> true </Should_Move_Anim_Lockout_Attack_Anim>
+
+		<!-- CONFLICT -->
+		<Is_Attackable> true </Is_Attackable>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Ranged_Target_Z_Adjust>12.0</Ranged_Target_Z_Adjust>
+		<Land_FOW_Reveal_Range>200.0</Land_FOW_Reveal_Range>
+
+		<Tactical_Health> 250 </Tactical_Health>
+
+		<!-- BEHAVIORS -->
+		<Behavior>
+			PERSISTENT_UNIT,
+			EFFECT_REGISTRY
+		</Behavior>
+		
+		<LandBehavior>
+			SELECTABLE,
+			RADAR_MAP_VISIBLE,
+			ATTRIBUTE_DIRECTORY,
+			EFFECT_GENERATOR,
+			GUI,
+			RADAR_MAP_VISIBLE,
+			SURFACE_FX,
+			WALK_LOCOMOTOR,
+			FORMATION,
+			IDLE,
+			TARGETING,
+			TURRET,
+			WEAPON,
+			REVEAL,
+			HIDE_WHEN_FOGGED,
+			BALLISTIC,
+			SWITCH_TYPE,
+			DAMAGE_TRACKING,
+			AI_RECRUITABLE,
+			ABILITY_COUNTDOWN,
+			AI_TARGET,
+      SQUASH,
+			TACTICAL_SELL,
+			TELEPORT_PAD,
+			<!-- ELEMENTAL_MODE must be last because it causes add behavior to be called -->
+			ELEMENTAL_MODE
+		</LandBehavior>
+
+		<BehaviorType Name="TooltipBehaviorType">
+			<Tooltip_Description_Text_ID> TEXT_TOOLTIP_DESCRIPTION_MASARI_DISCIPLE_LIGHT </Tooltip_Description_Text_ID>
+			<Tooltip_Category> TEXT_TOOLTIP_CATEGORY_SUMMON </Tooltip_Category>
+			<Tooltip_Good_Against> TEXT_TYPE_VERSUS_VEHICLES TEXT_TYPE_VERSUS_AIR_UNITS </Tooltip_Good_Against>
+			<Tooltip_Vulnerable_To> TEXT_TYPE_VERSUS_INFANTRY TEXT_TYPE_VERSUS_TURRETS </Tooltip_Vulnerable_To>
+		</BehaviorType>
+
+         <Researched_Upgrades>
+		TEXT_MASARI_RESEARCH_TITLE_DARK_MATTER_AFINITY
+		TEXT_MASARI_RESEARCH_TITLE_DARK_MATTER_MASTERY
+		TEXT_MASARI_RESEARCH_TITLE_CLEANSING_ENERGY
+         </Researched_Upgrades>
+	 
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Armor_Type> Armor_Masari_Infantry_Heavy </Armor_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="TacticalSellBehaviorType">
+			<Sell_Effect_Generator_Name>MasariSellGenerator</Sell_Effect_Generator_Name>
+		</BehaviorType>
+		
+		<BehaviorType Name="ProductionBehaviorType">
+			<Size_Value> 10 </Size_Value>
+			<Build_Cost_Credits> 13 </Build_Cost_Credits>
+			<Build_Time_Seconds> 15 </Build_Time_Seconds>
+			<Is_Research_Tech_Tree_Lockable> Yes </Is_Research_Tech_Tree_Lockable>
+			<Extra_Enablers_Increase_Build_Rate> 1.0 </Extra_Enablers_Increase_Build_Rate>
+			<!-- 
+				Maria 11.07.2006 
+				This flag determines which types are used to populate the
+				build menu in global mode.
+			-->
+			<Is_Strategic_Buildable_Type> Yes </Is_Strategic_Buildable_Type>
+			<Strategic_UI_Build_Menu_Order>1</Strategic_UI_Build_Menu_Order>
+		</BehaviorType>
+
+		<BehaviorType Name="BuildableObjectBehaviorType">
+			<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+			<Tactical_Build_Cost_Campaign> 25 </Tactical_Build_Cost_Campaign>
+			<Tactical_Build_Cost_Multiplayer> 25 </Tactical_Build_Cost_Multiplayer>
+			<Tactical_Build_Time_Seconds> 28 </Tactical_Build_Time_Seconds>
+			<Tactical_UI_Build_Queue_Order> 1 </Tactical_UI_Build_Queue_Order>
+		</BehaviorType>
+
+    <BehaviorType name="AIBehaviorType">
+      <AI_Combat_Power> 1 </AI_Combat_Power>
+      <Idle_Chase_Range> 20.0 </Idle_Chase_Range> <!-- Double click guard area Keep very small-->
+      <Guard_Chase_Range> 160.0 </Guard_Chase_Range> <!-- Guard radius for unit-->
+      <Autonomous_Move_Extension_Vs_Attacker> 20.0 </Autonomous_Move_Extension_Vs_Attacker> <!--Range outside of guard area unit will move-->
+      <Attack_Move_Response_Range> 50.0 </Attack_Move_Response_Range> <!-- When given a attack move command unit will travel this distance from path to attack-->
+      <AI_Target_Level>Group_Member</AI_Target_Level>
+		 <Attack_Score_Rating> 0.8 </Attack_Score_Rating>
+		 <Scout_Score_Rating> 0.5 </Scout_Score_Rating>
+		 <Guerilla_Score_Rating> 0.5 </Guerilla_Score_Rating>
+	 </BehaviorType>
+
+		<BehaviorType Name="WeaponBehaviorType">
+         <Can_Attack_Without_Weapon_Behavior> true </Can_Attack_Without_Weapon_Behavior>
+			<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
+			<Targeting_Priority_Set> Masari_Disciple_Target_Priority </Targeting_Priority_Set>
+			<Targeting_Fire_Inaccuracy> 1.0 </Targeting_Fire_Inaccuracy>
+			<Targeting_Min_Attack_Distance> 0.0 </Targeting_Min_Attack_Distance>
+			<Targeting_Max_Attack_Distance> 200.0 </Targeting_Max_Attack_Distance>
+		</BehaviorType>
+
+		<BehaviorType NAme="LuaScriptBehaviorType">
+			<Lua_Only_Service_If_AI>True</Lua_Only_Service_If_AI>
+			<Lua_Land_Behaviors>Generic_Vehicle_Unit_Behavior,Defensive_AI_Unit_Behavior</Lua_Land_Behaviors>
+			<Lua_Script_Data>
+				GenericVehicle = {}
+				GenericVehicle.SearchRange = 150.0
+				GenericVehicle.KiteRange = 100.0
+				GenericVehicle.CrushRange = 0.0
+				DefensiveAI = {}
+				DefensiveAI.KillTurret = true
+				DefensiveAI.KillTurretRange = 32.0
+				DefensiveAI.CaptureAbility = "Disciple_Capture"
+			</Lua_Script_Data>
+		</BehaviorType>
+
+		<BehaviorType Name="ElementalModeType">
+			<Elemental_Object_Types> Fire, Masari_Disciple_Fire </Elemental_Object_Types>
+			<Elemental_Object_Types> Ice, Masari_Disciple_Ice </Elemental_Object_Types>
+		</BehaviorType>
+
+		<BehaviorType Name="TypeSwitchBehaviorType">
+			<!-- List of types this object can switch to - This is mainly needed to inforce build limits and must be
+						only added to the base type used for production dependencies purposes -->
+			<Type_Switch_Types> Masari_Disciple_Fire, Masari_Disciple_Ice  </Type_Switch_Types>
+			<Switch_Effect_Generator_Name> MasariSwitchGenerator </Switch_Effect_Generator_Name>
+		</BehaviorType>
+
+		<BehaviorType Name="TurretBehaviorType">
+			<Barrel_Bone_Name> Barrel </Barrel_Bone_Name>
+			<Turret_Bone_Name> Turret </Turret_Bone_Name>
+			<Turret_Rotate_Speed> 10.0 </Turret_Rotate_Speed>
+			<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+			<Apply_Y_Turret_Rotate_To_Axis>1</Apply_Y_Turret_Rotate_To_Axis>
+			<Turret_Rotate_Extent_Degrees> 45.0 </Turret_Rotate_Extent_Degrees>
+			<!-- if this is too low it will sit under fliers doing nothing -->
+			<Turret_Elevate_Extent_Degrees> 80.0 </Turret_Elevate_Extent_Degrees>
+			<Ground_Vehicle_Turret_Target> Yes </Ground_Vehicle_Turret_Target>
+			<Ground_Infantry_Turret_Target> Yes </Ground_Infantry_Turret_Target>
+			<Turret_XY_Only> false </Turret_XY_Only>
+		</BehaviorType>
+
+		<BehaviorType Name="EncyclopediaBehaviorType">
+			<Icon_Name> i_icon_mi_disciple.tga </Icon_Name>
+		</BehaviorType>
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.02  0.02</Radar_Icon_Size>
+		</BehaviorType>
+
+		<BehaviorType Name="BallisticBehaviorType">
+			<Ballistic_Weight>1.0</Ballistic_Weight>
+		</BehaviorType>
+
+		<BehaviorType Name="BlobShadowBehaviorType">
+			<Blob_Shadow_Below_Detail_Level>1</Blob_Shadow_Below_Detail_Level>
+			<Blob_Shadow_Scale>10.0, 10.0</Blob_Shadow_Scale>
+			<Blob_Shadow_Material_Name>Generic_Shadow</Blob_Shadow_Material_Name>
+			<Blob_Shadow_Bone_Name>B_Chest</Blob_Shadow_Bone_Name>
+			<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+			<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+		</BehaviorType>
+
+		<BehaviorType Name="SFXBehaviorType">
+			<SFXEvent_Fire> </SFXEvent_Fire>
+			<SFXEvent_Weapon_Firing_Loop> SFX_Masari_Flamethrower_Loop </SFXEvent_Weapon_Firing_Loop>
+         <SFXEvent_Select>Unit_Select_Masari_Disciple</SFXEvent_Select>
+			<SFXEvent_Move>Unit_Move_A_Masari_Disciple</SFXEvent_Move>
+			<SFXEvent_Move_At_Top_Speed>Unit_Move_B_Masari_Disciple</SFXEvent_Move_At_Top_Speed>
+         <SFXEvent_Attack>Unit_Attack_A_Masari_Disciple</SFXEvent_Attack>
+			<SFXEvent_Attack_At_Top_Speed>Unit_Attack_B_Masari_Disciple</SFXEvent_Attack_At_Top_Speed>
+			<SFXEvent_Turret_Rotating_Loop> </SFXEvent_Turret_Rotating_Loop>
+			<Death_SFXEvent_Start_Die>Unit_Death_Masari_Male </Death_SFXEvent_Start_Die>
+			<SFXEvent_Engine_Idle_Loop> </SFXEvent_Engine_Idle_Loop>
+			<SFXEvent_Engine_Moving_Loop> </SFXEvent_Engine_Moving_Loop>
+			<SFXEvent_Unit_Lost />
+			<SFXEvent_Tactical_Build_Started>GUI_BUILD_Infantry</SFXEvent_Tactical_Build_Started>
+			<SFXEvent_Tactical_Build_Complete>Unit_Select_Masari_Disciple</SFXEvent_Tactical_Build_Complete>
+			<SFXEvent_Tactical_Build_Cancelled>GUI_BUILD_Infantry_Canceled</SFXEvent_Tactical_Build_Cancelled>
+	
+			<!-- Maria 05.01.2006 - Adding build sounds for Global production -->
+			<SFXEvent_Build_Started>GUI_BUILD_Infantry</SFXEvent_Build_Started>
+			<SFXEvent_Build_Complete>Unit_Select_Masari_Disciple</SFXEvent_Build_Complete>
+			<SFXEvent_Build_Cancelled>GUI_BUILD_Infantry_Canceled</SFXEvent_Build_Cancelled>
+		</BehaviorType>
+
+		<BehaviorType Name="GUIBehaviorType">
+			<GUI_Bracket_Size>2</GUI_Bracket_Size>
+			<GUI_Bounds_Scale>0.5</GUI_Bounds_Scale>
+			<!-- Maria 05.18.2006 - Data needed for the models attached to the mouse in Global -->
+			<GUI_Is_Top_View> No </GUI_Is_Top_View>
+			<GUI_Rotate_Angle_Degrees> 0.0 </GUI_Rotate_Angle_Degrees>
+			<GUI_Is_Model_Shifted_Down> Yes </GUI_Is_Model_Shifted_Down>
+			<GUI_Shift_Factor> 4.7 </GUI_Shift_Factor>
+			<GUI_Strategic_Mode_Scale> 0.15 </GUI_Strategic_Mode_Scale>
+		</BehaviorType>
+
+      <BehaviorType Name="DeathFXBehaviorType">
+         <Specific_Death_Anim_Type> DIE </Specific_Death_Anim_Type>
+         <Death_Clone> Damage_Default, Masari_Disciple_Death_Clone_Resource </Death_Clone>
+         <Death_Spawn> Damage_Alien_AE_Radiation, Alien_Mutant_Slave </Death_Spawn>
+			<Death_Spawn> Damage_Alien_AE_Radiation, Alien_Mutant_Slave_02 </Death_Spawn>
+			<Death_Spawn> Damage_Alien_AE_Radiation, Alien_Mutant_Slave_03 </Death_Spawn>
+			<Death_Spawn> Damage_Alien_Mutant_Slave_Claws, Alien_Mutant_Slave </Death_Spawn>
+			<Death_Spawn> Damage_Alien_Mutant_Slave_Claws, Alien_Mutant_Slave_02 </Death_Spawn>
+			<Death_Spawn> Damage_Alien_Mutant_Slave_Claws, Alien_Mutant_Slave_03 </Death_Spawn>
+			<Death_Clone>Damage_Novus_Amplifier_Sonic_Resonance, Disintegrate_Death_Clone</Death_Clone>
+         <Death_Fade_Time>.25</Death_Fade_Time>
+         <Death_Persistence_Duration>10</Death_Persistence_Duration>
+         <Death_Clone_Keep_Behaviors> EFFECT_REGISTRY </Death_Clone_Keep_Behaviors>
+			<Death_Speed_Min>1.0</Death_Speed_Min>
+			<Death_Speed_Max>2.0</Death_Speed_Max>
+      </BehaviorType>
+
+		<BehaviorType Name="CrushBehaviorType">
+			<Crush_Defense> 10 </Crush_Defense>
+			<Crush_Power> 4 </Crush_Power>
+		</BehaviorType>
+
+		<BehaviorType Name="FleetBehaviorType">
+			<!-- Maria 05.24.2006 - How much space does the unit take up -->
+			<Unit_Pop_Cap> 2 </Unit_Pop_Cap>
+		</BehaviorType>
+
+		<BehaviorType Name="TeleportPadBehaviorType">
+			<Teleporter_Access_Types> ALIEN_RELOCATOR </Teleporter_Access_Types>
+		</BehaviorType>
+
+		<!-- NON-HERO UNIT ABILITIES -->
+		<Abilities SubObjectList="Yes">
+
+			<Effect_Generator_Ability Name="Masari_Disciple_Capture_Ability">
+				<Activation_Min_Range> 0 </Activation_Min_Range>
+				<Activation_Max_Range> 100.0 </Activation_Max_Range>
+
+            <!-- For some reason this deactivates ability... need to investigate, this is a quick fix - Oksana-->
+            <Max_Channel_Range>120</Max_Channel_Range>
+
+            
+            <Pre_Generate_Anim_Type> Special_Start_A </Pre_Generate_Anim_Type>
+				<Post_Generate_Anim_Type> Special_End_A </Post_Generate_Anim_Type>
+				<Generating_Anim_Type> Special_Action_A </Generating_Anim_Type>
+				<Effect_Generator_Name> DiscipleCaptureGenerator </Effect_Generator_Name>
+				<Activation_Style> User_Input </Activation_Style>
+				<Face_Target> true </Face_Target>
+				<Excluded_Unit_Categories> Hero </Excluded_Unit_Categories>
+				
+				<Can_Target_Enemies>Yes</Can_Target_Enemies>
+				<Can_Target_Neutral>Yes</Can_Target_Neutral>
+
+				<Deactivate_On_User_Attack_Order> true </Deactivate_On_User_Attack_Order>
+				<Deactivate_On_User_Move_Order> true </Deactivate_On_User_Move_Order>
+				<Hold_Fire_For_Special_Ability> true </Hold_Fire_For_Special_Ability>
+
+			</Effect_Generator_Ability>
+
+			<Effect_Generator_Ability Name="Enter_Sentry_Special_Ability">
+				
+				<Activation_Min_Range> 0 </Activation_Min_Range>
+				<Activation_Max_Range> 20 </Activation_Max_Range>
+				<Effect_Generator_Name> Enter_Sentry_Effect_Generator </Effect_Generator_Name>
+				<Activation_Style> SPECIAL_ATTACK </Activation_Style>
+				<Can_Target_Enemies>No</Can_Target_Enemies>
+				<Can_Target_Allies>Yes</Can_Target_Allies>
+				<Can_Target_Neutral>No</Can_Target_Neutral>
+
+				<Applicable_Unit_Types>
+               Masari_Sentry,
+               Masari_Sentry_Fire,
+               Masari_Sentry_Ice,
+            </Applicable_Unit_Types>
+
+			</Effect_Generator_Ability>
+
+		</Abilities>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability Name="Disciple_Capture">
+				<Type>EFFECT_GENERATOR</Type>
+				<Expiration_Seconds> 100000.0 </Expiration_Seconds>
+				<Recharge_Seconds>20.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> Masari_Disciple_Capture_Ability </GUI_Activated_Ability_Name>
+				<Effect_Generator_Name> DiscipleCaptureGenerator </Effect_Generator_Name>
+				<Targeting_Type> ENEMY_OBJECT </Targeting_Type>
+				<Allows_Targeting_Under_Fog> false </Allows_Targeting_Under_Fog>
+			</Unit_Ability>
+
+			<Unit_Ability Name="Enter_Sentry_Unit_Ability">
+				<Targeting_Type> ALLY_OBJECT </Targeting_Type>
+				<Type>EFFECT_GENERATOR</Type>
+				<GUI_Activated_Ability_Name> Enter_Sentry_Special_Ability </GUI_Activated_Ability_Name>
+				<Effect_Generator_Name> Enter_Sentry_Effect_Generator </Effect_Generator_Name>
+			</Unit_Ability>
+
+		</Unit_Abilities_Data>
+
+		<Effect_Generator_Data SubObjectList="Yes">
+
+			<Effect_Generator Name="MasariSwitchGenerator">
+				<Should_Deactivate_Manually> false </Should_Deactivate_Manually>
+				<Is_Independent_Generator>Yes</Is_Independent_Generator>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Duration> 1.0 </Duration>
+					<Effect_Name> MasariSwitchCleanseEffect </Effect_Name>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+				</Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry2">
+					<Duration> 0.5 </Duration>
+					<Base_Delay> 0.4 </Base_Delay>
+					<Effect_Name> MasariFullArmorEffect </Effect_Name>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+					<!-- only in ice mode -->
+					<Target_Filter_C> In_Ice_Mode </Target_Filter_C>
+				</Effect_Generator_Entry>
+
+			</Effect_Generator>
+
+			<Effect_Generator Name="Enter_Sentry_Effect_Generator">
+				<Should_Deactivate_Manually> false </Should_Deactivate_Manually>
+				<Is_Independent_Generator>Yes</Is_Independent_Generator>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> Disciple_Enter_Sentry_Effect </Effect_Name>
+					<Target_Gathering_Mask> Target </Target_Gathering_Mask>
+					<Target_Filter_C> Can_Enter_Vehicle </Target_Filter_C>
+               <Deactivate_Parent_If_Idle>yes</Deactivate_Parent_If_Idle>
+				</Effect_Generator_Entry>
+				
+			</Effect_Generator>
+
+			<!-- capture  -->
+			<Effect_Generator Name="DiscipleCaptureGenerator">
+				<Should_Deactivate_Manually> true </Should_Deactivate_Manually>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> DiscipleCaptureEffect </Effect_Name>
+					<Duration> -1.0 </Duration>
+					<Target_Gathering_Mask> Target </Target_Gathering_Mask>
+					<Target_Filter_C> Can_Be_Captured </Target_Filter_C>
+					<Deactivate_Parent_If_Idle> true </Deactivate_Parent_If_Idle>
+				</Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry2">
+					<Effect_Name> DiscipleCaptureSelfVisualEffect </Effect_Name>
+					<Duration> -1.0 </Duration>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+				</Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry3">
+					<Effect_Name> GenericInfantryCaptureSFXEffect </Effect_Name>
+					<Duration>-1.0</Duration>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+				</Effect_Generator_Entry>
+				
+			</Effect_Generator>
+
+			<!-- Standard Sell generator  - 06/28/2007 -->
+			<!--INCLUDE ".\Data\XML\Includes\Sell_Effect_Generators\MASARI_Sell_Generators.xml" -->
+			
+		</Effect_Generator_Data>
+
+	</X13_Masari_Units>
+
+
+	<!-- **************************************************************************************** -->
+	<!-- *** VARIANTS *************************************************************************** -->
+	<!-- **************************************************************************************** -->
+
+	<!-- If you update this, you may need to update Masari_Sentry_Disciple_Hardpoint_Fire in Masari_VEH_Sentry.xml. -->
+	<X13_Masari_Units Name="Masari_Disciple_Fire">
+		<Variant_Of_Existing_Type> Masari_Disciple </Variant_Of_Existing_Type>
+
+		<!-- INTERFACE -->
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+		<!-- MOVEMENT -->
+		<Max_Speed>1.2</Max_Speed>
+		<Movement_Animation_Speed> 1.2 </Movement_Animation_Speed>
+
+		<!-- CONFLICT -->
+		<Land_FOW_Reveal_Range>240.0</Land_FOW_Reveal_Range>
+		<Attack_Category_Restrictions> Resource | Resource_INST </Attack_Category_Restrictions>
+
+		<BehaviorType Name="WeaponBehaviorType">
+			<Muzzle_Bone_Name> MuzzleA </Muzzle_Bone_Name>
+			<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
+			<Targeting_Priority_Set> Masari_Disciple_Target_Priority </Targeting_Priority_Set>
+			<Targeting_Fire_Inaccuracy> 1.0 </Targeting_Fire_Inaccuracy>
+			<Targeting_Min_Attack_Distance> 0.0 </Targeting_Min_Attack_Distance>
+			<Targeting_Max_Attack_Distance> 225.0 </Targeting_Max_Attack_Distance>
+
+			<Projectile_Types>Proj_Masari_Disciple_Light_Bolt</Projectile_Types>
+			<Projectile_Fire_Recharge_Seconds> 3.0 </Projectile_Fire_Recharge_Seconds>
+			<Projectile_Fire_Pulse_Count>1</Projectile_Fire_Pulse_Count>
+			<Projectile_Fire_Pulse_Delay_Seconds>0.3</Projectile_Fire_Pulse_Delay_Seconds>
+		</BehaviorType>
+		
+		
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Armor_Type> Armor_Masari_Infantry_Heavy </Armor_Type>
+		</BehaviorType>
+
+      <BehaviorType Name="ProductionBehaviorType">
+         <Is_Strategic_Buildable_Type> No </Is_Strategic_Buildable_Type>
+      </BehaviorType>
+            
+		<BehaviorType Name="TooltipBehaviorType">
+			<Tooltip_Description_Text_ID> TEXT_TOOLTIP_DESCRIPTION_MASARI_DISCIPLE_LIGHT </Tooltip_Description_Text_ID>
+			<Tooltip_Category> TEXT_TOOLTIP_CATEGORY_INFANTRY </Tooltip_Category>
+		</BehaviorType>
+
+
+		<Effect_Generator_Data SubObjectList="Yes" Replace="False">
+
+			<Effect_Generator Name="FireVisualGenerator">
+				<Starts_Active> true </Starts_Active>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> MasariDiscipleFireVisualEffect </Effect_Name>
+					<Duration> -1.0 </Duration>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+				</Effect_Generator_Entry>
+
+			</Effect_Generator>
+
+         <!-- Standard DMA generator - Oksana 05/14/2007 -->
+         <!--INCLUDE ".\Data\XML\Includes\Masari_DMA\MASARI_DMA_Light_Mode_Generators.xml" -->
+
+
+      </Effect_Generator_Data>
+
+   </X13_Masari_Units>
+
+
+
+
+
+
+
+   <!-- If you update this, you may need to update Masari_Sentry_Disciple_Hardpoint_Ice in Masari_VEH_Sentry.xml. -->
+	<X13_Masari_Units Name="Masari_Disciple_Ice">
+		<Variant_Of_Existing_Type> Masari_Disciple </Variant_Of_Existing_Type>
+
+		<!-- INTERFACE -->
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+		<!-- MOVEMENT -->
+		<Max_Speed> 1.2 </Max_Speed>
+		<Movement_Animation_Speed> 1.2 </Movement_Animation_Speed>
+		<!-- CONFLICT -->
+		<Land_FOW_Reveal_Range>175.0</Land_FOW_Reveal_Range>
+		<Attack_Category_Restrictions> Resource | Resource_INST </Attack_Category_Restrictions>
+
+		<BehaviorType Name="WeaponBehaviorType">
+			<Muzzle_Bone_Name> MuzzleB </Muzzle_Bone_Name>
+			<Can_Attack_Without_Weapon_Behavior> true </Can_Attack_Without_Weapon_Behavior>
+			<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
+			<Targeting_Priority_Set> Masari_Disciple_Target_Priority </Targeting_Priority_Set>
+			<Targeting_Fire_Inaccuracy> 5.0 </Targeting_Fire_Inaccuracy>
+			<Targeting_Min_Attack_Distance> 0.0 </Targeting_Min_Attack_Distance>
+			<Targeting_Max_Attack_Distance> 160.0 </Targeting_Max_Attack_Distance>
+
+			<Projectile_Types>Proj_Masari_Disciple_Ice</Projectile_Types>
+			<Projectile_Fire_Recharge_Seconds> 3.0 </Projectile_Fire_Recharge_Seconds>
+			<Projectile_Fire_Pulse_Count>3</Projectile_Fire_Pulse_Count>
+			<Projectile_Fire_Pulse_Delay_Seconds>0.3</Projectile_Fire_Pulse_Delay_Seconds>
+		</BehaviorType>
+
+		<BehaviorType Name="ProductionBehaviorType">
+			<Is_Strategic_Buildable_Type> No </Is_Strategic_Buildable_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="TooltipBehaviorType">
+			<Tooltip_Description_Text_ID> TEXT_TOOLTIP_DESCRIPTION_MASARI_DISCIPLE_DARK </Tooltip_Description_Text_ID>
+			<Tooltip_Category> TEXT_TOOLTIP_CATEGORY_INFANTRY </Tooltip_Category>
+		</BehaviorType>
+
+		<Attributes SubObjectList="Yes">
+			<DMA_Max> 150 </DMA_Max>
+			<DMA_Regen_Rate> 5 </DMA_Regen_Rate>
+		</Attributes>
+
+		<Effect_Generator_Data SubObjectList="Yes" Replace="False">
+
+			<Effect_Generator Name="IceVisualGenerator">
+
+				<Starts_Active> true </Starts_Active>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> MasariDiscipleIceVisualEffect </Effect_Name>
+					<Duration> -1.0 </Duration>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+				</Effect_Generator_Entry>
+
+			</Effect_Generator>
+
+         <!-- Standard DMA generator - Oksana 05/14/2007 -->
+         <!--INCLUDE ".\Data\XML\Includes\Masari_DMA\MASARI_DMA_Dark_Mode_Generators.xml" -->
+
+
+      </Effect_Generator_Data>
+
+   </X13_Masari_Units>
+
+
+
+   <X13_Masari_Units Name="Masari_Disciple_Death_Clone_Resource">
+      <Variant_Of_Existing_Type>Masari_Disciple</Variant_Of_Existing_Type>
+      <Use_Base_Type_By_Default> false </Use_Base_Type_By_Default>
+
+      <CategoryMask> Resource_INST </CategoryMask>
+
+      <LandBehavior>
+         HIDE_WHEN_FOGGED,
+         BALLISTIC,
+         RESOURCE,
+         EFFECT_REGISTRY,
+         ATTRIBUTE_DIRECTORY
+      </LandBehavior>
+
+      <BehaviorType Name="ProductionBehaviorType">
+         <Is_Strategic_Buildable_Type> No </Is_Strategic_Buildable_Type>
+      </BehaviorType>
+
+      <BehaviorType Name="ResourceBehaviorType">
+         <Resource_Units> 12 </Resource_Units>
+         <Resource_For_Faction> Alien </Resource_For_Faction>
+         <Is_Single_Resource> true </Is_Single_Resource>
+         <Use_Death_Behavior> true </Use_Death_Behavior>
+      </BehaviorType>
+
+      <Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+   </X13_Masari_Units>
+
+
+
+   <!-- **************************************************************************************** -->
+   <!-- *** PROJECTILES ************************************************************************ -->
+   <!-- **************************************************************************************** -->
+
+
+	<Projectile Name="Proj_Masari_Disciple_Light_Bolt">
+
+		<!-- ART -->
+		<Land_Model_Name>ZI_Disciple_Light_missle.alo</Land_Model_Name>
+		<Projectile_Custom_Render>0</Projectile_Custom_Render>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Shadow_Enabled>False</Shadow_Enabled>
+
+		<AssetBank> BANK_MASARI </AssetBank>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+		<!-- MOVEMENT -->
+		<Max_Speed>8.0</Max_Speed>
+		<Max_Rate_Of_Turn>1.0</Max_Rate_Of_Turn>
+
+		<!-- CONFLICT -->
+		<AI_Combat_Power> 1 </AI_Combat_Power>
+
+		<!-- BEHAVIORS -->
+		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED, EFFECT_GENERATOR</Behavior>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Damage_Type> Damage_Masari_Disciple_Weapon </Damage_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="ProjectileBehaviorType">
+			<Projectile_Damages_Random_Hard_Points>No</Projectile_Damages_Random_Hard_Points>
+			<Projectile_Category>LASER</Projectile_Category>
+			<Projectile_Max_Flight_Distance>400.0</Projectile_Max_Flight_Distance>
+			<Projectile_Damage>30.0</Projectile_Damage>
+			<Projectile_Does_Shield_Damage>True</Projectile_Does_Shield_Damage>
+			<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+			<Projectile_Target_Point_On_Terrain> True </Projectile_Target_Point_On_Terrain>
+			<Projectile_Object_Detonation_Particle>Masari_Disciple_Light_Missle_detonation</Projectile_Object_Detonation_Particle>
+			<Projectile_Ground_Detonation_Particle>Masari_Disciple_Light_Missle_Miss_detonation_Ground</Projectile_Ground_Detonation_Particle>
+			<Projectile_Lifetime_Detonation_Particle>Masari_Disciple_Light_Missle_Miss_detonation</Projectile_Lifetime_Detonation_Particle>
+			<Projectile_Absorbed_By_Shields_Particle />
+
+			<Projectile_SFXEvent_Detonate>SFX_Masari_Detonation_1</Projectile_SFXEvent_Detonate>
+			<Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Masari_Small_Damage_Detonation_Light </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
+			<SFXEvent_Projectile_Flying_Loop>  SFX_Masari_Missile_Loop </SFXEvent_Projectile_Flying_Loop>
+			<SFXEvent_Projectile_Start_Flight>  SFX_Masari_Missile_Fire </SFXEvent_Projectile_Start_Flight>
+			<Impact_Effect_Generator_Name> PurifyingLightImpactGenerator </Impact_Effect_Generator_Name>
+		</BehaviorType>
+
+      <Effect_Generator_Data SubObjectList="Yes">
+
+			<!-- Standard Purifying Light generator - Jeff P 07/09/2007 -->
+			<!--INCLUDE ".\Data\XML\Includes\Masari_Impact_Generators\MASARI_Purifying_Light_Generator.xml" -->
+
+		</Effect_Generator_Data>
+
+	</Projectile>
+
+
+
+
+	<Projectile Name="Proj_Masari_Disciple_Ice">
+
+		<!-- ART -->
+		<Land_Model_Name>pp_ZI_Dispciple_Dark_Missle.alo</Land_Model_Name>
+		<Projectile_Custom_Render>0</Projectile_Custom_Render>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Shadow_Enabled>False</Shadow_Enabled>
+
+		<AssetBank> BANK_MASARI </AssetBank>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+		<!-- MOVEMENT -->
+		<Max_Speed>15.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
+
+		<!-- CONFLICT -->
+		<AI_Combat_Power> 1 </AI_Combat_Power>
+
+		<!-- BEHAVIORS -->
+		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED, EFFECT_GENERATOR</Behavior>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Damage_Type> Damage_Masari_Disciple_Weapon </Damage_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="ProjectileBehaviorType">
+			<Projectile_Damages_Random_Hard_Points>No</Projectile_Damages_Random_Hard_Points>
+			<Projectile_Category>LASER</Projectile_Category>
+			<Projectile_Max_Flight_Distance>1000.0</Projectile_Max_Flight_Distance>
+			<Projectile_Damage>10.0</Projectile_Damage>
+			<Projectile_Does_Shield_Damage>True</Projectile_Does_Shield_Damage>
+			<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+			<Projectile_Target_Point_On_Terrain> True </Projectile_Target_Point_On_Terrain>
+			<Projectile_Object_Detonation_Particle>Masari_Disciple_Dark_Missle_detonation</Projectile_Object_Detonation_Particle>
+			<Projectile_Ground_Detonation_Particle>Masari_Disciple_Dark_Missle_Miss_detonation_Ground</Projectile_Ground_Detonation_Particle>
+			<Projectile_Lifetime_Detonation_Particle>Masari_Disciple_Dark_Missle_Miss_detonation</Projectile_Lifetime_Detonation_Particle>
+			<Projectile_Absorbed_By_Shields_Particle>Masari_Disciple_Dark_Missle_Miss_detonation</Projectile_Absorbed_By_Shields_Particle>
+			<Projectile_SFXEvent_Detonate>SFX_Masari_Detonation_1</Projectile_SFXEvent_Detonate>
+			<Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Masari_Small_Damage_Detonation_Dark </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
+			<SFXEvent_Projectile_Flying_Loop>  SFX_Masari_Missile_Loop </SFXEvent_Projectile_Flying_Loop>
+			<SFXEvent_Projectile_Start_Flight>  SFX_Masari_Missile_Fire </SFXEvent_Projectile_Start_Flight>
+			<Impact_Effect_Generator_Name> CripplingShotsImpactGenerator </Impact_Effect_Generator_Name>
+		</BehaviorType>
+
+		<Effect_Generator_Data SubObjectList="Yes">
+
+			<!-- Standard Crippling Shots - Jeff P 06/13/2007 -->
+			<!--INCLUDE ".\Data\XML\Includes\Masari_Impact_Generators\MASARI_Crippling_Shots_Generator.xml" -->
+
+		</Effect_Generator_Data>
+
+	</Projectile>
+
+
+
+
+</Masari_INF_Disciple_XML>

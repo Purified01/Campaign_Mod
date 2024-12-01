@@ -1,0 +1,3315 @@
+<?xml version="1.0"?>
+
+<SFXEvents>
+
+
+	<!-- ======================================================================= -->
+	<!-- MILITARY HUD RESPONSES						  										  -->
+	<!-- ======================================================================= -->
+	<!--  -->
+
+
+	<SFXEvent Name="TEST_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>TEST_1.wav.wav</Samples>
+	</SFXEvent>
+
+	<SFXEvent Name="TEST_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>TEST_2.wav</Samples>
+	</SFXEvent>
+
+	<SFXEvent Name="TEST_3">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>TEST_3.wav</Samples>
+	</SFXEvent>
+
+
+
+<!--  
+
+	<SFXEvent Name="COM_BUILD_INFANTRY">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM0101_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_BUILD_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="COM_BUILD_STRUCTURE">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM0102_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_BUILD_2</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="COM_BUILD_VEHICLE">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM0103_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_BUILD_3</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="COM_BUILD_UPGRADE">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM0104_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_BUILD_4</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="COM_BUILD_INFANTRY_COMPLETE">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM0105_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_BUILD_5</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="COM_BUILD_STRUCTURE_COMPLETE">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM0106_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_BUILD_6</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="COM_BUILD_VEHICLE_COMPLETE">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM0107_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_BUILD_7</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="COM_BUILD_UPGRADE_COMPLETE">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM0108_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_BUILD_8</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="COM_BUILD_INFANTRY_CANCELED">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM0109_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_BUILD_9</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="COM_BUILD_STRUCTURE_CANCELED">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM0110_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_BUILD_10</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="COM_BUILD_VEHICLE_CANCELED">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM0111_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_BUILD_11</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="COM_BUILD_UPGRADE_CANCELED">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM0112_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_BUILD_12</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="COM_BUILD_RESEARCH">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM0113_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_BUILD_13</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="COM_BUILD_RESEARCH_COMPLETE">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM0114_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_BUILD_14</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="COM_BUILD_RESEARCH_CANCELED">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM0115_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_BUILD_15</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="COM_BUILD_HERO">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM0116_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_BUILD_16</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="COM_BUILD_HERO_COMPLETE">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM0117_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_BUILD_17</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="COM_BUILD_HERO_CANCELED">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM0118_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_BUILD_18</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+-->
+
+
+
+
+	<SFXEvent Name="COM_LOST_UNIT">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM0201_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_LOST_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="COM_LOST_STRUCTURE">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM0202_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_LOST_2</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+<!--  
+	<SFXEvent Name="COM_LOST_WALKER">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM0203_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_LOST_3</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+-->
+	<SFXEvent Name="COM_LOST_HERO">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM0204_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_LOST_4</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+	<SFXEvent Name="COM_UNDER_ATTACK_UNIT">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM0301_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_UNDER_ATTACK_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="COM_UNDER_ATTACK_STRUCTURE">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM0302_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_UNDER_ATTACK_2</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+<!--  
+	<SFXEvent Name="COM_UNDER_ATTACK_WALKER">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM0303_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_UNDER_ATTACK_3</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+-->
+	<SFXEvent Name="COM_UNDER_ATTACK_HERO">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM0304_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_UNDER_ATTACK_4</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+<!--  
+	<SFXEvent Name="COM_SOLD_UNIT">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM0401_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_SOLD_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+-->
+
+
+
+   <SFXEvent Name="COM_SUPER_WEAPON_BUILT">
+      <Use_Preset>Preset_UR</Use_Preset>
+      <Samples>I000_COM0501_ENG.wav</Samples>
+      <Localize> Yes </Localize>
+      <Play_Sequentially> Yes </Play_Sequentially>
+      <Text_ID>TEXT_SFX_COM_SUPER_WEAPON_1</Text_ID>
+      <Overlap_Test> COM </Overlap_Test>
+   </SFXEvent>
+   
+	<SFXEvent Name="COM_SUPER_WEAPON_READY">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM0501_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_SUPER_WEAPON_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+ 
+	<SFXEvent Name="COM_SUPER_WEAPON_LAUNCHED">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM0502_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_SUPER_WEAPON_2</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+   <SFXEvent Name="COM_MEGA_WEAPON_BUILT">
+      <Use_Preset>Preset_UR</Use_Preset>
+      <Samples>I000_COM0501_ENG.wav</Samples>
+      <Localize> Yes </Localize>
+      <Play_Sequentially> Yes </Play_Sequentially>
+      <Text_ID>TEXT_SFX_COM_SUPER_WEAPON_1</Text_ID>
+      <Overlap_Test> COM </Overlap_Test>
+   </SFXEvent>
+
+   <SFXEvent Name="COM_MEGA_WEAPON_READY">
+      <Use_Preset>Preset_UR</Use_Preset>
+      <Samples>I000_COM0501_ENG.wav</Samples>
+      <Localize> Yes </Localize>
+      <Play_Sequentially> Yes </Play_Sequentially>
+      <Text_ID>TEXT_SFX_COM_SUPER_WEAPON_1</Text_ID>
+      <Overlap_Test> COM </Overlap_Test>
+   </SFXEvent>
+
+   <SFXEvent Name="COM_MEGA_WEAPON_LAUNCHED">
+      <Use_Preset>Preset_UR</Use_Preset>
+      <Samples>I000_COM0502_ENG.wav</Samples>
+      <Localize> Yes </Localize>
+      <Play_Sequentially> Yes </Play_Sequentially>
+      <Text_ID>TEXT_SFX_COM_SUPER_WEAPON_2</Text_ID>
+      <Overlap_Test> COM </Overlap_Test>
+   </SFXEvent>
+
+   
+   <SFXEvent Name="COM_SUPER_WEAPON_3">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM0503_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_SUPER_WEAPON_3</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+	<SFXEvent Name="COM_UNABLE_NOT_ENOUGH_RESOURCES">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM0601_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_UNABLE_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+	<SFXEvent Name="COM_OBJECTIVE_COMPLETED">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM0701_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_OBJECTIVE_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="COM_OBJECTIVE_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM0702_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_OBJECTIVE_2</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+	<SFXEvent Name="COM_REINFORCEMENTS_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM0801_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_REINFORCEMENTS_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+	<SFXEvent Name="COM_RESOURCES_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM0901_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_RESOURCES_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="COM_RESOURCES_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM0902_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_RESOURCES_2</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+	<SFXEvent Name="COM_ENEMY_BUILD_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM1001_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_ENEMY_BUILD_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+<!--  
+
+
+
+	<SFXEvent Name="COM_HEAVY_LOSS_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM1101_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_HEAVY_LOSS_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+	<SFXEvent Name="COM_ENEMY_SUPER_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM1201_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_ENEMY_SUPER_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="COM_ENEMY_SUPER_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM1202_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_ENEMY_SUPER_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="COM_ENEMY_SUPER_3">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM1203_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_ENEMY_SUPER_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+	<SFXEvent Name="COM_ENEMY_HERO_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM1301_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_ENEMY_HERO_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+	<SFXEvent Name="COM_DEFCON_LVL_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM1401_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_DEFCON_LVL_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="COM_DEFCON_LVL_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM1402_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_DEFCON_LVL_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="COM_DEFCON_LVL_3">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM1403_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_DEFCON_LVL_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="COM_DEFCON_LVL_4">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM1404_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_DEFCON_LVL_4</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+	<SFXEvent Name="COM_DEFCON_START_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM1501_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_DEFCON_START_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+	<SFXEvent Name="COM_DEFCON_WARN_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM1601_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_DEFCON_START_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="COM_DEFCON_WARN_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM1602_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_DEFCON_START_2</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+	<SFXEvent Name="COM_ALLIANCE_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM1701_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_ALLIANCE_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="COM_ALLIANCE_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM1702_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_ALLIANCE_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="COM_ALLIANCE_3">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM1703_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_ALLIANCE_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+	<SFXEvent Name="COM_EN_DEFEAT_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM1801_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_EN_DEFEAT_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+	<SFXEvent Name="COM_ALLY_STATUS_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM1901_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_ALLY_STATUS_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="COM_ALLY_STATUS_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM1902_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_ALLY_STATUS_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="COM_ALLY_STATUS_3">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM1903_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_ALLY_STATUS_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+	<SFXEvent Name="COM_ENEMY_DETECT_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM2001_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_ENEMY_DETECT_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="COM_ENEMY_DETECT_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM2002_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_ENEMY_DETECT_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+	<SFXEvent Name="COM_POPCAP_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM2101_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_POPCAP_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+	<SFXEvent Name="COM_ATK_GLOBAL_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM2201_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_ATK_GLOBAL_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+	<SFXEvent Name="COM_NEUT_LOST_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM2301_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_NEUT_LOST_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="COM_NEUT_LOST_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_COM2302_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_COM_NEUT_LOST_2</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+-->
+
+
+
+
+
+
+
+
+	<!-- ======================================================================= -->
+	<!-- HIERARCHY HUD RESPONSES						  											  -->
+	<!-- ======================================================================= -->
+
+
+   <SFXEvent Name="HCO_FAIL_TACTICAL_STRUCTURE_BUILD">
+      <Use_Preset>Preset_UR</Use_Preset>
+      <Samples>Alien_Glyph_Carver_Attack_01.wav Alien_Glyph_Carver_Attack_02.wav Alien_Glyph_Carver_Attack_03.wav Alien_Glyph_Carver_Attack_04.wav </Samples>
+      <Min_Pitch>100</Min_Pitch>
+      <Max_Pitch>100</Max_Pitch>
+      <Localize> No </Localize>
+      <Play_Sequentially> Yes </Play_Sequentially>
+      <Overlap_Test> COM </Overlap_Test>
+   </SFXEvent>
+
+   <SFXEvent Name="HCO_START_TACTICAL_STRUCTURE_BUILD">
+      <Use_Preset>Preset_UR</Use_Preset>
+      <Min_Pitch>100</Min_Pitch>
+      <Max_Pitch>100</Max_Pitch>
+      <Samples>Alien_Glyph_Carver_Move_01.wav Alien_Glyph_Carver_Move_02.wav Alien_Glyph_Carver_Move_03.wav Alien_Glyph_Carver_Move_04.wav </Samples>
+      <Localize> No </Localize>
+      <Play_Sequentially> Yes </Play_Sequentially>
+      <Overlap_Test> COM </Overlap_Test>
+   </SFXEvent>
+
+   
+   <!--  
+
+	<SFXEvent Name="HCO_BUILD_INFANTRY">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO0101_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_BUILD_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="HCO_BUILD_STRUCTURE">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO0102_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_BUILD_2</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="HCO_BUILD_VEHICLE">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO0103_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_BUILD_3</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="HCO_BUILD_UPGRADE">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO0104_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_BUILD_4</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="HCO_BUILD_INFANTRY_COMPLETE">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO0105_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_BUILD_5</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="HCO_BUILD_STRUCTURE_COMPLETE">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO0106_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_BUILD_6</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="HCO_BUILD_VEHICLE_COMPLETE">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO0107_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_BUILD_7</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+-->
+	<SFXEvent Name="HCO_BUILD_UPGRADE_COMPLETE">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO0108_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_BUILD_8</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+<!--  
+	<SFXEvent Name="HCO_BUILD_INFANTRY_CANCELED">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO0109_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_BUILD_9</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="HCO_BUILD_STRUCTURE_CANCELED">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO0110_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_BUILD_10</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="HCO_BUILD_VEHICLE_CANCELED">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO0111_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_BUILD_11</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="HCO_BUILD_UPGRADE_CANCELED">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO0112_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_BUILD_12</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="HCO_BUILD_RESEARCH">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO0113_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_BUILD_13</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="HCO_BUILD_RESEARCH_COMPLETE">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO0114_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_BUILD_14</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="HCO_BUILD_RESEARCH_CANCELED">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO0115_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_BUILD_15</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="HCO_BUILD_HERO">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO0116_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_BUILD_16</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="HCO_BUILD_HERO_COMPLETE">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO0117_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_BUILD_17</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="HCO_BUILD_HERO_CANCELED">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO0118_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_BUILD_18</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+-->
+
+
+
+
+
+	<SFXEvent Name="HCO_LOST_UNIT">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO0201_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_LOST_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+   <SFXEvent Name="HCO_LOST_STRUCTURE">
+      <Use_Preset>Preset_UR</Use_Preset>
+      <Samples>I000_HCO0202_ENG.wav</Samples>
+      <Localize> Yes </Localize>
+      <Play_Sequentially> Yes </Play_Sequentially>
+      <Text_ID>TEXT_SFX_HCO_LOST_2</Text_ID>
+      <Overlap_Test> COM </Overlap_Test>
+   </SFXEvent>
+
+  	<SFXEvent Name="HCO_LOST_WALKER">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO0203_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_LOST_3</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="HCO_LOST_HERO">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO0204_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_LOST_4</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+	<SFXEvent Name="HCO_UNDER_ATTACK_UNIT">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO0301_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_UNDER_ATTACK_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="HCO_UNDER_ATTACK_STRUCTURE">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO0302_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_UNDER_ATTACK_2</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+      
+   <SFXEvent Name="HCO_UNDER_ATTACK_CAPTURED_STRUCTURE">
+      <Use_Preset>Preset_UR</Use_Preset>
+      <Samples>I000_HCO0302_ENG.wav</Samples>
+      <Localize> Yes </Localize>
+      <Play_Sequentially> Yes </Play_Sequentially>
+      <Text_ID>TEXT_SFX_HCO_UNDER_ATTACK_2</Text_ID>
+      <Overlap_Test> COM </Overlap_Test>
+   </SFXEvent>
+
+	<SFXEvent Name="HCO_UNDER_ATTACK_WALKER">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO0303_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_UNDER_ATTACK_3</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="HCO_UNDER_ATTACK_HERO">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO0304_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_UNDER_ATTACK_4</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+<!--  
+	<SFXEvent Name="HCO_SOLD_UNIT">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO0401_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_SOLD_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+-->
+
+
+   <!-- Mass Drop BUILT -->
+   <SFXEvent Name="HCO_SUPER_WEAPON_1_BUILT">
+      <Use_Preset>Preset_UR</Use_Preset>
+      <Samples>I000_HCO0501_ENG.wav</Samples>
+      <Localize> Yes </Localize>
+      <Play_Sequentially> Yes </Play_Sequentially>
+      <Text_ID>TEXT_SFX_HCO_SUPER_WEAPON_1</Text_ID>
+      <Overlap_Test> COM </Overlap_Test>
+   </SFXEvent>
+
+   <!-- Cascade BUILT -->
+   <SFXEvent Name="HCO_SUPER_WEAPON_2_BUILT">
+      <Use_Preset>Preset_UR</Use_Preset>
+      <Samples>I000_HCO0501_ENG.wav</Samples>
+      <Localize> Yes </Localize>
+      <Play_Sequentially> Yes </Play_Sequentially>
+      <Text_ID>TEXT_SFX_HCO_SUPER_WEAPON_1</Text_ID>
+      <Overlap_Test> COM </Overlap_Test>
+   </SFXEvent>
+
+   <!-- Mass Drop READY -->
+   <SFXEvent Name="HCO_SUPER_WEAPON_1_READY">
+      <Use_Preset>Preset_UR</Use_Preset>
+      <Samples>I000_HCO0501_ENG.wav</Samples>
+      <Localize> Yes </Localize>
+      <Play_Sequentially> Yes </Play_Sequentially>
+      <Text_ID>TEXT_SFX_HCO_SUPER_WEAPON_1</Text_ID>
+      <Overlap_Test> COM </Overlap_Test>
+   </SFXEvent>
+
+   <!-- Cascade READY -->
+   <SFXEvent Name="HCO_SUPER_WEAPON_2_READY">
+      <Use_Preset>Preset_UR</Use_Preset>
+      <Samples>I000_HCO0501_ENG.wav</Samples>
+      <Localize> Yes </Localize>
+      <Play_Sequentially> Yes </Play_Sequentially>
+      <Text_ID>TEXT_SFX_HCO_SUPER_WEAPON_1</Text_ID>
+      <Overlap_Test> COM </Overlap_Test>
+   </SFXEvent>
+
+   <!-- Mass Drop LAUNCHED -->
+   <SFXEvent Name="HCO_SUPER_WEAPON_1_LAUNCHED">
+      <Use_Preset>Preset_UR</Use_Preset>
+      <Samples>I000_HCO0501_ENG.wav</Samples>
+      <Localize> Yes </Localize>
+      <Play_Sequentially> Yes </Play_Sequentially>
+      <Text_ID>TEXT_SFX_HCO_SUPER_WEAPON_1</Text_ID>
+      <Overlap_Test> COM </Overlap_Test>
+   </SFXEvent>
+
+   <!-- Cascade LAUNCHED -->
+   <SFXEvent Name="HCO_SUPER_WEAPON_2_LAUNCHED">
+      <Use_Preset>Preset_UR</Use_Preset>
+      <Samples>I000_HCO0501_ENG.wav</Samples>
+      <Localize> Yes </Localize>
+      <Play_Sequentially> Yes </Play_Sequentially>
+      <Text_ID>TEXT_SFX_HCO_SUPER_WEAPON_1</Text_ID>
+      <Overlap_Test> COM </Overlap_Test>
+   </SFXEvent>
+   
+   
+	<SFXEvent Name="HCO_SUPER_WEAPON_3">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO0503_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_SUPER_WEAPON_3</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+<!--  
+	<SFXEvent Name="HCO_UNABLE_NOT_ENOUGH_RESOURCES">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO0601_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_UNABLE_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+-->
+
+
+
+
+	<SFXEvent Name="HCO_OBJECTIVE_COMPLETED">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO0701_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_OBJECTIVE_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="HCO_OBJECTIVE_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO0702_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_OBJECTIVE_2</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+	<SFXEvent Name="HCO_REINFORCEMENTS_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO0801_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_REINFORCEMENTS_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+<!--  
+	<SFXEvent Name="HCO_RESOURCES_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO0901_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_RESOURCES_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="HCO_RESOURCES_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO0902_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_RESOURCES_2</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+-->
+
+
+
+	<SFXEvent Name="HCO_ENEMY_BUILD_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO1001_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_ENEMY_BUILD_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+	<SFXEvent Name="HCO_HEAVY_LOSS_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO1101_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_HEAVY_LOSS_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+	<SFXEvent Name="HCO_ENEMY_SUPER_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO1201_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_ENEMY_SUPER_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="HCO_ENEMY_SUPER_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO1202_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_ENEMY_SUPER_2</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="HCO_ENEMY_SUPER_3">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO1203_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_ENEMY_SUPER_3</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+	<SFXEvent Name="HCO_ENEMY_HERO_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO1301_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_ENEMY_HERO_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+	<SFXEvent Name="HCO_DEFCON_LVL_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO1401_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_DEFCON_LVL_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="HCO_DEFCON_LVL_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO1402_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_DEFCON_LVL_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="HCO_DEFCON_LVL_3">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO1403_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_DEFCON_LVL_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="HCO_DEFCON_LVL_4">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO1404_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_DEFCON_LVL_4</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+	<SFXEvent Name="HCO_DEFCON_START_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO1501_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_DEFCON_START_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+	<SFXEvent Name="HCO_DEFCON_WARN_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO1601_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_DEFCON_START_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="HCO_DEFCON_WARN_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO1602_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_DEFCON_START_2</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+	<SFXEvent Name="HCO_ALLIANCE_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO1701_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_ALLIANCE_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="HCO_ALLIANCE_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO1702_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_ALLIANCE_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="HCO_ALLIANCE_3">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO1703_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_ALLIANCE_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+	<SFXEvent Name="HCO_EN_DEFEAT_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO1801_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_EN_DEFEAT_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+	<SFXEvent Name="HCO_ALLY_STATUS_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO1901_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_ALLY_STATUS_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="HCO_ALLY_STATUS_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO1902_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_ALLY_STATUS_2</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="HCO_ALLY_STATUS_3">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO1903_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_ALLY_STATUS_3</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+	<SFXEvent Name="HCO_ENEMY_DETECT_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO2001_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_ENEMY_DETECT_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="HCO_ENEMY_DETECT_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO2002_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_ENEMY_DETECT_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+	<SFXEvent Name="HCO_POPCAP_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO2101_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_POPCAP_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+	<SFXEvent Name="HCO_ATK_GLOBAL_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO2201_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_ATK_GLOBAL_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+	<SFXEvent Name="HCO_NEUT_LOST_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO2301_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_NEUT_LOST_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="HCO_NEUT_LOST_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO2302_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_NEUT_LOST_2</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="HCO_GLOBAL_PROD_01">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HCO2401_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HCO_GLOBAL_PROD_01</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="HSC_RESEARCH_START_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HSC0101_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HSC_RESEARCH_START_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="HSC_RESEARCH_START_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HSC0102_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HSC_RESEARCH_START_2</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="HSC_RESEARCH_INSUF_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HSC0201_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HSC_RESEARCH_INSUF_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="HSC_RESEARCH_CANCEL_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HSC0301_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HSC_RESEARCH_CANCEL_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="HSC_RESEARCH_UNDO_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HSC0401_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HSC_RESEARCH_UNDO_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="HSC_RESEARCH_ENEMY_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HSC0501_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HSC_RESEARCH_ENEMY_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="HSC_RESEARCH_ENEMY_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HSC0502_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HSC_RESEARCH_ENEMY_2</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="HSC_RESEARCH_COMPLETE_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HSC0601_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HSC_RESEARCH_COMPLETE_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="HSC_RESEARCH_COMPLETE_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HSC0602_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HSC_RESEARCH_COMPLETE_2</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="HSC_RESEARCH_LOCKOUT_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_HSC0701_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_HSC_RESEARCH_LOCKOUT_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+ 
+
+
+	<!-- ======================================================================= -->
+	<!-- NOVUS HUD RESPONSES						  											  -->
+	<!-- ======================================================================= -->
+
+<!--  
+	<SFXEvent Name="NCO_BUILD_INFANTRY">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO0101_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_BUILD_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="NCO_BUILD_STRUCTURE">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO0102_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_BUILD_2</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="NCO_BUILD_VEHICLE">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO0103_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_BUILD_3</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="NCO_BUILD_UPGRADE">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO0104_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_BUILD_4</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="NCO_BUILD_INFANTRY_COMPLETE">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO0105_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_BUILD_5</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="NCO_BUILD_STRUCTURE_COMPLETE">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO0106_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_BUILD_6</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="NCO_BUILD_VEHICLE_COMPLETE">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO0107_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_BUILD_7</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+-->
+	<SFXEvent Name="NCO_BUILD_UPGRADE_COMPLETE">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO0108_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_BUILD_8</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+<!--  
+	<SFXEvent Name="NCO_BUILD_INFANTRY_CANCELED">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO0109_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_BUILD_9</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="NCO_BUILD_STRUCTURE_CANCELED">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO0110_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_BUILD_10</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="NCO_BUILD_VEHICLE_CANCELED">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO0111_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_BUILD_11</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="NCO_BUILD_UPGRADE_CANCELED">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO0112_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_BUILD_12</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="NCO_BUILD_RESEARCH">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO0113_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_BUILD_13</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="NCO_BUILD_RESEARCH_COMPLETE">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO0114_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_BUILD_14</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="NCO_BUILD_RESEARCH_CANCELED">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO0115_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_BUILD_15</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="NCO_BUILD_HERO">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO0116_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_BUILD_16</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="NCO_BUILD_HERO_COMPLETE">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO0117_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_BUILD_17</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="NCO_BUILD_HERO_CANCELED">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO0118_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_BUILD_18</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+-->
+
+
+
+
+   <SFXEvent Name="NCO_FAIL_TACTICAL_STRUCTURE_BUILD">
+      <Use_Preset>Preset_UR</Use_Preset>
+      <Samples>U000_CON0701_ENG.wav</Samples>
+      <Localize> Yes </Localize>
+      <Play_Sequentially> Yes </Play_Sequentially>
+      <Text_ID>TEXT_SFX_CON_ABILITY_B_1</Text_ID>
+      <Overlap_Test> COM </Overlap_Test>
+   </SFXEvent>
+   
+
+   <SFXEvent Name="NCO_START_TACTICAL_STRUCTURE_BUILD">
+      <Use_Preset>Preset_UR</Use_Preset>
+      <Samples>U000_CON0601_ENG.wav</Samples>
+      <Localize> Yes </Localize>
+      <Play_Sequentially> Yes </Play_Sequentially>
+      <Text_ID>TEXT_SFX_CON_ABILITY_A_1</Text_ID>
+      <Overlap_Test> COM </Overlap_Test>
+   </SFXEvent>
+
+
+   <SFXEvent Name="NCO_LOST_UNIT">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO0201_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_LOST_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="NCO_LOST_STRUCTURE">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO0202_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_LOST_2</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+    
+   <!--  
+	<SFXEvent Name="NCO_LOST_WALKER">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO0203_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_LOST_3</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+-->
+	<SFXEvent Name="NCO_LOST_HERO">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO0204_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_LOST_4</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+	<SFXEvent Name="NCO_UNDER_ATTACK_UNIT">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO0301_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_UNDER_ATTACK_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="NCO_UNDER_ATTACK_STRUCTURE">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO0302_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_UNDER_ATTACK_2</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+     
+   <SFXEvent Name="NCO_UNDER_ATTACK_CAPTURED_STRUCTURE">
+      <Use_Preset>Preset_UR</Use_Preset>
+      <Samples>I000_NCO0302_ENG.wav</Samples>
+      <Localize> Yes </Localize>
+      <Play_Sequentially> Yes </Play_Sequentially>
+      <Text_ID>TEXT_SFX_NCO_UNDER_ATTACK_2</Text_ID>
+      <Overlap_Test> COM </Overlap_Test>
+   </SFXEvent>
+   
+<!--  
+	<SFXEvent Name="NCO_UNDER_ATTACK_WALKER">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO0303_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_UNDER_ATTACK_3</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+-->
+	<SFXEvent Name="NCO_UNDER_ATTACK_HERO">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO0304_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_UNDER_ATTACK_4</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+<!--  
+	<SFXEvent Name="NCO_SOLD_UNIT">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO0401_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_SOLD_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+-->
+
+
+
+   <!-- EMP built -->
+   <SFXEvent Name="NCO_SUPER_WEAPON_1_BUILT">
+      <Use_Preset>Preset_UR</Use_Preset>
+      <Samples>I000_NCO0501_ENG.wav</Samples>
+      <Localize> Yes </Localize>
+      <Play_Sequentially> Yes </Play_Sequentially>
+      <Text_ID>TEXT_SFX_NCO_SUPER_WEAPON_1</Text_ID>
+      <Overlap_Test> COM </Overlap_Test>
+   </SFXEvent>
+
+   <!-- Gravity Bomb built -->
+   <SFXEvent Name="NCO_SUPER_WEAPON_2_BUILT">
+      <Use_Preset>Preset_UR</Use_Preset>
+      <Samples>I000_NCO0502_ENG.wav</Samples>
+      <Localize> Yes </Localize>
+      <Play_Sequentially> Yes </Play_Sequentially>
+      <Text_ID>TEXT_SFX_NCO_SUPER_WEAPON_2</Text_ID>
+      <Overlap_Test> COM </Overlap_Test>
+   </SFXEvent>
+
+   
+   <!-- EMP ready -->
+   <SFXEvent Name="NCO_SUPER_WEAPON_1_READY">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO0501_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_SUPER_WEAPON_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+   <!-- Gravity Bomb ready -->
+   <SFXEvent Name="NCO_SUPER_WEAPON_2_READY">
+      <Use_Preset>Preset_UR</Use_Preset>
+      <Samples>I000_NCO0502_ENG.wav</Samples>
+      <Localize> Yes </Localize>
+      <Play_Sequentially> Yes </Play_Sequentially>
+      <Text_ID>TEXT_SFX_NCO_SUPER_WEAPON_2</Text_ID>
+      <Overlap_Test> COM </Overlap_Test>
+   </SFXEvent>
+
+   <!-- EMP launched -->
+   <SFXEvent Name="NCO_SUPER_WEAPON_1_LAUNCHED">
+      <Use_Preset>Preset_UR</Use_Preset>
+      <Samples>I000_NCO0501_ENG.wav</Samples>
+      <Localize> Yes </Localize>
+      <Play_Sequentially> Yes </Play_Sequentially>
+      <Text_ID>TEXT_SFX_NCO_SUPER_WEAPON_1</Text_ID>
+      <Overlap_Test> COM </Overlap_Test>
+   </SFXEvent>
+
+   <!-- Gravity Bomb launched -->
+   <SFXEvent Name="NCO_SUPER_WEAPON_2_LAUNCHED">
+      <Use_Preset>Preset_UR</Use_Preset>
+      <Samples>I000_NCO0502_ENG.wav</Samples>
+      <Localize> Yes </Localize>
+      <Play_Sequentially> Yes </Play_Sequentially>
+      <Text_ID>TEXT_SFX_NCO_SUPER_WEAPON_2</Text_ID>
+      <Overlap_Test> COM </Overlap_Test>
+   </SFXEvent>
+
+   
+   <!-- NOVUS MEGA WEAPON GAME EVENT AUDIO -->
+   <SFXEvent Name="NCO_MEGA_WEAPON_BUILT">
+      <Use_Preset>Preset_UR</Use_Preset>
+      <Samples>I000_NCO0501_ENG.wav</Samples>
+      <Localize> Yes </Localize>
+      <Play_Sequentially> Yes </Play_Sequentially>
+      <Text_ID>TEXT_SFX_NCO_SUPER_WEAPON_1</Text_ID>
+      <Overlap_Test> COM </Overlap_Test>
+   </SFXEvent>
+
+   <SFXEvent Name="NCO_MEGA_WEAPON_READY">
+      <Use_Preset>Preset_UR</Use_Preset>
+      <Samples>I000_NCO0501_ENG.wav</Samples>
+      <Localize> Yes </Localize>
+      <Play_Sequentially> Yes </Play_Sequentially>
+      <Text_ID>TEXT_SFX_NCO_SUPER_WEAPON_1</Text_ID>
+      <Overlap_Test> COM </Overlap_Test>
+   </SFXEvent>
+
+   <SFXEvent Name="NCO_MEGA_WEAPON_LAUNCHED">
+      <Use_Preset>Preset_UR</Use_Preset>
+      <Samples>I000_NCO0502_ENG.wav</Samples>
+      <Localize> Yes </Localize>
+      <Play_Sequentially> Yes </Play_Sequentially>
+      <Text_ID>TEXT_SFX_NCO_SUPER_WEAPON_2</Text_ID>
+      <Overlap_Test> COM </Overlap_Test>
+   </SFXEvent>
+
+	<SFXEvent Name="NCO_SUPER_WEAPON_3">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO0503_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_SUPER_WEAPON_3</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+<!--  
+	<SFXEvent Name="NCO_UNABLE_NOT_ENOUGH_RESOURCES">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO0601_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_UNABLE_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+-->
+
+
+
+
+	<SFXEvent Name="NCO_OBJECTIVE_COMPLETED">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO0701_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_OBJECTIVE_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="NCO_OBJECTIVE_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO0702_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_OBJECTIVE_2</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+	<SFXEvent Name="NCO_REINFORCEMENTS_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO0801_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_REINFORCEMENTS_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+<!--  
+	<SFXEvent Name="NCO_RESOURCES_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO0901_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_RESOURCES_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="NCO_RESOURCES_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO0902_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_RESOURCES_2</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+-->
+
+
+
+
+	<SFXEvent Name="NCO_ENEMY_BUILD_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO1001_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_ENEMY_BUILD_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+	<SFXEvent Name="NCO_HEAVY_LOSS_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO1101_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_HEAVY_LOSS_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+	<SFXEvent Name="NCO_ENEMY_SUPER_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO1201_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_ENEMY_SUPER_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="NCO_ENEMY_SUPER_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO1202_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_ENEMY_SUPER_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="NCO_ENEMY_SUPER_3">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO1203_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_ENEMY_SUPER_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+	<SFXEvent Name="NCO_ENEMY_HERO_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO1301_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_ENEMY_HERO_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+	<SFXEvent Name="NCO_DEFCON_LVL_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO1401_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_DEFCON_LVL_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="NCO_DEFCON_LVL_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO1402_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_DEFCON_LVL_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="NCO_DEFCON_LVL_3">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO1403_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_DEFCON_LVL_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="NCO_DEFCON_LVL_4">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO1404_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_DEFCON_LVL_4</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+	<SFXEvent Name="NCO_DEFCON_START_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO1501_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_DEFCON_START_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+	<SFXEvent Name="NCO_DEFCON_WARN_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO1601_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_DEFCON_START_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="NCO_DEFCON_WARN_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO1602_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_DEFCON_START_2</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+	<SFXEvent Name="NCO_ALLIANCE_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO1701_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_ALLIANCE_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="NCO_ALLIANCE_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO1702_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_ALLIANCE_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="NCO_ALLIANCE_3">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO1703_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_ALLIANCE_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+	<SFXEvent Name="NCO_EN_DEFEAT_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO1801_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_EN_DEFEAT_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+	<SFXEvent Name="NCO_ALLY_STATUS_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO1901_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_ALLY_STATUS_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="NCO_ALLY_STATUS_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO1902_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_ALLY_STATUS_2</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="NCO_ALLY_STATUS_3">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO1903_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_ALLY_STATUS_3</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+	<SFXEvent Name="NCO_ENEMY_DETECT_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO2001_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_ENEMY_DETECT_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="NCO_ENEMY_DETECT_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO2002_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_ENEMY_DETECT_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+	<SFXEvent Name="NCO_POPCAP_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO2101_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_POPCAP_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+	<SFXEvent Name="NCO_ATK_GLOBAL_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO2201_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_ATK_GLOBAL_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+	<SFXEvent Name="NCO_NEUT_LOST_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO2301_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_NEUT_LOST_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="NCO_NEUT_LOST_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO2302_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_NEUT_LOST_2</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="NCO_GLOBAL_PROD_01">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NCO2401_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NCO_GLOBAL_PROD_01</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+   
+   <SFXEvent Name="NSC_RESEARCH_START_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NSC0101_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NSC_RESEARCH_START_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="NSC_RESEARCH_START_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NSC0102_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NSC_RESEARCH_START_2</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="NSC_RESEARCH_INSUF_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NSC0201_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NSC_RESEARCH_INSUF_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="NSC_RESEARCH_CANCEL_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NSC0301_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NSC_RESEARCH_CANCEL_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="NSC_RESEARCH_UNDO_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NSC0401_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NSC_RESEARCH_UNDO_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="NSC_RESEARCH_ENEMY_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NSC0501_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NSC_RESEARCH_ENEMY_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="NSC_RESEARCH_ENEMY_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NSC0502_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NSC_RESEARCH_ENEMY_2</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="NSC_RESEARCH_COMPLETE_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NSC0601_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NSC_RESEARCH_COMPLETE_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="NSC_RESEARCH_COMPLETE_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NSC0602_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NSC_RESEARCH_COMPLETE_2</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="NSC_RESEARCH_LOCKOUT_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_NSC0701_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_NSC_RESEARCH_LOCKOUT_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+	<!-- ======================================================================= -->
+	<!-- MASARI HUD RESPONSES						  											  -->
+	<!-- ======================================================================= -->
+
+
+   <SFXEvent Name="MCO_FAIL_TACTICAL_STRUCTURE_BUILD">
+      <Use_Preset>Preset_UR</Use_Preset>
+      <Samples>U000_ARC0803_ENG.wav</Samples>
+      <Localize> Yes </Localize>
+      <Play_Sequentially> Yes </Play_Sequentially>
+      <Text_ID>TEXT_SFX_ARC_ABILITY_C_3</Text_ID>
+      <Overlap_Test> COM </Overlap_Test>
+   </SFXEvent>
+
+
+   <SFXEvent Name="MCO_START_TACTICAL_STRUCTURE_BUILD">
+      <Use_Preset>Preset_UR</Use_Preset>
+      <Samples>U000_ARC0703_ENG.wav</Samples>
+      <Localize> Yes </Localize>
+      <Play_Sequentially> Yes </Play_Sequentially>
+      <Text_ID>TEXT_SFX_ARC_ABILITY_B_3</Text_ID>
+      <Overlap_Test> COM </Overlap_Test>
+   </SFXEvent>
+   
+
+<!--  
+	<SFXEvent Name="MCO_BUILD_INFANTRY">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO0101_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_BUILD_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="MCO_BUILD_STRUCTURE">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO0102_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_BUILD_2</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="MCO_BUILD_VEHICLE">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO0103_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_BUILD_3</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="MCO_BUILD_UPGRADE">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO0104_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_BUILD_4</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="MCO_BUILD_INFANTRY_COMPLETE">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO0105_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_BUILD_5</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="MCO_BUILD_STRUCTURE_COMPLETE">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO0106_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_BUILD_6</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="MCO_BUILD_VEHICLE_COMPLETE">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO0107_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_BUILD_7</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+-->
+	<SFXEvent Name="MCO_BUILD_UPGRADE_COMPLETE">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO0108_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_BUILD_8</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+<!--  
+	<SFXEvent Name="MCO_BUILD_INFANTRY_CANCELED">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO0109_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_BUILD_9</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="MCO_BUILD_STRUCTURE_CANCELED">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO0110_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_BUILD_10</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="MCO_BUILD_VEHICLE_CANCELED">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO0111_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_BUILD_11</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="MCO_BUILD_UPGRADE_CANCELED">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO0112_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_BUILD_12</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="MCO_BUILD_RESEARCH">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO0113_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_BUILD_13</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="MCO_BUILD_RESEARCH_COMPLETE">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO0114_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_BUILD_14</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="MCO_BUILD_RESEARCH_CANCELED">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO0115_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_BUILD_15</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="MCO_BUILD_HERO">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO0116_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_BUILD_16</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="MCO_BUILD_HERO_COMPLETE">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO0117_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_BUILD_17</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="MCO_BUILD_HERO_CANCELED">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO0118_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_BUILD_18</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+-->
+
+
+
+
+
+	<SFXEvent Name="MCO_LOST_UNIT">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO0201_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_LOST_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="MCO_LOST_STRUCTURE">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO0202_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_LOST_2</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+   
+    
+   <!--  
+	<SFXEvent Name="MCO_LOST_WALKER">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO0203_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_LOST_3</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+-->
+	<SFXEvent Name="MCO_LOST_HERO">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO0204_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_LOST_4</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+	<SFXEvent Name="MCO_UNDER_ATTACK_UNIT">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO0301_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_UNDER_ATTACK_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="MCO_UNDER_ATTACK_STRUCTURE">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO0302_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_UNDER_ATTACK_2</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+   <SFXEvent Name="MCO_UNDER_ATTACK_CAPTURED_STRUCTURE">
+      <Use_Preset>Preset_UR</Use_Preset>
+      <Samples>I000_MCO0302_ENG.wav</Samples>
+      <Localize> Yes </Localize>
+      <Play_Sequentially> Yes </Play_Sequentially>
+      <Text_ID>TEXT_SFX_MCO_UNDER_ATTACK_2</Text_ID>
+      <Overlap_Test> COM </Overlap_Test>
+   </SFXEvent>
+
+   <!--  
+	<SFXEvent Name="MCO_UNDER_ATTACK_WALKER">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO0303_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_UNDER_ATTACK_3</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+-->
+	<SFXEvent Name="MCO_UNDER_ATTACK_HERO">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO0304_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_UNDER_ATTACK_4</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+<!--  
+	<SFXEvent Name="MCO_SOLD_UNIT">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO0401_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_SOLD_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+-->
+
+
+   <!-- Matter Storm built -->
+   <SFXEvent Name="MCO_SUPER_WEAPON_1_BUILT">
+      <Use_Preset>Preset_UR</Use_Preset>
+      <Samples>I000_MCO0501_ENG.wav</Samples>
+      <Localize> Yes </Localize>
+      <Play_Sequentially> Yes </Play_Sequentially>
+      <Text_ID>TEXT_SFX_MCO_SUPER_WEAPON_1</Text_ID>
+      <Overlap_Test> COM </Overlap_Test>
+   </SFXEvent>
+
+   <!-- Burning Wrath built -->
+   <SFXEvent Name="MCO_SUPER_WEAPON_2_BUILT">
+      <Use_Preset>Preset_UR</Use_Preset>
+      <Samples>I000_MCO0502_ENG.wav</Samples>
+      <Localize> Yes </Localize>
+      <Play_Sequentially> Yes </Play_Sequentially>
+      <Text_ID>TEXT_SFX_MCO_SUPER_WEAPON_2</Text_ID>
+      <Overlap_Test> COM </Overlap_Test>
+   </SFXEvent>
+
+   <!-- Matter Storm READY -->
+   <SFXEvent Name="MCO_SUPER_WEAPON_1_READY">
+      <Use_Preset>Preset_UR</Use_Preset>
+      <Samples>I000_MCO0501_ENG.wav</Samples>
+      <Localize> Yes </Localize>
+      <Play_Sequentially> Yes </Play_Sequentially>
+      <Text_ID>TEXT_SFX_MCO_SUPER_WEAPON_1</Text_ID>
+      <Overlap_Test> COM </Overlap_Test>
+   </SFXEvent>
+
+   <!-- Burning Wrath READY -->
+   <SFXEvent Name="MCO_SUPER_WEAPON_2_READY">
+      <Use_Preset>Preset_UR</Use_Preset>
+      <Samples>I000_MCO0502_ENG.wav</Samples>
+      <Localize> Yes </Localize>
+      <Play_Sequentially> Yes </Play_Sequentially>
+      <Text_ID>TEXT_SFX_MCO_SUPER_WEAPON_2</Text_ID>
+      <Overlap_Test> COM </Overlap_Test>
+   </SFXEvent>
+
+
+   <!-- Matter Storm LAUNCHED -->
+	<SFXEvent Name="MCO_SUPER_WEAPON_1_LAUNCHED">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO0503_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_SUPER_WEAPON_3</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+   <!-- Burning Wrath LAUNCHED -->
+   <SFXEvent Name="MCO_SUPER_WEAPON_2_LAUNCHED">
+      <Use_Preset>Preset_UR</Use_Preset>
+      <Samples>I000_MCO0503_ENG.wav</Samples>
+      <Localize> Yes </Localize>
+      <Play_Sequentially> Yes </Play_Sequentially>
+      <Text_ID>TEXT_SFX_MCO_SUPER_WEAPON_3</Text_ID>
+      <Overlap_Test> COM </Overlap_Test>
+   </SFXEvent>
+   
+
+   <SFXEvent Name="MCO_MEGA_WEAPON_BUILT">
+      <Use_Preset>Preset_UR</Use_Preset>
+      <Samples>I000_MCO0501_ENG.wav</Samples>
+      <Localize> Yes </Localize>
+      <Play_Sequentially> Yes </Play_Sequentially>
+      <Text_ID>TEXT_SFX_MCO_SUPER_WEAPON_1</Text_ID>
+      <Overlap_Test> COM </Overlap_Test>
+   </SFXEvent>
+
+
+   <SFXEvent Name="MCO_MEGA_WEAPON_READY">
+      <Use_Preset>Preset_UR</Use_Preset>
+      <Samples>I000_MCO0501_ENG.wav</Samples>
+      <Localize> Yes </Localize>
+      <Play_Sequentially> Yes </Play_Sequentially>
+      <Text_ID>TEXT_SFX_MCO_SUPER_WEAPON_1</Text_ID>
+      <Overlap_Test> COM </Overlap_Test>
+   </SFXEvent>
+
+   <SFXEvent Name="MCO_MEGA_WEAPON_LAUNCHED">
+      <Use_Preset>Preset_UR</Use_Preset>
+      <Samples>I000_MCO0502_ENG.wav</Samples>
+      <Localize> Yes </Localize>
+      <Play_Sequentially> Yes </Play_Sequentially>
+      <Text_ID>TEXT_SFX_MCO_SUPER_WEAPON_2</Text_ID>
+      <Overlap_Test> COM </Overlap_Test>
+   </SFXEvent>
+   
+   
+	<SFXEvent Name="MCO_SUPER_WEAPON_3">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO0503_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_SUPER_WEAPON_3</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+<!--  
+	<SFXEvent Name="MCO_UNABLE_NOT_ENOUGH_RESOURCES">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO0601_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_UNABLE_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+-->
+
+
+
+
+	<SFXEvent Name="MCO_OBJECTIVE_COMPLETED">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO0701_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_OBJECTIVE_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="MCO_OBJECTIVE_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO0702_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_OBJECTIVE_2</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+	<SFXEvent Name="MCO_REINFORCEMENTS_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO0801_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_REINFORCEMENTS_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+<!--  
+	<SFXEvent Name="MCO_RESOURCES_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO0901_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_RESOURCES_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="MCO_RESOURCES_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO0902_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_RESOURCES_2</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+-->
+
+
+
+
+	<SFXEvent Name="MCO_ENEMY_BUILD_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO1001_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_ENEMY_BUILD_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+	<SFXEvent Name="MCO_HEAVY_LOSS_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO1101_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_HEAVY_LOSS_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+	<SFXEvent Name="MCO_ENEMY_SUPER_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO1201_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_ENEMY_SUPER_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="MCO_ENEMY_SUPER_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO1202_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_ENEMY_SUPER_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="MCO_ENEMY_SUPER_3">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO1203_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_ENEMY_SUPER_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+	<SFXEvent Name="MCO_ENEMY_HERO_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO1301_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_ENEMY_HERO_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+	<SFXEvent Name="MCO_DEFCON_LVL_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO1401_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_DEFCON_LVL_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="MCO_DEFCON_LVL_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO1402_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_DEFCON_LVL_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="MCO_DEFCON_LVL_3">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO1403_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_DEFCON_LVL_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="MCO_DEFCON_LVL_4">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO1404_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_DEFCON_LVL_4</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+	<SFXEvent Name="MCO_DEFCON_START_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO1501_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_DEFCON_START_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+	<SFXEvent Name="MCO_DEFCON_WARN_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO1601_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_DEFCON_START_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="MCO_DEFCON_WARN_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO1602_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_DEFCON_START_2</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+	<SFXEvent Name="MCO_ALLIANCE_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO1701_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_ALLIANCE_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="MCO_ALLIANCE_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO1702_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_ALLIANCE_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="MCO_ALLIANCE_3">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO1703_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_ALLIANCE_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+	<SFXEvent Name="MCO_EN_DEFEAT_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO1801_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_EN_DEFEAT_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+	<SFXEvent Name="MCO_ALLY_STATUS_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO1901_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_ALLY_STATUS_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="MCO_ALLY_STATUS_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO1902_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_ALLY_STATUS_2</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="MCO_ALLY_STATUS_3">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO1903_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_ALLY_STATUS_3</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+	<SFXEvent Name="MCO_ENEMY_DETECT_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO2001_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_ENEMY_DETECT_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="MCO_ENEMY_DETECT_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO2002_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_ENEMY_DETECT_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+	<SFXEvent Name="MCO_POPCAP_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO2101_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_POPCAP_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+	<SFXEvent Name="MCO_ATK_GLOBAL_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO2201_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_ATK_GLOBAL_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+	<SFXEvent Name="MCO_NEUT_LOST_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO2301_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_NEUT_LOST_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="MCO_NEUT_LOST_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO2302_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_NEUT_LOST_2</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="MCO_GLOBAL_PROD_01">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MCO2401_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MCO_GLOBAL_PROD_01</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+
+
+
+
+
+
+
+
+
+	<SFXEvent Name="MSC_RESEARCH_START_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MSC0101_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MSC_RESEARCH_START_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="MSC_RESEARCH_START_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MSC0102_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MSC_RESEARCH_START_2</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="MSC_RESEARCH_INSUF_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MSC0201_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MSC_RESEARCH_INSUF_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="MSC_RESEARCH_CANCEL_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MSC0301_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MSC_RESEARCH_CANCEL_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="MSC_RESEARCH_UNDO_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MSC0401_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MSC_RESEARCH_UNDO_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="MSC_RESEARCH_ENEMY_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MSC0501_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MSC_RESEARCH_ENEMY_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="MSC_RESEARCH_ENEMY_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MSC0502_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MSC_RESEARCH_ENEMY_2</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="MSC_RESEARCH_COMPLETE_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MSC0601_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MSC_RESEARCH_COMPLETE_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="MSC_RESEARCH_COMPLETE_2">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MSC0602_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MSC_RESEARCH_COMPLETE_2</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+	<SFXEvent Name="MSC_RESEARCH_LOCKOUT_1">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>I000_MSC0701_ENG.wav</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_MSC_RESEARCH_LOCKOUT_1</Text_ID>
+		<Overlap_Test> COM </Overlap_Test>
+	</SFXEvent>
+
+
+ </SFXEvents>

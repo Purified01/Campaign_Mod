@@ -1,0 +1,435 @@
+<?xml version="1.0"?>
+
+<SFXEvents>
+	
+   <!-- Presets only in this file -->
+
+
+	<!-- ======================================= -->
+	<!-- 2D PRESETS -->
+	<!-- ======================================= -->
+	
+   <SFXEvent Name="Preset_GUI">     <!-- GUI Interface SFX presets-->
+  			<Is_Preset> Yes </Is_Preset>
+			<Is_2D> Yes </Is_2D>
+			<Is_3D> No </Is_3D>
+			<Is_GUI> Yes </Is_GUI>
+			<Priority> 1 </Priority>
+			<Min_Volume>60</Min_Volume>
+			<Max_Volume>60</Max_Volume>
+			<Max_Instances> 4 </Max_Instances> <!-- This should definitely not be 1 -->
+	</SFXEvent>
+	
+	<SFXEvent Name="Preset_UR">	<!-- Unit Response -->
+  			<Is_Preset> Yes </Is_Preset>
+			<Is_2D> Yes </Is_2D>
+			<Is_3D> No </Is_3D>
+			<Is_Unit_Response_VO> Yes </Is_Unit_Response_VO>
+			<Is_Ambient_VO> No </Is_Ambient_VO>
+			<Priority> 1 </Priority>
+			<Max_Instances>1</Max_Instances>
+			<Min_Volume>100</Min_Volume>
+			<Max_Volume>100</Max_Volume>
+	</SFXEvent>
+	 
+	<SFXEvent Name="Preset_HUD">      <!-- HUD VO (will not play during tutorial) -->
+  			<Is_Preset> Yes </Is_Preset>
+			<Is_2D> Yes </Is_2D>
+			<Is_3D> No </Is_3D>
+			<Is_HUD_VO> Yes </Is_HUD_VO>
+			<Is_Ambient_VO> Yes </Is_Ambient_VO>
+			<Min_Volume>100</Min_Volume>
+			<Max_Volume>100</Max_Volume>
+	</SFXEvent>
+
+
+
+	<!-- ======================================= -->
+	<!-- 3D PRESETS UNIT RESPONSES-->
+	<!-- ======================================= -->
+
+	<SFXEvent Name="Preset_UR_3D_RANDOM">   <!-- 3D Unit Response (mainly used for random event based UR, random unit chatter, etc.) -->
+  			<Is_Preset> Yes </Is_Preset>
+			<Is_2D> No </Is_2D>
+			<Is_3D> Yes </Is_3D>
+			<Is_Unit_Response_VO> No </Is_Unit_Response_VO>
+			<Is_Ambient_VO> Yes </Is_Ambient_VO>
+			<Priority> 1 </Priority>
+			<Probability>15</Probability>
+			<Max_Instances>1</Max_Instances>
+			<Volume_Saturation_Distance>150.0</Volume_Saturation_Distance>
+			<Min_Volume>55</Min_Volume>
+			<Max_Volume>55</Max_Volume>
+			<Min_Pitch>95</Min_Pitch>
+			<Max_Pitch>105</Max_Pitch>
+	</SFXEvent>
+	 
+	<SFXEvent Name="Preset_UR_3D">    <!-- Used for 3D Unit Death Screams-->
+  			<Is_Preset> Yes </Is_Preset>
+			<Is_3D> Yes </Is_3D>
+			<Is_2D> No </Is_2D>
+			<Priority> 2 </Priority>
+			<Max_Instances>3</Max_Instances>
+			<Volume_Saturation_Distance>150.0</Volume_Saturation_Distance>
+			<Min_Volume>70</Min_Volume>
+			<Max_Volume>70</Max_Volume>
+			<Min_Pitch>95</Min_Pitch>
+			<Max_Pitch>105</Max_Pitch>
+	</SFXEvent>
+
+
+
+	<!-- ======================================= -->
+	<!-- 3D PRESETS ENGINES-->
+	<!-- ======================================= -->
+	 
+	<SFXEvent Name="Preset_EGL_INSANE">        <!-- LOUDEST Overwhelming all other sounds-->
+			<Is_Preset> Yes </Is_Preset>
+			<Is_3D> No </Is_3D>
+			<Is_2D> Yes </Is_2D>
+			<Play_Count>-1</Play_Count>
+			<Priority> 2 </Priority>
+			<Max_Instances> 2 </Max_Instances>
+			<Min_Volume>90</Min_Volume>
+			<Max_Volume>90</Max_Volume>
+	</SFXEvent>
+	
+	
+	<SFXEvent Name="Preset_EGL_Large">     <!-- Engine Loop for Largest Vehicles / Ships -->
+  			<Is_Preset> Yes </Is_Preset>
+			<Is_3D> Yes </Is_3D>
+			<Is_2D> No </Is_2D>
+			<Priority> 1 </Priority>
+			<Max_Instances> 2 </Max_Instances>
+			<Play_Count>-1</Play_Count>
+			<Loop_Fade_In_Seconds> 0.5 </Loop_Fade_In_Seconds> 	<!-- Crossfading from idle (stopped) to moving and vice-versa -->
+			<Loop_Fade_Out_Seconds> 1.0 </Loop_Fade_Out_Seconds>	<!-- Crossfading from idle (stopped) to moving and vice-versa -->
+			<Min_Volume>50</Min_Volume>
+			<Max_Volume>50</Max_Volume>
+			<Min_Pitch>100</Min_Pitch>
+			<Max_Pitch>120</Max_Pitch>
+			<Volume_Saturation_Distance>350.0</Volume_Saturation_Distance>
+	</SFXEvent>
+	 
+	<SFXEvent Name="Preset_EGL_Large_Idle">      <!-- Engine Loop for Largest Vehicles / Ships idle -->
+  			<Is_Preset> Yes </Is_Preset>
+			<Is_3D> Yes </Is_3D>
+			<Is_2D> No </Is_2D>
+			<Priority> 1 </Priority>
+			<Max_Instances> 2 </Max_Instances>
+			<Play_Count>-1</Play_Count>
+			<Loop_Fade_In_Seconds> 0.5 </Loop_Fade_In_Seconds> 	<!-- Crossfading from idle (stopped) to moving and vice-versa -->
+			<Loop_Fade_Out_Seconds> 1.0 </Loop_Fade_Out_Seconds>	<!-- Crossfading from idle (stopped) to moving and vice-versa -->
+			<Min_Volume>40</Min_Volume>
+			<Max_Volume>40</Max_Volume>
+         <Min_Pitch>50</Min_Pitch>
+			<Max_Pitch>60</Max_Pitch>
+			<Volume_Saturation_Distance>350.0</Volume_Saturation_Distance>
+	</SFXEvent>
+
+
+
+	 <SFXEvent Name="Preset_EGL">     <!-- Engine Loop Normal -->
+			<Is_Preset> Yes </Is_Preset>
+			<Is_3D> Yes </Is_3D>
+			<Is_2D> No </Is_2D>
+			<Priority> 1 </Priority>
+			<Max_Instances> 3 </Max_Instances>
+			<Play_Count>-1</Play_Count>
+			<Loop_Fade_In_Seconds> 0.5 </Loop_Fade_In_Seconds>		<!-- Crossfading from idle (stopped) to moving and vice-versa -->
+			<Loop_Fade_Out_Seconds> 1.0 </Loop_Fade_Out_Seconds>	<!-- Crossfading from idle (stopped) to moving and vice-versa -->
+			<Min_Volume>30</Min_Volume>
+			<Max_Volume>30</Max_Volume>
+			<Min_Pitch>100</Min_Pitch>
+			<Max_Pitch>120</Max_Pitch>
+			<Volume_Saturation_Distance>200.0</Volume_Saturation_Distance>
+	 </SFXEvent>
+	 
+	 <SFXEvent Name="Preset_EGL_Idle">     <!-- Engine Loop Idle Normal -->
+			<Is_Preset> Yes </Is_Preset>
+			<Is_3D> Yes </Is_3D>
+			<Is_2D> No </Is_2D>
+			<Priority> 1 </Priority>
+			<Max_Instances> 3 </Max_Instances>
+			<Play_Count>-1</Play_Count>
+			<Loop_Fade_In_Seconds> 0.5 </Loop_Fade_In_Seconds>		<!-- Crossfading from idle (stopped) to moving and vice-versa -->
+			<Loop_Fade_Out_Seconds> 1.0 </Loop_Fade_Out_Seconds>	<!-- Crossfading from idle (stopped) to moving and vice-versa -->
+			<Min_Volume>20</Min_Volume>
+			<Max_Volume>20</Max_Volume>
+			<Min_Pitch>50</Min_Pitch>
+			<Max_Pitch>60</Max_Pitch>
+			<Volume_Saturation_Distance>200.0</Volume_Saturation_Distance>
+	 </SFXEvent>
+	 
+	 <SFXEvent Name="Preset_EGL_CIN">     <!-- Engine Loop Cinematic mode (if vehicle only does a fly-by normally) -->
+			<Is_Preset> Yes </Is_Preset>
+			<Is_3D> Yes </Is_3D>
+			<Is_2D> No </Is_2D>
+			<Priority> 1 </Priority>
+			<Max_Instances> 2 </Max_Instances>
+			<Play_Count>-1</Play_Count>
+			<Min_Pitch>100</Min_Pitch>
+			<Max_Pitch>120</Max_Pitch>
+			<Min_Volume>45</Min_Volume>
+			<Max_Volume>45</Max_Volume>			
+			<Volume_Saturation_Distance>200.0</Volume_Saturation_Distance>
+	 </SFXEvent>
+
+
+	 
+	 <SFXEvent Name="Preset_EGB">      <!-- Engine By (fly-by)-->
+			 <Is_Preset> Yes </Is_Preset>
+			 <Is_3D> Yes </Is_3D>
+			 <Is_2D> No </Is_2D>
+			 <Priority> 3 </Priority>
+			 <Max_Instances> 3 </Max_Instances>
+			 <Min_Volume>40</Min_Volume>
+			 <Max_Volume>40</Max_Volume>
+			 <Min_Pitch>95</Min_Pitch>
+			 <Max_Pitch>105</Max_Pitch>
+			 <Volume_Saturation_Distance>200.0</Volume_Saturation_Distance>
+	  </SFXEvent>
+	  
+	 <SFXEvent Name="Preset_EGB_Large">      <!-- Engine By for Cinematics (fly-by)-->
+			 <Is_Preset> Yes </Is_Preset>
+			 <Is_3D> Yes </Is_3D>
+			 <Is_2D> No </Is_2D>
+			 <Priority> 2 </Priority>
+			 <Max_Instances> 3 </Max_Instances>
+			 <Min_Volume>55</Min_Volume>
+			 <Max_Volume>55</Max_Volume>
+			 <Volume_Saturation_Distance>400.0</Volume_Saturation_Distance>
+	  </SFXEvent>
+
+
+
+	 
+
+	 <!-- ======================================= -->
+	 <!-- 3D PRESETS GUNS-->
+	 <!-- ======================================= -->
+	 
+		<SFXEvent Name="Preset_GUN">      <!-- Firing for infantry-->
+				<Is_Preset> Yes </Is_Preset>
+				<Is_3D> Yes </Is_3D>
+				<Is_2D> No </Is_2D>
+				<Priority> 4 </Priority>
+				<Max_Instances> 4 </Max_Instances>
+				<Volume_Saturation_Distance>150.0</Volume_Saturation_Distance>
+				<Min_Volume>25</Min_Volume>
+				<Max_Volume>25</Max_Volume>
+				<Min_Pitch>95</Min_Pitch>
+				<Max_Pitch>105</Max_Pitch>
+		</SFXEvent>
+
+		<SFXEvent Name="Preset_GUNV">    <!-- Firing for Vehicles-->
+			  <Is_Preset> Yes </Is_Preset>
+			  <Is_3D> Yes </Is_3D>
+			  <Is_2D> No </Is_2D>
+			  <Priority> 3 </Priority>
+			  <Max_Instances> 3 </Max_Instances>
+			  <Volume_Saturation_Distance>150.0</Volume_Saturation_Distance>
+			  <Min_Volume>45</Min_Volume>
+			  <Max_Volume>45</Max_Volume>
+			  <Min_Pitch>95</Min_Pitch>
+			  <Max_Pitch>105</Max_Pitch>
+		</SFXEvent>
+
+		<SFXEvent Name="Preset_GUNV_Loop">     <!-- Firing Loop for Vehicles-->
+			<Is_Preset> Yes </Is_Preset>
+			<Is_3D> Yes </Is_3D>
+			<Is_2D> No </Is_2D>
+			<Priority> 1 </Priority>
+			<Max_Instances> 3 </Max_Instances>
+			<Play_Count>-1</Play_Count>
+			<Loop_Fade_In_Seconds> 0.5 </Loop_Fade_In_Seconds>		<!-- Crossfading from idle (stopped) to moving and vice-versa -->
+			<Loop_Fade_Out_Seconds> .25 </Loop_Fade_Out_Seconds>	<!-- Crossfading from idle (stopped) to moving and vice-versa -->
+			<Min_Pitch>95</Min_Pitch>
+			<Max_Pitch>105</Max_Pitch>
+			<Min_Volume>35</Min_Volume>
+			<Max_Volume>35</Max_Volume>
+			<Volume_Saturation_Distance>150.0</Volume_Saturation_Distance>
+		</SFXEvent>
+	
+	 <SFXEvent Name="Preset_GUN_HERO">    <!-- Special Ability or Loudest firing Preset-->
+		  <Is_Preset> Yes </Is_Preset>
+		  <Is_3D> Yes </Is_3D>
+		  <Is_2D> No </Is_2D>
+		  <Priority> 3 </Priority>
+		  <Max_Instances> 3 </Max_Instances>
+		  <Min_Volume>70</Min_Volume>
+		  <Max_Volume>70</Max_Volume>
+		  <Volume_Saturation_Distance>250.0</Volume_Saturation_Distance>
+	 </SFXEvent>
+
+
+
+
+
+
+	 <!-- ======================================= -->
+	 <!-- 3D PRESETS EXPLOSIONS-->
+	 <!-- ======================================= -->
+	 
+	 <SFXEvent Name="Preset_EXP_INSANE">      <!-- LOUDEST Overwhelming all other sounds-->
+		 <Is_Preset> Yes </Is_Preset>
+		 <Is_3D> No </Is_3D>
+		 <Is_2D> Yes </Is_2D>
+		 <Priority> 1 </Priority>
+		 <Max_Instances> 2 </Max_Instances>
+		 <Min_Volume>100</Min_Volume>
+		 <Max_Volume>100</Max_Volume>
+	 </SFXEvent>
+
+
+		<SFXEvent Name="Preset_EXP_Large">      <!-- LOUDEST Explosion for Capital / Largest units-->
+  			<Is_Preset> Yes </Is_Preset>
+			<Is_3D> Yes </Is_3D>
+			<Is_2D> No </Is_2D>
+			<Priority> 1 </Priority>
+			<Max_Instances> 2 </Max_Instances>
+			<Min_Pitch>95</Min_Pitch>
+			<Max_Pitch>105</Max_Pitch>
+			<Min_Volume>90</Min_Volume>
+			<Max_Volume>90</Max_Volume>
+			<Volume_Saturation_Distance>500.0</Volume_Saturation_Distance>
+		</SFXEvent>
+	 
+		<SFXEvent Name="Preset_EXP">    <!-- Normal Explosion-->
+			<Is_Preset> Yes </Is_Preset>
+			<Is_3D> Yes </Is_3D>
+			<Is_2D> No </Is_2D>
+			<Priority> 2 </Priority>
+			<Max_Instances> 3 </Max_Instances>
+  			<Min_Pitch>95</Min_Pitch>
+			<Max_Pitch>105</Max_Pitch>
+			<Min_Volume>70</Min_Volume>
+			<Max_Volume>70</Max_Volume>
+			<Volume_Saturation_Distance>400.0</Volume_Saturation_Distance>
+		</SFXEvent>
+
+
+
+
+		<!-- ======================================= -->
+		<!-- 3D PRESETS FOOTSTEPS-->
+		<!-- ======================================= -->
+	 
+        <SFXEvent Name="Preset_FSI">     <!-- Footsteps Infantry-->
+  			<Is_Preset> Yes </Is_Preset>
+			<Is_3D> Yes </Is_3D>
+			<Is_2D> No </Is_2D>
+			<Priority> 5 </Priority>
+			<Max_Instances> 4 </Max_Instances>
+			<Min_Pitch>95</Min_Pitch>
+			<Max_Pitch>105</Max_Pitch>
+			<Volume_Saturation_Distance>200.0</Volume_Saturation_Distance>
+			<Min_Volume>10</Min_Volume>
+			<Max_Volume>10</Max_Volume>
+		</SFXEvent>
+
+        <SFXEvent Name="Preset_FSM">     <!-- Footsteps Medium Sized Infantry or Robots-->
+  			<Is_Preset> Yes </Is_Preset>
+			<Is_3D> Yes </Is_3D>
+			<Is_2D> No </Is_2D>
+			<Priority> 4 </Priority>
+			<Max_Instances> 4 </Max_Instances>
+			<Min_Pitch>95</Min_Pitch>
+			<Max_Pitch>105</Max_Pitch>
+			<Volume_Saturation_Distance>200.0</Volume_Saturation_Distance>
+			<Min_Volume>20</Min_Volume>
+			<Max_Volume>20</Max_Volume>
+		</SFXEvent>
+	 
+		<SFXEvent Name="Preset_FSV">      <!-- Footsteps Vehicles / Machine Walkers-->
+  			<Is_Preset> Yes </Is_Preset>
+			<Is_3D> Yes </Is_3D>
+			<Is_2D> No </Is_2D>
+			<Priority> 2 </Priority>
+			<Max_Instances> 4 </Max_Instances>
+			<Volume_Saturation_Distance>300.0</Volume_Saturation_Distance>
+			<Min_Volume>60</Min_Volume>
+			<Max_Volume>60</Max_Volume>
+			<Min_Pitch>95</Min_Pitch>
+			<Max_Pitch>105</Max_Pitch>
+		</SFXEvent>
+
+		<SFXEvent Name="Preset_FSV_HUGE">      <!-- For Massive Vehicles / Machine Walkers-->
+  			<Is_Preset> Yes </Is_Preset>
+			<Is_3D> Yes </Is_3D>
+			<Is_2D> No </Is_2D>
+			<Priority> 1 </Priority>
+			<Max_Instances> 5 </Max_Instances>
+			<Volume_Saturation_Distance>400.0</Volume_Saturation_Distance>
+			<Min_Volume>100</Min_Volume>
+			<Max_Volume>100</Max_Volume>
+			<Min_Pitch>95</Min_Pitch>
+			<Max_Pitch>105</Max_Pitch>
+		</SFXEvent>
+
+
+
+
+
+		<!-- ======================================= -->
+		<!-- PRESETS AMBIENT-->
+		<!-- ======================================= -->
+	 
+		  <SFXEvent Name="Preset_AMB_2D">     <!-- Ambient 2D sfx-->
+				<Is_Preset> Yes </Is_Preset>
+				<Is_3D> No </Is_3D>
+				<Is_2D> Yes </Is_2D>
+				<Priority> 5 </Priority>
+				<Play_Sequentially> Yes </Play_Sequentially>
+				<Max_Instances> 2 </Max_Instances>
+				<Min_Pitch>95</Min_Pitch>
+				<Max_Pitch>105</Max_Pitch>
+				<Min_Volume>50</Min_Volume>
+				<Max_Volume>50</Max_Volume>
+		  </SFXEvent>
+		  
+		  <SFXEvent Name="Preset_AMB_3D">     <!-- Ambient 3D sfx (intermittent weather sfx, random world sfx, etc.)-->
+				<Is_Preset> Yes </Is_Preset>
+				<Is_3D> Yes </Is_3D>
+				<Is_2D> No </Is_2D>
+				<Priority> 5 </Priority>
+				<Play_Sequentially> No </Play_Sequentially>
+				<Max_Instances> 3 </Max_Instances>
+				<Volume_Saturation_Distance> 200.0 </Volume_Saturation_Distance>
+				<Min_Pitch>97</Min_Pitch>
+				<Max_Pitch>103</Max_Pitch>
+				<Min_Volume>40</Min_Volume>
+				<Max_Volume>40</Max_Volume>
+		  </SFXEvent>
+
+	 
+	 <SFXEvent Name="Preset_AMB_2D_Loop">     <!-- Ambient 2D sfx (stereo weather loops, etc.)-->
+			<Is_Preset> Yes </Is_Preset>
+			<Is_3D> No </Is_3D>
+			<Is_2D> Yes </Is_2D>
+			<Priority> 1 </Priority>
+			<Max_Instances> 2 </Max_Instances>
+			<Play_Count>-1</Play_Count>
+			<Min_Volume>45</Min_Volume>
+			<Max_Volume>45</Max_Volume>
+			<Loop_Fade_In_Seconds> 3.0 </Loop_Fade_In_Seconds> 	<!-- Crossfading from light, to medium, to heavy, and vice-versa -->
+			<Loop_Fade_Out_Seconds> 7.0 </Loop_Fade_Out_Seconds>	<!-- Crossfading from light, to medium, to heavy, and vice-versa -->
+	 </SFXEvent>
+
+	 <SFXEvent Name="Preset_AMB_3D_Loop">       <!-- Ambient 3D sfx (positional weather loops, fire, water, etc.)-->
+			<Is_Preset> Yes </Is_Preset>
+			<Is_3D> Yes </Is_3D>
+			<Is_2D> No </Is_2D>
+			<Priority> 2 </Priority>
+			<Max_Instances> 2 </Max_Instances>
+			<Play_Count>-1</Play_Count>
+			<Min_Volume>35</Min_Volume>
+			<Max_Volume>35</Max_Volume>
+			<Volume_Saturation_Distance> 200.0 </Volume_Saturation_Distance>
+			<Loop_Fade_In_Seconds> 1.0 </Loop_Fade_In_Seconds> 	<!-- Crossfading from light, to medium, to heavy, and vice-versa -->
+			<Loop_Fade_Out_Seconds> 2.0 </Loop_Fade_Out_Seconds>	<!-- Crossfading from light, to medium, to heavy, and vice-versa -->
+	 </SFXEvent>
+
+
+
+</SFXEvents>

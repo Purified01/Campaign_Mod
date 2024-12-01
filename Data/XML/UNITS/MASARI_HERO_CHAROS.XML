@@ -1,0 +1,939 @@
+<?xml version="1.0"?>
+<Masari_Hero_Charos_XML>
+
+	<!-- **************************************************************************************** -->
+	<!-- *** UNIT(S) **************************************************************************** -->
+	<!-- **************************************************************************************** -->
+	<X13_Masari_Heroes Name="Masari_Hero_Charos">
+
+		<Land_Model_Name> ZH_Charos.ALO </Land_Model_Name>
+		<AssetBank> BANK_MASARI </AssetBank>
+
+		<!-- DEBUG: STUB SCALE AND MODEL -->
+		<Scale_Factor>1.0</Scale_Factor>
+		<Loop_Idle_Anim_00>False</Loop_Idle_Anim_00>
+		<Occlusion_Silhouette_Enabled>1</Occlusion_Silhouette_Enabled>
+		<Mouse_Collide_Override_Sphere_Radius> 10.0 </Mouse_Collide_Override_Sphere_Radius>
+		<Death_Fade_Time>.25</Death_Fade_Time>
+		<Death_Persistence_Duration>5</Death_Persistence_Duration>
+
+		<Selection_Blob_Material_Name>Selection_Masari_Land</Selection_Blob_Material_Name>
+		<Highlight_Blob_Material_Name>Highlight_Masari_Hero</Highlight_Blob_Material_Name>
+
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_MASARI_HERO_CHAROS</Text_ID>
+		<Is_Placed_By_Editor>true</Is_Placed_By_Editor>
+		<GUI_Scene_Name> HealthBar_Scene_Small </GUI_Scene_Name>
+		<GUI_Receives_Input> false </GUI_Receives_Input>
+		<GUI_Min_Scale> 0.3 </GUI_Min_Scale>
+		<GUI_Max_Scale> 2.5 </GUI_Max_Scale>
+		<GUI_Default_Scale> 0.5 </GUI_Default_Scale>
+		<GUI_World_Offset> 0.0, 0.0, -10 </GUI_World_Offset>
+		<Select_Box_Scale>30</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+
+		<!-- ATTRIBUTES -->
+        <LOD_Bias>13</LOD_Bias>
+		<Affiliation> Masari </Affiliation>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Victory_Relevant> No </Victory_Relevant>
+
+		<CategoryMask> Small, Organic, CanAttack, Hero, RadiationHurts </CategoryMask>
+		<Weather_Category>Infantry</Weather_Category>
+		<!-- <Create_Team> Yes </Create_Team> --> <!-- MBL removed 07.06.2007 -->
+		<Can_Fall_From_Bridge> true </Can_Fall_From_Bridge>
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+		<Importance> 0.95 </Importance>
+		<Shot_Type> infantry </Shot_Type>
+
+		<Attributes SubObjectList="Yes">
+			<Is_Immune_To_Virus> true </Is_Immune_To_Virus>
+			<Generator_Area_Effect_Radius_1> 750 </Generator_Area_Effect_Radius_1>
+			<Is_Immune_To_Mind_Control> true </Is_Immune_To_Mind_Control>
+			<Is_Immune_To_Amplifier_Lockdown> true </Is_Immune_To_Amplifier_Lockdown>
+			<Can_Garrison_Buildings> true </Can_Garrison_Buildings>
+			<DMA_Max> 450 </DMA_Max>
+			<DMA_Regen_Rate> 12 </DMA_Regen_Rate>
+		</Attributes>
+
+
+		<!-- MOVEMENT -->
+		<UnitCollisionClass> Vehicle </UnitCollisionClass>
+		<Space_Layer> LandDynamic </Space_Layer>
+		<Locomotor_Has_Animation_Priority> yes </Locomotor_Has_Animation_Priority>
+		<MovementClass> Infantry </MovementClass>
+		<OccupationStyle> 1x1 </OccupationStyle>
+		<Custom_Hard_XExtent> 4.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 6.0 </Custom_Hard_YExtent>
+		<OverrideAcceleration> .125 </OverrideAcceleration>
+		<OverrideDeceleration> .125 </OverrideDeceleration>
+
+		<Max_Speed> 1.5 </Max_Speed>
+		<Min_Speed> 0.1 </Min_Speed>
+		<Max_Rate_Of_Turn> 30 </Max_Rate_Of_Turn>
+		<Stopped_Rate_Of_Turn> 15 </Stopped_Rate_Of_Turn>
+
+		<Movement_Animation_Speed> 1.5 </Movement_Animation_Speed>
+		<Rotation_Animation_Speed> 20 </Rotation_Animation_Speed>
+		<Has_Looping_Turn_Animations> true </Has_Looping_Turn_Animations>
+		<Walk_Animation_Speed> .8 </Walk_Animation_Speed>
+		<Crouch_Animation_Speed> .33 </Crouch_Animation_Speed>
+		<Strafe_Animation_Speed> 1.0 </Strafe_Animation_Speed>
+
+		<Strafe_Max_Speed_Coefficient> 1.0 </Strafe_Max_Speed_Coefficient>
+		<Backpedal_Animation_Speed> 2.0 </Backpedal_Animation_Speed>
+		<Backpedal_Max_Speed_Coefficient> 1 </Backpedal_Max_Speed_Coefficient>
+
+		<FormationSpacing> .5 </FormationSpacing>
+		<Walk_Transition> false </Walk_Transition>
+		<Should_Move_At_Water_Level> false </Should_Move_At_Water_Level>
+		<Formation_Custom_Position> Middle </Formation_Custom_Position>		
+		
+		<!-- CONFLICT -->
+		<Is_Attackable> true </Is_Attackable>
+		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Land_FOW_Reveal_Range>100.0</Land_FOW_Reveal_Range>
+		<Attack_Category_Restrictions> Flying | Resource | Resource_INST | BodySocketHP </Attack_Category_Restrictions>
+
+		<Tactical_Health> 1000 </Tactical_Health>
+
+		<Attributes SubObjectList="Yes">
+			<Generator_Area_Effect_Radius_1> 250 </Generator_Area_Effect_Radius_1>
+		</Attributes>
+
+		<!-- BEHAVIORS -->
+		<Behavior>
+			PERSISTENT_UNIT,
+			SELECTABLE,
+			RADAR_MAP_VISIBLE,
+			EFFECT_REGISTRY,
+		</Behavior>
+
+		<LandBehavior>
+      GUI,
+      RADAR_MAP_VISIBLE,
+      SURFACE_FX,
+      WALK_LOCOMOTOR,
+      FORMATION,
+      IDLE,
+      TARGETING,
+      REVEAL,
+      HIDE_WHEN_FOGGED,
+      EFFECT_GENERATOR,
+      ATTRIBUTE_DIRECTORY,
+      ABILITY_COUNTDOWN,
+      AI_RECRUITABLE,
+      DAMAGE_TRACKING,
+      AI_TARGET,
+      SQUASH,
+      SWITCH_TYPE,
+      RETREAT_FROM_TACTICAL,
+      BALLISTIC,
+      <!-- ELEMENTAL_MODE must be last because it causes add behavior to be called -->
+			ELEMENTAL_MODE
+		</LandBehavior>
+
+		<!-- MARIA 08.08.2006 we need this to have a representation of the hero as a global icon -->
+		<StrategicBehavior>
+			GLOBAL_ICON,
+			RESPAWN
+		</StrategicBehavior>
+
+		<BehaviorType Name="TooltipBehaviorType">
+			<Tooltip_Description_Text_ID> TEXT_TOOLTIP_DESCRIPTION_MASARI_HERO_CHAROS </Tooltip_Description_Text_ID>
+			<Tooltip_Category> TEXT_TOOLTIP_CATEGORY_HERO </Tooltip_Category>
+			<Tooltip_Good_Against> TEXT_TYPE_VERSUS_HEROES TEXT_TYPE_VERSUS_STRUCTURES </Tooltip_Good_Against>
+			<Tooltip_Vulnerable_To> TEXT_TYPE_VERSUS_TURRETS </Tooltip_Vulnerable_To>
+		</BehaviorType>
+
+         <Researched_Upgrades>
+		TEXT_MASARI_RESEARCH_TITLE_DARK_MATTER_AFINITY
+		TEXT_MASARI_RESEARCH_TITLE_DARK_MATTER_MASTERY
+		TEXT_MASARI_RESEARCH_TITLE_CLEANSING_ENERGY
+         </Researched_Upgrades>
+	 
+		<BehaviorType Name="GameEventSourceBehaviorType">
+			<Game_Event_Source_Category> Hero </Game_Event_Source_Category>
+		</BehaviorType>
+
+		<BehaviorType Name="ElementalModeType">
+			<Elemental_Object_Types> Fire, Masari_Hero_Charos_Fire </Elemental_Object_Types>
+			<Elemental_Object_Types> Ice,  Masari_Hero_Charos_Ice </Elemental_Object_Types>
+		</BehaviorType>
+
+
+		<!-- For Dark vortex ability (the ability will add TORNADO behavior when turned on)-->
+		<BehaviorType Name="TornadoBehaviorType">
+			<Tornado_Movement_Speed>0</Tornado_Movement_Speed>
+
+			<Tornado_Lifetime_Seconds>10000</Tornado_Lifetime_Seconds>
+			<Tornado_Radius>100</Tornado_Radius>
+			<Tornado_Degrees_Per_Second>30</Tornado_Degrees_Per_Second>
+			<Tornado_Lift_Per_Second>55</Tornado_Lift_Per_Second>
+			<Tornado_Inward_Per_Second>1250</Tornado_Inward_Per_Second>
+			<Tornado_End_Height_Min>150</Tornado_End_Height_Min>
+			<Tornado_End_Height_Max>175</Tornado_End_Height_Max>
+			<Tornado_Object_Spin>-3.1, 4.3, 20</Tornado_Object_Spin>
+			<Tornado_Tree_Bend_Scale>0.02</Tornado_Tree_Bend_Scale>
+			<Tornado_Tree_Bend_Noise_Scale>3</Tornado_Tree_Bend_Noise_Scale>
+			<Tornado_Tree_Bend_Noise_Frequency>40.0</Tornado_Tree_Bend_Noise_Frequency>
+			<Tornado_Destruction_Radius>0</Tornado_Destruction_Radius>
+		</BehaviorType>
+
+
+		<!--=================================================================================================
+		== [11/16/2006] This behavior type defines data for Type_Switch behavior - Oksana Kubushyna
+		================================================================================================== -->
+		<BehaviorType Name="TypeSwitchBehaviorType">
+			<!-- Ice to Fire																														-->
+			<Type_Switch_Pre_Activate_Anim>	Masari_Hero_Charos_Ice, Masari_Hero_Charos_Fire,	Special_End_A		</Type_Switch_Pre_Activate_Anim>
+			<Type_Switch_Active_Anim>			Masari_Hero_Charos_Ice, Masari_Hero_Charos_Fire,	None		</Type_Switch_Active_Anim>
+			<Type_Switch_Post_Activate_Anim>	Masari_Hero_Charos_Ice, Masari_Hero_Charos_Fire,	None		</Type_Switch_Post_Activate_Anim>
+
+			<!-- Fire to Ice -->
+			<Type_Switch_Pre_Activate_Anim>	Masari_Hero_Charos_Fire, Masari_Hero_Charos_Ice,	Special_End_A		</Type_Switch_Pre_Activate_Anim>
+			<Type_Switch_Active_Anim>			Masari_Hero_Charos_Fire, Masari_Hero_Charos_Ice,	None		</Type_Switch_Active_Anim>
+			<Type_Switch_Post_Activate_Anim>	Masari_Hero_Charos_Fire, Masari_Hero_Charos_Ice,	None		</Type_Switch_Post_Activate_Anim>
+
+			<!-- List of types this object can switch to - This is mainly needed to inforce build limits and must be
+						only added to the base type used for production dependencies purposes -->
+			<Type_Switch_Types> Masari_Hero_Charos_Fire, Masari_Hero_Charos_Ice  </Type_Switch_Types>
+			<Switch_Effect_Generator_Name> MasariSwitchGenerator </Switch_Effect_Generator_Name>
+			<Primary_Type> Masari_Hero_Charos </Primary_Type>
+
+		</BehaviorType>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Armor_Type> Armor_Masari_Hero </Armor_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="ProductionBehaviorType">
+			<Size_Value> 10 </Size_Value>
+			<Build_Cost_Credits> 10 </Build_Cost_Credits>
+			<Build_Time_Seconds> 5 </Build_Time_Seconds>
+			<Build_Limit_Current_Per_Player> 1 </Build_Limit_Current_Per_Player>
+      <Build_Limit_Lifetime_Per_Player> 1 </Build_Limit_Lifetime_Per_Player>
+			<Is_Research_Tech_Tree_Lockable> Yes </Is_Research_Tech_Tree_Lockable>
+			<Is_Strategic_Buildable_Type> No </Is_Strategic_Buildable_Type>
+			<Build_Only_In_Skirmish> true </Build_Only_In_Skirmish>
+		</BehaviorType>
+
+		<BehaviorType Name="BuildableObjectBehaviorType">
+			<Tactical_Production_Queue> Tactical_Units </Tactical_Production_Queue>
+			<Tactical_Build_Cost_Campaign> 180 </Tactical_Build_Cost_Campaign>
+			<Tactical_Build_Cost_Multiplayer> 180 </Tactical_Build_Cost_Multiplayer>
+			<Tactical_Build_Time_Seconds> 95 </Tactical_Build_Time_Seconds>
+			<Tactical_UI_Build_Queue_Order> 3 </Tactical_UI_Build_Queue_Order>
+			<Skirmish_Build_Hero_Cooldown_Seconds> 120 </Skirmish_Build_Hero_Cooldown_Seconds>
+		</BehaviorType>
+
+    <BehaviorType name="AIBehaviorType">
+      <AI_Combat_Power> 1 </AI_Combat_Power>
+      <Idle_Chase_Range> 20.0 </Idle_Chase_Range> <!-- Double click guard area Keep very small-->
+      <Guard_Chase_Range> 175.0 </Guard_Chase_Range>  <!-- Guard radius for unit-->
+      <Autonomous_Move_Extension_Vs_Attacker> 25.0 </Autonomous_Move_Extension_Vs_Attacker> <!--Range outside of guard area unit will move-->
+      <Attack_Move_Response_Range> 50.0 </Attack_Move_Response_Range>  <!-- When given a attack move command unit will travel this distance from path to attack-->
+      <AI_Target_Level>Individual</AI_Target_Level>
+		 <Attack_Score_Rating> 2.5 </Attack_Score_Rating>
+		 <Scout_Score_Rating> 0.1 </Scout_Score_Rating>
+		 <Guerilla_Score_Rating> 0.0 </Guerilla_Score_Rating>
+	 </BehaviorType>
+
+		<BehaviorType Name="WeaponBehaviorType">
+			<Can_Attack_Without_Weapon_Behavior>Yes</Can_Attack_Without_Weapon_Behavior>
+			<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
+			<Targeting_Priority_Set> Masari_Charos_Target_Priority </Targeting_Priority_Set>
+			<Targeting_Fire_Inaccuracy> 1.0 </Targeting_Fire_Inaccuracy>
+			<Targeting_Min_Attack_Distance> 0.0 </Targeting_Min_Attack_Distance>
+			<Targeting_Max_Attack_Distance> 20.0 </Targeting_Max_Attack_Distance>
+		</BehaviorType>
+
+		<BehaviorType Name="EncyclopediaBehaviorType">
+			<Icon_Name>i_icon_m_research_upgrade_hero_charos.tga</Icon_Name>
+		</BehaviorType>
+
+		<BehaviorType Name="LuaScriptBehaviorType">
+			<Lua_Global_Behaviors> HeroIcon </Lua_Global_Behaviors>
+			<Lua_Land_Behaviors> HeroIcon,Defensive_AI_Unit_Behavior </Lua_Land_Behaviors>
+			<Lua_Script_Data>
+				<!-- hero icon data -->
+				HERO_ICON = {}
+				HERO_ICON.PRIORITY = 1
+				HERO_ICON.TEXTURE = "i_icon_m_research_upgrade_hero_charos.tga"
+				HERO_ICON.HEADMODEL = "ZH_Charos_Pip_head"
+				NOT_TACTICALLY_PRESENT = false
+				IS_SCIENTIST = false
+				IS_COMM_OFFICER = false
+				DefensiveAI = {}
+				DefensiveAI.KillTurret = false
+				DefensiveAI.RunHealth = 0.9
+				DefensiveAI.AttackStationary = true
+				DefensiveAI.Abilities = {}
+				DefensiveAI.Abilities[1] = {}
+				DefensiveAI.Abilities[1].Name = "Masari_Ice_Crystals_Ability"
+				DefensiveAI.Abilities[1].Category = "CanAttack"
+				DefensiveAI.Abilities[1].Range = 100.0
+				DefensiveAI.Abilities[1].Count = 4.0
+				DefensiveAI.Abilities[1].NoCollectors = true
+			</Lua_Script_Data>
+		</BehaviorType>
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.03  0.03</Radar_Icon_Size>
+		</BehaviorType>
+
+		<BehaviorType Name="BlobShadowBehaviorType">
+			<Blob_Shadow_Scale>10.0, 10.0</Blob_Shadow_Scale>
+			<Blob_Shadow_Bone_Name>ROOT</Blob_Shadow_Bone_Name>
+			<Blob_Shadow_Below_Detail_Level>1</Blob_Shadow_Below_Detail_Level>
+			<Blob_Shadow_Material_Name>Generic_Shadow</Blob_Shadow_Material_Name>
+			<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+			<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+		</BehaviorType>
+
+		<BehaviorType Name="SFXBehaviorType">
+			<SFXEvent_Fire />
+			<SFXEvent_Weapon_Firing_Loop />
+			<SFXEvent_Select>Unit_Select_Masari_Charos</SFXEvent_Select>
+			<SFXEvent_Move>Unit_Move_A_Masari_Charos</SFXEvent_Move>
+			<SFXEvent_Move_At_Top_Speed>Unit_Move_B_Masari_Charos</SFXEvent_Move_At_Top_Speed>
+			<SFXEvent_Attack>Unit_Attack_A_Masari_Charos</SFXEvent_Attack>
+			<SFXEvent_Attack_At_Top_Speed>Unit_Attack_B_Masari_Charos</SFXEvent_Attack_At_Top_Speed>
+			<SFXEvent_Turret_Rotating_Loop> </SFXEvent_Turret_Rotating_Loop>
+			<SFXEvent_Health_Low_Warning> Unit_Health_Low_Masari_Charos </SFXEvent_Health_Low_Warning>
+			<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Masari_Charos </SFXEvent_Health_Critical_Warning>
+			<Death_SFXEvent_Start_Die> Unit_Death_Masari_Charos </Death_SFXEvent_Start_Die>
+			<SFXEvent_Engine_Idle_Loop> </SFXEvent_Engine_Idle_Loop>
+			<SFXEvent_Engine_Moving_Loop> </SFXEvent_Engine_Moving_Loop>
+			<SFXEvent_Unit_Lost />
+			<SFXEvent_Tactical_Build_Started>GUI_BUILD_Hero</SFXEvent_Tactical_Build_Started>
+			<SFXEvent_Tactical_Build_Complete>Unit_Select_Masari_Charos</SFXEvent_Tactical_Build_Complete>
+			<SFXEvent_Tactical_Build_Cancelled>GUI_BUILD_Hero_Canceled</SFXEvent_Tactical_Build_Cancelled>
+
+			<!-- Maria 05.01.2006 - Adding build sounds for Global production -->
+			<SFXEvent_Build_Started>GUI_BUILD_Hero</SFXEvent_Build_Started>
+			<SFXEvent_Build_Complete>Unit_Select_Masari_Charos</SFXEvent_Build_Complete>
+			<SFXEvent_Build_Cancelled>GUI_BUILD_Hero_Canceled</SFXEvent_Build_Cancelled>
+			<SFXEvent_Cant_Move_Unit_In_Production> MCO_GLOBAL_PROD_01 </SFXEvent_Cant_Move_Unit_In_Production>
+
+			<Play_SFXEvent_On_Sighting>True</Play_SFXEvent_On_Sighting>
+		</BehaviorType>
+
+		<BehaviorType Name="GUIBehaviorType">
+			<GUI_Bracket_Size>2</GUI_Bracket_Size>
+			<GUI_Bounds_Scale>0.5</GUI_Bounds_Scale>
+			<!-- Maria 05.18.2006 - Data needed for the models attached to the mouse in Global -->
+			<GUI_Is_Top_View> No </GUI_Is_Top_View>
+			<GUI_Rotate_Angle_Degrees> 0.0 </GUI_Rotate_Angle_Degrees>
+			<GUI_Is_Model_Shifted_Down> Yes </GUI_Is_Model_Shifted_Down>
+			<GUI_Shift_Factor> 4.7 </GUI_Shift_Factor>
+			<GUI_Strategic_Mode_Scale> 0.15 </GUI_Strategic_Mode_Scale>
+		</BehaviorType>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Specific_Death_Anim_Type> DIE </Specific_Death_Anim_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="CrushBehaviorType">
+			<Crush_Defense> 99 </Crush_Defense>
+      <Crush_Power>4</Crush_Power>
+		</BehaviorType>
+
+		<!-- MARIA 05.10.2006 -->
+		<!-- This behavior type determines the type of 3D global icon that will represent this object!-->
+		<BehaviorType Name="GlobalIconBehaviorType">
+			<Global_Icon_Object_Type_Name> MASARI_Hero2_Icon </Global_Icon_Object_Type_Name>
+			<!-- Only the Icon objects are Dummy Global Icons! -->
+			<Is_Dummy_Global_Icon> No </Is_Dummy_Global_Icon>
+			<Show_Sub_Object_On_Select_Name> light_cone </Show_Sub_Object_On_Select_Name>
+		</BehaviorType>
+
+		<BehaviorType Name="FleetBehaviorType">
+			<!-- Maria 05.10.2006 - Adding new field to support limiting the pop cap of a the hero's fleet -->
+			<!-- Maria 09.05.2006 - changing the pop cap associated to a hero so that it is ALWAYS <= the regional pop cap -->
+			<!-- associated to the hero's faction (refer to field <Regional_Pop_Cap> in Factions.xml for each of the playable factions) -->
+			<Associated_Pop_Cap> 50 </Associated_Pop_Cap>
+			<!-- Maria 05.24.2006 - How much space does the unit take up -->
+			<Unit_Pop_Cap> 10 </Unit_Pop_Cap>
+
+			<!-- The distance this hero can move in strategic mode.  Currently the units are regions.  If we remove the -->
+			<!-- Fixed_Travel_Cost from trade routes then we'd need to convert this to arc distance -->
+			<Travel_Range> 1.0 </Travel_Range>
+			<Global_Travel_Speed> 0.5 </Global_Travel_Speed>
+			<Reinforcement_Travel_Speed> 0.02 </Reinforcement_Travel_Speed>
+			<Reinforcement_Cost_Per_Second> 0.7 </Reinforcement_Cost_Per_Second>
+			<Use_Production_Queue_Type> Hero_2 </Use_Production_Queue_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="TacticalSettingsBehaviorType">
+			<!-- Maria [10/18/2006]
+			 At the beginning of each tactical battle, the player starts with a given amount of tactical credits (or raw materials)
+			 this amount is determined by the hero present (if invading) or the command center (if defending) -->
+			<Starting_Tactical_Credits> 600 </Starting_Tactical_Credits>
+			<Starting_Tactical_Units> Masari_Architect, Masari_Architect </Starting_Tactical_Units>
+
+			<!-- This unit will be created for tactical battles where Charos is present in strategic in a region other than -->
+			<!-- the one where the battle is occurring.  It exits to reserve a hero icon and allow interaction with the strategic -->
+			<!-- Charos through the hero reinforcement mechanic -->
+			<Tactical_Stand_In> Masari_Hero_Charos_Tactical_Stand_In </Tactical_Stand_In>
+			<Transport_Type> MASARI_Air_Invasion_Transport_Charos </Transport_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="RetreatFromTacticalBehaviorType">
+			<Retreat_Zone_Radius> 150.0 </Retreat_Zone_Radius>
+			<Retreat_Zone_Blob_Material_Name> Masari_Highlight_Retreat_Area_Range </Retreat_Zone_Blob_Material_Name>
+		</BehaviorType>
+
+		<BehaviorType Name="RespawnBehaviorType">
+			<Strategic_Respawn_Time_Seconds> 180.0 </Strategic_Respawn_Time_Seconds>
+			<Strategic_Respawn_Cost_Progression> 125.0, 310.0, 625.0 </Strategic_Respawn_Cost_Progression>
+		</BehaviorType>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<!--=================================================================================================
+			== [12/13/2006]  - Oksana Kubushyna
+			================================================================================================== -->
+			<Unit_Ability Name="Masari_Charos_Retreat_From_Tactical_Ability">
+				<Type> RETREAT_TAKE_OFF </Type>
+				<Only_In_Tactical_Mode> true </Only_In_Tactical_Mode>
+				<Recharge_Seconds>60.0</Recharge_Seconds>
+				<Should_Targeting_Ignore_Objects> Yes </Should_Targeting_Ignore_Objects>
+				<Targeting_Type> LAND_PASSIBLE_LOCATION </Targeting_Type>
+				<GUI_Activated_Ability_Name> Charos_Retreat_From_Tactical_Special_Ability </GUI_Activated_Ability_Name>
+				<Area_Effect_Decal_Distance> 150.0 </Area_Effect_Decal_Distance>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_RETREAT_CALL_Masari_Charos</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+
+
+			<!--=================================================================================================
+			== [12/13/2006] Frenzy (Active, Unmounted only). Charos moves & attacks faster, doing more 
+			==					 damage for X seconds. Also takes less damage due to elemental shield. Attack and 
+			==					 shield type depend on current element.								- Oksana Kubushyna
+			================================================================================================== -->
+			<Unit_Ability Name="Masari_Elemental_Fury_Ability">
+				<Type>EFFECT_GENERATOR</Type>
+				<Only_In_Tactical_Mode> true </Only_In_Tactical_Mode>
+				<Is_Modal> Yes </Is_Modal>
+				<Expiration_Seconds>12</Expiration_Seconds>
+				<Recharge_Seconds>35</Recharge_Seconds>
+        <Effect_Generator_Name> MasariCharosElementalFuryEffectGenerator </Effect_Generator_Name>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_ABILITY_A_Masari_Charos</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Toggle_Non_Hero_Ability_On />
+				<SFXEvent_GUI_Toggle_Non_Hero_Ability_Off />
+			</Unit_Ability>
+
+		</Unit_Abilities_Data>
+
+		<Abilities SubObjectList="Yes">
+			<Activate_Behavior_Ability Name="Charos_Retreat_From_Tactical_Special_Ability">
+				<Activation_Min_Range> 0.0 </Activation_Min_Range>
+				<Activation_Max_Range> 15.0 </Activation_Max_Range>
+				<Activate_Behavior_Type> RETREAT_FROM_TACTICAL </Activate_Behavior_Type>
+				<Activation_Style> User_Input </Activation_Style>
+				<Can_Target_Allies> Yes </Can_Target_Allies>
+				<Applicable_Unit_Categories> DummyTarget </Applicable_Unit_Categories>
+			</Activate_Behavior_Ability>
+		</Abilities>
+
+		<Effect_Generator_Data SubObjectList="Yes">
+
+			<Effect_Generator Name="MasariSwitchGenerator">
+				<Should_Deactivate_Manually> false </Should_Deactivate_Manually>
+				<Is_Independent_Generator>Yes</Is_Independent_Generator>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Duration> 1.0 </Duration>
+					<Effect_Name> MasariSwitchCleanseEffect </Effect_Name>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+				</Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry2">
+					<Duration> 0.5 </Duration>
+					<Base_Delay> 0.4 </Base_Delay>
+					<Effect_Name> MasariFullArmorEffect </Effect_Name>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+					<!-- only in ice mode -->
+					<Target_Filter_C> In_Ice_Mode </Target_Filter_C>
+				</Effect_Generator_Entry>
+
+			</Effect_Generator>
+
+			<!--=================================================================================================
+			== [12/13/2006] Hero Perks standard Hero ability.  - Oksana Kubushyna
+			================================================================================================== -->
+			<Effect_Generator Name="CharosHeroPerksEffectGenerator">
+				<Should_Deactivate_Manually> true </Should_Deactivate_Manually>
+				<Starts_Active> true </Starts_Active>
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> HeroPerksEffect </Effect_Name>
+					<Duration> -1 </Duration>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+				</Effect_Generator_Entry>
+			</Effect_Generator>
+
+
+
+			<!--=================================================================================================
+			== [01/04/2006] Elemental Fury (Active, Unmounted only). Charos moves & attacks faster, doing more 
+			==					 damage for X seconds. Also takes less damage due to elemental shield. Attack and 
+			==					 shield type depend on current element.								- Oksana Kubushyna
+			================================================================================================== -->
+			<Effect_Generator Name="MasariCharosElementalFuryEffectGenerator">
+				<Should_Deactivate_Manually> yes </Should_Deactivate_Manually>
+
+				<!-- Apply effects -->
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> MasariCharosElementalFuryEffect </Effect_Name>
+					<Duration> -1 </Duration>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+				</Effect_Generator_Entry>
+			</Effect_Generator>
+
+		</Effect_Generator_Data>
+
+
+
+	</X13_Masari_Heroes>
+
+
+
+	<!--=================================================================================================
+	== [12/13/2006]	CHAROS - Fire mode	- Oksana Kubushyna
+	================================================================================================== -->
+	<X13_Masari_Heroes Name="Masari_Hero_Charos_Fire">
+		<Variant_Of_Existing_Type> Masari_Hero_Charos </Variant_Of_Existing_Type>
+
+		<!-- ART -->
+		<Land_Model_Name> ZH_Charos.ALO </Land_Model_Name>
+		<Cache_Crusher_Boxes>False</Cache_Crusher_Boxes>
+		<AssetBank> BANK_MASARI </AssetBank>
+
+		<!-- INTERFACE -->
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+		<Land_FOW_Reveal_Range>225.0</Land_FOW_Reveal_Range>
+		<Movement_Animation_Speed> 1.5 </Movement_Animation_Speed>
+		<Max_Speed> 1.5 </Max_Speed>
+
+		<BehaviorType Name="TooltipBehaviorType">
+			<Tooltip_Description_Text_ID> TEXT_TOOLTIP_DESCRIPTION_MASARI_HERO_CHAROS </Tooltip_Description_Text_ID>
+			<Tooltip_Category> TEXT_TOOLTIP_CATEGORY_HERO </Tooltip_Category>
+		</BehaviorType>
+
+		<Unit_Abilities_Data SubObjectList="Yes" Replace="No">
+
+			<Unit_Ability Name="Masari_Blaze_Of_Glory_Ability">
+				<Type>EFFECT_GENERATOR</Type>
+				<Only_In_Tactical_Mode> true </Only_In_Tactical_Mode>
+				<Is_Modal> Yes </Is_Modal>
+				<Expiration_Seconds>12</Expiration_Seconds>
+				<Recharge_Seconds>35</Recharge_Seconds>
+				<Effect_Generator_Name> MasariCharosBlazeOfGloryEffectGenerator </Effect_Generator_Name>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_ABILITY_B_Masari_Charos</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Toggle_Non_Hero_Ability_On />
+				<SFXEvent_GUI_Toggle_Non_Hero_Ability_Off />
+			</Unit_Ability>
+
+			<Unit_Ability Name="Masari_Charos_Flaming_Scythe_Attack">
+				<Type>EFFECT_GENERATOR</Type>
+				<Expiration_Seconds> 1.5 </Expiration_Seconds>
+				<Recharge_Seconds>0.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> Masari_Charos_Flaming_Scythe_Attack </GUI_Activated_Ability_Name>
+				<Effect_Generator_Name> MasariCharosFlamingScytheEffectGenerator </Effect_Generator_Name>
+			</Unit_Ability>
+
+		</Unit_Abilities_Data>
+
+		<Abilities SubObjectList="Yes" Replace="No">
+
+			<Generic_Attack_Ability Name="Masari_Charos_Flaming_Scythe_Attack">
+				<Activation_Style>SPECIAL_ATTACK</Activation_Style>
+				<Activation_Chance>1.0</Activation_Chance>
+				<Activation_Min_Range>0</Activation_Min_Range>
+				<Activation_Max_Range>25.0</Activation_Max_Range>
+				<Attack_Animation>ANIM_ATTACK</Attack_Animation>
+
+				<Damage_Amount>23.0</Damage_Amount>
+				<Damage_Percentage>0.013</Damage_Percentage>
+				<Damage_Type>Damage_Masari_Charos_Sword</Damage_Type>
+				<Damage_Frame_Number>7</Damage_Frame_Number>
+				<Effect_Generator_Name>MasariCharosFlamingScytheEffectGenerator</Effect_Generator_Name>
+
+				<Excluded_Unit_Categories> Flying | Resource |Resource_INST | BodySocketHP </Excluded_Unit_Categories>
+
+				<Only_Appropriate_When_In_Range> false </Only_Appropriate_When_In_Range>
+				<Only_Appropriate_When_Ready> false </Only_Appropriate_When_Ready>
+
+				<Is_Looping_Attack> false </Is_Looping_Attack>
+				<Uses_Countdown_Timer> false </Uses_Countdown_Timer>
+				<Face_Target_Before_Firing> true </Face_Target_Before_Firing>
+				<Animation_Duration_Override>1.5</Animation_Duration_Override>
+			</Generic_Attack_Ability>
+
+		</Abilities>
+
+
+		<Effect_Generator_Data SubObjectList="Yes" Replace="No">
+
+			<Effect_Generator Name="FireVisualGenerator">
+				<Starts_Active> true </Starts_Active>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> MasariCharosFireVisualEffect </Effect_Name>
+					<Duration> -1.0 </Duration>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+				</Effect_Generator_Entry>
+
+			</Effect_Generator>
+
+
+			<Effect_Generator Name="MasariCharosFlamingScytheEffectGenerator">
+				<Is_Independent_Generator>No</Is_Independent_Generator>
+				<!-- fire-and-forget generator -->
+				<Should_Deactivate_Manually> false </Should_Deactivate_Manually>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> MasariCharosSwordDamageEffect </Effect_Name>
+					<Duration> 1.5 </Duration>
+
+					<Target_Gathering_Mask> Target | SelfAE </Target_Gathering_Mask>
+					<Target_Filter_Categories> ~Flying + ~Resource + ~Resource_INST</Target_Filter_Categories>
+					<Target_Filter_C>  Is_Enemy </Target_Filter_C>
+					<Area_Effect_Radius> 30.0 </Area_Effect_Radius>
+					<Arc_Of_Effect>180</Arc_Of_Effect>
+					<Should_Add_All_Team_Members_As_Targets> false </Should_Add_All_Team_Members_As_Targets>
+					<Should_Add_Team_Container_As_Target> false </Should_Add_Team_Container_As_Target>
+					<Base_Delay> 1.5 </Base_Delay>
+
+				</Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry2">
+					<Effect_Name> MasariPurifyingLightEffect </Effect_Name>
+					<Duration> 6.0 </Duration>
+					<Disable_Entry_Attribute> Is_Mind_Controlled </Disable_Entry_Attribute>
+					<Target_Gathering_Mask> Target | SelfAE </Target_Gathering_Mask>
+					<Target_Filter_Categories> ~Flying + ~Resource + ~Resource_INST</Target_Filter_Categories>
+					<Target_Filter_C>  Is_Enemy </Target_Filter_C>
+					<Area_Effect_Radius> 30.0 </Area_Effect_Radius>
+					<Arc_Of_Effect>150</Arc_Of_Effect>
+					<Should_Add_All_Team_Members_As_Targets> false </Should_Add_All_Team_Members_As_Targets>
+					<Should_Add_Team_Container_As_Target> false </Should_Add_Team_Container_As_Target>
+				</Effect_Generator_Entry>
+
+            <Effect_Generator_Entry Name="Entry3">
+               <Effect_Name> MasariCharosBlazingScytheVisualEffect </Effect_Name>
+               <Duration> 0.01 </Duration>
+               <Target_Gathering_Mask> Target </Target_Gathering_Mask>
+               <Base_Delay> 0.62 </Base_Delay>
+            </Effect_Generator_Entry>
+            
+				<Effect_Generator_Entry Name="Entry4">
+					<Effect_Name> MasariPurifyingLightVisualEffectSmall </Effect_Name>
+					<Duration> 6.0 </Duration>
+					<Disable_Entry_Attribute> Is_Mind_Controlled </Disable_Entry_Attribute>
+					<Target_Gathering_Mask> Target | SelfAE </Target_Gathering_Mask>
+					<Target_Filter_Categories> Small + ~Flying + ~Resource + ~Resource_INST </Target_Filter_Categories>
+					<Target_Filter_C>  Is_Enemy </Target_Filter_C>
+					<Area_Effect_Radius> 30.0 </Area_Effect_Radius>
+					<Arc_Of_Effect>150</Arc_Of_Effect>
+					<Should_Add_All_Team_Members_As_Targets> false </Should_Add_All_Team_Members_As_Targets>
+					<Should_Add_Team_Container_As_Target> false </Should_Add_Team_Container_As_Target>
+				</Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry5">
+					<Effect_Name> MasariPurifyingLightVisualEffectMedium </Effect_Name>
+					<Duration> 6.0 </Duration>
+					<Disable_Entry_Attribute> Is_Mind_Controlled </Disable_Entry_Attribute>
+					<Target_Gathering_Mask> Target | SelfAE </Target_Gathering_Mask>
+					<Target_Filter_Categories> Medium + ~Flying + ~Resource + ~Resource_INST </Target_Filter_Categories>
+					<Target_Filter_C>  Is_Enemy </Target_Filter_C>
+					<Area_Effect_Radius> 30.0 </Area_Effect_Radius>
+					<Arc_Of_Effect>150</Arc_Of_Effect>
+					<Should_Add_All_Team_Members_As_Targets> false </Should_Add_All_Team_Members_As_Targets>
+					<Should_Add_Team_Container_As_Target> false </Should_Add_Team_Container_As_Target>
+				</Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry6">
+					<Effect_Name> MasariPurifyingLightVisualEffectLarge </Effect_Name>
+					<Duration> 6.0 </Duration>
+					<Disable_Entry_Attribute> Is_Mind_Controlled </Disable_Entry_Attribute>
+					<Target_Gathering_Mask> Target | SelfAE </Target_Gathering_Mask>
+					<Target_Filter_Categories> Large | Huge + ~Flying + ~Resource + ~Resource_INST </Target_Filter_Categories>
+					<Target_Filter_C>  Is_Enemy </Target_Filter_C>
+					<Area_Effect_Radius> 30.0 </Area_Effect_Radius>
+					<Arc_Of_Effect>150</Arc_Of_Effect>
+					<Should_Add_All_Team_Members_As_Targets> false </Should_Add_All_Team_Members_As_Targets>
+					<Should_Add_Team_Container_As_Target> false </Should_Add_Team_Container_As_Target>
+				</Effect_Generator_Entry>
+
+			</Effect_Generator>
+
+
+			<Effect_Generator Name="MasariCharosBlazeOfGloryEffectGenerator">
+				<Should_Deactivate_Manually> yes </Should_Deactivate_Manually>
+				<Is_Independent_Generator>No</Is_Independent_Generator>
+				<Modal_Refresh_Frequency>2.0</Modal_Refresh_Frequency>
+
+				<!-- Apply effects -->
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> MasariCharosBlazeOfGloryEffect </Effect_Name>
+					<Duration> -1 </Duration>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+				</Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry2">
+					<Effect_Name> MasariCharosBlazeOfGloryDamageEffect </Effect_Name>
+					<Duration> 12.0 </Duration>
+					<Target_Gathering_Mask> SelfAE </Target_Gathering_Mask>
+					<Area_Effect_Radius> 60 </Area_Effect_Radius>
+					<Source_SFX_Event />
+					<Source_SFX_Loop_Type />
+					<Stop_Source_SFX_On_Deactivate> true </Stop_Source_SFX_On_Deactivate>
+					<Should_Add_All_Team_Members_As_Targets> false </Should_Add_All_Team_Members_As_Targets>
+					<Should_Add_Team_Container_As_Target> false </Should_Add_Team_Container_As_Target>
+					<Target_Filter_Categories> ~Flying </Target_Filter_Categories>
+					<Target_Filter_C> Is_Not_Ally </Target_Filter_C>
+				</Effect_Generator_Entry>
+
+			</Effect_Generator>
+
+			<!-- Standard DMA generator - Oksana 05/14/2007 -->
+			<!--INCLUDE ".\Data\XML\Includes\Masari_DMA\MASARI_DMA_Light_Mode_Generators.xml" -->
+
+		</Effect_Generator_Data>
+
+	</X13_Masari_Heroes>
+
+
+
+
+
+	<!--=================================================================================================
+	== [12/13/2006]	CHAROS - ice mode		- Oksana Kubushyna
+	================================================================================================== -->
+	<X13_Masari_Heroes Name="Masari_Hero_Charos_Ice">
+		<Variant_Of_Existing_Type> Masari_Hero_Charos </Variant_Of_Existing_Type>
+
+		<!-- ART -->
+		<Land_Model_Name> ZH_Charos.ALO </Land_Model_Name>
+		<AssetBank> BANK_MASARI </AssetBank>
+
+		<!-- INTERFACE -->
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+		<BehaviorType Name="TooltipBehaviorType">
+			<Tooltip_Description_Text_ID> TEXT_TOOLTIP_DESCRIPTION_MASARI_HERO_CHAROS </Tooltip_Description_Text_ID>
+			<Tooltip_Category> TEXT_TOOLTIP_CATEGORY_HERO </Tooltip_Category>
+		</BehaviorType>
+
+		<Land_FOW_Reveal_Range>150.0</Land_FOW_Reveal_Range>
+		<Movement_Animation_Speed> 1.8 </Movement_Animation_Speed>
+		<Max_Speed> 1.8 </Max_Speed>
+
+		<Unit_Abilities_Data SubObjectList="Yes" Replace="No">
+
+			<Unit_Ability Name="Masari_Ice_Crystals_Ability">
+				<Type>EFFECT_GENERATOR</Type>
+				<Only_In_Tactical_Mode> true </Only_In_Tactical_Mode>
+
+				<Is_Modal> Yes </Is_Modal>
+				<Expiration_Seconds>10</Expiration_Seconds>
+				<Recharge_Seconds>40</Recharge_Seconds>
+				<Effect_Generator_Name> MasariCharosIceCrystalsEffectGenerator </Effect_Generator_Name>
+			</Unit_Ability>
+
+			<Unit_Ability Name="Masari_Charos_Frost_Scythe_Attack">
+				<Type>EFFECT_GENERATOR</Type>
+				<Expiration_Seconds> 1.5 </Expiration_Seconds>
+				<Recharge_Seconds>0.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> Masari_Charos_Frost_Scythe_Attack </GUI_Activated_Ability_Name>
+				<Effect_Generator_Name> MasariCharosFrostScytheEffectGenerator </Effect_Generator_Name>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+
+
+		<Abilities SubObjectList="Yes" Replace="No">
+
+			<Generic_Attack_Ability Name="Masari_Charos_Frost_Scythe_Attack">
+				<Activation_Style>SPECIAL_ATTACK</Activation_Style>
+				<Activation_Chance>1.0</Activation_Chance>
+				<Activation_Min_Range>0</Activation_Min_Range>
+				<Activation_Max_Range>25.0</Activation_Max_Range>
+				<Attack_Animation>ANIM_ATTACK</Attack_Animation>
+
+				<Damage_Amount>20.0</Damage_Amount>
+				<Damage_Percentage>0.013</Damage_Percentage>
+				<Damage_Type>Damage_Masari_Charos_Sword</Damage_Type>
+				<Damage_Frame_Number>7</Damage_Frame_Number>
+				<Effect_Generator_Name>MasariCharosFrostScytheEffectGenerator</Effect_Generator_Name>
+
+				<Excluded_Unit_Categories> Flying | Resource |Resource_INST | BodySocketHP </Excluded_Unit_Categories>
+
+				<Only_Appropriate_When_In_Range> false </Only_Appropriate_When_In_Range>
+				<Only_Appropriate_When_Ready> false </Only_Appropriate_When_Ready>
+
+				<Is_Looping_Attack> false </Is_Looping_Attack>
+				<Uses_Countdown_Timer> false </Uses_Countdown_Timer>
+				<Face_Target_Before_Firing> true </Face_Target_Before_Firing>
+				<Animation_Duration_Override>1.5</Animation_Duration_Override>
+			</Generic_Attack_Ability>
+
+		</Abilities>
+
+		<!--=================================================================================================
+			== [01/18/2007] General Effects switch.  - Jeff Palmer
+			================================================================================================== -->
+		<Effect_Generator_Data SubObjectList="Yes" Replace="No">
+
+			<Effect_Generator Name="IceVisualGenerator">
+				<Starts_Active> true </Starts_Active>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> MasariCharosIceVisualEffect </Effect_Name>
+					<Duration> -1.0 </Duration>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+				</Effect_Generator_Entry>
+
+			</Effect_Generator>
+
+			<!--=================================================================================================
+			== [12/13/2006] Frost Scythe standard attack.  - Oksana Kubushyna
+			================================================================================================== -->
+			<Effect_Generator Name="MasariCharosFrostScytheEffectGenerator">
+				<!-- fire-and-forget generator -->
+				<Should_Deactivate_Manually> false </Should_Deactivate_Manually>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> MasariCharosSwordDamageEffect </Effect_Name>
+					<Duration> 1.5 </Duration>
+
+					<Target_Gathering_Mask> Target | SelfAE </Target_Gathering_Mask>
+					<Target_Filter_Categories> ~Flying + ~Resource + ~Resource_INST </Target_Filter_Categories>
+					<Target_Filter_C>  Is_Enemy </Target_Filter_C>
+					<Area_Effect_Radius> 30.0 </Area_Effect_Radius>
+					<Arc_Of_Effect>180</Arc_Of_Effect>
+					<Should_Add_All_Team_Members_As_Targets> false </Should_Add_All_Team_Members_As_Targets>
+					<Should_Add_Team_Container_As_Target> false </Should_Add_Team_Container_As_Target>
+					<Base_Delay> 1.5 </Base_Delay>
+
+				</Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry2">
+					<Effect_Name> MasariCripplingShotsEffect </Effect_Name>
+					<Duration> 6.0 </Duration>
+					<Target_Gathering_Mask> Target </Target_Gathering_Mask>
+					<Target_Filter_Categories> ~Flying + ~Resource + ~Resource_INST </Target_Filter_Categories>
+					<Target_Filter_C>  Is_Enemy </Target_Filter_C>
+					<Should_Add_All_Team_Members_As_Targets> false </Should_Add_All_Team_Members_As_Targets>
+					<Should_Add_Team_Container_As_Target> false </Should_Add_Team_Container_As_Target>
+					<Remove_On_Death> false </Remove_On_Death>
+				</Effect_Generator_Entry>
+
+            <Effect_Generator_Entry Name="Entry3">
+               <Effect_Name> MasariCharosDarkScytheVisualEffect </Effect_Name>
+               <Duration> 0.01 </Duration>
+               <Target_Gathering_Mask> Target </Target_Gathering_Mask>
+               <Base_Delay> 0.62 </Base_Delay>
+            </Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry4">
+					<Effect_Name> MasariCripplingShotsVisualEffectSmall </Effect_Name>
+					<Duration> 6.0 </Duration>
+					<Target_Gathering_Mask> Target </Target_Gathering_Mask>
+					<Target_Filter_Categories> Small </Target_Filter_Categories>
+					<Target_Filter_C> Is_Enemy </Target_Filter_C>
+					<Should_Add_All_Team_Members_As_Targets> false </Should_Add_All_Team_Members_As_Targets>
+					<Should_Add_Team_Container_As_Target> false </Should_Add_Team_Container_As_Target>
+					<Disable_Entry_Attribute> Is_Mind_Controlled </Disable_Entry_Attribute>
+					<Remove_On_Death> false </Remove_On_Death>
+				</Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry5">
+					<Effect_Name> MasariCripplingShotsVisualEffectMedium </Effect_Name>
+					<Duration> 6.0 </Duration>
+					<Target_Gathering_Mask> Target </Target_Gathering_Mask>
+					<Target_Filter_Categories> Medium </Target_Filter_Categories>
+					<Target_Filter_C> Is_Enemy </Target_Filter_C>
+					<Should_Add_All_Team_Members_As_Targets> false </Should_Add_All_Team_Members_As_Targets>
+					<Should_Add_Team_Container_As_Target> false </Should_Add_Team_Container_As_Target>
+					<Disable_Entry_Attribute> Is_Mind_Controlled </Disable_Entry_Attribute>
+					<Remove_On_Death> false </Remove_On_Death>
+				</Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry6">
+					<Effect_Name> MasariCripplingShotsVisualEffectLarge </Effect_Name>
+					<Duration> 6.0 </Duration>
+					<Target_Gathering_Mask> Target </Target_Gathering_Mask>
+					<Target_Filter_Categories> Large | Huge + ~Stationary </Target_Filter_Categories>
+					<Target_Filter_C> Is_Enemy </Target_Filter_C>
+					<Should_Add_All_Team_Members_As_Targets> false </Should_Add_All_Team_Members_As_Targets>
+					<Should_Add_Team_Container_As_Target> false </Should_Add_Team_Container_As_Target>
+					<Disable_Entry_Attribute> Is_Mind_Controlled </Disable_Entry_Attribute>
+					<Remove_On_Death> false </Remove_On_Death>
+				</Effect_Generator_Entry>
+
+			</Effect_Generator>
+
+			<Effect_Generator Name="MasariCharosIceCrystalsEffectGenerator">
+				<Should_Deactivate_Manually> Yes </Should_Deactivate_Manually>
+				<Is_Independent_Generator>No</Is_Independent_Generator>
+				<Modal_Refresh_Frequency>2.0</Modal_Refresh_Frequency>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> MasariCharosIceCrystalsEffect </Effect_Name>
+					<Duration> -1 </Duration>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+				</Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry2">
+					<Effect_Name> MasariCharosTornadoDamageEffect </Effect_Name>
+					<Duration> 10.0 </Duration>
+					<Target_Gathering_Mask> SelfAE </Target_Gathering_Mask>
+					<!-- KDB made the damage radius the same as the tornado radius -->
+					<Area_Effect_Radius> 100.0 </Area_Effect_Radius>
+					<Source_SFX_Event />
+					<Source_SFX_Loop_Type />
+					<Stop_Source_SFX_On_Deactivate> true </Stop_Source_SFX_On_Deactivate>
+					<Should_Add_All_Team_Members_As_Targets> false </Should_Add_All_Team_Members_As_Targets>
+					<Should_Add_Team_Container_As_Target> false </Should_Add_Team_Container_As_Target>
+					<Target_Filter_C> Is_Not_Ally </Target_Filter_C>
+				</Effect_Generator_Entry>
+				
+			</Effect_Generator>
+
+
+			<!-- Standard DMA generator - Oksana 05/14/2007 -->
+			<!--INCLUDE ".\Data\XML\Includes\Masari_DMA\MASARI_DMA_Dark_Mode_Generators.xml" -->
+
+		</Effect_Generator_Data>
+
+	</X13_Masari_Heroes>
+
+
+	<!-- **************************************************************************************** -->
+	<!-- **** MISC OBJECTS ********************************************************************** -->
+	<!-- **************************************************************************************** -->
+
+	<Misc_Objects Name="Chill_Tornado">
+		<Is_Placed_By_Editor> false </Is_Placed_By_Editor>
+		<Land_Model_Name>pp_ZH_Charos_Dark_Vortex.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<AssetBank> BANK_MASARI </AssetBank>
+
+	</Misc_Objects>
+
+	<!-- Object type to provide access to hero reinforcement -->
+	<X13_Masari_Heroes Name="Masari_Hero_Charos_Tactical_Stand_In">
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Behavior> GHOST </Behavior>
+		<LandBehavior> AI_RECRUITABLE </LandBehavior>
+		<Affiliation> Masari </Affiliation>
+	</X13_Masari_Heroes>
+
+
+</Masari_Hero_Charos_XML>

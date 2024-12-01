@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<EnumDefinition>
+
+	<!-- Alien Walker Habitat Sockets -->
+	<Body_Habitat> 0 </Body_Habitat>
+	<Leg_Habitat>  1 </Leg_Habitat>
+	
+	<!-- Alien Walker Assembly Sockets -->
+	<FaceCap_Assembly> 33 </FaceCap_Assembly>
+	<Body_Assembly> 2 </Body_Assembly>
+	<Leg_Assembly>  3 </Leg_Assembly>
+	
+	<!-- Alien Walker Science Sockets -->
+	<Leg_Science>					4	</Leg_Science>
+	<Body_Science>					5	</Body_Science>
+	
+	<!-- Alien structure sockets -->
+	<Alien_Abduction_Core_Socket>		6	</Alien_Abduction_Core_Socket>
+	<Alien_Foundation_Socket>			7	</Alien_Foundation_Socket>
+   <Alien_Theory_Core_Socket>       8  </Alien_Theory_Core_Socket>
+   <Alien_Creation_Core_Socket>     9  </Alien_Creation_Core_Socket>
+   <Alien_Radiation_Spitter_Socket> 10 </Alien_Radiation_Spitter_Socket>
+   <Alien_Gravitic_Manipulator_Socket> 11 </Alien_Gravitic_Manipulator_Socket>
+	
+	<!-- Novus structure assembly sockets -->
+	<Novus_Vehicle_Assembly_Socket>	12 </Novus_Vehicle_Assembly_Socket>
+	<Novus_Aircraft_Assembly_Socket> 13 </Novus_Aircraft_Assembly_Socket>
+	<Novus_Robotic_Assembly_Socket>  14 </Novus_Robotic_Assembly_Socket>
+	<Novus_Science_Center_Socket>    15 </Novus_Science_Center_Socket>	
+	<Novus_Megacorp_Center_Socket>   16 </Novus_Megacorp_Center_Socket>
+	<Novus_R_and_D_Center_Socket>		17 </Novus_R_and_D_Center_Socket>
+	<Novus_Material_Center_Socket>	18 </Novus_Material_Center_Socket>
+	<Novus_Nanocenter_Socket>			19 </Novus_Nanocenter_Socket>
+	<Novus_Lab_Upgrade_Socket>			20 </Novus_Lab_Upgrade_Socket>
+
+	<!-- Masari structure sockets -->
+	<Masari_Infantry_Inspiration_Socket>	21 </Masari_Infantry_Inspiration_Socket>
+	<Masari_Ground_Inspiration_Socket>		22 </Masari_Ground_Inspiration_Socket>
+	<Masari_Inventors_Lab_Socket>				23 </Masari_Inventors_Lab_Socket>
+	<Masari_Air_Inspiration_Socket>			24 </Masari_Air_Inspiration_Socket>
+	<Masari_Guardian_Socket>					25 </Masari_Guardian_Socket>
+	<Masari_Sky_Guardian_Socket>				26 </Masari_Sky_Guardian_Socket>
+	<Masari_Natural_Interpreter_Socket>		27 </Masari_Natural_Interpreter_Socket>
+	<Masari_Atlatea_Socket>						28 </Masari_Atlatea_Socket>
+	<Masari_Will_Processor_Socket>			29 </Masari_Will_Processor_Socket>
+	<Masari_Element_Magnet_Socket>			30 </Masari_Element_Magnet_Socket>
+	<Masari_Key_Inspiration_Socket>			31 </Masari_Key_Inspiration_Socket>
+	<Masari_Matter_Engine_Socket>				32 </Masari_Matter_Engine_Socket>
+
+</EnumDefinition>
+

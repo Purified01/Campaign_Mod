@@ -1,0 +1,218 @@
+<?xml version="1.0"?>
+<Neutral_Refinery_XML>
+
+<!-- **************************************************************************************** -->	
+<!-- *** STRUCTURE ************************************************************************** -->	
+<!-- **************************************************************************************** -->	
+
+	<X65_Neutral_Multiplayer_Structures Name="Neutral_Refinery">
+
+		<!-- ART -->
+		<Land_Model_Name>WO_Oil_Derrick.alo</Land_Model_Name>
+		<Scale_Factor>1.1</Scale_Factor>
+		<Loop_Idle_Anim_00> Yes </Loop_Idle_Anim_00>
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+    <Last_State_Visible_Under_FOW> True </Last_State_Visible_Under_FOW>
+    <Initial_State_Visible_Under_FOW>True</Initial_State_Visible_Under_FOW>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_ID_NEUTRAL_STRUCTURE_REFINERY</Text_ID>
+
+		<!-- ATTRIBUTES -->
+		<CategoryMask> Large, Stationary, Insignificant </CategoryMask>
+		<Affiliation> Neutral, Masari, Novus, Alien, Military </Affiliation>
+		<Victory_Relevant> No </Victory_Relevant>
+		<Should_Always_Colorize> true </Should_Always_Colorize>
+		
+		<!-- MOVEMENT -->
+		<Space_Layer> LandStatic </Space_Layer>
+		<MovementClass>Building</MovementClass>
+		<UnitCollisionClass> High Obstacle </UnitCollisionClass>
+		<Custom_Hard_YExtent_Offset> -7.0 </Custom_Hard_YExtent_Offset>
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+
+		<!-- CONFLICT -->
+		<Is_Attackable> true </Is_Attackable>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Ranged_Target_Z_Adjust>10.0</Ranged_Target_Z_Adjust>
+		<Tactical_Health> 350 </Tactical_Health>
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_GENERIC_DETONATION, SFX_GENERIC_DETONATION,null</Land_Damage_SFX>
+
+		<!-- BEHAVIORS -->
+		<Behavior>
+			GROUND_STRUCTURE,
+			SELECTABLE,
+		</Behavior>
+
+		<LandBehavior>
+			EFFECT_GENERATOR,
+			EFFECT_REGISTRY,
+			ATTRIBUTE_DIRECTORY,
+			GUI,
+			RADAR_MAP_VISIBLE,
+			REVEAL,
+			HIDE_WHEN_FOGGED,
+			IDLE,
+			TERRAFORM,
+			AI_TARGET
+		</LandBehavior>
+
+		<BehaviorType Name="TerraformBehaviorType">
+			<Bib_X_Extent> 35 </Bib_X_Extent>
+			<Bib_Y_Extent> 35 </Bib_Y_Extent>
+		</BehaviorType>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Armor_Type> Armor_Civilian_Structure_Light </Armor_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="GroundStructureBehaviorType">
+			<Is_Command_Center> No </Is_Command_Center>
+		</BehaviorType>
+
+		<BehaviorType Name="EncyclopediaBehaviorType">
+			<Icon_Name />
+
+			<!-- Maria 07.07.2006 - what type is this building? air, infantry, vehicle, or nil. This is used
+				 to update the queue UI in tactical mode! -->
+			<Building_Queue_Type>nil</Building_Queue_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="TooltipBehaviorType">
+			<Tooltip_Description_Text_ID>TEXT_NEUTRAL_STRUCTURE_REFINERY</Tooltip_Description_Text_ID>
+		</BehaviorType>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Death_Clone>Damage_Default, Neutral_Refinery_Death_Clone</Death_Clone>
+			<Death_Explosions>Novus_Large_Explosion_Tower</Death_Explosions>
+			<Death_Clone_Keep_Behaviors> EFFECT_REGISTRY </Death_Clone_Keep_Behaviors>
+			<Death_Fade_Time> 0.25 </Death_Fade_Time>
+			<Death_Persistence_Duration> 5 </Death_Persistence_Duration>
+			<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+		</BehaviorType>
+		
+		<BehaviorType Name="SFXBehaviorType">
+			<SFXEvent_Select>SFX_Structure_Select_Military_Aircraft_Pad</SFXEvent_Select>
+			<SFXEvent_Unit_Lost />
+			<SFXEvent_Tactical_Build_Started>GUI_BUILD_Structure</SFXEvent_Tactical_Build_Started>
+			<SFXEvent_Tactical_Build_Complete>SFX_Structure_Select_Military_Aircraft_Pad</SFXEvent_Tactical_Build_Complete>
+			<SFXEvent_Tactical_Build_Cancelled>GUI_BUILD_Structure_Canceled</SFXEvent_Tactical_Build_Cancelled>
+		</BehaviorType>
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.05  0.05</Radar_Icon_Size>
+		</BehaviorType>
+
+		<BehaviorType Name="CrushBehaviorType">
+			<Crush_Defense>60</Crush_Defense>
+		</BehaviorType>
+
+		<BehaviorType Name="CaptureBehaviorType">
+			<Seconds_To_Capture> 8.0 </Seconds_To_Capture>
+		</BehaviorType>
+
+		<Attributes SubObjectList="Yes">
+			<Can_Be_Captured> true </Can_Be_Captured>
+		</Attributes>
+
+		<BehaviorType Name="LuaScriptBehaviorType">
+			<Lua_Land_Behaviors> NeutralRefinery, MasariMatterEngine </Lua_Land_Behaviors>
+			<!-- need to set all data as pooled scripts won't clear old data -->
+			<Lua_Script_Data>
+				ResourcesPerSecond = 12.0
+				MatterEngine = {}
+				MatterEngine.ResourcesPerTimeBlock = 3.0
+				MatterEngine.ResourcesTimeSeconds = 6.0
+				MatterEngine.ResourcesStorage = 0.0
+				MatterEngine.MustBeOfFaction = "Masari"
+			</Lua_Script_Data>
+
+		</BehaviorType>
+
+		<BehaviorType Name="BlobShadowBehaviorType">
+			<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+			<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+		</BehaviorType>
+		
+		<BehaviorType Name="GUIBehaviorType">
+			<GUI_Row> 0 </GUI_Row>
+			<GUI_Scene_Name> HealthBar_Scene_Large </GUI_Scene_Name>
+			<GUI_Receives_Input> false </GUI_Receives_Input>
+			<GUI_Bounds_Scale>0.5</GUI_Bounds_Scale>
+			<GUI_Min_Scale> 0.3 </GUI_Min_Scale>
+			<GUI_Max_Scale> 2.5 </GUI_Max_Scale>
+			<GUI_Default_Scale> 0.5 </GUI_Default_Scale>
+			<GUI_World_Offset> 0.0, 0.0, -20 </GUI_World_Offset>
+			<GUI_Bracket_Size>2</GUI_Bracket_Size>
+		</BehaviorType>
+		
+		<BehaviorType Name="SelectableBehaviorType">
+			<Select_Box_Scale>80</Select_Box_Scale>
+			<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+		</BehaviorType>
+		
+		<BehaviorType Name="AIBehaviorType">
+			<AI_Combat_Power> 1 </AI_Combat_Power>
+			<AI_Target_Level>Individual</AI_Target_Level>
+		</BehaviorType>
+		
+		<BehaviorType Name="RevealBehaviorType">
+			<Land_FOW_Reveal_Range>240.0</Land_FOW_Reveal_Range>
+		</BehaviorType>
+
+      <BehaviorType Name="GameEventSourceBehaviorType">
+         <Game_Event_Source_Category> NeutralStructure </Game_Event_Source_Category>
+      </BehaviorType>
+      
+   </X65_Neutral_Multiplayer_Structures>
+
+
+
+	<!-- **************************************************************************************** -->
+	<!-- ***     DEATH CLONE 	   *************************************************************** -->
+	<!-- **************************************************************************************** -->
+
+
+	<X65_Neutral_Multiplayer_Structures Name="Neutral_Refinery_Death_Clone">
+
+		<!-- ART -->
+		<Land_Model_Name>WO_Oil_Derrick_DC.ALO</Land_Model_Name>
+		<Scale_Factor>1.1</Scale_Factor>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+		<!-- ATTRIBUTES -->
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+
+		<!-- CONFLICT -->
+		<Ranged_Target_Z_Adjust>0.1</Ranged_Target_Z_Adjust>
+
+		<LandBehavior>
+			EFFECT_REGISTRY,
+			EFFECT_GENERATOR,
+			ATTRIBUTE_DIRECTORY,
+			PARTICLE
+		</LandBehavior>
+
+		<BehaviorType Name="SFXBehaviorType">
+			<Death_SFXEvent_End_Die />
+			<Death_SFXEvent_Start_Die> SFX_Structure_Medium_Building_Death </Death_SFXEvent_Start_Die>
+		</BehaviorType>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Specific_Death_Anim_Type> DIE </Specific_Death_Anim_Type>
+			<Death_Fade_Time> 0.25 </Death_Fade_Time>
+			<Death_Persistence_Duration> 3.0 </Death_Persistence_Duration>
+		</BehaviorType>
+
+	</X65_Neutral_Multiplayer_Structures>
+
+	
+
+	
+	
+</Neutral_Refinery_XML>

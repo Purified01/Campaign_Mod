@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Effects>
+
+
+   <!--=================================================================================================
+	== AlienSellEffect: visual for sell
+	================================================================================================== -->
+   <Effect Name="AlienSellEffect">
+      <Duration> -1.0 </Duration>
+      <Effect_Class> Transparent </Effect_Class>
+		<Extends_Existing_Duration> false </Extends_Existing_Duration>
+		<Allow_Same_Source_Stacking> true </Allow_Same_Source_Stacking>
+
+		<Effect_Component Type="Dissolve">
+         <Dissolve_Effect_Name>Alien_Construction_Dissolve_Beacon</Dissolve_Effect_Name>
+         <Based_On>InverseTimer</Based_On>
+         <Duration_Attribute>Tactical_Sell_Time_Seconds</Duration_Attribute>
+      </Effect_Component>
+
+		<Effect_Component Type="DisableBehavior">
+			<Behaviors> TEAM_TARGETING, TARGETING, WEAPON, TURRET, WALK_LOCOMOTOR, VTOL_LOCOMOTOR, UNIT_ABILITY, POWERED </Behaviors>
+		</Effect_Component>
+
+	</Effect>
+   
+   
+   
+	<Effect Name="RadiationWaveCreationEffect">
+
+		<Duration> 1.0 </Duration>
+		<Effect_Class> Transparent </Effect_Class>
+
+		<Effect_Component Type="CreateObject">
+			<Create_Object_Type> Radiation_Cascade_Wave </Create_Object_Type>
+			<Destroy_On_Remove> false </Destroy_On_Remove>
+			<Position_Type> AtTarget </Position_Type>
+			<Use_Source_Player_ID> true </Use_Source_Player_ID>
+			<Distance_From_Source> 60.0 </Distance_From_Source>
+			<Facing_Type>Face_Target</Facing_Type>
+		</Effect_Component>
+
+	</Effect>
+
+	<Effect Name="RectTargetEffect">
+		<Duration> 0.4 </Duration>
+		<Effect_Class> Phased </Effect_Class>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Singularity_Lightning_Bolt_Strike </Particle_System_Type>
+		</Effect_Component>
+
+	</Effect>
+
+	<Effect Name="MeltTargetEffect">
+		<Duration> 2.4 </Duration>
+		<Effect_Class> DissolveVisual </Effect_Class>
+		<Extends_Existing_Duration> No </Extends_Existing_Duration>
+
+		<Effect_Component Type="Dissolve">
+			<Dissolve_Effect_Name>Alien_harvest_small</Dissolve_Effect_Name>
+			<Based_On>InverseTimer</Based_On>
+			<Duration>2.0</Duration>
+		</Effect_Component>
+
+		<Effect_Component Type="Animate">
+			<Animation_Type>Falling </Animation_Type>
+			<Unapply_When_Finished>No</Unapply_When_Finished>
+		</Effect_Component>
+
+	</Effect>
+
+
+	<Effect Name="PhasingEffect">
+		<Duration> 15.0 </Duration>
+		<Effect_Class> Phased </Effect_Class>
+
+		<Effect_Component Type="Phase">
+         <Break_Mask> Attack | Ability </Break_Mask>
+		</Effect_Component>
+
+      <!-- This ensures attack abilities get de-activated. -->
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Is_Phased </Attribute>
+         <Modifier_Value> 1.0 </Modifier_Value>
+      </Effect_Component>
+
+		<Effect_Component Type="RemoveEffect">
+			<Remove_Effect_Class> Burden </Remove_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="BlockEffect">
+			<Block_Effect_Class> Burden </Block_Effect_Class>
+		</Effect_Component>
+		
+	</Effect>
+
+   
+			
+	<!-- KDB 08-04-2006 The ability to slow and reduce weapon fire rate in a area of effect -->
+	<Effect Name="BurdenTargetAreaEffect">
+		<Duration> -1.0 </Duration>
+		<Effect_Class> Burden </Effect_Class>
+		<CategoryMask> CanBeRemovedByAbility</CategoryMask>
+
+		<!-- This works as targets fire rate drops -->
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Weapon_Delay_Multiplier </Attribute>
+			<Modifier_Value> 10.0 </Modifier_Value>
+		</Effect_Component>
+
+		<!-- KDB 07-12-2006 negative ceff to slow unit -->
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Max_Speed_Mult_Coeff </Attribute>
+			<Modifier_Value> -0.9 </Modifier_Value>
+		</Effect_Component>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Singularity_Lightning_Bolt_Strike </Particle_System_Type>
+		</Effect_Component>
+
+		<Effect_Component Type="Lightning">
+			<Lightning_Effect_Name> Effect_Test_Lightning </Lightning_Effect_Name>
+			<Source_Target_Type> SourceToOriginalTarget </Source_Target_Type>
+		</Effect_Component>
+
+		<Effect_Component Type="Lightning">
+			<Lightning_Effect_Name> Effect_Test_Lightning </Lightning_Effect_Name>
+			<Source_Target_Type> OriginalTargetToTarget </Source_Target_Type>
+		</Effect_Component>
+
+	</Effect>
+
+	
+	
+	
+	<Effect Name="MindControlEffect">
+		<Duration> -1.0 </Duration>
+		<Should_Remove_If_Inactive> true </Should_Remove_If_Inactive>
+		<Effect_Class> MindControl </Effect_Class>
+
+		<Effect_Component Type="SwitchFaction">
+			<Use_Source_Faction> true </Use_Source_Faction>
+		</Effect_Component>
+
+		<!--JOEXMLCLEAN Effect_Component Type="AddBehavior">
+			<Behavior_Name> GUI </Behavior_Name>
+		</Effect_Component-->
+
+		<Effect_Component Type="AddBehavior">
+			<Behavior_Name> FORMATION </Behavior_Name>
+		</Effect_Component>
+
+		<Effect_Component Type="AddBehavior">
+			<Behavior_Name> TARGETING </Behavior_Name>
+		</Effect_Component>
+
+		<Effect_Component Type="DisableBehavior">
+			<Behaviors> CIVILIAN </Behaviors>
+		</Effect_Component>
+
+		<Effect_Component Type="Lightning">
+			<Lightning_Effect_Name> Mind_Control_Lightning </Lightning_Effect_Name>
+			<Source_Target_Type> SourceToTarget </Source_Target_Type>
+			<Source_Bone_Name> MuzzleB_00 </Source_Bone_Name>
+		</Effect_Component>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Mind_control </Particle_System_Type>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Is_Mind_Controlled </Attribute>
+			<Modifier_Value> 1.0 </Modifier_Value>
+		</Effect_Component>    
+
+	</Effect>
+
+	<Effect Name="MindControlAuraEffect">
+		<Duration> 10.0 </Duration>
+		<Effect_Class> MindControl </Effect_Class>
+
+		<Effect_Component Type="SwitchFaction">
+			<Use_Source_Faction> true </Use_Source_Faction>
+		</Effect_Component>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Alien_Mind_Control_Aura </Particle_System_Type>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Is_Mind_Controlled </Attribute>
+			<Modifier_Value> 1.0 </Modifier_Value>
+		</Effect_Component>
+
+      <Effect_Component Type="Lightning">
+         <Lightning_Effect_Name> Mind_Control_Lightning </Lightning_Effect_Name>
+         <Source_Target_Type> SourceToTarget </Source_Target_Type>
+         <Source_Bone_Name> MuzzleB_00 </Source_Bone_Name>
+      </Effect_Component>
+	</Effect>
+
+
+	
+
+	<Effect Name="AlienRadiatedShotsImpactEffect">
+
+		<Duration> 10.0 </Duration>
+		<Effect_Class> RadiatedWeapon </Effect_Class>
+		<Extends_Existing_Duration> yes </Extends_Existing_Duration>
+		<Extends_Same_Source_Duration_Only>yes</Extends_Same_Source_Duration_Only>
+
+		<Effect_Component Type="DamageOverTime">
+			<Damage_Type> Damage_Alien_AE_Radiation </Damage_Type>
+			<Amount_Per_Second> 5.0 </Amount_Per_Second>
+			<Percentage_Per_Second> 0 </Percentage_Per_Second>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Create_Radiation_Mutant </Attribute>
+			<Modifier_Value> 0.15 </Modifier_Value>
+		</Effect_Component>
+
+	</Effect>
+
+	<Effect Name="AlienRadiatedShotsVisualEffect">
+
+		<Duration> 10.0 </Duration>
+		<Effect_Class> RadiatedWeaponVisual </Effect_Class>
+		<Extends_Existing_Duration> yes </Extends_Existing_Duration>
+		<Extends_Same_Source_Duration_Only>yes</Extends_Same_Source_Duration_Only>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Radiated_Weapon_Shots_Glow </Particle_System_Type>
+		</Effect_Component>
+
+	</Effect>
+	
+	
+
+	<Effect Name="AlienGammaRadiatedShotsImpactEffect">
+
+		<Duration> 10.0 </Duration>
+		<Effect_Class> GammaRadiatedWeapon </Effect_Class>
+		<Extends_Existing_Duration> yes </Extends_Existing_Duration>
+		<Extends_Same_Source_Duration_Only>yes</Extends_Same_Source_Duration_Only>
+
+		<Effect_Component Type="DamageOverTime">
+			<Damage_Type> Damage_Alien_AE_Radiation </Damage_Type>
+			<Amount_Per_Second> 10.0 </Amount_Per_Second>
+			<Percentage_Per_Second> 0 </Percentage_Per_Second>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Create_Radiation_Mutant </Attribute>
+			<Modifier_Value> 0.2 </Modifier_Value>
+		</Effect_Component>
+
+	</Effect>
+
+	<Effect Name="AlienGammaRadiatedShotsVisualEffect">
+
+		<Duration> 10.0 </Duration>
+		<Effect_Class> RadiatedWeaponVisual </Effect_Class>
+		<Extends_Existing_Duration> yes </Extends_Existing_Duration>
+		<Extends_Same_Source_Duration_Only>yes</Extends_Same_Source_Duration_Only>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Gamma_Radiated_Weapon_Shots_Glow </Particle_System_Type>
+		</Effect_Component>
+
+	</Effect>
+
+
+	<!-- Volatile Reactors On-Death Explosion Effect (researched) -->
+
+
+	<Effect Name="VehicleVolatileReactorExplosionVisualEffect">
+
+		<Duration> 3.0 </Duration>
+		<Effect_Class> DefilerBleedVisual </Effect_Class>
+		<Priority> 3.0 </Priority>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Radiation_Core_Detonate_VEH </Particle_System_Type>
+		</Effect_Component>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Volatile_Reactor_Explosion </Particle_System_Type>
+		</Effect_Component>
+		
+	</Effect>
+
+	<Effect Name="VehicleVolatileReactorDamageEffect">
+
+		<Duration> 10.0 </Duration>
+		<Effect_Class> DefilerRadiation </Effect_Class>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+		<Extends_Same_Source_Duration_Only>yes</Extends_Same_Source_Duration_Only>
+
+		<Effect_Component Type="DamageOverTime">
+			<Damage_Type> Damage_Alien_AE_Radiation </Damage_Type>
+			<Amount_Per_Second> 5.0 </Amount_Per_Second>
+			<Percentage_Per_Second>0</Percentage_Per_Second>
+		</Effect_Component>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Radiation_Harmful_Glow </Particle_System_Type>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Create_Radiation_Mutant </Attribute>
+			<Modifier_Value> 0.2 </Modifier_Value>
+		</Effect_Component>
+
+	</Effect>
+		
+	
+	<Effect Name="VehicleVolatileReactorGammaExplosionVisualEffect">
+
+		<Duration> 3.0 </Duration>
+		<Effect_Class> DefilerBleedVisualGamma </Effect_Class>
+		<Priority> 3.0 </Priority>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Gamma_Radiation_Core_Detonate_VEH </Particle_System_Type>
+		</Effect_Component>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Volatile_Reactor_Gamma_Explosion </Particle_System_Type>
+		</Effect_Component>
+
+	</Effect>
+
+	<Effect Name="VehicleVolatileReactorGammaDamageEffect">
+
+		<Duration> 10.0 </Duration>
+		<Effect_Class> DefilerRadiation </Effect_Class>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+		<Extends_Same_Source_Duration_Only>yes</Extends_Same_Source_Duration_Only>
+
+		<Effect_Component Type="DamageOverTime">
+			<Damage_Type> Damage_Alien_AE_Radiation </Damage_Type>
+			<Amount_Per_Second> 8.0 </Amount_Per_Second>
+			<Percentage_Per_Second>0</Percentage_Per_Second>
+		</Effect_Component>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Gamma_Radiation_Harmful_Glow </Particle_System_Type>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Create_Radiation_Mutant </Attribute>
+			<Modifier_Value> 0.2 </Modifier_Value>
+		</Effect_Component>
+
+	</Effect>
+
+	
+	<Effect Name="WalkerVolatileReactorExplosionVisualEffect">
+
+		<Duration> 3.0 </Duration>
+		<Effect_Class> DefilerBleedVisual </Effect_Class>
+		<Priority> 3.0 </Priority>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Radiation_Core_Detonate_WALK </Particle_System_Type>
+		</Effect_Component>
+
+	</Effect>
+
+	<Effect Name="WalkerVolatileReactorDamageEffect">
+
+		<Duration> 10.0 </Duration>
+		<Effect_Class> DefilerRadiation </Effect_Class>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+		<Extends_Same_Source_Duration_Only>yes</Extends_Same_Source_Duration_Only>
+
+		<Effect_Component Type="DamageOverTime">
+			<Damage_Type> Damage_Alien_AE_Radiation </Damage_Type>
+			<Amount_Per_Second> 8.0 </Amount_Per_Second>
+			<Percentage_Per_Second>0</Percentage_Per_Second>
+		</Effect_Component>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Radiation_Harmful_Glow </Particle_System_Type>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Create_Radiation_Mutant </Attribute>
+			<Modifier_Value> 0.2 </Modifier_Value>
+		</Effect_Component>
+
+	</Effect>
+	
+	
+	<Effect Name="WalkerVolatileReactorGammaExplosionVisualEffect">
+
+		<Duration> 3.0 </Duration>
+		<Effect_Class> DefilerBleedVisualGamma </Effect_Class>
+		<Priority> 3.0 </Priority>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Gamma_Radiation_Core_Detonate_WALK </Particle_System_Type>
+		</Effect_Component>
+
+	</Effect>
+
+	<Effect Name="WalkerVolatileReactorGammaDamageEffect">
+
+		<Duration> 10.0 </Duration>
+		<Effect_Class> DefilerRadiation </Effect_Class>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+		<Extends_Same_Source_Duration_Only>yes</Extends_Same_Source_Duration_Only>
+
+		<Effect_Component Type="DamageOverTime">
+			<Damage_Type> Damage_Alien_AE_Radiation </Damage_Type>
+			<Amount_Per_Second> 11.0 </Amount_Per_Second>
+			<Percentage_Per_Second>0</Percentage_Per_Second>
+		</Effect_Component>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Gamma_Radiation_Harmful_Glow </Particle_System_Type>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Create_Radiation_Mutant </Attribute>
+			<Modifier_Value> 0.2 </Modifier_Value>
+		</Effect_Component>
+
+	</Effect>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</Effects>

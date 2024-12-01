@@ -1,0 +1,1111 @@
+<?xml version="1.0"?>
+<Masari_VEH_Peacebringer_XML>
+
+	<!-- **************************************************************************************** -->
+	<!-- *** UNIT(S) **************************************************************************** -->
+	<!-- **************************************************************************************** -->
+
+	<X13_Masari_Units Name="Masari_Peacebringer">
+
+		<!-- ART -->
+		<Land_Model_Name>ZV_Peacebringer.ALO</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Occlusion_Silhouette_Enabled>1</Occlusion_Silhouette_Enabled>
+		<SurfaceFX_Name>Masari_Peacebringer_Wheel_track</SurfaceFX_Name>
+		<AssetBank> BANK_MASARI </AssetBank>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_UNIT_MASARI_PEACEBRINGER</Text_ID>
+		<GUI_Scene_Name> HealthBar_Scene_Medium </GUI_Scene_Name>
+		<GUI_Receives_Input> false </GUI_Receives_Input>
+		<GUI_Min_Scale> 0.3 </GUI_Min_Scale>
+		<GUI_Max_Scale> 2.5 </GUI_Max_Scale>
+		<GUI_Default_Scale> 0.5 </GUI_Default_Scale>
+		<GUI_World_Offset> 0.0, 0.0, -10 </GUI_World_Offset>
+		<Select_Box_Scale>75</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+		<Selection_Blob_Material_Name>Selection_Masari_Land_Large</Selection_Blob_Material_Name>
+
+		<!-- ATTRIBUTES -->
+        <LOD_Bias> 3.0 </LOD_Bias>
+		<Affiliation>Masari</Affiliation>
+		<CategoryMask> Large, Piloted, CanAttack, RadiationHurts </CategoryMask>
+		<Victory_Relevant> No </Victory_Relevant>
+		<Weather_Category>Tracked</Weather_Category>
+		<Can_Fall_From_Bridge> true </Can_Fall_From_Bridge>
+		<Importance> 0.4 </Importance>
+		<Shot_Type> Vehicle </Shot_Type>
+
+		<Attributes SubObjectList="Yes">
+			<Is_Phasable> true </Is_Phasable>
+			<Tactical_Sell_Percent_Modifier> -0.5 </Tactical_Sell_Percent_Modifier>
+			<Tactical_Sell_Time_Seconds> 2.0 </Tactical_Sell_Time_Seconds>
+			<DMA_Max> 500 </DMA_Max>
+			<DMA_Regen_Rate> 10 </DMA_Regen_Rate>
+			<Regenerate_Type>Masari_Avenger_Peacebringer</Regenerate_Type>
+		</Attributes>
+
+		<!-- MOVEMENT -->
+		<MovementClass>Wheeled</MovementClass>
+		<OccupationStyle>1x1</OccupationStyle>
+		<Max_Speed>1.3</Max_Speed>
+		<Max_Rate_Of_Turn>5.0</Max_Rate_Of_Turn>
+		<Space_Layer> LandDynamic </Space_Layer>
+		<UnitCollisionClass> Vehicle </UnitCollisionClass>
+		<OverrideAcceleration> .15 </OverrideAcceleration>
+		<OverrideDeceleration> .1 </OverrideDeceleration>
+		<FormationSpacing> 2.5 </FormationSpacing>
+		<FormationOrder> 6 </FormationOrder>
+		<FormationGrouping> Solo </FormationGrouping>
+		<FormationRaggedness> .8 </FormationRaggedness>
+		<MaxJiggleDistance> 4 </MaxJiggleDistance>
+		<Custom_Hard_XExtent> 25.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 28.0 </Custom_Hard_YExtent>
+		<Should_Keep_Tangent_To_Terrain> true </Should_Keep_Tangent_To_Terrain>
+
+		<!-- CONFLICT -->
+		<Is_Attackable> true </Is_Attackable>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+		<Land_FOW_Reveal_Range>200.0</Land_FOW_Reveal_Range>
+		<Ranged_Target_Z_Adjust>10.0</Ranged_Target_Z_Adjust>
+
+		<Attack_Category_Restrictions> Resource | Resource_INST | Bridge </Attack_Category_Restrictions>
+
+		<Tactical_Health> 1000 </Tactical_Health>
+
+		<!-- BEHAVIORS -->
+		<Behavior>
+			PERSISTENT_UNIT,
+			SELECTABLE,
+		</Behavior>
+
+		<LandBehavior>
+			EFFECT_GENERATOR,
+			EFFECT_REGISTRY
+			ATTRIBUTE_DIRECTORY,
+			ABILITY_COUNTDOWN,
+			SWITCH_TYPE,
+			GUI,
+			SURFACE_FX,
+			RADAR_MAP_VISIBLE,
+			HARD_POINT_MANAGER,
+			HARDPOINT_PRIMARY_ATTACK_MANAGER,
+			WALK_LOCOMOTOR,
+			FORMATION,
+			IDLE,
+			TARGETING,
+			REVEAL,
+			HIDE_WHEN_FOGGED,
+			SQUASH,
+			UNIT_AI,
+			SWITCH_TYPE,
+			DAMAGE_TRACKING,
+			AI_RECRUITABLE,
+			TACTICAL_SELL,
+			AI_TARGET,
+			WHEEL,
+			<!-- ELEMENTAL_MODE must be last because it causes add behavior to be called -->
+			ELEMENTAL_MODE
+		</LandBehavior>
+
+		<BehaviorType Name="WeaponBehaviorType">
+			<Can_Attack_Without_Weapon_Behavior>Yes</Can_Attack_Without_Weapon_Behavior>
+			<Targeting_Max_Attack_Distance> 180.0 </Targeting_Max_Attack_Distance>
+			<Targeting_Priority_Set> Masari_Peacebringer_Target_Priority </Targeting_Priority_Set>
+			<Bring_All_Turrets_Into_Range> true </Bring_All_Turrets_Into_Range>
+			<Use_Any_Turret_To_Validate_Attack> true </Use_Any_Turret_To_Validate_Attack>
+		</BehaviorType>
+
+		<BehaviorType NAme="LuaScriptBehaviorType">
+			<Lua_Only_Service_If_AI>True</Lua_Only_Service_If_AI>
+			<Lua_Land_Behaviors>Generic_Vehicle_Unit_Behavior,Defensive_AI_Unit_Behavior</Lua_Land_Behaviors>
+			<Lua_Script_Data>
+				GenericVehicle = {}
+				GenericVehicle.SearchRange = 225.0
+				GenericVehicle.KiteRange = 150.0
+				GenericVehicle.CrushRange = 200.0
+				DefensiveAI = {}
+				DefensiveAI.KillTurret = false
+			</Lua_Script_Data>
+		</BehaviorType>
+
+		<BehaviorType Name="TooltipBehaviorType">
+			<Tooltip_Description_Text_ID> TEXT_TOOLTIP_DESCRIPTION_MASARI_PEACEBRINGER_LIGHT </Tooltip_Description_Text_ID>
+			<Tooltip_Category> TEXT_TOOLTIP_CATEGORY_VEHICLE </Tooltip_Category>
+			<Tooltip_Good_Against> TEXT_TYPE_VERSUS_VEHICLES TEXT_TYPE_VERSUS_STRUCTURES TEXT_TYPE_VERSUS_WALKERS </Tooltip_Good_Against>
+			<Tooltip_Vulnerable_To> TEXT_TYPE_VERSUS_INFANTRY TEXT_TYPE_VERSUS_HEROES </Tooltip_Vulnerable_To>
+		</BehaviorType>
+
+         <Researched_Upgrades>
+		TEXT_MASARI_RESEARCH_TITLE_MOLECULAR_INSTABILITY
+		TEXT_MASARI_RESEARCH_TITLE_DARK_MATTER_AFINITY
+		TEXT_MASARI_RESEARCH_TITLE_DARK_MATTER_MASTERY
+		TEXT_MASARI_RESEARCH_TITLE_CLEANSING_ENERGY
+         </Researched_Upgrades>
+	 
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Armor_Type> Armor_Masari_Vehicle_Elite </Armor_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="TacticalSellBehaviorType">
+			<Sell_Effect_Generator_Name>MasariSellGenerator</Sell_Effect_Generator_Name>
+		</BehaviorType>
+
+		<BehaviorType Name="WheelBehaviorType">
+			<Max_Distance_From_Axle>4.0</Max_Distance_From_Axle>
+		</BehaviorType>
+
+		<BehaviorType Name="ProductionBehaviorType">
+			<Size_Value> 10 </Size_Value>
+			<Build_Cost_Credits> 100 </Build_Cost_Credits>
+			<Build_Time_Seconds> 35 </Build_Time_Seconds>
+			<Is_Research_Tech_Tree_Lockable> Yes </Is_Research_Tech_Tree_Lockable>
+			<Extra_Enablers_Increase_Build_Rate> 1.0 </Extra_Enablers_Increase_Build_Rate>
+			<!-- 
+				Maria 11.07.2006 
+				This flag determines which types are used to populate the
+				build menu in global mode.
+			-->
+			<Is_Strategic_Buildable_Type> Yes </Is_Strategic_Buildable_Type>
+			<Strategic_UI_Build_Menu_Order>6</Strategic_UI_Build_Menu_Order>
+		</BehaviorType>
+
+		<BehaviorType Name="BuildableObjectBehaviorType">
+			<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+			<Tactical_Build_Cost_Campaign> 185 </Tactical_Build_Cost_Campaign>
+			<Tactical_Build_Cost_Multiplayer> 185 </Tactical_Build_Cost_Multiplayer>
+			<Tactical_Build_Time_Seconds> 75 </Tactical_Build_Time_Seconds>
+			<Tactical_UI_Build_Queue_Order> 3 </Tactical_UI_Build_Queue_Order>
+		</BehaviorType>
+
+		<BehaviorType name="AIBehaviorType">
+			<AI_Combat_Power> 1 </AI_Combat_Power>
+			<Idle_Chase_Range> 0.0 </Idle_Chase_Range>
+			<!-- Double click guard area Keep very small-->
+			<Guard_Chase_Range> 170.0 </Guard_Chase_Range>
+			<!-- Guard radius for unit-->
+			<Autonomous_Move_Extension_Vs_Attacker> 25.0 </Autonomous_Move_Extension_Vs_Attacker>
+			<!--Range outside of guard area unit will move-->
+			<Attack_Move_Response_Range> 50.0 </Attack_Move_Response_Range>
+			<!-- When given a attack move command unit will travel this distance from path to attack-->
+			<AI_Target_Level>Individual_Or_Group</AI_Target_Level>
+			<Attack_Score_Rating> 2.0 </Attack_Score_Rating>
+			<Scout_Score_Rating> 0.0 </Scout_Score_Rating>
+			<Guerilla_Score_Rating> 0.0 </Guerilla_Score_Rating>
+		</BehaviorType>
+
+		<BehaviorType Name="EncyclopediaBehaviorType">
+			<Icon_Name> i_icon_mv_peacemaker.tga  </Icon_Name>
+		</BehaviorType>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Death_Clone> Damage_Default, Masari_Peacebringer_Death_Clone </Death_Clone>
+			<Death_Explosions>masari_large_explosion</Death_Explosions>
+		</BehaviorType>
+
+		<!--<BehaviorType Name="BallisticBehaviorType">
+			<Ballistic_Weight>5.0</Ballistic_Weight>
+		</BehaviorType>--> <!-- Commented out by CR 11-5-07 for balance-->
+
+		<BehaviorType Name="SFXBehaviorType">
+			<SFXEvent_Fire> SFX_Masari_Vehicle_Fire </SFXEvent_Fire>
+			<SFXEvent_Select>Unit_Select_Masari_Peacebringer</SFXEvent_Select>
+			<SFXEvent_Move>Unit_Move_A_Masari_Peacebringer</SFXEvent_Move>
+			<SFXEvent_Move_At_Top_Speed>Unit_Move_B_Masari_Peacebringer</SFXEvent_Move_At_Top_Speed>
+			<SFXEvent_Attack>Unit_Attack_A_Masari_Peacebringer</SFXEvent_Attack>
+			<SFXEvent_Attack_At_Top_Speed>Unit_Attack_B_Masari_Peacebringer</SFXEvent_Attack_At_Top_Speed>
+			<SFXEvent_Turret_Rotating_Loop> </SFXEvent_Turret_Rotating_Loop>
+			<Death_SFXEvent_Start_Die> </Death_SFXEvent_Start_Die>
+			<SFXEvent_Engine_Idle_Loop> SFX_Masari_Peacebringer_Idle_Engine_Loop </SFXEvent_Engine_Idle_Loop>
+			<SFXEvent_Engine_Moving_Loop> SFX_Masari_Peacebringer_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
+			<SFXEvent_Unit_Lost />
+			<SFXEvent_Tactical_Build_Started>GUI_BUILD_Vehicle</SFXEvent_Tactical_Build_Started>
+			<SFXEvent_Tactical_Build_Complete>Unit_Select_Masari_Peacebringer</SFXEvent_Tactical_Build_Complete>
+			<SFXEvent_Tactical_Build_Cancelled>GUI_BUILD_Vehicle_Canceled</SFXEvent_Tactical_Build_Cancelled>
+
+			<!-- Maria 05.01.2006 - Adding build sounds for Global production -->
+			<SFXEvent_Build_Started>GUI_BUILD_Vehicle</SFXEvent_Build_Started>
+			<SFXEvent_Build_Complete>Unit_Select_Masari_Peacebringer</SFXEvent_Build_Complete>
+			<SFXEvent_Build_Cancelled>GUI_BUILD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
+		</BehaviorType>
+
+		<BehaviorType Name="BlobShadowBehaviorType">
+			<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+			<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+		</BehaviorType>
+
+		<BehaviorType Name="GUIBehaviorType">
+			<GUI_Bracket_Size>1</GUI_Bracket_Size>
+			<!-- Maria 05.18.2006  Data needed for the models attached to the mouse in Global -->
+			<GUI_Is_Top_View> Yes </GUI_Is_Top_View>
+			<GUI_Rotate_Angle_Degrees> -45.0 </GUI_Rotate_Angle_Degrees>
+			<GUI_Is_Model_Shifted_Down> No </GUI_Is_Model_Shifted_Down>
+			<GUI_Strategic_Mode_Scale> 0.04 </GUI_Strategic_Mode_Scale>
+		</BehaviorType>
+
+		<BehaviorType Name="LockableByDynamicScannerBehaviorType">
+			<Dynamic_Scan_Target_Effect_Particle_Name>Dynamic_Scan_Target</Dynamic_Scan_Target_Effect_Particle_Name>
+			<Dynamic_Scan_Target_Lock_Max_Delay_Seconds>2.0</Dynamic_Scan_Target_Lock_Max_Delay_Seconds>
+			<Dynamic_Scan_Target_Lock_Min_Delay_Seconds>1.0</Dynamic_Scan_Target_Lock_Min_Delay_Seconds>
+		</BehaviorType>
+
+		<BehaviorType Name="CrushBehaviorType">
+			<Crush_Defense> 90 </Crush_Defense>
+			<Crush_Power> 35 </Crush_Power>
+		</BehaviorType>
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.04  0.04</Radar_Icon_Size>
+		</BehaviorType>
+
+		<BehaviorType Name="FleetBehaviorType">
+			<!-- Maria 05.24.2006 - How much space does the unit take up -->
+			<Unit_Pop_Cap> 7 </Unit_Pop_Cap>
+		</BehaviorType>
+
+
+		<BehaviorType Name="ElementalModeType">
+			<Elemental_Object_Types> Fire, Masari_Peacebringer_Fire </Elemental_Object_Types>
+			<Elemental_Object_Types> Ice, Masari_Peacebringer_Ice </Elemental_Object_Types>
+		</BehaviorType>
+
+
+		<!-- =================================================================================================
+		== [11/16/2006] This behavior type defines data for Type_Switch behavior - Oksana Kubushyna
+		================================================================================================== -->
+		<BehaviorType Name="TypeSwitchBehaviorType">
+			<!-- List of types this object can switch to - This is mainly needed to inforce build limits and must be
+						only added to the base type used for production dependencies purposes -->
+			<Type_Switch_Types> Masari_Peacebringer_Fire, Masari_Peacebringer_Ice  </Type_Switch_Types>
+			<Switch_Effect_Generator_Name> MasariSwitchGenerator </Switch_Effect_Generator_Name>
+		</BehaviorType>
+
+
+
+		<!-- ABILITIES -->
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability Name="Masari_Peacebringer_Disintegrate_Unit_Ability">
+				<Expiration_Seconds> 3.0 </Expiration_Seconds>
+				<Recharge_Seconds>40.0</Recharge_Seconds>
+				<Type>EFFECT_GENERATOR</Type>
+				<GUI_Activated_Ability_Name> Masari_Peacebringer_Disintegrate_Special_Ability </GUI_Activated_Ability_Name>
+				<Effect_Generator_Name> Masari_Peacebringer_Disintegrate_Generator </Effect_Generator_Name>
+				<Targeting_Type> ENEMY_OBJECT </Targeting_Type>
+				<Disable_Unit_Ability_Attribute> Is_Mind_Controlled </Disable_Unit_Ability_Attribute>
+			</Unit_Ability>
+
+		</Unit_Abilities_Data>
+
+		<Abilities SubObjectList="Yes">
+
+			<Effect_Generator_Ability Name="Masari_Peacebringer_Disintegrate_Special_Ability">
+				<Excluded_Unit_Categories>  Flying </Excluded_Unit_Categories>
+				<Activation_Min_Range> 0 </Activation_Min_Range>
+				<Activation_Max_Range> 180 </Activation_Max_Range>
+				<Effect_Generator_Name> Masari_Peacebringer_Disintegrate_Generator </Effect_Generator_Name>
+				<Activation_Style> User_Input </Activation_Style>
+				<Can_Target_Enemies>Yes</Can_Target_Enemies>
+				<Can_Target_Allies>No</Can_Target_Allies>
+				<Can_Target_Neutral>No</Can_Target_Neutral>
+				<Face_Target>True</Face_Target>
+			</Effect_Generator_Ability>
+
+		</Abilities>
+
+		<Effect_Generator_Data SubObjectList="Yes" Replace="False">
+
+			<Effect_Generator Name="MasariSwitchGenerator">
+				<Should_Deactivate_Manually> false </Should_Deactivate_Manually>
+				<Is_Independent_Generator>Yes</Is_Independent_Generator>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Duration> 1.0 </Duration>
+					<Effect_Name> MasariSwitchCleanseEffect </Effect_Name>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+				</Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry2">
+					<Duration> 0.5 </Duration>
+					<Base_Delay> 0.4 </Base_Delay>
+					<Effect_Name> MasariFullArmorEffect </Effect_Name>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+					<!-- only in ice mode -->
+					<Target_Filter_C> In_Ice_Mode </Target_Filter_C>
+				</Effect_Generator_Entry>
+
+			</Effect_Generator>
+
+			<Effect_Generator Name="Masari_Peacebringer_Disintegrate_Generator">
+				<Is_Independent_Generator> no </Is_Independent_Generator>
+				<Should_Deactivate_Manually> true </Should_Deactivate_Manually>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> Masari_Peacebringer_Disintegrate_Visual_Self_Effect </Effect_Name>
+					<Duration> 3 </Duration>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+            </Effect_Generator_Entry>
+
+            <Effect_Generator_Entry Name="Entry2">
+               <Effect_Name> Masari_Peacebringer_Disintegrate_Effect </Effect_Name>
+               <Duration> 3 </Duration>
+               <Target_Gathering_Mask> TargetAE | Target</Target_Gathering_Mask>
+               <Area_Effect_Radius> 50 </Area_Effect_Radius>
+               <Target_Filter_Categories> ~Flying + ~Untargetable + ~Resource + ~Resource_INST + ~DeathCloneResource</Target_Filter_Categories>
+               <Target_Filter_C> Is_Enemy </Target_Filter_C>
+               <Deactivate_Parent_If_Idle>Yes</Deactivate_Parent_If_Idle>
+               <Linked_Effect_Names> Masari_Peacebringer_Disintegrate_Visual_Effect </Linked_Effect_Names>
+            </Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry3">
+					<Effect_Name> MasariPeacebringerDisintegrateSFXEffect </Effect_Name>
+					<Duration>-1.0</Duration>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+				</Effect_Generator_Entry>
+				
+			</Effect_Generator>
+
+			<!-- Oksana [05/21/2007]: Spawn corresponding Avenger on Death -->
+			<Effect_Generator Name="MasariSpawnAvengerOnDeathGenerator">
+				<Starts_Active>Yes</Starts_Active>
+				<Effect_Generator_Entry Name="Entry1">
+					<Duration> -1.0 </Duration>
+					<Effect_Name> MasariSpawnAvengerOnDeathEffect </Effect_Name>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+				</Effect_Generator_Entry>
+			</Effect_Generator>
+
+			<!-- Standard Sell generator  - 06/28/2007 -->
+			<!--INCLUDE ".\Data\XML\Includes\Sell_Effect_Generators\MASARI_Sell_Generators.xml" -->
+
+		</Effect_Generator_Data>
+
+
+	</X13_Masari_Units>
+
+
+
+	<!-- **************************************************************************************** -->
+	<!-- *** VARIANTS *************************************************************************** -->
+	<!-- **************************************************************************************** -->
+
+
+	<!-- ============ ELEMENTAL MODE VARIANT: FIRE =================== -->
+	<X13_Masari_Units Name="Masari_Peacebringer_Fire">
+		<Variant_Of_Existing_Type> Masari_Peacebringer </Variant_Of_Existing_Type>
+		<SurfaceFX_Name>Masari_Peacebringer_Wheel_track</SurfaceFX_Name>
+
+
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+		<Max_Speed>1.0</Max_Speed>
+		<Land_FOW_Reveal_Range>200.0</Land_FOW_Reveal_Range>
+
+		<BehaviorType Name="ProductionBehaviorType">
+			<Is_Strategic_Buildable_Type> No </Is_Strategic_Buildable_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="TooltipBehaviorType">
+			<Tooltip_Description_Text_ID> TEXT_TOOLTIP_DESCRIPTION_MASARI_PEACEBRINGER_LIGHT </Tooltip_Description_Text_ID>
+			<Tooltip_Category> TEXT_TOOLTIP_CATEGORY_VEHICLE </Tooltip_Category>
+		</BehaviorType>
+
+		<Effect_Generator_Data SubObjectList="Yes" Replace="No">
+			<!-- Standard DMA generator - Oksana 05/14/2007 -->
+			<!--INCLUDE ".\Data\XML\Includes\Masari_DMA\MASARI_DMA_Light_Mode_Generators.xml" -->
+		</Effect_Generator_Data>
+
+
+		<Attached_Hard_Points>
+			HP_Peacebringer_Pulse_Cannon_00, HP_attach_00
+			HP_Peacebringer_Pulse_Cannon_01, HP_attach_01
+			HP_Peacebringer_Pulse_Cannon_02, HP_attach_02
+			HP_Peacebringer_Tractor_Beam, 	HP_attach_03
+		</Attached_Hard_Points>
+
+	</X13_Masari_Units>
+
+
+
+	<!-- ============ ELEMENTAL MODE VARIANT: ICE =================== -->
+	<X13_Masari_Units Name="Masari_Peacebringer_Ice">
+		<Variant_Of_Existing_Type> Masari_Peacebringer </Variant_Of_Existing_Type>
+
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+		<Max_Speed>1.5</Max_Speed>
+		<Land_FOW_Reveal_Range>200.0</Land_FOW_Reveal_Range>
+
+		<BehaviorType Name="ProductionBehaviorType">
+			<Is_Strategic_Buildable_Type> No </Is_Strategic_Buildable_Type>
+		</BehaviorType>
+
+    <BehaviorType name="AIBehaviorType">
+      <AI_Combat_Power> 1 </AI_Combat_Power>
+      <Idle_Chase_Range> 20.0 </Idle_Chase_Range>
+      <!-- Double click guard area Keep very small-->
+      <Guard_Chase_Range> 170.0 </Guard_Chase_Range>
+      <!-- Guard radius for unit-->
+      <Autonomous_Move_Extension_Vs_Attacker> 20.0 </Autonomous_Move_Extension_Vs_Attacker>
+      <!--Range outside of guard area unit will move-->
+      <Attack_Move_Response_Range> 50.0 </Attack_Move_Response_Range>
+      <!-- When given a attack move command unit will travel this distance from path to attack-->
+      <AI_Target_Level>Individual_Or_Group</AI_Target_Level>
+      <Attack_Score_Rating> 2.0 </Attack_Score_Rating>
+      <Scout_Score_Rating> 0.0 </Scout_Score_Rating>
+      <Guerilla_Score_Rating> 0.0 </Guerilla_Score_Rating>
+    </BehaviorType>
+
+		<BehaviorType Name="TooltipBehaviorType">
+			<Tooltip_Description_Text_ID> TEXT_TOOLTIP_DESCRIPTION_MASARI_PEACEBRINGER_DARK </Tooltip_Description_Text_ID>
+			<Tooltip_Category> TEXT_TOOLTIP_CATEGORY_VEHICLE </Tooltip_Category>
+		</BehaviorType>
+
+		<Effect_Generator_Data SubObjectList="Yes" Replace="No">
+			<!-- Standard DMA generator - Oksana 05/14/2007 -->
+			<!--INCLUDE ".\Data\XML\Includes\Masari_DMA\MASARI_DMA_Dark_Mode_Generators.xml" -->
+		</Effect_Generator_Data>
+
+		<Attached_Hard_Points>
+			HP_Peacebringer_Pulse_Cannon_Dark_00, HP_attach_00
+			HP_Peacebringer_Pulse_Cannon_Dark_01, HP_attach_01
+			HP_Peacebringer_Pulse_Cannon_Dark_02, HP_attach_02
+			HP_Peacebringer_Tractor_Beam, 	HP_attach_03
+		</Attached_Hard_Points>
+
+	</X13_Masari_Units>
+
+
+
+	<!-- **************************************************************************************** -->
+	<!-- *** DEATH CLONE(S)********************************************************************** -->
+	<!-- **************************************************************************************** -->
+
+	<X13_Masari_Units Name="Disintegrate_Death_Clone">
+		<Land_Model_Name>w_infect.alo</Land_Model_Name>
+		<Specific_Death_Anim_Type>DIE</Specific_Death_Anim_Type>
+		<Specific_Death_Anim_Index>0</Specific_Death_Anim_Index>
+		<Death_SFXEvent_Start_Die />
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+		<AssetBank> BANK_MASARI </AssetBank>
+	</X13_Masari_Units>
+
+
+
+	<X13_Masari_Units Name="Masari_Peacebringer_Death_Clone">
+
+		<!-- ART -->
+		<Land_Model_Name>MV_tank_debri_A.ALO</Land_Model_Name>
+		<Scale_Factor>0.9</Scale_Factor>
+		<AssetBank> BANK_MASARI </AssetBank>
+
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+		<!-- ATTRIBUTES -->
+		<CategoryMask> Medium, Piloted, Resource </CategoryMask>
+
+		<!-- CONFLICT -->
+		<Ranged_Target_Z_Adjust>0.1</Ranged_Target_Z_Adjust>
+
+		<!-- BEHAVIORS -->
+		<LandBehavior>
+         BALLISTIC,
+         SPAWN_DEBRIS,
+         RESOURCE,
+         EFFECT_REGISTRY,
+         EFFECT_GENERATOR,
+         ATTRIBUTE_DIRECTORY,
+         HIDE_WHEN_FOGGED
+      </LandBehavior>
+
+
+		<BehaviorType Name="SpawnDebrisBehaviorType">
+			<Creation_Debris_Types>
+				Masari_Peacebringer_Debris_02,
+				Masari_Peacebringer_Debris_01,
+				Masari_Peacebringer_Debris_02,
+				Masari_Peacebringer_Debris_01,
+				Masari_Peacebringer_Debris_02,
+				Masari_Peacebringer_Debris_03,
+				Masari_Peacebringer_Debris_03,
+				Masari_Peacebringer_Debris_03,
+				Masari_Peacebringer_Debris_03,
+				Masari_Peacebringer_Debris_03
+			</Creation_Debris_Types>
+			<Debris_Speed_Min> 50.0 </Debris_Speed_Min>
+			<Debris_Speed_Max> 80.0 </Debris_Speed_Max>
+			<Debris_Outward_Speed_Min> 50.0 </Debris_Outward_Speed_Min>
+			<Debris_Outward_Speed_Max> 80.0 </Debris_Outward_Speed_Max>
+			<Debris_Ang_Min> 5.0 </Debris_Ang_Min>
+			<Debris_Ang_Max> 20.0 </Debris_Ang_Max>
+		</BehaviorType>
+
+		<BehaviorType Name="BallisticBehaviorType">
+			<Ballistic_Weight>7.0</Ballistic_Weight>
+			<Ballistic_Bounce>0.3</Ballistic_Bounce>
+		</BehaviorType>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Death_Explosions>masari_large_explosion</Death_Explosions>
+			<Death_Fade_Time> .25 </Death_Fade_Time>
+			<Death_Persistence_Duration> .27 </Death_Persistence_Duration>
+			<Death_Speed_Min> 100.0 </Death_Speed_Min>
+			<Death_Speed_Max> 120.0 </Death_Speed_Max>
+			<Death_Ang_Min> 1.0 </Death_Ang_Min>
+			<Death_Ang_Max> 2.0 </Death_Ang_Max>
+			<Death_Horizontal_Speed>10.0</Death_Horizontal_Speed>
+			<Death_SFXEvent_Start_Die>SFX_Masari_Large_Vehicle_Death</Death_SFXEvent_Start_Die>
+		</BehaviorType>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Damage_Type> Damage_Default </Damage_Type>
+			<Armor_Type> Armor_Default </Armor_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 1000 </Resource_Units>
+			<Resource_For_Faction> Military, Novus, Alien, Masari </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+			<Use_Death_Behavior> true </Use_Death_Behavior>
+		</BehaviorType>
+
+	</X13_Masari_Units>
+
+	<X13_Masari_Units Name="Masari_Peacebringer_Debris_01">
+
+		<!-- ART -->
+		<Land_Model_Name>ZV_Sentry_Wheel.ALO</Land_Model_Name>
+		<Scale_Factor>1.4</Scale_Factor>
+		<AssetBank> BANK_NOVUS </AssetBank>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+		<!-- ATTRIBUTES -->
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+
+		<!-- CONFLICT -->
+		<Tactical_Health>9999</Tactical_Health>
+		<Ranged_Target_Z_Adjust>32.0</Ranged_Target_Z_Adjust>
+
+		<!-- BEHAVIORS -->
+		<LandBehavior>
+         BALLISTIC,
+         DEBRIS,
+         HIDE_WHEN_FOGGED
+      </LandBehavior>
+
+		<BehaviorType Name="BallisticBehaviorType">
+			<Ballistic_Weight>3.0</Ballistic_Weight>
+			<Ballistic_Bounce>0.4</Ballistic_Bounce>
+		</BehaviorType>
+
+		<BehaviorType Name="DebrisBehaviorType">
+			<Debris_Min_Lifetime_Seconds> 3.0 </Debris_Min_Lifetime_Seconds>
+			<Debris_Max_Lifetime_Seconds> 7.0 </Debris_Max_Lifetime_Seconds>
+		</BehaviorType>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Damage_Type> Damage_Default </Damage_Type>
+		</BehaviorType>
+
+	</X13_Masari_Units>
+
+	<X13_Masari_Units Name="Masari_Peacebringer_Debris_02">
+
+		<!-- ART -->
+		<Land_Model_Name>ZV_Sentry_Blade.ALO</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<AssetBank> BANK_MASARI </AssetBank>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+		<!-- ATTRIBUTES -->
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+
+		<!-- CONFLICT -->
+		<Tactical_Health>9999</Tactical_Health>
+		<Ranged_Target_Z_Adjust>32.0</Ranged_Target_Z_Adjust>
+
+		<!-- BEHAVIORS -->
+		<LandBehavior>
+         BALLISTIC,
+         DEBRIS,
+         HIDE_WHEN_FOGGED
+      </LandBehavior>
+
+		<BehaviorType Name="BallisticBehaviorType">
+			<Ballistic_Weight>2.0</Ballistic_Weight>
+			<Ballistic_Bounce>0.2</Ballistic_Bounce>
+		</BehaviorType>
+
+		<BehaviorType Name="DebrisBehaviorType">
+			<Debris_Min_Lifetime_Seconds> 3.0 </Debris_Min_Lifetime_Seconds>
+			<Debris_Max_Lifetime_Seconds> 7.0 </Debris_Max_Lifetime_Seconds>
+		</BehaviorType>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Damage_Type> Damage_Default </Damage_Type>
+		</BehaviorType>
+
+	</X13_Masari_Units>
+
+	<X13_Masari_Units Name="Masari_Peacebringer_Debris_03">
+
+		<!-- ART -->
+		<Land_Model_Name>ZV_Sentry_Blade.ALO</Land_Model_Name>
+		<Scale_Factor>0.5</Scale_Factor>
+		<AssetBank> BANK_MASARI </AssetBank>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+		<!-- ATTRIBUTES -->
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+
+		<!-- CONFLICT -->
+		<Tactical_Health>9999</Tactical_Health>
+		<Ranged_Target_Z_Adjust>32.0</Ranged_Target_Z_Adjust>
+
+		<!-- BEHAVIORS -->
+		<LandBehavior>
+         BALLISTIC,
+         DEBRIS,
+         HIDE_WHEN_FOGGED
+      </LandBehavior>
+
+		<BehaviorType Name="BallisticBehaviorType">
+			<Ballistic_Weight>3.0</Ballistic_Weight>
+			<Ballistic_Bounce>0.2</Ballistic_Bounce>
+		</BehaviorType>
+
+		<BehaviorType Name="DebrisBehaviorType">
+			<Debris_Min_Lifetime_Seconds> 3.0 </Debris_Min_Lifetime_Seconds>
+			<Debris_Max_Lifetime_Seconds> 7.0 </Debris_Max_Lifetime_Seconds>
+		</BehaviorType>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Damage_Type> Damage_Default </Damage_Type>
+		</BehaviorType>
+
+	</X13_Masari_Units>
+
+
+	<!-- **************************************************************************************** -->
+	<!-- *** PROJECTILES ************************************************************************ -->
+	<!-- **************************************************************************************** -->
+
+	<Projectile Name="Proj_Peacebringer_Pulse_Cannon">
+
+		<!-- ART -->
+		<Land_Model_Name>Laser_Masari_Peacebringer_Light_Bolt</Land_Model_Name>
+		<!-- Defined in LASERBEAMS.XML -->
+		<AssetBank> BANK_MASARI </AssetBank>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+		<!-- MOVEMENT -->
+		<Max_Speed>17.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
+
+		<!-- CONFLICT -->
+		<AI_Combat_Power> 1 </AI_Combat_Power>
+
+		<!-- BEHAVIORS -->
+		<Behavior>
+			PROJECTILE,
+			HIDE_WHEN_FOGGED,
+			EFFECT_REGISTRY,
+			EFFECT_GENERATOR
+		</Behavior>
+
+		<BehaviorType Name="TooltipBehaviorType">
+			<Tooltip_Description_Text_ID> TEXT_TOOLTIP_DESCRIPTION_MASARI_PEACEBRINGER_LIGHT </Tooltip_Description_Text_ID>
+			<Tooltip_Category> TEXT_TOOLTIP_CATEGORY_VEHICLE </Tooltip_Category>
+		</BehaviorType>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Damage_Type> Damage_Masari_Peacebringer_Pulse_Cannon </Damage_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="ProjectileBehaviorType">
+			<Projectile_Damages_Random_Hard_Points>No</Projectile_Damages_Random_Hard_Points>
+			<Projectile_Category>DEFAULT</Projectile_Category>
+
+			<Projectile_Max_Flight_Distance>5000.0</Projectile_Max_Flight_Distance>
+			<Projectile_Damage>15.0</Projectile_Damage>
+			<Projectile_Does_Shield_Damage>True</Projectile_Does_Shield_Damage>
+			<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+			<Projectile_Object_Detonation_Particle>Masari_Peacebringer_Light_Det</Projectile_Object_Detonation_Particle>
+			<Projectile_Object_Armor_Reduced_Detonation_Particle>Masari_Peacebringer_Light_Det</Projectile_Object_Armor_Reduced_Detonation_Particle>
+			<Projectile_Ground_Detonation_Particle>Masari_Peacebringer_Light_Det_Ground</Projectile_Ground_Detonation_Particle>
+			<Projectile_Lifetime_Detonation_Particle>Masari_Peacebringer_Light_Det_Miss</Projectile_Lifetime_Detonation_Particle>
+         <Projectile_Absorbed_By_Shields_Particle>Masari_Peacebringer_Light_Det_Miss</Projectile_Absorbed_By_Shields_Particle>
+			<Projectile_SFXEvent_Detonate> SFX_Masari_Detonation_1 </Projectile_SFXEvent_Detonate>
+			<Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Masari_Small_Damage_Detonation </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
+			<Projectile_Causes_Terrain_Damage>false</Projectile_Causes_Terrain_Damage>
+			<Projectile_Causes_Blackening>false</Projectile_Causes_Blackening>
+			<Terrain_Damage_Radius>10.0</Terrain_Damage_Radius>
+			<Impact_Effect_Generator_Name>PurifyingLightImpactGenerator</Impact_Effect_Generator_Name>
+		</BehaviorType>
+
+		<Effect_Generator_Data SubObjectList="Yes" Replace="False">
+
+			<!-- Standard Purifying Light generator - Jeff P 07/09/2007 -->
+			<!--INCLUDE ".\Data\XML\Includes\Masari_Impact_Generators\MASARI_Purifying_Light_Generator.xml" -->
+
+		</Effect_Generator_Data>
+
+	</Projectile>
+
+
+	<Projectile Name="Proj_Peacebringer_Pulse_Cannon_Dark">
+		<Variant_Of_Existing_Type>Proj_Peacebringer_Pulse_Cannon</Variant_Of_Existing_Type>
+
+		<Land_Model_Name>Laser_Masari_Peacebringer_Dark_Energy_Bolt</Land_Model_Name>
+		<!-- Defined in LASERBEAMS.XML -->
+
+		<BehaviorType Name="ProjectileBehaviorType">
+			<Projectile_Damages_Random_Hard_Points>No</Projectile_Damages_Random_Hard_Points>
+			<Projectile_Category>DEFAULT</Projectile_Category>
+
+			<Projectile_Max_Flight_Distance>5000.0</Projectile_Max_Flight_Distance>
+			<Projectile_Damage>15.0</Projectile_Damage>
+			<Projectile_Does_Shield_Damage>True</Projectile_Does_Shield_Damage>
+			<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+			<Projectile_Object_Detonation_Particle>Masari_Peacebringer_Dark_Det</Projectile_Object_Detonation_Particle>
+			<Projectile_Object_Armor_Reduced_Detonation_Particle>Masari_Peacebringer_Dark_Det</Projectile_Object_Armor_Reduced_Detonation_Particle>
+			<Projectile_Ground_Detonation_Particle>Masari_Peacebringer_Dark_Det_Ground</Projectile_Ground_Detonation_Particle>
+			<Projectile_Lifetime_Detonation_Particle>Masari_Peacebringer_Dark_Det_Miss</Projectile_Lifetime_Detonation_Particle>
+         <Projectile_Absorbed_By_Shields_Particle>Masari_Peacebringer_Dark_Det_Miss</Projectile_Absorbed_By_Shields_Particle>
+			<Projectile_SFXEvent_Detonate> SFX_Masari_Detonation_1 </Projectile_SFXEvent_Detonate>
+			<Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Masari_Small_Damage_Detonation </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
+			<Projectile_Causes_Terrain_Damage>false</Projectile_Causes_Terrain_Damage>
+			<Projectile_Causes_Blackening>false</Projectile_Causes_Blackening>
+			<Terrain_Damage_Radius>10.0</Terrain_Damage_Radius>
+			<Impact_Effect_Generator_Name>CripplingShotsImpactGenerator</Impact_Effect_Generator_Name>
+		</BehaviorType>
+
+		<Effect_Generator_Data SubObjectList="Yes">
+
+			<!-- Standard DMA generator - Oksana 05/14/2007 -->
+			<!--INCLUDE ".\Data\XML\Includes\Masari_Impact_Generators\MASARI_Crippling_Shots_Generator.xml" -->
+
+		</Effect_Generator_Data>
+
+	</Projectile>
+
+
+
+	<!-- **************************************************************************************** -->
+	<!-- **** HARDPOINTS ************************************************************************ -->
+	<!-- **************************************************************************************** -->
+
+	<HardPoint Name="HP_Peacebringer_Pulse_Cannon_00">
+
+		<!-- ART -->
+		<Land_Model_Name> ZV_Peacebringer_gunner.ALO </Land_Model_Name>
+		<Scale_Factor> 1.0 </Scale_Factor>
+		<AssetBank> BANK_MASARI </AssetBank>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_UNIT_MASARI_PEACEBRINGER</Text_ID>
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+		<!-- ATTRIBUTES -->
+		<Affiliation> Masari </Affiliation>
+		<CategoryMask> HardPoint </CategoryMask>
+		<Victory_Relevant> No </Victory_Relevant>
+
+		<Attributes SubObjectList="Yes">
+			<Is_Immune_To_Virus> true </Is_Immune_To_Virus>
+			<Is_Immune_To_Mind_Control> true </Is_Immune_To_Mind_Control>
+		</Attributes>
+
+		<!-- CONFLICT -->
+		<Is_Attackable> False </Is_Attackable>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<AI_Combat_Power> 1 </AI_Combat_Power>
+		<Land_FOW_Reveal_Range>250.0</Land_FOW_Reveal_Range>
+		<Ranged_Target_Z_Adjust>0.5</Ranged_Target_Z_Adjust>
+		<Land_Damage_Thresholds>1, 0.66, 0.33</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2</Land_Damage_Alternates>
+
+		<Tactical_Health> 400 </Tactical_Health>
+
+		<Attack_Category_Restrictions> Resource | Resource_INST | Bridge </Attack_Category_Restrictions>
+
+
+		<!-- BEHAVIORS -->
+		<!-- Any unit that has hard points requires a Behavior entry with HARD_POINT_MANAGER, and an <Attached_Hard_Points> list  -->
+		<!-- Any object that is a hard point requires a Behavior entry with HARD_POINT -->
+		<Behavior> HARD_POINT </Behavior>
+		<LandBehavior>
+			TURRET,
+			IDLE,
+			DAMAGE_TRACKING,
+			TARGETING,
+			WEAPON,
+			SELECTABLE,
+			EFFECT_REGISTRY,
+			ATTRIBUTE_DIRECTORY,
+			EFFECT_GENERATOR,
+			IDLE
+		</LandBehavior>
+
+		<BehaviorType Name="HardPointBehaviorType">
+			<HP_Type> HARD_POINT_WEAPON_LASER </HP_Type>
+			<HP_Single_Destruction_Destroys_Parent> No </HP_Single_Destruction_Destroys_Parent>
+			<HP_Parent_Takes_Damage>true</HP_Parent_Takes_Damage>
+			<!-- Whatever damage is inflicted to this hard point gets passed down to its parent as well. -->
+		</BehaviorType>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Damage_Type> Damage_Masari_Peacebringer_Pulse_Cannon </Damage_Type>
+			<Armor_Type> Armor_Masari_Vehicle_Light </Armor_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="WeaponBehaviorType">
+			<Muzzle_Bone_Name> MuzzleA </Muzzle_Bone_Name>
+			<Targeting_Priority_Set> Masari_Peacebringer_Target_Priority </Targeting_Priority_Set>
+			<Projectile_Types> Proj_Peacebringer_Pulse_Cannon </Projectile_Types>
+			<Targeting_Stickiness_Time_Threshold>30.0</Targeting_Stickiness_Time_Threshold>
+			<Targeting_Fire_Inaccuracy> 1.0 </Targeting_Fire_Inaccuracy>
+			<Targeting_Min_Attack_Distance>0.0</Targeting_Min_Attack_Distance>
+			<Targeting_Max_Attack_Distance> 180.0 </Targeting_Max_Attack_Distance>
+			<Projectile_Fire_Recharge_Seconds>2.0</Projectile_Fire_Recharge_Seconds>
+			<Projectile_Fire_Recharge_Max_Random_Frames> 2 </Projectile_Fire_Recharge_Max_Random_Frames>
+			<Projectile_Fire_Pulse_Count>6</Projectile_Fire_Pulse_Count>
+			<Projectile_Fire_Pulse_Delay_Seconds>0.3</Projectile_Fire_Pulse_Delay_Seconds>
+		</BehaviorType>
+
+		<BehaviorType Name="TurretBehaviorType">
+			<Turret_Bone_Name> b_turret_00 </Turret_Bone_Name>
+			<Barrel_Bone_Name> b_barrel_00 </Barrel_Bone_Name>
+			<Turret_Rotate_Speed> 6.0 </Turret_Rotate_Speed>
+			<Apply_Z_Turret_Rotate_To_Axis>1</Apply_Z_Turret_Rotate_To_Axis>
+			<Apply_Y_Turret_Rotate_To_Axis>2</Apply_Y_Turret_Rotate_To_Axis>
+			<Turret_Rotate_Extent_Degrees> 60.0 </Turret_Rotate_Extent_Degrees>
+			<Turret_Elevate_Extent_Degrees> 65.0 </Turret_Elevate_Extent_Degrees>
+		</BehaviorType>
+
+		<BehaviorType Name="SFXBehaviorType">
+			<SFXEvent_Fire>SFX_Masari_Vehicle_Fire</SFXEvent_Fire>
+		</BehaviorType>
+
+		<Effect_Generator_Data SubObjectList="Yes" Replace="No">
+
+         
+			<!-- Standard DMA generator - Oksana 05/14/2007 -->
+			<!--INCLUDE ".\Data\XML\Includes\Masari_DMA\MASARI_DMA_Hardpoint_Generators.xml" -->
+
+         
+         
+		</Effect_Generator_Data>
+
+	</HardPoint>
+
+	<HardPoint Name="HP_Peacebringer_Pulse_Cannon_Dark_00">
+		<Variant_Of_Existing_Type>HP_Peacebringer_Pulse_Cannon_00</Variant_Of_Existing_Type>
+
+		<BehaviorType Name="WeaponBehaviorType">
+			<Muzzle_Bone_Name> MuzzleB </Muzzle_Bone_Name>
+			<Targeting_Priority_Set> Masari_Peacebringer_Target_Priority </Targeting_Priority_Set>
+			<Projectile_Types> Proj_Peacebringer_Pulse_Cannon_Dark </Projectile_Types>
+			<Targeting_Stickiness_Time_Threshold>30.0</Targeting_Stickiness_Time_Threshold>
+			<Targeting_Fire_Inaccuracy> 1.0 </Targeting_Fire_Inaccuracy>
+			<Targeting_Min_Attack_Distance>0.0</Targeting_Min_Attack_Distance>
+			<Targeting_Max_Attack_Distance> 180.0 </Targeting_Max_Attack_Distance>
+			<Projectile_Fire_Recharge_Seconds>2.0</Projectile_Fire_Recharge_Seconds>
+			<Projectile_Fire_Recharge_Max_Random_Frames> 2 </Projectile_Fire_Recharge_Max_Random_Frames>
+			<Projectile_Fire_Pulse_Count>6</Projectile_Fire_Pulse_Count>
+			<Projectile_Fire_Pulse_Delay_Seconds>0.3</Projectile_Fire_Pulse_Delay_Seconds>
+		</BehaviorType>
+	</HardPoint>
+
+
+
+	<HardPoint Name="HP_Peacebringer_Pulse_Cannon_01">
+		<Variant_Of_Existing_Type>HP_Peacebringer_Pulse_Cannon_00</Variant_Of_Existing_Type>
+	</HardPoint>
+
+
+	<HardPoint Name="HP_Peacebringer_Pulse_Cannon_Dark_01">
+		<Variant_Of_Existing_Type>HP_Peacebringer_Pulse_Cannon_Dark_00</Variant_Of_Existing_Type>
+	</HardPoint>
+
+
+	<HardPoint Name="HP_Peacebringer_Pulse_Cannon_02">
+		<Variant_Of_Existing_Type>HP_Peacebringer_Pulse_Cannon_00</Variant_Of_Existing_Type>
+	</HardPoint>
+
+
+	<HardPoint Name="HP_Peacebringer_Pulse_Cannon_Dark_02">
+		<Variant_Of_Existing_Type>HP_Peacebringer_Pulse_Cannon_Dark_00</Variant_Of_Existing_Type>
+	</HardPoint>
+
+
+	<HardPoint Name="HP_Peacebringer_Tractor_Beam">
+
+		<!-- ART -->
+		<Land_Model_Name>  ZV_Peacebringer_beam.ALO </Land_Model_Name>
+		<Scale_Factor> 1.0 </Scale_Factor>
+		<AssetBank> BANK_MASARI </AssetBank>
+
+		<!-- INTERFACE -->
+		<Is_Placed_By_Editor> false </Is_Placed_By_Editor>
+
+		<!-- ATTRIBUTES -->
+		<Affiliation> Masari </Affiliation>
+		<CategoryMask> HardPoint </CategoryMask>
+		<Victory_Relevant> No </Victory_Relevant>
+
+
+		<!-- CONFLICT -->
+		<Is_Attackable> False </Is_Attackable>
+		<Collidable_By_Projectile_Living> True </Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead> No </Collidable_By_Projectile_Dead>
+		<Target_Bones> </Target_Bones>
+		<HP_Is_Immune_To_Damage>Yes</HP_Is_Immune_To_Damage>
+		<Ranged_Target_Z_Adjust>0.5</Ranged_Target_Z_Adjust>
+
+		<Tactical_Health> 400 </Tactical_Health>
+
+		<!-- BEHAVIORS -->
+		<!-- Any unit that has hard points requires a Behavior entry with HARD_POINT_MANAGER, and an <Attached_Hard_Points> list  -->
+		<!-- Any object that is a hard point requires a Behavior entry with HARD_POINT -->
+		<Behavior> HARD_POINT </Behavior>
+
+		<LandBehavior>
+			DAMAGE_TRACKING,
+			TURRET,
+			TARGETING,
+			EFFECT_REGISTRY,
+			EFFECT_GENERATOR,
+			ATTRIBUTE_DIRECTORY,
+			ABILITY_COUNTDOWN
+		</LandBehavior>
+
+		<Attributes SubObjectList="Yes">
+			<Is_Immune_To_Virus> true </Is_Immune_To_Virus>
+			<Is_Immune_To_Mind_Control> true </Is_Immune_To_Mind_Control>
+		</Attributes>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Armor_Type> Armor_Masari_Vehicle_Light </Armor_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="HardPointBehaviorType">
+			<HP_Type> HARD_POINT_WEAPON_LASER </HP_Type>
+			<HP_Single_Destruction_Destroys_Parent> No </HP_Single_Destruction_Destroys_Parent>
+			<HP_Parent_Takes_Damage>true</HP_Parent_Takes_Damage>
+			<!-- Whatever damage is inflicted to this hard point gets passed down to its parent as well. -->
+		</BehaviorType>
+
+		<BehaviorType Name="WeaponBehaviorType">
+			<Targeting_Stickiness_Time_Threshold> 30.0 </Targeting_Stickiness_Time_Threshold>
+			<Muzzle_Bone_Name> muzzleA </Muzzle_Bone_Name>
+			<Targeting_Opportunity_Fire_Enabled> true </Targeting_Opportunity_Fire_Enabled>
+			<Targeting_Priority_Set> Masari_Peacebringer_Target_Priority </Targeting_Priority_Set>
+			<Targeting_Max_Attack_Distance> 170.0 </Targeting_Max_Attack_Distance>
+			<Can_Attack_Without_Weapon_Behavior> Yes </Can_Attack_Without_Weapon_Behavior>
+			<Always_Choose_Closest_Target> false </Always_Choose_Closest_Target>
+		</BehaviorType>
+
+		<BehaviorType Name="TurretBehaviorType">
+			<Turret_Bone_Name> B_turret </Turret_Bone_Name>
+			<Barrel_Bone_Name> B_barrel </Barrel_Bone_Name>
+			<Turret_Rotate_Speed> 6.0 </Turret_Rotate_Speed>
+			<Apply_Z_Turret_Rotate_To_Axis>1</Apply_Z_Turret_Rotate_To_Axis>
+			<Apply_Y_Turret_Rotate_To_Axis>2</Apply_Y_Turret_Rotate_To_Axis>
+			<Turret_Rotate_Extent_Degrees> 360.0 </Turret_Rotate_Extent_Degrees>
+			<Turret_Elevate_Extent_Degrees> 90.0 </Turret_Elevate_Extent_Degrees>
+		</BehaviorType>
+
+		<BehaviorType Name="SFXBehaviorType">
+			<SFXEvent_Fire> SFX_Masari_Vehicle_Fire </SFXEvent_Fire>
+			<Death_SFXEvent_Start_Die> SFX_Masari_HP_Weapon_1_Death </Death_SFXEvent_Start_Die>
+			<SFXEvent_Turret_Rotating_Loop> SFX_Masari_Medium_Turret_Loop </SFXEvent_Turret_Rotating_Loop>
+		</BehaviorType>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Remove_Upon_Death> Yes </Remove_Upon_Death>
+			<!-- Yes: Instantly destroy death clone when effects are started -->
+		</BehaviorType>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<!-- Tractor Beam Unit Ability -->
+			<Unit_Ability Name="Masari_Peacebringer_Tractor_Beam_Unit_Ability">
+				<Type>EFFECT_GENERATOR</Type>
+				<Expiration_Seconds> 15 </Expiration_Seconds>
+				<Recharge_Seconds>1.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> Masari_Peacebringer_Tractor_Beam_Special_Ability </GUI_Activated_Ability_Name>
+				<Effect_Generator_Name> Masari_Peacebringer_Tractor_Beam_Effect_Generator </Effect_Generator_Name>
+				<Is_Modal>Yes</Is_Modal>
+				<Targeting_Type> ENEMY_OBJECT </Targeting_Type>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+
+		<Abilities SubObjectList="Yes">
+
+			<!-- Tractor Beam Special Ability -->
+			<Effect_Generator_Ability Name="Masari_Peacebringer_Tractor_Beam_Special_Ability">
+				<Activation_Min_Range> 0.0  </Activation_Min_Range>
+				<Activation_Max_Range> 170.0 </Activation_Max_Range>
+				<Max_Channel_Range> 190.0 </Max_Channel_Range>
+				<Pre_Generate_Anim_Type> </Pre_Generate_Anim_Type>
+				<Post_Generate_Anim_Type> </Post_Generate_Anim_Type>
+				<Generating_Anim_Type>  </Generating_Anim_Type>
+				<Effect_Generator_Name> Masari_Peacebringer_Tractor_Beam_Effect_Generator </Effect_Generator_Name>
+				<Activation_Style> Special_Attack </Activation_Style>
+				<Point_Turret_At_Target> true </Point_Turret_At_Target>
+				<Terminate_Effect_On_Move_Command> false </Terminate_Effect_On_Move_Command>
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Excluded_Unit_Categories> Stationary | Resource | Resource_INST | HardPoint </Excluded_Unit_Categories>
+				<Can_Target_Allies>No</Can_Target_Allies>
+				<Can_Target_Enemies>Yes</Can_Target_Enemies>
+				<Can_Target_Neutral>No</Can_Target_Neutral>
+			</Effect_Generator_Ability>
+
+		</Abilities>
+
+		<Effect_Generator_Data SubObjectList="Yes">
+
+			<!-- Tractor Beam Effect Generator -->
+			<Effect_Generator Name="Masari_Peacebringer_Tractor_Beam_Effect_Generator">
+				<Should_Deactivate_Manually> true </Should_Deactivate_Manually>
+				<Is_Independent_Generator> No </Is_Independent_Generator>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> Masari_Peacebringer_Tractor_Beam_Effect </Effect_Name>
+					<Duration> -1.0 </Duration>
+					<Target_Gathering_Mask> Target </Target_Gathering_Mask>
+					<Frames_Between_Remove_Invalid_Targets> 1 </Frames_Between_Remove_Invalid_Targets>
+				</Effect_Generator_Entry>
+
+            <Effect_Generator_Entry Name="Entry2">
+               <Effect_Name> Masari_Peacebringer_Tractor_Beam_Visual_Effect </Effect_Name>
+               <Duration> -1.0 </Duration>
+               <Target_Gathering_Mask> Self </Target_Gathering_Mask>
+             </Effect_Generator_Entry>
+
+			</Effect_Generator>
+
+			<!-- Standard DMA generator - Oksana 05/14/2007 -->
+			<!--INCLUDE ".\Data\XML\Includes\Masari_DMA\MASARI_DMA_Hardpoint_Generators.xml" -->
+
+		</Effect_Generator_Data>
+
+	</HardPoint>
+
+
+
+</Masari_VEH_Peacebringer_XML>

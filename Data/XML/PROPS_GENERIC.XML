@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<Props_Generic>
+
+<!-- THIS FILE IS OBSOLETE, PLEASE USE THE APPROPRIATE XML IN THE PROPS SUBFOLDER -->
+
+	<Props_Generic Name="Props_Generic_Default_Entry">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+	</Props_Generic>
+	
+	<Props_Generic Name="Prop_Land_Movement_Compass">
+		<Text_ID />
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+		<Land_Model_Name> I_FACING_ARROW.ALO </Land_Model_Name>
+		<Is_Decoration> No </Is_Decoration>
+		<Is_Discardable> No </Is_Discardable>
+		<Scale_Factor> .33f </Scale_Factor>
+	</Props_Generic>
+
+	<!-- A tactical mode sub-selection point object to draw above sub-selection on-screen objects -->
+	<!-- Used for both Xbox 360 version, and Windows verion while using the Game Controller -->
+	<Props_Generic Name="Controller_Sub_Selection_Pointer">
+		<Is_Placed_By_Editor> false </Is_Placed_By_Editor>
+		<Land_Model_Name> i_highlite_arrow.alo </Land_Model_Name>
+		<Scale_Factor> 1.0 </Scale_Factor>
+		<Is_Decoration> Yes </Is_Decoration>
+		<Is_Discardable> No </Is_Discardable>
+		<Behavior> IDLE </Behavior> 
+		<!-- <Hover_Offset> -80.0 </Hover_Offset> -->  <!-- Used by controller code to adjust Y position above object -->
+		<Idle_Anim_00_Rate_Mod> 4.0 </Idle_Anim_00_Rate_Mod>
+	</Props_Generic>
+
+</Props_Generic>
+

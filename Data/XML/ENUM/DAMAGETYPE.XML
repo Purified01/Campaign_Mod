@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!-- NOTE: GameConstants ArmorVsDamage system supports only 128 damage types! -->
+<!-- NOTE: Some damage types are specified in GameConstants accessors (s.a. Fire_Damage_Type etc -->
+<!-- Oksana -->
+<EnumDefinition>
+
+	<!-- DO NOT CHANGE THESE TWO VALUES - THIS WILL BREAK HARDCODED ENUMERATION!!! -->
+
+	<Damage_Debug_Cheat>-1</Damage_Debug_Cheat>
+	<!--  Damage caused by a debug key / command -->
+	<Damage_Default>0</Damage_Default>
+	<!--  normal damage  -->
+	<Damage_No_Death_Clone>1</Damage_No_Death_Clone>
+	<!-- hard-coded, do not create death clone for this damage. Used in effects like dissolve and abduct for clean visuals. -->
+
+
+
+
+	<!-- Damage types that don't need armor vs. damage matrix entries -->
+
+	<Damage_Unconditional/>
+	<!--  nothing should reduce or avoid this damage type; similar to DAMAGE_DEBUG_CHEAT -->
+	<Damage_Flying_Over_Enemy_Territory/>
+	<!--  damage applied by an enemy region whenever an enemy fleet is flying over it. -->
+	<Damage_Hard_Point_Self_Destruct/>
+	<!--  Damage for when we are self destructing all hard points intentionally -->
+	<Damage_Falling/>
+	<Damage_Unphasing/>
+
+
+	<!-- Faction Non-specific Damage Types -->
+
+	<Damage_Fire/>
+	<Damage_Ice/>
+	<Damage_Electricity/>
+	<Damage_Wind/>
+	<Damage_Earthquake/>
+	<Damage_Plasma/>
+	<Damage_Psionic/>
+	<Damage_Dark/>
+
+	<!-- Military Damage Types -->
+
+	<Damage_Military_Apache_Guns/>
+	<Damage_Military_Apache_Hellfire/>
+	<Damage_Military_Dragonfly/>
+	<Damage_Military_Maverick_Gun/>
+	<Damage_Military_Moore_Minigun/>
+	<Damage_Military_Moore_Grenade/>
+	<Damage_Military_Hero_Tank_Minigun/>
+	<Damage_Military_Marine/>
+	<Damage_Military_Rocketlauncher/>
+	<Damage_Military_AbramsM2_Tank/>
+	<Damage_Military_Defender_Gun/>
+	<Damage_Military_Dragoon/>
+	<Damage_Military_Hummer/>
+	<Damage_Military_Turret/>
+	<Damage_Military_Flamethrower/>
+
+
+	<!-- Alien Damage Types -->
+
+	<Damage_Alien_Kamal_PsionicBlast/>
+	<Damage_Alien_Nufai_PhaseClaw/>
+	<Damage_Alien_Orlok_Gatling_Plasma/>
+	<Damage_Alien_Orlok_Siege_Grenade/>
+	<Damage_Alien_Brute_Melee_Knockback/>
+	<Damage_Alien_Brute_Smash/>
+	<Damage_Alien_Brute_Death_From_Above/>
+	<Damage_Alien_Grunt_Melee_Knockback/>
+	<Damage_Alien_Grunt_Shotgun/>
+	<Damage_Alien_Grunt_Grenade/>
+	<Damage_Alien_Mutant_Slave_Knockback/>
+	<Damage_Alien_Mutant_Slave_Claws/>
+	<Damage_Alien_Mutant_Slave_Grenade/>
+	<Damage_Alien_Mutant_Slave_Explosion/>
+	<Damage_Alien_Gray_Plasma_Rifle/>
+	<Damage_Alien_Gray_Plasma_Bomb/>
+	<Damage_Alien_Tank_Ground/>
+	<Damage_Alien_Walker_HP_Lightning/>
+	<Damage_Alien_Walker_HP_Plasma/>
+	<Damage_Alien_Walker_HP_Mass_Driver/>
+	<Damage_Alien_AE_Radiation/>
+	<Damage_Alien_Foo_Fighter/>
+	<Damage_Alien_Purifier_Effect/>
+	<Damage_Alien_Spitter_Particle_Beam/>
+	<Damage_Alien_Grav_Turret_Beam/>
+	<Damage_Alien_Monolith_Beam/>
+	<Damage_Alien_Defiler_Beam/>
+
+	<Damage_Alien_Mass_Drop/>
+	<Damage_Alien_Radiation_Cascade/>
+
+
+	<!-- Novus Damage Types -->
+
+	<Damage_Novus_Founder_Prowess_Punch/>
+	<Damage_Novus_Founder_Performance_Punch/>
+	<Damage_Novus_Mirabel_Flechette/>
+	<Damage_Novus_Mirabel_Snipe/>
+	<Damage_Novus_Mirabel_Rocket_Attack/>
+	<Damage_Novus_Vertigo_Railgun/>
+	<Damage_Novus_Reflex_Melee/>
+	<Damage_Novus_Robot_Infantry_Flechette_Rifle/>
+	<Damage_Novus_Robot_Infantry_Self_Destruct/>
+	<Damage_Novus_Hero_Variant_Flechette/>
+	<Damage_Novus_Amplifier_Sonic_Resonance/>
+	<Damage_Novus_Amplifier_Harmonic_Pulse/>
+	<Damage_Novus_Antimatter_Tank_Cannon/>
+	<Damage_Novus_Corruptor_Laser/>
+	<Damage_Novus_Dervish_Weapon/>
+	<Damage_Novus_Dervish_PBAE_Attack/>
+	<Damage_Novus_Field_Inverter_Railgun/>
+	<Damage_Hacker_Viral_Bomb/>
+	<Damage_Novus_Shield_To_Inverter/>
+
+	<Damage_Novus_EMP_Superweapon/>
+	<Damage_Novus_Black_Hole_Bomb/>
+  <Damage_Novus_Redirection_Turret/>
+
+
+	<!-- Masari Damage Types -->
+
+	<Damage_Masari_Peacebringer_Disintegrate/>
+	<Damage_Masari_Disciple_Weapon/>
+	<Damage_Masari_Figment_Bolt/>
+	<Damage_Masari_Figment_Mine/>
+	<Damage_Masari_Seeker_Pulse_Cannon/>
+	<Damage_Masari_Zessus_Toy/>
+	<Damage_Masari_Zessus_Explosion/>
+	<Damage_Masari_Peacebringer_Pulse_Cannon/>
+	<Damage_Masari_Sentry_Missile/>
+	<Damage_Masari_Sentry_Beam/>
+	<Damage_Masari_Skylord_Screech/>
+	<Damage_Masari_Skylord_Light_Bomb/>
+	<Damage_Masari_Skylord_Dark_Weapon/>
+	<Damage_Masari_Enforcer_Light/>
+	<Damage_Masari_Enforcer_Dark/>
+	<Damage_Masari_Guardian_Dark/>
+	<Damage_Masari_Guardian_Light/>
+	<Damage_Masari_Sky_Guardian_Light/>
+	<Damage_Masari_Sky_Guardian_Dark/>
+	<Damage_Masari_Matter_Engine_Leech/>
+	<Damage_Masari_Avenger_Weapon/>
+	<Damage_Masari_Charos_Sword/>
+	<Damage_Masari_Oracle_Gaze/>
+	<Damage_Masari_Matter_Engine/>
+	<Damage_Masari_Altea_Unmake/>
+
+	<Damage_Masari_Magma_Channel/>
+	<Damage_Masari_Frost_Conduit/>
+	
+	
+	
+	
+	
+	
+</EnumDefinition>

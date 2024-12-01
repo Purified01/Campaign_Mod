@@ -1,0 +1,982 @@
+<?xml version="1.0"?>
+<Military_Veh_Dragoon_XML>
+
+<!-- **************************************************************************************** -->
+<!-- *** UNIT(S) **************************************************************************** -->
+<!-- **************************************************************************************** -->
+
+	<X11_Military_Units Name="Military_Dragoon_MTRV">
+
+		<!-- ART -->
+		<Land_Model_Name>MV_Dragoon.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<SurfaceFX_Name>Generic_Track</SurfaceFX_Name>
+		<Occlusion_Silhouette_Enabled>1</Occlusion_Silhouette_Enabled>
+      <AssetBank> BANK_MILITARY </AssetBank>
+		
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_UNIT_MILITARY_DRAGOON_MTRV</Text_ID>
+		<GUI_Scene_Name> HealthBar_Scene_Medium </GUI_Scene_Name> 
+		<GUI_Receives_Input> false </GUI_Receives_Input>
+		<GUI_Min_Scale> 0.3 </GUI_Min_Scale>
+		<GUI_Max_Scale> 2.5 </GUI_Max_Scale>
+		<GUI_Default_Scale> 0.5 </GUI_Default_Scale>
+		<GUI_World_Offset> 0.0, 0.0, -20 </GUI_World_Offset>
+		<Select_Box_Scale>75</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+		
+		<!-- ATTRIBUTES -->
+        <LOD_Bias>4</LOD_Bias>
+		<Affiliation>Military</Affiliation>
+		<CategoryMask> Medium, Piloted, CanAttack, RadiationHurts </CategoryMask>
+		<Weather_Category>Tracked</Weather_Category>
+		<Victory_Relevant> No</Victory_Relevant>
+		<Can_Fall_From_Bridge> true </Can_Fall_From_Bridge>
+		<Importance> 0.6 </Importance>
+		<Shot_Type> vehicle </Shot_Type>
+		
+		<!-- MOVEMENT -->
+		<MovementClass>Tracked</MovementClass>
+		<OccupationStyle>1x1</OccupationStyle>
+		<Max_Speed>0.7</Max_Speed>
+		<Max_Rate_Of_Turn>1.0</Max_Rate_Of_Turn>
+		<Space_Layer> LandDynamic </Space_Layer>
+		<UnitCollisionClass> Vehicle </UnitCollisionClass>
+		<OverrideAcceleration> .05 </OverrideAcceleration>
+		<OverrideDeceleration> .05 </OverrideDeceleration>
+		<FormationSpacing> 1 </FormationSpacing>
+		<FormationOrder> 8 </FormationOrder>
+		<FormationGrouping> Standard </FormationGrouping>
+		<FormationRaggedness> .6 </FormationRaggedness>
+		<MaxJiggleDistance> 5 </MaxJiggleDistance>
+		<Custom_Hard_XExtent> 30.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 17.0 </Custom_Hard_YExtent>
+		<Tread_Scroll_Rate>0.167</Tread_Scroll_Rate>
+		<Should_Keep_Tangent_To_Terrain> true </Should_Keep_Tangent_To_Terrain>
+		
+		<!-- CONFLICT -->
+		<Is_Attackable> true </Is_Attackable>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+		<Land_FOW_Reveal_Range>450.0</Land_FOW_Reveal_Range><!--jdg tweaking ... originally 210 -->
+		<Ranged_Target_Z_Adjust>6.0</Ranged_Target_Z_Adjust>
+		<Fire_Weapon_When_Deployed>Yes</Fire_Weapon_When_Deployed>
+		<Fire_Weapon_When_Undeployed>No</Fire_Weapon_When_Undeployed>
+
+		<Attack_Category_Restrictions> Flying | Resource | Resource_INST </Attack_Category_Restrictions>
+
+		<Tactical_Health> 750 </Tactical_Health>
+
+		<Land_Damage_Thresholds>1, 0.66, 0.33</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2</Land_Damage_Alternates>
+		<Land_Damage_SFX />
+		
+		<!-- BEHAVIORS -->
+		<!-- Any unit that has hard points requires a Behavior entry with HARD_POINT_MANAGER -->
+		<!-- Any object that is a hard point requires a Behavior entry with HARD_POINT -->
+		<Behavior> SELECTABLE  </Behavior>
+		
+		<LandBehavior>
+			EFFECT_REGISTRY, 
+			EFFECT_GENERATOR, 
+			STUNNABLE, 
+			GUI, 
+			ABILITY_COUNTDOWN, 
+			RADAR_MAP_VISIBLE, 
+			DRAGOON, 
+			HARD_POINT_MANAGER, 
+			DEPLOY, 
+			TREAD_SCROLL, 
+			WALK_LOCOMOTOR, 
+			FORMATION, 
+			IDLE, 
+			TARGETING,  
+			REVEAL, 
+			HIDE_WHEN_FOGGED, 
+			SQUASH, 
+			SURFACE_FX, 
+			UNIT_AI,
+			DAMAGE_TRACKING, 
+			BALLISTIC, 
+			AI_RECRUITABLE, 
+			AI_TARGET
+		</LandBehavior>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Armor_Type> Armor_Military_Vehicle_Heavy </Armor_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="ProductionBehaviorType">
+			<Size_Value> 10 </Size_Value>
+			<Is_Research_Tech_Tree_Lockable> Yes </Is_Research_Tech_Tree_Lockable>
+		</BehaviorType>
+
+		<BehaviorType Name="BuildableObjectBehaviorType">
+			<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+			<Tactical_Build_Cost_Campaign> 1200 </Tactical_Build_Cost_Campaign>
+			<Tactical_Build_Cost_Multiplayer> 1200 </Tactical_Build_Cost_Multiplayer>
+			<Tactical_Build_Time_Seconds> 18 </Tactical_Build_Time_Seconds>
+			<Tactical_UI_Build_Queue_Order> 5 </Tactical_UI_Build_Queue_Order>
+		</BehaviorType>
+
+    <BehaviorType name="AIBehaviorType">
+      <AI_Combat_Power> 1 </AI_Combat_Power>
+      <Idle_Chase_Range> 20.0 </Idle_Chase_Range> <!-- Double click guard area Keep very small-->
+      <Guard_Chase_Range> 250.0 </Guard_Chase_Range> <!-- Guard radius for unit-->
+      <Autonomous_Move_Extension_Vs_Attacker> 25.0 </Autonomous_Move_Extension_Vs_Attacker> <!--Range outside of guard area unit will move-->
+      <Attack_Move_Response_Range> 50.0 </Attack_Move_Response_Range> <!-- When given a attack move command unit will travel this distance from path to attack-->
+      <AI_Target_Level>Individual_Or_Group</AI_Target_Level>
+    </BehaviorType>
+
+		<BehaviorType Name="WeaponBehaviorType">
+			<Targeting_Opportunity_Fire_Enabled> false </Targeting_Opportunity_Fire_Enabled>
+			<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
+			<Targeting_Priority_Set> Military_Dragoon_Target_Priority </Targeting_Priority_Set>
+			<Targeting_Fire_Inaccuracy> 1.0 </Targeting_Fire_Inaccuracy>		
+			<!-- This is the default attack range so it should be set about 100 less than the left flap attack range. -->
+			<!-- This will make sure all the left flap hardpoints are in-range before allowing the unit to fire.  -->
+			<!-- This value also has to allow for an arced flight path of the missles.  If the difference is less than 100 the missles -->
+			<!-- may blow up before hitting the target.  5/13/2006 4:47:27 PM BMH -->
+			<Targeting_Max_Attack_Distance>450.0</Targeting_Max_Attack_Distance>
+			<Targeting_Min_Attack_Distance>50</Targeting_Min_Attack_Distance><!-- tweaking ... jdg -->
+		</BehaviorType>
+
+		<BehaviorType Name="DragoonBehaviorType">
+			<DragoonTargetRadius> 200 </DragoonTargetRadius>
+			<DragoonRetargetAreaTime> 5 </DragoonRetargetAreaTime>
+		</BehaviorType>
+		
+		<BehaviorType Name="EncyclopediaBehaviorType">
+			<Icon_Name>i_icon_dragoon.tga</Icon_Name>
+		</BehaviorType>
+		
+		<BehaviorType Name="CrushBehaviorType">
+			 <Crush_Defense>40</Crush_Defense>
+			 <Crush_Power>25</Crush_Power>
+		</BehaviorType>
+		
+      		<BehaviorType Name="DeathFXBehaviorType">
+         		<Death_Clone>Damage_Default, Military_Dragoon_MTRV_Death_Clone</Death_Clone>
+         		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+         		<Death_Speed_Min> 100.0 </Death_Speed_Min>
+         		<Death_Speed_Max> 120.0 </Death_Speed_Max>
+         		<Death_Ang_Min> 1.0 </Death_Ang_Min>
+         		<Death_Ang_Max> 2.0 </Death_Ang_Max>
+         		<Death_Horizontal_Speed>10.0</Death_Horizontal_Speed>
+      		</BehaviorType>
+		
+		<BehaviorType Name="SFXBehaviorType">
+			<SFXEvent_Fire>SFX_Military_Target_Fire</SFXEvent_Fire>
+			<SFXEvent_Select>Unit_Select_Military_Marine</SFXEvent_Select>
+			<SFXEvent_Move>Unit_Move_A_Military_Marine</SFXEvent_Move>
+			<SFXEvent_Move_At_Top_Speed>Unit_Move_B_Military_Marine</SFXEvent_Move_At_Top_Speed>
+			<SFXEvent_Attack>Unit_Attack_A_Military_Marine</SFXEvent_Attack>
+			<SFXEvent_Attack_At_Top_Speed>Unit_Attack_B_Military_Marine</SFXEvent_Attack_At_Top_Speed>
+         <SFXEvent_Guard />
+			<SFXEvent_Turret_Rotating_Loop> SFX_Military_Small_Turret_Loop </SFXEvent_Turret_Rotating_Loop>
+			<Death_SFXEvent_Start_Die>SFX_Military_Medium_Vehicle_Death</Death_SFXEvent_Start_Die>
+			<SFXEvent_Engine_Idle_Loop> SFX_Military_Tracked_Idle_Engine_Loop </SFXEvent_Engine_Idle_Loop>
+			<SFXEvent_Engine_Moving_Loop> SFX_Military_Tracked_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
+			<SFXEvent_Tactical_Build_Started>GUI_BUILD_Vehicle</SFXEvent_Tactical_Build_Started>
+			<SFXEvent_Tactical_Build_Complete>Unit_Select_Military_Marine</SFXEvent_Tactical_Build_Complete>
+			<SFXEvent_Tactical_Build_Cancelled>GUI_BUILD_Vehicle_Canceled</SFXEvent_Tactical_Build_Cancelled>
+			
+			<!-- Maria 05.01.2006 - Adding build sounds for Global production -->
+			<SFXEvent_Build_Started>GUI_BUILD_Vehicle</SFXEvent_Build_Started>
+			<SFXEvent_Build_Complete>Unit_Select_Military_Marine</SFXEvent_Build_Complete>
+			<SFXEvent_Build_Cancelled>GUI_BUILD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
+		</BehaviorType>
+		
+		<BehaviorType Name="TurretBehaviorType">
+			<Ground_Vehicle_Turret_Target> Yes </Ground_Vehicle_Turret_Target>
+		</BehaviorType>
+		
+		<BehaviorType Name="BlobShadowBehaviorType">
+			<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+			<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+		</BehaviorType>
+				
+		<BehaviorType Name="DeployBehaviorType">
+			<Deploy_Category>SEMI_AUTOMATIC</Deploy_Category>
+			<Deployment_Anim_Rate>1.5</Deployment_Anim_Rate>
+		</BehaviorType>
+		
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.03  0.03</Radar_Icon_Size>
+		</BehaviorType>		
+		
+		<BehaviorType Name="FleetBehaviorType">
+			<!-- Maria 05.24.2006 - How much space does the unit take up -->
+			<Unit_Pop_Cap> 1 </Unit_Pop_Cap>
+		</BehaviorType>
+
+		<BehaviorType Name="GUIBehaviorType">
+			<GUI_Bracket_Size>1</GUI_Bracket_Size>
+			<!-- Maria 05.18.2006 - Data needed for the models attached to the mouse in Global -->
+			<GUI_Is_Top_View> Yes </GUI_Is_Top_View>
+			<GUI_Rotate_Angle_Degrees> -45.0 </GUI_Rotate_Angle_Degrees>
+			<GUI_Is_Model_Shifted_Down> No </GUI_Is_Model_Shifted_Down>
+			<GUI_Strategic_Mode_Scale> 0.03 </GUI_Strategic_Mode_Scale>
+		</BehaviorType>
+
+		<!-- HARDPOINTS - will be able to shoot on objects that have been revealed by dynamic scanner -->
+		<Attached_Hard_Points> 
+			HP_Military_Dragoon_Left_Flap, HP_FLAP_00
+			HP_Military_Dragoon_Right_Flap, HP_FLAP_01
+			HP_Military_Dragoon_Left_Flap, HP_FLAP_02
+			HP_Military_Dragoon_Right_Flap, HP_FLAP_03
+			HP_Military_Dragoon_Left_Flap, HP_FLAP_04
+			HP_Military_Dragoon_Right_Flap, HP_FLAP_05
+			HP_Military_Dragoon_TargetingTurret, HP_MARKING
+		</Attached_Hard_Points>
+
+		<!-- ABILITIES -->
+		<Unit_Abilities_Data SubObjectList="Yes">
+		
+			<!-- Primary ability -->
+			<Unit_Ability Name="Dragoon_Deploy">
+				<Type>DEPLOY</Type>
+			</Unit_Ability>
+			
+			<Unit_Ability Name="Dragoon_Scan">
+				<Type>DRAGOON_SCAN</Type>
+				<Expiration_Seconds> 30.0 </Expiration_Seconds>
+				<Recharge_Seconds>3</Recharge_Seconds>
+				<Effective_Max_Radius> 0.0 </Effective_Max_Radius> <!-- 0.0 means no distance factor, unlimited to entire map -->
+				<Area_Effect_Decal_Distance> 250.0 </Area_Effect_Decal_Distance> 
+				<Should_Targeting_Ignore_Objects> true </Should_Targeting_Ignore_Objects>
+				<Is_Modal> Yes </Is_Modal>
+				<Targeting_Type> LAND_ANY_LOCATION </Targeting_Type>			
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
+	</X11_Military_Units>
+
+   <!-- **************************************************************************************** -->
+   <!-- *** DEATH CLONE(S)********************************************************************** -->
+   <!-- **************************************************************************************** -->
+
+   <X11_Military_Units Name="Military_Dragoon_MTRV_Death_Clone">
+
+      <!-- ART -->
+      <Land_Model_Name>MV_Dragoon_DC.ALO</Land_Model_Name>
+      <Scale_Factor>1.0</Scale_Factor>
+      <AssetBank> BANK_MILITARY </AssetBank>
+
+      <!-- INTERFACE -->
+      <Text_ID>TEXT_NONE</Text_ID>
+      <Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+		<Space_Layer> LandDynamic </Space_Layer>
+		<UnitCollisionClass> Vehicle </UnitCollisionClass>
+		<Custom_Hard_XExtent> 28.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 16.0 </Custom_Hard_YExtent>
+
+		<!-- ATTRIBUTES -->
+      <CategoryMask> Medium, Piloted, Resource </CategoryMask>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+
+		<!-- CONFLICT -->
+      <Ranged_Target_Z_Adjust>0.1</Ranged_Target_Z_Adjust>
+
+      <!-- BEHAVIORS -->
+      <LandBehavior>
+         SPAWN_DEBRIS,
+         DEBRIS,
+         RESOURCE,
+         EFFECT_REGISTRY,
+         HIDE_WHEN_FOGGED
+      </LandBehavior>
+
+      <BehaviorType Name="DebrisBehaviorType">
+         <Debris_Min_Lifetime_Seconds> 3.0 </Debris_Min_Lifetime_Seconds>
+         <Debris_Max_Lifetime_Seconds> 7.0 </Debris_Max_Lifetime_Seconds>
+      </BehaviorType>
+
+      <BehaviorType Name="SpawnDebrisBehaviorType">
+         <Creation_Debris_Types>
+            Military_Dragoon_MTRV_Debris_01,
+            Military_Dragoon_MTRV_Debris_02,
+            Military_Dragoon_MTRV_Debris_05,
+            Military_Dragoon_MTRV_Debris_03,
+            Military_Dragoon_MTRV_Debris_04,
+            Military_Dragoon_MTRV_Debris_05,
+            Military_Dragoon_MTRV_Debris_04,
+            Military_Dragoon_MTRV_Debris_05,
+            Military_Dragoon_MTRV_Debris_03,
+            Military_Dragoon_MTRV_Debris_04,
+            Military_Dragoon_MTRV_Debris_05,
+            Military_Dragoon_MTRV_Debris_03,
+            Military_Dragoon_MTRV_Debris_04,
+            Military_Dragoon_MTRV_Debris_05,
+            Military_Dragoon_MTRV_Debris_04,
+            Military_Dragoon_MTRV_Debris_05,
+            Military_Dragoon_MTRV_Debris_03,
+            Military_Dragoon_MTRV_Debris_04,
+            Military_Dragoon_MTRV_Debris_05,
+            Military_Dragoon_MTRV_Debris_03,
+            Military_Dragoon_MTRV_Debris_04,
+            Military_Dragoon_MTRV_Debris_05,
+            Military_Dragoon_MTRV_Debris_03,
+            Military_Dragoon_MTRV_Debris_05,
+            Military_Dragoon_MTRV_Debris_04,
+            Military_Dragoon_MTRV_Debris_05
+         </Creation_Debris_Types>
+         <Debris_Speed_Min> 50.0 </Debris_Speed_Min>
+         <Debris_Speed_Max> 100.0 </Debris_Speed_Max>
+         <Debris_Outward_Speed_Min> 50.0 </Debris_Outward_Speed_Min>
+         <Debris_Outward_Speed_Max> 100.0 </Debris_Outward_Speed_Max>
+         <Debris_Ang_Min> 1.0 </Debris_Ang_Min>
+         <Debris_Ang_Max> 30.0 </Debris_Ang_Max>
+      </BehaviorType>
+
+      <BehaviorType Name="BallisticBehaviorType">
+         <Ballistic_Weight>9.0</Ballistic_Weight>
+         <Ballistic_Bounce>0.3</Ballistic_Bounce>
+      </BehaviorType>
+
+      <BehaviorType Name="DeathFXBehaviorType">
+         <Death_Explosions>Generic_Explosion_Medium_tendrils</Death_Explosions>
+         <Death_Speed_Min> 100.0 </Death_Speed_Min>
+         <Death_Speed_Max> 120.0 </Death_Speed_Max>
+         <Death_Ang_Min> 1.0 </Death_Ang_Min>
+         <Death_Ang_Max> 2.0 </Death_Ang_Max>
+         <Death_Horizontal_Speed>10.0</Death_Horizontal_Speed>
+         <Death_SFXEvent_Start_Die>SFX_Military_Medium_Vehicle_Death</Death_SFXEvent_Start_Die>
+      </BehaviorType>
+
+      <BehaviorType Name="ArmorAndDamageBehaviorType">
+         <Damage_Type> Damage_Default </Damage_Type>
+      </BehaviorType>
+
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 30 </Resource_Units>
+			<Resource_For_Faction> Military, Novus, Alien, Masari </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+			<Use_Death_Behavior> true </Use_Death_Behavior>
+		</BehaviorType>	
+
+   </X11_Military_Units>
+
+   <X11_Military_Units Name="Military_Dragoon_MTRV_Debris_01">
+
+      <!-- ART -->
+      <Land_Model_Name>MV_tank_debri_B.ALO</Land_Model_Name>
+      <Scale_Factor>0.9</Scale_Factor>
+      <AssetBank> BANK_MILITARY </AssetBank>
+
+      <!-- INTERFACE -->
+      <Text_ID>TEXT_NONE</Text_ID>
+      <Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+      <!-- ATTRIBUTES -->
+      <Remove_Upon_Death>true</Remove_Upon_Death>
+
+      <!-- Non-decoration debris will have to have HIDE_WHEN_FOGGED behavior to properly hide.-->
+      <!-- Decoration debris will not be created if spawned under FOW. -Oksana -->
+      <Is_Decoration>Yes</Is_Decoration>
+
+      <!-- CONFLICT -->
+      <Tactical_Health>9999</Tactical_Health>
+
+      <!-- BEHAVIORS -->
+      <LandBehavior>
+         BALLISTIC,
+         DEBRIS
+      </LandBehavior>
+
+      <BehaviorType Name="BallisticBehaviorType">
+         <Ballistic_Weight>6.0</Ballistic_Weight>
+         <Ballistic_Bounce>0.2</Ballistic_Bounce>
+      </BehaviorType>
+
+      <BehaviorType Name="DebrisBehaviorType">
+         <Debris_Min_Lifetime_Seconds> 3.0 </Debris_Min_Lifetime_Seconds>
+         <Debris_Max_Lifetime_Seconds> 7.0 </Debris_Max_Lifetime_Seconds>
+      </BehaviorType>
+
+      <BehaviorType Name="ArmorAndDamageBehaviorType">
+         <Damage_Type> Damage_Default </Damage_Type>
+      </BehaviorType>
+
+   </X11_Military_Units>
+
+   <X11_Military_Units Name="Military_Dragoon_MTRV_Debris_02">
+
+      <!-- ART -->
+      <Land_Model_Name>MV_tank_debri_C.ALO</Land_Model_Name>
+      <Scale_Factor>0.9</Scale_Factor>
+      <AssetBank> BANK_MILITARY </AssetBank>
+
+      <!-- INTERFACE -->
+      <Text_ID>TEXT_NONE</Text_ID>
+      <Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+      <!-- ATTRIBUTES -->
+      <Remove_Upon_Death>true</Remove_Upon_Death>
+
+      <!-- Non-decoration debris will have to have HIDE_WHEN_FOGGED behavior to properly hide.-->
+      <!-- Decoration debris will not be created if spawned under FOW. -Oksana -->
+      <Is_Decoration>Yes</Is_Decoration>
+      
+      <!-- CONFLICT -->
+      <Tactical_Health>9999</Tactical_Health>
+
+      <!-- BEHAVIORS -->
+      <LandBehavior>
+         BALLISTIC,
+         DEBRIS
+      </LandBehavior>
+
+      <BehaviorType Name="BallisticBehaviorType">
+         <Ballistic_Weight>4.0</Ballistic_Weight>
+         <Ballistic_Bounce>0.2</Ballistic_Bounce>
+      </BehaviorType>
+
+      <BehaviorType Name="DebrisBehaviorType">
+         <Debris_Min_Lifetime_Seconds> 3.0 </Debris_Min_Lifetime_Seconds>
+         <Debris_Max_Lifetime_Seconds> 7.0 </Debris_Max_Lifetime_Seconds>
+      </BehaviorType>
+
+      <BehaviorType Name="ArmorAndDamageBehaviorType">
+         <Damage_Type> Damage_Default </Damage_Type>
+      </BehaviorType>
+
+   </X11_Military_Units>
+
+   <X11_Military_Units Name="Military_Dragoon_MTRV_Debris_03">
+
+      <!-- ART -->
+      <Land_Model_Name>MV_tank_debri_D.ALO</Land_Model_Name>
+      <Scale_Factor>0.9</Scale_Factor>
+      <AssetBank> BANK_MILITARY </AssetBank>
+
+      <!-- INTERFACE -->
+      <Text_ID>TEXT_NONE</Text_ID>
+      <Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+      <!-- ATTRIBUTES -->
+      <Remove_Upon_Death>true</Remove_Upon_Death>
+
+      <!-- Non-decoration debris will have to have HIDE_WHEN_FOGGED behavior to properly hide.-->
+      <!-- Decoration debris will not be created if spawned under FOW. -Oksana -->
+      <Is_Decoration>Yes</Is_Decoration>
+      
+      <!-- CONFLICT -->
+      <Tactical_Health>9999</Tactical_Health>
+
+      <!-- BEHAVIORS -->
+      <LandBehavior>
+         BALLISTIC,
+         DEBRIS
+      </LandBehavior>
+
+      <BehaviorType Name="BallisticBehaviorType">
+         <Ballistic_Weight>3.0</Ballistic_Weight>
+         <Ballistic_Bounce>0.25</Ballistic_Bounce>
+      </BehaviorType>
+
+      <BehaviorType Name="DebrisBehaviorType">
+         <Debris_Min_Lifetime_Seconds> 3.0 </Debris_Min_Lifetime_Seconds>
+         <Debris_Max_Lifetime_Seconds> 7.0 </Debris_Max_Lifetime_Seconds>
+      </BehaviorType>
+
+      <BehaviorType Name="ArmorAndDamageBehaviorType">
+         <Damage_Type> Damage_Default </Damage_Type>
+      </BehaviorType>
+
+   </X11_Military_Units>
+
+   <X11_Military_Units Name="Military_Dragoon_MTRV_Debris_04">
+
+      <!-- ART -->
+      <Land_Model_Name>MV_tank_debri_E.ALO</Land_Model_Name>
+      <Scale_Factor>0.9</Scale_Factor>
+      <AssetBank> BANK_MILITARY </AssetBank>
+
+      <!-- INTERFACE -->
+      <Text_ID>TEXT_NONE</Text_ID>
+      <Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+      <!-- ATTRIBUTES -->
+      <Remove_Upon_Death>true</Remove_Upon_Death>
+
+      <!-- Non-decoration debris will have to have HIDE_WHEN_FOGGED behavior to properly hide.-->
+      <!-- Decoration debris will not be created if spawned under FOW. -Oksana -->
+      <Is_Decoration>Yes</Is_Decoration>
+
+      <!-- CONFLICT -->
+      <Tactical_Health>9999</Tactical_Health>
+
+      <!-- BEHAVIORS -->
+      <LandBehavior>
+         BALLISTIC,
+         DEBRIS
+      </LandBehavior>
+
+      <BehaviorType Name="BallisticBehaviorType">
+         <Ballistic_Weight>1.6</Ballistic_Weight>
+         <Ballistic_Bounce>0.25</Ballistic_Bounce>
+      </BehaviorType>
+
+      <BehaviorType Name="DebrisBehaviorType">
+         <Debris_Min_Lifetime_Seconds> 3.0 </Debris_Min_Lifetime_Seconds>
+         <Debris_Max_Lifetime_Seconds> 7.0 </Debris_Max_Lifetime_Seconds>
+      </BehaviorType>
+
+      <BehaviorType Name="ArmorAndDamageBehaviorType">
+         <Damage_Type> Damage_Default </Damage_Type>
+      </BehaviorType>
+
+   </X11_Military_Units>
+
+   <X11_Military_Units Name="Military_Dragoon_MTRV_Debris_05">
+
+      <!-- ART -->
+      <Land_Model_Name>MV_tank_debri_F.ALO</Land_Model_Name>
+      <Scale_Factor>0.9</Scale_Factor>
+      <AssetBank> BANK_MILITARY </AssetBank>
+
+      <!-- INTERFACE -->
+      <Text_ID>TEXT_NONE</Text_ID>
+      <Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+      <!-- ATTRIBUTES -->
+      <Remove_Upon_Death>true</Remove_Upon_Death>
+
+      <!-- Non-decoration debris will have to have HIDE_WHEN_FOGGED behavior to properly hide.-->
+      <!-- Decoration debris will not be created if spawned under FOW. -Oksana -->
+      <Is_Decoration>Yes</Is_Decoration>
+      
+      <!-- CONFLICT -->
+      <Tactical_Health>9999</Tactical_Health>
+
+      <!-- BEHAVIORS -->
+      <LandBehavior>
+         BALLISTIC,
+         DEBRIS
+      </LandBehavior>
+
+      <BehaviorType Name="BallisticBehaviorType">
+         <Ballistic_Weight>1.5</Ballistic_Weight>
+         <Ballistic_Bounce>0.25</Ballistic_Bounce>
+      </BehaviorType>
+
+      <BehaviorType Name="DebrisBehaviorType">
+         <Debris_Min_Lifetime_Seconds> 3.0 </Debris_Min_Lifetime_Seconds>
+         <Debris_Max_Lifetime_Seconds> 7.0 </Debris_Max_Lifetime_Seconds>
+      </BehaviorType>
+
+      <BehaviorType Name="ArmorAndDamageBehaviorType">
+         <Damage_Type> Damage_Default </Damage_Type>
+      </BehaviorType>
+
+   </X11_Military_Units>
+
+
+<!-- **************************************************************************************** -->
+<!-- *** HARDPOINTS ************************************************************************* -->
+<!-- **************************************************************************************** -->
+
+	<HardPoint Name="HP_Military_Dragoon_Left_Flap">
+
+		<!-- ART -->
+		<Land_Model_Name> MV_Dragoon_Flap_L.alo </Land_Model_Name>
+		<Scale_Factor> 1.0 </Scale_Factor> 
+      <AssetBank> BANK_MILITARY </AssetBank>
+		
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_STRUCTURE_TURRET_AI</Text_ID>
+		<Select_Box_Scale>45</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+		
+		<!-- ATTRIBUTES -->
+		<Affiliation> Military </Affiliation>
+		<CategoryMask> Medium, Stationary, RadiationHurts </CategoryMask>
+		<Land_FOW_Reveal_Range>330.0</Land_FOW_Reveal_Range>
+		<Victory_Relevant>no</Victory_Relevant> 
+
+		<!-- MOVEMENT -->
+		
+		<!-- CONFLICT -->
+		<Is_Attackable> false </Is_Attackable>
+		<Collidable_By_Projectile_Living>No</Collidable_By_Projectile_Living>
+		<Fire_Weapon_When_Deployed>Yes</Fire_Weapon_When_Deployed>
+		<Fire_Weapon_When_Undeployed>No</Fire_Weapon_When_Undeployed>
+		<Ranged_Target_Z_Adjust>0.5</Ranged_Target_Z_Adjust>
+		<Attack_Category_Restrictions> Flying | Resource | Resource_INST </Attack_Category_Restrictions>	
+		<Is_Weapon_Dynamic_Scanner>No</Is_Weapon_Dynamic_Scanner>
+		<Fire_Weapon_At_Locked_Targets_Only>No</Fire_Weapon_At_Locked_Targets_Only>
+
+		<Tactical_Health> 250 </Tactical_Health>
+
+		<Land_Damage_Thresholds>1, 0.66, 0.33</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2</Land_Damage_Alternates>
+
+		<!-- BEHAVIORS -->
+		<!-- Any unit that has hard points requires a Behavior entry with HARD_POINT_MANAGER, and an <Attached_Hard_Points> list  -->
+		<!-- Any object that is a hard point requires a Behavior entry with HARD_POINT -->
+		<Behavior> HARD_POINT </Behavior>
+		
+		<LandBehavior> 
+			DAMAGE_TRACKING, 
+			TURRET, 
+			TARGETING, 
+			WEAPON, 
+			ABILITY_COUNTDOWN 
+		</LandBehavior>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Armor_Type> Armor_Military_Vehicle_Heavy </Armor_Type>
+			<Damage_Type> Damage_Military_Dragoon </Damage_Type>
+		</BehaviorType>
+
+		<BehaviorType name="AIBehaviorType">
+			<AI_Combat_Power> 1 </AI_Combat_Power>
+			<Idle_Chase_Range> 1.0 </Idle_Chase_Range>
+			<Guard_Chase_Range> 1.0 </Guard_Chase_Range>
+			<Attack_Move_Response_Range> 1.0 </Attack_Move_Response_Range>
+			<Autonomous_Move_Extension_Vs_Attacker> 1.0 </Autonomous_Move_Extension_Vs_Attacker>
+			<AI_Target_Level>Individual_Or_Group</AI_Target_Level>
+		</BehaviorType>
+
+		<BehaviorType Name="WeaponBehaviorType">
+			<Targeting_Opportunity_Fire_Enabled> false </Targeting_Opportunity_Fire_Enabled>
+			<Targeting_Stickiness_Time_Threshold>30.0</Targeting_Stickiness_Time_Threshold>
+			<Targeting_Priority_Set> Military_Dragoon_Target_Priority </Targeting_Priority_Set>
+			<Targeting_Fire_Inaccuracy> 1.0 </Targeting_Fire_Inaccuracy>		
+			<Targeting_Min_Attack_Distance> 50.0 </Targeting_Min_Attack_Distance>
+			<Targeting_Max_Attack_Distance> 550.0 </Targeting_Max_Attack_Distance>
+			<Projectile_Types> Proj_Dynamic_Scanner_Fixed_Weapon </Projectile_Types>
+			<Projectile_Fire_Recharge_Seconds>7.0</Projectile_Fire_Recharge_Seconds>
+			<Projectile_Fire_Pulse_Count>1</Projectile_Fire_Pulse_Count>
+			<Projectile_Fire_Pulse_Delay_Seconds>1</Projectile_Fire_Pulse_Delay_Seconds>		
+		</BehaviorType>
+
+		<BehaviorType Name="HardPointBehaviorType">
+			<!-- Any unit that has hard points requires a Behavior entry with HARD_POINT_MANAGER, and an <Attached_Hard_Points> list  -->
+			<!-- Any object that is a hard point requires a Behavior entry with HARD_POINT -->
+			<HP_Type> HARD_POINT_WEAPON_LASER </HP_Type>
+			<HP_Fire_Cone_Width>360</HP_Fire_Cone_Width>
+			<HP_Fire_Cone_Height>180</HP_Fire_Cone_Height>
+		</BehaviorType>
+
+		<BehaviorType Name="TurretBehaviorType">
+			<Turret_Bone_Name> Turret_00 </Turret_Bone_Name>
+			<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+			<Turret_Elevate_Extent_Degrees>360</Turret_Elevate_Extent_Degrees>
+			<Turret_Rotate_Speed> 5.0 </Turret_Rotate_Speed>
+			<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+			<Apply_Y_Turret_Rotate_To_Axis>1</Apply_Y_Turret_Rotate_To_Axis>
+		</BehaviorType>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Remove_Upon_Death> Yes </Remove_Upon_Death> <!-- Yes: Instantly destroy death clone when effects are started -->
+			<Death_Explosions> Small_Explosion_Land </Death_Explosions>
+		</BehaviorType>
+
+		<BehaviorType Name="SFXBehaviorType">
+			<Death_SFXEvent_Start_Die>SFX_Military_Turret_Death</Death_SFXEvent_Start_Die>
+		</BehaviorType>
+
+		<BehaviorType Name="EncyclopediaBehaviorType">
+			<Icon_Name>i_button_r_anti_infantry.tga</Icon_Name>
+		</BehaviorType>
+
+		<BehaviorType Name="BlobShadowBehaviorType">
+			<Blob_Shadow_Below_Detail_Level>2</Blob_Shadow_Below_Detail_Level>
+			<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+			<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+			<Blob_Shadow_Scale>25.0, 25.0</Blob_Shadow_Scale>
+			<Blob_Shadow_Material_Name>Generic_Shadow</Blob_Shadow_Material_Name>
+		</BehaviorType>
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.03 0.03</Radar_Icon_Size>
+		</BehaviorType>
+
+		<BehaviorType Name="GUIBehaviorType">
+			<GUI_Bracket_Size>0</GUI_Bracket_Size>
+		</BehaviorType>
+
+		<BehaviorType Name="BallisticBehaviorType">
+			 <Ballistic_Weight>5.0</Ballistic_Weight>
+			 <Ballistic_Bounce>0.5</Ballistic_Bounce>
+		</BehaviorType>
+
+		<!-- NON-HERO UNIT ABILITIES -->
+		<Unit_Abilities_Data SubObjectList="Yes">
+		
+			<!-- Primary ability -->
+			<Unit_Ability Name="Dragoon_HP_Accuracy">
+				<Type>ACCURACY</Type>
+				<Expiration_Seconds>10</Expiration_Seconds>
+				<Recharge_Seconds>0.01</Recharge_Seconds>
+				<Targeting_Fire_Inaccuracy_Fixed_Radius_Override>0.0001</Targeting_Fire_Inaccuracy_Fixed_Radius_Override>
+				<Targeting_Max_Attack_Distance>1000000.0</Targeting_Max_Attack_Distance>
+				<Target_Position_Z_Offset>0</Target_Position_Z_Offset>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+
+	</HardPoint>
+
+	<HardPoint Name="HP_Military_Dragoon_Right_Flap">
+		<Variant_Of_Existing_Type>HP_Military_Dragoon_Left_Flap</Variant_Of_Existing_Type>
+		<Land_Model_Name> MV_Dragoon_Flap_R.alo </Land_Model_Name>
+		<Fire_Weapon_When_Deployed>Yes</Fire_Weapon_When_Deployed>
+		<Fire_Weapon_When_Undeployed>No</Fire_Weapon_When_Undeployed>
+      <AssetBank> BANK_MILITARY </AssetBank>
+	</HardPoint>
+
+    <HardPoint Name="HP_Military_Dragoon_TargetingTurret">
+
+		<!-- ART -->
+		<Land_Model_Name> MV_Dragoon_Turret.alo </Land_Model_Name>
+		<Scale_Factor> 1.0 </Scale_Factor> 
+		<Collidable_By_Projectile_Living>No</Collidable_By_Projectile_Living>
+      <AssetBank> BANK_MILITARY </AssetBank>
+		
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_STRUCTURE_TURRET_AI</Text_ID>
+		<Select_Box_Scale>45</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+		
+		<!-- ATTRIBUTES -->
+		<Affiliation> Military </Affiliation>
+		<CategoryMask> Medium, Stationary, RadiationHurts </CategoryMask>
+		<Victory_Relevant>no</Victory_Relevant> 
+		
+		<!-- MOVEMENT -->
+		
+		<!-- CONFLICT -->
+		<Is_Attackable> false </Is_Attackable>
+		<Land_FOW_Reveal_Range>220.0</Land_FOW_Reveal_Range>
+		<Attack_Category_Restrictions> Flying | Resource | Resource_INST </Attack_Category_Restrictions>	
+		<Fire_Weapon_When_Deployed>Yes</Fire_Weapon_When_Deployed>
+		<Fire_Weapon_When_Undeployed>No</Fire_Weapon_When_Undeployed>
+		<Ranged_Target_Z_Adjust>0.5</Ranged_Target_Z_Adjust>
+		<Is_Weapon_Dynamic_Scanner>Yes</Is_Weapon_Dynamic_Scanner>
+		<Fire_Weapon_At_Locked_Targets_Only>No</Fire_Weapon_At_Locked_Targets_Only>
+
+		<Tactical_Health> 250 </Tactical_Health>
+
+		<Land_Damage_Thresholds>1, 0.66, 0.33</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2</Land_Damage_Alternates>
+		
+		<!-- BEHAVIORS -->
+		<!-- Any unit that has hard points requires a Behavior entry with HARD_POINT_MANAGER, and an <Attached_Hard_Points> list  -->
+		<!-- Any object that is a hard point requires a Behavior entry with HARD_POINT -->
+		<Behavior> HARD_POINT </Behavior>
+		
+		<LandBehavior> DAMAGE_TRACKING, WEAPON, TURRET </LandBehavior>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Armor_Type> Armor_Military_Vehicle_Heavy </Armor_Type>
+			<Damage_Type> Damage_Default </Damage_Type>
+		</BehaviorType>
+
+		<BehaviorType name="AIBehaviorType">
+			<AI_Combat_Power> 1 </AI_Combat_Power>
+			<Idle_Chase_Range> 1.0 </Idle_Chase_Range>
+			<Guard_Chase_Range> 1.0 </Guard_Chase_Range>
+			<Attack_Move_Response_Range> 1.0 </Attack_Move_Response_Range>
+			<Autonomous_Move_Extension_Vs_Attacker> 1.0 </Autonomous_Move_Extension_Vs_Attacker>
+			<AI_Target_Level>Individual_Or_Group</AI_Target_Level>
+		</BehaviorType>
+
+		<BehaviorType Name="WeaponBehaviorType">
+			<Targeting_Stickiness_Time_Threshold>30.0</Targeting_Stickiness_Time_Threshold>
+			<Targeting_Priority_Set> Military_Dragoon_Target_Priority </Targeting_Priority_Set>
+			<Targeting_Fire_Inaccuracy> 1.0 </Targeting_Fire_Inaccuracy>		
+			<Targeting_Min_Attack_Distance> 50.0 </Targeting_Min_Attack_Distance>
+			<Targeting_Max_Attack_Distance> 1000000.0 </Targeting_Max_Attack_Distance>
+			<Projectile_Types> Proj_Dynamic_Scanner </Projectile_Types>
+			<Projectile_Fire_Recharge_Seconds>15</Projectile_Fire_Recharge_Seconds>
+			<Projectile_Fire_Pulse_Count>1</Projectile_Fire_Pulse_Count>
+			<Projectile_Fire_Pulse_Delay_Seconds>0.03</Projectile_Fire_Pulse_Delay_Seconds>
+		</BehaviorType>
+
+		<BehaviorType Name="HardPointBehaviorType">
+			<HP_Type> HARD_POINT_WEAPON_LASER </HP_Type>
+		</BehaviorType>
+
+		<!-- DEBUG: Aim higher! -->
+		<BehaviorType Name="TurretBehaviorType">
+			<Turret_Bone_Name> B_Turret </Turret_Bone_Name>
+			<Barrel_Bone_Name> B_Barrel </Barrel_Bone_Name>
+			<Turret_Rotate_Speed> 2.0 </Turret_Rotate_Speed>
+			<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+			<Apply_Y_Turret_Rotate_To_Axis>1</Apply_Y_Turret_Rotate_To_Axis>
+			<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+			<Turret_Elevate_Extent_Degrees>180</Turret_Elevate_Extent_Degrees>
+			<Turret_Rotate_Speed>5.0</Turret_Rotate_Speed>
+			<Turret_Target_Position_Offset>0, 0, 500</Turret_Target_Position_Offset>
+		</BehaviorType>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Remove_Upon_Death> Yes </Remove_Upon_Death> <!-- Yes: Instantly destroy death clone when effects are started -->
+			<Death_Explosions> Small_Explosion_Land </Death_Explosions>
+		</BehaviorType>
+
+		<BehaviorType Name="EncyclopediaBehaviorType">
+			<Icon_Name>i_button_r_anti_infantry.tga</Icon_Name>
+		</BehaviorType>
+
+		<BehaviorType Name="BlobShadowBehaviorType">
+			<Blob_Shadow_Below_Detail_Level>2</Blob_Shadow_Below_Detail_Level>
+			<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+			<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+			<Blob_Shadow_Scale>25.0, 25.0</Blob_Shadow_Scale>
+			<Blob_Shadow_Material_Name>Generic_Shadow</Blob_Shadow_Material_Name>
+		</BehaviorType>
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.03 0.03</Radar_Icon_Size>
+		</BehaviorType>
+
+		<BehaviorType Name="GUIBehaviorType">
+			<GUI_Bracket_Size>0</GUI_Bracket_Size>
+		</BehaviorType>
+
+		<BehaviorType Name="SFXBehaviorType">
+			<SFXEvent_Fire>SFX_Military_Tank_Fire</SFXEvent_Fire>
+			<Death_SFXEvent_Start_Die>SFX_Military_Turret_Death</Death_SFXEvent_Start_Die>
+			<SFXEvent_Turret_Rotating_Loop> SFX_Military_Small_Turret_Loop </SFXEvent_Turret_Rotating_Loop>
+		</BehaviorType>
+
+	</HardPoint>
+			
+
+<!-- **************************************************************************************** -->
+<!-- *** PROJECTILES ************************************************************************ -->
+<!-- **************************************************************************************** -->
+
+	<!-- DEBUG: This object is probably going away, and will be left alone until decided upon. -->
+	<!-- DEBUG: Are we still using this method anywhere besides this Military unit? Are we using this unit? -->
+	<Projectile Name="Proj_Dynamic_Scanner">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+		<Land_Model_Name>p_dsa_scanner.alo</Land_Model_Name>		
+		<Scale_Factor>2.0</Scale_Factor>
+		<Max_Speed>100.0</Max_Speed>
+      <AssetBank> BANK_MILITARY </AssetBank>
+
+		<Max_Rate_Of_Turn>10.0</Max_Rate_Of_Turn>
+		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
+
+			
+		<AI_Combat_Power>200</AI_Combat_Power>
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Damage_Type> Damage_Default </Damage_Type>
+		</BehaviorType>
+		<BehaviorType Name="ProjectileBehaviorType">
+			<Projectile_Damages_Random_Hard_Points>No</Projectile_Damages_Random_Hard_Points>
+			<Projectile_Category>GRENADE</Projectile_Category>
+			<Projectile_Grenade_Gravity>0.5</Projectile_Grenade_Gravity>
+			<Projectile_Grenade_Gravity_Lob_Mod>1.0</Projectile_Grenade_Gravity_Lob_Mod>
+			<Projectile_Grenade_Can_Lob_Slower>yes</Projectile_Grenade_Can_Lob_Slower>
+
+			<Projectile_Max_Flight_Distance>1000000.0</Projectile_Max_Flight_Distance>
+			<Projectile_Max_Lifetime>900.0</Projectile_Max_Lifetime>  <!-- Oksana: give it a few minutes... generally, it will die of collision. -->
+			<Projectile_Damage>0.0</Projectile_Damage>
+			<Projectile_Does_Shield_Damage>No</Projectile_Does_Shield_Damage>
+			 
+			<Projectile_Does_Hitpoint_Damage>No</Projectile_Does_Hitpoint_Damage>
+			 
+			<Projectile_Object_Detonation_Particle>Dynamic_Scanner</Projectile_Object_Detonation_Particle>
+			<Projectile_Object_Armor_Reduced_Detonation_Particle>Dynamic_Scanner</Projectile_Object_Armor_Reduced_Detonation_Particle>
+			<Projectile_Ground_Detonation_Particle>Dynamic_Scanner</Projectile_Ground_Detonation_Particle>
+			<Projectile_Lifetime_Detonation_Particle>Dynamic_Scanner</Projectile_Lifetime_Detonation_Particle>
+			<Projectile_Absorbed_By_Shields_Particle />
+			<Projectile_Rocket_Straight_Distance>200</Projectile_Rocket_Straight_Distance>
+			<Projectile_Rocket_Curve_Distance>50</Projectile_Rocket_Curve_Distance>
+			<Projectile_Rocket_Curve_Offset>0</Projectile_Rocket_Curve_Offset>
+			<Projectile_Rocket_Target_Point_Z_Offset>-100</Projectile_Rocket_Target_Point_Z_Offset>
+			<Projectile_SFXEvent_Detonate>SFX_Military_Targeting_Detonation</Projectile_SFXEvent_Detonate>
+			<SFXEvent_Projectile_Start_Flight>  SFX_Military_Missile_FlyBy </SFXEvent_Projectile_Start_Flight>
+		</BehaviorType>
+	</Projectile>
+	
+	<Projectile Name="Proj_Dynamic_Scanner_Fixed_Weapon">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+		<Land_Model_Name>wf_dsa_missile.alo</Land_Model_Name>
+		<Projectile_Custom_Render>0</Projectile_Custom_Render>		
+		<Scale_Factor>1.0</Scale_Factor>
+		<Max_Speed>7.0</Max_Speed>
+      <AssetBank> BANK_MILITARY </AssetBank>
+
+		<Max_Rate_Of_Turn>20.0</Max_Rate_Of_Turn>
+		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
+
+		<!-- Note - only objects with LOCKABLE_BY_DYNAMIC_SCANNER behavior can be targeted by this projectile -->
+	
+		<!-- Rocket data - just make a straight-flying rocket -->
+		<!-- <Explode_When_Reached_Target_Radius>Yes</Explode_When_Reached_Target_Radius> -->
+	
+		<AI_Combat_Power>200</AI_Combat_Power>
+		<BehaviorType Name="ProjectileBehaviorType">
+			<Projectile_Texture_Slot>1, 0</Projectile_Texture_Slot>
+			<Projectile_Width>0.8</Projectile_Width>
+			<Projectile_Length>4</Projectile_Length>
+			<Projectile_Damages_Random_Hard_Points>No</Projectile_Damages_Random_Hard_Points>
+			<Projectile_Category>ROCKET</Projectile_Category>
+			<Projectile_Max_Flight_Distance>1000000.0</Projectile_Max_Flight_Distance>
+			<Projectile_Damage>100.0</Projectile_Damage>
+			<Projectile_Blast_Area_Damage>75</Projectile_Blast_Area_Damage>
+			<Projectile_Blast_Area_Range>10</Projectile_Blast_Area_Range>
+			<Projectile_Does_Shield_Damage>No</Projectile_Does_Shield_Damage>
+			 
+			<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+			 
+			<Projectile_Target_Point_On_Terrain> True </Projectile_Target_Point_On_Terrain>
+			<Projectile_Object_Detonation_Particle>Military_Biggy_Explosion</Projectile_Object_Detonation_Particle>
+			
+			<Projectile_Ground_Detonation_Particle>Military_Biggy_Explosion</Projectile_Ground_Detonation_Particle>
+			<Projectile_Lifetime_Detonation_Particle>Military_Biggy_Explosion</Projectile_Lifetime_Detonation_Particle>
+			<Projectile_Absorbed_By_Shields_Particle />
+			<Projectile_Needs_Dynamic_Scanner_Lock>No</Projectile_Needs_Dynamic_Scanner_Lock>
+			<Projectile_Rocket_Straight_Distance>100</Projectile_Rocket_Straight_Distance>
+			<Projectile_Rocket_Curve_Distance>100</Projectile_Rocket_Curve_Distance>
+			<Projectile_Rocket_Curve_Offset>50</Projectile_Rocket_Curve_Offset>
+			<Projectile_SFXEvent_Detonate>SFX_Military_Detonation_1</Projectile_SFXEvent_Detonate>
+			<Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Military_Small_Damage_Detonation </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
+         <SFXEvent_Projectile_Flying_Loop>  SFX_Military_Missile_Loop </SFXEvent_Projectile_Flying_Loop> 
+			<SFXEvent_Projectile_Start_Flight>  SFX_Military_Missile_Fire </SFXEvent_Projectile_Start_Flight>
+		</BehaviorType>
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Damage_Type> Damage_Military_Dragoon </Damage_Type>
+		</BehaviorType>
+	</Projectile>
+
+<!-- **************************************************************************************** -->
+<!-- *** TEMPORARY VARIANTS ***************************************************************** -->
+<!-- **************************************************************************************** -->
+
+	<!-- DEBUG: This object is probably going away, and will be left alone until decided upon. -->
+	<MiscObject Name="Dynamic_Scanner">
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+		<!-- Note - only objects with LOCKABLE_BY_DYNAMIC_SCANNER behavior can be revealed by this scanner -->
+		<Land_Model_Name>wf_dsa.alo</Land_Model_Name>
+		<Behavior>DYNAMIC_SCANNER, REVEAL</Behavior> <!-- how long does the lock on targets lasts -->   <!-- how much time does this scanner needs to scan (lifetime) -->
+      <AssetBank> BANK_MILITARY </AssetBank>
+
+		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range> <!-- REVEAL for FOW -->
+		<Dense_FOW_Reveal_Range_Multiplier>300.0</Dense_FOW_Reveal_Range_Multiplier> <!-- REVEAL for FOW -->
+
+		<BehaviorType Name="DynamicScannerBehaviorType">
+			<Dynamic_Scan_Radius>300</Dynamic_Scan_Radius>
+			<Dynamic_Scan_Lock_Duration_Seconds>8.0</Dynamic_Scan_Lock_Duration_Seconds>
+			<Dynamic_Scan_Duration_Seconds>15.25</Dynamic_Scan_Duration_Seconds>
+			<Scanner_Delay_Scan_Seconds>0.01</Scanner_Delay_Scan_Seconds>
+			<Dynamic_Scan_Max_Number_Targets>50</Dynamic_Scan_Max_Number_Targets>
+		</BehaviorType>
+	</MiscObject>
+
+</Military_Veh_Dragoon_XML>

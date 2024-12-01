@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+
+<AllFonts>
+
+	<Font Name="Arial">
+		<Filename> file://game:/data/resources/fonts/xarialuni.ttf </Filename>
+	</Font>
+
+	<Font Name="Arial Black">
+		<Filename> file://game:/data/resources/fonts/xarialuni.ttf </Filename>
+	</Font>
+
+	<Font Name="Arial Bold">
+		<Filename> file://game:/data/resources/fonts/arialbd.ttf </Filename>
+	</Font>
+
+	<Font Name="Arial Unicode MS">
+		<Filename> file://game:/data/resources/fonts/xarialuni.ttf </Filename>
+	</Font>
+
+	<Font Name="EmpireAtWar-Medium">
+		<Filename> file://game:/data/resources/fonts/xarialuni.ttf </Filename>
+	</Font>
+
+	<Font Name="EmpireAtWar-Bold">
+		<Filename> file://game:/data/resources/fonts/xarialuni.ttf </Filename>
+	</Font>
+
+	<Font Name="System">
+		<Filename> file://game:/data/resources/fonts/xarialuni.ttf </Filename>
+	</Font>
+
+	<Font Name="Verdana">
+		<Filename> file://game:/data/resources/fonts/verdana.ttf </Filename>
+	</Font>
+
+	<Font Name="Fixedsys">
+		<Filename> file://game:/data/resources/fonts/xarialuni.ttf </Filename>
+	</Font>
+
+	<Font Name="Tahoma Bold">
+		<Filename> file://game:/data/resources/fonts/tahomabd.ttf </Filename>
+	</Font>
+
+
+</AllFonts>

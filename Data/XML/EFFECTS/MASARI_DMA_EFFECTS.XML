@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Dark Matter Armor (Defense mode, Researched Passive): Unit gains extra hit-points over time,
+subtracted before any damage hits armor / health.  DMA increases in power over time. -->
+
+<Effects>
+
+   <!--=================================================================================================
+   ==  If something damages this unit, a temporary block is placed on DMA regen.
+   ==  Thus, DMA only regenerates when not in battle. 
+   ================================================================================================== -->
+   <Effect Name="DMABlockRegenEffect">
+      <Duration> 5.0 </Duration>
+      <Effect_Class> BlockDMARegen </Effect_Class>
+      <Extends_Existing_Duration> yes </Extends_Existing_Duration>
+
+      <Effect_Component Type="BlockEffect">
+         <Block_Effect_Class> DMARegen </Block_Effect_Class>
+      </Effect_Component>
+   </Effect>
+
+
+   <!--=================================================================================================
+   ==  This will add armor over time. This effect needs to be researched. 
+   ================================================================================================== -->
+   <Effect Name="DMARegenEffect">
+      <Duration> .1 </Duration>
+      <Effect_Class> DMARegen </Effect_Class>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Current_DMA_Level </Attribute>
+         <Modifier_Attribute> DMA_Regen_Rate </Modifier_Attribute>
+         <Notify_Tooltip_Dirty> true </Notify_Tooltip_Dirty>
+      </Effect_Component>
+   </Effect>
+
+
+   <!--=================================================================================================
+	==  This will remove DMA when switching to Light mode. 
+   ================================================================================================== -->
+   <Effect Name="DMARemoveEffect">
+      <Duration> .1 </Duration>
+      <Effect_Class> DMARemove </Effect_Class>
+      <Extends_Existing_Duration> yes </Extends_Existing_Duration>
+
+      
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Current_DMA_Level </Attribute>
+         <Reset_Memoryless_Attribute> true </Reset_Memoryless_Attribute>
+      </Effect_Component>
+     
+   </Effect>
+
+   <!--=================================================================================================
+	== DMAVisual1: DMA Visual (Always on in Dark Mode, monitors and adjusts DMA visual)
+	================================================================================================== -->
+   <Effect Name="DMAVisual">
+      <Duration> -1.0 </Duration>
+      <Effect_Class> DMAVisual </Effect_Class>
+      <Extends_Existing_Duration> yes </Extends_Existing_Duration>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> Shield1 </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="FadeMesh">
+         <Mesh_Name>Shield1</Mesh_Name>
+         <Additive_Shader_Name>RSKINADDITIVE</Additive_Shader_Name>
+         <Based_On>DMA</Based_On>
+      </Effect_Component>
+
+      <Effect_Component Type="FadeMesh">
+         <Mesh_Name>Shield1</Mesh_Name>
+         <Additive_Shader_Name>MESHADDITIVEVCOLOR </Additive_Shader_Name>
+         <Based_On>DMA</Based_On>
+      </Effect_Component>
+      
+   </Effect>
+
+   <!--=================================================================================================
+	== DMAVisual1: DMA Hardpoint Visual (Always on in Dark Mode, monitors and adjusts DMA visual)
+	================================================================================================== -->
+   <Effect Name="DMAHardpointVisual">
+      <Duration> -1.0 </Duration>
+      <Effect_Class> DMAVisual </Effect_Class>
+      <Extends_Existing_Duration> yes </Extends_Existing_Duration>
+
+      <Effect_Component Type="ShowMesh">
+         <Mesh_Name> Shield1 </Mesh_Name>
+      </Effect_Component>
+
+      <Effect_Component Type="FadeMesh">
+         <Mesh_Name>Shield1</Mesh_Name>
+         <Additive_Shader_Name>RSKINADDITIVE</Additive_Shader_Name>
+         <Based_On>HP_Parent_DMA</Based_On>
+      </Effect_Component>
+
+      <Effect_Component Type="FadeMesh">
+         <Mesh_Name>Shield1</Mesh_Name>
+         <Additive_Shader_Name>MESHADDITIVEVCOLOR </Additive_Shader_Name>
+         <Based_On>HP_Parent_DMA</Based_On>
+      </Effect_Component>
+
+   </Effect>
+
+   
+
+
+  
+   
+
+
+</Effects>

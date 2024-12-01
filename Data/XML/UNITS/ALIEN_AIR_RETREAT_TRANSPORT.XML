@@ -1,0 +1,780 @@
+<?xml version="1.0"?>
+<ALIEN_AIR_Retreat_Transport_XML>
+
+	<!-- **************************************************************************************** -->
+	<!-- *** UNIT(S) **************************************************************************** -->
+	<!-- **************************************************************************************** -->
+
+	<X10_Alien_Units Name="ALIEN_Air_Invasion_Transport">
+
+		<!-- ART -->
+		<Land_Model_Name>AV_Unit_Transport.ALO</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Occlusion_Silhouette_Enabled>1</Occlusion_Silhouette_Enabled>
+		<AssetBank> BANK_ALIEN </AssetBank>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_AIR_ALIEN_TRANSPORT</Text_ID>
+
+		<!-- ATTRIBUTES -->
+		<Affiliation> Alien, Alien_ZM06_KamalRex </Affiliation>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<Weather_Category>Flying</Weather_Category>
+		<Importance> 0.4 </Importance>
+		<Shot_Type> Flying </Shot_Type>
+
+		<Tactical_Health>1000</Tactical_Health>
+
+		<!-- MOVEMENT -->
+		<CategoryMask> Large, Flying, Piloted, CanAttack </CategoryMask>
+		<MovementClass>Flying</MovementClass>
+		<OccupationStyle>1x1</OccupationStyle>
+		<Max_Speed>2.0</Max_Speed>
+		<Min_Speed> .5 </Min_Speed>
+		<OverrideAcceleration> .15 </OverrideAcceleration>
+		<OverrideDeceleration> .05 </OverrideDeceleration>
+		<Max_Rate_Of_Turn>6.0</Max_Rate_Of_Turn>
+		<ROT_Acceleration> .33 </ROT_Acceleration>
+		<ROT_Deceleration> .15 </ROT_Deceleration>
+		<Max_Thrust> 1.5 </Max_Thrust>
+		<Thrust_Acceleration> .02 </Thrust_Acceleration>
+		<Thrust_Deceleration> .075 </Thrust_Deceleration>
+		<Min_Inertia_Coefficient> .4 </Min_Inertia_Coefficient>
+		<Max_Inertia_Coefficient> .95 </Max_Inertia_Coefficient>
+		<Max_Tilt> 1 </Max_Tilt>
+		<Tilt_Torque_Delta_Coefficient> .025 </Tilt_Torque_Delta_Coefficient>
+		<Tilt_Torque_Angular_Velocity_Coefficient> -.14 </Tilt_Torque_Angular_Velocity_Coefficient>
+		<Max_Pitch> 1 </Max_Pitch>
+		<Pitch_Torque_Delta_Coefficient> .02 </Pitch_Torque_Delta_Coefficient>
+		<Pitch_Torque_Angular_Velocity_Coefficient> -.1 </Pitch_Torque_Angular_Velocity_Coefficient>
+		<VTOL_Y_Recovery_Coefficient> .5 </VTOL_Y_Recovery_Coefficient>
+		<VTOL_Stop_Speed_Pitch_Coefficient> .1 </VTOL_Stop_Speed_Pitch_Coefficient>
+		<VTOL_Stop_Pitch_Coefficient> .1 </VTOL_Stop_Pitch_Coefficient>
+		<VTOL_Z_Bob_Amplitude> 2.0 </VTOL_Z_Bob_Amplitude>
+		<VTOL_Z_Bob_Advance_Mean> .07 </VTOL_Z_Bob_Advance_Mean>
+		<VTOL_Z_Bob_Advance_Variance> .04 </VTOL_Z_Bob_Advance_Variance>
+		<Natural_Pitch_Coefficient> .1 </Natural_Pitch_Coefficient>
+		<Hover_Instability_Measure> 1 </Hover_Instability_Measure>
+		<Hover_Range> 100000.0 </Hover_Range>
+		<Hover_Torque_Coefficient> .75 </Hover_Torque_Coefficient>
+		<Space_Layer> Air </Space_Layer>
+		<Stationary_Space_Layer> LandDynamic </Stationary_Space_Layer>
+		<Min_Flight_Elevation> 60 </Min_Flight_Elevation>
+		<Max_Flight_Elevation> 90 </Max_Flight_Elevation>
+		<Landing_Elevation> 50 </Landing_Elevation>
+		<Moving_Animation_Speed_Bonus> 2.0 </Moving_Animation_Speed_Bonus>
+		<UnitCollisionClass> Vehicle </UnitCollisionClass>
+		<FormationSpacing> 1.5 </FormationSpacing>
+		<FormationOrder> 9 </FormationOrder>
+		<FormationGrouping> SameOrder </FormationGrouping>
+		<!-- DEBUG: Make a new formation for these. -->
+		<FormationRaggedness> .6 </FormationRaggedness>
+		<MaxJiggleDistance> 5 </MaxJiggleDistance>
+		<Custom_Hard_XExtent> 60.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 60.0 </Custom_Hard_YExtent>
+		<MovementPredictionInterval> 5.0 </MovementPredictionInterval>
+		<Moving_Vs_Moving_Look_Ahead_Time> 4.0 </Moving_Vs_Moving_Look_Ahead_Time>
+		<Close_Enough_Angle_For_Move_Start> 180.0 </Close_Enough_Angle_For_Move_Start>
+		<MovementBoxExpansionFactor> 20.0 </MovementBoxExpansionFactor>
+		<Verlet_Coefficient> 10.0 </Verlet_Coefficient>
+		<Use_Transport_Object_Bounds_For_Z> true </Use_Transport_Object_Bounds_For_Z>
+		<Should_Move_At_Water_Level> true </Should_Move_At_Water_Level>
+
+		<!-- CONFLICT -->
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+		<Is_Attackable> true </Is_Attackable>
+      <Ranged_Target_Z_Adjust>0.1</Ranged_Target_Z_Adjust>
+
+      <Land_Damage_Thresholds>1, 0.66, 0.33</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2</Land_Damage_Alternates>
+		<Land_Damage_SFX />
+
+		<!-- AUDIO -->
+		<!-- MARIA 09.13.2006	-	Hooks for Tactical retreat SFXs -->
+
+		<!-- Maria 05.01.2006 - Adding build sounds for Global production -->
+
+		<!-- BEHAVIORS AND ABILITIES -->
+		<Behavior> RADAR_MAP_VISIBLE </Behavior>
+
+		<LandBehavior>
+			SELECTABLE,
+			EFFECT_REGISTRY,
+			STUNNABLE,
+			GUI,
+			RADAR_MAP_VISIBLE,
+			VTOL_LOCOMOTOR,
+			FORMATION,
+			IDLE,
+			REVEAL,
+			HIDE_WHEN_FOGGED,
+			UNIT_AI,
+			DAMAGE_TRACKING,
+			AI_RECRUITABLE,
+			AI_TARGET,
+			ATTRIBUTE_DIRECTORY,
+			GARRISONABLE
+		</LandBehavior>
+
+		<Attributes SubObjectList="Yes">
+			<Is_Immune_To_Mind_Control> true </Is_Immune_To_Mind_Control>
+			<Is_Immune_To_Virus> true </Is_Immune_To_Virus>
+		</Attributes>
+
+		<BehaviorType Name="GarrisonableBehaviorType">
+			<Garrisonable_Anti_Attributes> Too_Big_For_Faction_Transport </Garrisonable_Anti_Attributes>
+			<Max_Garrison_Capacity> 200 </Max_Garrison_Capacity>
+			<Allow_Garrisoned_Objects_To_Fire> false </Allow_Garrisoned_Objects_To_Fire>
+			<Instant_Load_Unload> true </Instant_Load_Unload>
+			<Retreat_After_Unload> true </Retreat_After_Unload>
+			<Should_Show_Pips> false </Should_Show_Pips>
+			<Damage_Percent_On_Destruction> 2.0 </Damage_Percent_On_Destruction>
+			<Is_Retreat_Transport>Yes</Is_Retreat_Transport>
+		</BehaviorType>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Armor_Type> Armor_Alien_Aircraft </Armor_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="TurretBehaviorType">
+			<Barrel_Bone_Name> B_barrel </Barrel_Bone_Name>
+			<Turret_Bone_Name> Turret_00 </Turret_Bone_Name>
+			<Turret_Rotate_Speed> 5.0 </Turret_Rotate_Speed>
+			<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+			<Apply_Y_Turret_Rotate_To_Axis>1</Apply_Y_Turret_Rotate_To_Axis>
+			<Turret_Rotate_Extent_Degrees> 360.0 </Turret_Rotate_Extent_Degrees>
+			<Turret_Elevate_Extent_Degrees> 60.0 </Turret_Elevate_Extent_Degrees>
+			<Ground_Vehicle_Turret_Target> Yes </Ground_Vehicle_Turret_Target>
+			<Ground_Vehicle_Turret_Target> Yes </Ground_Vehicle_Turret_Target>
+		</BehaviorType>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Death_Clone> Damage_Default, ALIEN_Air_Invasion_Transport_Death_Clone </Death_Clone>
+			<Death_Explosions>Alien_large_explosion</Death_Explosions>
+			<Death_Explosions>Alien_large_explosion</Death_Explosions>
+			<Death_Speed_Min> 100.0 </Death_Speed_Min>
+			<Death_Speed_Max> 120.0 </Death_Speed_Max>
+		</BehaviorType>
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.03  0.03</Radar_Icon_Size>
+		</BehaviorType>
+
+		<BehaviorType Name="CrushBehaviorType">
+			<Crush_Defense>50</Crush_Defense>
+		</BehaviorType>
+
+		<BehaviorType Name="GUIBehaviorType">
+			<!-- Maria 05.18.2006 - Data needed for the models attached to the mouse in Global -->
+			<GUI_Is_Top_View> Yes </GUI_Is_Top_View>
+			<GUI_Rotate_Angle_Degrees> -45.0 </GUI_Rotate_Angle_Degrees>
+			<GUI_Is_Model_Shifted_Down> No </GUI_Is_Model_Shifted_Down>
+			<GUI_Strategic_Mode_Scale> 0.04 </GUI_Strategic_Mode_Scale>
+		</BehaviorType>
+
+		<BehaviorType Name="AIBehaviorType">
+			<AI_Target_Level>Individual</AI_Target_Level>
+			<AI_Combat_Power>175</AI_Combat_Power>
+			<Idle_Chase_Range>0.0</Idle_Chase_Range>
+			<Guard_Chase_Range>200.0</Guard_Chase_Range>
+			<Attack_Move_Response_Range>150.0</Attack_Move_Response_Range>
+			<Autonomous_Move_Extension_Vs_Attacker>100.0</Autonomous_Move_Extension_Vs_Attacker>
+			<Attack_Score_Rating> 0.0 </Attack_Score_Rating>
+			<Scout_Score_Rating> 0.0 </Scout_Score_Rating>
+			<Guerilla_Score_Rating> 0.0 </Guerilla_Score_Rating>
+		</BehaviorType>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability Name="Alien_Unload_Transport_Ability">
+				<Type>EJECT_GARRISONED</Type>
+				<Is_Modal>No</Is_Modal>
+				<SFXEvent_GUI_Unit_Ability_Activated>SFX_Generic_Eject_Garrison</SFXEvent_GUI_Unit_Ability_Activated>
+				<Only_In_Tactical_Mode> true </Only_In_Tactical_Mode>
+			</Unit_Ability>
+
+		</Unit_Abilities_Data>
+
+		<BehaviorType Name="SelectableBehaviorType">
+			<Select_Box_Scale>150</Select_Box_Scale>
+			<Select_Box_Z_Adjust>10.0f</Select_Box_Z_Adjust>
+ 			<Selection_Blob_Material_Name>Selection_Alien_Land_Large</Selection_Blob_Material_Name>
+		</BehaviorType>
+
+		<BehaviorType Name="BlobShadowBehaviorType">
+			<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+			<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+		</BehaviorType>
+
+		<BehaviorType Name="EncyclopediaBehaviorType">
+			<Icon_Name>i_icon_dragonfly.tga</Icon_Name>
+		</BehaviorType>
+
+		<BehaviorType Name="TooltipBehaviorType">
+			<Tooltip_Description_Text_ID> TEXT_TOOLTIP_DESCRIPTION_ALIEN_TRANSPORT </Tooltip_Description_Text_ID>
+		</BehaviorType>
+
+		<BehaviorType Name="GUIBehaviorType">
+			<GUI_Scene_Name> HealthBar_Scene_Medium </GUI_Scene_Name>
+			<GUI_Receives_Input> false </GUI_Receives_Input>
+			<GUI_Min_Scale> 0.3 </GUI_Min_Scale>
+			<GUI_Max_Scale> 2.5 </GUI_Max_Scale>
+			<GUI_Default_Scale> 0.5 </GUI_Default_Scale>
+			<GUI_World_Offset> 0.0, 0.0, -10 </GUI_World_Offset>
+			<GUI_Bracket_Size>1</GUI_Bracket_Size>
+		</BehaviorType>
+
+		<BehaviorType Name="RevealBehaviorType">
+			<Land_FOW_Reveal_Range>210.0</Land_FOW_Reveal_Range>
+		</BehaviorType>
+
+		<BehaviorType Name="WeaponBehaviorType">
+			<Is_Attack_Anim_Looped> true </Is_Attack_Anim_Looped>
+			<Looped_Attack_Anim_Timeout> 2 </Looped_Attack_Anim_Timeout>
+			<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
+			<Targeting_Priority_Set>AntiDefault</Targeting_Priority_Set>
+		</BehaviorType>
+
+		<BehaviorType Name="SFXBehaviorType">
+			<SFXEvent_Retreat_Start />
+			<SFXEvent_Retreat_Transport_En_Route />
+			<SFXEvent_Select>Unit_Select_Alien_Grunt</SFXEvent_Select>
+			<SFXEvent_Move>Unit_Move_Alien_Grunt</SFXEvent_Move>
+			<SFXEvent_Move_At_Top_Speed>Unit_Move_Alien_Grunt</SFXEvent_Move_At_Top_Speed>
+			<SFXEvent_Attack>Unit_Attack_Alien_Grunt</SFXEvent_Attack>
+			<SFXEvent_Attack_At_Top_Speed>Unit_Attack_Alien_Grunt</SFXEvent_Attack_At_Top_Speed>
+			<SFXEvent_Guard></SFXEvent_Guard>
+			<SFXEvent_Health_Low_Warning> </SFXEvent_Health_Low_Warning>
+			<SFXEvent_Health_Critical_Warning> </SFXEvent_Health_Critical_Warning>
+			<SFXEvent_Enemy_Damaged_Health_Low_Warning> </SFXEvent_Enemy_Damaged_Health_Low_Warning>
+			<SFXEvent_Enemy_Damaged_Health_Critical_Warning> </SFXEvent_Enemy_Damaged_Health_Critical_Warning>
+			<SFXEvent_Ambient_Moving> SFX_Alien_Retreat_Transport_Fly_By </SFXEvent_Ambient_Moving>
+			<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 3 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+			<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+			<Death_SFXEvent_Start_Die>SFX_Alien_Large_Aircraft_Death</Death_SFXEvent_Start_Die>
+			<SFXEvent_Engine_Idle_Loop> SFX_Alien_Retreat_Transport_Idle_Engine_Loop</SFXEvent_Engine_Idle_Loop>
+			<SFXEvent_Engine_Moving_Loop> SFX_Alien_Retreat_Transport_Moving_Engine_Loop</SFXEvent_Engine_Moving_Loop>
+			<SFXEvent_Unit_Lost />
+			<SFXEvent_Tactical_Build_Started>GUI_BUILD_Vehicle</SFXEvent_Tactical_Build_Started>
+			<SFXEvent_Tactical_Build_Complete>Unit_Select_Alien_Grunt</SFXEvent_Tactical_Build_Complete>
+			<SFXEvent_Tactical_Build_Cancelled>GUI_BUILD_Vehicle_Canceled</SFXEvent_Tactical_Build_Cancelled>
+			<SFXEvent_Build_Started>GUI_BUILD_Vehicle</SFXEvent_Build_Started>
+			<SFXEvent_Build_Complete>Unit_Select_Alien_Grunt</SFXEvent_Build_Complete>
+			<SFXEvent_Build_Cancelled>GUI_BUILD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
+		</BehaviorType>
+
+		<BehaviorType Name="LuaScriptBehaviorType">
+			<Lua_Land_Behaviors> TacticalRetreat </Lua_Land_Behaviors>
+		</BehaviorType>
+	</X10_Alien_Units>
+
+	<!-- **************************************************************************************** -->
+	<!-- *** DEATH CLONE(S)********************************************************************** -->
+	<!-- **************************************************************************************** -->
+
+	<X10_Alien_Units Name="ALIEN_Air_Invasion_Transport_Death_Clone">
+
+		<!-- ART -->
+		<Land_Model_Name>AV_Unit_Transport_Crashed.ALO</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<AssetBank> BANK_ALIEN </AssetBank>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+		<!-- ATTRIBUTES -->
+		<CategoryMask> Resource </CategoryMask>
+
+		<!-- CONFLICT -->
+		<Ranged_Target_Z_Adjust>0.1</Ranged_Target_Z_Adjust>
+
+		<!-- BEHAVIORS -->
+		<LandBehavior>
+			BALLISTIC,
+			SPAWN_DEBRIS,
+			RESOURCE,
+			DEBRIS,
+			EFFECT_REGISTRY,
+			ATTRIBUTE_DIRECTORY
+		</LandBehavior>
+
+		<BehaviorType Name="DebrisBehaviorType">
+			<Debris_Min_Lifetime_Seconds> 120.0 </Debris_Min_Lifetime_Seconds>
+			<Debris_Max_Lifetime_Seconds> 120.0 </Debris_Max_Lifetime_Seconds>
+		</BehaviorType>
+
+		<BehaviorType Name="SpawnDebrisBehaviorType">
+
+			<Creation_Debris_Types>
+				ALIEN_Air_Invasion_Transport_Debris_01,
+				ALIEN_Air_Invasion_Transport_Debris_02,
+				ALIEN_Air_Invasion_Transport_Debris_03,
+				ALIEN_Air_Invasion_Transport_Debris_02,
+				ALIEN_Air_Invasion_Transport_Debris_03,
+				ALIEN_Air_Invasion_Transport_Debris_02,
+				ALIEN_Air_Invasion_Transport_Debris_01,
+				ALIEN_Air_Invasion_Transport_Debris_03,
+				ALIEN_Air_Invasion_Transport_Debris_01,
+				ALIEN_Air_Invasion_Transport_Debris_02
+			</Creation_Debris_Types>
+
+			<Debris_Speed_Min> 100.0 </Debris_Speed_Min>
+			<Debris_Speed_Max> 190.0 </Debris_Speed_Max>
+			<Debris_Outward_Speed_Min> 100.0 </Debris_Outward_Speed_Min>
+			<Debris_Outward_Speed_Max> 100.0 </Debris_Outward_Speed_Max>
+			<Debris_Ang_Min> 20.0 </Debris_Ang_Min>
+			<Debris_Ang_Max> 50.0 </Debris_Ang_Max>
+		</BehaviorType>
+
+		<BehaviorType Name="BallisticBehaviorType">
+			<Ballistic_Weight>9.0</Ballistic_Weight>
+			<Ballistic_Bounce>0.3</Ballistic_Bounce>
+		</BehaviorType>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Death_Explosions>Alien_Large_Explosion</Death_Explosions>
+			<Death_Explosions>Alien_Large_Explosion</Death_Explosions>
+			<Death_Speed_Min> 100.0 </Death_Speed_Min>
+			<Death_Speed_Max> 120.0 </Death_Speed_Max>
+			<Death_Ang_Min> 1.0 </Death_Ang_Min>
+			<Death_Ang_Max> 2.0 </Death_Ang_Max>
+			<Death_Horizontal_Speed>10.0</Death_Horizontal_Speed>
+			<Death_SFXEvent_Start_Die>SFX_Alien_Large_Aircraft_Death</Death_SFXEvent_Start_Die>
+		</BehaviorType>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Damage_Type> Damage_Default </Damage_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 300 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+			<Use_Death_Behavior> true </Use_Death_Behavior>
+		</BehaviorType>
+
+	</X10_Alien_Units>
+
+
+	<X10_Alien_Units Name="ALIEN_Air_Invasion_Transport_Debris_01">
+
+		<!-- ART -->
+		<Land_Model_Name>AV_Glyphcarver_elbow.ALO</Land_Model_Name>
+		<Scale_Factor>2.5</Scale_Factor>
+		<AssetBank> BANK_ALIEN </AssetBank>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+
+      <!-- ATTRIBUTES -->
+      <Remove_Upon_Death>true</Remove_Upon_Death>
+
+      <!-- Non-decoration debris will have to have HIDE_WHEN_FOGGED behavior to properly hide.-->
+      <!-- Decoration debris will not be created if spawned under FOW. -Oksana -->
+      <Is_Decoration>Yes</Is_Decoration>
+
+      <!-- CONFLICT -->
+		<Tactical_Health>9999</Tactical_Health>
+
+		<!-- BEHAVIORS -->
+		<LandBehavior>
+			BALLISTIC,
+			DEBRIS
+		</LandBehavior>
+
+		<BehaviorType Name="BallisticBehaviorType">
+			<Ballistic_Weight>6.0</Ballistic_Weight>
+			<Ballistic_Bounce>0.2</Ballistic_Bounce>
+		</BehaviorType>
+
+		<BehaviorType Name="DebrisBehaviorType">
+			<Debris_Min_Lifetime_Seconds> 3.0 </Debris_Min_Lifetime_Seconds>
+			<Debris_Max_Lifetime_Seconds> 7.0 </Debris_Max_Lifetime_Seconds>
+		</BehaviorType>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Damage_Type> Damage_Default </Damage_Type>
+		</BehaviorType>
+
+	</X10_Alien_Units>
+
+
+	<X10_Alien_Units Name="ALIEN_Air_Invasion_Transport_Debris_02">
+		<Variant_Of_Existing_Type>ALIEN_Air_Invasion_Transport_Debris_01</Variant_Of_Existing_Type>
+		<!-- ART -->
+		<Land_Model_Name>AV_Defiler_debri_C.alo</Land_Model_Name>
+		<Scale_Factor>2.5</Scale_Factor>
+	</X10_Alien_Units>
+
+	<X10_Alien_Units Name="ALIEN_Air_Invasion_Transport_Debris_03">
+		<Variant_Of_Existing_Type>ALIEN_Air_Invasion_Transport_Debris_01</Variant_Of_Existing_Type>
+		<!-- ART -->
+		<Land_Model_Name>AV_Glyphcarver_elbow.ALO</Land_Model_Name>
+		<Scale_Factor>2.5</Scale_Factor>
+		<AssetBank> BANK_ALIEN </AssetBank>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+		<!-- ATTRIBUTES -->
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+
+      <!-- Non-decoration debris will have to have HIDE_WHEN_FOGGED behavior to properly hide.-->
+      <!-- Decoration debris will not be created if spawned under FOW. -Oksana -->
+      <Is_Decoration>Yes</Is_Decoration>
+
+      
+      <!-- CONFLICT -->
+		<Tactical_Health>9999</Tactical_Health>
+
+		<!-- BEHAVIORS -->
+		<LandBehavior>
+			BALLISTIC,
+			DEBRIS
+		</LandBehavior>
+
+		<BehaviorType Name="BallisticBehaviorType">
+			<Ballistic_Weight>6.0</Ballistic_Weight>
+			<Ballistic_Bounce>0.2</Ballistic_Bounce>
+		</BehaviorType>
+
+		<BehaviorType Name="DebrisBehaviorType">
+			<Debris_Min_Lifetime_Seconds> 3.0 </Debris_Min_Lifetime_Seconds>
+			<Debris_Max_Lifetime_Seconds> 7.0 </Debris_Max_Lifetime_Seconds>
+		</BehaviorType>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Damage_Type> Damage_Default </Damage_Type>
+		</BehaviorType>
+
+	</X10_Alien_Units>
+
+
+
+	<!-- ************************************************************************************************-->
+	<!-- ******                     GLOBAL TRANSPORT VARIATIONS FOR HEROES                        ****** -->
+	<!-- ************************************************************************************************-->
+
+
+	<X10_Alien_Units Name="ALIEN_Air_Invasion_Transport_Orlok">
+
+		<Variant_Of_Existing_Type> ALIEN_Air_Invasion_Transport </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor>True</Is_Placed_By_Editor>
+
+		<!-- ART -->
+		<Scale_Factor>1.2</Scale_Factor>
+
+		<Tactical_Health>1250</Tactical_Health>
+		<Attack_Category_Restrictions> Resource | Resource_INST </Attack_Category_Restrictions>
+		<Ranged_Target_Z_Adjust>12.0</Ranged_Target_Z_Adjust>
+
+		<!-- BEHAVIORS AND ABILITIES -->
+		<Behavior> RADAR_MAP_VISIBLE </Behavior>
+
+		<LandBehavior>
+			SELECTABLE,
+			EFFECT_REGISTRY,
+			STUNNABLE,
+			GUI,
+			RADAR_MAP_VISIBLE,
+			VTOL_LOCOMOTOR,
+			FORMATION,
+			IDLE,
+			REVEAL,
+			HIDE_WHEN_FOGGED,
+			UNIT_AI,
+			DAMAGE_TRACKING,
+			AI_RECRUITABLE,
+			AI_TARGET,
+			ATTRIBUTE_DIRECTORY,
+			GARRISONABLE,
+			TARGETING,
+			WEAPON
+		</LandBehavior>
+
+		<BehaviorType Name="SFXBehaviorType">
+			<SFXEvent_Retreat_Start />
+			<SFXEvent_Retreat_Transport_En_Route />
+			<SFXEvent_Select>Unit_Select_Alien_Orlok</SFXEvent_Select>
+			<SFXEvent_Move>Unit_Move_Alien_Orlok</SFXEvent_Move>
+			<SFXEvent_Move_At_Top_Speed>Unit_Move_Alien_Orlok</SFXEvent_Move_At_Top_Speed>
+			<SFXEvent_Attack>Unit_Attack_Alien_Orlok</SFXEvent_Attack>
+			<SFXEvent_Attack_At_Top_Speed>Unit_Attack_Alien_Orlok</SFXEvent_Attack_At_Top_Speed>
+			<SFXEvent_Guard></SFXEvent_Guard>
+			<SFXEvent_Health_Low_Warning> </SFXEvent_Health_Low_Warning>
+			<SFXEvent_Health_Critical_Warning> </SFXEvent_Health_Critical_Warning>
+			<SFXEvent_Enemy_Damaged_Health_Low_Warning> </SFXEvent_Enemy_Damaged_Health_Low_Warning>
+			<SFXEvent_Enemy_Damaged_Health_Critical_Warning> </SFXEvent_Enemy_Damaged_Health_Critical_Warning>
+			<SFXEvent_Ambient_Moving> SFX_Alien_Retreat_Transport_Fly_By </SFXEvent_Ambient_Moving>
+			<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 3 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+			<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+			<Death_SFXEvent_Start_Die>SFX_Alien_Large_Aircraft_Death</Death_SFXEvent_Start_Die>
+			<SFXEvent_Engine_Idle_Loop> SFX_Alien_Retreat_Transport_Idle_Engine_Loop</SFXEvent_Engine_Idle_Loop>
+			<SFXEvent_Engine_Moving_Loop> SFX_Alien_Retreat_Transport_Moving_Engine_Loop</SFXEvent_Engine_Moving_Loop>
+			<SFXEvent_Unit_Lost />
+			<SFXEvent_Tactical_Build_Started>GUI_BUILD_Vehicle</SFXEvent_Tactical_Build_Started>
+			<SFXEvent_Tactical_Build_Complete>Unit_Select_Alien_Grunt</SFXEvent_Tactical_Build_Complete>
+			<SFXEvent_Tactical_Build_Cancelled>GUI_BUILD_Vehicle_Canceled</SFXEvent_Tactical_Build_Cancelled>
+			<SFXEvent_Build_Started>GUI_BUILD_Vehicle</SFXEvent_Build_Started>
+			<SFXEvent_Build_Complete>Unit_Select_Alien_Grunt</SFXEvent_Build_Complete>
+			<SFXEvent_Build_Cancelled>GUI_BUILD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
+		</BehaviorType>
+
+		<BehaviorType Name="WeaponBehaviorType">
+			<Is_Attack_Anim_Looped> true </Is_Attack_Anim_Looped>
+			<Looped_Attack_Anim_Timeout> 2 </Looped_Attack_Anim_Timeout>
+			<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
+			<Targeting_Priority_Set>Global_Assault_Hero_Transport_Target_Priority</Targeting_Priority_Set>
+			<Targeting_Max_Attack_Distance> 225.0 </Targeting_Max_Attack_Distance>
+
+			<Projectile_Types> Proj_Alien_Walker_Assembly_Plasma_Blob </Projectile_Types>
+			<Projectile_Fire_Pulse_Count> 3 </Projectile_Fire_Pulse_Count>
+			<Projectile_Fire_Pulse_Delay_Seconds> 0.03 </Projectile_Fire_Pulse_Delay_Seconds>
+			<Projectile_Fire_Recharge_Seconds> 3.0 </Projectile_Fire_Recharge_Seconds>
+
+		</BehaviorType>
+
+		<BehaviorType Name="LuaScriptBehaviorType">
+			<Lua_Land_Behaviors> TacticalRetreat, Transport_Unit_Behavior </Lua_Land_Behaviors>
+			<Lua_Script_Data>
+
+				TransportBehavior = {}
+				TransportBehavior.EjectAbility = "Alien_Unload_Transport_Ability"
+				TransportBehavior.ResourceFaction = "Alien"
+
+			</Lua_Script_Data>
+		</BehaviorType>
+
+		<BehaviorType Name="AIBehaviorType">
+			<Idle_AI_Thread_Name> Invasion_Transport_Idle_Thread </Idle_AI_Thread_Name>
+		</BehaviorType>
+	</X10_Alien_Units>
+
+
+
+	<X10_Alien_Units Name="ALIEN_Air_Invasion_Transport_Kamal">
+
+		<Variant_Of_Existing_Type> ALIEN_Air_Invasion_Transport </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor>True</Is_Placed_By_Editor>
+
+		<!-- ART -->
+		<Scale_Factor>1.0</Scale_Factor>
+
+		<Tactical_Health>1000</Tactical_Health>
+		<Attack_Category_Restrictions> ~Flying </Attack_Category_Restrictions>
+		<Ranged_Target_Z_Adjust>12.0</Ranged_Target_Z_Adjust>
+
+		<!-- BEHAVIORS AND ABILITIES -->
+		<Behavior> RADAR_MAP_VISIBLE </Behavior>
+
+		<LandBehavior>
+			SELECTABLE,
+			EFFECT_REGISTRY,
+			STUNNABLE,
+			GUI,
+			RADAR_MAP_VISIBLE,
+			VTOL_LOCOMOTOR,
+			FORMATION,
+			IDLE,
+			REVEAL,
+			HIDE_WHEN_FOGGED,
+			UNIT_AI,
+			DAMAGE_TRACKING,
+			AI_RECRUITABLE,
+			AI_TARGET,
+			ATTRIBUTE_DIRECTORY,
+			GARRISONABLE,
+			TARGETING,
+			WEAPON
+		</LandBehavior>
+
+		<BehaviorType Name="SFXBehaviorType">
+			<SFXEvent_Retreat_Start />
+			<SFXEvent_Retreat_Transport_En_Route />
+			<SFXEvent_Select>Unit_Select_Alien_Kamal</SFXEvent_Select>
+			<SFXEvent_Move>Unit_Move_Alien_Kamal</SFXEvent_Move>
+			<SFXEvent_Move_At_Top_Speed>Unit_Move_Alien_Kamal</SFXEvent_Move_At_Top_Speed>
+			<SFXEvent_Attack>Unit_Attack_Alien_Kamal</SFXEvent_Attack>
+			<SFXEvent_Attack_At_Top_Speed>Unit_Attack_Alien_Kamal</SFXEvent_Attack_At_Top_Speed>
+			<SFXEvent_Guard></SFXEvent_Guard>
+			<SFXEvent_Health_Low_Warning> </SFXEvent_Health_Low_Warning>
+			<SFXEvent_Health_Critical_Warning> </SFXEvent_Health_Critical_Warning>
+			<SFXEvent_Enemy_Damaged_Health_Low_Warning> </SFXEvent_Enemy_Damaged_Health_Low_Warning>
+			<SFXEvent_Enemy_Damaged_Health_Critical_Warning> </SFXEvent_Enemy_Damaged_Health_Critical_Warning>
+			<SFXEvent_Ambient_Moving> SFX_Alien_Retreat_Transport_Fly_By </SFXEvent_Ambient_Moving>
+			<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 3 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+			<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+			<Death_SFXEvent_Start_Die>SFX_Alien_Large_Aircraft_Death</Death_SFXEvent_Start_Die>
+			<SFXEvent_Engine_Idle_Loop> SFX_Alien_Retreat_Transport_Idle_Engine_Loop</SFXEvent_Engine_Idle_Loop>
+			<SFXEvent_Engine_Moving_Loop> SFX_Alien_Retreat_Transport_Moving_Engine_Loop</SFXEvent_Engine_Moving_Loop>
+			<SFXEvent_Unit_Lost />
+			<SFXEvent_Tactical_Build_Started>GUI_BUILD_Vehicle</SFXEvent_Tactical_Build_Started>
+			<SFXEvent_Tactical_Build_Complete>Unit_Select_Alien_Grunt</SFXEvent_Tactical_Build_Complete>
+			<SFXEvent_Tactical_Build_Cancelled>GUI_BUILD_Vehicle_Canceled</SFXEvent_Tactical_Build_Cancelled>
+			<SFXEvent_Build_Started>GUI_BUILD_Vehicle</SFXEvent_Build_Started>
+			<SFXEvent_Build_Complete>Unit_Select_Alien_Grunt</SFXEvent_Build_Complete>
+			<SFXEvent_Build_Cancelled>GUI_BUILD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
+		</BehaviorType>
+
+		<BehaviorType Name="WeaponBehaviorType">
+			<Is_Attack_Anim_Looped> true </Is_Attack_Anim_Looped>
+			<Looped_Attack_Anim_Timeout> 2 </Looped_Attack_Anim_Timeout>
+			<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
+			<Targeting_Priority_Set>Global_Support_Hero_Transport_Target_Priority</Targeting_Priority_Set>
+			<Targeting_Max_Attack_Distance> 225.0 </Targeting_Max_Attack_Distance>
+
+			<Projectile_Types> Proj_Lost_One_Laser </Projectile_Types>
+			<Projectile_Fire_Pulse_Count> 8 </Projectile_Fire_Pulse_Count>
+			<Projectile_Fire_Pulse_Delay_Seconds> 0.02 </Projectile_Fire_Pulse_Delay_Seconds>
+			<Projectile_Fire_Recharge_Seconds> 2.0 </Projectile_Fire_Recharge_Seconds>
+
+		</BehaviorType>
+
+		<BehaviorType Name="LuaScriptBehaviorType">
+			<Lua_Land_Behaviors> TacticalRetreat, Transport_Unit_Behavior </Lua_Land_Behaviors>
+			<Lua_Script_Data>
+
+				TransportBehavior = {}
+				TransportBehavior.EjectAbility = "Alien_Unload_Transport_Ability"
+				TransportBehavior.ResourceFaction = "Alien"
+
+			</Lua_Script_Data>
+		</BehaviorType>
+
+		<BehaviorType Name="AIBehaviorType">
+			<Idle_AI_Thread_Name> Invasion_Transport_Idle_Thread </Idle_AI_Thread_Name>
+		</BehaviorType>
+
+	</X10_Alien_Units>
+
+
+
+
+	<X10_Alien_Units Name="ALIEN_Air_Invasion_Transport_Nufai">
+
+		<Variant_Of_Existing_Type> ALIEN_Air_Invasion_Transport </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor>True</Is_Placed_By_Editor>
+
+		<!-- ART -->
+		<Scale_Factor>0.8</Scale_Factor>
+		<Ranged_Target_Z_Adjust>12.0</Ranged_Target_Z_Adjust>
+		<Tactical_Health>750</Tactical_Health>
+
+		<!-- BEHAVIORS AND ABILITIES -->
+		<Behavior> RADAR_MAP_VISIBLE </Behavior>
+
+		<LandBehavior>
+			SELECTABLE,
+			EFFECT_REGISTRY,
+			EFFECT_GENERATOR,
+			STUNNABLE,
+			GUI,
+			RADAR_MAP_VISIBLE,
+			VTOL_LOCOMOTOR,
+			FORMATION,
+			IDLE,
+			REVEAL,
+			HIDE_WHEN_FOGGED,
+			UNIT_AI,
+			DAMAGE_TRACKING,
+			AI_RECRUITABLE,
+			AI_TARGET,
+			ATTRIBUTE_DIRECTORY,
+			GARRISONABLE,
+		</LandBehavior>
+
+		<BehaviorType Name="SFXBehaviorType">
+			<SFXEvent_Retreat_Start />
+			<SFXEvent_Retreat_Transport_En_Route />
+			<SFXEvent_Select>Unit_Select_Alien_Nufai</SFXEvent_Select>
+			<SFXEvent_Move>Unit_Move_Alien_Nufai</SFXEvent_Move>
+			<SFXEvent_Move_At_Top_Speed>Unit_Move_Alien_Nufai</SFXEvent_Move_At_Top_Speed>
+			<SFXEvent_Attack>Unit_Attack_Alien_Nufai</SFXEvent_Attack>
+			<SFXEvent_Attack_At_Top_Speed>Unit_Attack_Alien_Nufai</SFXEvent_Attack_At_Top_Speed>
+			<SFXEvent_Guard></SFXEvent_Guard>
+			<SFXEvent_Health_Low_Warning> </SFXEvent_Health_Low_Warning>
+			<SFXEvent_Health_Critical_Warning> </SFXEvent_Health_Critical_Warning>
+			<SFXEvent_Enemy_Damaged_Health_Low_Warning> </SFXEvent_Enemy_Damaged_Health_Low_Warning>
+			<SFXEvent_Enemy_Damaged_Health_Critical_Warning> </SFXEvent_Enemy_Damaged_Health_Critical_Warning>
+			<SFXEvent_Ambient_Moving> SFX_Alien_Retreat_Transport_Fly_By </SFXEvent_Ambient_Moving>
+			<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 3 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+			<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+			<Death_SFXEvent_Start_Die>SFX_Alien_Large_Aircraft_Death</Death_SFXEvent_Start_Die>
+			<SFXEvent_Engine_Idle_Loop> SFX_Alien_Retreat_Transport_Idle_Engine_Loop</SFXEvent_Engine_Idle_Loop>
+			<SFXEvent_Engine_Moving_Loop> SFX_Alien_Retreat_Transport_Moving_Engine_Loop</SFXEvent_Engine_Moving_Loop>
+			<SFXEvent_Unit_Lost />
+			<SFXEvent_Tactical_Build_Started>GUI_BUILD_Vehicle</SFXEvent_Tactical_Build_Started>
+			<SFXEvent_Tactical_Build_Complete>Unit_Select_Alien_Grunt</SFXEvent_Tactical_Build_Complete>
+			<SFXEvent_Tactical_Build_Cancelled>GUI_BUILD_Vehicle_Canceled</SFXEvent_Tactical_Build_Cancelled>
+			<SFXEvent_Build_Started>GUI_BUILD_Vehicle</SFXEvent_Build_Started>
+			<SFXEvent_Build_Complete>Unit_Select_Alien_Grunt</SFXEvent_Build_Complete>
+			<SFXEvent_Build_Cancelled>GUI_BUILD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
+		</BehaviorType>
+
+		<!-- EFFECTS -->
+		<Effect_Generator_Data SubObjectList="Yes">
+
+
+			<Effect_Generator Name="Nufai_Transport_Stealth">
+				<Should_Deactivate_Manually> true </Should_Deactivate_Manually>
+				<Modal_Refresh_Frequency> 3.0 </Modal_Refresh_Frequency>
+				<Starts_Active> true </Starts_Active>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> NufaiTransportStealth </Effect_Name>
+					<Duration> -1 </Duration>
+					<Base_Delay>4</Base_Delay>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+				</Effect_Generator_Entry>
+			</Effect_Generator>
+
+		</Effect_Generator_Data>
+
+
+		<BehaviorType Name="LuaScriptBehaviorType">
+			<Lua_Land_Behaviors> TacticalRetreat, Transport_Unit_Behavior </Lua_Land_Behaviors>
+			<Lua_Script_Data>
+
+				TransportBehavior = {}
+				TransportBehavior.EjectAbility = "Alien_Unload_Transport_Ability"
+				TransportBehavior.ResourceFaction = "Alien"
+
+			</Lua_Script_Data>
+		</BehaviorType>
+
+		<BehaviorType Name="AIBehaviorType">
+			<Idle_AI_Thread_Name> Invasion_Transport_Idle_Thread </Idle_AI_Thread_Name>
+		</BehaviorType>		
+
+	</X10_Alien_Units>
+
+
+
+  <X10_Alien_Units Name="ALIEN_AIR_Retreat_Transport">
+    <Variant_Of_Existing_Type> ALIEN_Air_Invasion_Transport </Variant_Of_Existing_Type>
+     <LandBehavior>
+        SELECTABLE,
+        EFFECT_REGISTRY,
+        STUNNABLE,
+        GUI,
+        RADAR_MAP_VISIBLE,
+        VTOL_LOCOMOTOR,
+        FORMATION,
+        IDLE,
+        REVEAL,
+        HIDE_WHEN_FOGGED,
+        UNIT_AI,
+        DAMAGE_TRACKING,
+        AI_RECRUITABLE,
+        AI_TARGET,
+        ATTRIBUTE_DIRECTORY
+     </LandBehavior>
+  </X10_Alien_Units>
+
+
+
+</ALIEN_AIR_Retreat_Transport_XML>

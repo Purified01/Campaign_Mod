@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<Campaigns>
+
+<!-- **************************************************************************************** -->	
+<!-- *** TUTORIAL CAMPAIGN ****************************************************************** -->	
+<!-- **************************************************************************************** -->
+
+	<Campaign Name="Tutorial_Cinematics">
+
+		<Campaign_Set>Tutorial_Cinematics</Campaign_Set>
+		<Script_Name>Tutorial_Cinematics</Script_Name>
+
+		<Is_Listed>false</Is_Listed>
+
+		<Camera_Shift_X> 0.0 </Camera_Shift_X>
+		<Camera_Shift_Y> 0.0 </Camera_Shift_Y>
+		<Camera_Distance> 500.0  </Camera_Distance>
+
+		<Locations> Global_Core_Art_Model </Locations>
+		<Locations> Global_Core_Art_Model_Stars </Locations>
+
+		<Trade_Routes></Trade_Routes>
+
+	</Campaign>
+
+</Campaigns>

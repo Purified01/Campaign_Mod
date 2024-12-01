@@ -1,0 +1,852 @@
+<?xml version="1.0"?>
+<Novus_Veh_Corrupter_XML>
+
+	<X12_Novus_Units Name="Novus_Corruptor">
+
+		<!-- To provide the effect that modifies the category mask when landed -->
+		<Variant_Of_Existing_Type> Generic_Air_Unit </Variant_Of_Existing_Type>
+		<Use_Base_Type_By_Default> false </Use_Base_Type_By_Default>
+
+		<!-- ART -->
+		<Land_Model_Name> NV_Corruptor.ALO </Land_Model_Name>
+		<Scale_Factor> 0.55 </Scale_Factor>
+		<No_Reflection_Below_Detail_Level> 1 </No_Reflection_Below_Detail_Level>
+		<Occlusion_Silhouette_Enabled> 1 </Occlusion_Silhouette_Enabled>
+      <AssetBank> BANK_NOVUS </AssetBank>
+
+		<!-- INTERFACE -->
+		<Icon_Name> i_icon_nv_corruptor.tga </Icon_Name>
+		<Text_ID> TEXT_UNIT_NOVUS_CORRUPTOR </Text_ID>
+		<GUI_Scene_Name> HealthBar_Scene_Medium </GUI_Scene_Name>
+		<GUI_Receives_Input> false </GUI_Receives_Input>
+		<GUI_Min_Scale> 0.3 </GUI_Min_Scale>
+		<GUI_Max_Scale> 2.5 </GUI_Max_Scale>
+		<GUI_Default_Scale> 0.5 </GUI_Default_Scale>
+		<GUI_World_Offset> 0.0, 0.0, -10 </GUI_World_Offset>
+		<GUI_Bracket_Size> 1 </GUI_Bracket_Size>
+		<Select_Box_Scale> 55 </Select_Box_Scale>
+		<Select_Box_Z_Adjust> 3.0f </Select_Box_Z_Adjust>
+		<Use_Space_Mode_Selection_Circle> true </Use_Space_Mode_Selection_Circle>
+
+
+		<!-- ATTRIBUTES -->
+        <LOD_Bias>15.0</LOD_Bias>
+		<Affiliation> Novus </Affiliation>
+		<CategoryMask> Medium, Flying, CanAttack, Piloted</CategoryMask>
+		<Victory_Relevant> No </Victory_Relevant>
+		<Weather_Category> Flying </Weather_Category>
+		<Can_Fall_From_Bridge> true </Can_Fall_From_Bridge>
+		<!-- The following will start VTOL behavior units hovering above the ground upon creation -->
+		<Layer_Z_Adjust> 10.0 </Layer_Z_Adjust>
+		<Importance> 0.6 </Importance>
+		<Shot_Type> Vehicle </Shot_Type>
+
+		<Attributes SubObjectList="Yes">
+			<Affected_By_Novus_Signal> true </Affected_By_Novus_Signal>
+			<Is_Immune_To_Virus> true </Is_Immune_To_Virus>
+			<Tactical_Sell_Percent_Modifier> -0.5 </Tactical_Sell_Percent_Modifier>
+			<Tactical_Sell_Time_Seconds> 2.0 </Tactical_Sell_Time_Seconds>
+		</Attributes>
+
+		<!-- MOVEMENT -->
+		<MovementClass> Flying </MovementClass>
+		<OccupationStyle> 1x1 </OccupationStyle>
+		<Max_Speed>2.2</Max_Speed>
+		<Min_Speed> .25 </Min_Speed>
+		<OverrideAcceleration> .15 </OverrideAcceleration>
+		<OverrideDeceleration> .15 </OverrideDeceleration>
+		<Max_Rate_Of_Turn>30.0</Max_Rate_Of_Turn>
+		<ROT_Acceleration> .33 </ROT_Acceleration>
+		<ROT_Deceleration> .15 </ROT_Deceleration>
+		<Max_Thrust> 1.5 </Max_Thrust>
+		<Thrust_Acceleration> .02 </Thrust_Acceleration>
+		<Thrust_Deceleration> .075 </Thrust_Deceleration>
+		<Min_Inertia_Coefficient> .4 </Min_Inertia_Coefficient>
+		<Max_Inertia_Coefficient> .95 </Max_Inertia_Coefficient>
+		<Max_Tilt> 1 </Max_Tilt>
+		<Tilt_Torque_Delta_Coefficient> .025 </Tilt_Torque_Delta_Coefficient>
+		<Tilt_Torque_Angular_Velocity_Coefficient> -.14 </Tilt_Torque_Angular_Velocity_Coefficient>
+		<Max_Pitch> 1 </Max_Pitch>
+		<Pitch_Torque_Delta_Coefficient> .02 </Pitch_Torque_Delta_Coefficient>
+		<Pitch_Torque_Angular_Velocity_Coefficient> -.1 </Pitch_Torque_Angular_Velocity_Coefficient>
+		<VTOL_Y_Recovery_Coefficient> .5 </VTOL_Y_Recovery_Coefficient>
+		<VTOL_Stop_Speed_Pitch_Coefficient> .1 </VTOL_Stop_Speed_Pitch_Coefficient>
+		<VTOL_Stop_Pitch_Coefficient> .4 </VTOL_Stop_Pitch_Coefficient>
+		<VTOL_Z_Bob_Amplitude> 0.1 </VTOL_Z_Bob_Amplitude>
+		<VTOL_Z_Bob_Advance_Mean> .01 </VTOL_Z_Bob_Advance_Mean>
+		<VTOL_Z_Bob_Advance_Variance> .01 </VTOL_Z_Bob_Advance_Variance>
+		<Natural_Pitch_Coefficient> .5 </Natural_Pitch_Coefficient>
+		<Hover_Instability_Measure> 0.5 </Hover_Instability_Measure>
+		<Moving_Animation_Speed_Bonus> 2.5 </Moving_Animation_Speed_Bonus>
+		<Hover_Range> 100000.0 </Hover_Range>
+		<Hover_Torque_Coefficient> .75 </Hover_Torque_Coefficient>
+		<Space_Layer> Air </Space_Layer>
+		<Stationary_Space_Layer> LandDynamic </Stationary_Space_Layer>
+		<Min_Flight_Elevation> 70 </Min_Flight_Elevation>
+		<Max_Flight_Elevation> 80 </Max_Flight_Elevation>
+		<UnitCollisionClass> Vehicle </UnitCollisionClass>
+		<FormationSpacing> 1.5 </FormationSpacing>
+		<FormationOrder> 9 </FormationOrder>
+		<FormationGrouping> SameOrder </FormationGrouping>
+		<!--SameOrder-->
+		<!-- DEBUG: Make a new formation for these. -->
+		<FormationRaggedness> .6 </FormationRaggedness>
+		<MaxJiggleDistance> 5 </MaxJiggleDistance>
+		<Custom_Hard_XExtent> 8.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 8.0 </Custom_Hard_YExtent>
+		<MovementPredictionInterval> 3.0 </MovementPredictionInterval>
+		<Moving_Vs_Moving_Look_Ahead_Time> 3.0 </Moving_Vs_Moving_Look_Ahead_Time>
+		<Close_Enough_Angle_For_Move_Start> 180.0 </Close_Enough_Angle_For_Move_Start>
+		<Should_Keep_Tangent_To_Terrain> true </Should_Keep_Tangent_To_Terrain>
+		<Should_Move_At_Water_Level> true </Should_Move_At_Water_Level>
+
+		<Spin_Away_On_Death> Yes </Spin_Away_On_Death>
+		<Spin_Away_On_Death_Chance> 1 </Spin_Away_On_Death_Chance>
+		<Spin_Away_On_Death_Time> 1 </Spin_Away_On_Death_Time>
+		<Spin_Away_On_Death_Explosion />
+
+		<!-- CONFLICT -->
+		<Is_Attackable> true </Is_Attackable>
+		<Collidable_By_Projectile_Living> Yes </Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead> Yes </Collidable_By_Projectile_Dead>
+		<Ranged_Target_Z_Adjust> 0.5 </Ranged_Target_Z_Adjust>
+
+		<Tactical_Health> 200 </Tactical_Health>
+		<Land_FOW_Reveal_Range> 250.0 </Land_FOW_Reveal_Range>
+
+		<Attack_Category_Restrictions> Resource | Resource_INST </Attack_Category_Restrictions>
+
+		<Land_Damage_Thresholds>1, 0.66, 0.46,  0.25</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>SFX_Generic_Detonation_1,SFX_Generic_Detonation_1,SFX_Generic_Detonation_1,SFX_Generic_Detonation_1</Land_Damage_SFX>
+
+
+		<!-- BEHAVIORS -->
+		<Behavior>
+			SELECTABLE,
+			RADAR_MAP_VISIBLE,
+			EFFECT_REGISTRY,
+			ATTRIBUTE_DIRECTORY,
+			EFFECT_GENERATOR,
+			PERSISTENT_UNIT,
+		</Behavior>
+
+		<LandBehavior>
+			TURRET,
+			STUNNABLE,
+			RADIATION_WEAPON,
+			GUI,
+			RADAR_MAP_VISIBLE,
+			VTOL_LOCOMOTOR,
+			FORMATION,
+			IDLE,
+			REVEAL,
+			HIDE_WHEN_FOGGED,
+			UNIT_AI,
+			TARGETING,
+			ABILITY_COUNTDOWN,
+			TURRET,
+			DAMAGE_TRACKING,
+			AI_RECRUITABLE,
+			BALLISTIC,
+			TACTICAL_SELL,
+			AI_TARGET
+		</LandBehavior>
+
+		<BehaviorType Name="BallisticBehaviorType">
+			<Ballistic_Weight>6.0</Ballistic_Weight>
+			<Ballistic_Bounce>0.3</Ballistic_Bounce>
+			<Velocity_Launch_Threshold> 1.0 </Velocity_Launch_Threshold>
+		</BehaviorType>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Armor_Type> Armor_Novus_Aircraft </Armor_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="ProjectileBehaviorType">
+			<Can_Be_Redirected>False</Can_Be_Redirected>
+		</BehaviorType>
+
+		<BehaviorType Name="TacticalSellBehaviorType">
+			<Sell_Effect_Generator_Name>NovusSellGenerator</Sell_Effect_Generator_Name>
+		</BehaviorType>
+		
+		<BehaviorType Name="ProductionBehaviorType">
+			<Size_Value> 10 </Size_Value>
+			<Build_Cost_Credits> 300 </Build_Cost_Credits>
+			<Build_Time_Seconds> 10 </Build_Time_Seconds>
+			<Is_Research_Tech_Tree_Lockable> Yes </Is_Research_Tech_Tree_Lockable>
+			<Extra_Enablers_Increase_Build_Rate> 1.0 </Extra_Enablers_Increase_Build_Rate>
+			<!-- 
+				Maria 11.07.2006 
+				This flag determines which types are used to populate the
+				build menu in global mode.
+			-->
+			<Is_Strategic_Buildable_Type> Yes </Is_Strategic_Buildable_Type>
+			<Strategic_UI_Build_Menu_Order>8</Strategic_UI_Build_Menu_Order>
+		</BehaviorType>
+
+		<BehaviorType Name="BuildableObjectBehaviorType">
+			<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+			<Tactical_Build_Cost_Campaign> 600 </Tactical_Build_Cost_Campaign>
+			<Tactical_Build_Cost_Multiplayer> 600 </Tactical_Build_Cost_Multiplayer>
+			<Tactical_Build_Time_Seconds> 20 </Tactical_Build_Time_Seconds>
+			<Tactical_UI_Build_Queue_Order> 0 </Tactical_UI_Build_Queue_Order>
+		</BehaviorType>
+
+    <BehaviorType name="AIBehaviorType">
+      <AI_Combat_Power> 1 </AI_Combat_Power>
+      <Idle_Chase_Range> 20.0 </Idle_Chase_Range>  <!-- Double click guard area Keep very small-->
+      <Guard_Chase_Range> 160.0 </Guard_Chase_Range>  <!-- Guard radius for unit-->
+      <Autonomous_Move_Extension_Vs_Attacker> 20.0 </Autonomous_Move_Extension_Vs_Attacker>  <!--Range outside of guard area unit will move-->
+      <Attack_Move_Response_Range> 50.0 </Attack_Move_Response_Range>  <!-- When given a attack move command unit will travel this distance from path to attack-->
+      <AI_Target_Level>Individual_Or_Group</AI_Target_Level>
+		 <Attack_Score_Rating> 0.8 </Attack_Score_Rating>
+		 <Scout_Score_Rating> 1.9 </Scout_Score_Rating>
+		 <Guerilla_Score_Rating> 1.0 </Guerilla_Score_Rating>
+	 </BehaviorType>
+
+		<BehaviorType Name="WeaponBehaviorType">
+			<Can_Attack_Without_Weapon_Behavior>Yes</Can_Attack_Without_Weapon_Behavior>
+			<Targeting_Stickiness_Time_Threshold> 5.0 </Targeting_Stickiness_Time_Threshold>
+			<Targeting_Priority_Set> Novus_Corruptor_Target_Priority </Targeting_Priority_Set>
+			<Targeting_Fire_Inaccuracy> 1.0 </Targeting_Fire_Inaccuracy>
+			<Targeting_Min_Attack_Distance> 50.0 </Targeting_Min_Attack_Distance>
+			<Targeting_Max_Attack_Distance> 125.0 </Targeting_Max_Attack_Distance>
+		</BehaviorType>
+
+		<BehaviorType Name="EncyclopediaBehaviorType">
+			<Icon_Name>i_icon_nv_corruptor.tga</Icon_Name>
+		</BehaviorType>
+
+		<BehaviorType NAme="LuaScriptBehaviorType">
+			<!-- Keep the collection range lower than the ability to maximize it's effect -->
+			<Lua_Only_Service_If_AI>True</Lua_Only_Service_If_AI>
+			<Lua_Land_Behaviors>Defensive_AI_Unit_Behavior</Lua_Land_Behaviors>
+			<Lua_Script_Data>
+				DefensiveAI = {}
+				DefensiveAI.KillTurret = false
+				DefensiveAI.KillTurretRange = 0.0
+				DefensiveAI.RunHealth = 0.8
+			</Lua_Script_Data>
+		</BehaviorType>
+
+		<BehaviorType Name="TooltipBehaviorType">
+			<Tooltip_Description_Text_ID> TEXT_TOOLTIP_DESCRIPTION_NOVUS_CORRUPTOR </Tooltip_Description_Text_ID>
+			<Tooltip_Category> TEXT_TOOLTIP_CATEGORY_VEHICLE </Tooltip_Category>
+			<Tooltip_Good_Against> TEXT_TYPE_VERSUS_INFANTRY TEXT_TYPE_VERSUS_STRUCTURES </Tooltip_Good_Against>
+			<Tooltip_Vulnerable_To> TEXT_TYPE_VERSUS_AIR_UNITS TEXT_TYPE_VERSUS_TURRETS </Tooltip_Vulnerable_To>
+         <Researched_Upgrades>
+            TEXT_NOVUS_RESEARCH_TITLE_RAPID_FLOW
+            TEXT_NOVUS_RESEARCH_TITLE_ADVANCED_FLOW_EFFECT
+            TEXT_NOVUS_RESEARCH_TITLE_NANITE_REFINEMENT_ABILITY
+            TEXT_NOVUS_RESEARCH_TITLE_VIRAL_CONTAGION
+            TEXT_NOVUS_RESEARCH_TITLE_NANITE_PURIFICATION
+         </Researched_Upgrades>
+		</BehaviorType>
+		
+		
+         		
+		<BehaviorType Name="RadiationManagerBehaviorType">
+			<Radiation_Manager_Type> Unit_Novus_Corruptor_Radiation_Manager </Radiation_Manager_Type>
+
+			<!-- particles that follow the beam source -->
+			<Radiation_Particle_Effect> Corruptor_Laser_source_effect </Radiation_Particle_Effect>
+			<Radiation_Particle_Effect_Bone_Name> MuzzleA_00  </Radiation_Particle_Effect_Bone_Name>
+			<Radiation_Lightning_Effect_Name> Corruptor_Laser_Beam </Radiation_Lightning_Effect_Name>
+			<Radiation_Sweep_Duration_In_Secs> 1.0 </Radiation_Sweep_Duration_In_Secs>
+			<Radiation_Arc_Degrees> 18 </Radiation_Arc_Degrees>
+			<Radiation_Arc_Noise_Amp> 0.01 </Radiation_Arc_Noise_Amp>
+			<Radiation_Cooldown_In_Secs> 0.40 </Radiation_Cooldown_In_Secs>  <!-- Rate of Fire -->
+			<Radiation_SFXEvent_Fire> SFX_Novus_Corruptor_Beam_Fire </Radiation_SFXEvent_Fire>
+			<Radiation_Direct_Damage> 0.78 </Radiation_Direct_Damage>  <!-- Use this to balance weapon damage-->
+			<!-- direct damage type -->
+			<Radiation_Damage_Type> Damage_Novus_Corruptor_Laser </Radiation_Damage_Type>
+			<!-- Particles that stay in place after a hit, these must decay over time -->
+			<!-- <Radiation_Direct_Hit_Particle_Effect> Corruptor_Laser_Particle_Effect </Radiation_Direct_Hit_Particle_Effect> -->
+			<Radiation_Direct_Hit_SFXEvent> SFX_Novus_Corruptor_Beam_Detonation_1 </Radiation_Direct_Hit_SFXEvent>
+			<Radiation_Beam_Step_Amount> 1.6 </Radiation_Beam_Step_Amount>
+			<Radiation_Beam_Max_Length> 300.0 </Radiation_Beam_Max_Length>
+			<!-- particles that follow the beam impact-->
+			<Radiation_Follow_Beam_Impact_Particle_Effect> Corruptor_Laser_Particle_Effect </Radiation_Follow_Beam_Impact_Particle_Effect>
+			<Radiation_Follow_Beam_Hit_Ground_Particle_Effect> Corruptor_Laser_miss_effect </Radiation_Follow_Beam_Hit_Ground_Particle_Effect>
+			<Radiation_Exclude_Target_Types> Novus_Reflex_Trooper, Novus_Reflex_Trooper_Clone </Radiation_Exclude_Target_Types>
+		</BehaviorType>
+
+		<BehaviorType Name="TurretBehaviorType">
+			<Is_Turret_Entire_Body> false </Is_Turret_Entire_Body>
+			<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+			<Turret_Elevate_Extent_Degrees>90</Turret_Elevate_Extent_Degrees>
+			<Turret_Bone_Name>B_Turret</Turret_Bone_Name>
+			<Barrel_Bone_Name>MuzzleA_00</Barrel_Bone_Name>
+			<Turret_Rotate_Speed>10.0</Turret_Rotate_Speed>
+			<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+			<Apply_Y_Turret_Rotate_To_Axis>1</Apply_Y_Turret_Rotate_To_Axis>
+			<Turret_Targets_Ground_Vehicles> 1 </Turret_Targets_Ground_Vehicles>
+			<Turret_Targets_Ground_Infantry> 2 </Turret_Targets_Ground_Infantry>
+			<Turret_Targets_Air_Vehicles> 3 </Turret_Targets_Air_Vehicles>
+			<Turret_Targets_Anything_Else> 4 </Turret_Targets_Anything_Else>
+			<Turret_Rotate_To_Rest_Delay_Sec> 5.0 </Turret_Rotate_To_Rest_Delay_Sec>
+			<Ground_Vehicle_Turret_Target> Yes </Ground_Vehicle_Turret_Target>
+			<Should_Turret_Return_To_Rest_Before_Undeploy>No</Should_Turret_Return_To_Rest_Before_Undeploy>
+			<Should_Turret_Return_To_Rest_Before_Deploy>No</Should_Turret_Return_To_Rest_Before_Deploy>
+		</BehaviorType>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+	                <Death_Clone> Damage_Default, Novus_Corruptor_Death_Clone </Death_Clone>
+			<Death_Explosions> Novus_Large_Explosion_Air </Death_Explosions>
+		</BehaviorType>
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size> 0.03  0.03 </Radar_Icon_Size>
+		</BehaviorType>
+
+		<BehaviorType Name="CrushBehaviorType">
+			<Crush_Defense> 30 </Crush_Defense>
+		</BehaviorType>
+
+		<BehaviorType Name="GUIBehaviorType">
+			<!-- Maria 05.18.2006 - Data needed for the models attached to the mouse in Global -->
+			<GUI_Is_Top_View> Yes </GUI_Is_Top_View>
+			<GUI_Rotate_Angle_Degrees> -45.0 </GUI_Rotate_Angle_Degrees>
+			<GUI_Is_Model_Shifted_Down> No </GUI_Is_Model_Shifted_Down>
+			<GUI_Strategic_Mode_Scale> 0.04 </GUI_Strategic_Mode_Scale>
+		</BehaviorType>
+
+		<BehaviorType Name="FleetBehaviorType">
+			<!-- Maria 05.24.2006 - How much space does the unit take up -->
+			<Unit_Pop_Cap> 2 </Unit_Pop_Cap>
+		</BehaviorType>
+
+		<BehaviorType Name="SFXBehaviorType">
+			<SFXEvent_Fire> SFX_Novus_Corruptor_Fire </SFXEvent_Fire>
+			<SFXEvent_Select>Unit_Select_Novus_Corruptor</SFXEvent_Select>
+			<SFXEvent_Move>Unit_Move_Novus_Corruptor</SFXEvent_Move>
+			<SFXEvent_Move_At_Top_Speed>Unit_Move_Novus_Corruptor</SFXEvent_Move_At_Top_Speed>
+			<SFXEvent_Attack>Unit_Attack_Novus_Corruptor</SFXEvent_Attack>
+			<SFXEvent_Attack_At_Top_Speed>Unit_Attack_Novus_Corruptor</SFXEvent_Attack_At_Top_Speed>
+			<SFXEvent_Guard />
+			<SFXEvent_Ambient_Moving> SFX_Novus_Corruptor_Take_Off </SFXEvent_Ambient_Moving>
+			<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 3 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+			<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+			<Death_SFXEvent_Start_Die> SFX_Novus_Small_Vehicle_Death </Death_SFXEvent_Start_Die>
+			<SFXEvent_Engine_Idle_Loop> SFX_Novus_Corruptor_Idle_Engine_Loop </SFXEvent_Engine_Idle_Loop>
+			<SFXEvent_Engine_Moving_Loop> SFX_Novus_Corruptor_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
+			<SFXEvent_Engine_Cinematic_Focus_Loop> SFX_Novus_Corruptor_Moving_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+			<SFXEvent_Tactical_Build_Started> GUI_BUILD_Vehicle </SFXEvent_Tactical_Build_Started>
+			<SFXEvent_Tactical_Build_Complete> Unit_Select_Novus_Corruptor </SFXEvent_Tactical_Build_Complete>
+			<SFXEvent_Tactical_Build_Cancelled> GUI_BUILD_Vehicle_Canceled </SFXEvent_Tactical_Build_Cancelled>
+			<!-- Maria 05.01.2006 - Adding build sounds for Global production -->
+			<SFXEvent_Build_Started> GUI_BUILD_Vehicle </SFXEvent_Build_Started>
+			<SFXEvent_Build_Complete> Unit_Select_Novus_Corruptor </SFXEvent_Build_Complete>
+			<SFXEvent_Build_Cancelled> GUI_BUILD_Vehicle_Canceled </SFXEvent_Build_Cancelled>
+		</BehaviorType>
+
+		<!-- ABILITIES -->
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability Name="Corrupter_Virus_Infect">
+				<Type>EFFECT_GENERATOR</Type>
+				<Expiration_Seconds> 3.0 </Expiration_Seconds>
+				<Recharge_Seconds>30.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> Corruptor_Virus_Infect_Ability </GUI_Activated_Ability_Name>
+				<Effect_Generator_Name> VirusInfectGenerator </Effect_Generator_Name>
+				<Targeting_Type> ENEMY_OBJECT </Targeting_Type>
+			</Unit_Ability>
+
+		</Unit_Abilities_Data>
+
+		<Abilities SubObjectList="Yes">
+
+			<Effect_Generator_Ability Name="Corruptor_Virus_Infect_Ability">
+				<Activation_Min_Range> 0 </Activation_Min_Range>
+				<Activation_Max_Range> 185 </Activation_Max_Range>
+				<Effect_Generator_Name> VirusInfectGenerator </Effect_Generator_Name>
+				<Activation_Style> User_Input </Activation_Style>
+				<Generating_Anim_Type> Special_Attack_A </Generating_Anim_Type>
+				<Excluded_Unit_Categories> Hero, Untargetable </Excluded_Unit_Categories>
+				<Stop_And_Clear_Target_On_Remove> true </Stop_And_Clear_Target_On_Remove>
+				<Excluded_Unit_Types>
+					Alien_Arrival_Site_Construction,
+					Alien_Arrival_Site_Beacon,
+					Alien_Gravitic_Manipulator_Construction,
+					Alien_Gravitic_Manipulator_Beacon,
+					Alien_Radiation_Spitter_Construction,
+					Alien_Radiation_Spitter_Beacon,
+					Alien_Relocator_Construction,
+					Alien_Relocator_Beacon,
+					Alien_Superweapon_Mass_Drop_Construction,
+					Alien_Superweapon_Mass_Drop_Beacon,
+					Alien_Reaper_Turret_Construction,
+					Alien_Reaper_Turret_Beacon,
+					Alien_Scan_Drone_Construction,
+					Alien_Scan_Drone_Beacon,
+					Alien_Walker_Assembly_Glyph,
+					Alien_Walker_Assembly_Glyph_Beacon,
+					Alien_Walker_Habitat_Glyph,
+					Alien_Walker_Habitat_Glyph_Beacon,
+					Alien_Walker_Science_Glyph,
+					Alien_Walker_Science_Glyph_Beacon,
+					Masari_Air_Inspiration_Construction,
+					Masari_Air_Inspiration_Beacon,
+					Masari_Elemental_Collector_Construction,
+					Masari_Elemental_Collector_Beacon,
+					Masari_Elemental_Controller_Construction,
+					Masari_Elemental_Controller_Beacon,
+					Masari_Ground_Inspiration_Construction,
+					Masari_Ground_Inspiration_Beacon,
+					Masari_Guardian_Construction,
+					Masari_Guardian_Beacon,
+					Masari_Infantry_Inspiration_Construction,
+					Masari_Infantry_Inspiration_Beacon,
+					Masari_Inventors_Lab_Construction,
+					Masari_Inventors_Lab_Beacon,
+					Masari_Natural_Interpreter_Construction,
+					Masari_Natural_Interpreter_Beacon,
+					Masari_Sky_Guardian_Construction,
+					Masari_Sky_Guardian_Beacon,
+					Novus_Aircraft_Assembly_Construction,
+					Novus_Aircraft_Assembly_Beacon,
+					Novus_Superweapon_Gravity_Bomb_Construction,
+					Novus_Superweapon_Gravity_Bomb_Beacon,
+					Novus_Input_Station_Construction,
+					Novus_Input_Station_Beacon,
+					Novus_Power_Router_Construction,
+					Novus_Power_Router_Beacon,
+					Novus_Redirection_Turret_Construction,
+					Novus_Redirection_Turret_Beacon,
+					Novus_Remote_Terminal_Construction,
+					Novus_Remote_Terminal_Beacon,
+					Novus_Robotic_Assembly_Construction,
+					Novus_Robotic_Assembly_Beacon,
+					Novus_Science_Center_Construction,
+					Novus_Science_Center_Beacon,
+					Novus_Signal_Tower_Construction,
+					Novus_Signal_Tower_Beacon,
+					Novus_Superweapon_EMP_Construction,
+					Novus_Superweapon_EMP_Beacon,
+					Novus_Vehicle_Assembly_Construction,
+					Novus_Vehicle_Assembly_Beacon
+				</Excluded_Unit_Types>
+			</Effect_Generator_Ability>
+
+			<Radiation_Weapon_Ability Name="Novus_Corruptor_Laser">
+				<Activation_Style> Special_Attack </Activation_Style>
+				<Activation_Chance> 1 </Activation_Chance>
+				<Activation_Min_Range> 50.0 </Activation_Min_Range>
+				<Activation_Max_Range> 125.0 </Activation_Max_Range>
+				<Applicable_Unit_Categories> Hardpoint | Small | Medium | Piloted | Stationary | Flying | Bridge </Applicable_Unit_Categories>
+				<Ability_Source_Bone> MuzzleA_00 </Ability_Source_Bone>
+				<Reveal_Range> 130 </Reveal_Range>
+				<!-- Must deactivate on attack because this ability locks out targeting -->
+				<Deactivate_On_User_Attack_Order> true </Deactivate_On_User_Attack_Order>
+			</Radiation_Weapon_Ability>
+
+		</Abilities>
+
+		<!--Extend the effect generator of the base type (which modifies category based on flying/not flying -->
+		<Effect_Generator_Data SubObjectList="Yes" Replace="False">
+
+			<!-- Researched ability for this unit to Flow. It just dynamically adds the FLOW behavior to this unit. -->
+			<Effect_Generator Name="NovusResearchAdvancedFlowEffectGenerator">
+				<Starts_Active> true </Starts_Active>
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> NovusResearchAdvancedFlowEffect </Effect_Name>
+					<Duration> -1.0 </Duration>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+				</Effect_Generator_Entry>
+			</Effect_Generator>
+
+			<Effect_Generator Name="VirusInfectGenerator">
+				<Should_Deactivate_Manually> false </Should_Deactivate_Manually>
+				<Is_Independent_Generator> false </Is_Independent_Generator>
+				<Disable_Generator_Attribute> Is_Mind_Controlled </Disable_Generator_Attribute>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> Novus_Virus_Stage_I_Effect </Effect_Name>
+					<Duration> 20.0 </Duration>
+					<!-- placeholder sfx -->
+					<Target_SFX_Event> SFX_Alien_Electro_Pulse_Fire </Target_SFX_Event>
+					<Target_Gathering_Mask> Target </Target_Gathering_Mask>
+					<Target_Filter_C> Virus_Infect_Enemy </Target_Filter_C>
+					<Remove_On_Death> false </Remove_On_Death>
+					<!-- placeholder sfx -->
+					<Target_SFX_Event> SFX_Alien_Electro_Pulse_Fire </Target_SFX_Event>
+					<Linked_Effect_Names> Novus_Virus_Infect_Visual </Linked_Effect_Names>
+					<Linked_Effects_Only_Use_Effect_Duration> true </Linked_Effects_Only_Use_Effect_Duration>
+					<Target_Filter_Categories> ~Stationary | CanAttack </Target_Filter_Categories>
+				</Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry2">
+					<Effect_Name> Novus_Virus_Stage_I_Effect_Structure </Effect_Name>
+					<Duration> 20.0 </Duration>
+					<!-- placeholder sfx -->
+					<Target_SFX_Event> SFX_Alien_Electro_Pulse_Fire </Target_SFX_Event>
+					<Target_Gathering_Mask> Target </Target_Gathering_Mask>
+					<Target_Filter_C> Virus_Infect_Enemy </Target_Filter_C>
+					<Remove_On_Death> false </Remove_On_Death>
+					<!-- placeholder sfx -->
+					<Target_SFX_Event> SFX_Alien_Electro_Pulse_Fire </Target_SFX_Event>
+					<Linked_Effect_Names> Novus_Virus_Infect_Visual </Linked_Effect_Names>
+					<Linked_Effects_Only_Use_Effect_Duration> true </Linked_Effects_Only_Use_Effect_Duration>
+					<Target_Filter_Categories> Stationary + ~CanAttack </Target_Filter_Categories>
+				</Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry3">
+					<Effect_Name> Novus_Virus_Copy_Aura_Generator </Effect_Name>
+					<Base_Delay> 5.0 </Base_Delay>
+					<Duration> 20.0 </Duration>
+					<Target_Gathering_Mask> Target </Target_Gathering_Mask>
+					<Target_Filter_C> Virus_Infect_Enemy </Target_Filter_C>
+					<Remove_On_Death> false </Remove_On_Death>
+				</Effect_Generator_Entry>
+				
+			</Effect_Generator>
+
+			<Effect_Generator Name="VirusInfectAuraGenerator">
+				<Should_Deactivate_Manually> false </Should_Deactivate_Manually>
+				<Is_Independent_Generator> true </Is_Independent_Generator>
+				<Modal_Refresh_Frequency> 5.0 </Modal_Refresh_Frequency>
+				<Starts_Active> true </Starts_Active>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> Novus_Virus_Stage_I_Effect </Effect_Name>
+					<Duration> 20.0 </Duration>
+					<Target_Gathering_Mask> SelfAE </Target_Gathering_Mask>
+					<Area_Effect_Radius> 50 </Area_Effect_Radius>
+					<Target_Filter_C> Virus_Infect_Ally </Target_Filter_C>
+					<Remove_On_Death> false </Remove_On_Death>
+					<!-- placeholder sfx -->
+					<Target_SFX_Event> SFX_Alien_Electro_Pulse_Fire </Target_SFX_Event>
+					<Max_Targets>3</Max_Targets>
+					<Max_Targets_Filter>ProximitySource</Max_Targets_Filter>
+					<Linked_Effect_Names> Novus_Virus_Infect_Visual </Linked_Effect_Names>
+					<Linked_Effects_Only_Use_Effect_Duration> true </Linked_Effects_Only_Use_Effect_Duration>
+					<Target_Filter_Categories> ~Stationary | CanAttack </Target_Filter_Categories>
+				</Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry2">
+					<Effect_Name> Novus_Virus_Stage_I_Effect_Structure </Effect_Name>
+					<Duration> 20.0 </Duration>
+					<Target_Gathering_Mask> SelfAE </Target_Gathering_Mask>
+					<Area_Effect_Radius> 50 </Area_Effect_Radius>
+					<Target_Filter_C> Virus_Infect_Ally </Target_Filter_C>
+					<Remove_On_Death> false </Remove_On_Death>
+					<!-- placeholder sfx -->
+					<Target_SFX_Event> SFX_Alien_Electro_Pulse_Fire </Target_SFX_Event>
+					<Max_Targets>3</Max_Targets>
+					<Max_Targets_Filter>ProximitySource</Max_Targets_Filter>
+					<Linked_Effect_Names> Novus_Virus_Infect_Visual </Linked_Effect_Names>
+					<Linked_Effects_Only_Use_Effect_Duration> true </Linked_Effects_Only_Use_Effect_Duration>
+					<Target_Filter_Categories> Stationary + ~CanAttack </Target_Filter_Categories>
+				</Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry3">
+					<Effect_Name> Novus_Virus_Copy_Aura_Generator </Effect_Name>
+					<Duration> 20.0 </Duration>
+					<Base_Delay> 5.0 </Base_Delay>
+					<Target_Gathering_Mask> SelfAE </Target_Gathering_Mask>
+					<Area_Effect_Radius> 50 </Area_Effect_Radius>
+					<Target_Filter_C> Virus_Infect_Ally </Target_Filter_C>
+					<Remove_On_Death> false </Remove_On_Death>
+				</Effect_Generator_Entry>
+
+			</Effect_Generator>
+
+			<Effect_Generator Name="CorruptorRevealCloakingGenerator">
+				<Should_Deactivate_Manually> false </Should_Deactivate_Manually>
+				<Modal_Refresh_Frequency> 1.2 </Modal_Refresh_Frequency>	
+				<Starts_Active> true </Starts_Active>
+				<Is_Independent_Generator> true </Is_Independent_Generator>
+									
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name> RevealCloakingEffect </Effect_Name>
+					<Duration> 1.3 </Duration>
+					<Target_Gathering_Mask> SelfAE </Target_Gathering_Mask>
+					<Target_Filter_C> Is_Enemy </Target_Filter_C>
+					<Area_Effect_Radius> 250 </Area_Effect_Radius>
+				</Effect_Generator_Entry>
+			</Effect_Generator>
+
+			<!-- Standard Sell generator  - 06/28/2007 -->
+			<!--INCLUDE ".\Data\XML\Includes\Sell_Effect_Generators\NOVUS_Sell_Generators.xml" -->
+			
+		</Effect_Generator_Data>
+
+	</X12_Novus_Units>
+
+   <!-- **************************************************************************************** -->
+   <!-- *** DEATH CLONE(S)********************************************************************** -->
+   <!-- **************************************************************************************** -->
+
+   <X12_Novus_Units Name="Novus_Corruptor_Death_Clone">
+
+      <!-- ART -->
+      <Land_Model_Name>NV_Corruptor_DC.ALO</Land_Model_Name>
+      <Scale_Factor>0.65</Scale_Factor>
+      <AssetBank> BANK_NOVUS </AssetBank>
+
+      <!-- INTERFACE -->
+      <Text_ID>TEXT_NONE</Text_ID>
+      <Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+      <!-- ATTRIBUTES -->
+      <CategoryMask> Resource </CategoryMask>
+
+      <!-- CONFLICT -->
+      <Ranged_Target_Z_Adjust>0.1</Ranged_Target_Z_Adjust>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+		<Is_Attackable>Yes</Is_Attackable>
+
+      <!-- BEHAVIORS -->
+      <LandBehavior>
+         BALLISTIC,
+			ATTRIBUTE_DIRECTORY,
+         SPAWN_DEBRIS,
+         RESOURCE,
+         DEBRIS,
+         EFFECT_REGISTRY,
+         EFFECT_GENERATOR,
+         HIDE_WHEN_FOGGED
+      </LandBehavior>
+
+      <BehaviorType Name="DebrisBehaviorType">
+         <Debris_Min_Lifetime_Seconds> 120.0 </Debris_Min_Lifetime_Seconds>
+         <Debris_Max_Lifetime_Seconds> 120.0 </Debris_Max_Lifetime_Seconds>
+      </BehaviorType>
+
+
+      <BehaviorType Name="SpawnDebrisBehaviorType">
+         <Creation_Debris_Types>
+            Novus_Corruptor_Debris_01,
+            Novus_Corruptor_Debris_03,
+            Novus_Corruptor_Debris_01
+            Novus_Corruptor_Debris_02,
+            Novus_Corruptor_Debris_03,
+            Novus_Corruptor_Debris_01,
+            Novus_Corruptor_Debris_03,
+            Novus_Corruptor_Debris_02,
+            Novus_Corruptor_Debris_03,
+            Novus_Corruptor_Debris_01,
+            Novus_Corruptor_Debris_02,
+            Novus_Corruptor_Debris_02,
+            Novus_Corruptor_Debris_01
+
+         </Creation_Debris_Types>
+         <Debris_Speed_Min> 100.0 </Debris_Speed_Min>
+         <Debris_Speed_Max> 100.0 </Debris_Speed_Max>
+         <Debris_Outward_Speed_Min> 50.0 </Debris_Outward_Speed_Min>
+         <Debris_Outward_Speed_Max> 100.0 </Debris_Outward_Speed_Max>
+         <Debris_Ang_Min> 20.0 </Debris_Ang_Min>
+         <Debris_Ang_Max> 30.0 </Debris_Ang_Max>
+      </BehaviorType>
+
+      <BehaviorType Name="BallisticBehaviorType">
+         <Ballistic_Weight>6.0</Ballistic_Weight>
+         <Ballistic_Bounce>0.3</Ballistic_Bounce>
+      </BehaviorType>
+
+      <Effect_Generator_Data SubObjectList="Yes" Replace="false">
+         <!-- Fall down on the ground -->
+         <Effect_Generator Name="ResourceFallDownEffectGenerator">
+            <Should_Deactivate_Manually> true </Should_Deactivate_Manually>
+            <Starts_Active> true </Starts_Active>
+            <Effect_Generator_Entry Name="Entry1">
+               <Effect_Name> LaunchBallisticBehaviorEffect </Effect_Name>
+               <Duration>-1</Duration>
+               <Target_Gathering_Mask> Self </Target_Gathering_Mask>
+            </Effect_Generator_Entry>
+         </Effect_Generator>
+      </Effect_Generator_Data>
+
+
+      <BehaviorType Name="DeathFXBehaviorType">
+         <Death_Explosions>Novus_Small_Explosion_Land</Death_Explosions>
+         <Death_Speed_Min> 100.0 </Death_Speed_Min>
+         <Death_Speed_Max> 120.0 </Death_Speed_Max>
+         <Death_Ang_Min> 1.0 </Death_Ang_Min>
+         <Death_Ang_Max> 2.0 </Death_Ang_Max>
+         <Death_Horizontal_Speed>10.0</Death_Horizontal_Speed>
+         <Death_SFXEvent_Start_Die>SFX_Novus_Small_Vehicle_Death</Death_SFXEvent_Start_Die>
+         <Death_Fade_Time>120</Death_Fade_Time>
+         <Death_Persistence_Duration>125</Death_Persistence_Duration>
+      </BehaviorType>
+
+      <BehaviorType Name="ArmorAndDamageBehaviorType">
+         <Damage_Type> Damage_Default </Damage_Type>
+      </BehaviorType>
+
+      <BehaviorType Name="ResourceBehaviorType">
+         <Resource_Units> 300 </Resource_Units>
+         <Resource_For_Faction> Military, Novus, Alien, Masari </Resource_For_Faction>
+         <Is_Single_Resource> false </Is_Single_Resource>
+         <Use_Death_Behavior> true </Use_Death_Behavior>
+      </BehaviorType>
+
+   </X12_Novus_Units>
+
+   <X12_Novus_Units Name="Novus_Corruptor_Debris_01">
+
+      <!-- ART -->
+      <Land_Model_Name>NV_Chunk_Big.ALO</Land_Model_Name>
+      <Scale_Factor>1.0</Scale_Factor>
+      <AssetBank> BANK_NOVUS </AssetBank>
+
+      <!-- INTERFACE -->
+      <Text_ID>TEXT_NONE</Text_ID>
+      <Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+      <!-- ATTRIBUTES -->
+      <Remove_Upon_Death>true</Remove_Upon_Death>
+
+      <!-- Non-decoration debris will have to have HIDE_WHEN_FOGGED behavior to properly hide.-->
+      <!-- Decoration debris will not be created if spawned under FOW. -Oksana -->
+      <Is_Decoration>Yes</Is_Decoration>
+
+
+      <!-- CONFLICT -->
+      <Tactical_Health>9999</Tactical_Health>
+
+      <!-- BEHAVIORS -->
+      <LandBehavior>
+         BALLISTIC,
+         DEBRIS
+      </LandBehavior>
+
+      <BehaviorType Name="BallisticBehaviorType">
+         <Ballistic_Weight>6.0</Ballistic_Weight>
+         <Ballistic_Bounce>0.2</Ballistic_Bounce>
+      </BehaviorType>
+
+      <BehaviorType Name="DebrisBehaviorType">
+         <Debris_Min_Lifetime_Seconds> 3.0 </Debris_Min_Lifetime_Seconds>
+         <Debris_Max_Lifetime_Seconds> 7.0 </Debris_Max_Lifetime_Seconds>
+      </BehaviorType>
+
+      <BehaviorType Name="ArmorAndDamageBehaviorType">
+         <Damage_Type> Damage_Default </Damage_Type>
+      </BehaviorType>
+
+   </X12_Novus_Units>
+
+   <X12_Novus_Units Name="Novus_Corruptor_Debris_02">
+
+      <!-- ART -->
+      <Land_Model_Name>NV_Chunk_Medium.ALO</Land_Model_Name>
+      <Scale_Factor>1.0</Scale_Factor>
+      <AssetBank> BANK_NOVUS </AssetBank>
+
+      <!-- INTERFACE -->
+      <Text_ID>TEXT_NONE</Text_ID>
+      <Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+      <!-- ATTRIBUTES -->
+      <Remove_Upon_Death>true</Remove_Upon_Death>
+
+      <!-- Non-decoration debris will have to have HIDE_WHEN_FOGGED behavior to properly hide.-->
+      <!-- Decoration debris will not be created if spawned under FOW. -Oksana -->
+      <Is_Decoration>Yes</Is_Decoration>
+
+
+      <!-- CONFLICT -->
+      <Tactical_Health>9999</Tactical_Health>
+
+      <!-- BEHAVIORS -->
+      <LandBehavior>
+         BALLISTIC,
+         DEBRIS
+      </LandBehavior>
+
+      <BehaviorType Name="BallisticBehaviorType">
+         <Ballistic_Weight>4.0</Ballistic_Weight>
+         <Ballistic_Bounce>0.2</Ballistic_Bounce>
+      </BehaviorType>
+
+      <BehaviorType Name="DebrisBehaviorType">
+         <Debris_Min_Lifetime_Seconds> 3.0 </Debris_Min_Lifetime_Seconds>
+         <Debris_Max_Lifetime_Seconds> 7.0 </Debris_Max_Lifetime_Seconds>
+      </BehaviorType>
+
+      <BehaviorType Name="ArmorAndDamageBehaviorType">
+         <Damage_Type> Damage_Default </Damage_Type>
+      </BehaviorType>
+
+   </X12_Novus_Units>
+
+   <X12_Novus_Units Name="Novus_Corruptor_Debris_03">
+
+      <!-- ART -->
+      <Land_Model_Name>NV_Chunk_Small.ALO</Land_Model_Name>
+      <Scale_Factor>1.0</Scale_Factor>
+      <AssetBank> BANK_NOVUS </AssetBank>
+
+      <!-- INTERFACE -->
+      <Text_ID>TEXT_NONE</Text_ID>
+      <Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+      <!-- ATTRIBUTES -->
+      <Remove_Upon_Death>true</Remove_Upon_Death>
+
+      <!-- Non-decoration debris will have to have HIDE_WHEN_FOGGED behavior to properly hide.-->
+      <!-- Decoration debris will not be created if spawned under FOW. -Oksana -->
+      <Is_Decoration>Yes</Is_Decoration>
+
+
+      <!-- CONFLICT -->
+      <Tactical_Health>9999</Tactical_Health>
+
+      <!-- BEHAVIORS -->
+      <LandBehavior>
+         BALLISTIC,
+         DEBRIS
+      </LandBehavior>
+
+      <BehaviorType Name="BallisticBehaviorType">
+         <Ballistic_Weight>3.0</Ballistic_Weight>
+         <Ballistic_Bounce>0.25</Ballistic_Bounce>
+      </BehaviorType>
+
+      <BehaviorType Name="DebrisBehaviorType">
+         <Debris_Min_Lifetime_Seconds> 3.0 </Debris_Min_Lifetime_Seconds>
+         <Debris_Max_Lifetime_Seconds> 7.0 </Debris_Max_Lifetime_Seconds>
+      </BehaviorType>
+
+      <BehaviorType Name="ArmorAndDamageBehaviorType">
+         <Damage_Type> Damage_Default </Damage_Type>
+      </BehaviorType>
+
+   </X12_Novus_Units>
+
+
+	<!-- **************************************************************************************** -->
+	<!-- *** PROJECTILES ************************************************************************ -->
+	<!-- **************************************************************************************** -->
+
+
+	<X12_Novus_Corruptor Name="Unit_Novus_Corruptor_Radiation_Manager">
+
+		<!-- INTERFACE -->
+		<Is_Placed_By_Editor> false </Is_Placed_By_Editor>
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+
+		<!-- BEHAVIORS -->
+		<Behavior> RADIATION_MANAGER </Behavior>
+
+		<Radiation_Damage_Type> Damage_Novus_Corruptor_Laser </Radiation_Damage_Type>
+		<Radiation_Damage_Amount> 0 </Radiation_Damage_Amount>
+		<Radiation_Damage_Percentage> 0.0 </Radiation_Damage_Percentage>
+		<Radiation_Damage_Interval_In_Secs> 0.1 </Radiation_Damage_Interval_In_Secs>
+		<Radiation_Target_Categories> Small | Piloted | Huge | Stationary | Flying </Radiation_Target_Categories>
+
+		<Radiation_Decal_Name> NV_Corruptor_laser </Radiation_Decal_Name>
+		<Radiation_Decal_Duration_In_Secs> 0.0 </Radiation_Decal_Duration_In_Secs>
+
+		<BehaviorType Name="SFXBehaviorType">
+			<SFXEvent_Fire> SFX_Novus_Corruptor_Beam_Detonation_1 </SFXEvent_Fire>
+		</BehaviorType>
+
+	</X12_Novus_Corruptor>
+
+</Novus_Veh_Corrupter_XML>

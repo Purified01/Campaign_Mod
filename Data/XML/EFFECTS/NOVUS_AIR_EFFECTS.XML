@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Effects>
+	<!--*************************************************************************************************
+	************************************************************************************************** 
+	************************************************************************************************** 
+	**	
+	**												Collector
+	**	
+	************************************************************************************************** 
+	************************************************************************************************** 
+	************************************************************************************************* -->
+	<Effect Name="NovusCollectorGatherResourcesVisualEffect">
+		<Duration> 5.0 </Duration>
+		<Effect_Class> Transparent </Effect_Class>
+
+		<Effect_Component Type="Lightning">
+			<Lightning_Effect_Name> Novus_Constructor_Beam </Lightning_Effect_Name>
+			<Source_Target_Type> SourceToTarget </Source_Target_Type>
+			<Source_Bone_Name> MuzzleA_00 </Source_Bone_Name>
+         <Target_Bone_Names>Root</Target_Bone_Names>
+		</Effect_Component>
+
+      <Effect_Component Type="Lightning">
+         <Lightning_Effect_Name> Novus_Collectors_Beam_Glow </Lightning_Effect_Name>
+         <Source_Target_Type> SourceToTarget </Source_Target_Type>
+         <Source_Bone_Name> MuzzleA_00 </Source_Bone_Name>
+         <Target_Bone_Names>Root</Target_Bone_Names>
+      </Effect_Component>      
+
+      <!-- particle on the Target -->
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type>Novus_Collector_Target</Particle_System_Type>
+
+         <Position_Type>AtTarget</Position_Type>
+         <Attachment_Bone_Name/>
+
+         <Attractor_Type>AtSource</Attractor_Type>
+         <Attractor_Bone_Name/>
+
+      </Effect_Component>
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type>Novus_Collector_Target_Light</Particle_System_Type>
+
+         <Position_Type>AtTarget</Position_Type>
+         <Attachment_Bone_Name/>
+
+         <Attractor_Type>AtSource</Attractor_Type>
+         <Attractor_Bone_Name/>
+         <Z_Adjust_Position>Yes</Z_Adjust_Position>
+
+      </Effect_Component>
+
+      <!-- stop the target from moving -->
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Max_Speed_Mult_Coeff </Attribute>
+         <Modifier_Value> -2.0 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Red </Attribute>
+         <Modifier_Value> 0.2 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Green </Attribute>
+         <Modifier_Value> 0.50 </Modifier_Value>
+      </Effect_Component>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Render_Tint_Blue </Attribute>
+         <Modifier_Value> 0.75 </Modifier_Value>
+      </Effect_Component>
+
+      <!-- Frank, use this to hook in: Collector - No SFX when gathering resources.
+			  All you need is change Apply_Effect value. -->
+      <Effect_Component Type="Sound">
+         <Apply_Effect>SFX_Novus_Gather_Resources_Loop</Apply_Effect>
+         <SFX_Loop_Type>ResonanceBeamWeaponEffectSFX</SFX_Loop_Type>
+         <Stop_On_Remove>yes</Stop_On_Remove>
+      </Effect_Component>
+      
+      
+   </Effect>
+
+
+
+   <Effect Name="NovusCollectorGatherUpgradeVisualEffect">
+      <Duration> 5.0 </Duration>
+      <Effect_Class> Transparent </Effect_Class>
+
+      <Effect_Component Type="Lightning">
+         <Lightning_Effect_Name> Novus_Constructor_Beam </Lightning_Effect_Name>
+         <Source_Target_Type> SourceToTarget </Source_Target_Type>
+         <Source_Bone_Name> MuzzleA_00 </Source_Bone_Name>
+         <Target_Bone_Names/>
+      </Effect_Component>
+
+      <Effect_Component Type="Lightning">
+         <Lightning_Effect_Name> Novus_Collectors_Beam_Glow </Lightning_Effect_Name>
+         <Source_Target_Type> SourceToTarget </Source_Target_Type>
+         <Source_Bone_Name> MuzzleA_00 </Source_Bone_Name>
+         <Target_Bone_Names/>
+      </Effect_Component>
+
+      <Effect_Component Type="Lightning">
+         <Lightning_Effect_Name> Novus_Constructor_Beam_Upgrade </Lightning_Effect_Name>
+         <Source_Target_Type> SourceToTarget </Source_Target_Type>
+         <Source_Bone_Name> MuzzleA_00 </Source_Bone_Name>
+         <Target_Bone_Names/>
+      </Effect_Component>
+
+      <!-- particle on the target -->
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type>Novus_Collector_Target</Particle_System_Type>
+      </Effect_Component>
+
+		<!-- stop the target from moving -->
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Max_Speed_Mult_Coeff </Attribute>
+			<Modifier_Value> -2.0 </Modifier_Value>
+		</Effect_Component>
+
+		<!-- Frank, use this to hook in: Collector - No SFX when gathering resources.
+			  All you need is change Apply_Effect value. -->
+		<Effect_Component Type="Sound">
+			<Apply_Effect>SFX_Novus_Gather_Resources_Loop</Apply_Effect>
+			<SFX_Loop_Type>ResonanceBeamWeaponEffectSFX</SFX_Loop_Type>
+			<Stop_On_Remove>yes</Stop_On_Remove>
+		</Effect_Component>
+	</Effect>
+	
+	
+	
+	
+</Effects>

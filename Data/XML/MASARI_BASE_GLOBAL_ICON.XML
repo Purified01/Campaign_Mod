@@ -1,0 +1,237 @@
+<?xml version="1.0"?>
+<MASARI_Global_Icons>
+
+	<!-- These will be a sort of a dummy object that represents a real object -->
+	<!-- UNIT TRAY's BUILDING OBJECT DEFINITION -->
+	
+	<!-- Maria 05.18.2006 TODO -->
+	<!-- CHANGE THE NAMES OF THE MODELS TO THAT OF THE PROPER UNIT -->
+	
+	
+	<!-- When adding a new entry REMEMBER to add it to the list of bones at the end of this file!!.
+		 For example, when adding "Masari_R_and_D_Center_Global_Icon" add the entry
+		 Masari_R_and_D_Center_Global_Icon,					earth_sign
+		 to the Region_Label object (see below!)
+		 -->
+
+	<MASARI_Building_Global_Icon Name="Masari_Atlatea_Global_Icon">
+		<Galactic_Model_Name>i_ZB_HQ_atlatea.alo</Galactic_Model_Name>
+
+		<Behavior> IDLE, SELECTABLE </Behavior>
+		<Scale_Factor>0.75</Scale_Factor>
+		<Show_Name>No</Show_Name>
+		<Select_Box_Scale> 200 </Select_Box_Scale>
+
+		<BehaviorType Name="AlternateDamageStateBehaviorType">
+			<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+			<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+			<Land_Damage_SFX>null,SFX_GENERIC_DETONATION, SFX_GENERIC_DETONATION,null</Land_Damage_SFX>
+		</BehaviorType>		
+		
+		<BehaviorType Name="GlobalIconBehaviorType">
+			<!-- Only the Icon objects are Dummy Global Icons! -->
+			<Is_Dummy_Global_Icon> Yes </Is_Dummy_Global_Icon>
+			<Global_FOW_Group> GlobalFOWCommand </Global_FOW_Group>
+		</BehaviorType>
+	</MASARI_Building_Global_Icon>
+
+	<MASARI_Building_Global_Icon Name="Masari_Megaweapon_Global_Icon">
+		<Galactic_Model_Name>i_ZB_Megaweapon.alo</Galactic_Model_Name>
+
+		<Behavior> IDLE, SELECTABLE </Behavior>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Show_Name>No</Show_Name>
+		<Select_Box_Scale> 250 </Select_Box_Scale>
+
+		<BehaviorType Name="AlternateDamageStateBehaviorType">
+			<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+			<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+			<Land_Damage_SFX>null,SFX_GENERIC_DETONATION, SFX_GENERIC_DETONATION,null</Land_Damage_SFX>
+		</BehaviorType>		
+		
+		<BehaviorType Name="GlobalIconBehaviorType">
+			<!-- Only the Icon objects are Dummy Global Icons! -->
+			<Is_Dummy_Global_Icon> Yes </Is_Dummy_Global_Icon>
+			<Global_FOW_Group> GlobalFOWCommand </Global_FOW_Group>
+		</BehaviorType>
+	</MASARI_Building_Global_Icon>
+
+	<MASARI_Building_Global_Icon Name="Masari_Will_Processor_Global_Icon">
+		<Galactic_Model_Name>i_ZB_HQ_Science.alo</Galactic_Model_Name>
+
+		<Behavior> IDLE, SELECTABLE </Behavior>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Show_Name>No</Show_Name>
+		<Select_Box_Scale> 250 </Select_Box_Scale>
+
+		<BehaviorType Name="AlternateDamageStateBehaviorType">
+			<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+			<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+			<Land_Damage_SFX>null,SFX_GENERIC_DETONATION, SFX_GENERIC_DETONATION,null</Land_Damage_SFX>
+		</BehaviorType>		
+		
+		<BehaviorType Name="GlobalIconBehaviorType">
+			<!-- Only the Icon objects are Dummy Global Icons! -->
+			<Is_Dummy_Global_Icon> Yes </Is_Dummy_Global_Icon>
+			<Global_FOW_Group> GlobalFOWCommand </Global_FOW_Group>
+		</BehaviorType>
+	</MASARI_Building_Global_Icon>
+
+	<MASARI_Building_Global_Icon Name="Masari_Element_Magnet_Global_Icon">
+		<Galactic_Model_Name>i_ZB_HQ_Collector.alo</Galactic_Model_Name>
+
+		<Behavior> IDLE, SELECTABLE </Behavior>
+		<Scale_Factor>0.6</Scale_Factor>
+		<Show_Name>No</Show_Name>
+		<Select_Box_Scale> 225 </Select_Box_Scale>
+
+		<BehaviorType Name="AlternateDamageStateBehaviorType">
+			<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+			<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+			<Land_Damage_SFX>null,SFX_GENERIC_DETONATION, SFX_GENERIC_DETONATION,null</Land_Damage_SFX>
+		</BehaviorType>		
+		
+		<BehaviorType Name="GlobalIconBehaviorType">
+			<!-- Only the Icon objects are Dummy Global Icons! -->
+			<Is_Dummy_Global_Icon> Yes </Is_Dummy_Global_Icon>
+			<Global_FOW_Group> GlobalFOWCommand </Global_FOW_Group>
+		</BehaviorType>
+	</MASARI_Building_Global_Icon>
+
+	<MASARI_Building_Global_Icon Name="Masari_Key_Inspiration_Global_Icon">
+		<Galactic_Model_Name>i_zb_Key_Inspiration.alo</Galactic_Model_Name>
+
+		<Behavior> IDLE, SELECTABLE </Behavior>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Show_Name>No</Show_Name>
+		<Select_Box_Scale> 250 </Select_Box_Scale>
+
+		<BehaviorType Name="AlternateDamageStateBehaviorType">
+			<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+			<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+			<Land_Damage_SFX>null,SFX_GENERIC_DETONATION, SFX_GENERIC_DETONATION,null</Land_Damage_SFX>
+		</BehaviorType>		
+		
+		<BehaviorType Name="GlobalIconBehaviorType">
+			<!-- Only the Icon objects are Dummy Global Icons! -->
+			<Is_Dummy_Global_Icon> Yes </Is_Dummy_Global_Icon>
+			<Global_FOW_Group> GlobalFOWCommand </Global_FOW_Group>
+		</BehaviorType>
+		<BehaviorType Name="GUIBehaviorType">
+			<GUI_Scene_Name>Strategic_Upgrades_Purchase_Menu_Scene</GUI_Scene_Name>
+			<GUI_Receives_Input>true</GUI_Receives_Input>
+		</BehaviorType>
+
+	</MASARI_Building_Global_Icon>
+
+
+	<!-- UNIT TRAY's HERO OBJECT 1 DEFINITION  -->	
+	<MASARI_Hero1_Global_Icon Name="MASARI_Hero1_Icon">
+			
+		<Galactic_Model_Name>i_ZH_Altea.ALO</Galactic_Model_Name>
+		
+		<!-- BEHAVIORS -->
+		<Behavior> IDLE, SELECTABLE </Behavior>
+		<Scale_Factor>5.0</Scale_Factor>
+		<Show_Name>No</Show_Name>
+		<Select_Box_Scale> 20 </Select_Box_Scale>
+
+		<BehaviorType Name="GlobalIconBehaviorType">
+			<!-- Only the Icon objects are Dummy Global Icons! -->
+			<Is_Dummy_Global_Icon> Yes </Is_Dummy_Global_Icon>
+			<Global_FOW_Group> GlobalFOWHero </Global_FOW_Group>
+			<Peak_Light_Scale> 1.04 </Peak_Light_Scale>
+		</BehaviorType>
+
+      <BehaviorType Name="SFXBehaviorType">
+         <SFXEvent_Cant_Move_Unit_In_Production> MCO_GLOBAL_PROD_01 </SFXEvent_Cant_Move_Unit_In_Production>
+      </BehaviorType>
+
+   </MASARI_Hero1_Global_Icon>
+	
+	
+	<!-- UNIT TRAY's HERO OBJECT 2 DEFINITION -->
+	<MASARI_Hero2_Global_Icon Name="MASARI_Hero2_Icon">
+		
+		<Galactic_Model_Name>i_ZH_Charos.ALO</Galactic_Model_Name>
+		
+		<!-- BEHAVIORS -->
+		<Behavior>IDLE, SELECTABLE</Behavior>
+		<Scale_Factor>4.0</Scale_Factor>
+		<Show_Name>No</Show_Name>
+		<Select_Box_Scale> 23 </Select_Box_Scale>
+
+		<BehaviorType Name="GlobalIconBehaviorType">
+			<!-- Only the Icon objects are Dummy Global Icons! -->
+			<Is_Dummy_Global_Icon> Yes </Is_Dummy_Global_Icon>
+			<Global_FOW_Group> GlobalFOWHero </Global_FOW_Group>
+			<Peak_Light_Scale> 1.04 </Peak_Light_Scale>
+		</BehaviorType>
+
+      <BehaviorType Name="SFXBehaviorType">
+         <SFXEvent_Cant_Move_Unit_In_Production> MCO_GLOBAL_PROD_01 </SFXEvent_Cant_Move_Unit_In_Production>
+      </BehaviorType>
+
+   </MASARI_Hero2_Global_Icon>
+
+
+	<!-- UNIT TRAY's HERO OBJECT 3 DEFINITION -->
+	<MASARI_Hero3_Global_Icon Name="MASARI_Hero3_Icon">
+
+		<Galactic_Model_Name>i_ZH_Zessus.ALO</Galactic_Model_Name>
+		<No_Colorization_Color> 255, 200, 0, 255 </No_Colorization_Color>
+
+		<!-- BEHAVIORS -->
+		<Behavior>IDLE, SELECTABLE</Behavior>
+		<Scale_Factor>6.0</Scale_Factor>
+		<Show_Name>No</Show_Name>
+		<Select_Box_Scale> 15 </Select_Box_Scale>
+
+		<BehaviorType Name="GlobalIconBehaviorType">
+			<!-- Only the Icon objects are Dummy Global Icons! -->
+			<Is_Dummy_Global_Icon> Yes </Is_Dummy_Global_Icon>
+			<Global_FOW_Group> GlobalFOWHero </Global_FOW_Group>
+			<Peak_Light_Scale> 1.04 </Peak_Light_Scale>
+		</BehaviorType>
+
+      <BehaviorType Name="SFXBehaviorType">
+         <SFXEvent_Cant_Move_Unit_In_Production> MCO_GLOBAL_PROD_01 </SFXEvent_Cant_Move_Unit_In_Production>
+      </BehaviorType>
+
+   </MASARI_Hero3_Global_Icon>
+
+	<!-- UNIT TRAY DEFINITION -->
+	<MASARI_Base_Global_Icon Name="MASARI_Region_Label_Icon">
+			
+		<Galactic_Model_Name>Region_label_masari.alo</Galactic_Model_Name>
+		
+		<!--<Scale_Factor>0.3</Scale_Factor>-->
+		<!--<Scale_Factor>1.0</Scale_Factor>-->
+		<Show_Name>No</Show_Name>
+				
+		<!-- BEHAVIORS -->
+		<Behavior> REGION_LABEL </Behavior> 
+		
+		<BehaviorType Name="RegionLabelBehaviorType">
+			<Attached_Objects>	
+			<!--   TYPE				MODEL SUBOBJECT -->
+				Masari_Atlatea_Global_Icon,							earth_sign
+				Masari_Will_Processor_Global_Icon,					earth_sign
+				Masari_Element_Magnet_Global_Icon,					earth_sign
+				Masari_Key_Inspiration_Global_Icon,					earth_sign
+				Masari_Megaweapon_Global_Icon,						earth_sign
+				MASARI_Hero1_Icon,										hero_1
+				MASARI_Hero2_Icon,										hero_2
+				MASARI_Hero3_Icon,										hero_3
+			</Attached_Objects>
+		</BehaviorType>
+
+		<BehaviorType Name="GlobalIconBehaviorType">
+			<Global_FOW_Group> GlobalFOWLabel </Global_FOW_Group>
+		</BehaviorType>
+	
+	</MASARI_Base_Global_Icon>
+
+
+</MASARI_Global_Icons>
+

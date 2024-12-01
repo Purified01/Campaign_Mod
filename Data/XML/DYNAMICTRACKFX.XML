@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DynamicTracks>
+
+	<DynamicTrack name="Default">
+		<width>20.0f</width>
+		<opacity>1</opacity>
+		<segment_length>20</segment_length>
+        <fade_begin_distance>100.0</fade_begin_distance>
+        <fade_end_distance>150.0</fade_end_distance>
+        <fade_distance_per_second>10.0</fade_distance_per_second>
+        <texture_name>Trk_Dirt.tga</texture_name> 
+		<Render_Mode>DIFFUSE_ALPHA</Render_Mode>
+        <min_geometry_lod>0.25</min_geometry_lod>
+        
+	</DynamicTrack>
+
+
+	<DynamicTrack name="Track_Grass">
+		<width>20.0f</width>
+		<texture_name>Trk_Grass.tga</texture_name>
+		<opacity>1</opacity>
+		<segment_length>20</segment_length>
+        <fade_begin_distance>100.0</fade_begin_distance>
+        <fade_end_distance>150.0</fade_end_distance>
+        <fade_distance_per_second>10.0</fade_distance_per_second>
+		<Render_Mode>DIFFUSE_ALPHA</Render_Mode>
+        <min_geometry_lod>0.25</min_geometry_lod>
+
+	</DynamicTrack>
+
+	<DynamicTrack name="Track_Dirt">
+		<width>20.0f</width>
+		<texture_name>Trk_Dirt.tga</texture_name>
+		<opacity>1</opacity>
+		<segment_length>20</segment_length>
+        <fade_begin_distance>100.0</fade_begin_distance>
+        <fade_end_distance>150.0</fade_end_distance>
+        <fade_distance_per_second>10.0</fade_distance_per_second>
+		<Render_Mode>DIFFUSE_ALPHA</Render_Mode>
+        <min_geometry_lod>0.25</min_geometry_lod>
+
+	</DynamicTrack>
+
+	<DynamicTrack name="Track_Bump">
+	
+		<width>5.0f</width>
+		<texture_name>w_tank_track_01.tga</texture_name>
+		<opacity>1</opacity>
+		<segment_length>7</segment_length>
+        <fade_begin_distance>200.0</fade_begin_distance>
+        <fade_end_distance>280.0</fade_end_distance>
+        <fade_distance_per_second>10.0</fade_distance_per_second>
+		<Render_Mode>DECAL_BUMP_ALPHA</Render_Mode>
+        <min_geometry_lod>0.25</min_geometry_lod>
+
+	</DynamicTrack>
+
+	<DynamicTrack name="Track_Bump_Half">
+	
+		<width>2.5f</width>
+		<texture_name>w_tank_track_01.tga</texture_name>
+		<opacity>1</opacity>
+		<segment_length>7</segment_length>
+        <fade_begin_distance>220.0</fade_begin_distance>
+        <fade_end_distance>280.0</fade_end_distance>
+        <fade_distance_per_second>10.0</fade_distance_per_second>
+        <Render_Mode>DECAL_BUMP_ALPHA</Render_Mode>
+        <min_geometry_lod>0.25</min_geometry_lod>
+
+	</DynamicTrack>
+
+	<DynamicTrack name="Track_Bump_Half_Cracked">
+
+		<width>2.5f</width>
+		<texture_name>W_Tank_Track_cracks.tga</texture_name>
+		<opacity>1</opacity>
+		<segment_length>7</segment_length>
+		<fade_begin_distance>220.0</fade_begin_distance>
+		<fade_end_distance>280.0</fade_end_distance>
+		<fade_distance_per_second>10.0</fade_distance_per_second>
+		<Render_Mode>DECAL_BUMP_ALPHA</Render_Mode>
+		<min_geometry_lod>0.25</min_geometry_lod>
+
+	</DynamicTrack>
+	
+	<DynamicTrack name="Tire_Bump_Half">
+	
+		<width>2.5f</width>
+		<texture_name>MV_Hummer_Bump_track.tga</texture_name>
+		<opacity>1</opacity>
+		<segment_length>7</segment_length>
+        <fade_begin_distance>220.0</fade_begin_distance>
+        <fade_end_distance>280.0</fade_end_distance>
+        <fade_distance_per_second>10.0</fade_distance_per_second>
+        <Render_Mode>DECAL_BUMP_ALPHA</Render_Mode>
+        <min_geometry_lod>0.25</min_geometry_lod>
+
+	</DynamicTrack>
+
+	<DynamicTrack name="APC_Tire_Bump_Half">
+	
+		<width>2.5f</width>
+		<texture_name>MV_Defender_b_track.tga</texture_name>
+		<opacity>1</opacity>
+		<segment_length>7</segment_length>
+        <fade_begin_distance>220.0</fade_begin_distance>
+        <fade_end_distance>280.0</fade_end_distance>
+        <fade_distance_per_second>10.0</fade_distance_per_second>
+        <Render_Mode>DECAL_BUMP_ALPHA</Render_Mode>
+        <min_geometry_lod>0.25</min_geometry_lod>
+
+	</DynamicTrack>
+
+	<DynamicTrack name="Track_Bump_Concrete">
+	
+		<width>5.0f</width>
+		<texture_name>w_tank_track_01.tga</texture_name>
+		<opacity>.1</opacity>
+		<segment_length>1</segment_length>
+        <fade_begin_distance>220.0</fade_begin_distance>
+        <fade_end_distance>280.0</fade_end_distance>
+        <fade_distance_per_second>10.0</fade_distance_per_second>
+		<Render_Mode>DECAL_BUMP_ALPHA</Render_Mode> 
+        <min_geometry_lod>0.75</min_geometry_lod>
+
+	</DynamicTrack>
+
+	<DynamicTrack name="Track_Bump_Half_Concrete">
+	
+		<width>2.5f</width>
+		<texture_name>w_tank_track_01.tga</texture_name>
+		<opacity>.1</opacity>
+		<segment_length>1</segment_length>
+        <fade_begin_distance>220.0</fade_begin_distance>
+        <fade_end_distance>280.0</fade_end_distance>
+        <fade_distance_per_second>10.0</fade_distance_per_second>
+		<Render_Mode>DECAL_BUMP_ALPHA</Render_Mode> 
+        <min_geometry_lod>0.75</min_geometry_lod>
+
+	</DynamicTrack>
+
+
+	<DynamicTrack name="Track_Bump_Ripple">
+
+		<width>2.5f</width>
+		<texture_name>w_footprint_track_ripple.tga</texture_name>
+		<opacity>1.</opacity>
+		<segment_length>1</segment_length>
+		<fade_begin_distance>60.0</fade_begin_distance>
+		<fade_end_distance>180.0</fade_end_distance>
+		<fade_distance_per_second>10.0</fade_distance_per_second>
+		<Render_Mode>DECAL_BUMP_ALPHA</Render_Mode>
+		<min_geometry_lod>0.8</min_geometry_lod>
+
+	</DynamicTrack>
+
+	
+
+	<DynamicTrack name="Footprint_Bump">
+	
+		<width>2.0f</width>
+		<texture_name>w_footprint00.tga</texture_name>
+		<opacity>.7</opacity>
+		<segment_length>6.0</segment_length>
+        <fade_begin_distance>75.0</fade_begin_distance>
+        <fade_end_distance>100.0</fade_end_distance>
+        <fade_distance_per_second>5.0</fade_distance_per_second>
+		<Render_Mode>DECAL_BUMP_ALPHA</Render_Mode> 
+        <min_geometry_lod>0.9</min_geometry_lod>
+
+	</DynamicTrack>
+
+	<DynamicTrack name="Footprint_Bump_Concrete">
+	
+		<width>2.0f</width>
+		<texture_name>w_footprint00.tga</texture_name>
+		<opacity>.1</opacity>
+		<segment_length>1</segment_length>
+        <fade_begin_distance>10.0</fade_begin_distance>
+        <fade_end_distance>100.0</fade_end_distance>
+        <fade_distance_per_second>10.0</fade_distance_per_second>
+		<Render_Mode>DECAL_BUMP_ALPHA</Render_Mode> 
+        <min_geometry_lod>0.9</min_geometry_lod>
+
+	</DynamicTrack>
+
+	<DynamicTrack name="Footprint_Novus_OHM">
+
+		<width>3.0f</width>
+		<texture_name>W_footprint_NI_Ohm_bot.tga</texture_name>
+		<opacity>1.0</opacity>
+		<segment_length>12.0</segment_length>
+		<fade_begin_distance>60.0</fade_begin_distance>
+		<fade_end_distance>100.0</fade_end_distance>
+		<fade_distance_per_second>8.0</fade_distance_per_second>
+		<Render_Mode>DECAL_BUMP_ALPHA</Render_Mode>
+		<min_geometry_lod>0.9</min_geometry_lod>
+
+	</DynamicTrack>
+
+   <DynamicTrack name="Footprint_Novus_Hacker">
+
+      <width>3.0f</width>
+      <texture_name>w_footprint00.tga</texture_name>
+      <opacity>.7</opacity>
+      <segment_length>10.0</segment_length>
+      <fade_begin_distance>75.0</fade_begin_distance>
+      <fade_end_distance>100.0</fade_end_distance>
+      <fade_distance_per_second>5.0</fade_distance_per_second>
+      <Render_Mode>DECAL_BUMP_ALPHA</Render_Mode>
+      <min_geometry_lod>0.9</min_geometry_lod>
+
+   </DynamicTrack>
+
+	<DynamicTrack name="Masari_Disciple_Footprint_Bump">
+
+		<width>6.0f</width>
+		<texture_name>w_footprint_ZI_Disciple.tga</texture_name>
+		<opacity>0.9</opacity>
+		<segment_length>13.0</segment_length>
+		<fade_begin_distance>60.0</fade_begin_distance>
+		<fade_end_distance>100.0</fade_end_distance>
+		<fade_distance_per_second>4.5</fade_distance_per_second>
+		<Render_Mode>DECAL_BUMP_ALPHA</Render_Mode>
+		<min_geometry_lod>0.9</min_geometry_lod>
+
+	</DynamicTrack>
+
+	<DynamicTrack name="Masari_Avenger_Footprint_Bump">
+
+		<width>5.0f</width>
+		<texture_name>w_footprint_ZI_Avenger.tga</texture_name>
+		<opacity>0.8</opacity>
+		<segment_length>12.0</segment_length>
+		<fade_begin_distance>60.0</fade_begin_distance>
+		<fade_end_distance>100.0</fade_end_distance>
+		<fade_distance_per_second>5.0</fade_distance_per_second>
+		<Render_Mode>DECAL_BUMP_ALPHA</Render_Mode>
+		<min_geometry_lod>0.9</min_geometry_lod>
+
+	</DynamicTrack>
+
+	<DynamicTrack name="Masari_Architect_Footprint_Bump">
+
+		<width>6.0f</width>
+		<texture_name>w_footprint_ZI_Architect.tga</texture_name>
+		<opacity>0.9</opacity>
+		<segment_length>20.0</segment_length>
+		<fade_begin_distance>60.0</fade_begin_distance>
+		<fade_end_distance>100.0</fade_end_distance>
+		<fade_distance_per_second>3.0</fade_distance_per_second>
+		<Render_Mode>DECAL_BUMP_ALPHA</Render_Mode>
+		<min_geometry_lod>0.9</min_geometry_lod>
+
+	</DynamicTrack>
+
+	<DynamicTrack name="Masari_Atlatea_Footprint_Bump">
+
+		<width>10.0f</width>
+		<texture_name>w_footprint_ZI_Atlatea.tga</texture_name>
+		<opacity>0.9</opacity>
+		<segment_length>12.0</segment_length>
+		<fade_begin_distance>60.0</fade_begin_distance>
+		<fade_end_distance>100.0</fade_end_distance>
+		<fade_distance_per_second>3.0</fade_distance_per_second>
+		<Render_Mode>DECAL_BUMP_ALPHA</Render_Mode>
+		<min_geometry_lod>0.9</min_geometry_lod>
+
+	</DynamicTrack>
+
+
+	<DynamicTrack name="Masari_Sentry_Wheel_track_Bump">
+
+		<width>4.0f</width>
+		<texture_name>w_footprint_ZV_Sentry_Wheel.tga</texture_name>
+		<opacity>0.7</opacity>
+		<segment_length>8.0</segment_length>
+		<fade_begin_distance>150.0</fade_begin_distance>
+		<fade_end_distance>300.0</fade_end_distance>
+		<fade_distance_per_second>5.0</fade_distance_per_second>
+		<Render_Mode>DECAL_BUMP_ALPHA</Render_Mode>
+		<min_geometry_lod>0.9</min_geometry_lod>
+
+	</DynamicTrack>
+
+	<DynamicTrack name="Masari_Sentry_Wheel_track_Bump_concrete">
+
+		<width>4.0f</width>
+		<texture_name>w_footprint_ZV_Sentry_Wheel_concrete.tga</texture_name>
+		<opacity>1.0</opacity>
+		<segment_length>8.0</segment_length>
+		<fade_begin_distance>150.0</fade_begin_distance>
+		<fade_end_distance>300.0</fade_end_distance>
+		<fade_distance_per_second>5.0</fade_distance_per_second>
+		<Render_Mode>DECAL_BUMP_ALPHA</Render_Mode>
+		<min_geometry_lod>0.9</min_geometry_lod>
+
+	</DynamicTrack>
+
+	<DynamicTrack name="Masari_Sentry_Wheel_track_concrete">
+		<width>4.3f</width>
+		<texture_name>w_footprint_ZV_Sentry_Wheel.tga</texture_name>
+		<opacity>1.0</opacity>
+		<segment_length>8.0</segment_length>
+		<fade_begin_distance>3.0</fade_begin_distance>
+		<fade_end_distance>200.0</fade_end_distance>
+		<fade_distance_per_second>5.0</fade_distance_per_second>
+		<Render_Mode>DECAL_BUMP_ALPHA</Render_Mode>
+		<min_geometry_lod>0.9</min_geometry_lod>
+
+	</DynamicTrack>
+
+	
+
+	<DynamicTrack name="Masari_Enforcer_Wheel_track_Bump">
+
+		<width>5.5f</width>
+		<texture_name>w_footprint_ZV_Enforcer_Wheel.tga</texture_name>
+		<opacity>0.7</opacity>
+		<segment_length>8.0</segment_length>
+		<fade_begin_distance>80.0</fade_begin_distance>
+		<fade_end_distance>300.0</fade_end_distance>
+		<fade_distance_per_second>5.0</fade_distance_per_second>
+		<Render_Mode>DECAL_BUMP_ALPHA</Render_Mode>
+		<min_geometry_lod>0.9</min_geometry_lod>
+
+	</DynamicTrack>
+
+	<DynamicTrack name="Masari_Enforcer_Wheel_track_concrete">
+		<width>4.5f</width>
+		<texture_name>w_footprint_ZV_Enforcer_Wheel_concrete.tga</texture_name>
+		<opacity>1.0</opacity>
+		<segment_length>8.0</segment_length>
+		<fade_begin_distance>3.0</fade_begin_distance>
+		<fade_end_distance>200.0</fade_end_distance>
+		<fade_distance_per_second>5.0</fade_distance_per_second>
+		<Render_Mode>DECAL_BUMP_ALPHA</Render_Mode>
+		<min_geometry_lod>0.9</min_geometry_lod>
+
+	</DynamicTrack>
+
+	<DynamicTrack name="Masari_Peacebringer_Wheel_track_Bump">
+
+		<width>4.0f</width>
+		<texture_name>w_footprint_ZV_Sentry_Wheel.tga</texture_name>
+		<opacity>0.7</opacity>
+		<segment_length>6.0</segment_length>
+		<fade_begin_distance>150.0</fade_begin_distance>
+		<fade_end_distance>300.0</fade_end_distance>
+		<fade_distance_per_second>5.0</fade_distance_per_second>
+		<Render_Mode>DECAL_BUMP_ALPHA</Render_Mode>
+		<min_geometry_lod>0.9</min_geometry_lod>
+
+	</DynamicTrack>
+   
+   <!-- ======================================= ALIENS ============================= -->
+
+   <DynamicTrack name="Alien_Lost_Ones_footprint_Bump">
+
+      <width>6.0f</width>
+      <texture_name>w_footprint_AI_Lost_one.tga</texture_name>
+      <opacity>0.7</opacity>
+      <segment_length>10.0</segment_length>
+      <fade_begin_distance>40.0</fade_begin_distance>
+      <fade_end_distance>100.0</fade_end_distance>
+      <fade_distance_per_second>5.0</fade_distance_per_second>
+      <Render_Mode>DECAL_BUMP_ALPHA</Render_Mode>
+      <min_geometry_lod>0.9</min_geometry_lod>
+
+   </DynamicTrack>
+
+   <DynamicTrack name="Alien_Zombie_footprint_Bump">
+
+      <width>3.0f</width>
+      <texture_name>W_footprint_Zombie.tga</texture_name>
+      <opacity>1.0</opacity>
+      <segment_length>10.0</segment_length>
+      <fade_begin_distance>40.0</fade_begin_distance>
+      <fade_end_distance>100.0</fade_end_distance>
+      <fade_distance_per_second>5.0</fade_distance_per_second>
+      <Render_Mode>DECAL_BUMP_ALPHA</Render_Mode>
+      <min_geometry_lod>0.9</min_geometry_lod>
+
+   </DynamicTrack>
+
+   <DynamicTrack name="Alien_Zombie_Cow_footprint_Bump">
+
+      <width>3.0f</width>
+      <texture_name>W_footprint_Zombie_cow.tga</texture_name>
+      <opacity>1.0</opacity>
+      <segment_length>6.0</segment_length>
+      <fade_begin_distance>40.0</fade_begin_distance>
+      <fade_end_distance>100.0</fade_end_distance>
+      <fade_distance_per_second>5.0</fade_distance_per_second>
+      <Render_Mode>DECAL_BUMP_ALPHA</Render_Mode>
+      <min_geometry_lod>0.9</min_geometry_lod>
+
+   </DynamicTrack>
+
+   <DynamicTrack name="Alien_Grunt_footprint_Bump">
+
+      <width>9.5</width>
+      <texture_name>w_footprint_AI_Grunt.tga</texture_name>
+      <opacity>1.0</opacity>
+      <segment_length>15.0</segment_length>
+      <fade_begin_distance>40.0</fade_begin_distance>
+      <fade_end_distance>100.0</fade_end_distance>
+      <fade_distance_per_second>5.0</fade_distance_per_second>
+      <Render_Mode>DECAL_BUMP_ALPHA</Render_Mode>
+      <min_geometry_lod>0.9</min_geometry_lod>
+
+   </DynamicTrack>
+
+</DynamicTracks>

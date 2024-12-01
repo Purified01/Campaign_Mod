@@ -1,0 +1,805 @@
+<?xml version="1.0"?>
+
+<TradeRoutes>
+
+
+<!-- 
+
+	PMP 11/02/06 Current Naming Convention for the regions:
+
+	North America
+
+		Region22 (Appalachia)
+		Region23 (Gulf Coast)
+		Region24 (Midwest)
+		Region26 (Pacific Northwest)
+		Region27 (Sierra Nevada)
+
+	Central America
+
+		Region34 (Anahuac)
+		Region35 (Central America)
+
+	South America
+
+		Region29 (Brazillian Highlands)
+		Region30 (Altiplano)
+		Region31 (Amazon Basin)
+		Region33 (Guiana)
+
+	Europe
+
+		Region1  (British Isles)
+		Region3  (Western Europe)
+		Region4  (Eastern Europe)
+
+	Africa
+
+		Region15 (Middle East)
+		Region16 (Sahara)
+		Region17 (East Africa)
+		Region18 (North Africa)
+		Region20 (Congo)
+		Region21 (South Africa)
+
+	Asia
+
+		Region07 (Turkestan)
+		Region8  (Eastern Siberia)
+		Region9  (Tibetan Plateau)
+		Region11 (Kamchatka)
+		Region13 (Indochina)
+
+-->
+
+
+
+
+
+
+
+<!-- PMP 11/02/06: These routes used for full global map -->
+
+
+	<!-- REGION 25 connectivity 
+	
+		<TradeRoute Name="Region25_Region27">
+			<Point_A>Region25</Point_A>
+			<Point_B>Region27</Point_B>
+		</TradeRoute> 
+	    
+		<TradeRoute Name="Region25_Region24">
+			<Point_A>Region25</Point_A>
+			<Point_B>Region24</Point_B>
+		</TradeRoute> 
+	    
+		<TradeRoute Name="Region25_Region23">
+			<Point_A>Region25</Point_A>
+			<Point_B>Region23</Point_B>
+		</TradeRoute>
+
+		<TradeRoute Name="Region25_Region26">
+			<Point_A>Region25</Point_A>
+			<Point_B>Region26</Point_B>
+		</TradeRoute>
+
+		<TradeRoute Name="Region25_Region22">
+			<Point_A>Region25</Point_A>
+			<Point_B>Region22</Point_B>
+		</TradeRoute>
+
+		<TradeRoute Name="Region25_Region34">
+			<Point_A>Region25</Point_A>
+			<Point_B>Region34</Point_B>
+		</TradeRoute>
+	-->
+		
+	<!-- REGION 26 connectivity -->
+	
+		<TradeRoute Name="Region26_Region27">
+			<Point_A>Region26</Point_A>
+			<Point_B>Region27</Point_B>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute> 
+	    
+		<TradeRoute Name="Region26_Region24">
+			<Point_A>Region26</Point_A>
+			<Point_B>Region24</Point_B>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute> 
+
+		<TradeRoute Name="Region26_Region11">
+			<Point_A>Region26</Point_A>
+			<Point_B>Region11</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute>
+
+		<!-- JSY reducing connnectivity so that hero range works better -->
+		<!--<TradeRoute Name="Region26_Region23">
+				<Point_A>Region26</Point_A>
+				<Point_B>Region23</Point_B>
+				<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+			</TradeRoute> -->
+
+		<!--<TradeRoute Name="Region26_Region22">
+				<Point_A>Region26</Point_A>
+				<Point_B>Region22</Point_B>
+				<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+			</TradeRoute> -->
+
+		<!--<TradeRoute Name="Region26_Region34">
+				<Point_A>Region26</Point_A>
+				<Point_B>Region34</Point_B>
+				<HS_Speed_Factor>1.0</HS_Speed_Factor>
+				<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+			</TradeRoute>-->
+	
+	<!-- REGION 27 connectivity -->
+    
+		<TradeRoute Name="Region27_Region24">
+			<Point_A>Region27</Point_A>
+			<Point_B>Region24</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute> 
+	    
+		<TradeRoute Name="Region27_Region23">
+			<Point_A>Region27</Point_A>
+			<Point_B>Region23</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute>
+
+		<TradeRoute Name="Region27_Region34">
+			<Point_A>Region27</Point_A>
+			<Point_B>Region34</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute>
+
+		<TradeRoute Name="Region27_Region11">
+			<Point_A>Region27</Point_A>
+			<Point_B>Region11</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute>
+
+		<!-- JSY reducing connnectivity so that hero range works better -->
+		<!--<TradeRoute Name="Region27_Region22">
+			<Point_A>Region27</Point_A>
+			<Point_B>Region22</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute>-->
+
+	<!-- REGION 24 connectivity -->
+    
+		<TradeRoute Name="Region24_Region23">
+			<Point_A>Region24</Point_A>
+			<Point_B>Region23</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute> 
+
+		<TradeRoute Name="Region24_Region22">
+			<Point_A>Region24</Point_A>
+			<Point_B>Region22</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute> 
+
+
+	<!-- REGION 23 connectivity -->
+    
+		<TradeRoute Name="Region23_Region22">
+			<Point_A>Region23</Point_A>
+			<Point_B>Region22</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute> 
+
+		<TradeRoute Name="Region23_Region34">
+			<Point_A>Region23</Point_A>
+			<Point_B>Region34</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute> 
+
+
+	<!-- REGION 22 connectivity -->
+    
+		<TradeRoute Name="Region22_Region01">
+			<Point_A>Region22</Point_A>
+			<Point_B>Region1</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute> 
+
+
+	<!-- REGION 34 connectivity -->
+    
+		<TradeRoute Name="Region34_Region35">
+			<Point_A>Region34</Point_A>
+			<Point_B>Region35</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute> 
+
+
+	<!-- REGION 35 connectivity -->
+    
+		<TradeRoute Name="Region35_Region33">
+			<Point_A>Region35</Point_A>
+			<Point_B>Region33</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute> 
+
+
+	<!-- REGION 33 connectivity -->
+    
+		<TradeRoute Name="Region33_Region31">
+			<Point_A>Region33</Point_A>
+			<Point_B>Region31</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute> 
+
+		<TradeRoute Name="Region33_Region30">
+			<Point_A>Region33</Point_A>
+			<Point_B>Region30</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute>
+
+		<!-- JSY reducing connnectivity so that hero range works better -->
+		<!--<TradeRoute Name="Region33_Region29">
+			<Point_A>Region33</Point_A>
+			<Point_B>Region29</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute>-->
+
+
+		<!-- REGION 31 connectivity -->
+
+		<TradeRoute Name="Region31_Region29">
+			<Point_A>Region31</Point_A>
+			<Point_B>Region29</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute> 
+		
+		<TradeRoute Name="Region31_Region30">
+			<Point_A>Region31</Point_A>
+			<Point_B>Region30</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute>
+
+
+		<!-- REGION 30 connectivity -->
+
+		<TradeRoute Name="Region30_Region29">
+			<Point_A>Region30</Point_A>
+			<Point_B>Region29</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute> 
+
+
+	<!-- REGION 29 connectivity -->
+    
+		<TradeRoute Name="Region29_Region18">
+			<Point_A>Region29</Point_A>
+			<Point_B>Region18</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute> 
+
+
+
+	<!-- REGION 01 connectivity -->
+    
+		<TradeRoute Name="Region01_Region03">
+			<Point_A>Region1</Point_A>
+			<Point_B>Region3</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute>
+
+		<TradeRoute Name="Region01_Region18">
+			<Point_A>Region1</Point_A>
+			<Point_B>Region18</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute>
+
+		<!-- JSY reducing connnectivity so that hero range works better -->
+		<!--<TradeRoute Name="Region01_Region04">
+			<Point_A>Region1</Point_A>
+			<Point_B>Region4</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute>-->
+	
+	<!-- REGION 03 connectivity -->
+    
+		<TradeRoute Name="Region03_Region04">
+			<Point_A>Region3</Point_A>
+			<Point_B>Region4</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute>
+
+		<!-- JSY reducing connnectivity so that hero range works better -->
+		<!--<TradeRoute Name="Region03_Region16">
+			<Point_A>Region3</Point_A>
+			<Point_B>Region16</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute>-->
+
+
+	<!-- REGION 04 connectivity -->
+
+		<TradeRoute Name="Region04_Region07">
+			<Point_A>Region4</Point_A>
+			<Point_B>Region7</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute>
+
+		<!-- JSY reducing connnectivity so that hero range works better -->
+		<!--<TradeRoute Name="Region04_Region15">
+			<Point_A>Region4</Point_A>
+			<Point_B>Region15</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute>-->
+
+
+	<!-- REGION 18 connectivity -->
+
+		<TradeRoute Name="Region18_Region16">
+			<Point_A>Region18</Point_A>
+			<Point_B>Region16</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute> 
+
+		<TradeRoute Name="Region18_Region20">
+			<Point_A>Region18</Point_A>
+			<Point_B>Region20</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute>
+
+		<!-- JSY reducing connnectivity so that hero range works better -->
+		<!--<TradeRoute Name="Region18_Region17">
+			<Point_A>Region18</Point_A>
+			<Point_B>Region17</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute> 
+
+		<TradeRoute Name="Region18_Region21">
+			<Point_A>Region18</Point_A>
+			<Point_B>Region21</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute>
+
+		<TradeRoute Name="Region18_Region15">
+			<Point_A>Region18</Point_A>
+			<Point_B>Region15</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute>-->
+	
+	<!-- REGION 16 connectivity -->
+
+		<TradeRoute Name="Region16_Region15">
+			<Point_A>Region16</Point_A>
+			<Point_B>Region15</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute> 
+
+		<TradeRoute Name="Region16_Region17">
+			<Point_A>Region16</Point_A>
+			<Point_B>Region17</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute> 
+
+		<TradeRoute Name="Region16_Region20">
+			<Point_A>Region16</Point_A>
+			<Point_B>Region20</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute>
+
+		<!-- JSY reducing connnectivity so that hero range works better -->
+		<!--<TradeRoute Name="Region16_Region21">
+			<Point_A>Region16</Point_A>
+			<Point_B>Region21</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute>-->
+
+
+	<!-- REGION 15 connectivity -->
+
+		<TradeRoute Name="Region15_Region07">
+			<Point_A>Region15</Point_A>
+			<Point_B>Region7</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute> 
+
+		<TradeRoute Name="Region15_Region17">
+			<Point_A>Region15</Point_A>
+			<Point_B>Region17</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute>
+
+		<!-- JSY reducing connnectivity so that hero range works better -->
+		<!--<TradeRoute Name="Region15_Region20">
+			<Point_A>Region15</Point_A>
+			<Point_B>Region20</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute> 
+
+		<TradeRoute Name="Region15_Region21">
+			<Point_A>Region15</Point_A>
+			<Point_B>Region21</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute>-->
+
+
+		<!-- REGION 17 connectivity -->
+
+		<TradeRoute Name="Region17_Region20">
+			<Point_A>Region17</Point_A>
+			<Point_B>Region20</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute> 
+
+		<TradeRoute Name="Region17_Region21">
+			<Point_A>Region17</Point_A>
+			<Point_B>Region21</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute> 
+
+
+	<!-- REGION 20 connectivity -->
+
+		<TradeRoute Name="Region20_Region21">
+			<Point_A>Region20</Point_A>
+			<Point_B>Region21</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute> 
+
+
+	<!-- REGION 07 connectivity -->
+
+		<TradeRoute Name="Region07_Region09">
+			<Point_A>Region7</Point_A>
+			<Point_B>Region9</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute> 
+
+		<TradeRoute Name="Region07_Region08">
+			<Point_A>Region7</Point_A>
+			<Point_B>Region8</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute>
+
+		<!-- JSY reducing connnectivity so that hero range works better -->
+		<!--<TradeRoute Name="Region07_Region13">
+			<Point_A>Region7</Point_A>
+			<Point_B>Region13</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute> 
+
+		<TradeRoute Name="Region07_Region11">
+			<Point_A>Region7</Point_A>
+			<Point_B>Region11</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute>-->
+
+
+	<!-- REGION 09 connectivity -->
+
+		<TradeRoute Name="Region09_Region08">
+			<Point_A>Region9</Point_A>
+			<Point_B>Region8</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute> 
+
+		<TradeRoute Name="Region09_Region13">
+			<Point_A>Region9</Point_A>
+			<Point_B>Region13</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute>
+
+		<!-- JSY reducing connnectivity so that hero range works better -->
+		<!--<TradeRoute Name="Region09_Region11">
+			<Point_A>Region9</Point_A>
+			<Point_B>Region11</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute>-->
+
+
+	<!-- REGION 08 connectivity -->
+
+		<TradeRoute Name="Region08_Region13">
+			<Point_A>Region8</Point_A>
+			<Point_B>Region13</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute> 
+
+		<TradeRoute Name="Region08_Region11">
+			<Point_A>Region8</Point_A>
+			<Point_B>Region11</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute> 
+
+	<!-- REGION 13 connectivity -->
+
+		<TradeRoute Name="Region13_Region11">
+			<Point_A>Region13</Point_A>
+			<Point_B>Region11</Point_B>
+			<HS_Speed_Factor>1.0</HS_Speed_Factor>
+			<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+		</TradeRoute> 
+
+
+    <!-- jdg 10/23/06 the following are the initial routes being used in the Novus Campaign...will 
+    probably be wiped or modified at some future point -->
+    
+	<!-- PMP 11/02/06 Removed duplicate named routes, left all others intact -->
+    
+    <!-- Start spot to tut01 connectivity -->    
+    
+    <!-- tut01 to tut02 connectivity     
+    <TradeRoute Name="Region22_Region23">
+            <Point_A>Region22</Point_A>
+            <Point_B>Region23</Point_B>
+            <HS_Speed_Factor>1.0</HS_Speed_Factor>
+    </TradeRoute>-->
+    
+	<!-- tut02 to NM01 connectivity -->    
+	<TradeRoute Name="Region22_Region15">
+		<Point_A>Region22</Point_A>
+		<Point_B>Region15</Point_B>
+		<HS_Speed_Factor>5.0</HS_Speed_Factor>
+		<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+	</TradeRoute>
+
+	<!-- NM01 to NM02 connectivity -->    
+	<TradeRoute Name="Region15_Region1">
+		<Point_A>Region15</Point_A>
+		<Point_B>Region1</Point_B>
+		<HS_Speed_Factor>1.0</HS_Speed_Factor>
+		<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+	</TradeRoute>
+
+	<!-- NM02 to NM03 connectivity -->
+	<TradeRoute Name="Region1_Region8">
+		<Point_A>Region1</Point_A>
+		<Point_B>Region8</Point_B>
+		<HS_Speed_Factor>1.0</HS_Speed_Factor>
+		<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+	</TradeRoute>
+
+	<!-- NM03 to NM04 connectivity -->    
+	<TradeRoute Name="Region8_Region7">
+		<Point_A>Region8</Point_A>
+		<Point_B>Region7</Point_B>
+		<HS_Speed_Factor>1.0</HS_Speed_Factor>
+		<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+	</TradeRoute>
+
+	<!-- NM04 to NM05 connectivity -->    
+	<TradeRoute Name="Region7_Region21">
+		<Point_A>Region7</Point_A>
+		<Point_B>Region21</Point_B>
+		<HS_Speed_Factor>1.0</HS_Speed_Factor>
+		<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+	</TradeRoute>
+
+	<!-- NM05 to NM06 connectivity --> 
+	<TradeRoute Name="Region21_Region30">
+		<Point_A>Region21</Point_A>
+		<Point_B>Region30</Point_B>
+		<HS_Speed_Factor>1.0</HS_Speed_Factor>
+		<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+	</TradeRoute>
+
+
+	<!-- NM06 to NM07 connectivity --> 
+	<TradeRoute Name="Region30_Region15">
+		<Point_A>Region30</Point_A>
+		<Point_B>Region15</Point_B>
+		<HS_Speed_Factor>1.0</HS_Speed_Factor>
+		<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+	</TradeRoute>
+
+	<TradeRoute Name="Region27_Region22">
+		<Point_A>Region27</Point_A>
+		<Point_B>Region22</Point_B>
+		<HS_Speed_Factor>1.0</HS_Speed_Factor>
+		<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+	</TradeRoute>
+	
+	<!-- jdg 10/23/06 above are the initial routes being used in the Novus Campaign...will 
+	probably be wiped or modified at some future point -->
+
+	<!-- jgs 12/01/06 the following are the initial routes being used in the Hierarchy Campaign...will 
+	probably be wiped or modified at some future point -->
+
+	<!-- ZM01 to ZM02 connectivity -->
+	<TradeRoute Name="Region23_Region16">
+		<Point_A>Region23</Point_A>
+		<Point_B>Region16</Point_B>
+		<HS_Speed_Factor>5.0</HS_Speed_Factor>
+		<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+	</TradeRoute>
+
+	<!-- ZM02 to ZM03 connectivity -->    
+	<TradeRoute Name="Region22_Region23">
+		<Point_A>Region22</Point_A>
+		<Point_B>Region23</Point_B>
+		<HS_Speed_Factor>1.0</HS_Speed_Factor>
+		<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+	</TradeRoute>
+
+	<!-- ZM03 to ZM04 connectivity -->    
+	<TradeRoute Name="Region22_Region30">
+		<Point_A>Region22</Point_A>
+		<Point_B>Region30</Point_B>
+		<HS_Speed_Factor>1.0</HS_Speed_Factor>
+		<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+	</TradeRoute>
+
+	<!-- ZM04 to ZM05 connectivity -->
+	<TradeRoute Name="Region30_Region13">
+		<Point_A>Region30</Point_A>
+		<Point_B>Region13</Point_B>
+		<HS_Speed_Factor>1.0</HS_Speed_Factor>
+		<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+	</TradeRoute> 
+
+	<!-- ZM05 to ZM06 connectivity -->    
+	<TradeRoute Name="Region13_Region35">
+		<Point_A>Region13</Point_A>
+		<Point_B>Region35</Point_B>
+		<HS_Speed_Factor>1.0</HS_Speed_Factor>
+		<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+	</TradeRoute> 
+
+	<!-- jgs 12/01/06 above are the initial routes being used in the Hierarchy Campaign...will 
+	probably be wiped or modified at some future point -->
+
+	<!-- jgs 3/29/07 the following are the initial routes being used in the Masari Campaign...will 
+	probably be wiped or modified at some future point -->
+
+	<!-- Masari Global Campaign connectivity -->
+
+	<TradeRoute Name="Region17_Region16">
+		<Point_A>Region17</Point_A>
+		<Point_B>Region16</Point_B>
+		<HS_Speed_Factor>50</HS_Speed_Factor>
+		<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+	</TradeRoute>
+
+	<TradeRoute Name="Region17_Region20">
+		<Point_A>Region17</Point_A>
+		<Point_B>Region20</Point_B>
+		<HS_Speed_Factor>50</HS_Speed_Factor>
+		<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+	</TradeRoute>
+
+	<TradeRoute Name="Region16_Region20">
+		<Point_A>Region16</Point_A>
+		<Point_B>Region20</Point_B>
+		<HS_Speed_Factor>50</HS_Speed_Factor>
+		<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+	</TradeRoute>
+
+	<TradeRoute Name="Region16_Region18">
+		<Point_A>Region16</Point_A>
+		<Point_B>Region18</Point_B>
+		<HS_Speed_Factor>50</HS_Speed_Factor>
+		<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+	</TradeRoute>
+
+	<TradeRoute Name="Region20_Region18">
+		<Point_A>Region20</Point_A>
+		<Point_B>Region18</Point_B>
+		<HS_Speed_Factor>50</HS_Speed_Factor>
+		<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+	</TradeRoute>
+
+	<TradeRoute Name="Region18_Region29">
+		<Point_A>Region18</Point_A>
+		<Point_B>Region29</Point_B>
+		<HS_Speed_Factor>50</HS_Speed_Factor>
+		<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+	</TradeRoute>
+
+	
+	<TradeRoute Name="Region29_Region30">
+		<Point_A>Region29</Point_A>
+		<Point_B>Region30</Point_B>
+		<HS_Speed_Factor>50</HS_Speed_Factor>
+		<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+	</TradeRoute>
+
+	<TradeRoute Name="Region29_Region31">
+		<Point_A>Region29</Point_A>
+		<Point_B>Region31</Point_B>
+		<HS_Speed_Factor>50</HS_Speed_Factor>
+		<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+	</TradeRoute>
+
+	<TradeRoute Name="Region30_Region33">
+		<Point_A>Region30</Point_A>
+		<Point_B>Region33</Point_B>
+		<HS_Speed_Factor>50</HS_Speed_Factor>
+		<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+	</TradeRoute>
+
+	<TradeRoute Name="Region31_Region33">
+		<Point_A>Region31</Point_A>
+		<Point_B>Region33</Point_B>
+		<HS_Speed_Factor>50</HS_Speed_Factor>
+		<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+	</TradeRoute>
+
+	<TradeRoute Name="Region30_Region31">
+		<Point_A>Region30</Point_A>
+		<Point_B>Region31</Point_B>
+		<HS_Speed_Factor>50</HS_Speed_Factor>
+		<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+	</TradeRoute>
+
+	<TradeRoute Name="Region33_Region35">
+		<Point_A>Region33</Point_A>
+		<Point_B>Region35</Point_B>
+		<HS_Speed_Factor>50</HS_Speed_Factor>
+		<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+	</TradeRoute>
+
+	<!-- commented out to disallow direct passage
+	<TradeRoute Name="Region35_Region34">
+		<Point_A>Region35</Point_A>
+		<Point_B>Region34</Point_B>
+		<HS_Speed_Factor>50</HS_Speed_Factor>
+		<Fixed_Travel_Cost> 1.0 </Fixed_Travel_Cost>
+	</TradeRoute>
+	-->
+
+
+	<!-- jgs 3/29/07 above are the initial routes being used in the Masari Campaign...will 
+	probably be wiped or modified at some future point -->
+    
+</TradeRoutes>

@@ -1,0 +1,478 @@
+<?xml version="1.0"?>
+<Game_Objects_XML>
+
+	<!-- **************************************************************************************** -->
+	<!-- ** Combined Object ********************************************************************* -->
+	<!-- **************************************************************************************** -->
+
+	<X90_Other_Objects Name="Combined_Object">
+
+		<!-- ART -->
+		<Land_Model_Name>WV_Truck00.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		
+		<!-- INTERFACE -->
+		<Text_ID> TEXT_UNIT_CIVILIAN_CAR </Text_ID>
+		
+		<!-- ATTRIBUTES -->
+		<!-- MOVEMENT -->
+		<!-- CONFLICT -->
+		<!-- BEHAVIORS -->
+		<LandBehavior> COMBINED </LandBehavior>
+		
+		<!-- BEHAVIOR TYPES -->
+		<BehaviorType Name="GUIBehaviorType">
+			<GUI_Scene_Name />
+		</BehaviorType>
+		
+		
+	</X90_Other_Objects>
+
+	<!-- KDB used for switching elemental modes to create an object the clears mind control on masari units -->
+	<!-- 05-23-2007 -->
+	<X90_Other_Objects Name="Masari_Clear_Mind_Control_Switch_Object">
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+		<LandBehavior>MARKER, EFFECT_REGISTRY, EFFECT_GENERATOR, ATTRIBUTE_DIRECTORY</LandBehavior>
+		<Is_Decoration>No</Is_Decoration>
+		<CategoryMask> Untargetable </CategoryMask>
+		<Is_Attackable> false </Is_Attackable>
+		<Affiliation> Masari </Affiliation>
+
+		<Effect_Generator_Data SubObjectList="Yes">
+			<Effect_Generator Name="MasariSwitchGenerator">
+				<Should_Deactivate_Manually> false </Should_Deactivate_Manually>
+				<Is_Independent_Generator>Yes</Is_Independent_Generator>
+				<Starts_Active> true </Starts_Active>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Duration> 7.5 </Duration>
+					<Effect_Name> MasariClearMindControlEffect </Effect_Name>
+					<Target_Gathering_Mask> All </Target_Gathering_Mask>
+					<Target_Filter_C>  Is_Original_Owner  </Target_Filter_C>
+				</Effect_Generator_Entry>
+
+				<Effect_Generator_Entry Name="Entry2">
+					<Effect_Name> NovusPatchTimeOutEffect </Effect_Name>
+					<Base_Delay> 7.5 </Base_Delay>
+					<Duration> 7.6 </Duration>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+				</Effect_Generator_Entry>
+
+			</Effect_Generator>
+		</Effect_Generator_Data>
+
+	</X90_Other_Objects>
+
+	<!-- Oksana [5/30/2005]: Currect system can't target a position, only an object,
+	     so we setup this dummy invisible object so that we can target it without 
+	     having to rewrite entire hardpoint, team and weapon targeting systems. -->
+	<X90_Other_Objects Name="Dummy_Target_Object">
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+		<Text_ID />
+		<LandBehavior>MARKER, EFFECT_REGISTRY, AI_TARGET, ATTRIBUTE_DIRECTORY</LandBehavior>
+		<Scale_Factor>100.0</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<CategoryMask> DummyTarget  </CategoryMask>
+		<Is_Attackable> true </Is_Attackable>
+		<Ranged_Target_Z_Adjust>1.0</Ranged_Target_Z_Adjust>
+	</X90_Other_Objects>
+
+	<!-- This version of the dummy target will destroy itself when there are no longer any objects targeting it -->
+	<X90_Other_Objects Name="Dummy_Target_Object_Self_Cleaning">
+		<Variant_Of_Existing_Type> Dummy_Target_Object </Variant_Of_Existing_Type>
+		<LandBehavior>
+			MARKER,
+			EFFECT_REGISTRY,
+			AI_TARGET,
+			TEMPORARY_TARGET,
+			ATTRIBUTE_DIRECTORY
+		</LandBehavior>
+	</X90_Other_Objects>
+
+	<X90_Other_Objects Name="Masari_Structure_Rally_Flag">
+      <Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+      <Text_ID />
+
+      <CategoryMask> Untargetable </CategoryMask>
+      
+      <LandBehavior> RADAR_MAP_VISIBLE , IDLE</LandBehavior>
+      <Land_Model_Name>W_FLAG_Rally_masari.ALO</Land_Model_Name>
+      <AssetBank> BANK_MASARI </AssetBank>
+      <Is_Decoration>No</Is_Decoration>
+      <Scale_Factor>1.0</Scale_Factor>
+
+      <BehaviorType Name="RadarMapBehaviorType">
+         <Radar_Icon_Size>0.02  0.02</Radar_Icon_Size>
+         <Hide_Radar_Icon_When_Model_Is_Hidden>Yes</Hide_Radar_Icon_When_Model_Is_Hidden>
+         <Is_Visible_On_Enemy_Radar>False</Is_Visible_On_Enemy_Radar>
+      </BehaviorType>
+   </X90_Other_Objects>
+   
+   <X90_Other_Objects Name="Military_Structure_Rally_Flag">
+      <Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+      <Text_ID />
+
+      <CategoryMask> Untargetable </CategoryMask>
+      
+      <LandBehavior> RADAR_MAP_VISIBLE , IDLE</LandBehavior>
+      <Land_Model_Name>W_FLAG_Rally_military.ALO</Land_Model_Name>
+      <AssetBank> BANK_MILITARY </AssetBank>
+      <Is_Decoration>No</Is_Decoration>
+      <Scale_Factor>1.0</Scale_Factor>
+
+      <BehaviorType Name="RadarMapBehaviorType">
+         <Radar_Icon_Size>0.02  0.02</Radar_Icon_Size>
+         <Hide_Radar_Icon_When_Model_Is_Hidden>Yes</Hide_Radar_Icon_When_Model_Is_Hidden>
+         <Is_Visible_On_Enemy_Radar>False</Is_Visible_On_Enemy_Radar>
+      </BehaviorType>
+   </X90_Other_Objects>
+
+   <X90_Other_Objects Name="Alien_Structure_Rally_Flag">
+      <Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+      <Text_ID />
+
+      <CategoryMask> Untargetable </CategoryMask>
+      
+      <LandBehavior> RADAR_MAP_VISIBLE , IDLE</LandBehavior>
+      <Land_Model_Name>W_FLAG_Rally_alien.ALO</Land_Model_Name>
+      <AssetBank> BANK_ALIEN </AssetBank>
+      <Is_Decoration>No</Is_Decoration>
+      <Scale_Factor>1.0</Scale_Factor>
+
+      <BehaviorType Name="RadarMapBehaviorType">
+         <Radar_Icon_Size>0.02  0.02</Radar_Icon_Size>
+         <Hide_Radar_Icon_When_Model_Is_Hidden>Yes</Hide_Radar_Icon_When_Model_Is_Hidden>
+         <Is_Visible_On_Enemy_Radar>False</Is_Visible_On_Enemy_Radar>
+      </BehaviorType>
+   </X90_Other_Objects>
+
+   <X90_Other_Objects Name="Novus_Structure_Rally_Flag">
+      <Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+      <Text_ID />
+
+      <CategoryMask> Untargetable </CategoryMask>
+      
+      <LandBehavior> RADAR_MAP_VISIBLE , IDLE</LandBehavior>
+      <Land_Model_Name>W_FLAG_Rally_novus.ALO</Land_Model_Name>
+      <AssetBank> BANK_NOVUS </AssetBank>
+      <Is_Decoration>No</Is_Decoration>
+      <Scale_Factor>1.0</Scale_Factor>
+
+      <BehaviorType Name="RadarMapBehaviorType">
+         <Radar_Icon_Size>0.02  0.02</Radar_Icon_Size>
+         <Hide_Radar_Icon_When_Model_Is_Hidden>Yes</Hide_Radar_Icon_When_Model_Is_Hidden>
+         <Is_Visible_On_Enemy_Radar>False</Is_Visible_On_Enemy_Radar>
+      </BehaviorType>
+   </X90_Other_Objects>
+
+	<X90_Other_Objects Name="Dummy_Ghost_Object">
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Behavior> GHOST </Behavior>
+	</X90_Other_Objects>
+
+	<!-- A dummy object that the AI plants to represent targets that are not already single objects -->
+	<X90_Other_Objects Name="Dummy_AI_Target_Marker">
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+		<Text_ID />
+		<LandBehavior>MARKER, AI_TARGET</LandBehavior>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<Ranged_Target_Z_Adjust>0.0</Ranged_Target_Z_Adjust>		
+	</X90_Other_Objects>
+	
+	<!-- Tornado -->
+   <X90_Other_Objects Name="Tornado">
+		 <Is_Placed_By_Editor> false </Is_Placed_By_Editor>
+         <Text_ID>TEXT_NONE</Text_ID>
+         <LandBehavior>TORNADO, LIGHTNING_BALL_EFFECT</LandBehavior>
+         <Supreme_Cinematic_Importance> true </Supreme_Cinematic_Importance>
+         <Land_Model_Name>WO_Tornado.alo</Land_Model_Name>
+         <Scale_Factor>1</Scale_Factor>
+         <Is_Decoration>No</Is_Decoration>
+         <Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+
+      <CategoryMask> Untargetable </CategoryMask>
+
+      <MovementClass> Flying </MovementClass>
+      <BehaviorType Name="TornadoBehaviorType">
+         <Tornado_Movement_Speed>25</Tornado_Movement_Speed>
+         <Tornado_Heading_Randomizer>50</Tornado_Heading_Randomizer>
+         <Tornado_Lifetime_Seconds>30</Tornado_Lifetime_Seconds>
+         <Tornado_Radius>35</Tornado_Radius>
+         <Tornado_Degrees_Per_Second>30</Tornado_Degrees_Per_Second>
+         <Tornado_Lift_Per_Second>55</Tornado_Lift_Per_Second>
+         <Tornado_Inward_Per_Second>1250</Tornado_Inward_Per_Second>
+         <Tornado_End_Height_Min>200</Tornado_End_Height_Min>
+         <Tornado_End_Height_Max>250</Tornado_End_Height_Max>
+         <Tornado_Object_Spin>-3.1, 4.3, 20</Tornado_Object_Spin>
+         <Tornado_Tree_Bend_Scale>0.02</Tornado_Tree_Bend_Scale>
+         <Tornado_Tree_Bend_Noise_Scale>3</Tornado_Tree_Bend_Noise_Scale>
+         <Tornado_Tree_Bend_Noise_Frequency>40.0</Tornado_Tree_Bend_Noise_Frequency>
+         <Tornado_Destruction_Radius>5</Tornado_Destruction_Radius>
+      </BehaviorType>
+
+      <BehaviorType Name="LightningBallEffectBehaviorType">
+         <Lightning_Source_Bone_Names>Lightning_emitter_A</Lightning_Source_Bone_Names>
+         <Lightning_Target_Bone_Names>Lightning_target_a</Lightning_Target_Bone_Names>
+         <Lightning_Effect_Names>Normal_Lightning</Lightning_Effect_Names>
+
+         <Lightning_Ball_Effect_Description>
+            TriggerOnTimer | LoopIndefinitely | LiftTargetPointsToTerrain | AlwaysVisible
+         </Lightning_Ball_Effect_Description>
+
+         <Lightning_Strike_Chance_Interpolator>0.9, 0.9,    1.0, 0.9</Lightning_Strike_Chance_Interpolator>
+         <Duration_Time_Sec>2</Duration_Time_Sec>
+
+         <Source_Particle_Effect>p_lightning_flash</Source_Particle_Effect>
+         <Target_Particle_Effect>p_lightning_strike_hit</Target_Particle_Effect>
+      </BehaviorType>
+
+      <!-- Jeff Palmer: Commenting out sound FX
+		<BehaviorType Name="SFXBehaviorType">
+			<SFXEvent_On_Create_All_Players>Weather_Ambient_Heavy_Rain_Intermittent</SFXEvent_On_Create_All_Players>
+			<SFXEvent_Ambient_Loop>Weather_Ambient_Heavy_Sandstorm_Loop</SFXEvent_Ambient_Loop>  
+		</BehaviorType>
+		-->
+      <BehaviorType Name="DeathFXBehaviorType">
+         <Death_Clone>Damage_Default</Death_Clone>
+      </BehaviorType>
+
+
+   </X90_Other_Objects>
+   <!-- End Tornado -->
+
+   <!-- Tornado -->
+   <X90_Other_Objects Name="Tornado_med">
+      <Is_Placed_By_Editor> false </Is_Placed_By_Editor>
+      <Text_ID>TEXT_NONE</Text_ID>
+      <LandBehavior>TORNADO, LIGHTNING_BALL_EFFECT</LandBehavior>
+      <Supreme_Cinematic_Importance> true </Supreme_Cinematic_Importance>
+      <Land_Model_Name>WO_Tornado_med.alo</Land_Model_Name>
+      <Scale_Factor>1</Scale_Factor>
+      <Is_Decoration>No</Is_Decoration>
+      <Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+
+      <CategoryMask> Untargetable </CategoryMask>
+      
+			<MovementClass> Flying </MovementClass>
+         <BehaviorType Name="TornadoBehaviorType">
+            <Tornado_Movement_Speed>22</Tornado_Movement_Speed>
+            <Tornado_Heading_Randomizer>50</Tornado_Heading_Randomizer>
+            <Tornado_Lifetime_Seconds>30</Tornado_Lifetime_Seconds>
+            <Tornado_Radius>80</Tornado_Radius>
+            <Tornado_Degrees_Per_Second>30</Tornado_Degrees_Per_Second>
+            <Tornado_Lift_Per_Second>65</Tornado_Lift_Per_Second>
+            <Tornado_Inward_Per_Second>1800</Tornado_Inward_Per_Second>
+            <Tornado_End_Height_Min>200</Tornado_End_Height_Min>
+            <Tornado_End_Height_Max>250</Tornado_End_Height_Max>
+            <Tornado_Object_Spin>-5.1, 6.3, 20</Tornado_Object_Spin>
+            <Tornado_Tree_Bend_Scale>0.02</Tornado_Tree_Bend_Scale>
+            <Tornado_Tree_Bend_Noise_Scale>8</Tornado_Tree_Bend_Noise_Scale>
+            <Tornado_Tree_Bend_Noise_Frequency>40.0</Tornado_Tree_Bend_Noise_Frequency>
+            <Tornado_Destruction_Radius>30</Tornado_Destruction_Radius>
+		</BehaviorType>
+		
+		<BehaviorType Name="LightningBallEffectBehaviorType">
+			<Lightning_Source_Bone_Names>Lightning_emitter_A</Lightning_Source_Bone_Names>
+			<Lightning_Target_Bone_Names>Lightning_target_a</Lightning_Target_Bone_Names>
+			<Lightning_Effect_Names>Violent_Lightning</Lightning_Effect_Names>
+			
+			<Lightning_Ball_Effect_Description>	
+					TriggerOnTimer | LoopIndefinitely | LiftTargetPointsToTerrain | AlwaysVisible
+			</Lightning_Ball_Effect_Description>
+		
+			<Lightning_Strike_Chance_Interpolator>0.9, 0.9,    1.0, 0.9</Lightning_Strike_Chance_Interpolator>
+			<Duration_Time_Sec>2</Duration_Time_Sec>
+		
+			<Source_Particle_Effect>p_lightning_flash</Source_Particle_Effect>
+			<Target_Particle_Effect>p_lightning_strike_hit</Target_Particle_Effect>
+		</BehaviorType>
+		
+		<!-- Jeff Palmer: Commenting out sound FX
+		<BehaviorType Name="SFXBehaviorType">
+			<SFXEvent_On_Create_All_Players>Weather_Ambient_Heavy_Rain_Intermittent</SFXEvent_On_Create_All_Players>
+			<SFXEvent_Ambient_Loop>Weather_Ambient_Heavy_Sandstorm_Loop</SFXEvent_Ambient_Loop>  
+		</BehaviorType>
+		-->
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Death_Clone>Damage_Default</Death_Clone>
+		</BehaviorType>
+		
+		
+    </X90_Other_Objects>
+	 <!-- End Tornado -->
+
+   <X90_Other_Objects Name="Radiation_Wake">
+         <Is_Placed_By_Editor> false </Is_Placed_By_Editor>
+         <Text_ID>TEXT_NONE</Text_ID>
+         <LandBehavior>TORNADO, LIGHTNING_BALL_EFFECT</LandBehavior>
+         <Supreme_Cinematic_Importance> true </Supreme_Cinematic_Importance>
+         <Land_Model_Name>WV_Truck00.alo</Land_Model_Name>
+         <Scale_Factor>1</Scale_Factor>
+         <Is_Decoration>No</Is_Decoration>
+         <Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+
+      <CategoryMask> Untargetable </CategoryMask>
+
+      <MovementClass> Flying </MovementClass>
+      <BehaviorType Name="TornadoBehaviorType">
+         <Tornado_Horizontal> true </Tornado_Horizontal>
+         <Tornado_Movement_Speed>22</Tornado_Movement_Speed>
+         <Tornado_Heading_Randomizer>50</Tornado_Heading_Randomizer>
+         <Tornado_Lifetime_Seconds>30</Tornado_Lifetime_Seconds>
+         <Tornado_Radius>80</Tornado_Radius>
+         <Tornado_Degrees_Per_Second>30</Tornado_Degrees_Per_Second>
+         <Tornado_Lift_Per_Second>65</Tornado_Lift_Per_Second>
+         <Tornado_Inward_Per_Second>1800</Tornado_Inward_Per_Second>
+         <Tornado_End_Height_Min>0</Tornado_End_Height_Min>
+         <Tornado_End_Height_Max>250</Tornado_End_Height_Max>
+         <Tornado_Object_Spin>-5.1, 0.0, 0.0</Tornado_Object_Spin>
+         <Tornado_Tree_Bend_Scale>0.02</Tornado_Tree_Bend_Scale>
+         <Tornado_Tree_Bend_Noise_Scale>8</Tornado_Tree_Bend_Noise_Scale>
+         <Tornado_Tree_Bend_Noise_Frequency>40.0</Tornado_Tree_Bend_Noise_Frequency>
+         <Tornado_Destruction_Radius>30</Tornado_Destruction_Radius>
+      </BehaviorType>
+
+      <BehaviorType Name="LightningBallEffectBehaviorType">
+         <Lightning_Source_Bone_Names>Lightning_emitter_A</Lightning_Source_Bone_Names>
+         <Lightning_Target_Bone_Names>Lightning_target_a</Lightning_Target_Bone_Names>
+         <Lightning_Effect_Names>Violent_Lightning</Lightning_Effect_Names>
+
+         <Lightning_Ball_Effect_Description>
+            TriggerOnTimer | LoopIndefinitely | LiftTargetPointsToTerrain | AlwaysVisible
+         </Lightning_Ball_Effect_Description>
+
+         <Lightning_Strike_Chance_Interpolator>0.9, 0.9,    1.0, 0.9</Lightning_Strike_Chance_Interpolator>
+         <Duration_Time_Sec>2</Duration_Time_Sec>
+
+         <Source_Particle_Effect>p_lightning_flash</Source_Particle_Effect>
+         <Target_Particle_Effect>p_lightning_strike_hit</Target_Particle_Effect>
+      </BehaviorType>
+
+      <!-- Jeff Palmer: Commenting out sound FX
+        <BehaviorType Name="SFXBehaviorType">
+            <SFXEvent_On_Create_All_Players>Weather_Ambient_Heavy_Rain_Intermittent</SFXEvent_On_Create_All_Players>
+            <SFXEvent_Ambient_Loop>Weather_Ambient_Heavy_Sandstorm_Loop</SFXEvent_Ambient_Loop>  
+        </BehaviorType>
+        -->
+      <BehaviorType Name="DeathFXBehaviorType">
+         <Death_Clone>Damage_Default</Death_Clone>
+      </BehaviorType>
+
+
+   </X90_Other_Objects>
+   <!-- End Tornado -->
+
+   <X90_Other_Objects Name="Mass_Drop">
+      <Is_Placed_By_Editor> false </Is_Placed_By_Editor>
+      <Text_ID>TEXT_NONE</Text_ID>
+      <LandBehavior>MASS_DROP</LandBehavior>
+      <Land_Model_Name>WV_Truck00.alo</Land_Model_Name>
+      <Scale_Factor>1</Scale_Factor>
+      <Is_Decoration>No</Is_Decoration>
+      <Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+
+      <CategoryMask> Untargetable </CategoryMask>
+     
+         <MovementClass> Flying </MovementClass>
+         <BehaviorType Name="MassDropBehaviorType">
+             <Mass_Drop_Types>Military_Veh_hummer_Death_Clone</Mass_Drop_Types>
+             <Mass_Drop_Lifetime_Frames>10</Mass_Drop_Lifetime_Frames>
+             <Mass_Drop_Spawn_Per_Frame>2</Mass_Drop_Spawn_Per_Frame>
+             <Mass_Drop_Spawn_Height>300</Mass_Drop_Spawn_Height>
+        </BehaviorType>
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Death_Clone>Damage_Default</Death_Clone>
+		</BehaviorType>
+		<Mass_Drop_Spawn_Radius>50</Mass_Drop_Spawn_Radius>
+
+
+    </X90_Other_Objects>
+     <!-- End Tornado -->
+
+
+    <X90_Other_Objects Name="Singularity">
+		<Is_Placed_By_Editor> false </Is_Placed_By_Editor>
+			<Text_ID>TEXT_NONE</Text_ID>
+			<LandBehavior>TORNADO, EFFECT_GENERATOR, LIGHTNING_BALL_EFFECT</LandBehavior>
+
+         <CategoryMask> Untargetable </CategoryMask>
+       
+			<Land_Model_Name>WS_Novus_Gravitybomb_idle.alo</Land_Model_Name>
+         <Supreme_Cinematic_Importance> true </Supreme_Cinematic_Importance>
+         <Scale_Factor>1</Scale_Factor>
+         <Is_Decoration>No</Is_Decoration>
+			<MovementClass> Flying </MovementClass>
+
+        <BehaviorType Name="TornadoBehaviorType">
+            <Tornado_Lifetime_Seconds>4.5</Tornado_Lifetime_Seconds>
+            <Tornado_Destruction_Radius>50</Tornado_Destruction_Radius>
+            <Tornado_Radius>300</Tornado_Radius>
+            <Tornado_Degrees_Per_Second>5</Tornado_Degrees_Per_Second>
+            <Tornado_Lift_Per_Second>0.0</Tornado_Lift_Per_Second>
+            <Tornado_Inward_Per_Second>2000</Tornado_Inward_Per_Second>
+            <Tornado_Inward_Inc_Per_Second>500</Tornado_Inward_Inc_Per_Second>
+            <Tornado_End_Height_Min>750</Tornado_End_Height_Min>
+            <Tornado_End_Height_Max>750</Tornado_End_Height_Max>
+            <Tornado_Object_Spin>-55.1, 34.3, 40</Tornado_Object_Spin>
+            <Tornado_Is_Singularity>true</Tornado_Is_Singularity>
+            <Tornado_Buildup_Seconds_Min>0.0</Tornado_Buildup_Seconds_Min>
+            <Tornado_Buildup_Seconds_Max>4.0</Tornado_Buildup_Seconds_Max>
+            <Tornado_Buildup_Bias>0.25</Tornado_Buildup_Bias>
+            <Tornado_Tree_Bend_Scale>0.01</Tornado_Tree_Bend_Scale>
+            <Tornado_Tree_Bend_Noise_Scale>20.0</Tornado_Tree_Bend_Noise_Scale>
+            <Tornado_Tree_Bend_Noise_Frequency>40.0</Tornado_Tree_Bend_Noise_Frequency>
+		</BehaviorType>
+
+		<BehaviorType Name="LightningBallEffectBehaviorType">
+			<Lightning_Source_Bone_Names>emitter</Lightning_Source_Bone_Names>
+			<Lightning_Target_Bone_Names>Bone_hit</Lightning_Target_Bone_Names>
+			<Lightning_Effect_Names>Tornado_Lightning</Lightning_Effect_Names>
+			<Lightning_Strike_Chance_Interpolator>0.0, 1.0,    1.0, 0.5</Lightning_Strike_Chance_Interpolator>
+			
+			<Source_Particle_Effect />
+			<Target_Particle_Effect>Singularity_Lightning_Bolt_Strike</Target_Particle_Effect>
+			
+		</BehaviorType>
+
+		<BehaviorType Name="SFXBehaviorType">
+			<SFXEvent_Ambient_Loop>SFX_Alien_Gravity_Bomb_Suck_Loop  </SFXEvent_Ambient_Loop> 
+			<Death_SFXEvent_Start_Die>SFX_Alien_Gravity_Bomb_Stop</Death_SFXEvent_Start_Die>
+		</BehaviorType>
+
+		 <Effect_Generator_Data SubObjectList="Yes">
+			 <Effect_Generator Name="GravityBombDOTGenerator">
+				 <Should_Deactivate_Manually> true </Should_Deactivate_Manually>
+				 <Modal_Refresh_Frequency> 1.0 </Modal_Refresh_Frequency>
+				 <Starts_Active> true </Starts_Active>
+
+				 <Effect_Generator_Entry Name="Entry1">
+					 <Effect_Name> NovusGravityBombDotEffect </Effect_Name>
+					 <Duration> -1 </Duration>
+					 <Target_Gathering_Mask> SelfAE </Target_Gathering_Mask>
+					 <Target_Filter_Function_Name />
+					 <Area_Effect_Radius> 250.0 </Area_Effect_Radius>
+				 </Effect_Generator_Entry>
+			 </Effect_Generator>
+		 </Effect_Generator_Data>
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Death_Clone>Damage_Default, Singularity_Death</Death_Clone>
+		</BehaviorType>
+
+    </X90_Other_Objects>
+
+
+   <X90_Other_Objects Name="Multiplayer_Beacon">
+      <Text_ID>TEXT_MULTIPLAYER_BEACON</Text_ID>
+      <Behavior>MULTIPLAYER_BEACON, IDLE, RADAR_MAP_VISIBLE</Behavior>
+      <Land_Model_Name> I_multiplayer_beacon.alo </Land_Model_Name>
+      <Beacon_Lifetime_In_Secs> 6.0 </Beacon_Lifetime_In_Secs>
+      <BehaviorType Name="RadarMapBehaviorType">
+         <Radar_Icon_Size>0.05  0.05</Radar_Icon_Size>
+         <Is_Visible_On_Enemy_Radar> No </Is_Visible_On_Enemy_Radar>
+         <Beacon_Radar_Map_Event_Name> Default_MP_Beacon_Placement </Beacon_Radar_Map_Event_Name>
+      </BehaviorType>
+   </X90_Other_Objects>
+
+</Game_Objects_XML>

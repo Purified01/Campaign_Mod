@@ -1,0 +1,10 @@
+<!-- Include file: Dark Matter Armor (DMA) setup for Light Mode. - Oksana -->
+
+<Effect_Generator Name="RemoveDMAGenerator">
+	<Starts_Active> true </Starts_Active>
+	<Effect_Generator_Entry Name="Entry1">
+		<Effect_Name> DMARemoveEffect </Effect_Name>
+		<Duration> -1.0 </Duration>
+		<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+	</Effect_Generator_Entry>
+</Effect_Generator>

@@ -1,0 +1,1245 @@
+<?xml version="1.0"?>
+
+<!--
+    Laser beam definitions
+    
+    This file contains laser definitions that are referenced from units/projectiles/whatever using the Land_Model_Name field.
+    The custom render field and related projectile settings (for color, width, length, etc.) are no longer used.  All (or most)
+    graphical settings for projectiles that use laserbeams or laserkites should be self-contained here.
+    
+    Field descriptions:
+    
+    Type - the type of laser beam, must be either BEAM, KITE, BILLBOARD, or EFFECT.  *Required field*
+    Width - the width of the laser beam (also the radius of beam caps)
+    Length - the length of the laser bream
+    Render_Mode - the render-mode used to render this beam, i.e. ALPHA, MODULATE, etc.
+    Color - the color of the laser beam
+    Texture - the name of the texture used by this laser beam.  If not specified, uses a default texture for the type
+    Texture_Slot - the slot of the laser image in pixels
+    Texture_Size - the size of the laser image in pixels.  If not specified, uses a default texture for the type
+    Effect_Attachment - the name of the laser effect attached to this laser, i.e. for heat distortion.  This allows
+                        laser beams to be chained together to create neat effects.
+    Effect_Offset - the offset of the laser beam relative to its parent (or spawn location if it is the root) in screen-space,
+                    where the X-axis is in the direction of the velocity and the Y-axis is perpendicular.
+    Jitter - a jitter amount in the direction of the velocity, in screen-space.  A value between 0 and 'jitter' is generated
+             at random for each instance.  This helps break up the render aliasing you get with fast lasers.
+    Rotation - The rotation of the laser in degrees (note: currently only works with a value of 180 on kites, SKY 07/13/07)
+    Size_Variation - A value between 0 and 1 that indicates a variation in laser beam size (0 = 100% scale, 1 = 200% scale).
+                     Each instance will chose a random value between 0 and the variation.
+             
+    ! Billboard-only parameters !
+    Rotation_Rate - The rotation rate of the billboard in degrees per second
+                        
+-->
+
+<!--
+    Default texture sizes:
+    
+    W_Laser_Pill.tga - (4x4) slots
+    p_particle_master.tga - (8x8) slots
+    w_kite_weapons.tga - (4x4) slots
+-->
+
+<!--
+    Naming convention:
+    
+    The naming convention used by laser beams should be "Laser_" followed by the name of the projectile/object it is used by,
+    minus the "Proj_" or related prefix.  For instance, if we define a laser for the "Proj_Novus_Flechette_Cannon" projectile,
+    it should be named "Laser_Novus_Flechette_Cannon".  This will help keep track of which names in XML refer to ALO files versus
+    laserbeams/laserkites versus other assets.
+-->
+
+<!-- 
+   Artist Notes:
+   
+   Kites are rendered child on top, parent underneath
+   The games updates all the time, unless you change the render mode, which will requirer a restart.
+   When you use an Offest the offset will only effect the children and not the parent.  So you can make a "dummy" parent that has the correct offset values.
+
+
+-->
+
+<LaserBeams>
+
+
+
+   <!-- ********************************************************************************************* -->
+   <!-- ******  MILITARY LASERS																						***** -->
+   <!-- ********************************************************************************************* -->
+
+
+   <LaserBeam Name="Laser_Military_Apache_Machine_Gun" Type="BEAM">
+      <Size_Variation>0.0</Size_Variation>
+      <Effect_Offset>20,0</Effect_Offset>
+      <Width>0.15f</Width>
+      <Length>1.2f</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>0,0,0,255</Color>
+      <Texture>W_Laser_Pill.tga</Texture>
+      <Texture_Slot>0,2</Texture_Slot>
+      <Texture_Size>4,4</Texture_Size>
+      <Effect_Attachment>Laser_Military_Apache_Machine_Gun_01</Effect_Attachment>
+   </LaserBeam>
+
+
+   <LaserBeam Name="Laser_Military_Apache_Machine_Gun_01" Type="KITE">
+      <Size_Variation>2.0</Size_Variation>
+      <Width>0.2f</Width>
+      <Jitter>5</Jitter>
+      <Length>80.2f</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>255,255,50,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Laser_Military_Apache_Machine_Gun_02</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Military_Apache_Machine_Gun_02" Type="KITE">
+      <Size_Variation>2.0</Size_Variation>
+      <Width>0.1f</Width>
+      <Jitter>5</Jitter>
+      <Length>50.2f</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>255,255,255,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment></Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Military_Hummer_Machine_Gun" Type="BEAM">
+      <Size_Variation>0.0</Size_Variation>
+      <Effect_Offset>20,0</Effect_Offset>
+      <Width>0.15f</Width>
+      <Length>1.2f</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>0,0,0,255</Color>
+      <Texture>W_Laser_Pill.tga</Texture>
+      <Texture_Slot>0,2</Texture_Slot>
+      <Texture_Size>4,4</Texture_Size>
+      <Effect_Attachment>Laser_Military_Hummer_Machine_Gun_01</Effect_Attachment>
+   </LaserBeam>
+
+
+   <LaserBeam Name="Laser_Military_Hummer_Machine_Gun_01" Type="KITE">
+      <Size_Variation>2.0</Size_Variation>
+      <Width>0.2f</Width>
+      <Jitter>5</Jitter>
+      <Length>80.2f</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>255,255,50,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Laser_Military_Hummer_Machine_Gun_02</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Military_Hummer_Machine_Gun_02" Type="KITE">
+      <Size_Variation>2.0</Size_Variation>
+      <Width>0.1f</Width>
+      <Jitter>5</Jitter>
+      <Length>50.2f</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>255,255,255,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment></Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Military_Turret_Machine_Gun" Type="BEAM">
+      <Size_Variation>0.0</Size_Variation>
+      <Effect_Offset>20,0</Effect_Offset>
+      <Width>0.15f</Width>
+      <Length>1.2f</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>0,0,0,255</Color>
+      <Texture>W_Laser_Pill.tga</Texture>
+      <Texture_Slot>0,2</Texture_Slot>
+      <Texture_Size>4,4</Texture_Size>
+      <Effect_Attachment>Laser_Military_Turret_Machine_Gun_01</Effect_Attachment>
+   </LaserBeam>
+
+
+   <LaserBeam Name="Laser_Military_Turret_Machine_Gun_01" Type="KITE">
+      <Size_Variation>2.0</Size_Variation>
+      <Width>0.2f</Width>
+      <Jitter>5</Jitter>
+      <Length>80.2f</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>255,255,50,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Laser_Military_Turret_Machine_Gun_02</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Military_Turret_Machine_Gun_02" Type="KITE">
+      <Size_Variation>2.0</Size_Variation>
+      <Width>0.1f</Width>
+      <Jitter>5</Jitter>
+      <Length>50.2f</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>255,255,255,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment></Effect_Attachment>
+   </LaserBeam>
+   
+   
+
+   <LaserBeam Name="Laser_Military_Moore_Machine_Gun" Type="BEAM">
+      <Size_Variation>0.0</Size_Variation>
+      <Effect_Offset>20,0</Effect_Offset>
+      <Width>0.15f</Width>
+      <Length>1.2f</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>0,0,0,255</Color>
+      <Texture>W_Laser_Pill.tga</Texture>
+      <Texture_Slot>0,2</Texture_Slot>
+      <Texture_Size>4,4</Texture_Size>
+      <Effect_Attachment>Laser_Military_Moore_Machine_Gun_01</Effect_Attachment>
+   </LaserBeam>
+
+
+   <LaserBeam Name="Laser_Military_Moore_Machine_Gun_02" Type="KITE">
+      <Size_Variation>2.0</Size_Variation>
+      <Width>0.2f</Width>
+      <Jitter>1</Jitter>
+      <Length>50.2f</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>255,255,255,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment></Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Military_Moore_Machine_Gun_01" Type="KITE">
+      <Size_Variation>1.0</Size_Variation>
+      <Width>0.3</Width>
+      <Jitter>1</Jitter>
+      <Length>60.2f</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>255,255,20,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Laser_Military_Moore_Machine_Gun_02</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Military_Marines_Machine_Gun" Type="BEAM">
+      <Size_Variation>0.0</Size_Variation>
+      <Effect_Offset>20,0</Effect_Offset>
+      <Width>0.12f</Width>
+      <Length>1.2f</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>0,0,0,255</Color>
+      <Texture>W_Laser_Pill.tga</Texture>
+      <Texture_Slot>0,2</Texture_Slot>
+      <Texture_Size>4,4</Texture_Size>
+      <Effect_Attachment>Laser_Military_Marines_Machine_Gun_01</Effect_Attachment>
+   </LaserBeam>
+
+
+   <LaserBeam Name="Laser_Military_Marines_Machine_Gun_01" Type="KITE">
+      <Size_Variation>2.0</Size_Variation>
+      <Width>0.15f</Width>
+      <Jitter>5</Jitter>
+      <Length>80.2f</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>255,255,50,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Laser_Military_Marines_Machine_Gun_02</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Military_Marines_Machine_Gun_02" Type="KITE">
+      <Size_Variation>2.0</Size_Variation>
+      <Width>0.1f</Width>
+      <Jitter>5</Jitter>
+      <Length>50.2f</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>255,255,255,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment></Effect_Attachment>
+   </LaserBeam>
+
+
+
+
+
+   <!-- ********************************************************************************************* -->
+   <!-- ******  HIERARCHY LASERS																						***** -->
+   <!-- ********************************************************************************************* -->
+
+
+   <!-- Orlok the Eternal's Gatling Plasma Gun Projectile -->
+   <LaserBeam Name="Laser_Gatling_Plasma" Type="KITE">
+      <Width>2</Width>
+      <Length>4</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>219,247,125,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>1,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment></Effect_Attachment>
+   </LaserBeam>
+
+
+
+
+
+
+   <!-- ********************************************************************************************* -->
+   <!-- ******  NOVUS LASERS																							***** -->
+   <!-- ********************************************************************************************* -->
+
+
+   <!-- Novus Variant Flechette Cannon Projectile -->
+   <LaserBeam Name="Laser_Novus_Flechette_Cannon" Type="BEAM">
+      <Width>0.5f</Width>
+      <Length>2.0f</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>30,30,255,255</Color>
+      <Texture>W_Laser_Pill.tga</Texture>
+      <Texture_Slot>0,1</Texture_Slot>
+      <Texture_Size>4,4</Texture_Size>
+      <Effect_Attachment></Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Novus_Flechette_Cannon_variant" Type="BEAM">
+      <Width>1.0f</Width>
+      <Length>5.5f</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>48,164,254,255</Color>
+      <Texture>W_Laser_Pill.tga</Texture>
+      <Texture_Slot>0,1</Texture_Slot>
+      <Texture_Size>4,4</Texture_Size>
+      <Effect_Attachment></Effect_Attachment>
+   </LaserBeam>
+
+
+   <!-- Novus Mirabel Flechette Rifle -->
+   <LaserBeam Name="Laser_Novus_Mirabel_Flechette_Rifle" Type="BEAM">
+      <!--This is the offest dummy -->
+      <Effect_Offset>10,0</Effect_Offset>
+      <Width>1.0</Width>
+      <Length>20</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>0,0,0,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Novus_Mirabel_beam</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Novus_Mirabel_beam" Type="KITE">
+      <Size_Variation>0.5</Size_Variation>
+      <Width>0.5</Width>
+      <Length>50</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>81,170,254,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Novus_Mirabel_Head</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Novus_Mirabel_Head" Type="KITE">
+      <Size_Variation>0.5</Size_Variation>
+      <Width>0.6</Width>
+      <Length>60</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>172,213,251,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>6,4</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Novus_Mirabel_core</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Novus_Mirabel_core" Type="KITE">
+      <Size_Variation>0.5</Size_Variation>
+      <Width>0.5</Width>
+      <Length>30</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>172,213,251,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>6,4</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment></Effect_Attachment>
+   </LaserBeam>
+
+
+
+   <!-- Novus Ohm Robot Flechette Rifle -->
+   <LaserBeam Name="Laser_Novus_Ohm_Robot_Flechette_Rifle" Type="BEAM">
+      <Size_Variation>0.0</Size_Variation>
+      <Width>0.3f</Width>
+      <Length>2.5f</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>30,30,255,255</Color>
+      <Texture>W_Laser_Pill.tga</Texture>
+      <Texture_Slot>0,1</Texture_Slot>
+      <Texture_Size>4,4</Texture_Size>
+      <Effect_Attachment></Effect_Attachment>
+   </LaserBeam>
+
+   <!-- Novus Ohm Robot Projectile -->
+   <LaserBeam Name="Laser_Novus_Ohm_Robot" Type="KITE">
+      <!--This is the offest dummy -->
+      <Size_Variation>0.0</Size_Variation>
+      <Effect_Offset>10,0</Effect_Offset>
+      <Width>1.0</Width>
+      <Length>20</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>0,0,0,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Novus_Ohm_beam</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Novus_Ohm_beam" Type="KITE">
+      <Size_Variation>0.0</Size_Variation>
+      <Width>0.75</Width>
+      <Length>15</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>81,170,254,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>3,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Novus_Ohm_Head</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Novus_Ohm_Head" Type="KITE">
+      <Size_Variation>0.0</Size_Variation>
+      <Width>1.5</Width>
+      <Length>7</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>172,213,251,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>6,4</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment></Effect_Attachment>
+   </LaserBeam>
+
+
+
+   <!-- ********************************************************************************************* -->
+   <!-- ******  MASARI LASERS																						***** -->
+   <!-- ********************************************************************************************* -->
+
+
+
+   <!-- Masari Figment Light Energy Bolt Projectile -->
+   <LaserBeam Name="Laser_Masari_Figment_Light_Energy_Bolt" Type="KITE">
+      <Effect_Offset>10,0</Effect_Offset>
+      <Width>2</Width>
+      <Length>6</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>0,0,0,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Figment_Light_Energy_Bolt_1</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Figment_Light_Energy_Bolt_1" Type="KITE">
+      <Size_Variation>.3</Size_Variation>
+      <Width>0.5</Width>
+      <Length>45</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>229,224,84,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Figment_Light_Energy_Bolt_2</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Figment_Light_Energy_Bolt_2" Type="KITE">
+      <Effect_Offset>-1,0</Effect_Offset>
+      <Size_Variation>1</Size_Variation>
+      <Width>1</Width>
+      <Length>10</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>229,224,84,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Figment_Light_Energy_Bolt_3</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Figment_Light_Energy_Bolt_3" Type="KITE">
+      <Size_Variation>1</Size_Variation>
+      <Width>2</Width>
+      <Length>1</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>108,106,38,255</Color>
+      <Texture>w_kite_weapons.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>4,4</Texture_Size>
+      <Effect_Attachment></Effect_Attachment>
+   </LaserBeam>
+
+   <!-- Masari Figment Dark Energy Bolt Projectile -->
+   <LaserBeam Name="Laser_Masari_Figment_Dark_Energy_Bolt" Type="KITE">
+      <Effect_Offset>10,0</Effect_Offset>
+      <Width>2</Width>
+      <Length>6</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>0,0,0,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Figment_Dark_Energy_Bolt_A</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Figment_Dark_Energy_Bolt_A" Type="KITE">
+      <Width>3</Width>
+      <Length>6</Length>
+      <Render_Mode>ALPHA</Render_Mode>
+      <Color>20,3,32,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Figment_Dark_Energy_Bolt_Add</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Figment_Dark_Energy_Bolt_Add" Type="KITE">
+      <Width>2</Width>
+      <Length>3</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>81,0,81,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Figment_Dark_Energy_Bolt_Add1</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Figment_Dark_Energy_Bolt_Add1" Type="KITE">
+      <Width>1</Width>
+      <Length>7</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>188,134,248,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Figment_Dark_Energy_Bolt_Add2</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Figment_Dark_Energy_Bolt_Add2" Type="KITE">
+      <Width>1</Width>
+      <Length>7</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>188,134,248,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Figment_Dark_Energy_Bolt_Add3</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Figment_Dark_Energy_Bolt_Add3" Type="BILLBOARD">
+      <Size_Variation>1</Size_Variation>
+      <Width>4</Width>
+      <Length>3</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>188,134,248,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>4,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Figment_Dark_Energy_Bolt_Add4</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Figment_Dark_Energy_Bolt_Add4" Type="KITE">
+      <Width>3</Width>
+      <Length>7</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>188,134,248,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>4,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment></Effect_Attachment>
+   </LaserBeam>
+
+
+   <!-- Masari Guardian Turret Light Energy Bolt Projectile -->
+   <LaserBeam Name="Laser_Masari_Guardian_Light_Bolt" Type="KITE">
+      <Effect_Offset>10,0</Effect_Offset>
+      <Width>2</Width>
+      <Length>1</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>0,0,0,255</Color>
+      <Texture>w_kite_weapons.tga</Texture>
+      <Texture_Slot>0,0</Texture_Slot>
+      <Texture_Size>4,4</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Guardian_Light_Bolt_Real_1</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Guardian_Light_Bolt_real_1" Type="KITE">
+      <Width>3.5</Width>
+      <Length>1</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>255,255,168,255</Color>
+      <Texture>w_kite_weapons.tga</Texture>
+      <Texture_Slot>0,1</Texture_Slot>
+      <Texture_Size>4,4</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Guardian_Light_Bolt_real</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Guardian_Light_Bolt_real" Type="KITE">
+      <Width>3</Width>
+      <Length>8</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>255,255,168,255</Color>
+      <Texture>w_kite_weapons.tga</Texture>
+      <Texture_Slot>0,0</Texture_Slot>
+      <Texture_Size>4,4</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Guardian_Light_Bolt_Billboard</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Guardian_Light_Bolt_Billboard" Type="BILLBOARD">
+      <Width>35</Width>
+      <Length>1</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>50,50,25,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment></Effect_Attachment>
+   </LaserBeam>
+
+   <!-- Masari Guardian Turret Dark Energy Bolt Projectile -->
+   <LaserBeam Name="Laser_Masari_Guardian_Dark_Bolt" Type="KITE">
+      <Effect_Offset>16,0</Effect_Offset>
+      <Width>2</Width>
+      <Length>5</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>0,0,0,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Guardian_Dark_Bolt_alpha</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Guardian_Dark_Bolt_alpha" Type="KITE">
+      <Size_Variation>.1</Size_Variation>
+      <Jitter>3</Jitter>
+      <Width>4</Width>
+      <Length>5</Length>
+      <Render_Mode>ALPHA</Render_Mode>
+      <Color>32,20,55,255</Color>
+      <Texture>w_kite_weapons.tga</Texture>
+      <Texture_Slot>1,1</Texture_Slot>
+      <Texture_Size>4,4</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Guardian_Dark_Bolt_alpha_1</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Guardian_Dark_Bolt_alpha_1" Type="KITE">
+      <Size_Variation>.4</Size_Variation>
+      <Jitter>3</Jitter>
+      <Width>6</Width>
+      <Length>6</Length>
+      <Render_Mode>ALPHA</Render_Mode>
+      <Color>32,20,55,255</Color>
+      <Texture>w_kite_weapons.tga</Texture>
+      <Texture_Slot>0,0</Texture_Slot>
+      <Texture_Size>4,4</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Guardian_Dark_Bolt_add</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Guardian_Dark_Bolt_add" Type="KITE">
+      <Size_Variation>.4</Size_Variation>
+      <Jitter>3</Jitter>
+      <Width>4</Width>
+      <Length>7</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>156,120,205,255</Color>
+      <Texture>w_kite_weapons.tga</Texture>
+      <Texture_Slot>1,1</Texture_Slot>
+      <Texture_Size>4,4</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Guardian_Dark_Bolt_add_1</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Guardian_Dark_Bolt_add_1" Type="KITE">
+      <Size_Variation>1</Size_Variation>
+      <Jitter>3</Jitter>
+      <Width>4</Width>
+      <Length>4</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>156,120,205,255</Color>
+      <Texture>w_kite_weapons.tga</Texture>
+      <Texture_Slot>1,0</Texture_Slot>
+      <Texture_Size>4,4</Texture_Size>
+      <Effect_Attachment></Effect_Attachment>
+   </LaserBeam>
+
+
+   <!-- Masari Sky Guardian Turret Dark Energy Bolt Projectile -->
+   <LaserBeam Name="Laser_Masari_Sky_Guardian_Dark_Bolt" Type="KITE">
+      <Effect_Offset>16,0</Effect_Offset>
+      <Width>1</Width>
+      <Length>5</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>0,0,0,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Sky_Guardian_Dark_Bolt_alpha</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Sky_Guardian_Dark_Bolt_alpha" Type="KITE">
+      <Size_Variation>.1</Size_Variation>
+      <Jitter>3</Jitter>
+      <Width>1</Width>
+      <Length>10</Length>
+      <Render_Mode>ALPHA</Render_Mode>
+      <Color>32,20,55,255</Color>
+      <Texture>w_kite_weapons.tga</Texture>
+      <Texture_Slot>1,1</Texture_Slot>
+      <Texture_Size>4,4</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Sky_Guardian_Dark_Bolt_alpha_1</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Sky_Guardian_Dark_Bolt_alpha_1" Type="KITE">
+      <Size_Variation>.4</Size_Variation>
+      <Jitter>3</Jitter>
+      <Width>2</Width>
+      <Length>30</Length>
+      <Render_Mode>ALPHA</Render_Mode>
+      <Color>32,20,55,255</Color>
+      <Texture>w_kite_weapons.tga</Texture>
+      <Texture_Slot>0,0</Texture_Slot>
+      <Texture_Size>4,4</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Sky_Guardian_Dark_Bolt_add</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Sky_Guardian_Dark_Bolt_add" Type="KITE">
+      <Size_Variation>.4</Size_Variation>
+      <Jitter>3</Jitter>
+      <Width>2.0</Width>
+      <Length>35</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>156,120,205,255</Color>
+      <Texture>w_kite_weapons.tga</Texture>
+      <Texture_Slot>1,1</Texture_Slot>
+      <Texture_Size>4,4</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Sky_Guardian_Dark_Bolt_add_1</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Sky_Guardian_Dark_Bolt_add_1" Type="KITE">
+      <Size_Variation>1</Size_Variation>
+      <Jitter>3</Jitter>
+      <Width>2</Width>
+      <Length>4</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>228,218,248,255</Color>
+      <Texture>w_kite_weapons.tga</Texture>
+      <Texture_Slot>1,0</Texture_Slot>
+      <Texture_Size>4,4</Texture_Size>
+      <Effect_Attachment></Effect_Attachment>
+   </LaserBeam>
+
+
+   <!-- Masari Inquisitor Light Energy Bolt Projectile -->
+   <LaserBeam Name="Laser_Masari_Inquisitor_Light_Bolt" Type="KITE">
+      <Width>2</Width>
+      <Length>6</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>95,88,1,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment></Effect_Attachment>
+   </LaserBeam>
+
+   <!-- Masari Inquisitor Dark Energy Bolt Projectile -->
+   <LaserBeam Name="Laser_Masari_Inquisitor_Dark_Bolt" Type="KITE">
+      <Width>2</Width>
+      <Length>6</Length>
+      <Render_Mode>ALPHA</Render_Mode>
+      <Color>81,0,81,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment></Effect_Attachment>
+   </LaserBeam>
+
+
+
+   <!-- Masari Avenger Light Energy Bolt Projectile -->
+   <LaserBeam Name="Laser_Masari_Avenger_Light_Bolt" Type="KITE">
+      <!--This is the offest dummy -->
+      <Effect_Offset>10,0</Effect_Offset>
+      <Width>1.0</Width>
+      <Length>20</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>0,0,0,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Avenger_Light_Bolt_Beam</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Avenger_Light_Bolt_Beam" Type="KITE">
+      <Width>1.0</Width>
+      <Length>30</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>255,255,168,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Avenger_Light_Bolt_Head</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Avenger_Light_Bolt_Head" Type="KITE">
+      <Width>7</Width>
+      <Length>7</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>255,255,168,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,2</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment></Effect_Attachment>
+   </LaserBeam>
+
+   <!-- Masari Avenger Dark Energy Bolt Projectile -->
+   <LaserBeam Name="Laser_Masari_Avenger_Dark_Bolt" Type="KITE">
+      <!-- This is the dummy Parent-->
+      <Width>3.0</Width>
+      <Length>10</Length>
+      <Render_Mode>ALPHA</Render_Mode>
+      <Color>49,37,62,0</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Offset>10,0</Effect_Offset>
+      <Effect_Attachment>Laser_Masari_Avenger_Dark_Bolt_Alpha</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Avenger_Dark_Bolt_Alpha" Type="KITE">
+      <Width>3.0</Width>
+      <Length>10</Length>
+      <Render_Mode>ALPHA</Render_Mode>
+      <Color>49,37,62,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Avenger_Dark_Bolt_Add_1</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Avenger_Dark_Bolt_Add_1" Type="KITE">
+      <Width>2.5</Width>
+      <Length>6</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>227,82,254,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Avenger_Dark_Bolt_Add_2</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Avenger_Dark_Bolt_Add_2" Type="KITE">
+      <Width>3</Width>
+      <Length>1</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>227,82,254,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Avenger_Dark_Bolt_Add</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Avenger_Dark_Bolt_Add" Type="KITE">
+      <Width>.5</Width>
+      <Length>30</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>230,170,255,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment></Effect_Attachment>
+      <Effect_Offset>30,30</Effect_Offset>
+   </LaserBeam>
+
+
+   <!-- Masari Avenger Light Energy Bolt Projectile -->
+   <LaserBeam Name="Laser_Masari_Seeker_Light_Bolt" Type="KITE">
+      <!--This is the offest dummy -->
+      <Effect_Offset>10,0</Effect_Offset>
+      <Width>1.0</Width>
+      <Length>20</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>0,0,0,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Seeker_Light_Bolt_Beam</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Seeker_Light_Bolt_Beam" Type="KITE">
+      <Size_Variation>0.5</Size_Variation>
+      <Width>1.0</Width>
+      <Length>30</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>255,255,168,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Seeker_Light_Bolt_Head</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Seeker_Light_Bolt_Head" Type="KITE">
+      <Size_Variation>0.5</Size_Variation>
+      <Width>5</Width>
+      <Length>7</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>255,255,168,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,2</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment></Effect_Attachment>
+   </LaserBeam>
+
+   <!-- Masari Avenger Dark Energy Bolt Projectile -->
+   <LaserBeam Name="Laser_Masari_Seeker_Dark_Bolt" Type="KITE">
+      <Size_Variation>0.5</Size_Variation>
+      <!-- This is the dummy Parent-->
+      <Width>3.0</Width>
+      <Length>10</Length>
+      <Render_Mode>ALPHA</Render_Mode>
+      <Color>49,37,62,0</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Offset>10,0</Effect_Offset>
+      <Effect_Attachment>Laser_Masari_Seeker_Dark_Bolt_Alpha</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Seeker_Dark_Bolt_Alpha" Type="KITE">
+      <Size_Variation>0.5</Size_Variation>
+      <Width>3.0</Width>
+      <Length>10</Length>
+      <Render_Mode>ALPHA</Render_Mode>
+      <Color>49,37,62,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Seeker_Dark_Bolt_Add_1</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Seeker_Dark_Bolt_Add_1" Type="KITE">
+      <Size_Variation>0.5</Size_Variation>
+      <Width>2.5</Width>
+      <Length>6</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>227,82,254,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Seeker_Dark_Bolt_Add_2</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Seeker_Dark_Bolt_Add_2" Type="KITE">
+      <Size_Variation>0.5</Size_Variation>
+      <Width>3</Width>
+      <Length>1</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>227,82,254,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Seeker_Dark_Bolt_Add</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Seeker_Dark_Bolt_Add" Type="KITE">
+      <Size_Variation>0.5</Size_Variation>
+      <Width>.5</Width>
+      <Length>30</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>230,170,255,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment></Effect_Attachment>
+      <Effect_Offset>30,30</Effect_Offset>
+   </LaserBeam>
+
+
+
+   <!-- Masari Peacebringer Light Energy Bolt Projectile -->
+   <LaserBeam Name="Laser_Masari_Peacebringer_Light_Bolt" Type="KITE">
+      <Effect_Offset>10,0</Effect_Offset>
+      <Width>2</Width>
+      <Length>1</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>0,0,0,255</Color>
+      <Texture>w_kite_weapons.tga</Texture>
+      <Texture_Slot>0,0</Texture_Slot>
+      <Texture_Size>4,4</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Peacebringer_Light_Bolt_Real_1</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Peacebringer_Light_Bolt_real_1" Type="KITE">
+      <Size_Variation>1</Size_Variation>
+      <Width>2</Width>
+      <Length>2</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>255,255,255,255</Color>
+      <Texture>w_kite_weapons.tga</Texture>
+      <Texture_Slot>1,1</Texture_Slot>
+      <Texture_Size>4,4</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Peacebringer_Light_Bolt_real</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Peacebringer_Light_Bolt_real" Type="KITE">
+      <Size_Variation>1</Size_Variation>
+      <Width>1</Width>
+      <Length>20</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>255,255,168,255</Color>
+      <Texture>w_kite_weapons.tga</Texture>
+      <Texture_Slot>1,0</Texture_Slot>
+      <Texture_Size>4,4</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Peacebringer_Light_Bolt_real1</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Peacebringer_Light_Bolt_real1" Type="KITE">
+      <Size_Variation>1</Size_Variation>
+      <Width>1.5</Width>
+      <Length>15</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>180,175,50,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Peacebringer_Light_Bolt_real2</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Peacebringer_Light_Bolt_real2" Type="KITE">
+      <Size_Variation>1</Size_Variation>
+      <Width>2</Width>
+      <Length>15</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>180,175,50,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>4,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Peacebringer_Light_Bolt_Billboard</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Peacebringer_Light_Bolt_Billboard" Type="BILLBOARD">
+      <Size_Variation>1</Size_Variation>
+      <Effect_Offset>3,0</Effect_Offset>
+      <Width>35</Width>
+      <Length>1</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>5,5,2,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Peacebringer_Light_Bolt_Heat</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Peacebringer_Light_Bolt_Heat" Type="KITE">
+      <Size_Variation>1</Size_Variation>
+      <Width>5</Width>
+      <Length>1</Length>
+      <Render_Mode>HEAT</Render_Mode>
+      <Color>255,255,255,50</Color>
+      <Texture>w_kite_weapons.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>4,4</Texture_Size>
+   </LaserBeam>
+
+   <!-- Masari Peacebringer Dark Energy Bolt Projectile -->
+   <LaserBeam Name="Laser_Masari_Peacebringer_Dark_Energy_Bolt" Type="KITE">
+      <Effect_Offset>10,0</Effect_Offset>
+      <Width>2</Width>
+      <Length>6</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>0,0,0,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Peacebringer_Dark_Energy_Bolt_A</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Peacebringer_Dark_Energy_Bolt_A" Type="KITE">
+      <Size_Variation>.1</Size_Variation>
+      <Width>4</Width>
+      <Length>10</Length>
+      <Render_Mode>ALPHA</Render_Mode>
+      <Color>20,3,32,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Peacebringer_Dark_Energy_Bolt_Add</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Peacebringer_Dark_Energy_Bolt_Add" Type="KITE">
+      <Size_Variation>.1</Size_Variation>
+      <Width>3</Width>
+      <Length>5</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>81,0,81,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Peacebringer_Dark_Energy_Bolt_Add1</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Peacebringer_Dark_Energy_Bolt_Add1" Type="KITE">
+      <Size_Variation>.1</Size_Variation>
+      <Width>2</Width>
+      <Length>9</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>188,134,248,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Peacebringer_Dark_Energy_Bolt_Add2</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Peacebringer_Dark_Energy_Bolt_Add2" Type="KITE">
+      <Size_Variation>.1</Size_Variation>
+      <Width>2</Width>
+      <Length>9</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>188,134,248,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Peacebringer_Dark_Energy_Bolt_Add3</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Peacebringer_Dark_Energy_Bolt_Add3" Type="BILLBOARD">
+      <Size_Variation>1</Size_Variation>
+      <Width>5</Width>
+      <Length>3</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>188,134,248,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>4,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Peacebringer_Dark_Energy_Bolt_Add4</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Peacebringer_Dark_Energy_Bolt_Add4" Type="KITE">
+      <Size_Variation>.1</Size_Variation>
+      <Width>3</Width>
+      <Length>7</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>188,134,248,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>4,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment></Effect_Attachment>
+   </LaserBeam>
+
+   <!-- Masari Sentry Dark Energy Bolt Projectile -->
+   <LaserBeam Name="Laser_Masari_Sentry_Dark_Bolt" Type="KITE">
+      <Effect_Offset>10,0</Effect_Offset>
+      <Width>2</Width>
+      <Length>6</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>0,0,0,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Sentry_Dark_Bolt_A</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Sentry_Dark_Bolt_A" Type="KITE">
+      <Size_Variation>0.5</Size_Variation>
+      <Width>3</Width>
+      <Length>12</Length>
+      <Render_Mode>ALPHA</Render_Mode>
+      <Color>20,3,32,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Sentry_Dark_Bolt_Add</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Sentry_Dark_Bolt_Add" Type="KITE">
+      <Size_Variation>0.5</Size_Variation>
+      <Width>1.5</Width>
+      <Length>3</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>30,0,81,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Sentry_Dark_Bolt_Add1</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Sentry_Dark_Bolt_Add1" Type="KITE">
+      <Size_Variation>0.5</Size_Variation>
+      <Width>1.5</Width>
+      <Length>7</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>142,134,248,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>2,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Sentry_Dark_Bolt_Add2</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Sentry_Dark_Bolt_Add2" Type="KITE">
+      <Size_Variation>0.5</Size_Variation>
+      <Width>3</Width>
+      <Length>7</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>142,134,248,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>4,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Sentry_Dark_Bolt_Add3</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Sentry_Dark_Bolt_Add3" Type="KITE">
+      <Size_Variation>0.5</Size_Variation>
+      <Width>1.5</Width>
+      <Length>6</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>142,134,248,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>4,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment>Laser_Masari_Sentry_Dark_Bolt_Add4</Effect_Attachment>
+   </LaserBeam>
+
+   <LaserBeam Name="Laser_Masari_Sentry_Dark_Bolt_Add4" Type="KITE">
+      <Size_Variation>0.5</Size_Variation>
+      <Width>2</Width>
+      <Length>5</Length>
+      <Render_Mode>ADDITIVE</Render_Mode>
+      <Color>188,134,248,255</Color>
+      <Texture>p_particle_master.tga</Texture>
+      <Texture_Slot>5,0</Texture_Slot>
+      <Texture_Size>8,8</Texture_Size>
+      <Effect_Attachment></Effect_Attachment>
+   </LaserBeam>
+
+
+   <!-- ********************************************************************************************* -->
+   <!-- ******  SPECIAL EFFECTS																						***** -->
+   <!-- ********************************************************************************************* -->
+
+   <LaserBeam Name="Laser_Heat_Medium_Kite" Type="KITE">
+      <Width>4.0f</Width>
+      <Length>8.0f</Length>
+      <Render_Mode>HEAT</Render_Mode>
+      <Color>255,255,255,255</Color>
+      <Texture>p_particle_heat_master.tga</Texture>
+      <Texture_Slot>0,0</Texture_Slot>
+      <Texture_Size>4,4</Texture_Size>
+   </LaserBeam>
+
+</LaserBeams>

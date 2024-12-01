@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GraphicDetailSettings>
+
+	<GraphicDetailLevelEnumeration>
+                                                                
+    <!-- These are the detail settings used by the simple detail slider in the video options dialog -->
+    <GraphicDetailLevel level="0">
+       <ScreenResolutionWidth>800</ScreenResolutionWidth>
+       <ScreenResolutionHeight>600</ScreenResolutionHeight>
+       <ScreenAALevel>0</ScreenAALevel>
+       <TextureMipLevel>1</TextureMipLevel>
+       <ShaderDetailLevel>0</ShaderDetailLevel>
+       <WaterDetailLevel>0</WaterDetailLevel>
+       <ShadowDetail>0</ShadowDetail>
+       <ShadowVolumes>No</ShadowVolumes>
+       <SoftShadows>No</SoftShadows>
+       <HeatDistortions>No</HeatDistortions>
+       <Bloom>No</Bloom>
+       <DynamicLighting>No</DynamicLighting>
+       <ParticleDetail>40</ParticleDetail>
+       <MeshDetail>0</MeshDetail>
+       <EnvironmentDetail>0</EnvironmentDetail>
+    </GraphicDetailLevel>
+
+		<GraphicDetailLevel level="1">
+			<ScreenResolutionWidth>800</ScreenResolutionWidth>
+			<ScreenResolutionHeight>600</ScreenResolutionHeight>
+			<ScreenAALevel>0</ScreenAALevel>
+			<TextureMipLevel>0</TextureMipLevel>
+			<ShaderDetailLevel>1</ShaderDetailLevel>
+			<WaterDetailLevel>0</WaterDetailLevel>
+			<ShadowDetail>0</ShadowDetail>	
+			<ShadowVolumes>No</ShadowVolumes>
+			<SoftShadows>No</SoftShadows>
+			<HeatDistortions>No</HeatDistortions>
+			<Bloom>No</Bloom>
+			<DynamicLighting>No</DynamicLighting>
+			<ParticleDetail>40</ParticleDetail>
+			<MeshDetail>0</MeshDetail>
+			<EnvironmentDetail>0</EnvironmentDetail>
+		</GraphicDetailLevel>
+		
+		 <!--Medium default detail--> 
+		<GraphicDetailLevel level="2">
+			<ScreenResolutionWidth>1024</ScreenResolutionWidth>
+			<ScreenResolutionHeight>768</ScreenResolutionHeight>
+			<ScreenAALevel>0</ScreenAALevel>
+			<TextureMipLevel>0</TextureMipLevel>
+			<ShaderDetailLevel>2</ShaderDetailLevel>
+			<WaterDetailLevel>1</WaterDetailLevel>
+			<ShadowDetail>1</ShadowDetail>	
+			<ShadowVolumes>Yes</ShadowVolumes>
+			<SoftShadows>No</SoftShadows>
+			<HeatDistortions>No</HeatDistortions>
+			<Bloom>No</Bloom>
+			<DynamicLighting>No</DynamicLighting>
+			<ParticleDetail>60</ParticleDetail>
+			<MeshDetail>50</MeshDetail>
+			<EnvironmentDetail>20</EnvironmentDetail>
+		</GraphicDetailLevel>
+
+		 <!--High default detail--> 
+		<GraphicDetailLevel level="3">
+         <ScreenResolutionWidth>1024</ScreenResolutionWidth>
+         <ScreenResolutionHeight>768</ScreenResolutionHeight>
+         <ScreenAALevel>0</ScreenAALevel>
+         <TextureMipLevel>0</TextureMipLevel>
+         <ShaderDetailLevel>3</ShaderDetailLevel>
+         <ShadowVolumes>Yes</ShadowVolumes>
+         <SoftShadows>No</SoftShadows>
+ 		   <ShadowDetail>2</ShadowDetail>	
+		   <HeatDistortions>Yes</HeatDistortions>
+		   <Bloom>Yes</Bloom>
+		   <DynamicLighting>No</DynamicLighting>
+		   <ParticleDetail>80</ParticleDetail>
+		   <MeshDetail>70</MeshDetail>
+		   <EnvironmentDetail>60</EnvironmentDetail>
+		</GraphicDetailLevel>
+		
+		 <!--Highest default detail--> 
+		<GraphicDetailLevel level="4">
+			<ScreenResolutionWidth>1280</ScreenResolutionWidth>
+			<ScreenResolutionHeight>1024</ScreenResolutionHeight>
+			<ScreenAALevel>1</ScreenAALevel>
+			<TextureMipLevel>0</TextureMipLevel>
+			<ShaderDetailLevel>4</ShaderDetailLevel>
+			<WaterDetailLevel>2</WaterDetailLevel>
+			<ShadowDetail>2</ShadowDetail>	
+			<ShadowVolumes>Yes</ShadowVolumes>
+			<SoftShadows>Yes</SoftShadows>
+			<HeatDistortions>Yes</HeatDistortions>
+			<Bloom>Yes</Bloom>
+			<DynamicLighting>No</DynamicLighting>
+			<ParticleDetail>100</ParticleDetail>
+			<MeshDetail>100</MeshDetail>
+			<EnvironmentDetail>100</EnvironmentDetail>
+		</GraphicDetailLevel>
+                                                                
+	</GraphicDetailLevelEnumeration>
+
+ <!-- 
+  LOD autodetection works like this:
+  - First, examine the user's hardware, measure cpu speed, ram, shader model, video memory, pixel fill rate, and vertex rate
+  - Each individual "advanced" detail setting can require any of the above stats
+  - Select the highest setting that meets the requirements for each detail setting 
+  - For the simple detail slider, just match the selected set of detail settings to its nearest "simple detail set"
+  -->
+ 
+  <!-- Example Filters 
+  <TextureMemory>200.0</TextureMemory>
+  <CPUSpeed>2.25</CPUSpeed>
+  <FillRateGPs>3200.0</FillRateGPs>
+  <PixelShaderVersionHEX>0x0200</PixelShaderVersionHEX>
+  <VertexShaderVersionHEX>0x0000</VertexShaderVersionHEX>
+  <FillRateGPs>1000.0</FillRateGPs>
+  <VertexRateMVs></VertexRateMVs>
+  -->
+  
+  <!-- Shader LOD auto-detection based on fill-rate (must have specified fill-rate to select that level), CPU, texture memory, etc. -->
+  <ShaderLODs>
+    <ShaderLOD level="0">
+       <FillRateGPs>0.0</FillRateGPs>
+    </ShaderLOD>
+    <ShaderLOD level="1">
+       <FillRateGPs>100.0</FillRateGPs>
+    </ShaderLOD>
+    <ShaderLOD level="2">
+       <FillRateGPs>200.0</FillRateGPs>
+    </ShaderLOD>
+    <ShaderLOD level="3">
+       <FillRateGPs>300.0</FillRateGPs>
+    </ShaderLOD>
+    <ShaderLOD level="4">
+       <FillRateGPs>400.0</FillRateGPs>
+    </ShaderLOD>
+  </ShaderLODs>
+  
+  <!-- Pre-defined LOD level requirements for autodetect -->
+  <!--
+  <LODs>
+    <LOD level="1">
+      <ShaderLOD>1</ShaderLOD>
+      <TextureMemory>100.0</TextureMemory>
+      <PixelShaderVersionHEX>0x0100</PixelShaderVersionHEX>
+    </LOD>
+    <LOD level="2">
+      <ShaderLOD>2</ShaderLOD>
+      <CPUSpeed>2.0</CPUSpeed>
+      <TextureMemory>200.0</TextureMemory>
+      <PixelShaderVersionHEX>0x0200</PixelShaderVersionHEX>
+    </LOD>
+    <LOD level="3">
+      <ShaderLOD>3</ShaderLOD>
+      <CPUSpeed>2.25</CPUSpeed>
+    </LOD>
+  </LODs> -->
+  
+  <!-- Per-setting configuration data that determines what level to use based on CPU, Fill-rate, texture memory, etc., when we auto-detect -->
+  <!-- List the settings in order from best to worst -->
+  <SettingLevels>
+
+    <!-- Screen resolution -->
+    <ScreenResolutionWidth value="800">
+      <FillRateGPs>0.0</FillRateGPs>
+    </ScreenResolutionWidth>
+    <ScreenResolutionWidth value="1024">
+      <FillRateGPs>400.0</FillRateGPs>
+    </ScreenResolutionWidth>
+    <ScreenResolutionWidth value="1280">
+      <FillRateGPs>700.0</FillRateGPs>
+    </ScreenResolutionWidth>
+    <ScreenResolutionWidth value="1600">
+      <FillRateGPs>1000.0</FillRateGPs>
+    </ScreenResolutionWidth>
+
+    <ScreenResolutionHeight value="600">
+      <FillRateGPs>0.0</FillRateGPs>
+    </ScreenResolutionHeight>
+    <ScreenResolutionHeight value="768">
+      <FillRateGPs>400.0</FillRateGPs>
+    </ScreenResolutionHeight>
+    <ScreenResolutionHeight value="1024">
+      <FillRateGPs>700.0</FillRateGPs>
+    </ScreenResolutionHeight>
+    <ScreenResolutionHeight value="1200">
+      <FillRateGPs>1000.0</FillRateGPs>
+    </ScreenResolutionHeight>
+
+    <!-- Anti-aliasing -->
+    <ScreenAALevel value="1">
+      <FillRateGPs>250.0</FillRateGPs>
+      <ShaderLOD>1</ShaderLOD>
+    </ScreenAALevel>
+    <ScreenAALevel value="2">
+      <FillRateGPs>500.0</FillRateGPs>
+      <ShaderLOD>1</ShaderLOD>
+    </ScreenAALevel>
+
+    <!-- Texture mip level -->
+    <TextureMipLevel value="1">
+      <ShaderLOD>0</ShaderLOD>
+    </TextureMipLevel>
+    <TextureMipLevel value="0">
+      <ShaderLOD>1</ShaderLOD>
+    </TextureMipLevel>
+
+    <!-- Water detail level -->
+    <WaterDetailLevel value="0">
+      <ShaderLOD>0</ShaderLOD>
+    </WaterDetailLevel>
+    <WaterDetailLevel value="1">
+      <ShaderLOD>1</ShaderLOD>
+      <FillRateGPs>500.0</FillRateGPs>
+    </WaterDetailLevel>
+    <WaterDetailLevel value="2">
+      <ShaderLOD>2</ShaderLOD>
+      <CPUUnits>5000</CPUUnits>
+      <FillRateGPs>800.0</FillRateGPs>
+    </WaterDetailLevel>
+
+    <!-- Shadow detail -->
+    <ShadowDetail value="0">
+      <ShaderLOD>0</ShaderLOD>
+    </ShadowDetail>
+    <ShadowDetail value="1">
+      <ShaderLOD>1</ShaderLOD>
+      <FillRateGPs>500.0</FillRateGPs>
+    </ShadowDetail>
+    <ShadowDetail value="2">
+      <ShaderLOD>4</ShaderLOD>
+      <CPUUnits>5000</CPUUnits>
+      <FillRateGPs>1000.0</FillRateGPs>
+    </ShadowDetail>
+
+    <!-- Shadow volumes -->
+    <ShadowVolumes value="Yes">
+      <ShaderLOD>1</ShaderLOD>
+    </ShadowVolumes>
+
+    <!-- Soft shadows -->
+    <SoftShadows value="Yes">
+      <ShaderLOD>3</ShaderLOD>
+    </SoftShadows>
+
+    <!-- Head distortion-->
+    <HeatDistortions value="No">
+    </HeatDistortions>
+    <HeatDistortions value="Yes">
+      <FillRateGPs>500.0</FillRateGPs>
+      <ShaderLOD>1</ShaderLOD>
+    </HeatDistortions>
+
+    <!-- Bloom -->
+    <Bloom value="No">
+    </Bloom>
+    <Bloom value="Yes">
+      <FillRateGPs>500.0</FillRateGPs>
+      <ShaderLOD>1</ShaderLOD>
+    </Bloom>
+
+    <!-- Dynamic lighting -->
+    <DynamicLighting value="No">
+    </DynamicLighting>
+
+    <!-- Particle detail -->
+    <ParticleDetail value="60">
+      <CPUUnits>4000</CPUUnits>
+    </ParticleDetail>
+    <ParticleDetail value="80">
+      <CPUUnits>5500</CPUUnits>
+      <FillRateGPs>400.0</FillRateGPs>
+    </ParticleDetail>
+    <ParticleDetail value="100">
+      <CPUUnits>6000</CPUUnits>
+      <FillRateGPs>800.0</FillRateGPs>
+    </ParticleDetail>
+
+    <!-- Mesh detail -->
+    <MeshDetail value="20">
+      <ShaderLOD>0</ShaderLOD>
+    </MeshDetail>
+    <MeshDetail value="70">
+      <ShaderLOD>1</ShaderLOD>
+      <FillRateGPs>500.0</FillRateGPs>
+    </MeshDetail>
+    <MeshDetail value="100">
+      <ShaderLOD>2</ShaderLOD>
+      <FillRateGPs>1000.0</FillRateGPs>
+    </MeshDetail>
+
+    <!-- Environment detail -->
+    <EnvironmentDetail value="20">
+      <ShaderLOD>0</ShaderLOD>
+    </EnvironmentDetail>
+    <EnvironmentDetail value="60">
+      <ShaderLOD>1</ShaderLOD>
+      <FillRateGPs>500.0</FillRateGPs>
+    </EnvironmentDetail>
+    <EnvironmentDetail value="100">
+      <ShaderLOD>2</ShaderLOD>
+      <FillRateGPs>1000.0</FillRateGPs>
+    </EnvironmentDetail>
+
+  </SettingLevels>
+        
+</GraphicDetailSettings>
+

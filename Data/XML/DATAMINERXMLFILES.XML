@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+
+<GameXMLFiles>
+
+	<File filename="GameObjectFiles.xml"				type="GameObjectType"				metafile="true"/> 
+	<File filename="MiscObjects.xml"						type="GameObjectType"				metafile="false"/> 
+	<File filename="SpecialEffects.xml"					type="GameObjectType"				metafile="false"/> 
+	<File filename="ParticlesGUI.xml"					type="GameObjectType"				metafile="false"/> 
+	
+	<File filename="SFXEventFiles.xml"					type="SFXEvent"						metafile="true"/>
+	<File filename="TerrainDecalFX.xml"					type="TerrainDecalFX"				metafile="false"/>
+	<File filename="DynamicTrackFX.xml"					type="DynamicTrackFX"				metafile="false"/>
+	<File filename="MusicEvents.xml"						type="MusicEvent"						metafile="false"/>
+	<File filename="SpeechEvents.xml"					type="SpeechEvent"					metafile="false"/>
+	<File filename="GameConstants.xml"					type="GameConstants"					metafile="false"/>
+	<File filename="CommandBarComponentFiles.xml"	type="CommandBarComponent"			metafile="true"/>
+	<File filename="RadarMap.xml"							type="RadarMap"						metafile="false"/>
+	<File filename="WeatherScenarios.xml"				type="WeatherPattern"				metafile="false"/>
+	<File filename="CampaignFiles.xml"					type="Campaign"						metafile="true"/>
+	<File filename="FactionFiles.xml"					type="Faction"							metafile="true"/>
+	<File filename="TacticalCameras.xml"				type="TacticalCameraConstants"	metafile="false"/>
+	<File filename="LightSources.xml"					type="LightSource"					metafile="false"/>
+	<File filename="Movies.xml"							type="BinkMovie"						metafile="false"/>
+	<File filename="TargetingPrioritySetFiles.xml"	type="TargetingPrioritySet"		metafile="true"/>
+	<File filename="DifficultyAdjustments.xml"		type="DifficultyAdjustment"		metafile="false"/>
+	<File filename="WeatherAudio.xml"					type="WeatherAudioManager"			metafile="false"/>
+	<File filename="LightningEffectTypes.xml"			type="LightningTypeManager"		metafile="false"/>
+	<File filename="Audio.xml"								type="AudioConstantsMap"			metafile="false"/>
+	<File filename="AITestGameConstants.xml"			type="GameConstants"					metafile="false"/>
+	<File filename="GraphicDetails.xml"					type="GraphicDetailSettingMap"	metafile="false"/>
+	<File filename="MousePointerFiles.xml"				type="MousePointerDataMap"			metafile="true"/>
+	<File filename="TextCrawl.xml"						type="Draw3DTextCrawlDataMap"		metafile="false"/>
+	<File filename="HyperGameConstants.xml"			type="GameConstantsMap"				metafile="false"/>
+
+	<!-- Unknown types, or types not in DatabaseMap -->
+	<File filename="GUIDialogs.xml"						type=""									metafile="false"/>
+	<File filename="AITerrainEffectiveness.xml"		type=""									metafile="false"/>
+	<File filename="AmbientMapSounds.xml"				type=""									metafile="false"/>
+	<File filename="WeatherModifiers.xml"				type=""									metafile="false"/>
+	<File filename="UnitAbilityTypes.xml"				type=""									metafile="false"/>
+	<File filename="SurfaceFX.xml"						type=""									metafile="false"/>
+	<File filename="MovementClassTypeDefs.xml"		type=""									metafile="false"/>
+	<File filename="ShadowBlobMaterials.xml"			type=""									metafile="false"/>
+	<!-- <File filename="MOV_Cinematics.xml"					type=""									metafile="false"/> -->
+	
+</GameXMLFiles>
+

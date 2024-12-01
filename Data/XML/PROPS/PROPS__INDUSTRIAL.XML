@@ -1,0 +1,363 @@
+<?xml version="1.0"?>
+
+<Props_Industrial_XML>
+
+<!-- **************************************************************************************** -->	
+<!-- *** OBJECT(S) ************************************************************************** -->	
+<!-- **************************************************************************************** -->
+
+   <X40_Props_Industrial Name="_Passenger_Airplane_01">
+      <Land_Model_Name> WO_Plane00.ALO </Land_Model_Name>
+      <Scale_Factor> 5.0 </Scale_Factor>
+      <Is_Decoration> No </Is_Decoration>
+      <Text_ID> TEXT_NONE </Text_ID>
+      <Is_UI_Relevant> false </Is_UI_Relevant>
+   </X40_Props_Industrial>
+
+   <X40_Props_Industrial Name="_Antenna_Array_01">
+      <Land_Model_Name> WO_AntennaArray.ALO </Land_Model_Name>
+      <Scale_Factor> 2.5 </Scale_Factor>
+      <Is_Decoration> Yes </Is_Decoration>
+      <Text_ID> TEXT_NONE </Text_ID>
+      <LandBehavior> COMBINABLE </LandBehavior>
+      <Is_UI_Relevant> false </Is_UI_Relevant>
+   </X40_Props_Industrial>
+
+   <X40_Props_Industrial Name="_Radar_Array_01">
+      <Land_Model_Name> WO_AntennaArray2.ALO </Land_Model_Name>
+      <Scale_Factor> 1.8 </Scale_Factor>
+      <Is_Decoration> Yes </Is_Decoration>
+      <Text_ID> TEXT_NONE </Text_ID>
+      <LandBehavior> COMBINABLE </LandBehavior>
+      <Is_UI_Relevant> false </Is_UI_Relevant>
+		<Can_Be_Miraged>Yes</Can_Be_Miraged>
+   </X40_Props_Industrial>
+
+   <X40_Props_Industrial Name="_Arecibo_Cables">
+		<Land_Model_Name> WO_Arecibo_Cable_01.ALO </Land_Model_Name>
+		<Scale_Factor> 1.0 </Scale_Factor>
+		<Is_Decoration> Yes </Is_Decoration>
+		<Text_ID> TEXT_NONE </Text_ID>
+		<LandBehavior> COMBINABLE </LandBehavior>
+		<Is_UI_Relevant> false </Is_UI_Relevant>
+		<Exclude_From_Distance_Fade> true </Exclude_From_Distance_Fade>
+	</X40_Props_Industrial>
+
+   <X40_Props_Industrial Name="_PanamaCanal_Wall">
+		<Land_Model_Name> WO_CanalWall.ALO </Land_Model_Name>
+		<Scale_Factor> 1.0 </Scale_Factor>
+		<Is_Decoration> Yes </Is_Decoration>
+		<Text_ID> TEXT_NONE </Text_ID>
+		<LandBehavior> COMBINABLE </LandBehavior>
+		<Is_UI_Relevant> false </Is_UI_Relevant>
+		<Exclude_From_Distance_Fade> true </Exclude_From_Distance_Fade>
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+	</X40_Props_Industrial>
+
+   <X40_Props_Industrial Name="_Arecibo_Cables_Longer">
+		<Land_Model_Name> WO_Arecibo_Cable_02.ALO </Land_Model_Name>
+		<Scale_Factor> 1.0 </Scale_Factor>
+		<Is_Decoration> Yes </Is_Decoration>
+		<Text_ID> TEXT_NONE </Text_ID>
+		<LandBehavior> COMBINABLE </LandBehavior>
+		<Is_UI_Relevant> false </Is_UI_Relevant>
+		<Exclude_From_Distance_Fade> true </Exclude_From_Distance_Fade>
+	</X40_Props_Industrial>
+
+	<X40_Props_Industrial Name="_Barrels_Pallet">
+		<Land_Model_Name> WO_barrels_pallet.ALO </Land_Model_Name>
+		<Scale_Factor> 2.0 </Scale_Factor>
+		<Is_Decoration> Yes </Is_Decoration>
+		<Text_ID> TEXT_NONE </Text_ID>
+		<Prevents_Structure_Placement> No </Prevents_Structure_Placement>
+		<LandBehavior> COMBINABLE </LandBehavior>
+		<Is_UI_Relevant> false </Is_UI_Relevant>
+	</X40_Props_Industrial>
+
+	<X40_Props_Industrial Name="_Crate_Missiles_Open">
+		<Land_Model_Name> WO_Crate_Missles_open.ALO </Land_Model_Name>
+		<Scale_Factor> 0.6 </Scale_Factor>
+		<Is_Decoration> Yes </Is_Decoration>
+		<Text_ID> TEXT_NONE </Text_ID>
+		<Prevents_Structure_Placement> No </Prevents_Structure_Placement>
+		<LandBehavior> COMBINABLE </LandBehavior>
+		<Is_UI_Relevant> false </Is_UI_Relevant>
+	</X40_Props_Industrial>
+
+	<X40_Props_Industrial Name="_Crate_Missiles_Closed">
+		<Land_Model_Name> WO_Crate_Missles_closed.ALO </Land_Model_Name>
+		<Scale_Factor> 0.6 </Scale_Factor>
+		<Is_Decoration> Yes </Is_Decoration>
+		<Text_ID> TEXT_NONE </Text_ID>
+		<Prevents_Structure_Placement> No </Prevents_Structure_Placement>
+		<LandBehavior> COMBINABLE </LandBehavior>
+		<Is_UI_Relevant> false </Is_UI_Relevant>
+	</X40_Props_Industrial>
+
+	<X40_Props_Industrial Name="_Barrel_01">
+		<Land_Model_Name> WO_Barrel_single.ALO </Land_Model_Name>
+		<Scale_Factor> 2.0 </Scale_Factor>
+		<Is_Decoration> Yes </Is_Decoration>
+		<Text_ID> TEXT_NONE </Text_ID>
+		<Prevents_Structure_Placement> No </Prevents_Structure_Placement>
+		<LandBehavior> COMBINABLE </LandBehavior>
+		<Is_UI_Relevant> false </Is_UI_Relevant>
+	</X40_Props_Industrial>
+
+	<X40_Props_Industrial Name="_Pallet_01">
+		<Land_Model_Name> WO_Pallet_single.ALO </Land_Model_Name>
+		<Scale_Factor> 2.0 </Scale_Factor>
+		<Is_Decoration> Yes </Is_Decoration>
+		<Text_ID> TEXT_NONE </Text_ID>
+		<Prevents_Structure_Placement> No </Prevents_Structure_Placement>
+		<LandBehavior> COMBINABLE </LandBehavior>
+		<Is_UI_Relevant> false </Is_UI_Relevant>
+	</X40_Props_Industrial>
+
+	<X40_Props_Industrial Name="_Crate_Ammo_Closed_Stack">
+		<Land_Model_Name> WO_Ammo_crate.ALO </Land_Model_Name>
+		<Scale_Factor> 0.5 </Scale_Factor>
+		<Is_Decoration> Yes </Is_Decoration>
+		<Text_ID> TEXT_NONE </Text_ID>
+		<Prevents_Structure_Placement> No </Prevents_Structure_Placement>
+		<LandBehavior> COMBINABLE </LandBehavior>
+		<Is_UI_Relevant> false </Is_UI_Relevant>
+		<Can_Be_Miraged>Yes</Can_Be_Miraged>
+	</X40_Props_Industrial>
+
+	<X40_Props_Industrial Name="_Crate_Ammo_Open">
+		<Land_Model_Name> WO_Ammo_Crate_open.ALO </Land_Model_Name>
+		<Scale_Factor> 0.5 </Scale_Factor>
+		<Is_Decoration> Yes </Is_Decoration>
+		<Text_ID> TEXT_NONE </Text_ID>
+		<Prevents_Structure_Placement> No </Prevents_Structure_Placement>
+		<LandBehavior> COMBINABLE </LandBehavior>
+		<Is_UI_Relevant> false </Is_UI_Relevant>
+	</X40_Props_Industrial>
+
+
+	<X40_Props_Industrial Name="_Bunker_01_Trio">
+
+		<!-- ART -->
+		<Land_Model_Name> WO_Bunker.ALO </Land_Model_Name>
+		<Scale_Factor> 1.1 </Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<Prevents_Structure_Placement> No </Prevents_Structure_Placement>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_STRUCTURE_MILITARY_BUNKER</Text_ID>
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+		<!-- ATTRIBUTES -->
+		<Affiliation>Civilian</Affiliation>
+		<CategoryMask> Large, Stationary, Insignificant </CategoryMask>
+
+		<!-- CONFLICT -->
+		<Is_Attackable> true </Is_Attackable>
+		<Collidable_By_Projectile_Living> Yes </Collidable_By_Projectile_Living>
+		<Ranged_Target_Z_Adjust> 10.0 </Ranged_Target_Z_Adjust>
+		<Tactical_Health> 800 </Tactical_Health>
+		<Dense_FOW_Reveal_Range_Multiplier> 0.0 </Dense_FOW_Reveal_Range_Multiplier>
+
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0 </Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX />
+
+		<!-- BEHAVIORS -->
+		<Behavior>
+			SELECTABLE,
+			LAND_OBSTACLE
+		</Behavior>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Armor_Type> Armor_Civilian_Structure_Light </Armor_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="CrushBehaviorType">
+			<Crush_Defense>60</Crush_Defense>
+		</BehaviorType>
+
+		<BehaviorType Name="SelectableBehaviorType">
+			<Select_Box_Scale> 50 </Select_Box_Scale>
+		</BehaviorType>
+
+	</X40_Props_Industrial>
+
+
+	<X40_Props_Industrial Name="_Bunker_01">
+		<Variant_Of_Existing_Type> _Bunker_01_Trio </Variant_Of_Existing_Type>
+		<Land_Model_Name> WO_Bunker2.ALO </Land_Model_Name>
+		<Scale_Factor> 1.1 </Scale_Factor>
+		<Is_UI_Relevant> false </Is_UI_Relevant>
+	</X40_Props_Industrial>
+
+
+	<X40_Props_Industrial Name="_Bunker_02">
+		<Variant_Of_Existing_Type> _Bunker_01_Trio </Variant_Of_Existing_Type>
+		<Land_Model_Name> WO_Bunker3.ALO </Land_Model_Name>
+		<Scale_Factor> 1.1 </Scale_Factor>
+		<Is_UI_Relevant> false </Is_UI_Relevant>
+	</X40_Props_Industrial>
+
+
+
+	<X40_Props_Industrial Name="_Pipe_01">
+		<Land_Model_Name> WO_pipe.ALO </Land_Model_Name>
+		<Scale_Factor> 1.0 </Scale_Factor>
+		<Is_Decoration> Yes </Is_Decoration>
+		<Text_ID> TEXT_NONE </Text_ID>
+		<Prevents_Structure_Placement> No </Prevents_Structure_Placement>
+		<LandBehavior> COMBINABLE </LandBehavior>
+		<Is_UI_Relevant> false </Is_UI_Relevant>
+	</X40_Props_Industrial>
+
+	<X40_Props_Industrial Name="_Pipe_01_Middle">
+		<Land_Model_Name> WO_pipe_middle.ALO </Land_Model_Name>
+		<Scale_Factor> 1.0 </Scale_Factor>
+		<Is_Decoration> Yes </Is_Decoration>
+		<Text_ID> TEXT_NONE </Text_ID>
+		<Prevents_Structure_Placement> No </Prevents_Structure_Placement>
+		<LandBehavior> COMBINABLE </LandBehavior>
+		<Is_UI_Relevant> false </Is_UI_Relevant>
+	</X40_Props_Industrial>
+
+	<X40_Props_Industrial Name="_Pipe_01_Corner">
+		<Land_Model_Name> WO_pipe_corner.ALO </Land_Model_Name>
+		<Scale_Factor> 1.0 </Scale_Factor>
+		<Is_Decoration> Yes </Is_Decoration>
+		<Text_ID> TEXT_NONE </Text_ID>
+		<Prevents_Structure_Placement> No </Prevents_Structure_Placement>
+		<LandBehavior> COMBINABLE </LandBehavior>
+		<Is_UI_Relevant> false </Is_UI_Relevant>
+	</X40_Props_Industrial>
+
+	<X69_Destroyed_Objects Name="_Destroyed_Rubble_01">
+		<Land_Model_Name>wo_rubble.ALO</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Prevents_Structure_Placement>No</Prevents_Structure_Placement>
+		<LandBehavior>COMBINABLE</LandBehavior>
+		<Is_UI_Relevant> false </Is_UI_Relevant>
+		<!-- MOVEMENT -->
+		<Space_Layer> LandStatic </Space_Layer>
+		<UnitCollisionClass> Medium Obstacle </UnitCollisionClass>
+		<Custom_Hard_XExtent> 35 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 35 </Custom_Hard_YExtent>
+		<Custom_Hard_XExtent_Offset> 6 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_YExtent_Offset> 3 </Custom_Hard_YExtent_Offset>
+	</X69_Destroyed_Objects>
+
+	<X69_Destroyed_Objects Name="_Skeleton_01">
+		<Land_Model_Name> Wh_skeleton_01.ALO </Land_Model_Name>
+		<Scale_Factor> 1.0 </Scale_Factor>
+		<Is_Decoration> Yes </Is_Decoration>
+		<Text_ID> TEXT_NONE </Text_ID>
+		<Prevents_Structure_Placement> No </Prevents_Structure_Placement>
+		<LandBehavior> COMBINABLE </LandBehavior>
+		<LOD_Bias>10</LOD_Bias>
+		<Is_UI_Relevant> false </Is_UI_Relevant>
+	</X69_Destroyed_Objects>
+
+	<X69_Destroyed_Objects Name="_Skeleton_02">
+		<Variant_Of_Existing_Type> _Skeleton_01 </Variant_Of_Existing_Type>
+		<Land_Model_Name> Wh_skeleton_02.ALO </Land_Model_Name>
+		<Is_UI_Relevant> false </Is_UI_Relevant>
+	</X69_Destroyed_Objects>
+
+	<X69_Destroyed_Objects Name="_Skeleton_03">
+		<Variant_Of_Existing_Type> _Skeleton_01 </Variant_Of_Existing_Type>
+		<Land_Model_Name> Wh_skeleton_04.ALO </Land_Model_Name>
+		<Is_UI_Relevant> false </Is_UI_Relevant>
+	</X69_Destroyed_Objects>
+
+	<X69_Destroyed_Objects Name="_Skeleton_04">
+		<Variant_Of_Existing_Type> _Skeleton_01 </Variant_Of_Existing_Type>
+		<Land_Model_Name> Wh_skeleton_05.ALO </Land_Model_Name>
+		<Is_UI_Relevant> false </Is_UI_Relevant>
+	</X69_Destroyed_Objects>
+
+	<X69_Destroyed_Objects Name="_Skeleton_05">
+		<Variant_Of_Existing_Type> _Skeleton_01 </Variant_Of_Existing_Type>
+		<Land_Model_Name> Wh_skeleton_06.ALO </Land_Model_Name>
+		<Is_UI_Relevant> false </Is_UI_Relevant>
+	</X69_Destroyed_Objects>
+
+	<X69_Destroyed_Objects Name="_Destroyed_Military_Jet">
+		<Land_Model_Name>MV_Apache_crashed.ALO</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Prevents_Structure_Placement> No </Prevents_Structure_Placement>
+		<LandBehavior>COMBINABLE</LandBehavior>
+		<Is_UI_Relevant> false </Is_UI_Relevant>
+		<!-- MOVEMENT -->
+		<Space_Layer> LandStatic </Space_Layer>
+		<UnitCollisionClass> High Obstacle </UnitCollisionClass>
+	</X69_Destroyed_Objects>
+	
+	<X69_Destroyed_Objects Name="_Destroyed_Military_Hummer">
+		<Land_Model_Name>MV_Hummer_crashed.ALO</Land_Model_Name>
+		<Scale_Factor>0.85</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Prevents_Structure_Placement> No </Prevents_Structure_Placement>
+		<LandBehavior>COMBINABLE</LandBehavior>
+		<Is_UI_Relevant> false </Is_UI_Relevant>
+		<!-- MOVEMENT -->
+		<Space_Layer> LandStatic </Space_Layer>
+		<UnitCollisionClass> Medium Obstacle </UnitCollisionClass>
+	</X69_Destroyed_Objects>
+
+	<X69_Destroyed_Objects Name="_Destroyed_Military_Helicopter">
+		<Land_Model_Name>MV_Apache_crashed.ALO</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>Yes</Is_Decoration>
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Prevents_Structure_Placement> No </Prevents_Structure_Placement>
+		<LandBehavior>COMBINABLE</LandBehavior>
+		<Is_UI_Relevant> false </Is_UI_Relevant>
+	</X69_Destroyed_Objects>
+
+	<X69_Destroyed_Objects Name="_Destroyed_Alien_Transport">
+		<Land_Model_Name>AV_Unit_transport_crashed.ALO</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Prevents_Structure_Placement> No </Prevents_Structure_Placement>
+		<LandBehavior> COMBINABLE </LandBehavior>
+		<Is_UI_Relevant> false </Is_UI_Relevant>
+		<!-- MOVEMENT -->
+		<Space_Layer> LandStatic </Space_Layer>
+		<UnitCollisionClass> Medium Obstacle </UnitCollisionClass>
+	</X69_Destroyed_Objects>
+
+	<X69_Destroyed_Objects Name="_Destroyed_Military_Tank">
+		<Land_Model_Name>MV_Tank_Destroyed.ALO</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Prevents_Structure_Placement> No </Prevents_Structure_Placement>
+		<LandBehavior>COMBINABLE</LandBehavior>
+		<Is_UI_Relevant> false </Is_UI_Relevant>
+		<!-- MOVEMENT -->
+		<Space_Layer> LandStatic </Space_Layer>
+		<UnitCollisionClass> Medium Obstacle </UnitCollisionClass>
+	</X69_Destroyed_Objects>
+
+	<X69_Destroyed_Objects Name="_Destroyed_Military_Tank_V2">
+		<Land_Model_Name>MV_Tank_Destroyed2.ALO</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Prevents_Structure_Placement> No </Prevents_Structure_Placement>
+		<LandBehavior>COMBINABLE</LandBehavior>
+		<Is_UI_Relevant> false </Is_UI_Relevant>
+		<!-- MOVEMENT -->
+		<Space_Layer> LandStatic </Space_Layer>
+		<UnitCollisionClass> Medium Obstacle </UnitCollisionClass>
+	</X69_Destroyed_Objects>
+
+
+
+</Props_Industrial_XML>

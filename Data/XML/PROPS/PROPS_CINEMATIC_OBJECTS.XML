@@ -1,0 +1,883 @@
+<?xml version="1.0"?>
+<Cinematic_Props>
+
+  <X70_Cinematics Name="_Destroyed_Rubble_Constant">
+    <Text_ID>TEXT_NONE</Text_ID>
+    <Land_Model_Name>WB_na_rubble_constant.ALO</Land_Model_Name>
+    <Scale_Factor>1.0</Scale_Factor>
+    <Is_Decoration>No</Is_Decoration>
+    <Prevents_Structure_Placement>No</Prevents_Structure_Placement>
+  </X70_Cinematics>
+
+	<X70_Cinematics Name="CIN_Fog_Plane">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>w_fogplane.ALO</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<Prevents_Structure_Placement>No</Prevents_Structure_Placement>
+	</X70_Cinematics>
+
+  <X70_Cinematics Name="MOV_ACT_3_Intro_Cinematic_00">
+
+    <Land_Model_Name>MOV_ACT_3_INTRO.ALO</Land_Model_Name>
+
+    <Cinematic_Object_Only> YES </Cinematic_Object_Only>
+    <Scale_Factor>1.0</Scale_Factor>
+    <Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+    <Pause_During_Cinematic_Anim>yes</Pause_During_Cinematic_Anim>
+    <Cinematic_Anim_Speed>1.0</Cinematic_Anim_Speed>
+    <Cinematic_Anim_Blend_Seconds>1.0</Cinematic_Anim_Blend_Seconds>
+    <Cinematic_Anim_Index>00</Cinematic_Anim_Index>
+    <Behavior> IDLE  </Behavior>
+  </X70_Cinematics>
+
+  <X70_Cinematics Name="MOV_DEMO4_Act01_Transport">
+
+    <Land_Model_Name>MOV_ACT_1_INTRO.ALO</Land_Model_Name>
+
+    <Cinematic_Object_Only> YES </Cinematic_Object_Only>
+    <Scale_Factor>1.0</Scale_Factor>
+    <Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+    <Pause_During_Cinematic_Anim>yes</Pause_During_Cinematic_Anim>
+    <Cinematic_Anim_Speed>1.0</Cinematic_Anim_Speed>
+    <Cinematic_Anim_Blend_Seconds>1.0</Cinematic_Anim_Blend_Seconds>
+    <Cinematic_Anim_Index>00</Cinematic_Anim_Index>
+    <Behavior>IDLE</Behavior>
+  </X70_Cinematics>
+
+  <X70_Cinematics Name="MOV_DEMO4_Act01_WalkerArrival">
+
+    <Land_Model_Name>CIN_Walker_Arrival.ALO</Land_Model_Name>
+
+    <Cinematic_Object_Only> YES </Cinematic_Object_Only>
+    <Scale_Factor>1.0</Scale_Factor>
+    <Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+    <Pause_During_Cinematic_Anim>yes</Pause_During_Cinematic_Anim>
+    <Cinematic_Anim_Speed>1.0</Cinematic_Anim_Speed>
+    <Cinematic_Anim_Blend_Seconds>1.0</Cinematic_Anim_Blend_Seconds>
+    <Cinematic_Anim_Index>00</Cinematic_Anim_Index>
+    <Behavior>IDLE</Behavior>
+    
+  </X70_Cinematics>
+
+  <X70_Cinematics Name="MOV_DEMO4_Act01_EndingTransport">
+
+    <Land_Model_Name>MOV_ACT_1_Finale.ALO</Land_Model_Name>
+
+    <Cinematic_Object_Only> YES </Cinematic_Object_Only>
+    <Scale_Factor>1.0</Scale_Factor>
+    <Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+    <Pause_During_Cinematic_Anim>yes</Pause_During_Cinematic_Anim>
+    <Cinematic_Anim_Speed>1.0</Cinematic_Anim_Speed>
+    <Cinematic_Anim_Blend_Seconds>1.0</Cinematic_Anim_Blend_Seconds>
+    <Cinematic_Anim_Index>00</Cinematic_Anim_Index>
+    <Behavior>IDLE</Behavior>
+  </X70_Cinematics>
+
+  <X70_Cinematics Name="MOV_DEMO4_Act01_Scientist">
+    <!--<Variant_Of_Existing_Type>UEA_Science_Officer</Variant_Of_Existing_Type>-->
+    <Land_Model_Name>MI_ScienceTeam.ALO</Land_Model_Name>
+
+    <Cinematic_Object_Only> YES </Cinematic_Object_Only>
+    <Scale_Factor>1.0</Scale_Factor>
+    <Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+    <Pause_During_Cinematic_Anim>yes</Pause_During_Cinematic_Anim>
+    <Cinematic_Anim_Speed>1.0</Cinematic_Anim_Speed>
+    <Cinematic_Anim_Blend_Seconds>1.0</Cinematic_Anim_Blend_Seconds>
+    <Cinematic_Anim_Index>00</Cinematic_Anim_Index>
+    <Behavior>IDLE</Behavior>
+  </X70_Cinematics>
+
+
+  <!--jdg currently using in Tut02 for novus portal effect-->
+  <X70_Cinematics Name="MOV_Novus_Portal">
+    <Land_Model_Name>NB_Portal_alone.ALO</Land_Model_Name>
+    <Cinematic_Object_Only> YES </Cinematic_Object_Only>
+    <Scale_Factor>1.0</Scale_Factor>
+    <Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+    <Pause_During_Cinematic_Anim>yes</Pause_During_Cinematic_Anim>
+    <Cinematic_Anim_Speed>1.0</Cinematic_Anim_Speed>
+    <Cinematic_Anim_Blend_Seconds>1.0</Cinematic_Anim_Blend_Seconds>
+    <Cinematic_Anim_Index>00</Cinematic_Anim_Index>
+    <Behavior></Behavior>
+  </X70_Cinematics>
+
+  <!-- jdg : 11/07/06 Foo-fighter flyover, generic -->
+  <X70_Cinematics Name="MOV_Flyover_FooFighter">
+    <!-- <Variant_Of_Existing_Type>UEA_Science_Officer</Variant_Of_Existing_Type>-->
+    <LandBehavior>REVEAL</LandBehavior>
+    <Affiliation>Neutral</Affiliation>
+    <Land_Model_Name>WO_foo_on_path.alo</Land_Model_Name>
+
+    <Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+    <Cinematic_Object_Only> YES </Cinematic_Object_Only>
+    <Scale_Factor>1.0</Scale_Factor>
+    <Pause_During_Cinematic_Anim>no</Pause_During_Cinematic_Anim>
+    <Cinematic_Anim_Speed>1.0</Cinematic_Anim_Speed>
+    <Cinematic_Anim_Blend_Seconds>1.0</Cinematic_Anim_Blend_Seconds>
+    <Cinematic_Anim_Index>00</Cinematic_Anim_Index>
+    <Behavior>IDLE</Behavior>
+    <BehaviorType Name="SFXBehaviorType">
+      <SFXEvent_Ambient_Moving> SFX_Alien_Saucer_Fly_By </SFXEvent_Ambient_Moving>
+      <SFXEvent_Ambient_Moving_Min_Delay_Seconds> 3 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+      <SFXEvent_Ambient_Moving_Max_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+      <SFXEvent_Engine_Cinematic_Focus_Loop> SFX_Alien_Saucer_Moving_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+    </BehaviorType>
+  </X70_Cinematics>
+  
+  <!-- jdg large suacer flyover...no jets attacking...simple flyover-->
+	<X70_Cinematics Name="MOV_Flyover_Transport">
+    
+    <LandBehavior>REVEAL</LandBehavior>
+    <Affiliation>Neutral</Affiliation>
+    <Land_Model_Name>WO_transport_on_path.alo</Land_Model_Name>
+
+    <Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+    <Cinematic_Object_Only> YES </Cinematic_Object_Only>
+    <Scale_Factor>1.0</Scale_Factor>
+    <Pause_During_Cinematic_Anim>no</Pause_During_Cinematic_Anim>
+    <Cinematic_Anim_Speed>1.0</Cinematic_Anim_Speed>
+    <Cinematic_Anim_Blend_Seconds>1.0</Cinematic_Anim_Blend_Seconds>
+    <Cinematic_Anim_Index>00</Cinematic_Anim_Index>
+    <Behavior>IDLE</Behavior>
+    <BehaviorType Name="SFXBehaviorType">
+      <SFXEvent_Ambient_Moving> SFX_Alien_Saucer_Fly_By </SFXEvent_Ambient_Moving>
+      <SFXEvent_Ambient_Moving_Min_Delay_Seconds> 3 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+      <SFXEvent_Ambient_Moving_Max_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+      <SFXEvent_Engine_Cinematic_Focus_Loop> SFX_Alien_Saucer_Moving_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+    </BehaviorType>
+  </X70_Cinematics>
+
+  <!-- jdg : 1/012/07 large saucer flyover...being used in opening of Tut01, this is the one with the jets attacking -->
+  <X70_Cinematics Name="MOV_Flyover_LargeSaucer">
+    <Variant_Of_Existing_Type>MOV_Flyover_FooFighter</Variant_Of_Existing_Type>
+    <Land_Model_Name>av_large_saucer_cine.alo</Land_Model_Name>
+  </X70_Cinematics>
+
+  <!-- jdg : 1/012/07 large saucer taking off from landed position...being used in Tut01 -->
+  <X70_Cinematics Name="MOV_Takeoff_LargeSaucer">
+    <Variant_Of_Existing_Type>MOV_Flyover_FooFighter</Variant_Of_Existing_Type>
+    <Land_Model_Name>av_large_saucer_cine_takeoff.alo</Land_Model_Name>
+  </X70_Cinematics>
+
+  <X70_Cinematics Name="TM01_Cinematic_Monument">
+
+    <!-- ART -->
+    <Land_Model_Name>WB_NADC_Washington_monument_D.alo</Land_Model_Name>
+    <Scale_Factor>0.5</Scale_Factor>
+    <Is_Decoration>No</Is_Decoration>
+    <Exclude_From_Distance_Fade> true </Exclude_From_Distance_Fade>
+
+    <!-- INTERFACE -->
+    <Text_ID>TEXT_NONE</Text_ID>
+
+    <!-- ATTRIBUTES -->
+    <Affiliation> Civilian </Affiliation>
+    <CategoryMask> Large, Stationary, Insignificant </CategoryMask>
+    <Is_Deleted_By_Tornado> false </Is_Deleted_By_Tornado>
+
+    <!-- CONFLICT -->
+    <Is_Attackable> true </Is_Attackable>
+    <Ranged_Target_Z_Adjust>0.0</Ranged_Target_Z_Adjust>
+    <Collidable_By_Projectile_Living> Yes </Collidable_By_Projectile_Living>
+    <Tactical_Health> 1000 </Tactical_Health>
+
+    <Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+    <Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+    <Land_Damage_SFX>SFX_Generic_Detonation_1,SFX_Generic_Detonation_1,SFX_Generic_Detonation_1,SFX_Generic_Detonation_1</Land_Damage_SFX>
+
+    <!-- BEHAVIORS -->
+    <Behavior>
+      SELECTABLE
+    </Behavior>
+
+    <LandBehavior> LAND_OBSTACLE </LandBehavior>
+
+    <BehaviorType Name="ArmorAndDamageBehaviorType">
+      <Armor_Type> Armor_Civilian_Structure_Heavy </Armor_Type>
+    </BehaviorType>
+
+    <BehaviorType Name="CrushBehaviorType">
+      <Crush_Defense>90</Crush_Defense>
+    </BehaviorType>
+
+  </X70_Cinematics>
+
+  <X70_Cinematics Name="Base_Toppling_Car">
+    <!-- ART -->
+    <Land_Model_Name>WV_Elegant.alo</Land_Model_Name>
+
+    <Text_ID>TEXT_NONE</Text_ID>
+    <Scale_Factor>1.0</Scale_Factor>
+    <Is_Decoration>No</Is_Decoration>
+    <Can_Be_Miraged>No</Can_Be_Miraged>
+    <Prevents_Structure_Placement>No</Prevents_Structure_Placement>
+    <LandBehavior>TOPPLE </LandBehavior>
+    <Is_Placed_By_Editor>true</Is_Placed_By_Editor>
+
+    <Tactical_Health>5</Tactical_Health>
+
+    <Collidable_By_Projectile_Living> Yes </Collidable_By_Projectile_Living>
+    <Collidable_By_Projectile_Dead> No </Collidable_By_Projectile_Dead>
+
+    <BehaviorType Name="BlobShadowBehaviorType">
+      <Blob_Shadow_Below_Detail_Level>0</Blob_Shadow_Below_Detail_Level>
+      <Blob_Shadow_Scale>80.0, 80.0</Blob_Shadow_Scale>
+    </BehaviorType>
+
+    <BehaviorType Name="ToppleBehaviorType">
+      <Topple_Weight>14.0</Topple_Weight>
+      <Topple_Bounce>1.0</Topple_Bounce>
+    </BehaviorType>
+
+    <BehaviorType Name="SFXBehaviorType">
+      <SFXEvent_On_Fire_Loop>SFX_Generic_Fire_Loop</SFXEvent_On_Fire_Loop>
+      <SFXEvent_Topple_Start>SFX_Tree_Topple_Start_1</SFXEvent_Topple_Start>
+      <SFXEvent_Topple_Hit>SFX_Tree_Topple_Hit_1</SFXEvent_Topple_Hit>
+
+    </BehaviorType>
+
+    <BehaviorType Name="ArmorAndDamageBehaviorType">
+      <Armor_Type> Armor_Default </Armor_Type>
+    </BehaviorType>
+
+    <BehaviorType Name="CrushBehaviorType">
+      <Should_Check_Faction_On_Crush> false </Should_Check_Faction_On_Crush>
+      <Crush_Defense>5</Crush_Defense>
+    </BehaviorType>
+
+  </X70_Cinematics>
+
+  <X70_Cinematics Name="CIN_Maverick_Crash_Monument">
+
+    <Land_Model_Name>CIN_Maverick_Crash.ALO</Land_Model_Name>
+
+    <Cinematic_Object_Only> YES </Cinematic_Object_Only>
+    <Scale_Factor>1.0</Scale_Factor>
+    <Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+    <Pause_During_Cinematic_Anim>yes</Pause_During_Cinematic_Anim>
+    <Cinematic_Anim_Speed>1.0</Cinematic_Anim_Speed>
+    <Cinematic_Anim_Blend_Seconds>1.0</Cinematic_Anim_Blend_Seconds>
+    <Cinematic_Anim_Index>00</Cinematic_Anim_Index>
+    <Behavior>IDLE</Behavior>
+  </X70_Cinematics>
+
+  <X70_Cinematics Name="CIN_Novus_Portal">
+
+    <Land_Model_Name>CIN_NB_portal_Alone.ALO</Land_Model_Name>
+
+    <Cinematic_Object_Only> YES </Cinematic_Object_Only>
+    <Scale_Factor>1.0</Scale_Factor>
+    <Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+    <Pause_During_Cinematic_Anim>yes</Pause_During_Cinematic_Anim>
+    <Cinematic_Anim_Speed>1.0</Cinematic_Anim_Speed>
+    <Cinematic_Anim_Blend_Seconds>1.0</Cinematic_Anim_Blend_Seconds>
+    <Cinematic_Anim_Index>00</Cinematic_Anim_Index>
+    <Behavior>IDLE</Behavior>
+  </X70_Cinematics>
+
+	<X70_Cinematics Name="CIN_NM07_Material_Conduit">
+		<!--<Variant_Of_Existing_Type> _WAREHOUSE_01 </Variant_Of_Existing_Type>-->
+		<Land_Model_Name>AB_Matter_Uplink.alo</Land_Model_Name>
+		<Scale_Factor> 1.2 </Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+
+		<LandBehavior>
+			IDLE
+		</LandBehavior>
+
+	</X70_Cinematics>
+
+	<X70_Cinematics Name="CIN_Novus_Infantry_Destroyed_01">
+		<Land_Model_Name>NI_Infantry_Destroyed_01.alo</Land_Model_Name>
+		<Scale_Factor> 1.0 </Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<CategoryMask> Small </CategoryMask>
+		<LandBehavior> EFFECT_REGISTRY </LandBehavior>
+	</X70_Cinematics>
+
+	<X70_Cinematics Name="CIN_Novus_Infantry_Destroyed_02">
+		<Land_Model_Name>NI_Infantry_Destroyed_02.alo</Land_Model_Name>
+		<Scale_Factor> 1.0 </Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<CategoryMask> Small </CategoryMask>
+		<LandBehavior> EFFECT_REGISTRY </LandBehavior>
+	</X70_Cinematics>
+
+	<X70_Cinematics Name="CIN_Novus_Infantry_Destroyed_03">
+		<Land_Model_Name>NI_Infantry_Destroyed_03.alo</Land_Model_Name>
+		<Scale_Factor> 1.0 </Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<CategoryMask> Small </CategoryMask>
+		<LandBehavior> EFFECT_REGISTRY </LandBehavior>
+	</X70_Cinematics>
+
+	<X70_Cinematics Name="CIN_Novus_Infantry_Destroyed_04">
+		<Land_Model_Name>NI_Infantry_Destroyed_04.alo</Land_Model_Name>
+		<Scale_Factor> 1.0 </Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<CategoryMask> Small </CategoryMask>
+		<LandBehavior> EFFECT_REGISTRY </LandBehavior>
+	</X70_Cinematics>
+
+	<X70_Cinematics Name="CIN_Novus_Infantry_Destroyed_05">
+		<Land_Model_Name>NI_Infantry_Destroyed_05.alo</Land_Model_Name>
+		<Scale_Factor> 1.0 </Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<CategoryMask> Small </CategoryMask>
+		<LandBehavior> EFFECT_REGISTRY </LandBehavior>
+	</X70_Cinematics>
+
+	<X70_Cinematics Name="CIN_Novus_DMG_Chunk_A">
+		<Land_Model_Name>NB_DMG_Chunk_A.alo</Land_Model_Name>
+		<Scale_Factor> 1.0 </Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<CategoryMask> Small </CategoryMask>
+		<LandBehavior> EFFECT_REGISTRY </LandBehavior>
+	</X70_Cinematics>
+
+	<X70_Cinematics Name="CIN_Novus_DMG_Chunk_B">
+		<Land_Model_Name>NB_DMG_Chunk_B.alo</Land_Model_Name>
+		<Scale_Factor> 1.0 </Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<CategoryMask> Small </CategoryMask>
+		<LandBehavior> EFFECT_REGISTRY </LandBehavior>
+	</X70_Cinematics>
+
+	<X70_Cinematics Name="CIN_Novus_DMG_Chunk_C">
+		<Land_Model_Name>NB_DMG_Chunk_C.alo</Land_Model_Name>
+		<Scale_Factor> 1.0 </Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<CategoryMask> Small </CategoryMask>
+		<LandBehavior> EFFECT_REGISTRY </LandBehavior>
+	</X70_Cinematics>
+
+	<X70_Cinematics Name="CIN_Novus_DMG_Chunk_D">
+		<Land_Model_Name>NB_DMG_Chunk_D.alo</Land_Model_Name>
+		<Scale_Factor> 1.0 </Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<CategoryMask> Small </CategoryMask>
+		<LandBehavior> EFFECT_REGISTRY </LandBehavior>
+	</X70_Cinematics>
+
+	<X70_Cinematics Name="CIN_Novus_DMG_Chunk_E">
+		<Land_Model_Name>NB_DMG_Chunk_E.alo</Land_Model_Name>
+		<Scale_Factor> 1.0 </Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<CategoryMask> Small </CategoryMask>
+		<LandBehavior> EFFECT_REGISTRY </LandBehavior>
+	</X70_Cinematics>
+
+	<X70_Cinematics Name="CIN_Novus_DMG_Chunk_F">
+		<Land_Model_Name>NB_DMG_Chunk_F.alo</Land_Model_Name>
+		<Scale_Factor> 1.0 </Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<CategoryMask> Small </CategoryMask>
+		<LandBehavior> EFFECT_REGISTRY </LandBehavior>
+	</X70_Cinematics>
+
+	<X70_Cinematics Name="CIN_Novus_DMG_Chunk_G">
+		<Land_Model_Name>NB_DMG_Chunk_G.alo</Land_Model_Name>
+		<Scale_Factor> 1.0 </Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<CategoryMask> Small </CategoryMask>
+		<LandBehavior> EFFECT_REGISTRY </LandBehavior>
+	</X70_Cinematics>
+
+	<X70_Cinematics Name="CIN_Novus_DMG_Chunk_H">
+		<Land_Model_Name>NB_DMG_Chunk_H.alo</Land_Model_Name>
+		<Scale_Factor> 1.0 </Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<CategoryMask> Small </CategoryMask>
+		<LandBehavior> EFFECT_REGISTRY </LandBehavior>
+	</X70_Cinematics>
+
+	<X70_Cinematics Name="CIN_Novus_DMG_Chunk_I">
+		<Land_Model_Name>NB_DMG_Chunk_I.alo</Land_Model_Name>
+		<Scale_Factor> 1.0 </Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<CategoryMask> Small </CategoryMask>
+		<LandBehavior> EFFECT_REGISTRY </LandBehavior>
+	</X70_Cinematics>
+
+	<X70_Cinematics Name="CIN_Novus_DMG_Chunk_J">
+		<Land_Model_Name>NB_DMG_Chunk_J.alo</Land_Model_Name>
+		<Scale_Factor> 1.0 </Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<CategoryMask> Small </CategoryMask>
+		<LandBehavior> EFFECT_REGISTRY </LandBehavior>
+	</X70_Cinematics>
+
+	<X70_Cinematics Name="CIN_Novus_DMG_Chunk_K">
+		<Land_Model_Name>NB_DMG_Chunk_K.alo</Land_Model_Name>
+		<Scale_Factor> 1.0 </Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<CategoryMask> Small </CategoryMask>
+		<LandBehavior> EFFECT_REGISTRY </LandBehavior>
+	</X70_Cinematics>
+
+	<X70_Cinematics Name="CIN_Novus_DMG_Chunk_L">
+		<Land_Model_Name>NB_DMG_Chunk_L.alo</Land_Model_Name>
+		<Scale_Factor> 1.0 </Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<CategoryMask> Small </CategoryMask>
+		<LandBehavior> EFFECT_REGISTRY </LandBehavior>
+	</X70_Cinematics>
+
+	<X70_Cinematics Name="CIN_Novus_DMG_Chunk_M">
+		<Land_Model_Name>NB_DMG_Chunk_M.alo</Land_Model_Name>
+		<Scale_Factor> 1.0 </Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<CategoryMask> Small </CategoryMask>
+		<LandBehavior> EFFECT_REGISTRY </LandBehavior>
+	</X70_Cinematics>
+
+	<X70_Cinematics Name="CIN_Novus_DMG_Chunk_N">
+		<Land_Model_Name>NB_DMG_Chunk_N.alo</Land_Model_Name>
+		<Scale_Factor> 1.0 </Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<CategoryMask> Small </CategoryMask>
+		<LandBehavior> EFFECT_REGISTRY </LandBehavior>
+	</X70_Cinematics>
+
+	<X70_Cinematics Name="CIN_Novus_DMG_Chunk_O">
+		<Land_Model_Name>NB_DMG_Chunk_O.alo</Land_Model_Name>
+		<Scale_Factor> 1.0 </Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<CategoryMask> Small </CategoryMask>
+		<LandBehavior> EFFECT_REGISTRY </LandBehavior>
+	</X70_Cinematics>
+
+	<X70_Cinematics Name="CIN_Novus_DMG_Chunk_P">
+		<Land_Model_Name>NB_DMG_Chunk_P.alo</Land_Model_Name>
+		<Scale_Factor> 1.0 </Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<CategoryMask> Small </CategoryMask>
+		<LandBehavior> EFFECT_REGISTRY </LandBehavior>
+	</X70_Cinematics>
+
+	<X70_Cinematics Name="CIN_Novus_DMG_Chunk_Q">
+		<Land_Model_Name>NB_DMG_Chunk_Q.alo</Land_Model_Name>
+		<Scale_Factor> 1.0 </Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<CategoryMask> Small </CategoryMask>
+		<LandBehavior> EFFECT_REGISTRY </LandBehavior>
+	</X70_Cinematics>
+
+	<X70_Cinematics Name="CIN_Novus_DMG_Chunk_R">
+		<Land_Model_Name>NV_Chunk_AntiTank_Arm.alo</Land_Model_Name>
+		<Scale_Factor> 1.0 </Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<CategoryMask> Small </CategoryMask>
+		<LandBehavior> EFFECT_REGISTRY </LandBehavior>
+	</X70_Cinematics>
+
+	<X70_Cinematics Name="CIN_Novus_DMG_Chunk_S">
+		<Land_Model_Name>NV_Chunk_AntiTank_Cylinder.alo</Land_Model_Name>
+		<Scale_Factor> 1.0 </Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<CategoryMask> Small </CategoryMask>
+		<LandBehavior> EFFECT_REGISTRY </LandBehavior>
+	</X70_Cinematics>
+
+	<X70_Cinematics Name="CIN_Novus_DMG_Chunk_T">
+		<Land_Model_Name>NV_Chunk_AntiTank_Fork.alo</Land_Model_Name>
+		<Scale_Factor> 1.0 </Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<CategoryMask> Small </CategoryMask>
+		<LandBehavior> EFFECT_REGISTRY </LandBehavior>
+	</X70_Cinematics>
+
+	<X70_Cinematics Name="CIN_Novus_DMG_Chunk_U">
+		<Land_Model_Name>NV_Chunk_Dervish_Nose.alo</Land_Model_Name>
+		<Scale_Factor> 1.0 </Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<CategoryMask> Small </CategoryMask>
+		<LandBehavior> EFFECT_REGISTRY </LandBehavior>
+	</X70_Cinematics>
+
+	<X70_Cinematics Name="CIN_Novus_DMG_Chunk_V">
+		<Land_Model_Name>NV_Chunk_Dervish_Tail.alo</Land_Model_Name>
+		<Scale_Factor> 1.0 </Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<CategoryMask> Small </CategoryMask>
+		<LandBehavior> EFFECT_REGISTRY </LandBehavior>
+	</X70_Cinematics>
+
+	<X70_Cinematics Name="CIN_Novus_DMG_Chunk_W">
+		<Land_Model_Name>NV_Chunk_Dervish_Wing.alo</Land_Model_Name>
+		<Scale_Factor> 1.0 </Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<CategoryMask> Small </CategoryMask>
+		<LandBehavior> EFFECT_REGISTRY </LandBehavior>
+	</X70_Cinematics>
+
+  <X70_Cinematics Name="CIN_Novus_Portal_Destroyed">
+    
+    <Land_Model_Name>CIN_NB_Portal_Destroyed.ALO</Land_Model_Name>
+    <Cinematic_Object_Only> YES </Cinematic_Object_Only>
+    <Scale_Factor>1.0</Scale_Factor>
+    <Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+    <Pause_During_Cinematic_Anim>yes</Pause_During_Cinematic_Anim>
+    <Cinematic_Anim_Speed>1.0</Cinematic_Anim_Speed>
+    <Cinematic_Anim_Blend_Seconds>1.0</Cinematic_Anim_Blend_Seconds>
+    <Cinematic_Anim_Index>00</Cinematic_Anim_Index>
+    <Behavior>IDLE</Behavior>
+    
+  </X70_Cinematics>
+
+  <!-- NOVUS portal object for NM04 -->
+  <X70_Cinematics Name="CIN_Novus_Portal_Full">
+  
+	<!-- jdg .. 6/5/07 removing from build menus-->
+	<BehaviorType Name="GroundStructureBehaviorType">
+		<Is_Buildable_By_Constructor> No </Is_Buildable_By_Constructor>
+	</BehaviorType>
+
+	<BehaviorType Name="ProductionBehaviorType">
+		<Is_Strategic_Buildable_Type> No </Is_Strategic_Buildable_Type>
+	</BehaviorType>
+
+    <!-- ART -->
+    <Land_Model_Name> NB_Portal.alo </Land_Model_Name>
+    <Scale_Factor>2.0</Scale_Factor>
+    <Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+    <Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+    <Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+
+    <!-- INTERFACE -->
+    <Text_ID>TEXT_NOVUS_STRUCTURE_WORMHOLE_PORTAL</Text_ID>
+
+
+    <!-- ATTRIBUTES -->
+    <CategoryMask> Large, Stationary, TacticalBuildableStructure </CategoryMask>
+    <Affiliation>Novus</Affiliation>
+    <Victory_Relevant> False </Victory_Relevant>
+
+    <!-- MOVEMENT -->
+    <Space_Layer> LandDynamic </Space_Layer>
+    <MovementClass>Building</MovementClass>
+    <UnitCollisionClass> High Obstacle </UnitCollisionClass>
+    <Custom_Hard_XExtent> 5.0 </Custom_Hard_XExtent>
+    <Custom_Hard_YExtent> 5.0 </Custom_Hard_YExtent>
+
+    <!-- CONFLICT -->
+    <Is_Attackable>Yes</Is_Attackable>
+    <Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+    <Ranged_Target_Z_Adjust> 120.0 </Ranged_Target_Z_Adjust>
+    <Tactical_Health> 600 </Tactical_Health>
+    <Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+    <Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+    <Land_Damage_SFX>null,SFX_GENERIC_DETONATION, SFX_GENERIC_DETONATION,null</Land_Damage_SFX>
+
+    <!-- BEHAVIORS -->
+    <Behavior>
+      GROUND_STRUCTURE,
+      SELECTABLE
+    </Behavior>
+
+    <LandBehavior>
+      GUI,
+      RADAR_MAP_VISIBLE,
+      REVEAL,
+      HIDE_WHEN_FOGGED,
+      <!--UNIT_AI,-->
+      EFFECT_GENERATOR,
+      EFFECT_REGISTRY,
+      ATTRIBUTE_DIRECTORY,
+      AI_TARGET,
+      IDLE,
+      TARGETING,
+      <!--TURRET,
+			WEAPON, 
+			CREATE_CHILDREN,
+			POWERED,
+			TACTICAL_SELL-->
+    </LandBehavior>
+
+    <BehaviorType Name="GameEventSourceBehaviorType">
+      <Game_Event_Source_Category> Structure </Game_Event_Source_Category>
+    </BehaviorType>
+
+    <Attributes SubObjectList="Yes">
+      <!-- Novus_Power_Transmission_Radius is for flowing objects that are receivers i.e. if they are within this range they will run to this object -->
+      <Novus_Power_Transmission_Radius> 0.0 </Novus_Power_Transmission_Radius>
+      <Novus_Power_Powerup_Radius> 0 </Novus_Power_Powerup_Radius>
+    </Attributes>
+
+    <BehaviorType Name="ArmorAndDamageBehaviorType">
+      <Armor_Type> Armor_Novus_Structure_Light </Armor_Type>
+    </BehaviorType>
+
+    <BehaviorType Name="CrushBehaviorType">
+      <Crush_Defense>60</Crush_Defense>
+    </BehaviorType>
+
+    <BehaviorType Name="ProductionBehaviorType">
+      <Is_Research_Tech_Tree_Lockable> Yes </Is_Research_Tech_Tree_Lockable>
+      <Is_Strategic_Buildable_Type> No </Is_Strategic_Buildable_Type>
+      <Build_Only_In_Campaign> Yes </Build_Only_In_Campaign>
+      <Build_Initially_Locked>Yes</Build_Initially_Locked>
+    </BehaviorType>
+
+    <BehaviorType Name="BuildableObjectBehaviorType">
+      <!-- Maria 06.28.2006 - What is the 'object under construction' that is placed in lieu of this object -->
+      <Tactical_Under_Construction_Object_Type> NM04_Novus_Portal_Construction </Tactical_Under_Construction_Object_Type>
+      <Tactical_Buildable_Beacon_Type> NM04_Novus_Portal_Beacon </Tactical_Buildable_Beacon_Type>
+      <!-- DEBUG: We're not using these two entries anywhere else. Why not, what are they? -->
+      <Buildable_Placement_Blob_Material_Name>Novus_Signal_Radius</Buildable_Placement_Blob_Material_Name>
+      <Buildable_Placement_Blob_Scale> 500.0 </Buildable_Placement_Blob_Scale>
+      <!-- used to show the radius of the power transmission -->
+      <Buildable_Placement_Power_Blob_Material_Name>Novus_Signal_Radius</Buildable_Placement_Power_Blob_Material_Name>
+    </BehaviorType>
+
+    <BehaviorType Name="DeathFXBehaviorType">
+      <Death_Clone>Damage_Default, NM04_Novus_Portal_Default_Death_Clone</Death_Clone>
+      <Death_Explosions>Novus_Large_Explosion_Tower</Death_Explosions>
+      <Death_Clone_Keep_Behaviors> EFFECT_REGISTRY </Death_Clone_Keep_Behaviors>
+      <Death_Fade_Time> 0.25 </Death_Fade_Time>
+      <Death_Persistence_Duration> 1 </Death_Persistence_Duration>
+      <IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+    </BehaviorType>
+
+    <BehaviorType Name="SFXBehaviorType">
+      <SFXEvent_Select>SFX_Structure_Select_Novus_Signal_Tower</SFXEvent_Select>
+      <!-- NOTE: CHANGE TO NOVUS DROP ZONE EQUIV. WHEN IT EXISTS -->
+      <SFXEvent_Unit_Lost />
+      <SFXEvent_Tactical_Build_Started>GUI_BUILD_Structure</SFXEvent_Tactical_Build_Started>
+      <SFXEvent_Tactical_Build_Complete>SFX_Structure_Select_Novus_Signal_Tower</SFXEvent_Tactical_Build_Complete>
+      <SFXEvent_Tactical_Build_Cancelled>GUI_BUILD_Structure_Canceled</SFXEvent_Tactical_Build_Cancelled>
+    </BehaviorType>
+
+    <BehaviorType Name="TacticalSellBehaviorType">
+      <Tactical_Sell_Percentage> 0.5 </Tactical_Sell_Percentage>
+      <Tactical_Sell_Time_Seconds> 3 </Tactical_Sell_Time_Seconds>
+    </BehaviorType>
+
+    <BehaviorType Name="RadarMapBehaviorType">
+      <Radar_Icon_Size>0.08  0.08</Radar_Icon_Size>
+    </BehaviorType>
+
+    <BehaviorType Name="AIBehaviorType">
+      <AI_Target_Level>Individual</AI_Target_Level>
+      <AI_Combat_Power> 1 </AI_Combat_Power>
+    </BehaviorType>
+
+    <BehaviorType Name="BlobShadowBehaviorType">
+      <No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+      <No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+    </BehaviorType>
+
+    <BehaviorType Name="EncyclopediaBehaviorType">
+      <Icon_Name> i_icon_nb_wormhole_portal.tga </Icon_Name>
+    </BehaviorType>
+
+    <BehaviorType Name="GUIBehaviorType">
+      <GUI_Scene_Name> HealthBar_Scene_Medium </GUI_Scene_Name>
+      <GUI_Receives_Input> no </GUI_Receives_Input>
+      <GUI_Min_Scale> 0.8 </GUI_Min_Scale>
+      <GUI_Max_Scale> 3.0 </GUI_Max_Scale>
+      <GUI_Default_Scale> 1.0 </GUI_Default_Scale>
+    </BehaviorType>
+
+    <BehaviorType Name="SelectableBehaviorType">
+      <Select_Box_Scale>15</Select_Box_Scale>
+      <Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+      <Selection_Blob_Material_Name> Selection_Military_Land </Selection_Blob_Material_Name>
+    </BehaviorType>
+
+    <BehaviorType Name="RevealBehaviorType">
+      <Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+    </BehaviorType>
+
+  </X70_Cinematics>
+
+  <X70_Cinematics Name="CIN_Crashing_Alien_Ship">
+
+    <Land_Model_Name>CIN_Alien_Ship_Crashing.ALO</Land_Model_Name>
+
+    <User_Bound_Min>-700,-700,0</User_Bound_Min>
+    <User_Bound_Max>700,700,1500</User_Bound_Max>
+
+    <Cinematic_Object_Only> YES </Cinematic_Object_Only>
+    <Scale_Factor>1.0</Scale_Factor>
+    <Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+    <Pause_During_Cinematic_Anim>yes</Pause_During_Cinematic_Anim>
+    <Cinematic_Anim_Speed>1.0</Cinematic_Anim_Speed>
+    <Cinematic_Anim_Blend_Seconds>1.0</Cinematic_Anim_Blend_Seconds>
+    <Cinematic_Anim_Index>00</Cinematic_Anim_Index>
+    <Behavior>IDLE</Behavior>
+  </X70_Cinematics>
+
+   <X70_Cinematics Name="CIN_Launch_Purifier">
+
+      <Land_Model_Name>CIN_Launch_Purifier.ALO</Land_Model_Name>
+
+      <User_Bound_Min>-700,-700,0</User_Bound_Min>
+      <User_Bound_Max>700,700,1500</User_Bound_Max>
+
+      <Cinematic_Object_Only> YES </Cinematic_Object_Only>
+      <Scale_Factor>1.0</Scale_Factor>
+      <Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+      <Pause_During_Cinematic_Anim>yes</Pause_During_Cinematic_Anim>
+      <Cinematic_Anim_Speed>1.0</Cinematic_Anim_Speed>
+      <Cinematic_Anim_Blend_Seconds>1.0</Cinematic_Anim_Blend_Seconds>
+      <Cinematic_Anim_Index>00</Cinematic_Anim_Index>
+      <Behavior>IDLE</Behavior>
+   </X70_Cinematics>
+
+  <X70_Cinematics Name="CIN_PyramidBeam">
+
+    <Land_Model_Name>CIN_PyramidBeam.ALO</Land_Model_Name>
+
+    <User_Bound_Min>-700,-700,0</User_Bound_Min>
+    <User_Bound_Max>700,700,1500</User_Bound_Max>
+
+    <Cinematic_Object_Only> YES </Cinematic_Object_Only>
+    <Scale_Factor>1.0</Scale_Factor>
+    <Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+    <Pause_During_Cinematic_Anim>yes</Pause_During_Cinematic_Anim>
+    <Cinematic_Anim_Speed>1.0</Cinematic_Anim_Speed>
+    <Cinematic_Anim_Blend_Seconds>1.0</Cinematic_Anim_Blend_Seconds>
+    <Cinematic_Anim_Index>00</Cinematic_Anim_Index>
+    <Behavior>IDLE</Behavior>
+  </X70_Cinematics>
+
+  <X70_Cinematics Name="CIN_Pyramid_Explode">
+
+    <Land_Model_Name>CIN_PyramidExplode.ALO</Land_Model_Name>
+
+    <User_Bound_Min>-700,-700,0</User_Bound_Min>
+    <User_Bound_Max>700,700,1500</User_Bound_Max>
+
+    <Cinematic_Object_Only> YES </Cinematic_Object_Only>
+    <Scale_Factor>1.0</Scale_Factor>
+    <Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+    <Pause_During_Cinematic_Anim>yes</Pause_During_Cinematic_Anim>
+    <Cinematic_Anim_Speed>1.0</Cinematic_Anim_Speed>
+    <Cinematic_Anim_Blend_Seconds>1.0</Cinematic_Anim_Blend_Seconds>
+    <Cinematic_Anim_Index>00</Cinematic_Anim_Index>
+    <Behavior>IDLE</Behavior>
+  </X70_Cinematics>
+
+	<X70_Cinematics Name="CIN_Material_Conduit">
+		<Variant_Of_Existing_Type>NM06_Material_Conduit</Variant_Of_Existing_Type>
+
+		<Custom_Hard_XExtent> 10.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+	</X70_Cinematics>
+
+	<X70_Cinematics Name="Cinematic_Novus_Signal_Tower">
+
+		<Variant_Of_Existing_Type>Novus_Signal_Tower</Variant_Of_Existing_Type>
+
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+		<Is_Placed_By_Editor>true</Is_Placed_By_Editor>
+
+		<BehaviorType Name="GroundStructureBehaviorType">
+			<Is_Buildable_By_Constructor> No </Is_Buildable_By_Constructor>
+		</BehaviorType>
+
+		<BehaviorType Name="ProductionBehaviorType">
+			<Is_Strategic_Buildable_Type> No </Is_Strategic_Buildable_Type>
+		</BehaviorType>
+
+		<Effect_Generator_Data SubObjectList="Yes">
+
+			<Effect_Generator Name="NovusSignalCloakGenerator">
+				<Should_Deactivate_Manually> true </Should_Deactivate_Manually>
+				<Modal_Refresh_Frequency> 2.0 </Modal_Refresh_Frequency>
+				<Starts_Active> false </Starts_Active>
+
+				<Effect_Generator_Entry Name="Entry1">
+					<Effect_Name>  </Effect_Name>
+					<Duration> 2.1 </Duration>
+					<Target_Gathering_Mask> Self </Target_Gathering_Mask>
+					<Target_Filter_C> Is_Powered </Target_Filter_C>
+				</Effect_Generator_Entry>
+
+			</Effect_Generator>
+
+		</Effect_Generator_Data>
+
+	</X70_Cinematics>
+
+	<X70_Cinematics Name="CIN_American_Sign_Generic_E">
+		<Variant_Of_Existing_Type> Abstract_Sign </Variant_Of_Existing_Type>
+		<Is_Placed_By_Editor> true </Is_Placed_By_Editor>
+		<Land_Model_Name>WO_Billboard_05.alo</Land_Model_Name>
+		<Custom_Hard_YExtent> 20.0 </Custom_Hard_YExtent>
+
+		<CategoryMask> Medium, Insignificant </CategoryMask>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 0 </Resource_Units>
+			<Resource_For_Faction> Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+	</X70_Cinematics>
+
+	<X70_Cinematics Name="CIN_Novus_Remote_Terminal">
+		<Variant_Of_Existing_Type>Novus_Remote_Terminal</Variant_Of_Existing_Type>
+
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+
+		<BehaviorType Name="GroundStructureBehaviorType">
+			<Is_Buildable_By_Constructor> No </Is_Buildable_By_Constructor>
+		</BehaviorType>
+
+		<BehaviorType Name="ProductionBehaviorType">
+			<Is_Strategic_Buildable_Type> No </Is_Strategic_Buildable_Type>
+		</BehaviorType>
+	</X70_Cinematics>
+
+	<X70_Cinematics Name="Cinematic_Masari_Foundation">
+
+    <Land_Model_Name>CIN_ZB_Foundation.ALO</Land_Model_Name>		
+
+    <User_Bound_Min>-700,-700,0</User_Bound_Min>
+    <User_Bound_Max>700,700,1500</User_Bound_Max>
+
+  
+    <Cinematic_Object_Only> YES </Cinematic_Object_Only>
+    <Scale_Factor>1.0</Scale_Factor>
+    <Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+    <Pause_During_Cinematic_Anim>yes</Pause_During_Cinematic_Anim>
+    <Cinematic_Anim_Speed>1.0</Cinematic_Anim_Speed>
+    <Cinematic_Anim_Blend_Seconds>1.0</Cinematic_Anim_Blend_Seconds>
+    <Cinematic_Anim_Index>00</Cinematic_Anim_Index>
+    <Behavior>IDLE</Behavior>   
+
+  </X70_Cinematics>
+
+  <X70_Cinematics Name="CIN_Masari_Atlatea">
+    <Land_Model_Name>ZB_Atlatea_Global.alo</Land_Model_Name>
+    <Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+    <Scale_Factor> 10.0 </Scale_Factor>
+    <Is_Decoration>No</Is_Decoration>
+    <LandBehavior> EFFECT_REGISTRY </LandBehavior>
+  </X70_Cinematics>
+
+  <X70_Cinematics Name="Cin_Orlok_Arm_Xplodes">
+
+    <Land_Model_Name>CIN_Orlok_Arm_vs_Kamal.ALO</Land_Model_Name>
+
+    <User_Bound_Min>-700,-700,0</User_Bound_Min>
+    <User_Bound_Max>700,700,1500</User_Bound_Max>
+
+
+    <Cinematic_Object_Only> YES </Cinematic_Object_Only>
+    <Scale_Factor>1.0</Scale_Factor>
+    <Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+    <Pause_During_Cinematic_Anim>yes</Pause_During_Cinematic_Anim>
+    <Cinematic_Anim_Speed>1.0</Cinematic_Anim_Speed>
+    <Cinematic_Anim_Blend_Seconds>1.0</Cinematic_Anim_Blend_Seconds>
+    <Cinematic_Anim_Index>00</Cinematic_Anim_Index>
+    <Behavior>IDLE</Behavior>
+
+  </X70_Cinematics>
+
+
+
+</Cinematic_Props>

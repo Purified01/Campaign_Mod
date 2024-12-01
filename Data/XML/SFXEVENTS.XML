@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<SFXEvents>
+	
+	<!-- PLACEHOLDER - TEST ONLY -->
+	<SFXEvent Name="Test_Ambient_Intermittent">
+		<Samples> Bad_Sound.wav </Samples>
+	</SFXEvent>
+
+	<!-- MISSION SPECIFIC SOUND EFFECTS -->
+	<SFXEvent Name="NM01_Alarm_Sound">
+		<Samples> Alien_Walker_Attack_SFX.wav </Samples>
+	</SFXEvent>
+	
+</SFXEvents>

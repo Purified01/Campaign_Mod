@@ -1,0 +1,1372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Effects>
+	<!--*************************************************************************************************
+	************************************************************************************************** 
+	************************************************************************************************** 
+	**	
+	**												General Effects
+	**	
+	************************************************************************************************** 
+	************************************************************************************************** 
+	************************************************************************************************** -->
+
+	<!-- ************************************************************** -->
+	<!-- WalkerNoCrushEffect effect -->
+	<!-- ************************************************************** -->
+	<Effect Name="WalkerNoCrushEffect">
+		<Effect_Class> WalkerNoCrush </Effect_Class>
+		<Duration> 3.1 </Duration>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Unable_To_Crush_Stationary </Attribute>
+			<Modifier_Value> 1.0 </Modifier_Value>
+		</Effect_Component>
+
+	</Effect>
+
+	<!-- ************************************************************** -->
+	<!-- WalkerSpeedIncreaseEffect effect -->
+	<!-- ************************************************************** -->
+	<Effect Name="WalkerSpeedIncreaseEffect">
+		<Effect_Class> WalkerSpeed </Effect_Class>
+		<Duration> 3.1 </Duration>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+		<Extends_Same_Source_Duration_Only> true </Extends_Same_Source_Duration_Only>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Max_Speed_Mult_Coeff </Attribute>
+			<!--  +60% speed -->
+			<Modifier_Value> 0.60 </Modifier_Value>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Rate_Of_Turn_Add </Attribute>
+			<!--  +60% faster rot -->
+			<Modifier_Value> 0.60 </Modifier_Value>
+		</Effect_Component>
+
+	</Effect>
+
+	<!-- ************************************************************** -->
+	<!-- WalkerLegSpeedIncreaseEffect effect -->
+	<!-- ************************************************************** -->
+	<Effect Name="WalkerLegSpeedIncreaseEffect">
+		<Effect_Class> WalkerSpeed </Effect_Class>
+		<Duration> 3.1 </Duration>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+		<Extends_Same_Source_Duration_Only> true </Extends_Same_Source_Duration_Only>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Max_Speed_Mult_Coeff </Attribute>
+			<Modifier_Value> 0.1 </Modifier_Value>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Rate_Of_Turn_Add </Attribute>
+			<Modifier_Value> 0.1 </Modifier_Value>
+		</Effect_Component>	
+	</Effect>
+	
+	<!-- ************************************************************** -->
+	<!-- WalkerHardPointArmorEffect effect -->
+	<!-- ************************************************************** -->
+	<Effect Name="WalkerHardPointArmorEffect">
+		<Effect_Class> WalkerArmor </Effect_Class>
+		<Priority> 10.0 </Priority>
+		<Duration> 3.1 </Duration>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+
+		<!-- Takes less damage due to molecular armor -->
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Damage_Taken_Mult_Coeff </Attribute>
+			<Modifier_Value> -0.5 </Modifier_Value>
+		</Effect_Component>
+		
+	</Effect>
+
+
+   <!-- ************************************************************** -->
+   <!-- WalkerStage1PostConstructionEffect effect -->
+   <!-- ************************************************************** -->
+   <Effect Name="WalkerStage1PostConstructionEffect">
+      <Effect_Class> Stage1PostConstruction </Effect_Class>
+      <Duration> 3.1 </Duration>
+
+      <!-- Disable all behaviors-->
+      <Effect_Component Type="DisableBehavior">
+         <Behaviors> WALK_LOCOMOTOR, TEAM_TARGETING, TARGETING, WEAPON, TURRET, IDLE </Behaviors>
+      </Effect_Component>
+
+      <Effect_Component Type="Animate">
+         <Animation_Type> Anim_FlyLandDrop  </Animation_Type>
+         <Unapply_When_Finished>Yes</Unapply_When_Finished>
+      </Effect_Component>
+    
+   </Effect>
+
+
+   <!-- ************************************************************** -->
+   <!-- WalkerStage2PostConstructionEffect effect -->
+   <!-- ************************************************************** -->
+   <Effect Name="WalkerStage2PostConstructionEffect">
+      <Effect_Class> Stage2PostConstruction </Effect_Class>
+      <Duration> 3.1 </Duration>
+
+      <Effect_Component Type="ModelVisibility">
+         <Model_Visible> Yes </Model_Visible>
+      </Effect_Component>
+
+   </Effect>
+
+
+
+   <!--=================================================================================================
+	== 01/25/07 OKSANA - "Under Construction" effect
+	================================================================================================== -->
+	<Effect Name="AlienHardpointUnderConstructionEffect">
+		<Duration> -1 </Duration>
+		<Effect_Class> Transparent </Effect_Class>
+
+		<Effect_Component Type="Dissolve">
+			<Dissolve_Effect_Name>Alien_Construction_Hardpoints</Dissolve_Effect_Name>
+			<Based_On>TargetHealth</Based_On>
+		</Effect_Component>
+	</Effect>
+	
+	<!--=================================================================================================
+	== [10/31/2006] AlienWalkerTerrainConditionerSelfEffect 
+	================================================================================================== -->
+	<Effect Name="AlienWalkerTerrainConditionerSelfEffect">
+		<Effect_Class> WalkerTerrainConditionerSelf </Effect_Class>
+		<Duration> 3.0 </Duration>
+      <Extends_Existing_Duration> true </Extends_Existing_Duration>
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> Radiation_Spitter_Field_Ground </Particle_System_Type>
+      </Effect_Component>
+
+   </Effect>
+
+   <!--=================================================================================================
+	== [10/31/2006] AlienWalkerGamaTerrainConditionerSelfEffect 
+	================================================================================================== -->
+   <Effect Name="AlienWalkerGamaTerrainConditionerSelfEffect">
+      <Effect_Class> WalkerTerrainConditionerSelfGamma </Effect_Class>
+      <Duration> 3.0 </Duration>
+      <Extends_Existing_Duration> true </Extends_Existing_Duration>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Radiation_Spitter_Gamma_Field_Ground </Particle_System_Type>
+		</Effect_Component>
+
+	</Effect>
+
+	<!--=================================================================================================
+	== [10/31/2006] AlienWalkerTerrainConditionerDestructEffect 
+	================================================================================================== -->
+	<Effect Name="AlienWalkerTerrainConditionerDestructEffect">
+		<Effect_Class> WalkerTerrainConditionerDestruct </Effect_Class>
+		<Duration> 15.0 </Duration>
+
+		<Effect_Component Type="ApplyEffectOnRemove">
+			<Apply_On_Expiration_Only> false </Apply_On_Expiration_Only>
+			<Effect_Name> DestroyObject </Effect_Name>
+		</Effect_Component>
+
+		<Effect_Component Type="ModifyArmor">
+			<!-- reduce radiation damage by 200%, this could drop it to Zero but it should as its a rad creation device -->
+			<Amount> -2.0 </Amount>
+			<Damage_Type> Damage_Alien_AE_Radiation </Damage_Type>
+		</Effect_Component>
+
+	</Effect>
+
+	<!--=================================================================================================
+	== [11/01/2006] AlienWalkerMMLPhaseEffect 
+	================================================================================================== -->
+	<Effect Name="AlienWalkerMMLPhaseEffect">
+		<Effect_Class> Phased </Effect_Class>
+		<Duration> -1.0 </Duration>
+
+		<Effect_Component Type="AddBehavior">
+			<Behavior_Name> PHASED </Behavior_Name>
+		</Effect_Component>
+
+	</Effect>
+
+	<!--=================================================================================================
+	== [11/01/2006] AlienWalkerMMLSelfEffect 
+	================================================================================================== -->
+	<Effect Name="AlienWalkerMMLSelfEffect">
+		<Effect_Class> WalkerMMLSelf </Effect_Class>
+		<Duration> 2.9 </Duration>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Singularity_Lightning_Bolt_Strike </Particle_System_Type>
+		</Effect_Component>
+
+	</Effect>
+
+	<!--=================================================================================================
+	== [11/01/2006] AlienWalkerMMLClearPhaseEffect 
+	================================================================================================== -->
+	<Effect Name="AlienWalkerMMLClearPhaseEffect">
+		<Effect_Class> WalkerMMLClearPhase </Effect_Class>
+		<Duration> 0.5 </Duration>
+
+		<Effect_Component Type="RemoveEffect">
+			<Remove_Effect_Class> Phased </Remove_Effect_Class>
+		</Effect_Component>
+
+	</Effect>
+
+	<!--=================================================================================================
+	== [10/31/2006] AlienWalkerMMLDestructEffect 
+	================================================================================================== -->
+	<Effect Name="AlienWalkerMMLDestructEffect">
+		<Effect_Class> WalkerTerrainConditionerDestruct </Effect_Class>
+		<Duration> 30.0 </Duration>
+
+		<Effect_Component Type="ApplyEffectOnRemove">
+			<Apply_On_Expiration_Only> false </Apply_On_Expiration_Only>
+			<Effect_Name> AlienWalkerMMLClearPhaseEffect </Effect_Name>
+		</Effect_Component>
+
+		<Effect_Component Type="ApplyEffectOnRemove">
+			<Apply_On_Expiration_Only> false </Apply_On_Expiration_Only>
+			<Effect_Name> DestroyObject </Effect_Name>
+		</Effect_Component>
+
+	</Effect>
+
+	<!-- AlienWalker's Radiation Warhead -->
+	<Effect Name="RadiationWarheadEffect">
+		<Duration> 10 </Duration>
+		<Effect_Class> Radiation </Effect_Class>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Unit_Healed_Particles </Particle_System_Type>
+		</Effect_Component>
+
+		<!-- <Effect_Component Type="LightEffect">
+			<Light_Effect_Type>Linear_Pulse</Light_Effect_Type>
+			<Light_Effect_Color>0.3, 0.3, 0.8</Light_Effect_Color>
+			<Light_Effect_Color2 />
+			<Light_Effect_Duration>3.1</Light_Effect_Duration>
+			<Light_Effect_Pulse_Count>25</Light_Effect_Pulse_Count>
+		</Effect_Component>	 -->
+
+		<Effect_Component Type="Damage">
+			<Damage_Type>Damage_Alien_AE_Radiation</Damage_Type>
+			<Damage_Amount>10.0</Damage_Amount>
+			<Damage_Percentage>0.0</Damage_Percentage>
+		</Effect_Component>
+	</Effect>
+
+
+
+	<!--=================================================================================================
+	== [10/20/2006] heat sink, ability recharge enhancer
+	================================================================================================== -->
+	<Effect Name="AlienWalkerHeatSinkEffect">
+		<Effect_Class> HeatSink </Effect_Class>
+		<Duration> 5.1 </Duration>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+		<Extends_Same_Source_Duration_Only> true </Extends_Same_Source_Duration_Only>
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Unit_Ability_Countdown_Rate_Multiplier </Attribute>
+         <!-- 20% faster recharge rate -->
+         <Modifier_Value> 0.2 </Modifier_Value>
+      </Effect_Component>
+
+      <!-- 2/24/07 JAC - Heak sink now affects weapon recharge as well -->
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Weapon_Rate_Multiplier </Attribute>
+         <!-- 20% faster recharge rate -->
+         <Modifier_Value> 0.2 </Modifier_Value>
+      </Effect_Component>
+   </Effect>
+
+	<!--=================================================================================================
+	== [11/17/2006] GroundingConduit protection elec
+	================================================================================================== -->
+	<Effect Name="AlienWalkerGroundingConduitEffect	">
+		<Effect_Class> GroundingConduit </Effect_Class>
+		<Duration> 5.1 </Duration>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+		<Extends_Same_Source_Duration_Only> true </Extends_Same_Source_Duration_Only>
+
+		<Effect_Component Type="ModifyArmor">
+			<!-- reduce elec damage by 30%, this could drop it to Zero -->
+			<Amount> -0.3 </Amount>
+			<Damage_Type> Damage_Electricity </Damage_Type>
+		</Effect_Component>
+
+	</Effect>
+
+	<!--=================================================================================================
+	== [11/17/2006] WarmingPod, weapon recharge enhancer
+	================================================================================================== -->
+	<Effect Name="AlienWalkerWarmingPodEffect">
+		<Effect_Class> WalkerWarmingPod </Effect_Class>
+		<Duration> 5.1 </Duration>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+		<Extends_Same_Source_Duration_Only> true </Extends_Same_Source_Duration_Only>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Weapon_Rate_Multiplier </Attribute>
+			<!-- 2x recharge rate -->
+			<Modifier_Value> 1.0 </Modifier_Value>
+		</Effect_Component>
+
+	</Effect>
+
+	<!--=================================================================================================
+	== [04/10/2007] AlienWalkerFullFOWEffect, increase sight range to max
+	================================================================================================== -->
+	<Effect Name="AlienWalkerFullFOWEffect">
+		<Effect_Class> WalkerVision </Effect_Class>
+		<Duration> -1.0 </Duration>
+		<CategoryMask> CanBeRemovedByAbility</CategoryMask>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Max_Land_FOW_Reveal_Mult_Coeff </Attribute>
+			<!-- max vision -->
+			<Modifier_Value> 1000.0 </Modifier_Value>
+		</Effect_Component>
+
+	</Effect>
+	
+	<!--=================================================================================================
+	== [10/20/2006] AlienWalkerScanningNodeEffect, increase sight range
+	================================================================================================== -->
+	<Effect Name="AlienWalkerScanningNodeEffect">
+		<Effect_Class> WalkerVision </Effect_Class>
+		<Duration> -1.0 </Duration>
+		<CategoryMask> CanBeRemovedByAbility</CategoryMask>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+		<Extends_Same_Source_Duration_Only>yes</Extends_Same_Source_Duration_Only>
+
+		<Effect_Component Type="AttributeModifier">
+         <Attribute> Max_Land_FOW_Reveal_Mult_Coeff </Attribute>
+         <!-- +25 x vision -->
+         <Modifier_Value> 0.25 </Modifier_Value>
+      </Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Scan_Nodes </Attribute>
+			<Modifier_Value> 1.0 </Modifier_Value>
+		</Effect_Component>
+
+	</Effect>
+
+   <Effect Name="AlienWalkerScanningNodeRevealCloakingEffect">
+      <Duration> 2.0 </Duration>
+      <Effect_Class> RevealCloaking </Effect_Class>
+      <Extends_Existing_Duration> true </Extends_Existing_Duration>
+      <Priority> 10.0 </Priority>
+
+      <Effect_Component Type="RemoveEffect">
+         <Remove_Effect_Class> Cloaking </Remove_Effect_Class>
+      </Effect_Component>
+
+      <Effect_Component Type="BlockEffect">
+         <Block_Effect_Class> Cloaking </Block_Effect_Class>
+      </Effect_Component>
+   </Effect>
+
+	<!--=================================================================================================
+	== [10/20/2006] AlienWalkerScanningNodeEffect, increase sight range
+	================================================================================================== -->
+	<Effect Name="AlienWalkerPredictionNodeEffect">
+		<Effect_Class> WalkerPrediction </Effect_Class>
+		<Duration> -1.0 </Duration>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+		<Extends_Same_Source_Duration_Only> true </Extends_Same_Source_Duration_Only>
+		<CategoryMask> CanBeRemovedByAbility</CategoryMask>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Weapon_Range_Mult_Coeff </Attribute>
+			<!-- x1.2 weapon range -->
+			<Modifier_Value> 0.20 </Modifier_Value>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Special_Ability_Range_Mult_Coeff </Attribute>
+			<!-- 1.2x SA range -->
+			<Modifier_Value> 0.20 </Modifier_Value>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Generator_Area_Effect_Radius_Mult_Coeff_1 </Attribute>
+			<!-- x1.5  effect radius range -->
+			<Modifier_Value> 0.20 </Modifier_Value>
+		</Effect_Component>
+
+	</Effect>
+
+	<!--=================================================================================================
+	== [10/27/2006] AlienWalkerConsumptionEffect, reduce build time of objects attached to this object
+	================================================================================================== -->
+	<Effect Name="AlienWalkerConsumptionEffect">
+		<Effect_Class> WalkerConsumptionBoost </Effect_Class>
+		<Duration> 1.0 </Duration>
+		<CategoryMask> CanBeRemovedByAbility</CategoryMask>
+
+		<!-- reduce build time of objects attached to this object by 50% -->
+		<Effect_Component Type="ReduceBuildTime">
+			<Percent_Build_Time_Reduced> 0.5 </Percent_Build_Time_Reduced>
+			<Reduce_Effect_By_Number_Of_Builders> true </Reduce_Effect_By_Number_Of_Builders>
+		</Effect_Component>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Singularity_Lightning_Bolt_Strike </Particle_System_Type>
+		</Effect_Component>
+
+
+	</Effect>
+
+	<!--=================================================================================================
+	== [10/27/2006] AlienWalkerDestroySocketEffect, destroy object this attached to when effect wears off
+	================================================================================================== -->
+	<Effect Name="AlienWalkerDestroySocketEffect">
+		<Effect_Class> WalkerConsumptionDestroy </Effect_Class>
+		<Duration> 2.0 </Duration>
+		<CategoryMask> CanBeRemovedByAbility</CategoryMask>
+
+		<Effect_Component Type="ApplyEffectOnRemove">
+			<Apply_On_Expiration_Only> false </Apply_On_Expiration_Only>
+			<Effect_Name> DestroyObject </Effect_Name>
+		</Effect_Component>
+
+	</Effect>
+
+	<!--=================================================================================================
+	== [10/31/2006] AlienWalkerTerrainConditionerEffect damage over time
+	================================================================================================== -->
+	<Effect Name="AlienWalkerTerrainConditionerEffect">
+		<Effect_Class> WalkerTerrainConditioner </Effect_Class>
+		<Duration> 10.0 </Duration>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+		<Extends_Same_Source_Duration_Only>yes</Extends_Same_Source_Duration_Only>
+		<CategoryMask> CanBeRemovedByAbility</CategoryMask>
+
+		<Effect_Component Type="DamageOverTime">
+			<Damage_Type> Damage_Alien_AE_Radiation </Damage_Type>
+			<Amount_Per_Second> 15 </Amount_Per_Second>
+			<Percentage_Per_Second>0</Percentage_Per_Second>
+		</Effect_Component>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Radiation_Harmful_Glow </Particle_System_Type>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Create_Radiation_Mutant </Attribute>
+			<Modifier_Value> 0.1 </Modifier_Value>
+		</Effect_Component>
+
+	</Effect>
+
+	<!--=================================================================================================
+	== [10/31/2006] AlienWalkerGamaTerrainConditionerEffect damage over time
+	================================================================================================== -->
+	<Effect Name="AlienWalkerGamaTerrainConditionerEffect">
+		<Effect_Class> WalkerTerrainConditionerGamma </Effect_Class>
+		<Duration> 10.0 </Duration>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+		<Extends_Same_Source_Duration_Only>yes</Extends_Same_Source_Duration_Only>
+		<CategoryMask> CanBeRemovedByAbility</CategoryMask>
+
+		<Effect_Component Type="DamageOverTime">
+			<Damage_Type> Damage_Alien_AE_Radiation </Damage_Type>
+			<Amount_Per_Second> 25.0 </Amount_Per_Second>
+			<Percentage_Per_Second>0</Percentage_Per_Second>
+		</Effect_Component>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Gamma_Radiation_Harmful_Glow </Particle_System_Type>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Create_Radiation_Mutant </Attribute>
+			<Modifier_Value> 0.1 </Modifier_Value>
+		</Effect_Component>
+
+	</Effect>
+
+	<!--=================================================================================================
+	== [10/17/2006] em self visual
+	================================================================================================== -->
+	<Effect Name="AlienWalkerEMFieldSelfEffect">
+		<Effect_Class> EMField </Effect_Class>
+		<Duration> 3.0 </Duration>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Alien_Walker_EM_Field_Generator_Pulse </Particle_System_Type>
+		</Effect_Component>
+
+	</Effect>
+
+	<!--=================================================================================================
+	== [10/17/2006] em field generator on walkers, anti tower
+	================================================================================================== -->
+	<Effect Name="AlienWalkerEMFieldTowerEffect">
+		<Effect_Class> EMField </Effect_Class>
+		<Duration> 10.0 </Duration>
+
+		<Effect_Component Type="RemoveEffect">
+			<Remove_Effect_Class> NovusSignalTower </Remove_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="BlockEffect">
+			<Block_Effect_Class> NovusSignalTower </Block_Effect_Class>
+		</Effect_Component>
+
+	</Effect>
+
+	<!--=================================================================================================
+	== [10/17/2006] em field generator on walkers, anti vehicle signal
+	================================================================================================== -->
+	<Effect Name="AlienWalkerEMFieldVehicleEffect">
+		<Effect_Class> EMField </Effect_Class>
+		<Duration> 10.0 </Duration>
+
+		<Effect_Component Type="RemoveEffect">
+			<Remove_Effect_Class> NovusSignalVehicle </Remove_Effect_Class>
+		</Effect_Component>
+
+		<Effect_Component Type="BlockEffect">
+			<Block_Effect_Class> NovusSignalVehicle </Block_Effect_Class>
+		</Effect_Component>
+
+	</Effect>
+
+
+   <!-- ************************************************************** -->
+   <!-- Walker Material Optimizer effect -->
+   <!-- ************************************************************** -->
+	<Effect Name="WalkerMaterialOptimizerEffect">
+		<Effect_Class> PlayerProduction </Effect_Class>
+		<CategoryMask> CanBeRemovedByAbility</CategoryMask>
+		<Duration> -1.0 </Duration>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Walker_Production_Cost_Reduction </Attribute>
+			<Modifier_Value> 0.08 </Modifier_Value>
+		</Effect_Component>
+	</Effect>
+
+
+
+   <!-- ************************************************************** -->
+   <!-- Walker Teleport Accelerator effect -->
+   <!-- ************************************************************** -->
+	<Effect Name="WalkerBuildFasterEffect">
+		<Effect_Class> IncreaseBuildSpeed </Effect_Class>
+		<CategoryMask> CanBeRemovedByAbility</CategoryMask>
+		<Duration> -1.0 </Duration>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Unit_Build_Rate_Multiplier </Attribute>
+			<!-- +12% build speed -->
+			<Modifier_Value> 0.12 </Modifier_Value>
+		</Effect_Component>
+	</Effect>
+
+
+
+	<!--*************************************************************************************************
+	************************************************************************************************** 
+	************************************************************************************************** 
+	**	
+	**												Assembly
+	**	
+	************************************************************************************************** 
+	************************************************************************************************** 
+	************************************************************************************************** -->
+
+	<!--=================================================================================================
+	== AssemblyPlasmaAEImpactEffect: plasma explosion (target and visual)
+	================================================================================================== -->
+
+	<!--=================================================================================================
+	== ScarnBeamExplosionEffect: scarn beam explosion damage
+	================================================================================================== -->
+	<Effect Name="ScarnBeamExplosionEffect">
+
+		<Duration> 0.1 </Duration>
+		<Effect_Class> ScarnBeam </Effect_Class>
+		<Extends_Existing_Duration> false </Extends_Existing_Duration>
+
+		<Effect_Component Type="Damage">
+			<Damage_Type>Damage_Alien_Spitter_Particle_Beam</Damage_Type>
+			<Damage_Amount>100.0</Damage_Amount>
+			<Damage_Percentage>0.0</Damage_Percentage>
+		</Effect_Component>
+
+	</Effect>
+
+	<!--=================================================================================================
+	== ScarnBeamExplosionVisualEffect: visual
+	================================================================================================== -->
+	<Effect Name="ScarnBeamExplosionVisualEffect">
+
+		<Duration> 0.1 </Duration>
+		<Effect_Class> ScarnBeamVisual </Effect_Class>
+		<Extends_Existing_Duration> false </Extends_Existing_Duration>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Scarn_Beam_Laser_Explosion_Effect </Particle_System_Type>
+		</Effect_Component>
+
+	</Effect>
+
+	<!--=================================================================================================
+	== AssemblyPlasmaAEImpactVisualEffect: plasma explosion (target and visual)
+	================================================================================================== -->
+   <Effect Name="AssemblyPlasmaAEImpactVisualEffect">
+
+      <Duration> 0.1 </Duration>
+      <Effect_Class> PlasmaDamage </Effect_Class>
+      <Extends_Existing_Duration> false </Extends_Existing_Duration>
+
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> Plasma_Explosion_Placeholder </Particle_System_Type>
+      </Effect_Component>
+
+   </Effect>
+
+   
+   <!--=================================================================================================
+	== AssemblyPlasmaAEExplosionEffect: plasma explosion AE
+	================================================================================================== -->
+	<Effect Name="AssemblyPlasmaAEExplosionEffect">
+
+		<Duration> 0.1 </Duration>
+		<Effect_Class> PlasmaDamage </Effect_Class>
+		<Extends_Existing_Duration> false </Extends_Existing_Duration>
+
+		<Effect_Component Type="Damage">
+			<Damage_Type>Damage_Plasma</Damage_Type>
+			<Damage_Amount>10.0</Damage_Amount>
+			<Damage_Percentage>0.0</Damage_Percentage>
+		</Effect_Component>
+
+	</Effect>
+
+
+	<Effect Name="LightningStrikeEffect">
+		<Duration> 2.0 </Duration>
+		<Effect_Class> Transparent </Effect_Class>
+
+		<!-- destroy when the effect is over -->
+		<Effect_Component Type="Lightning">
+			<Lightning_Effect_Name> Carve_Glyph_Beam </Lightning_Effect_Name>
+			<Source_Target_Type> SourceToTarget </Source_Target_Type>
+		</Effect_Component>
+
+	</Effect>
+	
+	<!--=================================================================================================
+	== [11/20/2006] WalkerOnJumpLandingAEEffect
+	================================================================================================== -->
+	<Effect Name="WalkerOnJumpLandingAEEffect">
+		<Effect_Class> WalkerOnLanding </Effect_Class>
+		<Duration> 1.0 </Duration>
+
+		<Effect_Component Type="Damage">
+			<Damage_Type>Damage_Default</Damage_Type>
+			<Damage_Amount>1000.0</Damage_Amount>
+			<Damage_Percentage>0.0</Damage_Percentage>
+		</Effect_Component>
+
+	</Effect>
+
+	<!--=================================================================================================
+	== [11/20/2006] WalkerOnJumpLandingAEVisualEffect
+	================================================================================================== -->
+	<Effect Name="WalkerOnJumpLandingAEVisualEffect">
+		<Effect_Class> WalkerOnLandingVisual </Effect_Class>
+		<Duration> 1.0 </Duration>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Singularity_Lightning_Bolt_Strike </Particle_System_Type>
+		</Effect_Component>
+
+	</Effect>
+
+	<!--=================================================================================================
+	== [11/20/2006] WalkerOnJumpLandingSelfVisualEffect
+	================================================================================================== -->
+	<Effect Name="WalkerOnJumpLandingSelfVisualEffect">
+		<Effect_Class> WalkerOnLandingVisual </Effect_Class>
+		<Duration> 1.0 </Duration>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Alien_Walker_EM_Field_Generator_Pulse </Particle_System_Type>
+		</Effect_Component>
+
+	</Effect>
+
+	<!--=================================================================================================
+	== [11/21/2006] AlienWalkerJumpEnableEffect
+	================================================================================================== -->
+	<Effect Name="AlienWalkerJumpEnableEffect">
+		<Effect_Class> WalkerJumpEnable </Effect_Class>
+		<Duration> 3.1 </Duration>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+		<Extends_Same_Source_Duration_Only> true </Extends_Same_Source_Duration_Only>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Walker_Jump_Enabled </Attribute>
+			<Modifier_Value> 1.0 </Modifier_Value>
+		</Effect_Component>
+
+	</Effect>
+
+	<!--=================================================================================================
+	== [11/21/2006] AlienWalkerJumpDisableEffect
+	================================================================================================== -->
+	<Effect Name="AlienWalkerJumpDisableEffect">
+		<Effect_Class> WalkerJumpEnable </Effect_Class>
+		<Duration> 3.1 </Duration>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+		<Extends_Same_Source_Duration_Only> true </Extends_Same_Source_Duration_Only>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Walker_Jump_Disabled </Attribute>
+			<Modifier_Value> 1.0 </Modifier_Value>
+		</Effect_Component>
+
+		<Effect_Component Type="DisableAbility">
+			<Abilities> Alien_Walker_Activate_Jump_Module_Ability </Abilities>
+		</Effect_Component>
+
+	</Effect>
+
+	<!--=================================================================================================
+	== [11/21/2006] AlienWalkerJumpSpeedUpEffect
+	================================================================================================== -->
+	<Effect Name="AlienWalkerJumpSpeedUpEffect">
+		<Effect_Class> WalkerJumpSpeedUp </Effect_Class>
+		<Duration> 3.1 </Duration>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+		<Extends_Same_Source_Duration_Only> true </Extends_Same_Source_Duration_Only>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Unit_Ability_Countdown_Rate_Multiplier </Attribute>
+			<!-- 2x recharge rate -->
+			<Modifier_Value> 1.0 </Modifier_Value>
+		</Effect_Component>
+
+	</Effect>
+
+
+	<!--*************************************************************************************************
+	************************************************************************************************** 
+	************************************************************************************************** 
+	**	
+	**												Habitat
+	**	
+	************************************************************************************************** 
+	************************************************************************************************** 
+	************************************************************************************************** -->
+
+	<!--=================================================================================================
+	== HabitatPlasmaAEImpactEffect: plasma explosion (target and visual)
+	================================================================================================== -->
+	<Effect Name="HabitatPlasmaAEImpactEffect">
+
+		<Duration> 0.1 </Duration>
+		<Effect_Class> PlasmaDamage </Effect_Class>
+		<Extends_Existing_Duration> false </Extends_Existing_Duration>
+
+		<Effect_Component Type="Damage">
+			<Damage_Type>Damage_Plasma</Damage_Type>
+			<Damage_Amount>10.0</Damage_Amount>
+			<Damage_Percentage>0.0</Damage_Percentage>
+		</Effect_Component>
+
+
+   </Effect>
+
+
+   <!--=================================================================================================
+	== HabitatPlasmaAEImpactVisualEffect: plasma explosion (target and visual)
+	================================================================================================== -->
+   <Effect Name="HabitatPlasmaAEImpactVisualEffect">
+
+      <Duration> 0.1 </Duration>
+      <Effect_Class> PlasmaDamage </Effect_Class>
+      <Extends_Existing_Duration> false </Extends_Existing_Duration>
+
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> Plasma_Explosion_Placeholder </Particle_System_Type>
+      </Effect_Component>
+
+   </Effect>
+
+
+   <!--=================================================================================================
+	== HabitatPlasmaAEExplosionEffect: plasma explosion AE
+	================================================================================================== -->
+	<Effect Name="HabitatPlasmaAEExplosionEffect">
+
+		<Duration> 0.1 </Duration>
+		<Effect_Class> PlasmaDamage </Effect_Class>
+		<Extends_Existing_Duration> false </Extends_Existing_Duration>
+
+		<Effect_Component Type="Damage">
+			<Damage_Type>Damage_Plasma</Damage_Type>
+			<Damage_Amount>10.0</Damage_Amount>
+			<Damage_Percentage>0.0</Damage_Percentage>
+		</Effect_Component>
+
+	</Effect>
+
+
+
+
+	<!--*************************************************************************************************
+	************************************************************************************************** 
+	************************************************************************************************** 
+	**	
+	**												Science
+	**	
+	************************************************************************************************** 
+	************************************************************************************************** 
+	************************************************************************************************** -->
+
+   <!-- ************************************************************** -->
+   <!-- ScienceRadiationCascadeNotReadyEffect: visual on Walker -->
+   <!-- ************************************************************** -->
+   <Effect Name="ScienceRadiationCascadeNotReadyEffect">
+      <Duration> 2.4 </Duration>
+      <Effect_Class> RadiationCascadeNotReadyVisual </Effect_Class>
+      <Extends_Existing_Duration> true </Extends_Existing_Duration>
+      <Extends_Same_Source_Duration_Only>yes</Extends_Same_Source_Duration_Only>
+      
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> Alien_Science_Radiation_Charge </Particle_System_Type>
+         <Attachment_Bone_Name>HP_Attach_Core</Attachment_Bone_Name>
+      </Effect_Component>
+   </Effect>
+
+
+   <!-- ************************************************************** -->
+   <!-- ScienceRadiationCascadeReadyEffect: visual on Walker -->
+   <!-- ************************************************************** -->
+   <Effect Name="ScienceRadiationCascadeReadyEffect">
+      <Duration> 2.4 </Duration>
+      <Effect_Class> RadiationCascadeReadyVisual </Effect_Class>
+      <Extends_Existing_Duration> true </Extends_Existing_Duration>
+      <Extends_Same_Source_Duration_Only>yes</Extends_Same_Source_Duration_Only>
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> Alien_Science_Radiation_Charge_Ready </Particle_System_Type>
+         <Attachment_Bone_Name>HP_Attach_Core</Attachment_Bone_Name>
+      </Effect_Component>
+   </Effect>
+   
+   <!-- ************************************************************** -->
+	<!-- CascadeDamageEffect: damage to radiation immune units -->
+	<!-- ************************************************************** -->
+	
+	<Effect Name="CascadeDamageEffect">
+		<Duration> 2.4 </Duration>
+		<Effect_Class> RadiationCascade </Effect_Class>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+		<Extends_Same_Source_Duration_Only>yes</Extends_Same_Source_Duration_Only>
+
+		<Effect_Component Type="Damage">
+			<Damage_Type> Damage_Alien_Radiation_Cascade </Damage_Type>
+			<Damage_Amount> 500.0 </Damage_Amount>
+		</Effect_Component>
+
+		<!-- placeholder-->
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Radiation_Harmful_Glow </Particle_System_Type>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Cascade_Affected </Attribute>
+			<Modifier_Value> 1.0 </Modifier_Value>
+		</Effect_Component>
+
+	</Effect>
+
+	<!-- ************************************************************** -->
+	<!-- CascadeIrradiateEffect: damage to everything else -->
+	<!-- ************************************************************** -->
+	
+	<Effect Name="CascadeIrradiateEffect">
+		<Duration> 2.4 </Duration>
+		<Effect_Class> RadiationCascade </Effect_Class>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+		<Extends_Same_Source_Duration_Only>yes</Extends_Same_Source_Duration_Only>
+
+		<Effect_Component Type="Damage">
+			<Damage_Type> Damage_Alien_Radiation_Cascade </Damage_Type>
+			<Damage_Amount> 500.0 </Damage_Amount>
+		</Effect_Component>
+
+		<!-- placeholder-->
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Radiation_Harmful_Glow </Particle_System_Type>
+		</Effect_Component>
+
+		<Effect_Component Type="DamageOverTime">
+			<Damage_Type> Damage_Alien_AE_Radiation </Damage_Type>
+			<Amount_Per_Second> 25.0 </Amount_Per_Second>
+			<Percentage_Per_Second>0</Percentage_Per_Second>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Create_Radiation_Mutant </Attribute>
+			<Modifier_Value> 1.0 </Modifier_Value>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Cascade_Affected </Attribute>
+			<Modifier_Value> 1.0 </Modifier_Value>
+		</Effect_Component>
+
+	</Effect>
+
+	<!-- ************************************************************** -->
+	<!-- CascadeMeltTargetEffect: add an attribute to enable radiation cascade -->
+	<!-- ************************************************************** -->
+	<Effect Name="CascadeMeltTargetEffect">
+		<Duration> 2.4 </Duration>
+		<Effect_Class> DissolveVisual </Effect_Class>
+		<Extends_Existing_Duration> No </Extends_Existing_Duration>
+		
+		<Effect_Component Type="Dissolve">
+			<Dissolve_Effect_Name>Alien_Radiation_Wave_Dissolve</Dissolve_Effect_Name>
+			<Based_On>InverseTimer</Based_On>
+			<Duration>2.0</Duration>
+		</Effect_Component>
+
+      <!--Frank TODO - Walker Cascade this is the disentegrate effect-->
+      <Effect_Component Type="Sound">
+         <Apply_Effect> SFX_Alien_Radiation_Detonation_1 </Apply_Effect>
+      </Effect_Component>
+
+		<Effect_Component Type="Animate">
+			<Animation_Type> Anim_Die </Animation_Type>
+			<Unapply_When_Finished>No</Unapply_When_Finished>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Is_Being_Dissolved </Attribute>
+			<Modifier_Value> 1.0 </Modifier_Value>
+		</Effect_Component>
+
+	</Effect>
+
+	<!-- ************************************************************** -->
+	<!-- CascadeMeltTargetDeathEffect: add an attribute to enable radiation cascade -->
+	<!-- ************************************************************** -->
+	<Effect Name="CascadeMeltTargetDeathEffect">
+		<Duration> 2.0 </Duration>
+		<Effect_Class> InstantDeath </Effect_Class>
+      <Priority>1000000000000</Priority>
+      <Extends_Existing_Duration> No </Extends_Existing_Duration>
+
+      <!-- Oksana: we use Damage instead of Destroy here to get the proper death effects etc -->
+      <Effect_Component Type="Damage">
+         <Damage_Type>Damage_No_Death_Clone</Damage_Type>
+         <Damage_Amount>100000000000</Damage_Amount>
+         <Damage_Percentage>1.0f</Damage_Percentage>
+         <!-- instant kill -->
+      </Effect_Component>
+
+	</Effect>
+
+	<!-- ************************************************************** -->
+	<!-- ScienceRadiationCascadeMuzzeleFlashEffect:  create particle for muzzle flash-->
+	<!-- ************************************************************** -->
+	<Effect Name="ScienceRadiationCascadeMuzzeleFlashEffect">
+
+		<Duration> 1.0 </Duration>
+		<Effect_Class> CascadeMuzzle </Effect_Class>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Alien_Cascade_Muzzle_Flash </Particle_System_Type>
+			<Attachment_Bone_Name>HP_Attach</Attachment_Bone_Name>
+		</Effect_Component>
+
+      </Effect>
+
+      <!-- ************************************************************** -->
+      <!-- ScienceRadiationCascadeObjectEffect: create the wave oject -->
+      <!-- ************************************************************** -->
+      <Effect Name="ScienceRadiationCascadeObjectEffect">
+
+         <Duration> 1.0 </Duration>
+         <Effect_Class> CascadeWave </Effect_Class>
+
+         <Effect_Component Type="CreateObject">
+            <Create_Object_Type> Radiation_Cascade_Wave </Create_Object_Type>
+            <Destroy_On_Remove> false </Destroy_On_Remove>
+            <Position_Type> AtTarget </Position_Type>
+            <Use_Source_Player_ID> true </Use_Source_Player_ID>
+            <Distance_From_Source> 100.0 </Distance_From_Source>
+            <Facing_Type>Face_Target</Facing_Type>
+    
+		    <!-- Oksana: important - we need a reference to parent so we don't damage its hardpoints (Sega bug)-->
+        	<Set_Source_As_Container>Yes</Set_Source_As_Container>
+	 
+        </Effect_Component>
+      
+      
+
+	</Effect>
+
+	<!-- ************************************************************** -->
+	<!-- ScienceRadiationCascadeResetEffect: resets all ability timers -->
+	<!-- ************************************************************** -->
+	<Effect Name="ScienceRadiationCascadeResetEffect">
+
+		<Duration> 0.1 </Duration>
+		<Effect_Class> Transparent </Effect_Class>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+		<Extends_Same_Source_Duration_Only> true </Extends_Same_Source_Duration_Only>
+
+		<Effect_Component Type="ResetAllAbilities">
+		</Effect_Component>
+
+	</Effect>
+
+	<!-- ************************************************************** -->
+	<!-- ScienceRadiationCascadeEffect: add an attribute to enable radiation cascade -->
+	<!-- ************************************************************** -->
+	<Effect Name="ScienceRadiationCascadeEffect">
+
+		<Duration> -1.0 </Duration>
+		<Effect_Class> EnableRadiationCascade </Effect_Class>
+		<Extends_Existing_Duration> false </Extends_Existing_Duration>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Cascade_Hard_Points </Attribute>
+			<Modifier_Value> 1.0 </Modifier_Value>
+		</Effect_Component>
+
+	</Effect>
+
+
+
+
+	<!-- ************************************************************** -->
+	<!-- Science Walker Material Optimizer effect -->
+	<!-- ************************************************************** -->
+	<Effect Name="ScienceMaterialOptimizerEffect">
+
+		<Duration> -1 </Duration>
+		<Effect_Class> PlayerProduction </Effect_Class>
+
+		<Effect_Component Type="PlayerProduction">
+			<Cost_Reduction_Percent> 0.04 </Cost_Reduction_Percent>
+		</Effect_Component>
+
+	</Effect>
+
+
+  <!-- ************************************************************** -->
+  <!-- Science Walker Magnet Effect -->
+  <!-- ************************************************************** -->
+  
+	<Effect Name="AlienWalkerMindMagnetTargetsEffect">
+
+		<Duration> 1.0 </Duration>
+		<Effect_Class> Transparent </Effect_Class>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+		<Extends_Same_Source_Duration_Only> true </Extends_Same_Source_Duration_Only>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Mind_Magnet_Targets </Attribute>
+			<Modifier_Value> 2.0 </Modifier_Value>
+		</Effect_Component>
+
+	</Effect>
+
+	<Effect Name="AlienWalkerAIMindMagnetTargetsEffect">
+
+		<Duration> 1.0 </Duration>
+		<Effect_Class> Transparent </Effect_Class>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+		<Extends_Same_Source_Duration_Only> true </Extends_Same_Source_Duration_Only>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> AI_Mind_Magnet_Targets </Attribute>
+			<Modifier_Value> 2.0 </Modifier_Value>
+		</Effect_Component>
+
+	</Effect>
+
+	<!-- The follow effect is needed to keep the targets abilities from being used when mind control stops, note that this -->
+	<!-- duration must be longer than that of the actual mind control (i.e. switchfaction) -->
+
+	<Effect Name="WalkerTargetMindControlledEffect">
+		<Effect_Class> WalkerHasControl </Effect_Class>
+		<Duration> 2.0 </Duration>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Is_Mind_Controlled </Attribute>
+			<Modifier_Value> 1.0 </Modifier_Value>
+		</Effect_Component>
+
+	</Effect>
+
+	<Effect Name="AlienWalkerMindMagnetEffect">
+		<Effect_Class> MindControl </Effect_Class>
+		<Duration> -1.0 </Duration>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+		<CategoryMask> CanBeRemovedByAbility</CategoryMask>
+
+		<!--
+		<Effect_Component Type="DisableBehavior">
+			<Behaviors> TEAM_TARGETING, TARGETING, WEAPON, TURRET </Behaviors>
+		</Effect_Component>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Singularity_Lightning_Bolt_Strike </Particle_System_Type>
+		</Effect_Component>
+
+		<Effect_Component Type="FollowObject">
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Category_Mask </Attribute>
+			<Modifier_Integer_Value Converter="GameObjectCategoryType"> Insignificant </Modifier_Integer_Value>
+			<Modifier_Type> Bitwise_Or </Modifier_Type>
+		</Effect_Component>
+		-->
+
+		<Effect_Component Type="SwitchFaction">
+			<Use_Source_Faction> true </Use_Source_Faction>
+		</Effect_Component>
+
+		<Effect_Component Type="AddBehavior">
+			<Behavior_Name> FORMATION </Behavior_Name>
+		</Effect_Component>
+
+		<Effect_Component Type="AddBehavior">
+			<Behavior_Name> TARGETING </Behavior_Name>
+		</Effect_Component>
+
+		<Effect_Component Type="DisableBehavior">
+			<Behaviors> CIVILIAN </Behaviors>
+		</Effect_Component>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Is_Walker_Mind_Controlled </Attribute>
+			<Modifier_Value> 1.0 </Modifier_Value>
+		</Effect_Component>
+
+		<Effect_Component Type="Sound">
+			<Apply_Effect> SFX_Alien_Mind_Control_Loop </Apply_Effect>
+			<SFX_Loop_Type>AlienAbilityLoopSFX</SFX_Loop_Type>
+			<Stop_On_Remove>yes</Stop_On_Remove>
+		</Effect_Component>
+
+		<!--
+  		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Singularity_Lightning_Bolt_Strike </Particle_System_Type>
+		</Effect_Component>
+		-->
+		
+   </Effect>
+
+
+   <Effect Name="AlienWalkerMindMagnetVisualEffect">
+      <Effect_Class> MindControlVisual </Effect_Class>
+      <Duration> -1.0 </Duration>
+      <Extends_Existing_Duration> true </Extends_Existing_Duration>
+      <Extends_Same_Source_Duration_Only> true </Extends_Same_Source_Duration_Only>
+      <CategoryMask> CanBeRemovedByAbility</CategoryMask>
+
+      <Effect_Component Type="Lightning">
+         <Lightning_Effect_Name> Mind_Control_Lightning </Lightning_Effect_Name>
+         <Source_Target_Type> SourceToTarget </Source_Target_Type>
+         <Source_Bone_Name> MuzzleB_00 </Source_Bone_Name>
+      </Effect_Component>
+
+      <!-- Taken out per request for patch 1/11/08 JeffP -->
+      <!-- Effect_Component Type="ParticleSystem">
+         <Particle_System_Type>ZI_Architect_Connect_Structure</Particle_System_Type>
+
+         <Position_Type>AtTarget</Position_Type>
+        <Attachment_Bone_Name/>
+
+         <Attractor_Type>AtTarget</Attractor_Type>
+         <Attractor_Bone_Name/>
+         <Remove_On_Unapply> true </Remove_On_Unapply>
+      </Effect_Component -->
+      
+   </Effect>
+   
+	
+	<!--=================================================================================================
+	== MARIA - Walker Science horn's shield recharge effect.
+	================================================================================================== -->
+	<Effect Name="AlienScienceShieldRechargeEffect">
+		<Duration> -1.0 </Duration>
+		<Effect_Class> Transparent </Effect_Class>
+
+		<Effect_Component Type="AttributeModifier">
+			<Attribute> Additive_Shield_Recharge_Rate </Attribute>
+			<Modifier_Value> 25.0 </Modifier_Value>
+		</Effect_Component>
+	</Effect>
+	
+	
+	<!-- *********************************************************************** -->
+	<!-- KDB 11-17-2006 StaticDischarger01Effect  -->
+	<!-- *********************************************************************** -->
+	<Effect Name="StaticDischarger01Effect">
+		<Duration> 10.0 </Duration>
+		<Effect_Class> PatchBackupSystems </Effect_Class>
+		<!-- block the patch by having a higher priority -->
+		<Priority> 100.0 </Priority>
+
+	</Effect>
+
+	<!-- *********************************************************************** -->
+	<!-- KDB 11-17-2006 StaticDischarger02Effect  -->
+	<!-- *********************************************************************** -->
+	<Effect Name="StaticDischarger02Effect">
+		<Duration> 10.0 </Duration>
+		<Effect_Class> PatchExtrapolation </Effect_Class>
+		<!-- block the patch by having a higher priority -->
+		<Priority> 100.0 </Priority>
+
+	</Effect>
+
+	<!-- *********************************************************************** -->
+	<!-- KDB 11-17-2006 StaticDischarger03Effect  -->
+	<!-- *********************************************************************** -->
+	<Effect Name="StaticDischarger03Effect">
+		<Duration> 10.0 </Duration>
+		<Effect_Class> PatchOptimizedAssembly </Effect_Class>
+		<!-- block the patch by having a higher priority -->
+		<Priority> 100.0 </Priority>
+	</Effect>
+
+	<!-- *********************************************************************** -->
+	<!-- KDB 11-17-2006 StaticDischarger04Effect  -->
+	<!-- *********************************************************************** -->
+	<Effect Name="StaticDischarger04Effect">
+		<Duration> 10.0 </Duration>
+		<Effect_Class> PatchOverclock </Effect_Class>
+		<!-- block the patch by having a higher priority -->
+		<Priority> 100.0 </Priority>
+
+	</Effect>
+
+	<!-- *********************************************************************** -->
+	<!-- KDB 11-17-2006 StaticDischarger05Effect  -->
+	<!-- *********************************************************************** -->
+	<Effect Name="StaticDischarger05Effect">
+		<Duration> 10.0 </Duration>
+		<Effect_Class> PatchRadiationCasing </Effect_Class>
+		<!-- block the patch by having a higher priority -->
+		<Priority> 100.0 </Priority>
+
+	</Effect>
+
+	<!-- *********************************************************************** -->
+	<!-- KDB 11-17-2006 StaticDischarger06Effect  -->
+	<!-- *********************************************************************** -->
+	<Effect Name="StaticDischarger06Effect">
+		<Duration> 10.0 </Duration>
+		<Effect_Class> PatchCoolantBoost </Effect_Class>
+		<!-- block the patch by having a higher priority -->
+		<Priority> 100.0 </Priority>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Beckon_Effect </Particle_System_Type>
+		</Effect_Component>
+
+	</Effect>
+
+	<!-- *********************************************************************** -->
+	<!-- KDB 11-17-2006 StaticDischargerVisual01Effect  -->
+	<!-- *********************************************************************** -->
+	<Effect Name="StaticDischargerVisual01Effect">
+		<Duration> 10.0 </Duration>
+		<Effect_Class> Transparent </Effect_Class>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Beckon_Effect </Particle_System_Type>
+		</Effect_Component>
+
+	</Effect>
+
+	<!-- *********************************************************************** -->
+	<!-- KDB 11-17-2006 StaticDischargerVisual02Effect  -->
+	<!-- *********************************************************************** -->
+	<Effect Name="StaticDischargerVisual02Effect">
+		<Duration> 1.0 </Duration>
+		<Effect_Class> VisualOne </Effect_Class>
+
+		<Effect_Component Type="Lightning">
+			<Lightning_Effect_Name> Effect_Test_Lightning </Lightning_Effect_Name>
+			<Source_Target_Type> SourceToTarget </Source_Target_Type>
+		</Effect_Component>
+
+	</Effect>
+
+	<!--=================================================================================================
+	== [11/21/2006] AlienWalkerDarkMatterVentEffect  (targeting Jammer)  
+	================================================================================================== -->
+	<Effect Name="AlienWalkerDarkMatterVentEffect">
+		<Effect_Class> BlackOut </Effect_Class>
+		<Duration> 5.1 </Duration>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+		<Extends_Same_Source_Duration_Only> true </Extends_Same_Source_Duration_Only>
+
+		<Effect_Component Type="FOWBlackout">
+			<Radius> 150.0 </Radius>
+		</Effect_Component>
+
+		<Effect_Component Type="ParticleSystem">
+			<Particle_System_Type> Blackout_Area </Particle_System_Type>
+		</Effect_Component>
+
+	</Effect>
+
+	<!--=================================================================================================
+   == [06/16/2007] Changing effect to make friendly units within range untargetable.
+   == [11/21/2006] AlienWalkerDarkMatterVentBlindEffect    (targeting Jammer)
+	================================================================================================== -->
+	<Effect Name="AlienWalkerDarkMatterVentBlindEffect">
+		<Effect_Class> DarkMatterBlind </Effect_Class>
+		<Duration> 5.1 </Duration>
+		<Extends_Existing_Duration> true </Extends_Existing_Duration>
+
+		<!--<Effect_Component Type="DisableBehavior">
+			<Behaviors> TEAM_TARGETING, TARGETING, WEAPON </Behaviors>
+		</Effect_Component> -->
+
+      <Effect_Component Type="AttributeModifier">
+         <Attribute> Category_Mask </Attribute>
+         <Modifier_Integer_Value Converter="GameObjectCategoryType"> Untargetable </Modifier_Integer_Value>
+         <Modifier_Type> Bitwise_Or </Modifier_Type>
+      </Effect_Component>
+
+      <Effect_Component Type="ParticleSystem">
+         <Particle_System_Type> Burden_Effect </Particle_System_Type>
+      </Effect_Component>
+
+   </Effect>
+	
+	
+</Effects>

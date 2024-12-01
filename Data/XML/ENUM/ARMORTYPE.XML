@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+=================================================================================================
+==  (C) Petroglyph Games, LLC 
+==
+== ARMOR TYPES that have damage types appliced to them for damage modifiers. These are armor 
+== categories for baseline units.If a unit is "like" an existing one as far as armor (rps) is 
+== concerned, then you can reuse the category. To make a unit tougher or weaker, change its health 
+== or shields. To encourage bringing in a different kind of unit to attack it,
+== then change the armor type and associated damage-vs-armor value.
+==
+==    
+== History: 
+== [9/29/2006] Moved from Game Constants - Oksana Kubushyna
+== [12/13/2006] Revised for balance pass - PMP
+================================================================================================== -->
+
+
+<EnumDefinition>
+   
+   <!-- HARD-CODED ARMOR TYPES! DO NOT CHANGE THE ORDER OR INSERT ANYTHING BEFORE OR BETWEEN THESE! -->
+   <Armor_Default>0</Armor_Default>
+   <Armor_Dark_Matter_Armor/>
+   <!-- END OF HARD CODED ARMOR VALUES-->
+
+   
+   <!-- Generic Armor Types -->
+   <Armor_Shield/>
+	<Armor_Bridge/>
+
+
+   <!-- Civilian/Neutral Armor Types -->
+
+   <Armor_Civilian_Infantry/>
+   <Armor_Civilian_Vehicle_Light/>
+   <Armor_Civilian_Vehiclre_Heavy/>
+   <Armor_Civilian_Structure_Light/>
+   <Armor_Civilian_Structure_Heavy/>
+   <Armor_Tut01_Civilian_Oil_Tanker_Trailer/>
+   <!-- jdg used in tut01...only vulnerable to col moores grenade-->
+
+   <!-- Hierarchy Armor Types -->
+
+   <Armor_Alien_Infantry_Light/>
+   <Armor_Alien_Infantry_Heavy/>
+   <Armor_Alien_Vehicle_Light/>
+   <Armor_Alien_Vehicle_Heavy/>
+   <Armor_Alien_Aircraft/>
+   <Armor_Alien_Walker/>
+   <Armor_Alien_Walker_Hardpoint/>
+   <Armor_Alien_Walker_Hardpoint_Armor/>
+   <Armor_Alien_Structure_Turret/>
+   <Armor_Alien_Structure_Light/>
+   <Armor_Alien_Structure_Heavy/>
+   <Armor_Alien_Hero/>
+   <Armor_Alien_Hero_Endure/>
+   <Armor_Alien_Reaper/>
+   <Armor_Alien_Brute_Tut01/>
+   <!-- jdg so I can balance outside of game standard -->
+
+   <!-- Military Armor Types -->
+
+   <Armor_Military_Infantry_Light/>
+   <Armor_Military_Infantry_Heavy/>
+   <Armor_Military_Vehicle_Light/>
+   <Armor_Military_Vehicle_Heavy/>
+   <Armor_Military_Aircraft/>
+   <Armor_Military_Structure_Turret/>
+   <Armor_Military_Structure_Light/>
+   <Armor_Military_Structure_Heavy/>
+   <Armor_Military_Hero/>
+   <Armor_Military_Hero_Tank/>
+   <!-- jdg woolard needs his own armor type -->
+
+   <!-- Novus Armor Types -->
+
+   <Armor_Novus_Infantry_Light/>
+   <Armor_Novus_Infantry_Heavy/>
+   <Armor_Novus_Vehicle_Light/>
+   <Armor_Novus_Vehicle_Heavy/>
+   <Armor_Novus_Aircraft/>
+   <Armor_Novus_Structure_Turret/>
+   <Armor_Novus_Structure_Light/>
+   <Armor_Novus_Structure_Heavy/>
+   <Armor_Novus_Hero/>
+
+   <!-- Masari Armor Types -->
+
+   <Armor_Masari_Infantry_Light/>
+   <Armor_Masari_Infantry_Heavy/>
+   <Armor_Masari_Vehicle_Light/>
+   <Armor_Masari_Vehicle_Heavy/>
+	<Armor_Masari_Vehicle_Elite/>
+	<Armor_Masari_Aircraft/>
+	<Armor_Masari_Structure_Turret/>
+	<Armor_Masari_Structure_Light/>
+	<Armor_Masari_Structure_Heavy/>
+	<Armor_Masari_Hero/>
+
+
+</EnumDefinition>

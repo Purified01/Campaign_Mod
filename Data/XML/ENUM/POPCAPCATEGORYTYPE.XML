@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<EnumDefinition>
+   
+   <!-- Maria 07.18.2007 -->
+   <!-- Certain types do not follow the regular pop cap rules (that is those set by the capacity of the player's containing fleet) so we need to 
+   impose other types of pop cap restrictions on those types. With this we can create a collection of 'pop cap buckets' that will determine the
+   pop cap rules to be followed by those types associated to each of those buckets.  
+   Since this is being added late in the project, right now it will only work for a very specific case (walkers).  However, we will try to
+   convert our pop cap tracking system so that this new approach is used for all types.
+   -->
+   <Walker> 0 </Walker> 
+</EnumDefinition>

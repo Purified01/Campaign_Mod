@@ -1,0 +1,3210 @@
+<?xml version="1.0"?>
+<Resource_Objects_XML>
+
+
+	<!-- ****************************************************************************************** -->
+	<!-- ****** These objects can be collected as resources for Novus and Hierarchy factions ****** -->
+	<!-- ****************************************************************************************** -->
+
+	<X15_Resource_Objects Name="Resource_Pile_Dummy_Object">
+
+		<!-- ART -->
+		<Land_Model_Name>WO_Resource.alo</Land_Model_Name>
+		<Scale_Factor>5.0</Scale_Factor>
+		<Loop_Idle_Anim_00> Yes </Loop_Idle_Anim_00>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_OBJECT_MILITARY_LARGE_PILE</Text_ID>
+		<GUI_Scene_Name />
+
+		<!-- ATTRIBUTES -->
+		<CategoryMask>Resource</CategoryMask>
+		<Movie_Object>false</Movie_Object>
+		<Affiliation>CIVILIAN</Affiliation>
+		<Is_Attackable>true</Is_Attackable>
+		<Victory_Relevant>no</Victory_Relevant>
+		<Weather_Category>Vehicle</Weather_Category>
+		<Create_Team>No</Create_Team>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> LandDynamic </Space_Layer>
+		<UnitCollisionClass> Medium Obstacle </UnitCollisionClass>
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+		<Tornado_Movement_Factor>0.00001</Tornado_Movement_Factor>
+
+		<!-- CONFLICT -->
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+		<Ranged_Target_Z_Adjust>2.0</Ranged_Target_Z_Adjust>
+		<Mouse_Collide_Override_Sphere_Radius>15</Mouse_Collide_Override_Sphere_Radius>
+
+		<!-- BEHAVIORS -->
+		<LandBehavior> RESOURCE, ATTRIBUTE_DIRECTORY, EFFECT_REGISTRY, RADAR_MAP_VISIBLE, AI_TARGET </LandBehavior>
+
+		<Last_State_Visible_Under_FOW> False </Last_State_Visible_Under_FOW>
+		<Initial_State_Visible_Under_FOW>True</Initial_State_Visible_Under_FOW>
+
+		<BehaviorType name="AIBehaviorType">
+			<AI_Target_Level>Individual</AI_Target_Level>
+		</BehaviorType>
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.04  0.04</Radar_Icon_Size>
+		</BehaviorType>
+
+		<BehaviorType Name="CrushBehaviorType">
+			<Crush_Defense> 99 </Crush_Defense>
+		</BehaviorType>
+
+		<BehaviorType Name="AlternateDamageStateBehaviorType">
+			<!--Oksana: this will update ALT state based on number of resource units -->
+			<Is_ALT_Damage_State_Resource_Based>Yes</Is_ALT_Damage_State_Resource_Based>
+
+			<Land_Damage_Thresholds>1.0, 0.80, 0.70, 0.60, 0.50, 0.40, 0.30, 0.20, 0.10, 0</Land_Damage_Thresholds>
+			<Land_Damage_Alternates>0, 1, 2, 3, 4, 5, 6, 7, 8, 9</Land_Damage_Alternates>
+			<Land_Damage_SFX>null, null, null, null, null, null, null, null, null, null</Land_Damage_SFX>
+		</BehaviorType>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 15000 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+		<BehaviorType Name="GameEventSourceBehaviorType">
+			<Game_Event_Source_Category> SignificantResource </Game_Event_Source_Category>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="Resource_Pile_Dummy_Object_Small">
+		<Variant_Of_Existing_Type>Resource_Pile_Dummy_Object</Variant_Of_Existing_Type>
+		<Scale_Factor>2.5</Scale_Factor>
+		<Text_ID>TEXT_OBJECT_MILITARY_SMALL_PILE</Text_ID>
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.03  0.03</Radar_Icon_Size>
+		</BehaviorType>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 5000 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="Resource_Pile_Plane_Crash_01">
+		<Variant_Of_Existing_Type>Resource_Pile_Dummy_Object</Variant_Of_Existing_Type>
+		<Land_Model_Name>WO_Resource_Planecrash_01.alo</Land_Model_Name>
+		<Text_ID>TEXT_OBJECT_WRECKAGE</Text_ID>
+		<Scale_Factor>2.5</Scale_Factor>
+
+		<Custom_Hard_XExtent> 9 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 15 </Custom_Hard_YExtent>
+		<Custom_Hard_XExtent_Offset> 0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_YExtent_Offset> 7 </Custom_Hard_YExtent_Offset>
+
+		<Ranged_Target_Z_Adjust>10.0</Ranged_Target_Z_Adjust>
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.04  0.04</Radar_Icon_Size>
+		</BehaviorType>
+
+		<BehaviorType Name="AlternateDamageStateBehaviorType">
+			<!--Oksana: this will update ALT state based on number of resource units -->
+			<Is_ALT_Damage_State_Resource_Based>Yes</Is_ALT_Damage_State_Resource_Based>
+
+			<Land_Damage_Thresholds>1.0, 0.90, 0.80, 0.60, 0.40, 0.20, 0</Land_Damage_Thresholds>
+			<Land_Damage_Alternates>0, 1, 2, 3, 4, 5, 6</Land_Damage_Alternates>
+			<Land_Damage_SFX>null, null, null, null, null, null, null</Land_Damage_SFX>
+		</BehaviorType>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 5000 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+		<BehaviorType Name="GameEventSourceBehaviorType">
+			<Game_Event_Source_Category> SignificantResource </Game_Event_Source_Category>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="Resource_Pile_Plane_Crash_02">
+		<Variant_Of_Existing_Type>Resource_Pile_Dummy_Object</Variant_Of_Existing_Type>
+		<Land_Model_Name>WO_Resource_Planecrash_02.alo</Land_Model_Name>
+		<Scale_Factor>2.5</Scale_Factor>
+		<Text_ID>TEXT_OBJECT_WRECKAGE</Text_ID>
+
+		<Custom_Hard_XExtent> 9 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 15 </Custom_Hard_YExtent>
+		<Custom_Hard_XExtent_Offset> 0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_YExtent_Offset> 7 </Custom_Hard_YExtent_Offset>
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.04  0.04</Radar_Icon_Size>
+		</BehaviorType>
+
+		<BehaviorType Name="AlternateDamageStateBehaviorType">
+			<!--Oksana: this will update ALT state based on number of resource units -->
+			<Is_ALT_Damage_State_Resource_Based>Yes</Is_ALT_Damage_State_Resource_Based>
+
+			<Land_Damage_Thresholds>1.0, 0.90, 0.80, 0.60, 0.40, 0.20, 0</Land_Damage_Thresholds>
+			<Land_Damage_Alternates>0, 1, 2, 3, 4, 5, 6</Land_Damage_Alternates>
+			<Land_Damage_SFX>null, null, null, null, null, null, null</Land_Damage_SFX>
+		</BehaviorType>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 5000 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+		<BehaviorType Name="GameEventSourceBehaviorType">
+			<Game_Event_Source_Category> SignificantResource </Game_Event_Source_Category>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="Resource_Pile_Plane_Crash_03">
+		<Variant_Of_Existing_Type>Resource_Pile_Dummy_Object</Variant_Of_Existing_Type>
+		<Land_Model_Name>WO_Resource_Planecrash_03.alo</Land_Model_Name>
+		<Scale_Factor>2.5</Scale_Factor>
+		<Text_ID>TEXT_OBJECT_WRECKAGE</Text_ID>
+
+		<Custom_Hard_XExtent> 9 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 15 </Custom_Hard_YExtent>
+		<Custom_Hard_XExtent_Offset> 0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_YExtent_Offset> 7 </Custom_Hard_YExtent_Offset>
+
+		<Ranged_Target_Z_Adjust>10.0</Ranged_Target_Z_Adjust>
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.04  0.04</Radar_Icon_Size>
+		</BehaviorType>
+
+		<BehaviorType Name="AlternateDamageStateBehaviorType">
+			<!--Oksana: this will update ALT state based on number of resource units -->
+			<Is_ALT_Damage_State_Resource_Based>Yes</Is_ALT_Damage_State_Resource_Based>
+
+			<Land_Damage_Thresholds>1.0, 0.80, 0.60, 0.40, 0.20, 0</Land_Damage_Thresholds>
+			<Land_Damage_Alternates>0, 1, 2, 3, 4, 5</Land_Damage_Alternates>
+			<Land_Damage_SFX>null, null, null, null, null, null </Land_Damage_SFX>
+		</BehaviorType>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 5000 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+		<BehaviorType Name="GameEventSourceBehaviorType">
+			<Game_Event_Source_Category> SignificantResource </Game_Event_Source_Category>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="Resource_Pile_Car_Pile_Small">
+		<Variant_Of_Existing_Type>Resource_Pile_Dummy_Object</Variant_Of_Existing_Type>
+		<Land_Model_Name>WO_Resource_Cars_Small.alo</Land_Model_Name>
+		<Scale_Factor>1.1</Scale_Factor>
+		<Text_ID>TEXT_OBJECT_SCRAP_MEDIUM_PILE</Text_ID>
+
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.03  0.03</Radar_Icon_Size>
+		</BehaviorType>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 3500 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+		<BehaviorType Name="AlternateDamageStateBehaviorType">
+			<!--Oksana: this will update ALT state based on number of resource units -->
+			<Is_ALT_Damage_State_Resource_Based>Yes</Is_ALT_Damage_State_Resource_Based>
+
+			<Land_Damage_Thresholds>1.0, 0.80, 0.70, 0.60, 0.50, 0.40, 0.30, .15, 0</Land_Damage_Thresholds>
+			<Land_Damage_Alternates>0, 1, 2, 3, 4, 5, 6, 7, 8 </Land_Damage_Alternates>
+			<Land_Damage_SFX>null, null, null, null, null, null, null, null, null </Land_Damage_SFX>
+		</BehaviorType>
+
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="Resource_Pile_Car_Pile_Medium">
+		<Variant_Of_Existing_Type>Resource_Pile_Dummy_Object</Variant_Of_Existing_Type>
+		<Land_Model_Name>WO_Resource_Cars_Medium.alo</Land_Model_Name>
+		<Scale_Factor>1.1</Scale_Factor>
+		<Custom_Hard_XExtent_Offset> 3.0 </Custom_Hard_XExtent_Offset>
+		<Text_ID>TEXT_OBJECT_SCRAP_MEDIUM_PILE</Text_ID>
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.03  0.03</Radar_Icon_Size>
+		</BehaviorType>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 7000 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+		<BehaviorType Name="AlternateDamageStateBehaviorType">
+			<!--Oksana: this will update ALT state based on number of resource units -->
+			<Is_ALT_Damage_State_Resource_Based>Yes</Is_ALT_Damage_State_Resource_Based>
+
+			<Land_Damage_Thresholds>1.0, 0.80, 0.70, 0.60, 0.50, 0.40, 0.30, 0</Land_Damage_Thresholds>
+			<Land_Damage_Alternates>0, 1, 2, 3, 4, 5, 6, 7 </Land_Damage_Alternates>
+			<Land_Damage_SFX>null, null, null, null, null, null, null, null </Land_Damage_SFX>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="Resource_Pile_Car_Pile_Large">
+		<Variant_Of_Existing_Type>Resource_Pile_Dummy_Object</Variant_Of_Existing_Type>
+		<Land_Model_Name>WO_Resource_Cars_Large.alo</Land_Model_Name>
+		<Scale_Factor>1.1</Scale_Factor>
+		<Custom_Hard_XExtent_Offset> 5.0 </Custom_Hard_XExtent_Offset>
+		<Text_ID>TEXT_OBJECT_SCRAP_MEDIUM_PILE</Text_ID>
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.04  0.04</Radar_Icon_Size>
+		</BehaviorType>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 12000 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+		<BehaviorType Name="GameEventSourceBehaviorType">
+			<Game_Event_Source_Category> SignificantResource </Game_Event_Source_Category>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="Resource_Pile_Train">
+		<Variant_Of_Existing_Type>Resource_Pile_Dummy_Object</Variant_Of_Existing_Type>
+		<Land_Model_Name>WO_Resource_Train.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Text_ID>TEXT_OBJECT_WRECKAGE</Text_ID>
+
+		<Custom_Hard_XExtent_Offset> 12 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_YExtent_Offset> 6 </Custom_Hard_YExtent_Offset>
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.04  0.07</Radar_Icon_Size>
+		</BehaviorType>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 12000 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+		<BehaviorType Name="GameEventSourceBehaviorType">
+			<Game_Event_Source_Category> SignificantResource </Game_Event_Source_Category>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="Resource_Pile_Crashed_Hierarchy_Ship">
+		<Variant_Of_Existing_Type>Resource_Pile_Dummy_Object</Variant_Of_Existing_Type>
+		<Land_Model_Name>WO_Resource_AlienCrash.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Text_ID>TEXT_OBJECT_WRECKAGE</Text_ID>
+
+		<Custom_Hard_XExtent_Offset> -4.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_YExtent_Offset> -11.0 </Custom_Hard_YExtent_Offset>
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.04  0.04</Radar_Icon_Size>
+		</BehaviorType>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 12000 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+		<BehaviorType Name="GameEventSourceBehaviorType">
+			<Game_Event_Source_Category> SignificantResource </Game_Event_Source_Category>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="Resource_Pile_Military_Wreckage">
+		<Variant_Of_Existing_Type>Resource_Pile_Dummy_Object</Variant_Of_Existing_Type>
+		<Land_Model_Name>WO_Resource_Human_02.alo</Land_Model_Name>
+		<Scale_Factor>1.1</Scale_Factor>
+		<Custom_Hard_XExtent_Offset> 3.0 </Custom_Hard_XExtent_Offset>
+		<Text_ID>TEXT_OBJECT_WRECKAGE</Text_ID>
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.04  0.04</Radar_Icon_Size>
+		</BehaviorType>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 5000 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+
+
+	<X15_Resource_Objects Name="Resource_Pile_Hierarchy_Wreckage_Large">
+		<Variant_Of_Existing_Type>Resource_Pile_Dummy_Object</Variant_Of_Existing_Type>
+		<Land_Model_Name>WO_Resource_Hierarchy_Large.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Custom_Hard_XExtent_Offset> 5.0 </Custom_Hard_XExtent_Offset>
+		<Text_ID>TEXT_OBJECT_WRECKAGE</Text_ID>
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.04  0.04</Radar_Icon_Size>
+		</BehaviorType>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 8000 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+		<BehaviorType Name="GameEventSourceBehaviorType">
+			<Game_Event_Source_Category> SignificantResource </Game_Event_Source_Category>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+
+	<X15_Resource_Objects Name="Resource_Pile_Hierarchy_Wreckage_Medium">
+		<Variant_Of_Existing_Type>Resource_Pile_Dummy_Object</Variant_Of_Existing_Type>
+		<Land_Model_Name>WO_Resource_Hierarchy_Medium.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Custom_Hard_XExtent_Offset> 5.0 </Custom_Hard_XExtent_Offset>
+		<Text_ID>TEXT_OBJECT_WRECKAGE</Text_ID>
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.04  0.04</Radar_Icon_Size>
+		</BehaviorType>
+
+		<BehaviorType Name="AlternateDamageStateBehaviorType">
+			<!--Oksana: this will update ALT state based on number of resource units -->
+			<Is_ALT_Damage_State_Resource_Based>Yes</Is_ALT_Damage_State_Resource_Based>
+
+			<Land_Damage_Thresholds>1.0, 0.86, 0.74, 0.62, 0.50, 0.38, 0</Land_Damage_Thresholds>
+			<Land_Damage_Alternates>0, 1, 2, 3, 4, 5, 6 </Land_Damage_Alternates>
+			<Land_Damage_SFX>null, null, null, null, null, null, null </Land_Damage_SFX>
+		</BehaviorType>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 5000 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+		<BehaviorType Name="GameEventSourceBehaviorType">
+			<Game_Event_Source_Category> SignificantResource </Game_Event_Source_Category>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+
+	<X15_Resource_Objects Name="Resource_Pile_Hierarchy_Wreckage_Small">
+		<Variant_Of_Existing_Type>Resource_Pile_Dummy_Object</Variant_Of_Existing_Type>
+		<Land_Model_Name>WO_Resource_Hierarchy_Small.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Custom_Hard_XExtent_Offset> 5.0 </Custom_Hard_XExtent_Offset>
+		<Text_ID>TEXT_OBJECT_WRECKAGE</Text_ID>
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.04  0.04</Radar_Icon_Size>
+		</BehaviorType>
+
+		<BehaviorType Name="AlternateDamageStateBehaviorType">
+			<!--Oksana: this will update ALT state based on number of resource units -->
+			<Is_ALT_Damage_State_Resource_Based>Yes</Is_ALT_Damage_State_Resource_Based>
+
+			<Land_Damage_Thresholds>1.0, 0.88, 0.76, 0.64, 0.52, 0.40, 0.28, 0.16, 0</Land_Damage_Thresholds>
+			<Land_Damage_Alternates>0, 1, 2, 3, 4, 5, 6, 7, 8</Land_Damage_Alternates>
+			<Land_Damage_SFX>null, null, null, null, null, null, null, null, null </Land_Damage_SFX>
+		</BehaviorType>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 3000 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+		<BehaviorType Name="GameEventSourceBehaviorType">
+			<Game_Event_Source_Category> SignificantResource </Game_Event_Source_Category>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+
+
+
+	<X15_Resource_Objects Name="Resource_Pile_Novus_Wreckage_Large">
+		<Variant_Of_Existing_Type>Resource_Pile_Dummy_Object</Variant_Of_Existing_Type>
+		<Land_Model_Name>WO_Resource_Novus_Large.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Custom_Hard_XExtent_Offset> 5.0 </Custom_Hard_XExtent_Offset>
+		<Text_ID>TEXT_OBJECT_WRECKAGE</Text_ID>
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.04  0.04</Radar_Icon_Size>
+		</BehaviorType>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 9500 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+		<BehaviorType Name="GameEventSourceBehaviorType">
+			<Game_Event_Source_Category> SignificantResource </Game_Event_Source_Category>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+
+	<X15_Resource_Objects Name="Resource_Pile_Novus_Wreckage_Medium">
+		<Variant_Of_Existing_Type>Resource_Pile_Dummy_Object</Variant_Of_Existing_Type>
+		<Land_Model_Name>WO_Resource_Novus_Medium.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Custom_Hard_XExtent_Offset> 5.0 </Custom_Hard_XExtent_Offset>
+		<Text_ID>TEXT_OBJECT_WRECKAGE</Text_ID>
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.04  0.04</Radar_Icon_Size>
+		</BehaviorType>
+
+		<BehaviorType Name="AlternateDamageStateBehaviorType">
+			<!--Oksana: this will update ALT state based on number of resource units -->
+			<Is_ALT_Damage_State_Resource_Based>Yes</Is_ALT_Damage_State_Resource_Based>
+
+			<Land_Damage_Thresholds>1.0, 0.86, 0.74, 0.62, 0.50, 0.38, 0</Land_Damage_Thresholds>
+			<Land_Damage_Alternates>0, 1, 2, 3, 4, 5, 6 </Land_Damage_Alternates>
+			<Land_Damage_SFX>null, null, null, null, null, null, null </Land_Damage_SFX>
+		</BehaviorType>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 5000 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+		<BehaviorType Name="GameEventSourceBehaviorType">
+			<Game_Event_Source_Category> SignificantResource </Game_Event_Source_Category>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+
+	<X15_Resource_Objects Name="Resource_Pile_Novus_Wreckage_Small">
+		<Variant_Of_Existing_Type>Resource_Pile_Dummy_Object</Variant_Of_Existing_Type>
+		<Land_Model_Name>WO_Resource_Novus_Small.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Custom_Hard_XExtent_Offset> 5.0 </Custom_Hard_XExtent_Offset>
+		<Text_ID>TEXT_OBJECT_WRECKAGE</Text_ID>
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.04  0.04</Radar_Icon_Size>
+		</BehaviorType>
+
+		<BehaviorType Name="AlternateDamageStateBehaviorType">
+			<!--Oksana: this will update ALT state based on number of resource units -->
+			<Is_ALT_Damage_State_Resource_Based>Yes</Is_ALT_Damage_State_Resource_Based>
+
+			<Land_Damage_Thresholds>1.0, 0.88, 0.76, 0.64, 0.52, 0.40, 0.28, 0.16, 0</Land_Damage_Thresholds>
+			<Land_Damage_Alternates>0, 1, 2, 3, 4, 5, 6, 7, 8</Land_Damage_Alternates>
+			<Land_Damage_SFX>null, null, null, null, null, null, null, null, null </Land_Damage_SFX>
+		</BehaviorType>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 3800 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+		<BehaviorType Name="GameEventSourceBehaviorType">
+			<Game_Event_Source_Category> SignificantResource </Game_Event_Source_Category>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+
+
+	<X15_Resource_Objects Name="Resource_Pile_Masari_Wreckage_Large">
+		<Variant_Of_Existing_Type>Resource_Pile_Dummy_Object</Variant_Of_Existing_Type>
+		<Land_Model_Name>WO_Resource_Masari_Large.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Custom_Hard_XExtent_Offset> 5.0 </Custom_Hard_XExtent_Offset>
+		<Text_ID>TEXT_OBJECT_WRECKAGE</Text_ID>
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.04  0.04</Radar_Icon_Size>
+		</BehaviorType>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 9500 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+		<BehaviorType Name="GameEventSourceBehaviorType">
+			<Game_Event_Source_Category> SignificantResource </Game_Event_Source_Category>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+
+	<X15_Resource_Objects Name="Resource_Pile_Masari_Wreckage_Medium">
+		<Variant_Of_Existing_Type>Resource_Pile_Dummy_Object</Variant_Of_Existing_Type>
+		<Land_Model_Name>WO_Resource_Masari_Medium.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Custom_Hard_XExtent_Offset> 5.0 </Custom_Hard_XExtent_Offset>
+		<Text_ID>TEXT_OBJECT_WRECKAGE</Text_ID>
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.04  0.04</Radar_Icon_Size>
+		</BehaviorType>
+
+		<BehaviorType Name="AlternateDamageStateBehaviorType">
+			<!--Oksana: this will update ALT state based on number of resource units -->
+			<Is_ALT_Damage_State_Resource_Based>Yes</Is_ALT_Damage_State_Resource_Based>
+
+			<Land_Damage_Thresholds>1.0, 0.86, 0.74, 0.62, 0.50, 0.38, 0</Land_Damage_Thresholds>
+			<Land_Damage_Alternates>0, 1, 2, 3, 4, 5, 6 </Land_Damage_Alternates>
+			<Land_Damage_SFX>null, null, null, null, null, null, null </Land_Damage_SFX>
+		</BehaviorType>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 5000 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+		<BehaviorType Name="GameEventSourceBehaviorType">
+			<Game_Event_Source_Category> SignificantResource </Game_Event_Source_Category>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+
+	<X15_Resource_Objects Name="Resource_Pile_Masari_Wreckage_Small">
+		<Variant_Of_Existing_Type>Resource_Pile_Dummy_Object</Variant_Of_Existing_Type>
+		<Land_Model_Name>WO_Resource_Masari_Small.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Custom_Hard_XExtent_Offset> 5.0 </Custom_Hard_XExtent_Offset>
+		<Text_ID>TEXT_OBJECT_WRECKAGE</Text_ID>
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.04  0.04</Radar_Icon_Size>
+		</BehaviorType>
+
+		<BehaviorType Name="AlternateDamageStateBehaviorType">
+			<!--Oksana: this will update ALT state based on number of resource units -->
+			<Is_ALT_Damage_State_Resource_Based>Yes</Is_ALT_Damage_State_Resource_Based>
+
+			<Land_Damage_Thresholds>1.0, 0.88, 0.76, 0.64, 0.52, 0.40, 0.28, 0.16, 0</Land_Damage_Thresholds>
+			<Land_Damage_Alternates>0, 1, 2, 3, 4, 5, 6, 7, 8</Land_Damage_Alternates>
+			<Land_Damage_SFX>null, null, null, null, null, null, null, null, null </Land_Damage_SFX>
+		</BehaviorType>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 3800 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+		<BehaviorType Name="GameEventSourceBehaviorType">
+			<Game_Event_Source_Category> SignificantResource </Game_Event_Source_Category>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+
+
+
+
+	<X15_Resource_Objects Name="Resource_Building_Rubble_Dummy_Object">
+
+		<!-- ART -->
+		<Land_Model_Name>WO_Rubble.alo</Land_Model_Name>
+		<Scale_Factor>0.4</Scale_Factor>
+		<Loop_Idle_Anim_00> Yes </Loop_Idle_Anim_00>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_OBJECT_RUBBLE_PILE</Text_ID>
+		<GUI_Scene_Name />
+
+		<!-- ATTRIBUTES -->
+		<CategoryMask>Resource</CategoryMask>
+		<Movie_Object>false</Movie_Object>
+		<Affiliation>CIVILIAN</Affiliation>
+		<Is_Attackable>true</Is_Attackable>
+		<Victory_Relevant>no</Victory_Relevant>
+		<Weather_Category>Vehicle</Weather_Category>
+		<Create_Team>No</Create_Team>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> LandDynamic </Space_Layer>
+		<UnitCollisionClass> Medium Obstacle </UnitCollisionClass>
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+		<Tornado_Movement_Factor>0.00001</Tornado_Movement_Factor>
+
+		<!-- CONFLICT -->
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+		<Ranged_Target_Z_Adjust>2.0</Ranged_Target_Z_Adjust>
+		<Mouse_Collide_Override_Sphere_Radius>15</Mouse_Collide_Override_Sphere_Radius>
+
+		<!-- BEHAVIORS -->
+		<!--JOEXMLCLEAN LandBehavior> IDLE, GUI, RESOURCE, ATTRIBUTE_DIRECTORY, EFFECT_REGISTRY, RADAR_MAP_VISIBLE, AI_TARGET </LandBehavior-->
+		<LandBehavior> IDLE, RESOURCE, ATTRIBUTE_DIRECTORY, EFFECT_REGISTRY, RADAR_MAP_VISIBLE, AI_TARGET </LandBehavior>
+
+		<Last_State_Visible_Under_FOW> False </Last_State_Visible_Under_FOW>
+		<Initial_State_Visible_Under_FOW>True</Initial_State_Visible_Under_FOW>
+
+		<BehaviorType name="AIBehaviorType">
+			<AI_Target_Level>Individual</AI_Target_Level>
+		</BehaviorType>
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.05  0.05</Radar_Icon_Size>
+		</BehaviorType>
+
+		<BehaviorType Name="CrushBehaviorType">
+			<Crush_Defense> 99 </Crush_Defense>
+		</BehaviorType>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 1200 </Resource_Units>
+			<Resource_For_Faction> Military, Novus, Alien, Masari, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="Resource_Rubble_Pile_Large">
+		<Variant_Of_Existing_Type>Resource_Building_Rubble_Dummy_Object</Variant_Of_Existing_Type>
+
+		<!-- ART -->
+		<Land_Model_Name>WO_Rubble.alo</Land_Model_Name>
+		<Scale_Factor>0.8</Scale_Factor>
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.03  0.03</Radar_Icon_Size>
+		</BehaviorType>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 3500 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+
+	<X15_Resource_Objects Name="Skyscraper_01_Resource">
+
+		<!-- ART -->
+		<Land_Model_Name>WB_NA_SkyScraper_C.alo</Land_Model_Name>
+		<Scale_Factor>1.3</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+
+		<!-- INTERFACE -->
+		<Is_Placed_By_Editor>true</Is_Placed_By_Editor>
+
+		<!-- ATTRIBUTES -->
+		<Affiliation>Civilian</Affiliation>
+		<CategoryMask> Huge, Stationary, Insignificant, Resource </CategoryMask>
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+
+		<!-- MOVEMENT -->
+		<UnitCollisionClass> High Obstacle </UnitCollisionClass>
+		<Space_Layer> LandGiant | LandStatic | Air </Space_Layer>
+		<Custom_Hard_XExtent> 32.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 32.0 </Custom_Hard_YExtent>
+		<Custom_Hard_XExtent_Offset> 0.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_YExtent_Offset> 0.0 </Custom_Hard_YExtent_Offset>
+
+		<!-- CONFLICT -->
+		<Is_Attackable> true </Is_Attackable>
+		<Collidable_By_Projectile_Living> Yes </Collidable_By_Projectile_Living>
+		<Ranged_Target_Z_Adjust> 80.0 </Ranged_Target_Z_Adjust>
+		<Tactical_Health> 1000 </Tactical_Health>
+		<Dense_FOW_Reveal_Range_Multiplier> 0.0 </Dense_FOW_Reveal_Range_Multiplier>
+
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>SFX_Generic_Detonation_1,SFX_Generic_Detonation_1,SFX_Generic_Detonation_1,SFX_Generic_Detonation_1</Land_Damage_SFX>
+
+		<!-- BEHAVIORS -->
+
+		<LandBehavior>
+			RESOURCE,
+			ATTRIBUTE_DIRECTORY,
+			EFFECT_REGISTRY,
+			AI_TARGET,
+			CIVILIAN_SPAWNER
+		</LandBehavior>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Armor_Type> Armor_Civilian_Structure_Heavy </Armor_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="CrushBehaviorType">
+			<Crush_Defense>90</Crush_Defense>
+		</BehaviorType>
+
+		<BehaviorType Name="RevealBehaviorType">
+			<Land_FOW_Reveal_Range> 30.0 </Land_FOW_Reveal_Range>
+		</BehaviorType>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Death_Clone> Damage_Default, _Skyscraper_01_Death_Clone </Death_Clone>
+			<Damage_Terrain_On_Death> true </Damage_Terrain_On_Death>
+			<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+		</BehaviorType>
+
+		<BehaviorType Name="AlternateDamageStateBehaviorType">
+			<!--Oksana: this will update ALT state based on number of resource units -->
+			<Is_ALT_Damage_State_Resource_Based>Yes</Is_ALT_Damage_State_Resource_Based>
+
+			<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+			<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+			<Land_Damage_SFX>SFX_Generic_Detonation_1,SFX_Generic_Detonation_1,SFX_Generic_Detonation_1,SFX_Generic_Detonation_1</Land_Damage_SFX>
+		</BehaviorType>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 16000 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+		<BehaviorType Name="GameEventSourceBehaviorType">
+			<Game_Event_Source_Category> SignificantResource </Game_Event_Source_Category>
+		</BehaviorType>
+
+		<BehaviorType Name="CivilianSpawnerBehaviorType">
+			<Is_Civilian_Spawner> True </Is_Civilian_Spawner>
+			<Is_Civilian_Despawner> False </Is_Civilian_Despawner>
+
+			<Civilian_Spawn_Types>
+				American_Civilian_Urban_11_Wartime_Spawned,
+				American_Civilian_Urban_01_Wartime_Spawned,
+				American_Civilian_Urban_02_Wartime_Spawned,
+				American_Civilian_Urban_03_Wartime_Spawned,
+				American_Civilian_Urban_04_Wartime_Spawned,
+				American_Civilian_Urban_05_Wartime_Spawned,
+				American_Civilian_Urban_06_Wartime_Spawned,
+				American_Civilian_Urban_07_Wartime_Spawned,
+				American_Civilian_Urban_08_Wartime_Spawned,
+				American_Civilian_Urban_09_Wartime_Spawned,
+				American_Civilian_Urban_10_Wartime_Spawned
+			</Civilian_Spawn_Types>
+
+			<Civilian_Spawn_On_Death_Min_Count> 8 </Civilian_Spawn_On_Death_Min_Count>
+			<Civilian_Spawn_On_Death_Max_Count> 12 </Civilian_Spawn_On_Death_Max_Count>
+			<Civilian_Spawn_On_Resource_Tiers> 5 </Civilian_Spawn_On_Resource_Tiers>
+			<Civilian_Spawn_On_Resource_First_Tier_Min_Count> 3 </Civilian_Spawn_On_Resource_First_Tier_Min_Count>
+			<Civilian_Spawn_On_Resource_First_Tier_Max_Count> 5 </Civilian_Spawn_On_Resource_First_Tier_Max_Count>
+			<Civilian_Spawn_On_Resource_Last_Tier_Min_Count> 3 </Civilian_Spawn_On_Resource_Last_Tier_Min_Count>
+			<Civilian_Spawn_On_Resource_Last_Tier_Max_Count> 5 </Civilian_Spawn_On_Resource_Last_Tier_Max_Count>
+			<Civilian_Maximum_Loiter> 3 </Civilian_Maximum_Loiter>
+			<Civilian_Create_Loiter_Seconds> 5 </Civilian_Create_Loiter_Seconds>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+
+
+
+	<X15_Resource_Objects Name="Skyscraper_02_Resource">
+
+		<!-- ART -->
+		<Land_Model_Name>WB_NA_Skyscraper_D.alo</Land_Model_Name>
+		<Scale_Factor>1.5</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+
+		<Target_Bones> Target_00 </Target_Bones>
+
+		<!-- INTERFACE -->
+		<Is_Placed_By_Editor>true</Is_Placed_By_Editor>
+
+		<!-- ATTRIBUTES -->
+		<Affiliation>Civilian</Affiliation>
+		<CategoryMask> Huge, Stationary, Insignificant, Resource </CategoryMask>
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+
+		<!-- CONFLICT -->
+		<Is_Attackable> true </Is_Attackable>
+		<Collidable_By_Projectile_Living> Yes </Collidable_By_Projectile_Living>
+		<Ranged_Target_Z_Adjust> 80.0 </Ranged_Target_Z_Adjust>
+		<Tactical_Health> 1000 </Tactical_Health>
+		<Dense_FOW_Reveal_Range_Multiplier> 0.0 </Dense_FOW_Reveal_Range_Multiplier>
+
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>SFX_Generic_Detonation_1,SFX_Generic_Detonation_1,SFX_Generic_Detonation_1,SFX_Generic_Detonation_1</Land_Damage_SFX>
+
+		<!-- BEHAVIORS -->
+
+		<LandBehavior>
+			ATTRIBUTE_DIRECTORY,
+			EFFECT_REGISTRY,
+			AI_TARGET,
+			CIVILIAN_SPAWNER,
+			CREATE_CHILDREN,
+			RESOURCE
+		</LandBehavior>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Armor_Type> Armor_Civilian_Structure_Heavy </Armor_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="CrushBehaviorType">
+			<Crush_Defense>90</Crush_Defense>
+		</BehaviorType>
+
+		<BehaviorType Name="RevealBehaviorType">
+			<Land_FOW_Reveal_Range> 30.0 </Land_FOW_Reveal_Range>
+		</BehaviorType>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Death_Clone> Damage_Default, _Skyscraper_02_Death_Clone </Death_Clone>
+			<Damage_Terrain_On_Death> true </Damage_Terrain_On_Death>
+		</BehaviorType>
+
+		<BehaviorType Name="AlternateDamageStateBehaviorType">
+			<Is_ALT_Damage_State_Resource_Based>Yes</Is_ALT_Damage_State_Resource_Based>
+
+			<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+			<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+			<Land_Damage_SFX>SFX_Generic_Detonation_1,SFX_Generic_Detonation_1,SFX_Generic_Detonation_1,SFX_Generic_Detonation_1</Land_Damage_SFX>
+		</BehaviorType>
+
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 16000 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+		<BehaviorType Name="CivilianSpawnerBehaviorType">
+			<Is_Civilian_Spawner> True </Is_Civilian_Spawner>
+			<Is_Civilian_Despawner> False </Is_Civilian_Despawner>
+
+			<Civilian_Spawn_Types>
+				American_Civilian_Urban_11_Wartime_Spawned,
+				American_Civilian_Urban_01_Wartime_Spawned,
+				American_Civilian_Urban_02_Wartime_Spawned,
+				American_Civilian_Urban_03_Wartime_Spawned,
+				American_Civilian_Urban_04_Wartime_Spawned,
+				American_Civilian_Urban_05_Wartime_Spawned,
+				American_Civilian_Urban_06_Wartime_Spawned,
+				American_Civilian_Urban_07_Wartime_Spawned,
+				American_Civilian_Urban_08_Wartime_Spawned,
+				American_Civilian_Urban_09_Wartime_Spawned,
+				American_Civilian_Urban_10_Wartime_Spawned
+			</Civilian_Spawn_Types>
+
+			<Civilian_Spawn_On_Death_Min_Count> 8 </Civilian_Spawn_On_Death_Min_Count>
+			<Civilian_Spawn_On_Death_Max_Count> 12 </Civilian_Spawn_On_Death_Max_Count>
+			<Civilian_Spawn_On_Resource_Tiers> 5 </Civilian_Spawn_On_Resource_Tiers>
+			<Civilian_Spawn_On_Resource_First_Tier_Min_Count> 3 </Civilian_Spawn_On_Resource_First_Tier_Min_Count>
+			<Civilian_Spawn_On_Resource_First_Tier_Max_Count> 5 </Civilian_Spawn_On_Resource_First_Tier_Max_Count>
+			<Civilian_Spawn_On_Resource_Last_Tier_Min_Count> 3 </Civilian_Spawn_On_Resource_Last_Tier_Min_Count>
+			<Civilian_Spawn_On_Resource_Last_Tier_Max_Count> 5 </Civilian_Spawn_On_Resource_Last_Tier_Max_Count>
+			<Civilian_Maximum_Loiter> 3 </Civilian_Maximum_Loiter>
+			<Civilian_Create_Loiter_Seconds> 5 </Civilian_Create_Loiter_Seconds>
+		</BehaviorType>
+
+		<Create_Children_Data SubObjectList="Yes">
+
+			<Create_Child_Data>
+				<Type> Skyscraper_02_Proxy1 </Type>
+				<Creation_Trigger> OnParentBehaviorFirstService </Creation_Trigger>
+				<Destruction_Trigger> OnParentBehaviorRemove </Destruction_Trigger>
+			</Create_Child_Data>
+
+			<Create_Child_Data>
+				<Type> Skyscraper_02_Proxy2 </Type>
+				<Creation_Trigger> OnParentBehaviorFirstService </Creation_Trigger>
+				<Destruction_Trigger> OnParentBehaviorRemove </Destruction_Trigger>
+			</Create_Child_Data>
+
+		</Create_Children_Data>
+
+	</X15_Resource_Objects>
+
+
+
+
+
+
+	<X15_Resource_Objects Name="Trough_01_Resource">
+		<!-- ART -->
+		<Land_Model_Name>WO_NA_trough.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+
+		<!-- ATTRIBUTES -->
+		<CategoryMask> Medium, Insignificant, Resource </CategoryMask>
+		<Affiliation>CIVILIAN</Affiliation>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> LandStatic </Space_Layer>
+		<UnitCollisionClass> Medium Obstacle </UnitCollisionClass>
+		<Custom_Hard_XExtent> 3 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 11 </Custom_Hard_YExtent>
+
+		<!-- CONFLICT -->
+		<Ranged_Target_Z_Adjust>2.0</Ranged_Target_Z_Adjust>
+		<Is_Valid_Target>True</Is_Valid_Target>
+		<Is_Attackable>true</Is_Attackable>
+
+		<!-- BEHAVIORS -->
+
+		<LandBehavior> RESOURCE, EFFECT_REGISTRY, ATTRIBUTE_DIRECTORY </LandBehavior>
+
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 100 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+
+
+	<X15_Resource_Objects Name="Sacks_01_Resource">
+		<!-- ART -->
+		<Land_Model_Name>WO_PR_Deco03.alo</Land_Model_Name>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+
+		<!-- ATTRIBUTES -->
+		<CategoryMask> Medium, Insignificant, Resource </CategoryMask>
+		<Affiliation>CIVILIAN</Affiliation>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> LandStatic </Space_Layer>
+		<UnitCollisionClass> Medium Obstacle </UnitCollisionClass>
+
+		<!-- CONFLICT -->
+		<Ranged_Target_Z_Adjust>2.0</Ranged_Target_Z_Adjust>
+		<Is_Valid_Target>True</Is_Valid_Target>
+		<Is_Attackable>true</Is_Attackable>
+
+		<!-- BEHAVIORS -->
+
+		<LandBehavior> RESOURCE, EFFECT_REGISTRY, ATTRIBUTE_DIRECTORY </LandBehavior>
+
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 75 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="Sacks_02_Resource">
+		<Variant_Of_Existing_Type> Sacks_01_Resource </Variant_Of_Existing_Type>
+		<Land_Model_Name>WO_PR_Deco04.alo</Land_Model_Name>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Custom_Hard_XExtent_Offset> 5 </Custom_Hard_XExtent_Offset>
+	</X15_Resource_Objects>
+
+
+	<X15_Resource_Objects Name="Windmill_01_Resource">
+		<!-- ART -->
+		<Land_Model_Name>WO_NA_Windmill.alo</Land_Model_Name>
+		<Scale_Factor>1.3</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+
+		<!-- ATTRIBUTES -->
+		<CategoryMask> Medium, Insignificant, Resource </CategoryMask>
+		<Affiliation>CIVILIAN</Affiliation>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> LandStatic | Air </Space_Layer>
+		<UnitCollisionClass> Medium Obstacle </UnitCollisionClass>
+
+		<!-- CONFLICT -->
+		<Ranged_Target_Z_Adjust>30.0</Ranged_Target_Z_Adjust>
+		<Collidable_By_Projectile_Living> Yes </Collidable_By_Projectile_Living>
+		<Is_Valid_Target>True</Is_Valid_Target>
+		<Is_Attackable>true</Is_Attackable>
+		<Tactical_Health> 50 </Tactical_Health>
+
+		<!-- BEHAVIORS -->
+
+		<LandBehavior> RESOURCE, EFFECT_REGISTRY, ATTRIBUTE_DIRECTORY </LandBehavior>
+
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 1000 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Death_Clone> Damage_Default, Windmill_01_Resource_Death_Clone </Death_Clone>
+			<Specific_Death_Anim_Type> DIE </Specific_Death_Anim_Type>
+			<Damage_Terrain_On_Death> true </Damage_Terrain_On_Death>
+		</BehaviorType>
+
+		<BehaviorType Name="CrushBehaviorType">
+			<Crush_Defense>40</Crush_Defense>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="Windmill_01_Resource_Death_Clone">
+
+		<!-- ART -->
+		<Land_Model_Name>WO_NA_Windmill00_DC.alo</Land_Model_Name>
+		<Scale_Factor>0.1</Scale_Factor>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+		<!-- ATTRIBUTES -->
+		<CategoryMask> Medium </CategoryMask>
+
+	</X15_Resource_Objects>
+
+
+
+	<X15_Resource_Objects Name="Pole_Streetlight_01_Resource">
+		<Variant_Of_Existing_Type> _Pole_Electric_Light_01 </Variant_Of_Existing_Type>
+		<Land_Model_Name>WO_Streetlight.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 100 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> True </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="Pole_TrafficLight_01_Resource">
+		<Variant_Of_Existing_Type> _Pole_Electric_Light_01 </Variant_Of_Existing_Type>
+		<Land_Model_Name>WO_Traffic_light.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Ranged_Target_Z_Adjust>10.0</Ranged_Target_Z_Adjust>
+
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 130 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> True </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+
+	<X15_Resource_Objects Name="Parking_Light_01_Resource">
+		<Variant_Of_Existing_Type> Pole_Streetlight_01_Resource </Variant_Of_Existing_Type>
+		<Land_Model_Name>WO_ParkingLights2.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Ranged_Target_Z_Adjust>10.0</Ranged_Target_Z_Adjust>
+
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 100 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> True </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="Lamp_Post_01_Resource">
+		<Variant_Of_Existing_Type> _Pole_Electric_Light_01 </Variant_Of_Existing_Type>
+		<Land_Model_Name>WO_LampPost.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Ranged_Target_Z_Adjust>10.0</Ranged_Target_Z_Adjust>
+
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 70 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> True </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+
+	<X15_Resource_Objects Name="Sign_Gas_Station_Prices_Resource">
+		<Variant_Of_Existing_Type> Pole_Streetlight_01_Resource </Variant_Of_Existing_Type>
+		<Land_Model_Name>WB_NA_GasStation_Sign.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Ranged_Target_Z_Adjust>25.0</Ranged_Target_Z_Adjust>
+		<Custom_Hard_XExtent> 3.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Damage_Terrain_On_Death> true </Damage_Terrain_On_Death>
+		</BehaviorType>
+
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 350 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> True </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+
+	<X15_Resource_Objects Name="American_Sign_Stop_Sign_Resource">
+		<Variant_Of_Existing_Type> Pole_Streetlight_01_Resource </Variant_Of_Existing_Type>
+		<Land_Model_Name>WO_SignStop.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 60 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+
+	<X15_Resource_Objects Name="Phone_Booth_Resource">
+		<!-- ART -->
+		<Land_Model_Name>WO_PhoneBooth.alo</Land_Model_Name>
+		<Scale_Factor>1.5</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+
+		<!-- ATTRIBUTES -->
+		<CategoryMask> Medium, Insignificant, Resource_INST </CategoryMask>
+		<Affiliation>CIVILIAN</Affiliation>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> LandStatic </Space_Layer>
+		<UnitCollisionClass> Medium Obstacle </UnitCollisionClass>
+
+		<!-- CONFLICT -->
+		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
+		<Is_Valid_Target>True</Is_Valid_Target>
+		<Is_Attackable>true</Is_Attackable>
+
+		<!-- BEHAVIORS -->
+
+		<LandBehavior> RESOURCE, EFFECT_REGISTRY, ATTRIBUTE_DIRECTORY </LandBehavior>
+
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 80 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> True </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+
+	<X15_Resource_Objects Name="bus_Stop_Resource">
+		<Variant_Of_Existing_Type> Phone_Booth_Resource </Variant_Of_Existing_Type>
+		<Land_Model_Name>WO_BusStop.alo</Land_Model_Name>
+		<Scale_Factor>0.7</Scale_Factor>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 150 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> True </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+
+
+	<X15_Resource_Objects Name="Dumpster_01_Resource">
+		<!-- ART -->
+		<Land_Model_Name>WO_Dumpster.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+
+		<!-- ATTRIBUTES -->
+		<CategoryMask> Resource_INST </CategoryMask>
+		<Affiliation>CIVILIAN</Affiliation>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> LandDynamic </Space_Layer>
+		<UnitCollisionClass> Medium Obstacle </UnitCollisionClass>
+		<Allow_Non_Locomotor_Verlet_Push> true </Allow_Non_Locomotor_Verlet_Push>
+
+		<!-- CONFLICT -->
+		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
+		<Is_Valid_Target>True</Is_Valid_Target>
+		<Is_Attackable>true</Is_Attackable>
+
+		<!-- BEHAVIORS -->
+
+		<LandBehavior> RESOURCE, EFFECT_REGISTRY, ATTRIBUTE_DIRECTORY, BALLISTIC </LandBehavior>
+
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 75 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> True </Is_Single_Resource>
+		</BehaviorType>
+
+		<BehaviorType Name="BallisticBehaviorType">
+			<Ballistic_Weight>6.0</Ballistic_Weight>
+			<Ballistic_Bounce>0.3</Ballistic_Bounce>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+
+
+	<X15_Resource_Objects Name="Fire_Hydrant_Yellow_Resource">
+		<!-- ART -->
+		<Land_Model_Name>WO_firehydrant.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+
+		<!-- ATTRIBUTES -->
+		<CategoryMask> Medium, Insignificant, Resource_INST </CategoryMask>
+		<Affiliation>CIVILIAN</Affiliation>
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> LandStatic </Space_Layer>
+		<UnitCollisionClass> Vehicle </UnitCollisionClass>
+
+		<!-- CONFLICT -->
+		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
+		<Is_Valid_Target>True</Is_Valid_Target>
+		<Is_Attackable>true</Is_Attackable>
+
+		<!-- BEHAVIORS -->
+
+		<LandBehavior> RESOURCE, EFFECT_REGISTRY, ATTRIBUTE_DIRECTORY </LandBehavior>
+
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 25 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> True </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+
+
+	<X15_Resource_Objects Name="Wind_Turbine_01_Resource">
+		<!-- ART -->
+		<Land_Model_Name> WO_Wind_Turbine.alo </Land_Model_Name>
+		<Scale_Factor> 1.0 </Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<Loop_Idle_Anim_00>Yes</Loop_Idle_Anim_00>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+
+		<!-- ATTRIBUTES -->
+		<CategoryMask> Medium, Insignificant, Resource </CategoryMask>
+		<Affiliation>CIVILIAN</Affiliation>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> LandStatic | Air </Space_Layer>
+		<UnitCollisionClass> Medium Obstacle </UnitCollisionClass>
+
+		<!-- CONFLICT -->
+		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
+		<Is_Valid_Target>True</Is_Valid_Target>
+		<Is_Attackable>true</Is_Attackable>
+
+		<!-- BEHAVIORS -->
+
+		<LandBehavior> RESOURCE, EFFECT_REGISTRY, ATTRIBUTE_DIRECTORY, IDLE </LandBehavior>
+
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Death_Clone>Damage_Default, Wind_Turbine_01_Resource_Death_Clone</Death_Clone>
+			<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+
+		</BehaviorType>
+
+		<BehaviorType Name="AlternateDamageStateBehaviorType">
+			<!--Oksana: this will update ALT state based on number of resource units -->
+			<Is_ALT_Damage_State_Resource_Based>Yes</Is_ALT_Damage_State_Resource_Based>
+
+			<Land_Damage_Thresholds>1.0, 0.50, 0</Land_Damage_Thresholds>
+			<Land_Damage_Alternates>0, 1, 2 </Land_Damage_Alternates>
+			<Land_Damage_SFX>null, null, null</Land_Damage_SFX>
+		</BehaviorType>
+
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 2800 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="Wind_Turbine_01_Resource_Death_Clone">
+
+		<!-- ART -->
+		<Land_Model_Name>WO_Wind_Turbine_DC.ALO</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Is_Placed_By_Editor>false</Is_Placed_By_Editor>
+
+		<!-- ATTRIBUTES -->
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+
+		<!-- CONFLICT -->
+		<Ranged_Target_Z_Adjust>0.1</Ranged_Target_Z_Adjust>
+
+		<LandBehavior>
+			EFFECT_REGISTRY,
+			EFFECT_GENERATOR,
+			ATTRIBUTE_DIRECTORY,
+			PARTICLE
+		</LandBehavior>
+
+		<BehaviorType Name="SFXBehaviorType">
+			<Death_SFXEvent_End_Die />
+			<Death_SFXEvent_Start_Die> SFX_Novus_Large_Structure_Death </Death_SFXEvent_Start_Die>
+		</BehaviorType>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Specific_Death_Anim_Type> DIE </Specific_Death_Anim_Type>
+			<Death_Fade_Time> 0.25 </Death_Fade_Time>
+			<Death_Persistence_Duration> 0.0 </Death_Persistence_Duration>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+
+
+
+	<X15_Resource_Objects Name="Jungle_Gym_Resource">
+		<!-- ART -->
+		<Land_Model_Name>WO_JungleGym.alo</Land_Model_Name>
+		<Scale_Factor> 0.5 </Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<Loop_Idle_Anim_00>Yes</Loop_Idle_Anim_00>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+
+		<!-- ATTRIBUTES -->
+		<CategoryMask> Medium, Insignificant, Resource_INST </CategoryMask>
+		<Affiliation>CIVILIAN</Affiliation>
+		<Prevents_Structure_Placement> No </Prevents_Structure_Placement>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> LandStatic </Space_Layer>
+		<UnitCollisionClass> Medium Obstacle </UnitCollisionClass>
+
+		<!-- CONFLICT -->
+		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
+		<Is_Valid_Target>True</Is_Valid_Target>
+		<Is_Attackable>true</Is_Attackable>
+
+		<!-- BEHAVIORS -->
+
+		<LandBehavior> RESOURCE, EFFECT_REGISTRY, ATTRIBUTE_DIRECTORY, IDLE </LandBehavior>
+
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 350 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+		<BehaviorType Name="AlternateDamageStateBehaviorType">
+			<!--Oksana: this will update ALT state based on number of resource units -->
+			<Is_ALT_Damage_State_Resource_Based>Yes</Is_ALT_Damage_State_Resource_Based>
+
+			<Land_Damage_Thresholds>1.0, 0.60, 0.30,  0</Land_Damage_Thresholds>
+			<Land_Damage_Alternates>0, 1, 2, 3 </Land_Damage_Alternates>
+			<Land_Damage_SFX>null, null, null, null</Land_Damage_SFX>
+		</BehaviorType>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 500 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+
+	</X15_Resource_Objects>
+
+
+
+	<X15_Resource_Objects Name="_Train_Box_Car_01">
+		<!-- ART -->
+		<Land_Model_Name>WO_Train_BoxCar.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+
+		<!-- ATTRIBUTES -->
+		<CategoryMask> Medium, Insignificant, Resource </CategoryMask>
+		<Affiliation>CIVILIAN</Affiliation>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> LandDynamic </Space_Layer>
+		<UnitCollisionClass> Medium Obstacle </UnitCollisionClass>
+		<Allow_Non_Locomotor_Verlet_Push> true </Allow_Non_Locomotor_Verlet_Push>
+
+		<!-- CONFLICT -->
+		<Ranged_Target_Z_Adjust>10.0</Ranged_Target_Z_Adjust>
+		<Is_Valid_Target>True</Is_Valid_Target>
+		<Is_Attackable>true</Is_Attackable>
+
+		<!-- BEHAVIORS -->
+
+		<LandBehavior> RESOURCE, EFFECT_REGISTRY, ATTRIBUTE_DIRECTORY </LandBehavior>
+
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 1400 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="_Train_Flat_Car_01">
+		<Variant_Of_Existing_Type> _Train_Box_Car_01 </Variant_Of_Existing_Type>
+		<Land_Model_Name>WO_Train_FlatCar.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 1200 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="_Train_Flat_Car_Tarp_01">
+		<Variant_Of_Existing_Type> _Train_Box_Car_01 </Variant_Of_Existing_Type>
+		<Land_Model_Name>WO_Train_FlatCar_Tarp.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 1200 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="_Train_Flat_Car_Lumber_01">
+		<Variant_Of_Existing_Type> _Train_Box_Car_01 </Variant_Of_Existing_Type>
+		<Land_Model_Name>WO_Train_FlatCar_Lumber.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 1200 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="_Train_Tank_Car_01">
+		<Variant_Of_Existing_Type> _Train_Box_Car_01 </Variant_Of_Existing_Type>
+		<Land_Model_Name>WO_Train_TankCar.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 1400 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="_Train_Passenger_Car_01">
+		<Variant_Of_Existing_Type> _Train_Box_Car_01 </Variant_Of_Existing_Type>
+		<Land_Model_Name>WO_Train_PassengerCar.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 1400 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="_Train_Engine_01">
+		<Variant_Of_Existing_Type> _Train_Box_Car_01 </Variant_Of_Existing_Type>
+		<Land_Model_Name>WO_Train_Engine.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 1600 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="_Train_Stop_01">
+		<!-- ART -->
+		<Land_Model_Name>WO_Train_Stop01.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+
+		<!-- ATTRIBUTES -->
+		<CategoryMask> Medium, Insignificant, Resource_INST </CategoryMask>
+		<Affiliation>CIVILIAN</Affiliation>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> LandStatic </Space_Layer>
+		<UnitCollisionClass> Medium Obstacle </UnitCollisionClass>
+
+		<!-- CONFLICT -->
+		<Ranged_Target_Z_Adjust>5.0</Ranged_Target_Z_Adjust>
+		<Is_Valid_Target>True</Is_Valid_Target>
+		<Is_Attackable>true</Is_Attackable>
+
+		<!-- BEHAVIORS -->
+
+		<LandBehavior> RESOURCE, EFFECT_REGISTRY, ATTRIBUTE_DIRECTORY </LandBehavior>
+
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 1000 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="_Train_Stop_02">
+		<Variant_Of_Existing_Type> _Train_Stop_01 </Variant_Of_Existing_Type>
+		<Land_Model_Name>WO_Train_Stop02.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 1000 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="_Train_Emergency_Barrier">
+		<!-- ART -->
+		<Land_Model_Name>WO_Train_EmergencyStop.alo</Land_Model_Name>
+		<Scale_Factor>3.0</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<Ranged_Target_Z_Adjust>20.0</Ranged_Target_Z_Adjust>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+
+		<!-- ATTRIBUTES -->
+		<CategoryMask> Medium, Insignificant, Resource_INST </CategoryMask>
+		<Affiliation>CIVILIAN</Affiliation>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> LandStatic </Space_Layer>
+		<UnitCollisionClass> Medium Obstacle </UnitCollisionClass>
+
+		<!-- CONFLICT -->
+		<Ranged_Target_Z_Adjust>2.0</Ranged_Target_Z_Adjust>
+		<Is_Valid_Target>True</Is_Valid_Target>
+		<Is_Attackable>true</Is_Attackable>
+
+		<!-- BEHAVIORS -->
+
+		<LandBehavior> RESOURCE, EFFECT_REGISTRY, ATTRIBUTE_DIRECTORY </LandBehavior>
+
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 150 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="American_Train_Crossing_Guard">
+		<Variant_Of_Existing_Type> _Train_Emergency_Barrier </Variant_Of_Existing_Type>
+		<Land_Model_Name>WO_Train_CrossingGuard.alo</Land_Model_Name>
+		<Scale_Factor>2.5</Scale_Factor>
+		<Custom_Hard_YExtent_Offset> -15.0 </Custom_Hard_YExtent_Offset>
+		<Ranged_Target_Z_Adjust>15.0</Ranged_Target_Z_Adjust>
+
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 200 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+
+
+	<X15_Resource_Objects Name="_Pole_Electric_Light_01">
+		<!-- ART -->
+		<Land_Model_Name>WO_Electricpolelight.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+
+		<!-- ATTRIBUTES -->
+		<CategoryMask> Medium, Insignificant, Resource_INST </CategoryMask>
+		<Affiliation>CIVILIAN</Affiliation>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> LandStatic </Space_Layer>
+		<UnitCollisionClass> Medium Obstacle </UnitCollisionClass>
+
+		<!-- CONFLICT -->
+		<Ranged_Target_Z_Adjust>30.0</Ranged_Target_Z_Adjust>
+		<Is_Valid_Target>True</Is_Valid_Target>
+		<Is_Attackable>true</Is_Attackable>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+		<Prevents_Structure_Placement> No </Prevents_Structure_Placement>
+
+		<!-- BEHAVIORS -->
+		<LandBehavior> RESOURCE, EFFECT_REGISTRY, ATTRIBUTE_DIRECTORY, TOPPLE </LandBehavior>
+
+		<BehaviorType Name="ToppleBehaviorType">
+			<Switch_To_Alt>1 </Switch_To_Alt>
+		</BehaviorType>
+
+		<BehaviorType Name="CrushBehaviorType">
+			<Crush_Defense>5</Crush_Defense>
+			<Should_Check_Faction_On_Crush> false </Should_Check_Faction_On_Crush>
+		</BehaviorType>
+
+		<BehaviorType Name="SFXBehaviorType">
+			<SFXEvent_Topple_Start>SFX_Pole_Topple_Start_1</SFXEvent_Topple_Start>
+			<SFXEvent_Topple_Hit>SFX_Pole_Topple_Hit_1</SFXEvent_Topple_Hit>
+		</BehaviorType>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 175 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> True </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+
+
+	<X15_Resource_Objects Name="_Tower_Electrical_High_Tension_01">
+		<!-- ART -->
+		<Land_Model_Name>WO_HighTension_PowerLines.ALO</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+
+		<!-- ATTRIBUTES -->
+		<CategoryMask> Medium, Insignificant, Resource_INST </CategoryMask>
+		<Affiliation>CIVILIAN</Affiliation>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> LandStatic </Space_Layer>
+		<UnitCollisionClass> Medium Obstacle </UnitCollisionClass>
+
+		<!-- CONFLICT -->
+		<Ranged_Target_Z_Adjust>60.0</Ranged_Target_Z_Adjust>
+		<Is_Valid_Target>True</Is_Valid_Target>
+		<Is_Attackable>true</Is_Attackable>
+
+		<!-- BEHAVIORS -->
+
+		<LandBehavior> RESOURCE, EFFECT_REGISTRY, ATTRIBUTE_DIRECTORY </LandBehavior>
+
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 850 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="_Tower_Electrical_01">
+		<Variant_Of_Existing_Type> _Tower_Electrical_High_Tension_01 </Variant_Of_Existing_Type>
+		<Land_Model_Name>WO_Electrical_Tower00.ALO</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Ranged_Target_Z_Adjust>50.0</Ranged_Target_Z_Adjust>
+
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 400 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="_Tower_Electrical_02">
+		<Variant_Of_Existing_Type> _Tower_Electrical_High_Tension_01 </Variant_Of_Existing_Type>
+		<Land_Model_Name>WO_Electrical_Tower01.ALO</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Ranged_Target_Z_Adjust>45.0</Ranged_Target_Z_Adjust>
+
+		<Space_Layer> None </Space_Layer>
+
+		<LandBehavior> RESOURCE, EFFECT_REGISTRY, ATTRIBUTE_DIRECTORY, CREATE_CHILDREN </LandBehavior>
+
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 400 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+		<Create_Children_Data SubObjectList="Yes">
+
+			<Create_Child_Data>
+				<Type> _Tower_Electrical_02_Proxy1 </Type>
+				<Creation_Trigger> OnParentBehaviorFirstService </Creation_Trigger>
+				<Destruction_Trigger> OnParentBehaviorRemove </Destruction_Trigger>
+			</Create_Child_Data>
+
+			<Create_Child_Data>
+				<Type> _Tower_Electrical_02_Proxy2 </Type>
+				<Creation_Trigger> OnParentBehaviorFirstService </Creation_Trigger>
+				<Destruction_Trigger> OnParentBehaviorRemove </Destruction_Trigger>
+			</Create_Child_Data>
+
+		</Create_Children_Data>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="_Tower_Electrical_02_Proxy1">
+
+		<!-- ART -->
+		<Scale_Factor> 1.0 </Scale_Factor>
+		<Is_Decoration> No </Is_Decoration>
+		<Exclude_From_Distance_Fade> true </Exclude_From_Distance_Fade>
+
+		<!-- INTERFACE -->
+		<Text_ID> TEXT_NONE </Text_ID>
+		<Is_Placed_By_Editor> false </Is_Placed_By_Editor>
+
+		<!-- ATTRIBUTES -->
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> LandStatic </Space_Layer>
+		<MovementClass> LargeWalker </MovementClass>
+		<UnitCollisionClass> High Obstacle </UnitCollisionClass>
+		<Custom_Hard_XExtent> 5.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 5.0 </Custom_Hard_YExtent>
+		<Custom_Hard_XExtent_Offset> 77.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_YExtent_Offset> 0.0 </Custom_Hard_YExtent_Offset>
+		<Verlet_Coefficient> 0.0 </Verlet_Coefficient>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="_Tower_Electrical_02_Proxy2">
+
+		<!-- ART -->
+		<Scale_Factor> 1.0 </Scale_Factor>
+		<Is_Decoration> No </Is_Decoration>
+		<Exclude_From_Distance_Fade> true </Exclude_From_Distance_Fade>
+
+		<!-- INTERFACE -->
+		<Text_ID> TEXT_NONE </Text_ID>
+		<Is_Placed_By_Editor> false </Is_Placed_By_Editor>
+
+		<!-- ATTRIBUTES -->
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> LandStatic </Space_Layer>
+		<MovementClass> LargeWalker </MovementClass>
+		<UnitCollisionClass> High Obstacle </UnitCollisionClass>
+		<Custom_Hard_XExtent> 5.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 5.0 </Custom_Hard_YExtent>
+		<Custom_Hard_XExtent_Offset> -77.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_YExtent_Offset> 0.0 </Custom_Hard_YExtent_Offset>
+		<Verlet_Coefficient> 0.0 </Verlet_Coefficient>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="_Scaffolding_01">
+		<!-- ART -->
+		<Land_Model_Name>WO_Scaffolding.ALO</Land_Model_Name>
+		<Scale_Factor>1.6</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Prevents_Structure_Placement> No </Prevents_Structure_Placement>
+
+		<!-- ATTRIBUTES -->
+		<CategoryMask> Medium, Insignificant, Resource_INST </CategoryMask>
+		<Affiliation>CIVILIAN</Affiliation>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> LandStatic </Space_Layer>
+		<UnitCollisionClass> Medium Obstacle </UnitCollisionClass>
+
+		<!-- CONFLICT -->
+		<Ranged_Target_Z_Adjust>10.0</Ranged_Target_Z_Adjust>
+		<Is_Valid_Target>True</Is_Valid_Target>
+		<Is_Attackable>true</Is_Attackable>
+
+		<!-- BEHAVIORS -->
+
+		<LandBehavior> RESOURCE, EFFECT_REGISTRY, ATTRIBUTE_DIRECTORY </LandBehavior>
+
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 100 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="_Scaffolding_02">
+		<Variant_Of_Existing_Type> _Scaffolding_01 </Variant_Of_Existing_Type>
+		<Land_Model_Name>WO_ScaffoldingX3.ALO</Land_Model_Name>
+		<Scale_Factor>1.6</Scale_Factor>
+		<Ranged_Target_Z_Adjust>20.0</Ranged_Target_Z_Adjust>
+
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 275 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="_Scaffolding_03">
+		<Variant_Of_Existing_Type> _Scaffolding_01 </Variant_Of_Existing_Type>
+		<Land_Model_Name>WO_ScaffoldingX5.ALO</Land_Model_Name>
+		<Scale_Factor>1.6</Scale_Factor>
+		<Ranged_Target_Z_Adjust>35.0</Ranged_Target_Z_Adjust>
+
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 400 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="Antenna_Array_Resource">
+		<!-- ART -->
+		<Land_Model_Name>WO_AntennaArray.ALO</Land_Model_Name>
+		<Scale_Factor>2.5</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Prevents_Structure_Placement> No </Prevents_Structure_Placement>
+
+		<!-- ATTRIBUTES -->
+		<CategoryMask> Medium, Insignificant, Resource </CategoryMask>
+		<Affiliation>CIVILIAN</Affiliation>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> LandStatic </Space_Layer>
+		<UnitCollisionClass> Medium Obstacle </UnitCollisionClass>
+
+		<!-- CONFLICT -->
+		<Ranged_Target_Z_Adjust> 3.0</Ranged_Target_Z_Adjust>
+		<Is_Valid_Target>True</Is_Valid_Target>
+		<Is_Attackable>true</Is_Attackable>
+
+		<!-- BEHAVIORS -->
+
+		<LandBehavior> RESOURCE, EFFECT_REGISTRY, ATTRIBUTE_DIRECTORY </LandBehavior>
+
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Damage_Terrain_On_Death> true </Damage_Terrain_On_Death>
+		</BehaviorType>
+
+		<BehaviorType Name="AlternateDamageStateBehaviorType">
+			<!--Oksana: this will update ALT state based on number of resource units -->
+			<Is_ALT_Damage_State_Resource_Based>Yes</Is_ALT_Damage_State_Resource_Based>
+
+			<Land_Damage_Thresholds>1.0, 0.60, 0.30,  0</Land_Damage_Thresholds>
+			<Land_Damage_Alternates>0, 1, 2, 3 </Land_Damage_Alternates>
+			<Land_Damage_SFX>null, null, null, null</Land_Damage_SFX>
+		</BehaviorType>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 1000 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="Radar_Array_Resource">
+		<Variant_Of_Existing_Type> Antenna_Array_Resource </Variant_Of_Existing_Type>
+		<Land_Model_Name>WO_AntennaArray2.ALO</Land_Model_Name>
+		<Scale_Factor>1.8</Scale_Factor>
+		<Ranged_Target_Z_Adjust>20.0</Ranged_Target_Z_Adjust>
+
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 1200 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+
+	<X15_Resource_Objects Name="_Propane_Tanks_01">
+		<!-- ART -->
+		<Land_Model_Name>WO_PropaneTanks.ALO</Land_Model_Name>
+		<Scale_Factor>1.2</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Prevents_Structure_Placement> No </Prevents_Structure_Placement>
+
+		<!-- ATTRIBUTES -->
+		<CategoryMask> Medium, Insignificant, Resource </CategoryMask>
+		<Affiliation>CIVILIAN</Affiliation>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> LandStatic </Space_Layer>
+		<UnitCollisionClass> Medium Obstacle </UnitCollisionClass>
+
+		<!-- CONFLICT -->
+		<Ranged_Target_Z_Adjust>15.0</Ranged_Target_Z_Adjust>
+		<Is_Valid_Target>True</Is_Valid_Target>
+		<Is_Attackable>true</Is_Attackable>
+
+		<!-- BEHAVIORS -->
+
+		<LandBehavior> RESOURCE, EFFECT_REGISTRY, ATTRIBUTE_DIRECTORY </LandBehavior>
+
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 900 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+
+
+	<X15_Resource_Objects Name="Military_Field_Tent_Resource">
+		<!-- ART -->
+		<Land_Model_Name>WO_Military_props03.alo</Land_Model_Name>
+		<Scale_Factor>1.1</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Prevents_Structure_Placement> No </Prevents_Structure_Placement>
+
+		<!-- ATTRIBUTES -->
+		<CategoryMask> Medium, Insignificant, Resource </CategoryMask>
+		<Affiliation>CIVILIAN</Affiliation>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> LandStatic </Space_Layer>
+		<UnitCollisionClass> Medium Obstacle </UnitCollisionClass>
+		<Custom_Hard_XExtent> 18.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 12.0 </Custom_Hard_YExtent>
+		<Custom_Hard_XExtent_Offset> -1.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_YExtent_Offset> 1.0 </Custom_Hard_YExtent_Offset>
+
+		<!-- CONFLICT -->
+		<Ranged_Target_Z_Adjust>10.0</Ranged_Target_Z_Adjust>
+		<Is_Valid_Target>True</Is_Valid_Target>
+		<Is_Attackable>true</Is_Attackable>
+		<Tactical_Health> 100 </Tactical_Health>
+
+		<Land_Damage_Thresholds>1, 0.5, 0 </Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2 </Land_Damage_Alternates>
+		<Land_Damage_SFX />
+
+		<!-- BEHAVIORS -->
+		<LandBehavior> RESOURCE, EFFECT_REGISTRY, ATTRIBUTE_DIRECTORY </LandBehavior>
+
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+
+		<BehaviorType Name="CrushBehaviorType">
+			<Crush_Defense>20</Crush_Defense>
+		</BehaviorType>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Armor_Type> Armor_Civilian_Structure_Light </Armor_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="AlternateDamageStateBehaviorType">
+			<!--Oksana: this will update ALT state based on number of resource units -->
+			<Is_ALT_Damage_State_Resource_Based>Yes</Is_ALT_Damage_State_Resource_Based>
+
+			<Land_Damage_Thresholds>1.0, 0.60, 0.30,  0</Land_Damage_Thresholds>
+			<Land_Damage_Alternates>0, 1, 2, 3 </Land_Damage_Alternates>
+			<Land_Damage_SFX>null, null, null, null</Land_Damage_SFX>
+		</BehaviorType>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 800 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+
+
+	<X15_Resource_Objects Name="Military_Container_Resource">
+		<!-- ART -->
+		<Land_Model_Name>MB_Storage.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Prevents_Structure_Placement> No </Prevents_Structure_Placement>
+
+		<!-- ATTRIBUTES -->
+		<CategoryMask> Medium, Insignificant, Resource </CategoryMask>
+		<Affiliation>CIVILIAN</Affiliation>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> LandStatic </Space_Layer>
+		<UnitCollisionClass> Medium Obstacle </UnitCollisionClass>
+		<Custom_Hard_XExtent_Offset> 4.0 </Custom_Hard_XExtent_Offset>
+
+		<!-- CONFLICT -->
+		<Ranged_Target_Z_Adjust>8.0</Ranged_Target_Z_Adjust>
+		<Is_Valid_Target>True</Is_Valid_Target>
+		<Is_Attackable>true</Is_Attackable>
+
+		<!-- BEHAVIORS -->
+
+		<LandBehavior> RESOURCE, EFFECT_REGISTRY, ATTRIBUTE_DIRECTORY </LandBehavior>
+
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 800 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+
+	<X15_Resource_Objects Name="Military_Hummer_No_Move_Resource">
+		<!-- ART -->
+		<Land_Model_Name>mv_hummer.alo</Land_Model_Name>
+		<Scale_Factor>0.85</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Prevents_Structure_Placement> No </Prevents_Structure_Placement>
+
+		<!-- ATTRIBUTES -->
+		<CategoryMask> Medium, Insignificant, Resource </CategoryMask>
+		<Affiliation>CIVILIAN</Affiliation>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> LandStatic </Space_Layer>
+		<UnitCollisionClass> Medium Obstacle </UnitCollisionClass>
+		<Custom_Hard_XExtent_Offset> 4.0 </Custom_Hard_XExtent_Offset>
+
+		<!-- CONFLICT -->
+		<Ranged_Target_Z_Adjust>5.0</Ranged_Target_Z_Adjust>
+		<Is_Valid_Target>True</Is_Valid_Target>
+		<Is_Attackable>true</Is_Attackable>
+
+		<!-- BEHAVIORS -->
+
+		<LandBehavior> RESOURCE, EFFECT_REGISTRY, ATTRIBUTE_DIRECTORY </LandBehavior>
+
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 600 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+
+	<X15_Resource_Objects Name="Vehicle_Hulk_Resource_Tank_01">
+		<!-- ART -->
+		<Land_Model_Name>MV_Tank_Destroyed.ALO</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Prevents_Structure_Placement> No </Prevents_Structure_Placement>
+
+		<!-- ATTRIBUTES -->
+		<CategoryMask> Medium, Insignificant, Resource </CategoryMask>
+		<Affiliation>CIVILIAN</Affiliation>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> LandStatic </Space_Layer>
+		<UnitCollisionClass> Medium Obstacle </UnitCollisionClass>
+		<Custom_Hard_XExtent_Offset> 4.0 </Custom_Hard_XExtent_Offset>
+
+		<!-- CONFLICT -->
+		<Ranged_Target_Z_Adjust>5.0</Ranged_Target_Z_Adjust>
+		<Is_Valid_Target>True</Is_Valid_Target>
+		<Is_Attackable>true</Is_Attackable>
+
+		<!-- BEHAVIORS -->
+
+		<LandBehavior> RESOURCE, EFFECT_REGISTRY, ATTRIBUTE_DIRECTORY, BALLISTIC </LandBehavior>
+
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 500 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+		<BehaviorType Name="BallisticBehaviorType">
+			<Ballistic_Weight>6.0</Ballistic_Weight>
+			<Ballistic_Bounce>0.3</Ballistic_Bounce>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+
+	<X15_Resource_Objects Name="Vehicle_Hulk_Resource_Tank_02">
+		<Variant_Of_Existing_Type> Vehicle_Hulk_Resource_Tank_01 </Variant_Of_Existing_Type>
+		<Land_Model_Name>MV_Tank_Destroyed2.ALO</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Ranged_Target_Z_Adjust>5.0</Ranged_Target_Z_Adjust>
+
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 600 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="Vehicle_Hulk_Resource_Hummer">
+		<Variant_Of_Existing_Type> Vehicle_Hulk_Resource_Tank_01 </Variant_Of_Existing_Type>
+		<Land_Model_Name>MV_Hummer_crashed.ALO</Land_Model_Name>
+		<Scale_Factor>0.85</Scale_Factor>
+		<Ranged_Target_Z_Adjust>5.0</Ranged_Target_Z_Adjust>
+
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 600 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="Vehicle_Hulk_Resource_Jet">
+		<Variant_Of_Existing_Type> Vehicle_Hulk_Resource_Tank_01 </Variant_Of_Existing_Type>
+		<Land_Model_Name>MV_Apache_crashed.ALO</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Ranged_Target_Z_Adjust>5.0</Ranged_Target_Z_Adjust>
+
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 600 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="Vehicle_Hulk_Resource_Helicopter">
+		<Variant_Of_Existing_Type> Vehicle_Hulk_Resource_Tank_01 </Variant_Of_Existing_Type>
+		<Land_Model_Name>MV_Apache_crashed.ALO</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Ranged_Target_Z_Adjust>10.0</Ranged_Target_Z_Adjust>
+
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 600 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+
+
+
+	<X15_Resource_Objects Name="_Pole_Electric_01">
+		<!-- ART -->
+		<Land_Model_Name>WO_Electricpole.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Prevents_Structure_Placement> No </Prevents_Structure_Placement>
+
+		<!-- ATTRIBUTES -->
+		<CategoryMask> Medium, Insignificant, Resource_INST </CategoryMask>
+		<Affiliation>CIVILIAN</Affiliation>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> LandStatic </Space_Layer>
+		<UnitCollisionClass> High Obstacle </UnitCollisionClass>
+		<Custom_Hard_XExtent> 1.5 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 1.5 </Custom_Hard_YExtent>
+
+		<!-- CONFLICT -->
+		<Ranged_Target_Z_Adjust>15.0</Ranged_Target_Z_Adjust>
+		<Is_Valid_Target>True</Is_Valid_Target>
+		<Is_Attackable>true</Is_Attackable>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+
+		<!-- BEHAVIORS -->
+
+		<LandBehavior> RESOURCE, EFFECT_REGISTRY, ATTRIBUTE_DIRECTORY, TOPPLE </LandBehavior>
+
+		<BehaviorType Name="CrushBehaviorType">
+			<Crush_Defense>5</Crush_Defense>
+			<Should_Check_Faction_On_Crush> false </Should_Check_Faction_On_Crush>
+		</BehaviorType>
+
+		<BehaviorType Name="ToppleBehaviorType">
+			<Switch_To_Alt>1 </Switch_To_Alt>
+		</BehaviorType>
+
+		<BehaviorType Name="SFXBehaviorType">
+			<SFXEvent_Topple_Start>SFX_Pole_Topple_Start_1</SFXEvent_Topple_Start>
+			<SFXEvent_Topple_Hit>SFX_Pole_Topple_Hit_1</SFXEvent_Topple_Hit>
+		</BehaviorType>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 150 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+
+
+
+	<X15_Resource_Objects Name="_Refinery_Exhaust">
+		<!-- ART -->
+		<Land_Model_Name>WO_Pipe_Exhaust.ALO</Land_Model_Name>
+		<Scale_Factor>0.45</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Prevents_Structure_Placement> No </Prevents_Structure_Placement>
+
+		<!-- ATTRIBUTES -->
+		<CategoryMask> Medium, Insignificant, Resource </CategoryMask>
+		<Affiliation>CIVILIAN</Affiliation>
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> LandStatic </Space_Layer>
+		<UnitCollisionClass> Medium Obstacle </UnitCollisionClass>
+		<Custom_Hard_XExtent_Offset> 4.0 </Custom_Hard_XExtent_Offset>
+
+		<!-- CONFLICT -->
+		<Ranged_Target_Z_Adjust>5.0</Ranged_Target_Z_Adjust>
+		<Is_Valid_Target>True</Is_Valid_Target>
+		<Is_Attackable>true</Is_Attackable>
+
+		<!-- BEHAVIORS -->
+
+		<LandBehavior> RESOURCE, EFFECT_REGISTRY, ATTRIBUTE_DIRECTORY </LandBehavior>
+
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Damage_Terrain_On_Death> true </Damage_Terrain_On_Death>
+		</BehaviorType>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 1800 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+
+
+	<X15_Resource_Objects Name="Vehicle_Hulk_Resource_Walker">
+		<!-- ART -->
+		<Land_Model_Name>AB_Habitat_Destoyed_Hulk.ALO</Land_Model_Name>
+		<Scale_Factor>0.8</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Prevents_Structure_Placement> No </Prevents_Structure_Placement>
+
+		<!-- ATTRIBUTES -->
+		<CategoryMask> Medium, Insignificant, Resource </CategoryMask>
+		<Affiliation>CIVILIAN</Affiliation>
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> LandDynamic </Space_Layer>
+		<UnitCollisionClass> Vehicle </UnitCollisionClass>
+		<Custom_Hard_XExtent> 60.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 90.0 </Custom_Hard_YExtent>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+
+		<!-- CONFLICT -->
+		<Ranged_Target_Z_Adjust>50.0</Ranged_Target_Z_Adjust>
+		<Is_Valid_Target>True</Is_Valid_Target>
+		<Is_Attackable>true</Is_Attackable>
+
+		<!-- BEHAVIORS -->
+
+		<LandBehavior> RESOURCE, EFFECT_REGISTRY, ATTRIBUTE_DIRECTORY </LandBehavior>
+
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 5000 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="Vehicle_Hulk_Resource_Walker_Science">
+		<Variant_Of_Existing_Type> Vehicle_Hulk_Resource_Walker </Variant_Of_Existing_Type>
+		<Land_Model_Name>AB_Science_destroyed_hulk.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Ranged_Target_Z_Adjust>20.0</Ranged_Target_Z_Adjust>
+
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 7000 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="Vehicle_Hulk_Resource_Walker_Assembly">
+		<Variant_Of_Existing_Type> Vehicle_Hulk_Resource_Walker </Variant_Of_Existing_Type>
+		<Land_Model_Name>AB_Assemblywalker_destroyed_hulk.alo</Land_Model_Name>
+		<Scale_Factor>0.7</Scale_Factor>
+		<Ranged_Target_Z_Adjust>70.0</Ranged_Target_Z_Adjust>
+
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 6000 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+
+	<X15_Resource_Objects Name="Vehicle_Hulk_Resource_Walker_Purifier">
+		<Variant_Of_Existing_Type> Vehicle_Hulk_Resource_Walker </Variant_Of_Existing_Type>
+		<Land_Model_Name>AB_Purifier_DC.ALO</Land_Model_Name>
+		<Scale_Factor>01.0</Scale_Factor>
+		<Ranged_Target_Z_Adjust>20.0</Ranged_Target_Z_Adjust>
+
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 20000 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+
+
+	<X15_Resource_Objects Name="UFO_Debris_Resource_02">
+		<!-- ART -->
+		<Land_Model_Name>AV_Wreck02.alo</Land_Model_Name>
+		<Scale_Factor>0.55</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Prevents_Structure_Placement> No </Prevents_Structure_Placement>
+
+		<!-- ATTRIBUTES -->
+		<CategoryMask> Medium, Insignificant, Resource </CategoryMask>
+		<Affiliation>CIVILIAN</Affiliation>
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> LandDynamic </Space_Layer>
+		<UnitCollisionClass> Vehicle </UnitCollisionClass>
+		<Custom_Hard_XExtent> 60.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 90.0 </Custom_Hard_YExtent>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+
+		<!-- CONFLICT -->
+		<Ranged_Target_Z_Adjust> 10.0 </Ranged_Target_Z_Adjust>
+		<Is_Valid_Target>True</Is_Valid_Target>
+		<Is_Attackable>true</Is_Attackable>
+
+		<!-- BEHAVIORS -->
+		<LandBehavior> RESOURCE, EFFECT_REGISTRY, ATTRIBUTE_DIRECTORY </LandBehavior>
+
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+
+		<BehaviorType Name="AlternateDamageStateBehaviorType">
+			<!--Oksana: this will update ALT state based on number of resource units -->
+			<Is_ALT_Damage_State_Resource_Based>Yes</Is_ALT_Damage_State_Resource_Based>
+
+			<Land_Damage_Thresholds>1.0, 0.75, 0.50, 0.25, 0</Land_Damage_Thresholds>
+			<Land_Damage_Alternates>0, 1, 2, 3, 4 </Land_Damage_Alternates>
+			<Land_Damage_SFX>null, null, null, null, null </Land_Damage_SFX>
+		</BehaviorType>
+
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 3200 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="UFO_Debris_Resource_03">
+		<Variant_Of_Existing_Type> UFO_Debris_Resource_02 </Variant_Of_Existing_Type>
+		<Land_Model_Name>AV_Wreck03.alo</Land_Model_Name>
+		<Scale_Factor>0.35</Scale_Factor>
+		<Ranged_Target_Z_Adjust> 15.0 </Ranged_Target_Z_Adjust>
+
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 3400 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="UFO_Debris_Resource_04">
+		<Variant_Of_Existing_Type> UFO_Debris_Resource_02 </Variant_Of_Existing_Type>
+		<Land_Model_Name>AV_Wreck04.alo</Land_Model_Name>
+		<Scale_Factor>0.4</Scale_Factor>
+		<Ranged_Target_Z_Adjust> 20.0 </Ranged_Target_Z_Adjust>
+
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 3800 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+
+	<X15_Resource_Objects Name="Arecibo_Visitors_Center_Resource">
+
+		<!-- ART -->
+		<Land_Model_Name> WO_SA_Arecibo_VisitorCenter.alo </Land_Model_Name>
+		<Scale_Factor>1.5</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+
+		<!-- INTERFACE -->
+
+		<Is_Placed_By_Editor>true</Is_Placed_By_Editor>
+
+		<!-- ATTRIBUTES -->
+		<Affiliation>Civilian</Affiliation>
+		<CategoryMask> Large, Stationary, Insignificant, Resource </CategoryMask>
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+
+		<!-- CONFLICT -->
+		<Is_Attackable> true </Is_Attackable>
+		<Collidable_By_Projectile_Living> Yes </Collidable_By_Projectile_Living>
+		<Ranged_Target_Z_Adjust> 10.0 </Ranged_Target_Z_Adjust>
+		<Tactical_Health> 1000 </Tactical_Health>
+		<Dense_FOW_Reveal_Range_Multiplier> 0.0 </Dense_FOW_Reveal_Range_Multiplier>
+
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_GENERIC_DETONATION, SFX_GENERIC_DETONATION,null</Land_Damage_SFX>
+		<Is_Death_Final_ALT_State> true </Is_Death_Final_ALT_State>
+
+		<!-- BEHAVIORS -->
+
+		<LandBehavior>
+			LAND_OBSTACLE,
+			RESOURCE,
+			ATTRIBUTE_DIRECTORY,
+			EFFECT_REGISTRY,
+			AI_TARGET
+		</LandBehavior>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Armor_Type> Armor_Civilian_Structure_Light </Armor_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="CrushBehaviorType">
+			<Crush_Defense>60</Crush_Defense>
+		</BehaviorType>
+
+		<BehaviorType Name="RevealBehaviorType">
+			<Land_FOW_Reveal_Range> 30.0 </Land_FOW_Reveal_Range>
+		</BehaviorType>
+
+		<BehaviorType Name="AlternateDamageStateBehaviorType">
+			<!--Oksana: this will update ALT state based on number of resource units -->
+			<Is_ALT_Damage_State_Resource_Based>Yes</Is_ALT_Damage_State_Resource_Based>
+
+			<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+			<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+			<Land_Damage_SFX>SFX_Generic_Detonation_1,SFX_Generic_Detonation_1,SFX_Generic_Detonation_1,SFX_Generic_Detonation_1</Land_Damage_SFX>
+		</BehaviorType>
+
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 12000 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Damage_Terrain_On_Death> true </Damage_Terrain_On_Death>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+
+	<X15_Resource_Objects Name="Arecibo_Fence_Resource">
+		<!-- ART -->
+		<Land_Model_Name>WO_Arecibo_Fence.alo</Land_Model_Name>
+		<Scale_Factor>1.9</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+
+		<!-- INTERFACE -->
+		<Text_ID>TEXT_NONE</Text_ID>
+
+		<!-- ATTRIBUTES -->
+		<CategoryMask> Medium, Insignificant, Resource_INST </CategoryMask>
+		<Affiliation>CIVILIAN</Affiliation>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> LandStatic </Space_Layer>
+		<UnitCollisionClass> Medium Obstacle </UnitCollisionClass>
+
+		<!-- CONFLICT -->
+		<Ranged_Target_Z_Adjust>2.0</Ranged_Target_Z_Adjust>
+		<Is_Valid_Target>True</Is_Valid_Target>
+		<Is_Attackable>true</Is_Attackable>
+
+		<!-- BEHAVIORS -->
+
+		<LandBehavior> RESOURCE, EFFECT_REGISTRY, ATTRIBUTE_DIRECTORY </LandBehavior>
+
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 200 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+
+	<X15_Resource_Objects Name="Masari_WallChunk_A_Resource">
+		<Variant_Of_Existing_Type> Arecibo_Fence_Resource </Variant_Of_Existing_Type>
+		<Land_Model_Name> WO_MASINT_Debris_B.alo </Land_Model_Name>
+		<CategoryMask> Medium, Insignificant, Resource </CategoryMask>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Ranged_Target_Z_Adjust> 10.0 </Ranged_Target_Z_Adjust>
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 450 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="Masari_WallChunk_A_Resource_Small">
+		<Variant_Of_Existing_Type> Arecibo_Fence_Resource </Variant_Of_Existing_Type>
+		<Land_Model_Name> WO_MASINT_Debris_B.alo </Land_Model_Name>
+		<CategoryMask> Medium, Insignificant, Resource </CategoryMask>
+		<Scale_Factor>0.6</Scale_Factor>
+		<Ranged_Target_Z_Adjust> 10.0 </Ranged_Target_Z_Adjust>
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 150 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+
+	<X15_Resource_Objects Name="Abstract_Masari_GenericBuilding_Resource">
+
+		<!-- ART -->
+		<Land_Model_Name> WO_MASINT_Generic_A.alo </Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+
+		<!-- INTERFACE -->
+
+		<Is_Placed_By_Editor>False</Is_Placed_By_Editor>
+
+		<!-- ATTRIBUTES -->
+		<Affiliation>Civilian</Affiliation>
+		<CategoryMask> Large, Stationary, Insignificant, Resource </CategoryMask>
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> LandDynamic </Space_Layer>
+		<UnitCollisionClass> Medium Obstacle </UnitCollisionClass>
+
+		<!-- CONFLICT -->
+		<Is_Attackable> true </Is_Attackable>
+		<Collidable_By_Projectile_Living> Yes </Collidable_By_Projectile_Living>
+		<Ranged_Target_Z_Adjust> 10.0 </Ranged_Target_Z_Adjust>
+		<Tactical_Health> 1000 </Tactical_Health>
+		<Dense_FOW_Reveal_Range_Multiplier> 0.0 </Dense_FOW_Reveal_Range_Multiplier>
+
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_GENERIC_DETONATION, SFX_GENERIC_DETONATION,null</Land_Damage_SFX>
+		<Is_Death_Final_ALT_State> true </Is_Death_Final_ALT_State>
+
+		<!-- BEHAVIORS -->
+
+		<LandBehavior>
+			RESOURCE,
+			ATTRIBUTE_DIRECTORY,
+			EFFECT_REGISTRY,
+			AI_TARGET
+		</LandBehavior>
+
+		<BehaviorType Name="ArmorAndDamageBehaviorType">
+			<Armor_Type> Armor_Civilian_Structure_Light </Armor_Type>
+		</BehaviorType>
+
+		<BehaviorType Name="CrushBehaviorType">
+			<Crush_Defense>60</Crush_Defense>
+		</BehaviorType>
+
+		<BehaviorType Name="RevealBehaviorType">
+			<Land_FOW_Reveal_Range> 30.0 </Land_FOW_Reveal_Range>
+		</BehaviorType>
+
+		<BehaviorType Name="AlternateDamageStateBehaviorType">
+			<!--Oksana: this will update ALT state based on number of resource units -->
+			<Is_ALT_Damage_State_Resource_Based>Yes</Is_ALT_Damage_State_Resource_Based>
+
+			<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+			<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+			<Land_Damage_SFX>SFX_Generic_Detonation_1,SFX_Generic_Detonation_1,SFX_Generic_Detonation_1,SFX_Generic_Detonation_1</Land_Damage_SFX>
+		</BehaviorType>
+
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 23000 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Damage_Terrain_On_Death> true </Damage_Terrain_On_Death>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="Masari_GenericBuilding_A_Resource">
+
+		<Variant_Of_Existing_Type> Abstract_Masari_GenericBuilding_Resource </Variant_Of_Existing_Type>
+
+		<!-- INTERFACE -->
+
+		<Is_Placed_By_Editor>True</Is_Placed_By_Editor>
+
+		<Custom_Hard_XExtent> 90.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 88.0 </Custom_Hard_YExtent>
+		<Custom_Hard_XExtent_Offset> -5.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_YExtent_Offset> 0.0 </Custom_Hard_YExtent_Offset>
+
+		<LandBehavior>
+			RESOURCE,
+			ATTRIBUTE_DIRECTORY,
+			EFFECT_REGISTRY,
+			AI_TARGET,
+			CREATE_CHILDREN
+		</LandBehavior>
+
+		<Create_Children_Data SubObjectList="Yes">
+
+			<Create_Child_Data>
+				<Type> Masari_GenericBuilding_A_Air_Proxy1 </Type>
+				<Creation_Trigger> OnParentBehaviorFirstService </Creation_Trigger>
+				<Destruction_Trigger> OnParentBehaviorRemove </Destruction_Trigger>
+			</Create_Child_Data>
+
+			<Create_Child_Data>
+				<Type> Masari_GenericBuilding_A_Air_Proxy2 </Type>
+				<Creation_Trigger> OnParentBehaviorFirstService </Creation_Trigger>
+				<Destruction_Trigger> OnParentBehaviorRemove </Destruction_Trigger>
+			</Create_Child_Data>
+
+		</Create_Children_Data>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="Masari_GenericBuilding_A_Air_Proxy1">
+
+		<!-- ART -->
+		<Is_Decoration> No </Is_Decoration>
+		<Exclude_From_Distance_Fade> true </Exclude_From_Distance_Fade>
+
+		<!-- INTERFACE -->
+		<Text_ID> TEXT_NONE </Text_ID>
+		<Is_Placed_By_Editor> false </Is_Placed_By_Editor>
+
+		<!-- ATTRIBUTES -->
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> Air </Space_Layer>
+		<MovementClass> LargeWalker </MovementClass>
+		<UnitCollisionClass> High Obstacle </UnitCollisionClass>
+		<Custom_Hard_XExtent> 12.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 30.0 </Custom_Hard_YExtent>
+		<Custom_Hard_XExtent_Offset> 60.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_YExtent_Offset> 0.0 </Custom_Hard_YExtent_Offset>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="Masari_GenericBuilding_A_Air_Proxy2">
+
+		<!-- ART -->
+		<Is_Decoration> No </Is_Decoration>
+		<Exclude_From_Distance_Fade> true </Exclude_From_Distance_Fade>
+
+		<!-- INTERFACE -->
+		<Text_ID> TEXT_NONE </Text_ID>
+		<Is_Placed_By_Editor> false </Is_Placed_By_Editor>
+
+		<!-- ATTRIBUTES -->
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> Air </Space_Layer>
+		<MovementClass> LargeWalker </MovementClass>
+		<UnitCollisionClass> High Obstacle </UnitCollisionClass>
+		<Custom_Hard_XExtent> 12.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 30.0 </Custom_Hard_YExtent>
+		<Custom_Hard_XExtent_Offset> -70.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_YExtent_Offset> 0.0 </Custom_Hard_YExtent_Offset>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="Masari_GenericBuilding_C_Resource">
+		<Variant_Of_Existing_Type> Abstract_Masari_GenericBuilding_Resource </Variant_Of_Existing_Type>
+		<Land_Model_Name> WO_MASINT_Generic_C.alo </Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+
+		<!-- INTERFACE -->
+		<Is_Placed_By_Editor>True</Is_Placed_By_Editor>
+
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 1000 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+		<BehaviorType Name="BallisticBehaviorType">
+			<Ballistic_Weight>6.0</Ballistic_Weight>
+			<Ballistic_Bounce>0.3</Ballistic_Bounce>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+
+	<X15_Resource_Objects Name="Masari_GenericBuilding_D_Resource">
+		<Variant_Of_Existing_Type> Abstract_Masari_GenericBuilding_Resource </Variant_Of_Existing_Type>
+		<Land_Model_Name> WO_MASINT_Generic_D.alo </Land_Model_Name>
+		<Scale_Factor>2.0</Scale_Factor>
+
+		<!-- INTERFACE -->
+		<Is_Placed_By_Editor>True</Is_Placed_By_Editor>
+
+		<LandBehavior>
+			RESOURCE,
+			ATTRIBUTE_DIRECTORY,
+			EFFECT_REGISTRY,
+			AI_TARGET,
+			CREATE_CHILDREN
+		</LandBehavior>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Death_Clone> Damage_Default, Masari_GenericBuilding_D_Resource_Death_Clone </Death_Clone>
+			<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+		</BehaviorType>
+
+		<Create_Children_Data SubObjectList="Yes">
+
+			<Create_Child_Data>
+				<Type> Masari_GenericBuilding_D_Air_Proxy </Type>
+				<Creation_Trigger> OnParentBehaviorFirstService </Creation_Trigger>
+				<Destruction_Trigger> OnParentBehaviorRemove </Destruction_Trigger>
+			</Create_Child_Data>
+
+		</Create_Children_Data>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="Masari_GenericBuilding_D_Resource_Death_Clone">
+		<Variant_Of_Existing_Type> Abstract_Masari_GenericBuilding_Resource </Variant_Of_Existing_Type>
+		<Land_Model_Name> WO_MASINT_Generic_D.alo </Land_Model_Name>
+		<Scale_Factor>2.0</Scale_Factor>
+
+		<LandBehavior>
+			RESOURCE,
+			ATTRIBUTE_DIRECTORY,
+			EFFECT_REGISTRY,
+			AI_TARGET
+		</LandBehavior>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="Masari_GenericBuilding_D_Air_Proxy">
+
+		<!-- ART -->
+		<Is_Decoration> No </Is_Decoration>
+		<Exclude_From_Distance_Fade> true </Exclude_From_Distance_Fade>
+
+		<!-- INTERFACE -->
+		<Text_ID> TEXT_NONE </Text_ID>
+		<Is_Placed_By_Editor> false </Is_Placed_By_Editor>
+
+		<!-- ATTRIBUTES -->
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> Air </Space_Layer>
+		<MovementClass> LargeWalker </MovementClass>
+		<UnitCollisionClass> High Obstacle </UnitCollisionClass>
+		<Custom_Hard_XExtent> 18.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 8.0 </Custom_Hard_YExtent>
+		<Custom_Hard_XExtent_Offset> 0.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_YExtent_Offset> 0.0 </Custom_Hard_YExtent_Offset>
+
+	</X15_Resource_Objects>
+
+
+	<X15_Resource_Objects Name="Masari_GenericBuilding_E_Resource">
+		<Variant_Of_Existing_Type> Abstract_Masari_GenericBuilding_Resource </Variant_Of_Existing_Type>
+		<Land_Model_Name> WO_MASINT_Generic_E.alo </Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Ranged_Target_Z_Adjust> 40.0 </Ranged_Target_Z_Adjust>
+		<Is_Placed_By_Editor> True </Is_Placed_By_Editor>
+
+		<Custom_Hard_YExtent> 70.0 </Custom_Hard_YExtent>
+
+		<LandBehavior>
+			RESOURCE,
+			ATTRIBUTE_DIRECTORY,
+			EFFECT_REGISTRY,
+			AI_TARGET,
+			CREATE_CHILDREN
+		</LandBehavior>
+
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 18000 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> false </Is_Single_Resource>
+		</BehaviorType>
+
+		<BehaviorType Name="DeathFXBehaviorType">
+			<Death_Clone> Damage_Default, Masari_GenericBuilding_E_Resource_Death_Clone </Death_Clone>
+			<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+		</BehaviorType>
+
+		<Create_Children_Data SubObjectList="Yes">
+
+			<Create_Child_Data>
+				<Type> Masari_GenericBuilding_E_Air_Proxy </Type>
+				<Creation_Trigger> OnParentBehaviorFirstService </Creation_Trigger>
+				<Destruction_Trigger> OnParentBehaviorRemove </Destruction_Trigger>
+			</Create_Child_Data>
+
+		</Create_Children_Data>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="Masari_GenericBuilding_E_Resource_Death_Clone">
+		<Variant_Of_Existing_Type> Abstract_Masari_GenericBuilding_Resource </Variant_Of_Existing_Type>
+		<Land_Model_Name> WO_MASINT_Generic_E.alo </Land_Model_Name>
+		<Scale_Factor>2.0</Scale_Factor>
+
+		<LandBehavior>
+			RESOURCE,
+			ATTRIBUTE_DIRECTORY,
+			EFFECT_REGISTRY,
+			AI_TARGET
+		</LandBehavior>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="Masari_GenericBuilding_E_Air_Proxy">
+
+		<!-- ART -->
+		<Is_Decoration> No </Is_Decoration>
+		<Exclude_From_Distance_Fade> true </Exclude_From_Distance_Fade>
+
+		<!-- INTERFACE -->
+		<Text_ID> TEXT_NONE </Text_ID>
+		<Is_Placed_By_Editor> false </Is_Placed_By_Editor>
+
+		<!-- ATTRIBUTES -->
+		<Is_Immune_To_Tornado>true</Is_Immune_To_Tornado>
+
+		<!-- MOVEMENT -->
+		<Space_Layer> Air </Space_Layer>
+		<MovementClass> LargeWalker </MovementClass>
+		<UnitCollisionClass> High Obstacle </UnitCollisionClass>
+		<Custom_Hard_XExtent> 35.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 25.0 </Custom_Hard_YExtent>
+		<Custom_Hard_XExtent_Offset> 0.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_YExtent_Offset> 0.0 </Custom_Hard_YExtent_Offset>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="Novus_Destroyed_Ohm_Robot_Resource_01">
+		<Variant_Of_Existing_Type>Resource_Pile_Dummy_Object</Variant_Of_Existing_Type>
+		<Land_Model_Name>NI_Infantry_Destroyed_01.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Text_ID>TEXT_NONE</Text_ID>
+		<CategoryMask> Resource_INST </CategoryMask>
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.01  0.01</Radar_Icon_Size>
+		</BehaviorType>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 50 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> true </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="Novus_Destroyed_Ohm_Robot_Resource_02">
+		<Variant_Of_Existing_Type>Resource_Pile_Dummy_Object</Variant_Of_Existing_Type>
+		<Land_Model_Name>NI_Infantry_Destroyed_02.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Text_ID>TEXT_NONE</Text_ID>
+		<CategoryMask> Resource_INST </CategoryMask>
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.01  0.01</Radar_Icon_Size>
+		</BehaviorType>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 50 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> true </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="Novus_Destroyed_Ohm_Robot_Resource_03">
+		<Variant_Of_Existing_Type>Resource_Pile_Dummy_Object</Variant_Of_Existing_Type>
+		<Land_Model_Name>NI_Infantry_Destroyed_03.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Text_ID>TEXT_NONE</Text_ID>
+		<CategoryMask> Resource_INST </CategoryMask>
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.01  0.01</Radar_Icon_Size>
+		</BehaviorType>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 50 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> true </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="Novus_Destroyed_Ohm_Robot_Resource_04">
+		<Variant_Of_Existing_Type>Resource_Pile_Dummy_Object</Variant_Of_Existing_Type>
+		<Land_Model_Name>NI_Infantry_Destroyed_04.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Text_ID>TEXT_NONE</Text_ID>
+		<CategoryMask> Resource_INST </CategoryMask>
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.01  0.01</Radar_Icon_Size>
+		</BehaviorType>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 50 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> true </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+	<X15_Resource_Objects Name="Novus_Destroyed_Ohm_Robot_Resource_05">
+		<Variant_Of_Existing_Type>Resource_Pile_Dummy_Object</Variant_Of_Existing_Type>
+		<Land_Model_Name>NI_Infantry_Destroyed_05.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Text_ID>TEXT_NONE</Text_ID>
+		<CategoryMask> Resource_INST </CategoryMask>
+
+		<BehaviorType Name="RadarMapBehaviorType">
+			<Radar_Icon_Size>0.01  0.01</Radar_Icon_Size>
+		</BehaviorType>
+
+		<!-- Harvestable Resource Object Support: BEGIN -->
+		<BehaviorType Name="ResourceBehaviorType">
+			<Resource_Units> 50 </Resource_Units>
+			<Resource_For_Faction> Novus, Alien, Alien_ZM06_KamalRex </Resource_For_Faction>
+			<Is_Single_Resource> true </Is_Single_Resource>
+		</BehaviorType>
+
+	</X15_Resource_Objects>
+
+</Resource_Objects_XML>
